@@ -1,0 +1,276 @@
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.dropotron.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/skel-layers.min.js"></script>
+    <script src="/js/init.js"></script>
+    <link rel="stylesheet" href="/css/pygment.css" />
+    <noscript>
+        <link rel="stylesheet" href="/css/skel.css" />
+        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="/css/style-noscript.css" />
+    </noscript>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link  href="http://fonts.googleapis.com/css?family=Anonymous+Pro:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css" >
+    <!--[if lte IE 8]><link rel="stylesheet" href="/css/ie/v8.css" /><![endif]-->
+    <!--[if lte IE 9]><link rel="stylesheet" href="/css/ie/v9.css" /><![endif]-->
+
+    <title>A funny little probability problem - correct | bblais on the web </title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width">
+</head>
+
+<body class=" loading">
+
+
+
+    <!-- Header -->
+    <header id="header" >
+        <h1 class="logo">
+            <a href="">bblais on the web, design Twenty <span> by html5 up</span></a>
+        </h1>
+        <nav id="nav">
+            <ul>
+                <!-- <li class="current"><a href="index.html">Welcome</a></li> -->
+                        <li><a href="/pages/presentations.html">Presentations</a></li>
+                        <li><a href="/pages/projects.html">Projects</a></li>
+                        <li><a href="/pages/publications.html">Publications</a></li>
+                <li class="submenu">
+                    <a href="/">Blog</a>
+                    <ul>
+                            <li >
+                                <a href="/category/articles/">articles</a>
+                            </li>
+                            <li >
+                                <a href="/category/presentations/">presentations</a>
+                            </li>
+                            <li >
+                                <a href="/category/projects/">projects</a>
+                            </li>
+                            <li >
+                                <a href="/category/unbelievable project/">Unbelievable Project</a>
+                            </li>
+                            <li class="active">
+                                <a href="/category/wordpress_migration/">wordpress_migration</a>
+                            </li>
+                    </ul>
+                </li>
+                <li><a href="#" class="button special">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<!-- Main -->
+<article id="main">
+
+  <header class="special container">
+    <span class="icon fa-"></span>
+    <h2>A funny little probability problem - correct</h2>
+    <!-- add page sub title here -->
+    <p>Posted on Sat 23 March 2013 by brianblais</p>
+    <p></p>
+  </header>
+
+  <!-- One -->
+    <section class="wrapper style4 container">
+
+      <!-- Content -->
+        <div class="content">
+          <section>
+            <!-- <a href="#" class="image feature"><img src="images/pic04.jpg" alt="" /></a> -->
+            <h3>Posted in <a href="/category/wordpress_migration.html">wordpress_migration</a></h3>
+            <p class="tags">
+</p>
+            <p><h2>Introduction</h2>
+<p>In a <a href="a-funny-little-probability-problem-4">previous post</a> I made a calculation error, which arrived at an
+unintuitive result - a result that still stands. I got side-tracked
+with, what I thought, was an arithmetic error. I wasn't satisfied,
+because my intuition still thought that the without-replacement
+probability should be a smidge higher, because of the reduction in the
+number of cards. Because of this, I kept thinking about the problem to
+see where it went wrong. I asked another faculty member the same
+question, and although I didn't receive a full answer, it was enough to
+figure out that I was on the right track initially, but was just a
+little sloppy. So what went wrong, and why? Let me reproduce the
+problem, and the <em>correct</em> calculation this time, and then go on to see
+the implications of the error.</p>
+<h2>The problem</h2>
+<p>You draw two cards from a deck, and ask what is the probability that the
+first is a black card, and the second is a jack. In math notation, we
+want:</p>
+<p>$$<br />
+P(B1,J2)<br />
+$$</p>
+<h2>The right answer, and how I know</h2>
+<p>The easiest way to be absolutely sure I had the right answer is to
+simply outline every possible two-hand deal, and count the number of
+cards in each case.</p>
+<h3>With replacement:</h3>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">Game</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="n">deals</span><span class="o">=</span><span class="p">[]</span>
+<span class="n">deck</span><span class="o">=</span><span class="n">makedeck</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">card1</span> <span class="ow">in</span> <span class="n">deck</span><span class="p">:</span>
+    <span class="n">deck2</span><span class="o">=</span><span class="n">makedeck</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">card2</span> <span class="ow">in</span> <span class="n">deck2</span><span class="p">:</span>
+        <span class="n">deals</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">card1</span><span class="p">,</span><span class="n">card2</span><span class="p">])</span>
+
+<span class="n">found</span><span class="o">=</span><span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">deals</span> <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">color</span><span class="o">==</span><span class="s1">&#39;Black&#39;</span> <span class="ow">and</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">rank</span><span class="o">==</span><span class="mi">11</span><span class="p">]</span>
+</pre></div>
+
+
+<p>The length of "found" is 104, and the length of the "deals" is 2704 (52
+x 52).</p>
+<h3>Without replacement:</h3>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">Game</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="n">deals</span><span class="o">=</span><span class="p">[]</span>
+<span class="n">deck</span><span class="o">=</span><span class="n">makedeck</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">card1</span> <span class="ow">in</span> <span class="n">deck</span><span class="p">:</span>
+    <span class="n">deck2</span><span class="o">=</span><span class="n">makedeck</span><span class="p">()</span>
+    <span class="n">deck2</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">card1</span><span class="p">)</span>   <span class="c1"># &lt;------ remove the card</span>
+    <span class="k">for</span> <span class="n">card2</span> <span class="ow">in</span> <span class="n">deck2</span><span class="p">:</span>
+        <span class="n">deals</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">card1</span><span class="p">,</span><span class="n">card2</span><span class="p">])</span>
+
+<span class="n">found</span><span class="o">=</span><span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">deals</span> <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">color</span><span class="o">==</span><span class="s1">&#39;Black&#39;</span> <span class="ow">and</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">rank</span><span class="o">==</span><span class="mi">11</span><span class="p">]</span>
+</pre></div>
+
+
+<p>The length of "found" is 102, and the length of the "deals" is 2652 (52
+x 51), which is the <em>same</em> fraction.</p>
+<h3 id="with-replacement_1">With replacement</h3>
+<p><em>This part was correct, and just repeated here.</em></p>
+<p>In replacement, we replace the first card after drawing it, reshuffle,
+and then draw the second. Thus the two events are independent.</p>
+<p>$$<br />
+\begin{array}{rcl}<br />
+P(B1,J2|{\rm replace}) &amp;=&amp; P(B1) \times P(J2) \<br />
+&amp;=&amp;\frac{26}{52} \times \frac{4}{52} = \frac{104}{2704}=0.0385<br />
+\end{array}<br />
+$$</p>
+<h3 id="without-replacement_1">Without replacement</h3>
+<p>$$<br />
+\begin{array}{rcl}<br />
+P(B1,J2|{\rm no-replace}) &amp;=&amp; P(B1) \times P(J2|B1) \<br />
+&amp;=&amp;\frac{26}{52} \times
+\left(P(J2|B1,J1)\underline{P(J1|B1)}+P(J2|B1,\overline{J1})\underline{P(\overline{J1}|B1)}\right)\<br />
+&amp;=&amp;\frac{26}{52} \times \left(\frac{3}{51} \cdot
+\underline{\frac{2}{26}}+\frac{4}{51} \cdot
+\underline{\frac{24}{26}} \right)\<br />
+&amp;=&amp;\frac{26}{52} \times \underline{\left(\frac{102}{51\cdot 26}
+\right)}\<br />
+&amp;=&amp;\frac{102}{2652}\<br />
+&amp;=&amp;0.0385<br />
+\end{array}<br />
+$$</p>
+<p>where I have put boxes, or underline, around where I differ from the
+previous calculation.  </p>
+<h3>The difference</h3>
+<p>The difference comes from the term like:</p>
+<p>$$<br />
+P(J2|B1,J1)P(J1|B1)<br />
+$$</p>
+<p>In the <em>incorrect</em> version, we had</p>
+<p>$$<br />
+P(J2|B1,J1)P(J1)<br />
+$$</p>
+<p>Essentially, I was being sloppy, and forgot to copy the right-hand side
+of the conditional, without the <em>B1</em>.</p>
+<p>What I find interesting, which is why I've gone to such a detail, are
+the following:</p>
+<ol>
+<li>how easy it is to make simple arithmetic mistakes in these sorts of
+    problems</li>
+<li>how easy it is to have a subtle rewrite of a problem, and get a
+    different answer</li>
+<li>how a simulation gives a lot of confidence in a result</li>
+</ol>
+<p>I've found, over time, that I don't tend to trust mathematical results
+without a numerical result to support it.  </p>
+<p>Still, it is a cool result, and still somewhat unintuitive - at least at
+first. Thinking in terms of information, it makes sense - knowing that
+the first card is black tells you nothing about the rank of the second
+card.  </p></p>
+          </section>
+        </div>
+
+    </section>
+
+    <!-- Two -->
+    <section class="wrapper style1 container special">
+        <div class="row">
+          <div class="4u">
+
+            <section>
+              <span class="icon feature fa-"></span>
+              <header>
+                <a href="/laplace-and-twins.html" rel='bookmark'><h3>Laplace and Twins</h3></a>
+              </header>
+              <p>From this paper, http://statweb.stanford.edu/~ckirby/brad/other/2013Perspective.pdf we have the fo</p>
+              <footer>
+                  <ul class="buttons">
+                      <li><a href="/laplace-and-twins.html" class="button small">Read More</a></li>
+                  </ul>
+              </footer>
+            </section>
+
+          </div>
+          <div class="4u">
+
+            <section>
+              <span class="icon feature fa-"></span>
+              <header>
+                <a href="/student-course-evaluations.html" rel='bookmark'><h3>Student Course Evaluations</h3></a>
+              </header>
+              <p>I’m always interested in the process of evaluation, especially for professors. It is common to have student evaluations performed at the end of the semester, and there are endless debates abou</p>
+              <footer>
+                  <ul class="buttons">
+                      <li><a href="/student-course-evaluations.html" class="button small">Read More</a></li>
+                  </ul>
+              </footer>
+            </section>
+
+          </div>
+          <div class="4u">
+
+            <section>
+              <span class="icon feature fa-"></span>
+              <header>
+                <a href="/philosophy-and-science.html" rel='bookmark'><h3>Philosophy and Science</h3></a>
+              </header>
+              <p>I was listening to the Dogma Debate episode “Does God Really Love You?” with Blake Giunta, and was really struck</p>
+              <footer>
+                  <ul class="buttons">
+                      <li><a href="/philosophy-and-science.html" class="button small">Read More</a></li>
+                  </ul>
+              </footer>
+            </section>
+
+          </div>
+        </div>
+    </section>
+  </article>
+
+
+
+<!-- Footer -->
+<footer id="footer">
+
+    <ul class="icons">
+        <li>
+          <a href="#" class="icon circle fa fa-You can add links in your config file"><span class="label">You can add links in your config file</span></a>
+        </li>
+        <li>
+          <a href="#" class="icon circle fa fa-Another social link"><span class="label">Another social link</span></a>
+        </li>
+    </ul>
+
+    <span class="copyright">&copy; Untitled. All rights reserved. Design: <a href="http://html5up.net">HTML5 UP</a>.</span>
+
+</footer>
+</body>
+</html>

@@ -1,0 +1,274 @@
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.dropotron.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/skel-layers.min.js"></script>
+    <script src="/js/init.js"></script>
+    <link rel="stylesheet" href="/css/pygment.css" />
+    <noscript>
+        <link rel="stylesheet" href="/css/skel.css" />
+        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="/css/style-noscript.css" />
+    </noscript>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link  href="http://fonts.googleapis.com/css?family=Anonymous+Pro:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css" >
+    <!--[if lte IE 8]><link rel="stylesheet" href="/css/ie/v8.css" /><![endif]-->
+    <!--[if lte IE 9]><link rel="stylesheet" href="/css/ie/v9.css" /><![endif]-->
+
+    <title>Expressing Ignorance | bblais on the web </title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width">
+</head>
+
+<body class=" loading">
+
+
+
+    <!-- Header -->
+    <header id="header" >
+        <h1 class="logo">
+            <a href="">bblais on the web, design Twenty <span> by html5 up</span></a>
+        </h1>
+        <nav id="nav">
+            <ul>
+                <!-- <li class="current"><a href="index.html">Welcome</a></li> -->
+                        <li><a href="/pages/presentations.html">Presentations</a></li>
+                        <li><a href="/pages/projects.html">Projects</a></li>
+                        <li><a href="/pages/publications.html">Publications</a></li>
+                <li class="submenu">
+                    <a href="/">Blog</a>
+                    <ul>
+                            <li class="active">
+                                <a href="/category/articles/">articles</a>
+                            </li>
+                            <li >
+                                <a href="/category/presentations/">presentations</a>
+                            </li>
+                            <li >
+                                <a href="/category/projects/">projects</a>
+                            </li>
+                            <li >
+                                <a href="/category/unbelievable project/">Unbelievable Project</a>
+                            </li>
+                            <li >
+                                <a href="/category/wordpress_migration/">wordpress_migration</a>
+                            </li>
+                    </ul>
+                </li>
+                <li><a href="#" class="button special">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<!-- Main -->
+<article id="main">
+
+  <header class="special container">
+    <span class="icon fa-"></span>
+    <h2>Expressing Ignorance</h2>
+    <!-- add page sub title here -->
+    <p>Posted on Sat 09 May 2015 by Brian Blais</p>
+    <p></p>
+  </header>
+
+  <!-- One -->
+    <section class="wrapper style4 container">
+
+      <!-- Content -->
+        <div class="content">
+          <section>
+            <!-- <a href="#" class="image feature"><img src="images/pic04.jpg" alt="" /></a> -->
+            <h3>Posted in <a href="/category/articles.html">articles</a></h3>
+            <p class="tags">
+</p>
+            <p><p>I continue with my critique of the article <a href="https://whyevolutionistrue.wordpress.com/2015/04/16/why-i-am-not-a-bayesian/">Why I am not a Bayesian</a> by Greg Mayer, where complains about the Bayesian approach to inference, and then espouses Maximum Likelihood methods.  <a href="http://web.bryant.edu/~bblais/priors-vs-likelihoods.html">My previous post</a> looked at the notion of prior vs likelihood, why we commonly use priors (even without always knowing it), and why they are necessary for hypothesis comparison.  Here I wanted to focus on what I consider to be his biggest issue with the Bayes approach, and it is technical in nature.  It happens to be the same issue that I've heard from others - how to specify priors.  Mayer goes further, and says that the specification of ignorance is not well defined.  I admit that there may be cases where that is true, but I haven't seen a convincing one yet.  In the article he outlines the following argument against specifying initial ignorance with a prior:</p>
+<blockquote>
+<p>Let’s look at simple genetic example: a gene with two alleles (forms) at the locus (say alleles $A$ and $a$). The two alleles have frequencies $p + q = 1$, and, if there are no evolutionary forces acting on the population and mating is at random, then the three genotypes ($AA$, $Aa$, and $aa$) will have the frequencies $p^2$, $2pq$, and $q^2$, respectively. If I am addressing the frequency of allele $a$, and I am a Bayesian, then I assign equal prior probability to all possible values of $q$, so</p>
+<p>$P(q&gt;.5) = 0.5$</p>
+<p>But this implies that the frequency of the $aa$ genotype has a non-uniform prior probability distribution</p>
+<p>$P(q^2&gt;0.25) = 0.5$.</p>
+<p>My ignorance concerning $q$ has become rather definite knowledge concerning $q^2$ (which, if there is genetic dominance at the locus, would be the frequency of recessive homozygotes; as in Mendel’s short pea plants, this is a very common way in which we observe the data). This apparent conversion of ‘ignorance’ to ‘knowledge’ will be generally so: prior probabilities are not invariant to parameter transformation (in this case, the transformation is the squaring of $q$). And even more generally, there will be no unique, objective distribution for ignorance. Lacking a genuine prior distribution (which we do have in the diagnosis example above), reasonable men may disagree on how to represent their ignorance. As Royall (1997) put it, “pure ignorance cannot be represented by a probability distribution”.</p>
+</blockquote>
+<p>This example intrigued me because of its simplicity - it must have some solution.  It also gave me an excuse to play with <a href="http://plot.ly">plotly, the online plotting program</a> and <a href="http://dan.iel.fm/emcee/current/">emcee: The MCMC Hammer</a>, both of which I had been meaning to get some practice in.</p>
+<h2>Summary</h2>
+<p>In summary,</p>
+<ol>
+<li>Probability is a measure of our <em>state of knowledge</em>.</li>
+<li>If we gain new information about our system, our <em>state of knowledge</em> changes, and thus the <em>probabilities</em> we assign must change.</li>
+<li>Humans are bad an intuiting where information comes from in some cases, and thus often mistakenly think that two problems are equivalent when they are not. </li>
+</ol>
+<p>Mayer's critique of priors with this genetic example is an example of point (3), and we outline that with a model analogy.  In sum, the "apparent conversion of ‘ignorance’ to ‘knowledge’" that Greg Mayer is so concerned about is in fact not just apparent - it is explicit.  This is not due to some arcane mathematics on priors, but to <em>added information</em>.  What Mayer's considers to be equivalent situations - knowledge of only two possible states, and knowledge of the process that produces those states - are not equivalent at all.  </p>
+<h2>The Model - Part 1</h2>
+<p>The model that I'm using comes in two steps.  The first step concerns the observation of a system with two states, call them $+$ and $-$, and we want to infer from the observations of these states what the underlying probabilities, denoted $\theta_+$ and $\theta_-$ respectively, are.  The observed data is something as simple as the number observed in one state vs the other, such as
+\begin{eqnarray<em>}
+N_+ &amp;=&amp; 16 \
+N_- &amp;=&amp; 4 \
+N&amp;\equiv&amp; N_+ + N_- = 20
+\end{eqnarray</em>}</p>
+<p>The solution to this is achieved with a straightforward application of Bayes' rule:</p>
+<p>\begin{eqnarray<em>}
+P(\theta_+|{\rm data}) &amp;=&amp; P({\rm data}|\theta_+)\times P(\theta_+)/K \
+P(\theta_-|{\rm data}) &amp;=&amp; \underbrace{P({\rm data}|-)}<em>{\rm likelihood}\times  \underbrace{P(\theta</em>-)}_{\rm prior}/K
+\end{eqnarray</em>}</p>
+<p>with normalization constant</p>
+<p>\begin{eqnarray<em>}
+K\equiv P({\rm data}|\theta_+)\times P(\theta_+) + P({\rm data}|\theta_-)\times P(\theta_-)
+\end{eqnarray</em>}
+and where the data is defined as 
+\begin{eqnarray<em>}
+{\rm data}&amp;\equiv &amp; \left{ N_+,N \right}
+\end{eqnarray</em>}
+or equivalently
+\begin{eqnarray<em>}
+{\rm data}&amp;\equiv &amp; \left{ N_-,N \right}
+\end{eqnarray</em>}</p>
+<p>Although analytical solutions exist for this problem, I'll solve it with MCMC both to work on my implementation, but also to see how this could be applied to more challenging cases.  To do this, we specify the log-prior and log-likelihoods for our parameters.  </p>
+<h3>Prior</h3>
+<p>Notice that we know <em>nothing</em> about the origin of these states or the process which gives rise to these states, we only observe how many there are.  Thus, we have <em>total ignorance</em> of the $\theta_-$ parameter, and we assign a uniform prior probability to reflect that.</p>
+<p>$$
+P(\theta_-) = \left{\begin{array}{cl}1 &amp; \mbox{ for } 0 \le \theta_- \le 1 \
+0 &amp; \mbox{ otherwise } 
+\end{array}\right.
+$$</p>
+<h3>Likelihood</h3>
+<p>Since this is a straightforward Bernoulli process, we have for the likelihood</p>
+<p>$$
+P({\rm data}|\theta_-) = \left(\begin{array}{c}N  \ N_- \end{array}\right) \theta_{-}^{N_-}\times (1-\theta_-)^{N-N-}
+$$</p>
+<h3>Result</h3>
+<p>The resulting posterior for $\theta_-$ is</p>
+<div>
+    <a href="https://plot.ly/~bblais/77/" target="_blank" title="$\hat{\theta_-}|^{97.5}_{2.5}=0.219^{+0.200}_{-0.137}$" style="display: block; text-align: center;"><img src="https://plot.ly/~bblais/77.png" alt="$\hat{\theta_-}|^{97.5}_{2.5}=0.219^{+0.200}_{-0.137}$" style="max-width: 100%;"  onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+    <script data-plotly="bblais:77" src="https://plot.ly/embed.js" async></script>
+</div>
+
+<p>Again, clearly there is an analytic solution to this part, but that isn't the point.  And I'm not sure whether the second part has an easy solution, but the MCMC approach is just as easy.</p>
+<h2>Model - Part 2</h2>
+<p>The second step in the model is when we get some detail of the <em>process</em> by which the $+$ and $-$ states are generated.  Here is the recipe:</p>
+<ol>
+<li>I flip a two identical thumbtacks, each of which can land with the point up ($U$) or down ($D$) - and I don't know anything about the probability of these two cases. </li>
+<li>If either (or both) of the tacks lands with the point up, that is reported as the $+$ state.  The only remaining case (i.e. both tacks land pointing down), is reported as the $-$ state.</li>
+</ol>
+<p>We have, then, the following mapping:</p>
+<ol>
+<li>$UU \rightarrow +$</li>
+<li>$UD \rightarrow +$</li>
+<li>$DU \rightarrow +$</li>
+<li>$DD \rightarrow -$</li>
+</ol>
+<p>The parallel with alleles should be obvious.  By keeping it to a simple physical model, I avoid the extra complexities of genetic inheritance, and other biological processes.</p>
+<p>This model, again, is a basic problem in probability, but note the following very important point:</p>
+<p><strong>Our knowledge of the system has changed, so our probabilities must also change.</strong></p>
+<p>The only difference is that our ignorance is now on $\theta_U$ and $\theta_D$, and the probabilities for the $+$ and $-$ states are <em>derived</em> from that, </p>
+<p>\begin{eqnarray<em>}
+\theta_- &amp;=&amp; \theta_D^2 \
+\theta_+ &amp;=&amp; 1-\theta_-
+\end{eqnarray</em>}</p>
+<p>Now we have posterior for the underlying parameters, such as $\theta_D$, as well as for the state parameters, such $\theta_-$, which are determined entirely from the underlying parameters.  The posterior for $\theta_D$ is 
+<div>
+    <a href="https://plot.ly/~bblais/84/" target="_blank" title="$\hat{\theta_D}|^{97.5}_{2.5}=0.447^{+0.187}_{-0.184}$" style="display: block; text-align: center;"><img src="https://plot.ly/~bblais/84.png" alt="$\hat{\theta_D}|^{97.5}_{2.5}=0.447^{+0.187}_{-0.184}$" style="max-width: 100%;"  onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+    <script data-plotly="bblais:84" src="https://plot.ly/embed.js" async></script>
+</div>
+while the posterior for $\theta_-$ in the Model 2 is
+<div>
+    <a href="https://plot.ly/~bblais/85/" target="_blank" title="${\hat{\theta}_-}|^{97.5}_{2.5}=0.200^{+0.202}_{-0.131}$" style="display: block; text-align: center;"><img src="https://plot.ly/~bblais/85.png" alt="${\hat{\theta}_-}|^{97.5}_{2.5}=0.200^{+0.202}_{-0.131}$" style="max-width: 100%;"  onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+    <script data-plotly="bblais:85" src="https://plot.ly/embed.js" async></script>
+</div></p>
+<h2>Comparisons and conclusions</h2>
+<p>It's a bit more convenient to plot the consequences of Model 1 (ignorance in +/-) and Model 2 (ignorance in U/D), with the same data, both together on the same plot.
+<div>
+    <a href="https://plot.ly/~bblais/86/" target="_blank" title="Ignorance on +/- vs Ignorance on U/D" style="display: block; text-align: center;"><img src="https://plot.ly/~bblais/86.png" alt="Ignorance on +/- vs Ignorance on U/D" style="max-width: 100%;"  onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+    <script data-plotly="bblais:86" src="https://plot.ly/embed.js" async></script>
+</div>
+We can easily see that, although they are different, there is no <em>practical</em> difference between them given this data. For larger $N$ this difference gets less significant.
+<div>
+    <a href="https://plot.ly/~bblais/87/" target="_blank" title="Ignorance on +/- vs Ignorance on U/D" style="display: block; text-align: center;"><img src="https://plot.ly/~bblais/87.png" alt="Ignorance on +/- vs Ignorance on U/D" style="max-width: 100%;"  onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+    <script data-plotly="bblais:87" src="https://plot.ly/embed.js" async></script>
+</div></p>
+<p>In sum, the "apparent conversion of ‘ignorance’ to ‘knowledge’" that Greg Mayer is so concerned about is in fact not just apparent - it is explicit.  This is not due to some arcane mathematics on priors, but to <em>added information</em>.  What Mayer's considers to be equivalent situations - knowledge of only two possible states, and knowledge of the process that produces those states - are not equivalent at all.  </p>
+<p>In practice, for this problem, it makes very little difference whether you think of things in terms of Model 1 or Model 2 except in the case of extremely rare underlying events.  This is also as it should be - if you know that the process essentially hides the existence of itself (i.e. the recessive gene is not observed phenotypically) - then you would assign a lower probability for the phenotype than you would if you only knew that there were two possible states and knew nothing about the properties of recessive characteristics.  To repeat, different states of knowledge require different probability assignments - this is a feature, not a bug.</p></p>
+          </section>
+        </div>
+
+    </section>
+
+    <!-- Two -->
+    <section class="wrapper style1 container special">
+        <div class="row">
+          <div class="4u">
+
+            <section>
+              <span class="icon feature fa-"></span>
+              <header>
+                <a href="/laplace-and-twins.html" rel='bookmark'><h3>Laplace and Twins</h3></a>
+              </header>
+              <p>From this paper, http://statweb.stanford.edu/~ckirby/brad/other/2013Perspective.pdf we have the fo</p>
+              <footer>
+                  <ul class="buttons">
+                      <li><a href="/laplace-and-twins.html" class="button small">Read More</a></li>
+                  </ul>
+              </footer>
+            </section>
+
+          </div>
+          <div class="4u">
+
+            <section>
+              <span class="icon feature fa-"></span>
+              <header>
+                <a href="/student-course-evaluations.html" rel='bookmark'><h3>Student Course Evaluations</h3></a>
+              </header>
+              <p>I’m always interested in the process of evaluation, especially for professors. It is common to have student evaluations performed at the end of the semester, and there are endless debates abou</p>
+              <footer>
+                  <ul class="buttons">
+                      <li><a href="/student-course-evaluations.html" class="button small">Read More</a></li>
+                  </ul>
+              </footer>
+            </section>
+
+          </div>
+          <div class="4u">
+
+            <section>
+              <span class="icon feature fa-"></span>
+              <header>
+                <a href="/philosophy-and-science.html" rel='bookmark'><h3>Philosophy and Science</h3></a>
+              </header>
+              <p>I was listening to the Dogma Debate episode “Does God Really Love You?” with Blake Giunta, and was really struck</p>
+              <footer>
+                  <ul class="buttons">
+                      <li><a href="/philosophy-and-science.html" class="button small">Read More</a></li>
+                  </ul>
+              </footer>
+            </section>
+
+          </div>
+        </div>
+    </section>
+  </article>
+
+
+
+<!-- Footer -->
+<footer id="footer">
+
+    <ul class="icons">
+        <li>
+          <a href="#" class="icon circle fa fa-You can add links in your config file"><span class="label">You can add links in your config file</span></a>
+        </li>
+        <li>
+          <a href="#" class="icon circle fa fa-Another social link"><span class="label">Another social link</span></a>
+        </li>
+    </ul>
+
+    <span class="copyright">&copy; Untitled. All rights reserved. Design: <a href="http://html5up.net">HTML5 UP</a>.</span>
+
+</footer>
+</body>
+</html>

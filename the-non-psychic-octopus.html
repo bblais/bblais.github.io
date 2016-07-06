@@ -1,0 +1,269 @@
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.dropotron.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/skel-layers.min.js"></script>
+    <script src="/js/init.js"></script>
+    <link rel="stylesheet" href="/css/pygment.css" />
+    <noscript>
+        <link rel="stylesheet" href="/css/skel.css" />
+        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="/css/style-noscript.css" />
+    </noscript>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link  href="http://fonts.googleapis.com/css?family=Anonymous+Pro:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css" >
+    <!--[if lte IE 8]><link rel="stylesheet" href="/css/ie/v8.css" /><![endif]-->
+    <!--[if lte IE 9]><link rel="stylesheet" href="/css/ie/v9.css" /><![endif]-->
+
+    <title>The Non-Psychic Octopus | bblais on the web </title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width">
+</head>
+
+<body class=" loading">
+
+
+
+    <!-- Header -->
+    <header id="header" >
+        <h1 class="logo">
+            <a href="">bblais on the web, design Twenty <span> by html5 up</span></a>
+        </h1>
+        <nav id="nav">
+            <ul>
+                <!-- <li class="current"><a href="index.html">Welcome</a></li> -->
+                        <li><a href="/pages/presentations.html">Presentations</a></li>
+                        <li><a href="/pages/projects.html">Projects</a></li>
+                        <li><a href="/pages/publications.html">Publications</a></li>
+                <li class="submenu">
+                    <a href="/">Blog</a>
+                    <ul>
+                            <li >
+                                <a href="/category/articles/">articles</a>
+                            </li>
+                            <li >
+                                <a href="/category/presentations/">presentations</a>
+                            </li>
+                            <li >
+                                <a href="/category/projects/">projects</a>
+                            </li>
+                            <li >
+                                <a href="/category/unbelievable project/">Unbelievable Project</a>
+                            </li>
+                            <li class="active">
+                                <a href="/category/wordpress_migration/">wordpress_migration</a>
+                            </li>
+                    </ul>
+                </li>
+                <li><a href="#" class="button special">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<!-- Main -->
+<article id="main">
+
+  <header class="special container">
+    <span class="icon fa-"></span>
+    <h2>The Non-Psychic Octopus</h2>
+    <!-- add page sub title here -->
+    <p>Posted on Sat 28 August 2010 by brianblais</p>
+    <p></p>
+  </header>
+
+  <!-- One -->
+    <section class="wrapper style4 container">
+
+      <!-- Content -->
+        <div class="content">
+          <section>
+            <!-- <a href="#" class="image feature"><img src="images/pic04.jpg" alt="" /></a> -->
+            <h3>Posted in <a href="/category/wordpress_migration.html">wordpress_migration</a></h3>
+            <p class="tags">
+</p>
+            <p><h2>Introduction</h2>
+<p>I saw in the newspaper an article about a supposedly <a href="http://www.bloomberg.com/news/2010-08-10/octopus-oracle-paul-swims-clear-of-euro-gets-tentacles-on-book-film-deal.html">psychic
+octopus</a>, which predicts world cup matches by making a choice between
+two different foods labeled by the team flags. <a href="http://en.wikipedia.org/wiki/Paul_the_Octopus">Paul the Octopus</a> has
+an impressive record of 12 correct out of 14. Or is it impressive? How
+can we determine whether this performance is evidence for psychic
+behavior, or something else. A typical statistical analysis might start
+with the null hypothesis that the octopus was random, so was choosing
+the teams with probability p=0.5. The likelihood of getting 12 right in
+14 is</p>
+<p><img alt="217E3119-BC22-4A09-B534-D62BAA0BF53C.jpg" src="http://lh3.ggpht.com/_VLTJPGH7Stw/THhaNtjI1-I/AAAAAAAAGgk/vAAgbtrpBvo/217E3119-BC22-4A09-B534-D62BAA0BF53C.jpg?imgmax=800" /></p>
+<p>which is fantastically strong against the null! Even if you do the
+p-value test for the the correct data being more extreme, you get
+p-val=0.00646.</p>
+<p><strong>So, we reject the null, and the octopus must be psychic!...(or not)</strong></p>
+<h2>Bayesian Analysis Against Random</h2>
+<p>Let's look at this another way, and perhaps we can gain some insight. It
+will be convenient to talk about odds, rather then probability, and
+further to use the log of the odds so that this becomes an arithmetic
+problem. The odds is defined as the ratio of the probability for a
+hypothesis, H, and the probability for the inverse, not H.</p>
+<p><img alt="E5899678-9897-42AF-8CBB-5D687A02A731.jpg" src="http://lh3.ggpht.com/_VLTJPGH7Stw/THhdxnGITTI/AAAAAAAAGg8/ACbEZMN0tMU/E5899678-9897-42AF-8CBB-5D687A02A731.jpg?imgmax=800" /></p>
+<p>We define the log-odds, or evidence as defined by E. T. Jayes,</p>
+<p><img alt="BAAC0566-3B79-4B44-8F0D-C5046788B491.jpg" src="http://lh5.ggpht.com/_VLTJPGH7Stw/THhc1Q9LrLI/AAAAAAAAGg0/cudVDoIadh0/BAAC0566-3B79-4B44-8F0D-C5046788B491.jpg?imgmax=800" />  </p>
+<p>A few comments before we commence with more calculation. The prior
+evidence reflects our state of knowledge before we see the data. How
+likely is it that an octopus is psychic? Most reasonable people would
+say highly unlikely. Generous odds would be 100:1 against, although
+personally I'd probably put it at least a million to 1 against. Let's be
+generous. That gives us a prior evidence of</p>
+<p><img alt="94E23FDD-36D3-4B6A-B72C-7C759FAAE1B1.jpg" src="http://lh5.ggpht.com/_VLTJPGH7Stw/THhel_nxQGI/AAAAAAAAGhE/2rmhiNW5cCQ/94E23FDD-36D3-4B6A-B72C-7C759FAAE1B1.jpg?imgmax=800" /></p>
+<p>If we had been naive, and set equal odds, then this evidence would be
+e=0. So we start with evidence e=-20 for a psychic octopus (which is
+strong evidence against it, because e\&lt;0), and then we observe the data.
+If we assume that a psychic octopus is right 90% of the time, and that
+the only alternative is a random octopus correct 50% of the time, then
+we have added evidence for each correct answer:</p>
+<p><img alt="85F4C7A1-EFC7-4E8C-88B0-E98B846B1F97.jpg" src="http://lh6.ggpht.com/_VLTJPGH7Stw/THhflza23EI/AAAAAAAAGhM/p9tsgV_ze1A/85F4C7A1-EFC7-4E8C-88B0-E98B846B1F97.jpg?imgmax=800" /></p>
+<p>Each incorrect answer gives:</p>
+<p><img alt="D48A7B4A-112D-4BC6-A267-95B797A15F9C.jpg" src="http://lh3.ggpht.com/_VLTJPGH7Stw/THhfwRzFycI/AAAAAAAAGhQ/FxOt7RabBAs/D48A7B4A-112D-4BC6-A267-95B797A15F9C.jpg?imgmax=800" /></p>
+<p>The evidence gets pushed up from the prior with each correct answer, and
+down for each wrong answer. Notice how wrong answers are penalized more
+than right answers. This is because the psychic octopus is pretty good
+(p=0.9). We get a final (posterior) evidence for 12 correct and 2 wrong:</p>
+<p><img alt="5BC4EE45-59BD-4A67-A2FF-779E7EC92145.jpg" src="http://lh5.ggpht.com/_VLTJPGH7Stw/THhgmdqDC1I/AAAAAAAAGhU/WMImRm_gzlY/5BC4EE45-59BD-4A67-A2FF-779E7EC92145.jpg?imgmax=800" /></p>
+<p>which is about 2:1 odds against the psychic octopus.</p>
+<h2>More to the Story</h2>
+<p>Most pseudoscience gets propagated by people who reason naively. They
+will say that there are two possibilities, say random and psychic, and
+they they must both be equally likely before the data. So, when rare
+data is found, they reject random and claim this is evidence for psychic
+phenomena. This line of reasoning is incorrect for two reasons:</p>
+<ol>
+<li>random and psychic are not equally probable a priori - random is
+    much more likely in cases like this</li>
+<li>there are more possibilities</li>
+</ol>
+<p>We already saw how point (1) can be handled by proper prior information.
+Point (2), with multiple hypotheses gets mathematically a bit trickier
+(there are more terms to carry around) and is thus messier, but
+conceptually is fairly straightforward.</p>
+<p>We have two hypotheses so far:</p>
+<p><em>H</em>="Octopus sees the correct future 90% of the time, and is psychic"</p>
+<p><em>R</em>="Octopus chooses randomly."</p>
+<p>Let me introduce two more hypotheses.</p>
+<p><em>Y</em>="Octopus chooses flags with big yellow stripes 90% of the time"</p>
+<p><em>G</em>="Octopus chooses Germany 90% of the time"</p>
+<p>How would you choose the prior probabilities for these hypotheses?
+Personally, as I said before, I'd have p(H) way below p(R) by about a
+factor of a million, but being generous, let's put it about a factor of
+100. What about p(Y) and p(G)? I'd say that these might be comparable to
+random or, if I knew something about the vision of octopi or how the
+person feeding the octopus might rig the food in the direction of his
+favorite team, I might even have p(Y)>p(R) or p(G)>p(R). Certainly
+p(Y)>p(H) and p(G)>p(H). So what happens with the data?</p>
+<p>For hypothesis Y, there are N=14 games of which the octopus chooses 12
+with bright yellow stripes (there is one where it chose Germany over
+Ghana and should have chosen Ghana which has a bigger strips, and
+another with Germany and Spain where Spain should have been chosen). For
+hypothesis G there are N=14 games and the octopus chooses 12 for Germany
+(2 teams are chosen that are not Germany, and one match where Germany
+wasn't a choice and it chose Spain, which has the closest flag). <strong>Thus,
+the data support both of these hypotheses exactly as much as the p=0.9
+psychic hypothesis.</strong> Therefore, the evidence will push these hypotheses
+up by as much as the psychic, over the random, and will make the psychic
+octopus even less likely.</p>
+<p>So, when you hear fantastic claims supported with a comparison to
+random, the two things you must do are:</p>
+<ol>
+<li>Ask yourself what the prior probability of the fantastic claim is.
+    Even if a random explanation is very rare, it will probably still be
+    favored against the fantastic claim.</li>
+<li>Ask yourself what other possibilities, even if unlikely, could
+    explain the data. Since the fantastic claim is exceedingly unlikely,
+    even somewhat unlikely explanations may be supported by the data
+    more than the original fantastic claim.</li>
+</ol>
+<div class="blogger-post-footer">
+!<>
+
+</div></p>
+          </section>
+        </div>
+
+    </section>
+
+    <!-- Two -->
+    <section class="wrapper style1 container special">
+        <div class="row">
+          <div class="4u">
+
+            <section>
+              <span class="icon feature fa-"></span>
+              <header>
+                <a href="/laplace-and-twins.html" rel='bookmark'><h3>Laplace and Twins</h3></a>
+              </header>
+              <p>From this paper, http://statweb.stanford.edu/~ckirby/brad/other/2013Perspective.pdf we have the fo</p>
+              <footer>
+                  <ul class="buttons">
+                      <li><a href="/laplace-and-twins.html" class="button small">Read More</a></li>
+                  </ul>
+              </footer>
+            </section>
+
+          </div>
+          <div class="4u">
+
+            <section>
+              <span class="icon feature fa-"></span>
+              <header>
+                <a href="/student-course-evaluations.html" rel='bookmark'><h3>Student Course Evaluations</h3></a>
+              </header>
+              <p>I’m always interested in the process of evaluation, especially for professors. It is common to have student evaluations performed at the end of the semester, and there are endless debates abou</p>
+              <footer>
+                  <ul class="buttons">
+                      <li><a href="/student-course-evaluations.html" class="button small">Read More</a></li>
+                  </ul>
+              </footer>
+            </section>
+
+          </div>
+          <div class="4u">
+
+            <section>
+              <span class="icon feature fa-"></span>
+              <header>
+                <a href="/philosophy-and-science.html" rel='bookmark'><h3>Philosophy and Science</h3></a>
+              </header>
+              <p>I was listening to the Dogma Debate episode “Does God Really Love You?” with Blake Giunta, and was really struck</p>
+              <footer>
+                  <ul class="buttons">
+                      <li><a href="/philosophy-and-science.html" class="button small">Read More</a></li>
+                  </ul>
+              </footer>
+            </section>
+
+          </div>
+        </div>
+    </section>
+  </article>
+
+
+
+<!-- Footer -->
+<footer id="footer">
+
+    <ul class="icons">
+        <li>
+          <a href="#" class="icon circle fa fa-You can add links in your config file"><span class="label">You can add links in your config file</span></a>
+        </li>
+        <li>
+          <a href="#" class="icon circle fa fa-Another social link"><span class="label">Another social link</span></a>
+        </li>
+    </ul>
+
+    <span class="copyright">&copy; Untitled. All rights reserved. Design: <a href="http://html5up.net">HTML5 UP</a>.</span>
+
+</footer>
+</body>
+</html>
