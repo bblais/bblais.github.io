@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en-US" itemscope itemtype="http://schema.org/Blog">
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Brian Blais" />
+        <meta name="copyright" content="Brian Blais" />
+<meta itemprop="image" content="./theme/images/Saturn_with_Dice_Square.png">
+
+<meta name="keywords" content=", articles, " />
+
+<meta itemprop="name" content=""Skeptics" vs "Realists"  - A proposed solution ">
+<meta itemprop="description" content="The above graphic has circulated the internet for a while, and I think it worthy of comment. The intent of the graphic is to point out how silly those so-called global warming "skeptics" are. However, I think there is a hidden proposal there as well, worthy of an undergraduate project. If we call the "skepti...">
+<meta name="name" content=", articles, " />
+
+        <title>"Skeptics" vs "Realists"  - A proposed solution  · bblais on the web
+</title>
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="./theme/css/elegant.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="./theme/css/custom.css" media="screen">
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-47048778-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+    </head>
+    <body>
+        <div id="content-sans-footer">
+        <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="./"><span class=site-name>bblais on the web</span></a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right top-menu">
+                            <li ><a href=".">Home</a></li>
+                            <li ><a href="./pages/presentations.html">Presentations</a></li>
+                            <li ><a href="./pages/projects.html">Projects</a></li>
+                            <li ><a href="./pages/publications.html">Publications</a></li>
+                            <li ><a href="./categories.html">Categories</a></li>
+                            <li ><a href="./tags.html">Tags</a></li>
+                            <li ><a href="./archives.html">Archives</a></li>
+                            <li><form class="navbar-search" action="./search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span1"></div>
+                <div class="span10">
+<article>
+<div class="row-fluid">
+    <header class="page-header span10 offset2">
+    <h1><a href="./skeptics-vs-realists.html"> "Skeptics" vs "Realists"  <small> A proposed solution </small>  </a></h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+        <div class="span8 offset2 article-content">
+
+            <p><img alt="Skeptics vs Realists" src="http://www.skepticalscience.com/graphics/Escalator_2012_500.gif" /></p>
+<p>The above graphic has circulated the internet for a while, and I think it worthy of comment.  The <em>intent</em> of the graphic is to point out how <a href="http://www.skepticalscience.com/graphics.php?g=47">silly those so-called global warming "skeptics" are</a>.  However, I think there is a hidden proposal there as well, worthy of an undergraduate project.  If we call the "skeptics" model <span class="math">\(M_S\)</span> and the "realists" model <span class="math">\(M_R\)</span>, then we want the following probabilities:</p>
+<div class="math">\begin{eqnarray}
+P(M_S|{\rm data})
+\end{eqnarray}</div>
+<p>and</p>
+<div class="math">\begin{eqnarray}
+P(M_R|{\rm data})
+\end{eqnarray}</div>
+<p>
+where the data is the temperature data for the past 40 years (or farther, if you want to compare to the entire known <a href="http://data.giss.nasa.gov/gistemp/">global temperature record</a>).</p>
+<p>The reason that we consider the "skeptics" model as potentially silly is the direct consequence of the probability analysis.  The "realist" model has two parameters, so when we calculate the model probability we marginalize over those parameters.
+</p>
+<div class="math">\begin{eqnarray}
+P(M_R|{\rm data})= \int_{\alpha,\beta} P(M_R|{\rm data},\alpha,\beta)P(\alpha,\beta)
+\end{eqnarray}</div>
+<p>
+where <span class="math">\(\alpha\)</span> and <span class="math">\(\beta\)</span> are the slope and intercept of the linear model, respectively.  We incur an <a href="http://www.cs.toronto.edu/~mackay/itprnn/ps/345.357.pdf">Ockham penalty</a> for each marginalized parameter.  </p>
+<p>When we look at the "skeptics" model, we have the same.
+</p>
+<div class="math">\begin{eqnarray}
+P(M_S|{\rm data})= \int_{\alpha_1,\beta_1,\alpha_2,\beta_2,\cdots,t_1,t_2,\cdots} P(M_S|{\rm data},\alpha_1,\beta_1,\alpha_2,\beta_2,\cdots,t_1,t_2,\cdots)P(\alpha_1,\beta_1,\alpha_2,\beta_2,\cdots,t_1,t_2,\cdots)
+\end{eqnarray}</div>
+<p>
+where <span class="math">\(\alpha_1\)</span> and <span class="math">\(\beta_1\)</span> are the slope and intercept, respectively, of the first line up to year <span class="math">\(t_1\)</span>.  <span class="math">\(\alpha_2\)</span> and <span class="math">\(\beta_2\)</span> are the slope and intercept, respectively, of the <em>second</em> line up to year <span class="math">\(t_2\)</span>, etc....  Since we incur an <a href="http://www.cs.toronto.edu/~mackay/itprnn/ps/345.357.pdf">Ockham penalty</a> for <em>each</em> marginalized parameter, this model needs to fit the data substantially better than the "realist" model to achieve the same level of probability.  </p>
+<p>What does <em>substantially</em> mean?  That is the proposal - perhaps someone will do this proper probabilistic analysis of the problem.  Maybe the "skeptics" will turn out correct!</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    var location_protocol = (false) ? 'https' : document.location.protocol;
+    if (location_protocol !== 'http' && location_protocol !== 'https') location_protocol = 'https:';
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+            <section>
+<div class="accordion" id="accordion2">
+    <div class="accordion-group">
+        <div class="accordion-heading">
+            <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
+                href="./skeptics-vs-realists.html#disqus_thread">
+                Comments
+            </a>
+        </div>
+        <div id="disqus_thread" class="accordion-body collapse">
+            <div class="accordion-inner">
+                <div class="comments">
+                    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'bblaisontheweb';
+        var disqus_identifier = './skeptics-vs-realists.html';
+    var disqus_url = './skeptics-vs-realists.html';
+
+    (function() {
+         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+     })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+            <hr/>
+        </div>
+        <section>
+        <div class="span2" style="float:right;font-size:0.9em;">
+            <h4>Published</h4>
+            <time pubdate="pubdate" datetime="2014-05-08T00:00:00-04:00">May 8, 2014</time>
+            <h4>Category</h4>
+            <a class="category-link" href="./categories.html#articles-ref">articles</a>
+<h4><h2>Contact</h2></h4>
+    
+<a href="mailto://bblais@bryant.edu" title="My Email Address" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-envelope sidebar-social-links"></i></a>
+    
+<a href="http://www.linkedin.com/profile/view?id=106100922" title="My LinkedIn Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-linkedin sidebar-social-links"></i></a>
+ 
+<a href="https://plus.google.com/103727926638180804243" rel="publisher" title="My Google+ Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-google-plus sidebar-social-links"></i></a>
+    
+<a href="http://twitter.com/bblais" title="My Twitter Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-twitter sidebar-social-links"></i></a>
+    
+<a href="https://www.youtube.com/channel/UC8cN5_0dy5o9qNPpdLxPa8w" title="My YouTube Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-youtube sidebar-social-links"></i></a>
+
+<h4><h2>Subscribe</h2></h4>
+<a href="http://feeds.feedburner.com/bblaisontheweb" title="Subscribe on Rss" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-rss sidebar-social-links"></i></a>
+<a href="http://twitter.com/bblais" title="Subscribe on Twitter" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-twitter sidebar-social-links"></i></a>
+<a href="http://cloud.feedly.com/#subscription%2Ffeed%2Fhttp://web.bryant.edu/~bblais/" title="Subscribe on Feedly" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-check-square sidebar-social-links"></i></a>
+            <!-- Place this tag where you want the +1 button to render. -->
+<div class="g-plusone" data-size="medium" data-annotation="inline" data-width="300"></div>
+
+<!-- Place this tag after the last +1 button tag. -->
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/platform.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+
+        </div>
+        </section>
+</div>
+</article>
+                </div>
+                <div class="span1"></div>
+            </div>
+        </div>
+    </div>
+<footer>
+<div id="footer">
+    <ul class="footer-content">
+        <li class="elegant-power">Powered by <a href="http://getpelican.com/" title="Pelican Home Page">Pelican</a>. Theme: <a href="http://oncrashreboot.com/pelican-elegant" title="Theme Elegant Home Page">Elegant</a> by <a href="http://oncrashreboot.com" title="Talha Mansoor Home Page">Talha Mansoor</a></li>
+    </ul>
+</div>
+</footer>            <script src="http://code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+            <script type="text/javascript">
+var disqus_shortname = 'bblaisontheweb';
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+<script  language="javascript" type="text/javascript">
+function uncollapse() {
+    if (window.location.hash.match(/^#comment-\d+$/)) {
+        $('#disqus_thread').collapse('show');
+    }
+}
+</script>
+<script type="text/javascript" language="JavaScript">
+uncollapse();
+window.onhashchange=function(){
+    if (window.location.hash.match(/^#comment-\d+$/))
+        window.location.reload(true);
+}
+</script>
+<script>
+$('#disqus_thread').on('shown', function () {
+    var link = document.getElementsByClassName('accordion-toggle');
+    var old_innerHTML = link[0].innerHTML;
+    $(link[0]).fadeOut(500, function() {
+        $(this).text('Click here to hide comments').fadeIn(500);
+    });
+    $('#disqus_thread').on('hidden', function () {
+        $(link[0]).fadeOut(500, function() {
+            $(this).text(old_innerHTML).fadeIn(500);
+        });
+    })
+})
+</script>
+
+
+    </body>
+</html>

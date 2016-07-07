@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en-US" itemscope itemtype="http://schema.org/Blog">
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="brianblais" />
+        <meta name="copyright" content="brianblais" />
+<meta itemprop="image" content="./theme/images/Saturn_with_Dice_Square.png">
+
+<meta name="keywords" content=", wordpress_migration, " />
+
+<meta itemprop="name" content="Why pseudoscientists like the chi-square test (and why it shouldn't be taught) ">
+<meta itemprop="description" content="In a prior post I outlined how orthodox statistics can lead to the either-or logical fallacies common in pseudoscience, like astrology and ufo-ology. In this post I focus on the &chi^2^ test, it's pathologies, and why it is so useful for a pseudoscientist. The example is lifted from <a href="http://www.amazon.com/Probability-Theory-L...">
+<meta name="name" content=", wordpress_migration, " />
+
+        <title>Why pseudoscientists like the chi-square test (and why it shouldn't be taught)  · bblais on the web
+</title>
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="./theme/css/elegant.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="./theme/css/custom.css" media="screen">
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-47048778-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+    </head>
+    <body>
+        <div id="content-sans-footer">
+        <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="./"><span class=site-name>bblais on the web</span></a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right top-menu">
+                            <li ><a href=".">Home</a></li>
+                            <li ><a href="./pages/presentations.html">Presentations</a></li>
+                            <li ><a href="./pages/projects.html">Projects</a></li>
+                            <li ><a href="./pages/publications.html">Publications</a></li>
+                            <li ><a href="./categories.html">Categories</a></li>
+                            <li ><a href="./tags.html">Tags</a></li>
+                            <li ><a href="./archives.html">Archives</a></li>
+                            <li><form class="navbar-search" action="./search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span1"></div>
+                <div class="span10">
+<article>
+<div class="row-fluid">
+    <header class="page-header span10 offset2">
+    <h1><a href="./why-pseudoscientists-like-the-chi-square-test-and-why-it-shouldnt-be-taught.html"> Why pseudoscientists like the chi-square test (and why it shouldn't be taught)  </a></h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+        <div class="span8 offset2 article-content">
+
+            <p>In a <a href="http://bblais.blogspot.com/2010/08/orthodox-statistics-conducive-to-pseudo.html">prior post</a> I outlined how orthodox statistics can lead to the
+<a href="http://en.wikipedia.org/wiki/False_dilemma">either-or logical fallacies</a> common in pseudoscience, like astrology
+and ufo-ology.</p>
+<p>In this post I focus on the &amp;chi^2^ test, it's pathologies, and why it
+is so useful for a pseudoscientist. The example is lifted from <a href="http://www.amazon.com/Probability-Theory-Logic-Science-Vol/dp/0521592712/ref=sr_1_1?ie=UTF8&amp;s=books&amp;qid=1283295597&amp;sr=8-1">E. T.
+Jaynes' book "Probability Theory"</a></p>
+<p>The two problems with &amp;chi^2^ are:</p>
+<ol>
+<li>it violates your strong intuition in some simple cases</li>
+<li>it can lead to different results with the exact same data, binned in
+    a different way</li>
+</ol>
+<p>Both of these properties are useful to the pseudoscientist.</p>
+<h2 id="intuition-and-chi-square-the-three-sided-coin">Intuition and Chi-square: The Three-sided coin</h2>
+<p>In each of this case we will have some data, and two models to compare
+which try to explain the data. Intuition strongly favors one, and
+&amp;chi^2^ favors the other. One of my favorite problems is the
+<a href="http://pubs.amstat.org/doi/abs/10.1198/000313007X222497">three-sided coin</a>: where the coin can fall heads, tails, or on the
+edge. Imagine we have two models for a relatively thick coin:</p>
+<ul>
+<li>Model A: p~heads~=p~tails~=0.499, p~edge~=0.002</li>
+<li>Model B: p~heads~=p~tails~=p~edge~=1/3</li>
+</ul>
+<p>And we have the following data:</p>
+<ul>
+<li>N=29: n~heads~=14, n~tails~=14, n~edge~=1</li>
+</ul>
+<p>Which model are you more confident in? Model A of course! If we use the
+&amp;psi-measure for goodness of fit with these two models, as defined in
+<a href="http://bblais.blogspot.com/2010/08/orthodox-statistics-conducive-to-pseudo.html">my prior post</a>, then we have (remember: smaller &amp;psi means
+more confident in the fit, just like smaller &amp;chi^2^):</p>
+<p><img alt="E7E94805-9E10-451E-9B95-C8EB2BA875C7.jpg" src="http://lh3.ggpht.com/_VLTJPGH7Stw/TH2VC6WKxkI/AAAAAAAAGiQ/YjW0NbJ0SsI/E7E94805-9E10-451E-9B95-C8EB2BA875C7.jpg?imgmax=800" /></p>
+<p><img alt="7AFD29D5-C801-416E-82AC-F9B363147B22.jpg" src="http://lh3.ggpht.com/_VLTJPGH7Stw/TH4gCkRSb0I/AAAAAAAAGiY/8M8QyPr1vlM/7AFD29D5-C801-416E-82AC-F9B363147B22.jpg?imgmax=800" /></p>
+<p>with &amp;psi~B~-&amp;psi~A~=26.85 which makes model A more then 100 times more
+likely than model B (a &amp;psi difference of 20 would be exactly 100
+times). Perfectly reasonable. What about &amp;chi^2^?</p>
+<p><img alt="31844A12-1F3E-4D51-B2D0-EFAE00BE66A7.jpg" src="http://lh3.ggpht.com/_VLTJPGH7Stw/TH2QNPSVmjI/AAAAAAAAGiI/CP3fa-MJ7Vc/31844A12-1F3E-4D51-B2D0-EFAE00BE66A7.jpg?imgmax=800" /></p>
+<p>which makes model B slightly preferable to model A! Amazing! Where is
+this coming from? Apparently it is coming from the somewhat rare event
+of an edge-landing. If our data had been instead</p>
+<ul>
+<li>N=29: n~heads~=15, n~tails~=14, n~edge~=0</li>
+</ul>
+<p>then we'd have</p>
+<ul>
+<li>&amp;psi~A~=0.3</li>
+<li>&amp;psi~B~=51.2</li>
+</ul>
+<p>and</p>
+<ul>
+<li>&amp;chi^2^~A~=0.093</li>
+<li>&amp;chi^2^~B~=14.55</li>
+</ul>
+<p>where now both measures agree that model A is superior.</p>
+<table align="center" width="50%">
+<tr>
+<td>
+**Why do pseudoscientists love the &chi^2^ test?**
+
+</td>
+</tr>
+<p>
+<tr>
+<td>
+*Answer 1: Because all they need to do is wait for that inevitable,
+somewhat rare but still possible, data point and &chi^2^ yields a
+pathologically high value*
+
+</td>
+</tr>
+<p>
+</table>
+
+<h2 id="the-psi-measure-and-log-likelihood">The &amp;psi-measure and log-likelihood</h2>
+<p>To understand the other problem with the &amp;chi^2^ test we need to
+understand what the &amp;psi-measure is doing. As above, imagine we have a
+set of observations O~i~. We define the total number of observed points
+and the relative frequency of each observation,</p>
+<p><img alt="23229268-8820-42F8-BF8C-C984679DCB51.jpg" src="http://lh6.ggpht.com/_VLTJPGH7Stw/TH58MuJZOPI/AAAAAAAAGig/FET0c4rhfxg/23229268-8820-42F8-BF8C-C984679DCB51.jpg?imgmax=800" /></p>
+<p>The maximum likelihood solution for the probabilities of observing O~i~
+for each class, i, is just the relative frequency of each observation.
+This is the "just-so" solution, where we estimate the probability of
+seeing 14 heads in 29 flips as p=14/29. This "just-so" solution will
+have the closest match, and the highest likelihood (by definition). If
+we have a model which specifies a different set of probabilities for
+each class, then it's likelihood is simply</p>
+<p><img alt="71272C22-E8B6-4497-82DF-FBDD89729630.jpg" src="http://lh4.ggpht.com/_VLTJPGH7Stw/TH59WfaMs4I/AAAAAAAAGio/YErvCX24kpc/71272C22-E8B6-4497-82DF-FBDD89729630.jpg?imgmax=800" /></p>
+<p>The &amp;psi measure can be rewritten as</p>
+<p><img alt="B363F3D7-1964-421A-A8E2-B19020D0117A.jpg" src="http://lh5.ggpht.com/_VLTJPGH7Stw/TH6KOVWBbAI/AAAAAAAAGi4/nM4i1qXTzHM/B363F3D7-1964-421A-A8E2-B19020D0117A.jpg?imgmax=800" /></p>
+<p>So you can think of the &amp;psi-measure as comparing a model with the
+"just-so" solution (which has maximum likelihood). Further, subtracting
+one value of &amp;psi with another (for different models) performs the
+log-likelihood ratio between the models. A proper analysis should
+include prior information, which can be <a href="http://bblais.blogspot.com/2010/08/non-psychic-octopus.html">done almost as easily</a>.</p>
+<h2 id="an-almost-equivalent-problem">An almost equivalent problem</h2>
+<p>Imagine that we have a coin with 6 faces, and we are comparing the
+following models:</p>
+<ul>
+<li>Model A: p = [0.499/2, 0.499/2, 0.499/2, 0.499/2, 0.002/2,0.002/2]</li>
+<li>Model B: p = [1/6,1/6,1/6,1/6,1/6,1/6]</li>
+</ul>
+<p>And we have the following data:</p>
+<ul>
+<li>N=29: O=[7,7,7,7,0,1]</li>
+</ul>
+<p>where I have listed the probabilities and the outcomes for each face.
+Notice that, grouping them together in pairs we retrieve the same as the
+first example. Thus when comparing the two models, with this equivalent
+problem, we should get the same value. Because the size of the problem
+changed, the individual &amp;psi values will be different (larger) because
+there are more terms in the "just-so" solution. However, the difference
+between the models should be the same. The results are:</p>
+<ul>
+<li>&amp;psi~A~=11.35 (old value 8.34)</li>
+<li>&amp;psi~B~=38.2 (old value 35.19)</li>
+</ul>
+<p>with &amp;psi~B~-&amp;psi~A~=26.85 (old value 26.85...the same!), and</p>
+<ul>
+<li>&amp;chi^2^~A~=32.6 (old value 15.33)</li>
+<li>&amp;chi^2^~B~=11.76 (old value 11.66)</li>
+</ul>
+<p>The &amp;chi^2^ for one of the models (Model A) has been inflated quite a
+lot relative to the other model. This means that, depending on how you
+bin the data, you can make whichever model that you are looking at more
+or less significantly different, without changing the data at all.</p>
+<table align="center" width="50%">
+<tr>
+<td>
+**Why do pseudoscientists love the &chi^2^ test?**
+
+</td>
+</tr>
+<p>
+<tr>
+<td>
+*Answer 2: Because all they need to do is bin their data in different
+ways to affect the level of significance of their model over the model
+to which they are comparing*
+
+</td>
+</tr>
+<p>
+</table>
+
+<h2 id="still-taught">Still taught?</h2>
+<p>So, why is the &amp;chi^2^ test still taught? I don't know. It has
+pathological behavior in simple systems, where somewhat rare events
+artificially inflate its value, and it can be easily used to prop up an
+unreasonable model simply by rearranging the data. Why not teach
+something, like the &amp;psi-measure, which is grounded theoretically in the
+likelihood principle and does not have such pathological behavior? If
+you prefer to use the log-likelihood instead, then that would be fine
+(and equivalent).</p>
+<p>I think it is about time to purge the &amp;chi^2^ test from our textbooks,
+and replace it with something correct.</p>
+<div class="blogger-post-footer">
+![]
+
+</div>
+            <section>
+<div class="accordion" id="accordion2">
+    <div class="accordion-group">
+        <div class="accordion-heading">
+            <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
+                href="./why-pseudoscientists-like-the-chi-square-test-and-why-it-shouldnt-be-taught.html#disqus_thread">
+                Comments
+            </a>
+        </div>
+        <div id="disqus_thread" class="accordion-body collapse">
+            <div class="accordion-inner">
+                <div class="comments">
+                    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'bblaisontheweb';
+        var disqus_identifier = './why-pseudoscientists-like-the-chi-square-test-and-why-it-shouldnt-be-taught.html';
+    var disqus_url = './why-pseudoscientists-like-the-chi-square-test-and-why-it-shouldnt-be-taught.html';
+
+    (function() {
+         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+     })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+            <hr/>
+        </div>
+        <section>
+        <div class="span2" style="float:right;font-size:0.9em;">
+            <h4>Published</h4>
+            <time pubdate="pubdate" datetime="2010-09-01T17:10:00-04:00">Sep 1, 2010</time>
+            <h4>Category</h4>
+            <a class="category-link" href="./categories.html#wordpress_migration-ref">wordpress_migration</a>
+<h4><h2>Contact</h2></h4>
+    
+<a href="mailto://bblais@bryant.edu" title="My Email Address" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-envelope sidebar-social-links"></i></a>
+    
+<a href="http://www.linkedin.com/profile/view?id=106100922" title="My LinkedIn Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-linkedin sidebar-social-links"></i></a>
+ 
+<a href="https://plus.google.com/103727926638180804243" rel="publisher" title="My Google+ Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-google-plus sidebar-social-links"></i></a>
+    
+<a href="http://twitter.com/bblais" title="My Twitter Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-twitter sidebar-social-links"></i></a>
+    
+<a href="https://www.youtube.com/channel/UC8cN5_0dy5o9qNPpdLxPa8w" title="My YouTube Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-youtube sidebar-social-links"></i></a>
+
+<h4><h2>Subscribe</h2></h4>
+<a href="http://feeds.feedburner.com/bblaisontheweb" title="Subscribe on Rss" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-rss sidebar-social-links"></i></a>
+<a href="http://twitter.com/bblais" title="Subscribe on Twitter" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-twitter sidebar-social-links"></i></a>
+<a href="http://cloud.feedly.com/#subscription%2Ffeed%2Fhttp://web.bryant.edu/~bblais/" title="Subscribe on Feedly" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-check-square sidebar-social-links"></i></a>
+            <!-- Place this tag where you want the +1 button to render. -->
+<div class="g-plusone" data-size="medium" data-annotation="inline" data-width="300"></div>
+
+<!-- Place this tag after the last +1 button tag. -->
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/platform.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+
+        </div>
+        </section>
+</div>
+</article>
+                </div>
+                <div class="span1"></div>
+            </div>
+        </div>
+    </div>
+<footer>
+<div id="footer">
+    <ul class="footer-content">
+        <li class="elegant-power">Powered by <a href="http://getpelican.com/" title="Pelican Home Page">Pelican</a>. Theme: <a href="http://oncrashreboot.com/pelican-elegant" title="Theme Elegant Home Page">Elegant</a> by <a href="http://oncrashreboot.com" title="Talha Mansoor Home Page">Talha Mansoor</a></li>
+    </ul>
+</div>
+</footer>            <script src="http://code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+            <script type="text/javascript">
+var disqus_shortname = 'bblaisontheweb';
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+<script  language="javascript" type="text/javascript">
+function uncollapse() {
+    if (window.location.hash.match(/^#comment-\d+$/)) {
+        $('#disqus_thread').collapse('show');
+    }
+}
+</script>
+<script type="text/javascript" language="JavaScript">
+uncollapse();
+window.onhashchange=function(){
+    if (window.location.hash.match(/^#comment-\d+$/))
+        window.location.reload(true);
+}
+</script>
+<script>
+$('#disqus_thread').on('shown', function () {
+    var link = document.getElementsByClassName('accordion-toggle');
+    var old_innerHTML = link[0].innerHTML;
+    $(link[0]).fadeOut(500, function() {
+        $(this).text('Click here to hide comments').fadeIn(500);
+    });
+    $('#disqus_thread').on('hidden', function () {
+        $(link[0]).fadeOut(500, function() {
+            $(this).text(old_innerHTML).fadeIn(500);
+        });
+    })
+})
+</script>
+
+
+    </body>
+</html>

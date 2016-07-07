@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en-US" itemscope itemtype="http://schema.org/Blog">
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="brianblais" />
+        <meta name="copyright" content="brianblais" />
+<meta itemprop="image" content="./theme/images/Saturn_with_Dice_Square.png">
+
+<meta name="keywords" content="Religion, Science, wordpress_migration, " />
+
+<meta itemprop="name" content="Creationist Math ">
+<meta itemprop="description" content="Introduction So I got pointed to the http://www.icr.org, which if you haven't poked around on the site, you really should. It is quite interesting (not really in a good way). However, I want to look at a particular article on the young earth, arguing from population growth rates. The relevant sentences are: Using census r...">
+<meta name="name" content="Religion, Science, wordpress_migration, " />
+
+        <title>Creationist Math  · bblais on the web
+</title>
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="./theme/css/elegant.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="./theme/css/custom.css" media="screen">
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-47048778-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+    </head>
+    <body>
+        <div id="content-sans-footer">
+        <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="./"><span class=site-name>bblais on the web</span></a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right top-menu">
+                            <li ><a href=".">Home</a></li>
+                            <li ><a href="./pages/presentations.html">Presentations</a></li>
+                            <li ><a href="./pages/projects.html">Projects</a></li>
+                            <li ><a href="./pages/publications.html">Publications</a></li>
+                            <li ><a href="./categories.html">Categories</a></li>
+                            <li ><a href="./tags.html">Tags</a></li>
+                            <li ><a href="./archives.html">Archives</a></li>
+                            <li><form class="navbar-search" action="./search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span1"></div>
+                <div class="span10">
+<article>
+<div class="row-fluid">
+    <header class="page-header span10 offset2">
+    <h1><a href="./creationist-math.html"> Creationist Math  </a></h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+        <div class="span8 offset2 article-content">
+
+            <h2 id="introduction">Introduction</h2>
+<p>So I got pointed to the <a href="Institute%20for%20Creation%20Research">http://www.icr.org</a>, which if you haven't
+poked around on the site, you really should. It is quite interesting
+(not really in a good way). However, I want to look at a <a href="http://www.icr.org/article/a-7-billion-whyd-it-take-so-long/">particular
+article on the young earth</a>, arguing from population growth rates. The
+relevant sentences are:</p>
+<blockquote>
+<p>Using census records from the last 400 years and a bit of algebra, and
+assuming a natural logarithmic growth, eight Flood survivors 4,500
+years ago produce 7 billion people almost exactly. This is powerful
+evidence that biblical history is accurate, and man-made evolutionary
+history is not.</p>
+</blockquote>
+<p>Then they footnote the following:</p>
+<blockquote>
+<p>The formula for logarithmic human world population growth is <span class="math">\(P = Po e^{rt}\)</span>, where P = the current population, Po = the initial
+population, e = the base of natural logarithms (2.718), r = the
+average annual population growth rate (0.456% or 0.00456 in the
+calculator), and t = the time interval from <span class="math">\(P_o\)</span> to <span class="math">\(P\)</span>.</p>
+</blockquote>
+<p>Finally, in the middle of the article, they are incredulous of the low
+net birth rate in pre-agricultural human populations:</p>
+<blockquote>
+<p>Thus, the first human couple that supposedly evolved from ape-like
+ancestors would have had only 6 million descendants after 2.4 million
+years. This requires a population growth rate of about
+0.000000009-essentially zero. Virtually no growth for 2.4 million
+years?</p>
+</blockquote>
+<p>So, how do we respond to this sort of analysis? One could try to simply
+write it off as the rantings of a person blinded, by their religious
+bias, to a true understanding of science.  However I prefer an
+alternative approach. It may be tilting at windmills, but I prefer to
+take a claim at face value, and see why it fails, and to ask followup
+questions. Since the math here is so simple, it is easy to demonstrate
+any errors, assumptions, etc.. and get to the bottom of it. So, someone
+has made a claim, I don't agree, how do I proceed?</p>
+<h2 id="did-they-do-their-arithmetic-right-yes">Did they do their arithmetic right? Yes!</h2>
+<p>The first thing I like to do is, assuming they are right in all of their
+numbers, do they do the calculation correctly. This eliminates a pretty
+obvious error that could have caused the problem. I suspected they got
+it right, but I wanted to make sure. The math is</p>
+<div class="math">$$
+P=P_o e^{rt}  
+$$</div>
+<p>The code is:</p>
+<div class="highlight"><pre><span></span>r=0.00456
+t=4500.0
+Po=8.0
+
+print Po*exp(r*t)/1e9,&quot;billion&quot;
+</pre></div>
+
+
+<p>Yielding</p>
+<div class="highlight"><pre><span></span>6.52849018681 billion
+</pre></div>
+
+
+<p>The other direction is, how long ago were there only 8 people?</p>
+<div class="math">\begin{eqnarray}  
+P(t)&amp;=&amp;P_o \times e^{r\cdot t} \\\\  
+\log P(t) &amp;=&amp; \log(P_o) + r\cdot t\\\\  
+t&amp;=&amp; \frac{\log(P(t))-\log(P_o)}{r}  
+\end{eqnarray}</div>
+<p>or</p>
+<div class="highlight"><pre><span></span>Po=6.5e9  # current population
+r=0.00456
+P=8       # target population
+
+t=(log(P)-log(Po))/r 
+print t, &quot;years&quot;
+</pre></div>
+
+
+<p>resulting in</p>
+<div class="highlight"><pre><span></span>-4499.04089302 years.
+</pre></div>
+
+
+<h2 id="is-their-growth-rate-correct">Is their growth rate correct?</h2>
+<p>Here I am using <a href="http://www.census.gov/population/international/data/worldpop/table_population.php">data from census.gov</a>.  It is possible (in fact likely) that the original post used a slightly
+different data set, but they didn't cite it so I can't confirm that. The
+conclusions will not be qualitatively different, but that would be one
+of the questions I'd have for the author (see below).</p>
+<p>It is instructive to look at the data set both on a normal scale and a
+log scale. The key thing here is that <strong>a constant growth rate
+translates to a straight line on the log scale</strong>. Let's see if this is
+the case (see the lower of the two plots, especially):</p>
+<p><img alt="download" src="http://brianblais.files.wordpress.com/2013/05/download.png?w=640" /></p>
+<p>Linear? Not so much.</p>
+<p>I then chose a time-frame over which to calculate the average which gave
+(for my data set) as close to their growth rate above - this is
+essentially the growth rate consistent with the Biblical chronology. In
+my data set that average is from 1300 to 2010, or 700 years (theirs,
+they claim, it was 400 years so there is clearly a difference in data
+sets here - however, they don't reference their actual data, and
+regardless, this same analysis would work in their case too).</p>
+<p><img alt="download (1)" src="http://brianblais.files.wordpress.com/2013/05/download-1.png?w=640" /></p>
+<p>You can see from here that this average yields the Biblical number of
+4500 years ago, but that it is clearly not a good assumption to think
+that the growth rate, even over this time-frame, is constant. Because of
+this, depending on how far back you do the averaging, you get a
+<em>different</em> time of the Flood. For example, the following show cases for
+1600-2010, and 1950-2010. The last one is the closest to a constant
+growth rate, but gives a ridiculous -1200 years back to 8 people!</p>
+<p><img alt="download (2)" src="http://brianblais.files.wordpress.com/2013/05/download-2.png?w=640" /></p>
+<p><img alt="download (3)" src="http://brianblais.files.wordpress.com/2013/05/download-3.png?w=640" /></p>
+<p>(As an aside, Richard Dawkins does the same calculation with rats, and
+comes up with an astonishing 1900 or so for the beginning of the Earth.)</p>
+<h2 id="bottom-line">Bottom Line</h2>
+<p>The biggest problem with this calculation is assuming a constant growth
+rate. Once it isn't constant, then the time-frame over which you
+calculate the average makes a big difference. Only <em>one</em> possible
+time-frame will result in something consistent with the Biblical
+account, so one would have to justify:</p>
+<ol>
+<li>Why you can possibly assume constant growth rate in the distant past
+    knowing it wasn't constant in the time-frame we know about.</li>
+<li>Even given a solid justification (which I don't believe actually
+    exists...but I'm open to suggestions), you have to further justify
+    why the <em>particular</em> time average you take, that is consistent with
+    the Biblical account, is the one you <em>should</em> take.</li>
+</ol>
+<p>You can't use as a reason "because it's consistent with the Biblical
+account", because the entire point is to <em>justify</em> the Biblical account,
+or to demonstrate that the data is consistent with it. It's not, if you
+have to postulate that the Biblical account is correct, and choose the
+specifics of the calculations to meet that.</p>
+<h2 id="questions-for-brian-thomas-ms-at-the-icr">Questions for Brian Thomas, M.S. at the ICR.</h2>
+<p>Here are the questions I'd like answered. I'm not expecting any, but I'd
+be thrilled to get one!</p>
+<ol>
+<li>What data set did you use? I'm sure it won't make any difference,
+    but it is good to make sure that we all agree on the numbers.  I'd
+    be happy to run my analysis through any data set that you provide.</li>
+<li>Using your data set, and your analysis, do you confirm my
+    observation that your result is sensitive to the time-frame (i.e.
+    the 400 years in your case, 700 years in mine) over which you are
+    obtaining your "average" growth rate?</li>
+<li>If it is, do you have a justification for using that, <strong>and only
+    that</strong>, time-frame?</li>
+<li>Do you have a justification for using an average growth rate model
+    in the face of data that clearly shows that the growth rate is <em>not</em>
+    constant?</li>
+</ol>
+<h2 id="questions-for-brian-thomas-ms-at-the-icr">Comment about Growth Rates before Agriculture</h2>
+<p>The original article was astounded that the growth rate, prior to
+agriculture, could be so low.  Essentially, they seem to believe that
+exponential growth should have started once you had people, and gone at
+a constant rate the entire time.  However, before agriculture, there
+would have been a fairly low <a href="http://en.wikipedia.org/wiki/Carrying_capacity">carrying capacity</a>, and human population
+would follow <a href="http://mathworld.wolfram.com/LogisticEquation.html"><em>logistic growth</em></a>, not exponential.  Near the carrying
+capacity, the growth rate is essentially zero, exactly as observed.  A
+little bit of reading on how populations <em>actually change</em> might be
+helpful to these people.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    var location_protocol = (false) ? 'https' : document.location.protocol;
+    if (location_protocol !== 'http' && location_protocol !== 'https') location_protocol = 'https:';
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+            <section>
+<div class="accordion" id="accordion2">
+    <div class="accordion-group">
+        <div class="accordion-heading">
+            <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
+                href="./creationist-math.html#disqus_thread">
+                Comments
+            </a>
+        </div>
+        <div id="disqus_thread" class="accordion-body collapse">
+            <div class="accordion-inner">
+                <div class="comments">
+                    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'bblaisontheweb';
+        var disqus_identifier = './creationist-math.html';
+    var disqus_url = './creationist-math.html';
+
+    (function() {
+         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+     })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+            <hr/>
+        </div>
+        <section>
+        <div class="span2" style="float:right;font-size:0.9em;">
+            <h4>Published</h4>
+            <time pubdate="pubdate" datetime="2013-05-10T18:36:00-04:00">May 10, 2013</time>
+            <h4>Category</h4>
+            <a class="category-link" href="./categories.html#wordpress_migration-ref">wordpress_migration</a>
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article">
+                <li><a href="./tags.html#religion-ref">Religion
+                    <span>23</span>
+</a></li>
+                <li><a href="./tags.html#science-ref">Science
+                    <span>17</span>
+</a></li>
+            </ul>
+<h4><h2>Contact</h2></h4>
+    
+<a href="mailto://bblais@bryant.edu" title="My Email Address" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-envelope sidebar-social-links"></i></a>
+    
+<a href="http://www.linkedin.com/profile/view?id=106100922" title="My LinkedIn Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-linkedin sidebar-social-links"></i></a>
+ 
+<a href="https://plus.google.com/103727926638180804243" rel="publisher" title="My Google+ Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-google-plus sidebar-social-links"></i></a>
+    
+<a href="http://twitter.com/bblais" title="My Twitter Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-twitter sidebar-social-links"></i></a>
+    
+<a href="https://www.youtube.com/channel/UC8cN5_0dy5o9qNPpdLxPa8w" title="My YouTube Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-youtube sidebar-social-links"></i></a>
+
+<h4><h2>Subscribe</h2></h4>
+<a href="http://feeds.feedburner.com/bblaisontheweb" title="Subscribe on Rss" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-rss sidebar-social-links"></i></a>
+<a href="http://twitter.com/bblais" title="Subscribe on Twitter" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-twitter sidebar-social-links"></i></a>
+<a href="http://cloud.feedly.com/#subscription%2Ffeed%2Fhttp://web.bryant.edu/~bblais/" title="Subscribe on Feedly" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-check-square sidebar-social-links"></i></a>
+            <!-- Place this tag where you want the +1 button to render. -->
+<div class="g-plusone" data-size="medium" data-annotation="inline" data-width="300"></div>
+
+<!-- Place this tag after the last +1 button tag. -->
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/platform.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+
+        </div>
+        </section>
+</div>
+</article>
+                </div>
+                <div class="span1"></div>
+            </div>
+        </div>
+    </div>
+<footer>
+<div id="footer">
+    <ul class="footer-content">
+        <li class="elegant-power">Powered by <a href="http://getpelican.com/" title="Pelican Home Page">Pelican</a>. Theme: <a href="http://oncrashreboot.com/pelican-elegant" title="Theme Elegant Home Page">Elegant</a> by <a href="http://oncrashreboot.com" title="Talha Mansoor Home Page">Talha Mansoor</a></li>
+    </ul>
+</div>
+</footer>            <script src="http://code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+            <script type="text/javascript">
+var disqus_shortname = 'bblaisontheweb';
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+<script  language="javascript" type="text/javascript">
+function uncollapse() {
+    if (window.location.hash.match(/^#comment-\d+$/)) {
+        $('#disqus_thread').collapse('show');
+    }
+}
+</script>
+<script type="text/javascript" language="JavaScript">
+uncollapse();
+window.onhashchange=function(){
+    if (window.location.hash.match(/^#comment-\d+$/))
+        window.location.reload(true);
+}
+</script>
+<script>
+$('#disqus_thread').on('shown', function () {
+    var link = document.getElementsByClassName('accordion-toggle');
+    var old_innerHTML = link[0].innerHTML;
+    $(link[0]).fadeOut(500, function() {
+        $(this).text('Click here to hide comments').fadeIn(500);
+    });
+    $('#disqus_thread').on('hidden', function () {
+        $(link[0]).fadeOut(500, function() {
+            $(this).text(old_innerHTML).fadeIn(500);
+        });
+    })
+})
+</script>
+
+
+    </body>
+</html>

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en-US" itemscope itemtype="http://schema.org/Blog">
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="brianblais" />
+        <meta name="copyright" content="brianblais" />
+<meta itemprop="image" content="./theme/images/Saturn_with_Dice_Square.png">
+
+<meta name="keywords" content=", wordpress_migration, " />
+
+<meta itemprop="name" content="The Non-Psychic Octopus ">
+<meta itemprop="description" content="Introduction I saw in the newspaper an article about a supposedly psychic octopus, which predicts world cup matches by making a choice between two different foods labeled by the team flags. Paul the Octopus has an impressive record of 12 correct out of 14. Or is it impressive?...">
+<meta name="name" content=", wordpress_migration, " />
+
+        <title>The Non-Psychic Octopus  · bblais on the web
+</title>
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="./theme/css/elegant.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="./theme/css/custom.css" media="screen">
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-47048778-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+    </head>
+    <body>
+        <div id="content-sans-footer">
+        <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="./"><span class=site-name>bblais on the web</span></a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right top-menu">
+                            <li ><a href=".">Home</a></li>
+                            <li ><a href="./pages/presentations.html">Presentations</a></li>
+                            <li ><a href="./pages/projects.html">Projects</a></li>
+                            <li ><a href="./pages/publications.html">Publications</a></li>
+                            <li ><a href="./categories.html">Categories</a></li>
+                            <li ><a href="./tags.html">Tags</a></li>
+                            <li ><a href="./archives.html">Archives</a></li>
+                            <li><form class="navbar-search" action="./search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span1"></div>
+                <div class="span10">
+<article>
+<div class="row-fluid">
+    <header class="page-header span10 offset2">
+    <h1><a href="./the-non-psychic-octopus.html"> The Non-Psychic Octopus  </a></h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+        <div class="span8 offset2 article-content">
+
+            <h2 id="introduction">Introduction</h2>
+<p>I saw in the newspaper an article about a supposedly <a href="http://www.bloomberg.com/news/2010-08-10/octopus-oracle-paul-swims-clear-of-euro-gets-tentacles-on-book-film-deal.html">psychic
+octopus</a>, which predicts world cup matches by making a choice between
+two different foods labeled by the team flags. <a href="http://en.wikipedia.org/wiki/Paul_the_Octopus">Paul the Octopus</a> has
+an impressive record of 12 correct out of 14. Or is it impressive? How
+can we determine whether this performance is evidence for psychic
+behavior, or something else. A typical statistical analysis might start
+with the null hypothesis that the octopus was random, so was choosing
+the teams with probability p=0.5. The likelihood of getting 12 right in
+14 is</p>
+<p><img alt="217E3119-BC22-4A09-B534-D62BAA0BF53C.jpg" src="http://lh3.ggpht.com/_VLTJPGH7Stw/THhaNtjI1-I/AAAAAAAAGgk/vAAgbtrpBvo/217E3119-BC22-4A09-B534-D62BAA0BF53C.jpg?imgmax=800" /></p>
+<p>which is fantastically strong against the null! Even if you do the
+p-value test for the the correct data being more extreme, you get
+p-val=0.00646.</p>
+<p><strong>So, we reject the null, and the octopus must be psychic!...(or not)</strong></p>
+<h2 id="bayesian-analysis-against-random">Bayesian Analysis Against Random</h2>
+<p>Let's look at this another way, and perhaps we can gain some insight. It
+will be convenient to talk about odds, rather then probability, and
+further to use the log of the odds so that this becomes an arithmetic
+problem. The odds is defined as the ratio of the probability for a
+hypothesis, H, and the probability for the inverse, not H.</p>
+<p><img alt="E5899678-9897-42AF-8CBB-5D687A02A731.jpg" src="http://lh3.ggpht.com/_VLTJPGH7Stw/THhdxnGITTI/AAAAAAAAGg8/ACbEZMN0tMU/E5899678-9897-42AF-8CBB-5D687A02A731.jpg?imgmax=800" /></p>
+<p>We define the log-odds, or evidence as defined by E. T. Jayes,</p>
+<p><img alt="BAAC0566-3B79-4B44-8F0D-C5046788B491.jpg" src="http://lh5.ggpht.com/_VLTJPGH7Stw/THhc1Q9LrLI/AAAAAAAAGg0/cudVDoIadh0/BAAC0566-3B79-4B44-8F0D-C5046788B491.jpg?imgmax=800" />  </p>
+<p>A few comments before we commence with more calculation. The prior
+evidence reflects our state of knowledge before we see the data. How
+likely is it that an octopus is psychic? Most reasonable people would
+say highly unlikely. Generous odds would be 100:1 against, although
+personally I'd probably put it at least a million to 1 against. Let's be
+generous. That gives us a prior evidence of</p>
+<p><img alt="94E23FDD-36D3-4B6A-B72C-7C759FAAE1B1.jpg" src="http://lh5.ggpht.com/_VLTJPGH7Stw/THhel_nxQGI/AAAAAAAAGhE/2rmhiNW5cCQ/94E23FDD-36D3-4B6A-B72C-7C759FAAE1B1.jpg?imgmax=800" /></p>
+<p>If we had been naive, and set equal odds, then this evidence would be
+e=0. So we start with evidence e=-20 for a psychic octopus (which is
+strong evidence against it, because e\&lt;0), and then we observe the data.
+If we assume that a psychic octopus is right 90% of the time, and that
+the only alternative is a random octopus correct 50% of the time, then
+we have added evidence for each correct answer:</p>
+<p><img alt="85F4C7A1-EFC7-4E8C-88B0-E98B846B1F97.jpg" src="http://lh6.ggpht.com/_VLTJPGH7Stw/THhflza23EI/AAAAAAAAGhM/p9tsgV_ze1A/85F4C7A1-EFC7-4E8C-88B0-E98B846B1F97.jpg?imgmax=800" /></p>
+<p>Each incorrect answer gives:</p>
+<p><img alt="D48A7B4A-112D-4BC6-A267-95B797A15F9C.jpg" src="http://lh3.ggpht.com/_VLTJPGH7Stw/THhfwRzFycI/AAAAAAAAGhQ/FxOt7RabBAs/D48A7B4A-112D-4BC6-A267-95B797A15F9C.jpg?imgmax=800" /></p>
+<p>The evidence gets pushed up from the prior with each correct answer, and
+down for each wrong answer. Notice how wrong answers are penalized more
+than right answers. This is because the psychic octopus is pretty good
+(p=0.9). We get a final (posterior) evidence for 12 correct and 2 wrong:</p>
+<p><img alt="5BC4EE45-59BD-4A67-A2FF-779E7EC92145.jpg" src="http://lh5.ggpht.com/_VLTJPGH7Stw/THhgmdqDC1I/AAAAAAAAGhU/WMImRm_gzlY/5BC4EE45-59BD-4A67-A2FF-779E7EC92145.jpg?imgmax=800" /></p>
+<p>which is about 2:1 odds against the psychic octopus.</p>
+<h2 id="more-to-the-story">More to the Story</h2>
+<p>Most pseudoscience gets propagated by people who reason naively. They
+will say that there are two possibilities, say random and psychic, and
+they they must both be equally likely before the data. So, when rare
+data is found, they reject random and claim this is evidence for psychic
+phenomena. This line of reasoning is incorrect for two reasons:</p>
+<ol>
+<li>random and psychic are not equally probable a priori - random is
+    much more likely in cases like this</li>
+<li>there are more possibilities</li>
+</ol>
+<p>We already saw how point (1) can be handled by proper prior information.
+Point (2), with multiple hypotheses gets mathematically a bit trickier
+(there are more terms to carry around) and is thus messier, but
+conceptually is fairly straightforward.</p>
+<p>We have two hypotheses so far:</p>
+<p><em>H</em>="Octopus sees the correct future 90% of the time, and is psychic"</p>
+<p><em>R</em>="Octopus chooses randomly."</p>
+<p>Let me introduce two more hypotheses.</p>
+<p><em>Y</em>="Octopus chooses flags with big yellow stripes 90% of the time"</p>
+<p><em>G</em>="Octopus chooses Germany 90% of the time"</p>
+<p>How would you choose the prior probabilities for these hypotheses?
+Personally, as I said before, I'd have p(H) way below p(R) by about a
+factor of a million, but being generous, let's put it about a factor of
+100. What about p(Y) and p(G)? I'd say that these might be comparable to
+random or, if I knew something about the vision of octopi or how the
+person feeding the octopus might rig the food in the direction of his
+favorite team, I might even have p(Y)>p(R) or p(G)>p(R). Certainly
+p(Y)>p(H) and p(G)>p(H). So what happens with the data?</p>
+<p>For hypothesis Y, there are N=14 games of which the octopus chooses 12
+with bright yellow stripes (there is one where it chose Germany over
+Ghana and should have chosen Ghana which has a bigger strips, and
+another with Germany and Spain where Spain should have been chosen). For
+hypothesis G there are N=14 games and the octopus chooses 12 for Germany
+(2 teams are chosen that are not Germany, and one match where Germany
+wasn't a choice and it chose Spain, which has the closest flag). <strong>Thus,
+the data support both of these hypotheses exactly as much as the p=0.9
+psychic hypothesis.</strong> Therefore, the evidence will push these hypotheses
+up by as much as the psychic, over the random, and will make the psychic
+octopus even less likely.</p>
+<p>So, when you hear fantastic claims supported with a comparison to
+random, the two things you must do are:</p>
+<ol>
+<li>Ask yourself what the prior probability of the fantastic claim is.
+    Even if a random explanation is very rare, it will probably still be
+    favored against the fantastic claim.</li>
+<li>Ask yourself what other possibilities, even if unlikely, could
+    explain the data. Since the fantastic claim is exceedingly unlikely,
+    even somewhat unlikely explanations may be supported by the data
+    more than the original fantastic claim.</li>
+</ol>
+<div class="blogger-post-footer">
+!<>
+
+</div>
+            <section>
+<div class="accordion" id="accordion2">
+    <div class="accordion-group">
+        <div class="accordion-heading">
+            <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
+                href="./the-non-psychic-octopus.html#disqus_thread">
+                Comments
+            </a>
+        </div>
+        <div id="disqus_thread" class="accordion-body collapse">
+            <div class="accordion-inner">
+                <div class="comments">
+                    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'bblaisontheweb';
+        var disqus_identifier = './the-non-psychic-octopus.html';
+    var disqus_url = './the-non-psychic-octopus.html';
+
+    (function() {
+         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+     })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+            <hr/>
+        </div>
+        <section>
+        <div class="span2" style="float:right;font-size:0.9em;">
+            <h4>Published</h4>
+            <time pubdate="pubdate" datetime="2010-08-28T01:29:00-04:00">Aug 28, 2010</time>
+            <h4>Category</h4>
+            <a class="category-link" href="./categories.html#wordpress_migration-ref">wordpress_migration</a>
+<h4><h2>Contact</h2></h4>
+    
+<a href="mailto://bblais@bryant.edu" title="My Email Address" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-envelope sidebar-social-links"></i></a>
+    
+<a href="http://www.linkedin.com/profile/view?id=106100922" title="My LinkedIn Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-linkedin sidebar-social-links"></i></a>
+ 
+<a href="https://plus.google.com/103727926638180804243" rel="publisher" title="My Google+ Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-google-plus sidebar-social-links"></i></a>
+    
+<a href="http://twitter.com/bblais" title="My Twitter Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-twitter sidebar-social-links"></i></a>
+    
+<a href="https://www.youtube.com/channel/UC8cN5_0dy5o9qNPpdLxPa8w" title="My YouTube Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-youtube sidebar-social-links"></i></a>
+
+<h4><h2>Subscribe</h2></h4>
+<a href="http://feeds.feedburner.com/bblaisontheweb" title="Subscribe on Rss" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-rss sidebar-social-links"></i></a>
+<a href="http://twitter.com/bblais" title="Subscribe on Twitter" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-twitter sidebar-social-links"></i></a>
+<a href="http://cloud.feedly.com/#subscription%2Ffeed%2Fhttp://web.bryant.edu/~bblais/" title="Subscribe on Feedly" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-check-square sidebar-social-links"></i></a>
+            <!-- Place this tag where you want the +1 button to render. -->
+<div class="g-plusone" data-size="medium" data-annotation="inline" data-width="300"></div>
+
+<!-- Place this tag after the last +1 button tag. -->
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/platform.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+
+        </div>
+        </section>
+</div>
+</article>
+                </div>
+                <div class="span1"></div>
+            </div>
+        </div>
+    </div>
+<footer>
+<div id="footer">
+    <ul class="footer-content">
+        <li class="elegant-power">Powered by <a href="http://getpelican.com/" title="Pelican Home Page">Pelican</a>. Theme: <a href="http://oncrashreboot.com/pelican-elegant" title="Theme Elegant Home Page">Elegant</a> by <a href="http://oncrashreboot.com" title="Talha Mansoor Home Page">Talha Mansoor</a></li>
+    </ul>
+</div>
+</footer>            <script src="http://code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+            <script type="text/javascript">
+var disqus_shortname = 'bblaisontheweb';
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+<script  language="javascript" type="text/javascript">
+function uncollapse() {
+    if (window.location.hash.match(/^#comment-\d+$/)) {
+        $('#disqus_thread').collapse('show');
+    }
+}
+</script>
+<script type="text/javascript" language="JavaScript">
+uncollapse();
+window.onhashchange=function(){
+    if (window.location.hash.match(/^#comment-\d+$/))
+        window.location.reload(true);
+}
+</script>
+<script>
+$('#disqus_thread').on('shown', function () {
+    var link = document.getElementsByClassName('accordion-toggle');
+    var old_innerHTML = link[0].innerHTML;
+    $(link[0]).fadeOut(500, function() {
+        $(this).text('Click here to hide comments').fadeIn(500);
+    });
+    $('#disqus_thread').on('hidden', function () {
+        $(link[0]).fadeOut(500, function() {
+            $(this).text(old_innerHTML).fadeIn(500);
+        });
+    })
+})
+</script>
+
+
+    </body>
+</html>

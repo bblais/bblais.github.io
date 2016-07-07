@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en-US" itemscope itemtype="http://schema.org/Blog">
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="brianblais" />
+        <meta name="copyright" content="brianblais" />
+<meta itemprop="image" content="./theme/images/Saturn_with_Dice_Square.png">
+
+<meta name="keywords" content=", wordpress_migration, " />
+
+<meta itemprop="name" content="The Florida problem - a new intuition ">
+<meta itemprop="description" content="1. Introduction In a prior couple of posts here and here I look into the ``evil'' probability problem of the girl-named-Florida. This problem compares the following two situations: Say you know a family h...">
+<meta name="name" content=", wordpress_migration, " />
+
+        <title>The Florida problem - a new intuition  · bblais on the web
+</title>
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="./theme/css/elegant.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="./theme/css/custom.css" media="screen">
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-47048778-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+    </head>
+    <body>
+        <div id="content-sans-footer">
+        <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="./"><span class=site-name>bblais on the web</span></a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right top-menu">
+                            <li ><a href=".">Home</a></li>
+                            <li ><a href="./pages/presentations.html">Presentations</a></li>
+                            <li ><a href="./pages/projects.html">Projects</a></li>
+                            <li ><a href="./pages/publications.html">Publications</a></li>
+                            <li ><a href="./categories.html">Categories</a></li>
+                            <li ><a href="./tags.html">Tags</a></li>
+                            <li ><a href="./archives.html">Archives</a></li>
+                            <li><form class="navbar-search" action="./search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span1"></div>
+                <div class="span10">
+<article>
+<div class="row-fluid">
+    <header class="page-header span10 offset2">
+    <h1><a href="./the-florida-problem-a-new-intuition.html"> The Florida problem - a new intuition  </a></h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+        <div class="span8 offset2 article-content">
+
+            <p><strong>1. Introduction</strong></p>
+<p>In a prior couple of posts <a href="https://brianblais.wordpress.com/2010/01/05/there-once-was-a-girl-named-florida-a-k-a-evil-problems-in-probability/">here</a> and <a href="https://brianblais.wordpress.com/2010/02/22/coin-flips-and-names-evil-problems-in-probability-continued/">here</a> I look into the
+``evil'' probability problem of the girl-named-Florida. This problem
+compares the following two situations:</p>
+<blockquote>
+<p>Say you know a family has two children, and further that at least one
+of them is a girl. What is the probability that they have two girls?</p>
+</blockquote>
+<p>and</p>
+<blockquote>
+<p>Say you know a family has two children, and further that at least one
+of them is a girl named Florida. What is the probability that they
+have two girls?</p>
+</blockquote>
+<p>The former is easy to show is \<span class="math">\(latex {p(2g|\\{L1g\\})=1/3}&amp;fg=000000\\)</span>.
+The latter is shown to be \<span class="math">\(latex {p(2g|\\{L1g\\},F)=1/2}&amp;fg=000000\\)</span>.
+Intuition firmly insists that knowing the name shouldn't change the
+probability, but the math and simulations insist otherwise. Thus, it is
+our duty, to try to get our intuition around the problem. I was
+motivated to look at this again when a commenter asked</p>
+<blockquote>
+<p>Can someone tell me what the relevance of the comparative
+rarity/commonness of the girl's name is? Suppose instead we knew that
+the girl's name was "Mary". The possibilities would still work out the
+same:</p>
+<p>B GM</p>
+<p>GM b</p>
+<p>GM GNM</p>
+<p>GM GM</p>
+<p>GNM GM</p>
+</blockquote>
+<p>After much pondering, I think I have come up with another way to recast
+the problem that adds to the intuition. I can't say that it makes it
+completely obvious to me, like the <a href="https://brianblais.wordpress.com/2009/09/16/probability-problems-and-simulation/">Monty Hall problem</a> is for me now,
+so I think there still is something missing in my understanding of <em>why
+the problem is so unintuitive</em>. However, it does seem to push the idea a
+bit farther forward. In the next section I introduce another problem,
+with similar properties but is possibly more intuitive. I then describe
+how it can be used to gain an intuition on the Florida problem, and why
+the frequency of the name can make a difference.</p>
+<p><strong>2. A Card Game</strong></p>
+<p>Say I play a game with a very small deck (just so that we can work the
+numbers well). The deck has 8 cards: Ace, two, three, and four of hearts
+and the five, six, seven, and eight of spades. Two cards are dealt, and
+you are given some modest information about the two cards, and asked to
+determine the probability that the two cards are both hearts. Let's look
+at three types of information given:</p>
+<ol>
+<li>
+<p><em>You're only told that there are two cards.</em> Thus, there the
+    probability for two hearts is simply</p>
+<p>\<span class="math">\(latex \\displaystyle p(2H) = \\frac{4}{8} \\times {3}{7} =
+\\frac{12}{56} \\ \\ \\ \\ \\ (1)&amp;fg=000000\\)</span></p>
+<p>This can be seen pictorially by listing every possible two-card hand
+and looking at those with two hearts, yielding 12 hands out of 56.</p>
+<p>![]</p>
+<p><p>
+2.  <em>You're told that at least one of the cards is a heart</em>. Now we need
+to look at the first and second cards, and eliminate the possibility
+of two spades</p>
+<p>\<span class="math">\(latex \\displaystyle p(2H|\\{L1H\\}) =
+\\frac{p(H\_1,H\_2)}{p(H\_1,S\_2)+p(S\_1,H\_2)+p(H\_1,H\_2)} \\ \  
+   \\ \\ \\ (2)&amp;fg=000000\\)</span></p>
+<p>where \<span class="math">\(latex {p(H\_1,S\_2)}&amp;fg=000000\\)</span> is that we drew a heart
+then a spade. We then have</p>
+<p>\<span class="math">\(latex \\displaystyle \<div class="math">\begin{array}{rcl} p(2H|\\{L1H\\}) &amp;=&amp;
+\\frac{\\frac{4}{8}\\times\\frac{3}{7}}{\\frac{4}{8}\\times\\frac{4}{7}+\\frac{4}{8}\\times\\frac{4}{7}+\\frac{4}{8}\\times\\frac{3}{7}}\\\  
+   &amp;=&amp;\\frac{12}{44} \\end{array}</div> &amp;fg=000000\\)</span></p>
+<p>This can be seen pictorially by listing every possible two-card hand
+<em>with at least one heart</em> and looking at those with two hearts,
+yielding 12 hands out of 44.</p>
+<p>![2]</p>
+</li>
+<li>
+<p><em>You're told that at least one of the cards is an ace of hearts</em>.
+    Notice how this changes things. Now, when we outline the
+    possibilities, we get</p>
+<p>\<span class="math">\(latex \\displaystyle p(2H|\\{L1H\\},A) =
+\\frac{p(H\_{1a},H\_{2n})+p(H\_{1n},H\_{2a})}{p(H\_{1a},H\_{2n})+p(H\_{1n},H\_{2a})+p(S\_{1},H\_{2a})+p(H\_{1a},S\_2)}
+\\ \\ \\ \\ \\ (3)&amp;fg=000000\\)</span></p>
+<p>Let's look at the numerator first.</p>
+<p>\<span class="math">\(latex \\displaystyle p(H\_{1a},H\_{2n}) =
+p(H\_{2n}|H\_{1a})p(H\_{1a}) \\ \\ \\ \\ \\ (4)&amp;fg=000000\\)</span></p>
+<p>Written like this, it is like turning over card one, seeing it's an
+ace of hearts, and then turning over card 2. \<span class="math">\(latex
+{p(H\_{1a})=1/8}&amp;fg=000000\\)</span>, and seeing a heart that is not an ace
+is really the same as seeing any ol' heart, so it is \<span class="math">\(latex
+{p(H\_{2n}|H\_{1a})=3/7}&amp;fg=000000\\)</span>. This is not any different than
+the previous situation. However, the next term in the numerator</p>
+<p>\<span class="math">\(latex \\displaystyle p(H\_{1n},H\_{2a}) =
+p(H\_{2a}|H\_{1n})p(H\_{1n}) \\ \\ \\ \\ \\ (5)&amp;fg=000000\\)</span></p>
+<p><em>is</em> really different, because we are told that there is at least
+one ace. The probability of drawing a heart that is not an ace on
+the first card is still \<span class="math">\(latex {p(H\_{1n})=3/8}&amp;fg=000000\\)</span>.
+However, drawing an ace of hearts on the second card when we drew a
+non-ace of hearts on the first is <em>certain</em>, because we have
+knowledge that at least one is an ace. Thus, \<span class="math">\(latex
+{p(H\_{2a}|H\_{1n})=1}&amp;fg=000000\\)</span>. This gives, for the numerator,</p>
+<p>\<span class="math">\(latex \\displaystyle
+p(H\_{1a},H\_{2n})+p(H\_{1n},H\_{2a})=\\frac{3}{7}\\cdot\\frac{1}{8}
++ 1\\cdot \\frac{3}{8} = \\frac{24}{56} \\ \\ \\ \\ \  
+   (6)&amp;fg=000000\\)</span></p>
+<p>Notice that if \<span class="math">\(latex {H\_{2a}}&amp;fg=000000\\)</span> had been independent of
+\<span class="math">\(latex {H\_{1n}}&amp;fg=000000\\)</span> then we would have gotten the same
+12/56 term in the numerator as in the previous situation.
+Essentially, by giving the information that there is at least one
+ace, you are really making the value of one card dependent on the
+other, and thus knowledge of one gives you knowledge of the other
+and the probability for two hearts goes up. The same thing happens
+with \<span class="math">\(latex {p(H\_{2a}|S\_1)}&amp;fg=000000\\)</span>, but since we compare to
+the case where we know there is one heart anyway, this is not a
+difference.</p>
+<p>Following through with the rest gives us</p>
+<p>\<span class="math">\(latex \\displaystyle \<div class="math">\begin{array}{rcl} p(2H|\\{L1H\\},A) &amp;=&amp;
+\\frac{p(H\_{1a},H\_{2n})+p(H\_{1n},H\_{2a})}{p(H\_{1a},H\_{2n})+p(H\_{1n},H\_{2a})+p(S\_{1},H\_{2a})+p(H\_{1a},S\_2)}
+\\\\ &amp;=&amp;\\frac{\\frac{3}{7}\\cdot\\frac{1}{8}+ 1 \\cdot
+\\frac{3}{8}}{\\frac{4}{7}\\cdot\\frac{1}{8}+1\\cdot
+\\frac{4}{8}+\\frac{24}{56}}\\\\ &amp;=&amp;\\frac{24}{56} = \\frac{6}{14}
+\\end{array}</div> &amp;fg=000000\\)</span></p>
+<p>This can be seen pictorially by listing every possible two-card hand
+with an ace of hearts and looking at those with two hearts, yielding
+6 hands out of 14.</p>
+<p>![3]</p>
+</li>
+</ol>
+<p><strong>3. Back to the Florida problem</strong></p>
+<p>The ace-of-hearts problem is exactly like the Florida problem, if you
+make the deck big enough. The key issue here seems to be that by giving
+a rare name to one of the girl children, it correlates the two children
+in a way that the independence assumptions in both the simpler problem
+and one's intuition break down. If you were to ``draw'' a girl first
+and not a Florida, then we <em>must</em> have a girl second named Florida. In
+the same way, the game show host in Monty Hall is forced to give
+information to the contestant through the rules of the game: 2/3 of the
+time he is forced to give the contestant the door with the prize.</p>
+<p>Another thing to notice is that the frequency of the ``aces'' (or
+Floridas) in the problem definitely has an effect. You can confirm this
+by changing the information in the card game to <em>You're told that at
+least one of the cards has a rank less than three</em>. It is easy to see
+how this would change the probabilities.</p>
+<p><strong>3.1. Intuition</strong></p>
+<p>So why is this problem so unintuitive? I think a lot of it is related to
+the issues that Jeff J states in the comments.</p>
+<blockquote>
+<p>But suppose you learned what you know about this family because you
+meet the mother walking with her daughter, and asked her how many
+children she has. When she said “two,” this scenario fits the problem
+statement just as well as what Brian assumed. You know the family has
+two children, and that at least one is a girl. But, the probability is
+1/2 that she has two daughters, not 1/3 (reference: Bar-Hillel and
+Falk, or look at Grinstead and Snell's on-line textbook).</p>
+</blockquote>
+<p>There is a certain ``omniscience'' assumed in the card game (not so
+unrealistically) and in the Florida problem (probably unrealistically)
+that changes the scope of the problem. Most people's intuitions are
+shaped by the cases like Jeff J, where we know of a specific child named
+Florida, and asked about the chances of having another girl which is
+1/2, or even know only that there is at least one girl, but a specific
+one, so you get the 1/3 when thinking about it. The name, therefore,
+doesn't affect anything...in most realistic situations. However, in this
+card game it does affect the chances of having two hearts when you are
+restricted to the hands with at least one ace of hearts. I find that it
+doesn't seem to violate my intuition as badly in the card game as it
+does in the Florida , and much more clearly and it doesn't seem to
+violate our intuitions quite so badly.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    var location_protocol = (false) ? 'https' : document.location.protocol;
+    if (location_protocol !== 'http' && location_protocol !== 'https') location_protocol = 'https:';
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+            <section>
+<div class="accordion" id="accordion2">
+    <div class="accordion-group">
+        <div class="accordion-heading">
+            <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
+                href="./the-florida-problem-a-new-intuition.html#disqus_thread">
+                Comments
+            </a>
+        </div>
+        <div id="disqus_thread" class="accordion-body collapse">
+            <div class="accordion-inner">
+                <div class="comments">
+                    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'bblaisontheweb';
+        var disqus_identifier = './the-florida-problem-a-new-intuition.html';
+    var disqus_url = './the-florida-problem-a-new-intuition.html';
+
+    (function() {
+         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+     })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+            <hr/>
+        </div>
+        <section>
+        <div class="span2" style="float:right;font-size:0.9em;">
+            <h4>Published</h4>
+            <time pubdate="pubdate" datetime="2011-10-30T13:35:00-04:00">Oct 30, 2011</time>
+            <h4>Category</h4>
+            <a class="category-link" href="./categories.html#wordpress_migration-ref">wordpress_migration</a>
+<h4><h2>Contact</h2></h4>
+    
+<a href="mailto://bblais@bryant.edu" title="My Email Address" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-envelope sidebar-social-links"></i></a>
+    
+<a href="http://www.linkedin.com/profile/view?id=106100922" title="My LinkedIn Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-linkedin sidebar-social-links"></i></a>
+ 
+<a href="https://plus.google.com/103727926638180804243" rel="publisher" title="My Google+ Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-google-plus sidebar-social-links"></i></a>
+    
+<a href="http://twitter.com/bblais" title="My Twitter Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-twitter sidebar-social-links"></i></a>
+    
+<a href="https://www.youtube.com/channel/UC8cN5_0dy5o9qNPpdLxPa8w" title="My YouTube Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-youtube sidebar-social-links"></i></a>
+
+<h4><h2>Subscribe</h2></h4>
+<a href="http://feeds.feedburner.com/bblaisontheweb" title="Subscribe on Rss" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-rss sidebar-social-links"></i></a>
+<a href="http://twitter.com/bblais" title="Subscribe on Twitter" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-twitter sidebar-social-links"></i></a>
+<a href="http://cloud.feedly.com/#subscription%2Ffeed%2Fhttp://web.bryant.edu/~bblais/" title="Subscribe on Feedly" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-check-square sidebar-social-links"></i></a>
+            <!-- Place this tag where you want the +1 button to render. -->
+<div class="g-plusone" data-size="medium" data-annotation="inline" data-width="300"></div>
+
+<!-- Place this tag after the last +1 button tag. -->
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/platform.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+
+        </div>
+        </section>
+</div>
+</article>
+                </div>
+                <div class="span1"></div>
+            </div>
+        </div>
+    </div>
+<footer>
+<div id="footer">
+    <ul class="footer-content">
+        <li class="elegant-power">Powered by <a href="http://getpelican.com/" title="Pelican Home Page">Pelican</a>. Theme: <a href="http://oncrashreboot.com/pelican-elegant" title="Theme Elegant Home Page">Elegant</a> by <a href="http://oncrashreboot.com" title="Talha Mansoor Home Page">Talha Mansoor</a></li>
+    </ul>
+</div>
+</footer>            <script src="http://code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+            <script type="text/javascript">
+var disqus_shortname = 'bblaisontheweb';
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+<script  language="javascript" type="text/javascript">
+function uncollapse() {
+    if (window.location.hash.match(/^#comment-\d+$/)) {
+        $('#disqus_thread').collapse('show');
+    }
+}
+</script>
+<script type="text/javascript" language="JavaScript">
+uncollapse();
+window.onhashchange=function(){
+    if (window.location.hash.match(/^#comment-\d+$/))
+        window.location.reload(true);
+}
+</script>
+<script>
+$('#disqus_thread').on('shown', function () {
+    var link = document.getElementsByClassName('accordion-toggle');
+    var old_innerHTML = link[0].innerHTML;
+    $(link[0]).fadeOut(500, function() {
+        $(this).text('Click here to hide comments').fadeIn(500);
+    });
+    $('#disqus_thread').on('hidden', function () {
+        $(link[0]).fadeOut(500, function() {
+            $(this).text(old_innerHTML).fadeIn(500);
+        });
+    })
+})
+</script>
+
+
+    </body>
+</html>

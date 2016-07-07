@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en-US" itemscope itemtype="http://schema.org/Blog">
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Brian Blais" />
+        <meta name="copyright" content="Brian Blais" />
+<meta itemprop="image" content="./theme/images/Saturn_with_Dice_Square.png">
+
+<meta name="keywords" content=", articles, " />
+
+<meta itemprop="name" content="What is AI?  - A biologists misguided assessment ">
+<meta itemprop="description" content="In his blog post, Chatbots are boring. They aren't AI., PZ Myers the professor of biology at the University of Minnesota Morris has this to say about chatbots and AI: Chatbots are kind of the lowest of the low, the over-hyped fruit decaying at the base of the tree. They aren’t even particularly interesting. What you’ve got is basically a program that tries to parse spoke...">
+<meta name="name" content=", articles, " />
+
+        <title>What is AI?  - A biologists misguided assessment  · bblais on the web
+</title>
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="./theme/css/elegant.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="./theme/css/custom.css" media="screen">
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-47048778-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+    </head>
+    <body>
+        <div id="content-sans-footer">
+        <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="./"><span class=site-name>bblais on the web</span></a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right top-menu">
+                            <li ><a href=".">Home</a></li>
+                            <li ><a href="./pages/presentations.html">Presentations</a></li>
+                            <li ><a href="./pages/projects.html">Projects</a></li>
+                            <li ><a href="./pages/publications.html">Publications</a></li>
+                            <li ><a href="./categories.html">Categories</a></li>
+                            <li ><a href="./tags.html">Tags</a></li>
+                            <li ><a href="./archives.html">Archives</a></li>
+                            <li><form class="navbar-search" action="./search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span1"></div>
+                <div class="span10">
+<article>
+<div class="row-fluid">
+    <header class="page-header span10 offset2">
+    <h1><a href="./what-is-ai.html"> What is AI?  <small> A biologists misguided assessment </small>  </a></h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+        <div class="span8 offset2 article-content">
+
+            <p>In his blog post, <a href="http://scienceblogs.com/pharyngula/2014/09/11/chatbots-are-boring-they-arent-ai/"><em>Chatbots are boring. They aren't AI.</em></a>, PZ Myers the professor of biology at the University of Minnesota Morris has this to say about chatbots and AI:</p>
+<blockquote>
+<p>Chatbots are kind of the lowest of the low, the over-hyped fruit decaying at the base of the tree. They aren’t even particularly interesting. What you’ve got is basically a program that tries to parse spoken language, and then picks lines from a script that sort of correspond to whatever the interlocutor is talking about. There is no inner dialog in the machine, no ‘thinking’, just regurgitations of scripted output in response to the provocation of language input.</p>
+</blockquote>
+<p>He then goes on to say what should work:</p>
+<blockquote>
+<p>Programming in associations is not how consciousness is going to arise. What you need to work on is a general mechanism for making associations and rules. The model has to be something like a baby. Have you noticed that babies do not immediately start parroting their parents’ speech and reciting grammatically correct sentences? They flail about, they’re surprised when they bump some object and it moves, they notice that suckling makes their tummy full, and they begin to construct mental models about how the world works. I’ll be impressed when an AI is given no pre-programmed knowledge of language at all, and begins with baby-talk babbling and progresses over months or years to construct its own competence in comprehending speech.</p>
+</blockquote>
+<p>He may be justified in complaining about overzealous claims from some researchers, but he is dead wrong about what AI is, what it takes to be considered AI, and his criterion for accepting an intelligent machine.  He's even wrong about the biology, which is somewhat surprising given his field.  Let's have a look at this more closely.</p>
+<h2 id="what-is-ai">What is AI?</h2>
+<p>In general, the field of AI, can be summarized as the production of machines that do things that typically only humans have done in the past.  It says nothing about the <em>way</em> that those machine solve those problems.  The chess-playing tour-de-force, <a href="http://en.wikipedia.org/wiki/Deep_Blue_(chess_computer)">Deep Blue</a>, defeated the best human at chess - a game that at one time was a symbol of human intellect - not by playing like the grandmaster, but by being a really fast, stupid machine.  It examined trillions of ridiculous options that the grandmaster never even considered, to cull from those trillions the one or two good moves.  Was there any "inner dialog in the machine" or "thinking"?  Not at all.  Was it AI?  Of course it was.  It was a machine solving a problem that was, before that point, limited to humans. </p>
+<h2 id="what-is-intelligence">What is Intelligence?</h2>
+<p>Perhaps PZ Myers is complaining that these machine aren't intelligent, like humans are, and I'd agree that we are a long way from the sorts of machines that rival humans in some domains.  However, I am not sure that when he uses the term <em>intelligence</em> that he is considering a well-defined quantity.  Like <a href="http://en.wikipedia.org/wiki/Chinese_room">Searle's Chinese Room</a>, how do we know that there is a 'dialog in the machine' even inside of a human?  How do we know that we are not simply picking "lines from a script", albeit a fairly complex script?  I'm not sure we do, so the critique to me seems a bit vacuous.</p>
+<h2 id="pre-programmed">Pre-programmed?</h2>
+<blockquote>
+<p>I’ll be impressed when an AI is given no pre-programmed knowledge of language at all, and begins with baby-talk babbling and progresses over months or years to construct its own competence in comprehending speech</p>
+</blockquote>
+<p>This line baffled me - does PZ Myers believe that a human baby has <em>no</em> pre-programming for language?  That the baby is a complete blank slate?  Evolution has clearly pre-programmed us for abilities in general language acquisition, so even babies are not a blank slate.  His challenge then, for AI, would rule out humans as well!  </p>
+<p>Finally, much of the recent <a href="http://deeplearning.net/">Deep Learning research</a> is essentially what PZ is wishing for (although not in the domain of language, that I have read).  Here, artificial networks start with random starting conditions and learn patterns from the data, to achieve sophisticated inference in complex domains.  </p>
+<p>It may be premature to claim that we are on the verge of creating artificial consciousness, but the naive responses such as those exemplified by PZ Myers here do not reflect the reality of AI research.  Ironically, it smacks of the same tone creationists take to try to keep humans special at all costs, a tone that I am sure PZ Myers would not appreciate being attributed to him.</p>
+            <section>
+<div class="accordion" id="accordion2">
+    <div class="accordion-group">
+        <div class="accordion-heading">
+            <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
+                href="./what-is-ai.html#disqus_thread">
+                Comments
+            </a>
+        </div>
+        <div id="disqus_thread" class="accordion-body collapse">
+            <div class="accordion-inner">
+                <div class="comments">
+                    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'bblaisontheweb';
+        var disqus_identifier = './what-is-ai.html';
+    var disqus_url = './what-is-ai.html';
+
+    (function() {
+         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+     })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+            <hr/>
+        </div>
+        <section>
+        <div class="span2" style="float:right;font-size:0.9em;">
+            <h4>Published</h4>
+            <time pubdate="pubdate" datetime="2014-10-14T00:00:00-04:00">Oct 14, 2014</time>
+            <h4>Category</h4>
+            <a class="category-link" href="./categories.html#articles-ref">articles</a>
+<h4><h2>Contact</h2></h4>
+    
+<a href="mailto://bblais@bryant.edu" title="My Email Address" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-envelope sidebar-social-links"></i></a>
+    
+<a href="http://www.linkedin.com/profile/view?id=106100922" title="My LinkedIn Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-linkedin sidebar-social-links"></i></a>
+ 
+<a href="https://plus.google.com/103727926638180804243" rel="publisher" title="My Google+ Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-google-plus sidebar-social-links"></i></a>
+    
+<a href="http://twitter.com/bblais" title="My Twitter Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-twitter sidebar-social-links"></i></a>
+    
+<a href="https://www.youtube.com/channel/UC8cN5_0dy5o9qNPpdLxPa8w" title="My YouTube Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-youtube sidebar-social-links"></i></a>
+
+<h4><h2>Subscribe</h2></h4>
+<a href="http://feeds.feedburner.com/bblaisontheweb" title="Subscribe on Rss" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-rss sidebar-social-links"></i></a>
+<a href="http://twitter.com/bblais" title="Subscribe on Twitter" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-twitter sidebar-social-links"></i></a>
+<a href="http://cloud.feedly.com/#subscription%2Ffeed%2Fhttp://web.bryant.edu/~bblais/" title="Subscribe on Feedly" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-check-square sidebar-social-links"></i></a>
+            <!-- Place this tag where you want the +1 button to render. -->
+<div class="g-plusone" data-size="medium" data-annotation="inline" data-width="300"></div>
+
+<!-- Place this tag after the last +1 button tag. -->
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/platform.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+
+        </div>
+        </section>
+</div>
+</article>
+                </div>
+                <div class="span1"></div>
+            </div>
+        </div>
+    </div>
+<footer>
+<div id="footer">
+    <ul class="footer-content">
+        <li class="elegant-power">Powered by <a href="http://getpelican.com/" title="Pelican Home Page">Pelican</a>. Theme: <a href="http://oncrashreboot.com/pelican-elegant" title="Theme Elegant Home Page">Elegant</a> by <a href="http://oncrashreboot.com" title="Talha Mansoor Home Page">Talha Mansoor</a></li>
+    </ul>
+</div>
+</footer>            <script src="http://code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+            <script type="text/javascript">
+var disqus_shortname = 'bblaisontheweb';
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+<script  language="javascript" type="text/javascript">
+function uncollapse() {
+    if (window.location.hash.match(/^#comment-\d+$/)) {
+        $('#disqus_thread').collapse('show');
+    }
+}
+</script>
+<script type="text/javascript" language="JavaScript">
+uncollapse();
+window.onhashchange=function(){
+    if (window.location.hash.match(/^#comment-\d+$/))
+        window.location.reload(true);
+}
+</script>
+<script>
+$('#disqus_thread').on('shown', function () {
+    var link = document.getElementsByClassName('accordion-toggle');
+    var old_innerHTML = link[0].innerHTML;
+    $(link[0]).fadeOut(500, function() {
+        $(this).text('Click here to hide comments').fadeIn(500);
+    });
+    $('#disqus_thread').on('hidden', function () {
+        $(link[0]).fadeOut(500, function() {
+            $(this).text(old_innerHTML).fadeIn(500);
+        });
+    })
+})
+</script>
+
+
+    </body>
+</html>

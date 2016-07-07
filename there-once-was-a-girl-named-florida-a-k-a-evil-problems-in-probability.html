@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en-US" itemscope itemtype="http://schema.org/Blog">
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="brianblais" />
+        <meta name="copyright" content="brianblais" />
+<meta itemprop="image" content="./theme/images/Saturn_with_Dice_Square.png">
+
+<meta name="keywords" content=", wordpress_migration, " />
+
+<meta itemprop="name" content="There once was a girl named Florida (a.k.a Evil problems in probability) ">
+<meta itemprop="description" content="In a [previous post][] I described the Monty Hall problem, and noted that a simulation can often lead to clarity of thinking on tough probability problems. I take another example here, in two steps, and throw analysis and simulation at it and possibly a bit of intuition. I was first introduced to this problem from Leonard Mlodinow's "The Drunkard's Walk: How Randomness Rules Our Lives" and immediately "fell for the trap". The problem exists in two parts, the first (easy) part followed...">
+<meta name="name" content=", wordpress_migration, " />
+
+        <title>There once was a girl named Florida (a.k.a Evil problems in probability)  · bblais on the web
+</title>
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="./theme/css/elegant.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="./theme/css/custom.css" media="screen">
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-47048778-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+    </head>
+    <body>
+        <div id="content-sans-footer">
+        <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="./"><span class=site-name>bblais on the web</span></a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right top-menu">
+                            <li ><a href=".">Home</a></li>
+                            <li ><a href="./pages/presentations.html">Presentations</a></li>
+                            <li ><a href="./pages/projects.html">Projects</a></li>
+                            <li ><a href="./pages/publications.html">Publications</a></li>
+                            <li ><a href="./categories.html">Categories</a></li>
+                            <li ><a href="./tags.html">Tags</a></li>
+                            <li ><a href="./archives.html">Archives</a></li>
+                            <li><form class="navbar-search" action="./search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span1"></div>
+                <div class="span10">
+<article>
+<div class="row-fluid">
+    <header class="page-header span10 offset2">
+    <h1><a href="./there-once-was-a-girl-named-florida-a-k-a-evil-problems-in-probability.html"> There once was a girl named Florida (a.k.a Evil problems in probability)  </a></h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+        <div class="span8 offset2 article-content">
+
+            <p>In a [previous post][] I described the Monty Hall problem, and noted
+that a simulation can often lead to clarity of thinking on tough
+probability problems. I take another example here, in two steps, and
+throw analysis and simulation at it and possibly a bit of intuition.</p>
+<p>I was first introduced to this problem from Leonard Mlodinow's "The
+Drunkard's Walk: How Randomness Rules Our Lives" and immediately "fell
+for the trap". The problem exists in two parts, the first (easy) part
+followed by the second (hard) part. The easy part is as follows:</p>
+<blockquote>
+<p>Say you know a family has two children, and further that at least one
+of them is a girl. What is the probability that they have two girls?</p>
+</blockquote>
+<p>An easy way to do this is to list out the possibilities:</p>
+<ul>
+<li>Boy-Girl</li>
+<li>Girl-Boy</li>
+<li>Girl-Girl</li>
+</ul>
+<p>
+so you end up with 1 chance out of 3, or p=0.33. The hard part is the
+following:
+
+> Say you know a family has two children, and further that at least one
+> of them is a girl named Florida. What is the probability that they
+> have two girls?
+> </p>
+
+<p>At first I didn't think it would make any difference. <em>How could knowing
+the name of the child change the chances for two girls?</em> So I didn't
+believe the author (at first) that the chances were even, p=0.5, for the
+family to have two girls. Again we can list off the possibilities:</p>
+<ul>
+<li>Boy-Girl (Florida)</li>
+<li>Girl (Florida)-Boy</li>
+<li>Girl (Not Florida)-Girl (Florida)</li>
+<li>Girl (Florida)-Girl (Not Florida)</li>
+<li>Girl (Florida)-Girl (Florida)</li>
+</ul>
+<p>Since the last point is very rare (two girls named the same rare name?)
+we can ignore it, and we can also see that there are now two Girl-Girl
+possibilities with one named Florida, rather than just one, so it
+essentially gets two votes. Thus, we get p=0.5. Now, when I see
+something like this I worry. Yes, it's intuitive (once you see it) but
+I've seen slight-of-hand counting of the possibilities before. I don't
+trust it unless I can do two things:</p>
+<ol>
+<li>write a simulation which reproduces it</li>
+<li>show that a formal analysis works for the problem</li>
+</ol>
+<p>
+As for the simulation (I post the code below) I get:
+
+    Probability for a girl to be named Florida:  0.01Total number of families with two children:  1000000999862 girls (0.499931 of children)249745 both girls (0.249745)750117 families with girls (0.750117)249745 both girls (0.332941) given families with girls10084 families with a girls named florida4997 both girls (0.495537) given families with girl named florida
+
+The formal analysis gets interesting, because I want to understand how
+the frequency, *f*, of the name affects the probability of having two
+girls. If it is a rare name (*f* \~ 0) then I should get p=0.5. For a
+common name (*f* \~ 1) then I should get p=1/3. Not that with *f*=1 then
+the word "name" is a little odd because all girls have it, so one might
+think of it as a label (like "has a nose"). First some notation:
+
+![8C429ED4-C97A-42F4-B427-4FCE878E249D.jpg][]
+
+Applying Bayes theorem to the easy problem, we get:
+
+![EA082732-B226-4D70-B9B0-5B88943EA579.jpg][]
+
+The hard problem is set up like:
+
+![D99FFC2B-0B77-4F3A-8B6D-C8640CA94738.jpg][]
+
+It is clear that *p({L1g}|2g)=1* whereas *p({L1g},F|2g)=1* is not: given
+that we have 2 girls, we definitely have at least one girl, but we need
+not have at least one girl named Florida. Breaking the second term up we
+get
+
+![5B40FEDB-02C8-4803-93E3-E05B4D8E42A5.jpg][]
+
+Now we have
+
+![BB5BFD58-9E43-44C4-B3F1-B075AC680225.jpg][]
+
+It is easy to check that it has the right limits:
+
+![A4B10902-407C-4BDE-9AC4-A565F17E0FB6.jpg][]
+
+I'm not sure if there is a better way to address this problem, but the
+analysis and simulation agree, and further we have a very simple form
+for how the probability depends on the frequency of the known label
+(e.g. Florida).  
+
+Code for simulation
+-------------------
+
+    from pylab import *
+    from numpy import *
+
+    # 2 daughter problem
+
+    num_families=1000000
+    num_children_per_family=2
+
+    f_girls=0.5
+    f_florida=0.01
+    print "Probability for a girl to be named Florida: ",f_florida
+    print "Total number of families with two children: ",num_families
+
+    child_types=['boy','girl']
+    families=[ (child_types[randint(2)],child_types[randint(2)]) for x in range(num_families)]
+
+    names=[]
+    for f in families:
+
+        if f[0]=='boy':
+            name1='Bob'
+        else:
+            name1='Florida' if rand()<f_florida else 'Sarah'
+
+        if f[1]=='boy':
+            name2='Bob'
+        else:
+            name2='Florida' if rand()<f_florida and name1!='Florida' else 'Sarah'
+
+        names.append( (name1,name2) )
+
+    # total fraction of children as girls
+    girls=0
+    children=0
+    for f in families:
+        for c in f:
+            children+=1
+            if c=='girl':
+                girls+=1
+    print "%d girls (%f of children)" % (girls,float(girls)/children)
+
+    # total fraction of families with both girls
+    both_girls=0
+    for f in families:
+        if f[0]=='girl' and f[1]=='girl':
+            both_girls+=1
+    print "%d both girls (%f)" % (both_girls,float(both_girls)/num_families)
+
+    # total fraction of families with both girls GIVEN that the family has a girl
+    families_with_girls=[]
+    for f in families:
+        if f[0]=='girl' or f[1]=='girl':
+            families_with_girls.append(f)
+
+    num_families_with_girls=len(families_with_girls)
+    print "%d families with girls (%f)" % (num_families_with_girls, 
+                            float(num_families_with_girls)/num_families)
+
+    both_girls=0
+    for f in families_with_girls:
+        if f[0]=='girl' and f[1]=='girl':
+            both_girls+=1
+    print "%d both girls (%f) given families with girls" % (both_girls,
+                                float(both_girls)/num_families_with_girls)
+
+
+    # total fraction of families with both girls GIVEN that the family has a girl named florida
+    families_with_florida=[]
+    for n,f in zip(names,families):
+        if f[0]=='girl' and n[0]=='Florida' or f[1]=='girl' and n[1]=='Florida':
+            families_with_florida.append(f)
+
+    num_families_with_florida=len(families_with_florida)
+    print "%d families with a girls named florida" % num_families_with_florida
+
+    both_girls=0
+    for f in families_with_florida:
+        if f[0]=='girl' and f[1]=='girl':
+            both_girls+=1
+    print "%d both girls (%f) given families with girl named florida" % (both_girls,
+                                float(both_girls)/num_families_with_florida)
+
+
+[previous post]: http://web.bryant.edu/~bblais/probability-problems-and-simulation.html
+            <section>
+<div class="accordion" id="accordion2">
+    <div class="accordion-group">
+        <div class="accordion-heading">
+            <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
+                href="./there-once-was-a-girl-named-florida-a-k-a-evil-problems-in-probability.html#disqus_thread">
+                Comments
+            </a>
+        </div>
+        <div id="disqus_thread" class="accordion-body collapse">
+            <div class="accordion-inner">
+                <div class="comments">
+                    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'bblaisontheweb';
+        var disqus_identifier = './there-once-was-a-girl-named-florida-a-k-a-evil-problems-in-probability.html';
+    var disqus_url = './there-once-was-a-girl-named-florida-a-k-a-evil-problems-in-probability.html';
+
+    (function() {
+         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+     })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+            <hr/>
+        </div>
+        <section>
+        <div class="span2" style="float:right;font-size:0.9em;">
+            <h4>Published</h4>
+            <time pubdate="pubdate" datetime="2010-01-05T16:22:00-05:00">Jan 5, 2010</time>
+            <h4>Category</h4>
+            <a class="category-link" href="./categories.html#wordpress_migration-ref">wordpress_migration</a>
+<h4><h2>Contact</h2></h4>
+    
+<a href="mailto://bblais@bryant.edu" title="My Email Address" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-envelope sidebar-social-links"></i></a>
+    
+<a href="http://www.linkedin.com/profile/view?id=106100922" title="My LinkedIn Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-linkedin sidebar-social-links"></i></a>
+ 
+<a href="https://plus.google.com/103727926638180804243" rel="publisher" title="My Google+ Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-google-plus sidebar-social-links"></i></a>
+    
+<a href="http://twitter.com/bblais" title="My Twitter Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-twitter sidebar-social-links"></i></a>
+    
+<a href="https://www.youtube.com/channel/UC8cN5_0dy5o9qNPpdLxPa8w" title="My YouTube Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-youtube sidebar-social-links"></i></a>
+
+<h4><h2>Subscribe</h2></h4>
+<a href="http://feeds.feedburner.com/bblaisontheweb" title="Subscribe on Rss" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-rss sidebar-social-links"></i></a>
+<a href="http://twitter.com/bblais" title="Subscribe on Twitter" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-twitter sidebar-social-links"></i></a>
+<a href="http://cloud.feedly.com/#subscription%2Ffeed%2Fhttp://web.bryant.edu/~bblais/" title="Subscribe on Feedly" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-check-square sidebar-social-links"></i></a>
+            <!-- Place this tag where you want the +1 button to render. -->
+<div class="g-plusone" data-size="medium" data-annotation="inline" data-width="300"></div>
+
+<!-- Place this tag after the last +1 button tag. -->
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/platform.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+
+        </div>
+        </section>
+</div>
+</article>
+                </div>
+                <div class="span1"></div>
+            </div>
+        </div>
+    </div>
+<footer>
+<div id="footer">
+    <ul class="footer-content">
+        <li class="elegant-power">Powered by <a href="http://getpelican.com/" title="Pelican Home Page">Pelican</a>. Theme: <a href="http://oncrashreboot.com/pelican-elegant" title="Theme Elegant Home Page">Elegant</a> by <a href="http://oncrashreboot.com" title="Talha Mansoor Home Page">Talha Mansoor</a></li>
+    </ul>
+</div>
+</footer>            <script src="http://code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+            <script type="text/javascript">
+var disqus_shortname = 'bblaisontheweb';
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+<script  language="javascript" type="text/javascript">
+function uncollapse() {
+    if (window.location.hash.match(/^#comment-\d+$/)) {
+        $('#disqus_thread').collapse('show');
+    }
+}
+</script>
+<script type="text/javascript" language="JavaScript">
+uncollapse();
+window.onhashchange=function(){
+    if (window.location.hash.match(/^#comment-\d+$/))
+        window.location.reload(true);
+}
+</script>
+<script>
+$('#disqus_thread').on('shown', function () {
+    var link = document.getElementsByClassName('accordion-toggle');
+    var old_innerHTML = link[0].innerHTML;
+    $(link[0]).fadeOut(500, function() {
+        $(this).text('Click here to hide comments').fadeIn(500);
+    });
+    $('#disqus_thread').on('hidden', function () {
+        $(link[0]).fadeOut(500, function() {
+            $(this).text(old_innerHTML).fadeIn(500);
+        });
+    })
+})
+</script>
+
+
+    </body>
+</html>

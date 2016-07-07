@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en-US" itemscope itemtype="http://schema.org/Blog">
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="brianblais" />
+        <meta name="copyright" content="brianblais" />
+<meta itemprop="image" content="./theme/images/Saturn_with_Dice_Square.png">
+
+<meta name="keywords" content=", wordpress_migration, " />
+
+<meta itemprop="name" content="Coin flips and names (Evil problems in probability continued) ">
+<meta itemprop="description" content="In my post about the girl-named-Florida problem, there is a factor in the analysis looking at the probability of having a girl named Florida given that you have two girls: P(F|2g). This term is easily calculated as ![97AB81E4-08B6-4C53-8129-5432094EE211.jpg][] which I used in the analysis. Someone raised the question, "What would h...">
+<meta name="name" content=", wordpress_migration, " />
+
+        <title>Coin flips and names (Evil problems in probability continued)  · bblais on the web
+</title>
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="./theme/css/elegant.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="./theme/css/custom.css" media="screen">
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-47048778-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+    </head>
+    <body>
+        <div id="content-sans-footer">
+        <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="./"><span class=site-name>bblais on the web</span></a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right top-menu">
+                            <li ><a href=".">Home</a></li>
+                            <li ><a href="./pages/presentations.html">Presentations</a></li>
+                            <li ><a href="./pages/projects.html">Projects</a></li>
+                            <li ><a href="./pages/publications.html">Publications</a></li>
+                            <li ><a href="./categories.html">Categories</a></li>
+                            <li ><a href="./tags.html">Tags</a></li>
+                            <li ><a href="./archives.html">Archives</a></li>
+                            <li><form class="navbar-search" action="./search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span1"></div>
+                <div class="span10">
+<article>
+<div class="row-fluid">
+    <header class="page-header span10 offset2">
+    <h1><a href="./coin-flips-and-names-evil-problems-in-probability-continued.html"> Coin flips and names (Evil problems in probability continued)  </a></h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+        <div class="span8 offset2 article-content">
+
+            <p>In my <a href="http://bblais.blogspot.com/2010/01/there-once-was-girl-named-florida-aka.html">post about the girl-named-Florida problem</a>, there is a factor
+in the analysis looking at the probability of having a girl named
+Florida given that you have two girls: <em>P(F|2g)</em>.</p>
+<p>This term is easily calculated as</p>
+<div style="text-align:center;">
+![97AB81E4-08B6-4C53-8129-5432094EE211.jpg][]
+
+</div>
+
+<p>which I used in the analysis.</p>
+<p>Someone raised the question, "What would happen if (as we know) people
+don't tend to name two children the same (unless you're George
+Foreman)?" At first, this seems exactly like a coin flip problem: what
+is the probability of, in two coin flips, flipping heads on the first
+flip or flipping heads on the second but not both? It turns out that
+this is a different problem, and the result is surprising (at least to
+me). We have to be very careful what information we condition on,
+knowing that the English language is a little more fluid than we like
+when dealing with such problems. In the coin flip case we define</p>
+<div style="text-align:center;">
+![5AA78167-FEF6-4DBE-BA47-8CE19D8CC0F4.jpg][]
+
+</div>
+
+<p>:</p>
+<p>and it follows, given the probability of flipping heads is <em>h</em>,</p>
+<div style="text-align:center;">
+![B305BC0D-48EB-4BCB-929F-0C7BE8F53B21.jpg][]
+
+</div>
+
+<p></p>
+which is just the standard result, subtracting off the possibility of
+having both heads. For h=0.5, this yields the standard result of P(h) =
+0.5. As h gets close to 1, the probability of a heads goes way up, and
+thus the <em>probability of both being heads goes way up</em>. As a result, the
+probability of just having 1 heads goes to zero.</p>
+<p>The situation with names is nearly the opposite: as the frequency of a
+name increases, the name is much more common. This makes it more and
+more likely that you will have someone with that name. The difference is
+in the conditioning information:</p>
+<div style="text-align:center;">
+![EBA08560-A8CA-4B0A-94FB-3279139A9848.jpg][]
+
+</div>
+
+<p>The analysis then goes:</p>
+<div style="text-align:center;">
+![B10C9CE9-BECE-42D9-A17E-5214D5134406.jpg][]
+
+</div>
+
+<p>which is exactly the same result as the case where one can name both of
+the children Florida! I was a little surprised by this result, but a
+quick simulation confirmed it as well.</p>
+<h3 id="simulation">Simulation</h3>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pylab</span> <span class="kn">import</span> <span class="o">*</span><span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="o">*</span><span class="n">f</span><span class="o">=</span><span class="mf">0.1</span><span class="n">N</span><span class="o">=</span><span class="mi">10000</span><span class="n">r1</span><span class="o">=</span><span class="n">rand</span><span class="p">(</span><span class="n">N</span><span class="p">)</span><span class="n">r2</span><span class="o">=</span><span class="n">rand</span><span class="p">(</span><span class="n">N</span><span class="p">)</span><span class="n">N1</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">r1</span><span class="o">&amp;</span><span class="n">lt</span> <span class="n">f</span><span class="p">)</span><span class="n">N2</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">r2</span><span class="o">&amp;</span><span class="n">lt</span> <span class="n">f</span><span class="p">)</span><span class="n">case1</span><span class="o">=</span><span class="p">[</span><span class="n">n1</span> <span class="ow">or</span> <span class="n">n2</span> <span class="k">for</span> <span class="n">n1</span><span class="p">,</span><span class="n">n2</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">N1</span><span class="p">,</span><span class="n">N2</span><span class="p">)]</span><span class="k">print</span> <span class="s2">&quot;Fraction allowing duplicate names: &quot;</span><span class="p">,</span><span class="n">case1</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span><span class="o">/</span><span class="nb">float</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">case1</span><span class="p">))</span><span class="k">print</span> <span class="s2">&quot;Theoretical Value: &quot;</span><span class="p">,</span><span class="n">f</span><span class="o">+</span><span class="n">f</span><span class="o">-</span><span class="n">f</span><span class="o">**</span><span class="mi">2</span><span class="n">nn</span><span class="o">=</span><span class="p">[]</span><span class="k">for</span> <span class="n">n1</span><span class="p">,</span><span class="n">n2</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">N1</span><span class="p">,</span><span class="n">N2</span><span class="p">):</span>    <span class="k">if</span> <span class="n">n1</span><span class="p">:</span>        <span class="n">nn</span><span class="o">.</span><span class="kp">append</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>    <span class="k">else</span><span class="p">:</span>        <span class="n">nn</span><span class="o">.</span><span class="kp">append</span><span class="p">(</span><span class="n">n2</span><span class="p">)</span>        <span class="n">N2</span><span class="o">=</span><span class="n">nncase2</span><span class="o">=</span><span class="p">[</span><span class="n">n1</span> <span class="ow">or</span> <span class="n">n2</span> <span class="k">for</span> <span class="n">n1</span><span class="p">,</span><span class="n">n2</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">N1</span><span class="p">,</span><span class="n">N2</span><span class="p">)]</span><span class="k">print</span> <span class="s2">&quot;Fraction not allowing duplicate names: &quot;</span><span class="p">,</span><span class="n">case2</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span><span class="o">/</span><span class="nb">float</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">case2</span><span class="p">))</span>
+</pre></div>
+
+
+<h3 id="simulation-result">Simulation Result</h3>
+<p>Fraction allowing duplicate names: 0.1853<br />
+Theoretical Value: 0.19<br />
+Fraction not allowing duplicate names: 0.1853</p>
+<div class="blogger-post-footer">
+!<>
+
+</div>
+            <section>
+<div class="accordion" id="accordion2">
+    <div class="accordion-group">
+        <div class="accordion-heading">
+            <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
+                href="./coin-flips-and-names-evil-problems-in-probability-continued.html#disqus_thread">
+                Comments
+            </a>
+        </div>
+        <div id="disqus_thread" class="accordion-body collapse">
+            <div class="accordion-inner">
+                <div class="comments">
+                    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'bblaisontheweb';
+        var disqus_identifier = './coin-flips-and-names-evil-problems-in-probability-continued.html';
+    var disqus_url = './coin-flips-and-names-evil-problems-in-probability-continued.html';
+
+    (function() {
+         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+     })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+            <hr/>
+        </div>
+        <section>
+        <div class="span2" style="float:right;font-size:0.9em;">
+            <h4>Published</h4>
+            <time pubdate="pubdate" datetime="2010-02-22T12:22:00-05:00">Feb 22, 2010</time>
+            <h4>Category</h4>
+            <a class="category-link" href="./categories.html#wordpress_migration-ref">wordpress_migration</a>
+<h4><h2>Contact</h2></h4>
+    
+<a href="mailto://bblais@bryant.edu" title="My Email Address" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-envelope sidebar-social-links"></i></a>
+    
+<a href="http://www.linkedin.com/profile/view?id=106100922" title="My LinkedIn Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-linkedin sidebar-social-links"></i></a>
+ 
+<a href="https://plus.google.com/103727926638180804243" rel="publisher" title="My Google+ Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-google-plus sidebar-social-links"></i></a>
+    
+<a href="http://twitter.com/bblais" title="My Twitter Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-twitter sidebar-social-links"></i></a>
+    
+<a href="https://www.youtube.com/channel/UC8cN5_0dy5o9qNPpdLxPa8w" title="My YouTube Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-youtube sidebar-social-links"></i></a>
+
+<h4><h2>Subscribe</h2></h4>
+<a href="http://feeds.feedburner.com/bblaisontheweb" title="Subscribe on Rss" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-rss sidebar-social-links"></i></a>
+<a href="http://twitter.com/bblais" title="Subscribe on Twitter" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-twitter sidebar-social-links"></i></a>
+<a href="http://cloud.feedly.com/#subscription%2Ffeed%2Fhttp://web.bryant.edu/~bblais/" title="Subscribe on Feedly" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-check-square sidebar-social-links"></i></a>
+            <!-- Place this tag where you want the +1 button to render. -->
+<div class="g-plusone" data-size="medium" data-annotation="inline" data-width="300"></div>
+
+<!-- Place this tag after the last +1 button tag. -->
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/platform.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+
+        </div>
+        </section>
+</div>
+</article>
+                </div>
+                <div class="span1"></div>
+            </div>
+        </div>
+    </div>
+<footer>
+<div id="footer">
+    <ul class="footer-content">
+        <li class="elegant-power">Powered by <a href="http://getpelican.com/" title="Pelican Home Page">Pelican</a>. Theme: <a href="http://oncrashreboot.com/pelican-elegant" title="Theme Elegant Home Page">Elegant</a> by <a href="http://oncrashreboot.com" title="Talha Mansoor Home Page">Talha Mansoor</a></li>
+    </ul>
+</div>
+</footer>            <script src="http://code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+            <script type="text/javascript">
+var disqus_shortname = 'bblaisontheweb';
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+<script  language="javascript" type="text/javascript">
+function uncollapse() {
+    if (window.location.hash.match(/^#comment-\d+$/)) {
+        $('#disqus_thread').collapse('show');
+    }
+}
+</script>
+<script type="text/javascript" language="JavaScript">
+uncollapse();
+window.onhashchange=function(){
+    if (window.location.hash.match(/^#comment-\d+$/))
+        window.location.reload(true);
+}
+</script>
+<script>
+$('#disqus_thread').on('shown', function () {
+    var link = document.getElementsByClassName('accordion-toggle');
+    var old_innerHTML = link[0].innerHTML;
+    $(link[0]).fadeOut(500, function() {
+        $(this).text('Click here to hide comments').fadeIn(500);
+    });
+    $('#disqus_thread').on('hidden', function () {
+        $(link[0]).fadeOut(500, function() {
+            $(this).text(old_innerHTML).fadeIn(500);
+        });
+    })
+})
+</script>
+
+
+    </body>
+</html>

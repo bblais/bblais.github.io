@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en-US" itemscope itemtype="http://schema.org/Blog">
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="brianblais" />
+        <meta name="copyright" content="brianblais" />
+<meta itemprop="image" content="./theme/images/Saturn_with_Dice_Square.png">
+
+<meta name="keywords" content=", wordpress_migration, " />
+
+<meta itemprop="name" content="A teachable moment...lost ">
+<meta itemprop="description" content="So I just watched the Mythbusters episode where they recreate the bus jump from the movie Speed. They do two things: a miniature version and full-scale recreation. In their miniature version they scale down the bus by a factor of 12, very carefully building the model bus as closely as possible. Then they scale down the bridge by the same factor. They then point out that they can't scale down gravity without going to the moon. Technically, that would scale gravity by 1/6, not the required 1/12...">
+<meta name="name" content=", wordpress_migration, " />
+
+        <title>A teachable moment...lost  · bblais on the web
+</title>
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="./theme/css/elegant.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="./theme/css/custom.css" media="screen">
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-47048778-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+    </head>
+    <body>
+        <div id="content-sans-footer">
+        <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="./"><span class=site-name>bblais on the web</span></a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right top-menu">
+                            <li ><a href=".">Home</a></li>
+                            <li ><a href="./pages/presentations.html">Presentations</a></li>
+                            <li ><a href="./pages/projects.html">Projects</a></li>
+                            <li ><a href="./pages/publications.html">Publications</a></li>
+                            <li ><a href="./categories.html">Categories</a></li>
+                            <li ><a href="./tags.html">Tags</a></li>
+                            <li ><a href="./archives.html">Archives</a></li>
+                            <li><form class="navbar-search" action="./search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span1"></div>
+                <div class="span10">
+<article>
+<div class="row-fluid">
+    <header class="page-header span10 offset2">
+    <h1><a href="./a-teachable-moment-lost.html"> A teachable moment...lost  </a></h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+        <div class="span8 offset2 article-content">
+
+            <p>So I just watched the Mythbusters episode where they recreate the bus
+jump from the movie Speed. They do two things: a miniature version and
+full-scale recreation. In their miniature version they scale down the
+bus by a factor of 12, very carefully building the model bus as closely
+as possible. Then they scale down the bridge by the same factor. They
+then point out that they can't scale down gravity without going to the
+moon. Technically, that would scale gravity by 1/6, not the required
+1/12. You wouldn't even have to go nearly as far as the Moon to achieve
+this. Since force gravity decreases as the square of the distance away
+from the Earth (starting at 4000mi, the radius of the Earth), you would
+only have to go up this high:</p>
+<p><img alt="7F25868D-9B38-47E5-904A-596DBCCE6242.jpg" src="http://lh4.ggpht.com/_VLTJPGH7Stw/S0Yv5WDsY3I/AAAAAAAAGEc/T7BuskACZ1s/7F25868D-9B38-47E5-904A-596DBCCE6242.jpg?imgmax=800" />  </p>
+<p>compared to the 240,000 mi, that's a real bargain! But this is about
+10,000 mi above the Earth, whereas the Hubble is less than 600 mi above
+the Earth, just to give some perspective.</p>
+<p>So, without leaving the Earth, the NASA experts say that one can
+compensate by going faster. Mythbusters <a href="http://www.youtube.com/watch?v=3All56NYdqI">scrawls the analysis on the
+side of the buss</a> and says "basically, what these hieroglyphics mean
+is to compensate for the physical impossibility of scaling gravity, the
+speed of our 1/12 scale bus has to be just over 20 miles per hour". What
+bothers me most about this is not that they don't really go through the
+analysis, but that they refer to basic math as hieroglyphics and they
+give no sense for <strong>why</strong> going a bit faster would compensate for
+gravity. I am going to include the full analysis here, but below I will
+also give a simpler explanation that they could have used, which only
+includes a small amount of math that would have easily fit on the side
+of the bus.</p>
+<h4 id="analysis">Analysis</h4>
+<p>Their analysis is equivalent to the following: the components of the
+speed off of a ramped angle are</p>
+<p><img alt="9C04C024-2B71-4C35-9D45-12DD1CA648A6.jpg" src="http://lh5.ggpht.com/_VLTJPGH7Stw/S0YxvGpWsRI/AAAAAAAAGEg/OIp1MHQivjg/9C04C024-2B71-4C35-9D45-12DD1CA648A6.jpg?imgmax=800" /></p>
+<p>and the <em>x</em> and <em>y</em> positions versus time are given by the standard
+motion equations</p>
+<p><img alt="66BFBCE5-2574-4BB8-86F0-5D9DAC42F4E9.jpg" src="http://lh5.ggpht.com/_VLTJPGH7Stw/S0YyMqywgYI/AAAAAAAAGEk/g15DfQWzwLs/66BFBCE5-2574-4BB8-86F0-5D9DAC42F4E9.jpg?imgmax=800" />  </p>
+<p>Here is the critical step. We solve for time, <em>t</em>, and get rid of it in
+the second equation. This way we have the shape of the entire trajectory
+in space, without any dependance on time.</p>
+<p><img alt="E389C058-CB1F-4053-8BD4-CC077BA5F404.jpg" src="http://lh4.ggpht.com/_VLTJPGH7Stw/S0YzSkcnH7I/AAAAAAAAGEo/E3DauhFjYts/E389C058-CB1F-4053-8BD4-CC077BA5F404.jpg?imgmax=800" /></p>
+<p>or:</p>
+<p><img alt="AC84A6F7-B5B8-4E18-8B38-988972FF279A.jpg" src="http://lh3.ggpht.com/_VLTJPGH7Stw/S0YzdCSM0TI/AAAAAAAAGEs/dVsAvPisvGg/AC84A6F7-B5B8-4E18-8B38-988972FF279A.jpg?imgmax=800" /></p>
+<p>Now, what happens to this equation when we scale the distances down by a
+certain amount?</p>
+<p><img alt="9C7D59E1-F0B8-4368-8B5A-317F7CB87CEE.jpg" src="http://lh3.ggpht.com/_VLTJPGH7Stw/S0Y0XAxIcKI/AAAAAAAAGEw/0xqHYgQa_ko/9C7D59E1-F0B8-4368-8B5A-317F7CB87CEE.jpg?imgmax=800" /></p>
+<p>which is <em>almost</em> the same, except for one factor of gamma over the
+<em>v</em>^2^ term. Thus, if we replace the speed with</p>
+<p><img alt="AAECC237-7155-49A9-B8C3-66778D0955F2.jpg" src="http://lh3.ggpht.com/_VLTJPGH7Stw/S0Y00Bzw7QI/AAAAAAAAGE0/nmmhbz3PBQU/AAECC237-7155-49A9-B8C3-66778D0955F2.jpg?imgmax=800" /></p>
+<p>the trajectory of the new version is identical to the old version. Now,
+remember, that this doesn't include time: the scaled version, going a
+faster, will reach the destination sooner.</p>
+<h4 id="a-clearer-way">A Clearer Way</h4>
+<p>I certainly wouldn't expect the television audience to follow that
+analysis, although I wouldn't mind them showing it anyway (but more
+explicitly). It's the sort of thing where many would ignore it, but the
+ones who could understand it would get more out of the show. So let's
+see if we can put it a bit more clearly. I'd start, first, by scaling
+down the sizes by a factor of 16 not 12. That way I can take the square
+root more easily. Then there'd be two more facts about gravity that I
+would mention</p>
+<ol>
+<li>gravity doesn't affect motion horizontally</li>
+<li>vertically, if I throw something up at three times the speed, it
+    will go up nine times the height (the square of the speed increase)</li>
+</ol>
+<p>Scaling down just the size, but not the speed, by a factor of 16 would
+decrease the time by the same factor of 16. If we scale the speed down
+by a factor of 4, then three things happen: the height of the trajectory
+reduces by 16 (item 2 above), the time of flight reduces by a factor of
+4, and thus the horizontal distance covered (speed times time) is
+reduced by a factor of 4x4=16. Notice that in doing so, the object
+trajectory is scaled in both the vertical and horizontal directions by
+16, which is the goal of the scaling.</p>
+<p>I think that this is clearer than the way presented by Mythbusters, and
+should have been covered in this way, or some similar way. It could have
+have been a good teaching moment!</p>
+<div class="blogger-post-footer">
+!<>
+
+</div>
+            <section>
+<div class="accordion" id="accordion2">
+    <div class="accordion-group">
+        <div class="accordion-heading">
+            <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
+                href="./a-teachable-moment-lost.html#disqus_thread">
+                Comments
+            </a>
+        </div>
+        <div id="disqus_thread" class="accordion-body collapse">
+            <div class="accordion-inner">
+                <div class="comments">
+                    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'bblaisontheweb';
+        var disqus_identifier = './a-teachable-moment-lost.html';
+    var disqus_url = './a-teachable-moment-lost.html';
+
+    (function() {
+         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+     })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+            <hr/>
+        </div>
+        <section>
+        <div class="span2" style="float:right;font-size:0.9em;">
+            <h4>Published</h4>
+            <time pubdate="pubdate" datetime="2010-01-07T19:47:00-05:00">Jan 7, 2010</time>
+            <h4>Category</h4>
+            <a class="category-link" href="./categories.html#wordpress_migration-ref">wordpress_migration</a>
+<h4><h2>Contact</h2></h4>
+    
+<a href="mailto://bblais@bryant.edu" title="My Email Address" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-envelope sidebar-social-links"></i></a>
+    
+<a href="http://www.linkedin.com/profile/view?id=106100922" title="My LinkedIn Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-linkedin sidebar-social-links"></i></a>
+ 
+<a href="https://plus.google.com/103727926638180804243" rel="publisher" title="My Google+ Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-google-plus sidebar-social-links"></i></a>
+    
+<a href="http://twitter.com/bblais" title="My Twitter Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-twitter sidebar-social-links"></i></a>
+    
+<a href="https://www.youtube.com/channel/UC8cN5_0dy5o9qNPpdLxPa8w" title="My YouTube Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-youtube sidebar-social-links"></i></a>
+
+<h4><h2>Subscribe</h2></h4>
+<a href="http://feeds.feedburner.com/bblaisontheweb" title="Subscribe on Rss" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-rss sidebar-social-links"></i></a>
+<a href="http://twitter.com/bblais" title="Subscribe on Twitter" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-twitter sidebar-social-links"></i></a>
+<a href="http://cloud.feedly.com/#subscription%2Ffeed%2Fhttp://web.bryant.edu/~bblais/" title="Subscribe on Feedly" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-check-square sidebar-social-links"></i></a>
+            <!-- Place this tag where you want the +1 button to render. -->
+<div class="g-plusone" data-size="medium" data-annotation="inline" data-width="300"></div>
+
+<!-- Place this tag after the last +1 button tag. -->
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/platform.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+
+        </div>
+        </section>
+</div>
+</article>
+                </div>
+                <div class="span1"></div>
+            </div>
+        </div>
+    </div>
+<footer>
+<div id="footer">
+    <ul class="footer-content">
+        <li class="elegant-power">Powered by <a href="http://getpelican.com/" title="Pelican Home Page">Pelican</a>. Theme: <a href="http://oncrashreboot.com/pelican-elegant" title="Theme Elegant Home Page">Elegant</a> by <a href="http://oncrashreboot.com" title="Talha Mansoor Home Page">Talha Mansoor</a></li>
+    </ul>
+</div>
+</footer>            <script src="http://code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+            <script type="text/javascript">
+var disqus_shortname = 'bblaisontheweb';
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+<script  language="javascript" type="text/javascript">
+function uncollapse() {
+    if (window.location.hash.match(/^#comment-\d+$/)) {
+        $('#disqus_thread').collapse('show');
+    }
+}
+</script>
+<script type="text/javascript" language="JavaScript">
+uncollapse();
+window.onhashchange=function(){
+    if (window.location.hash.match(/^#comment-\d+$/))
+        window.location.reload(true);
+}
+</script>
+<script>
+$('#disqus_thread').on('shown', function () {
+    var link = document.getElementsByClassName('accordion-toggle');
+    var old_innerHTML = link[0].innerHTML;
+    $(link[0]).fadeOut(500, function() {
+        $(this).text('Click here to hide comments').fadeIn(500);
+    });
+    $('#disqus_thread').on('hidden', function () {
+        $(link[0]).fadeOut(500, function() {
+            $(this).text(old_innerHTML).fadeIn(500);
+        });
+    })
+})
+</script>
+
+
+    </body>
+</html>

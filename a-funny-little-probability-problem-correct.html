@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en-US" itemscope itemtype="http://schema.org/Blog">
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="brianblais" />
+        <meta name="copyright" content="brianblais" />
+<meta itemprop="image" content="./theme/images/Saturn_with_Dice_Square.png">
+
+<meta name="keywords" content=", wordpress_migration, " />
+
+<meta itemprop="name" content="A funny little probability problem - correct ">
+<meta itemprop="description" content="Introduction In a previous post I made a calculation error, which arrived at an unintuitive result - a result that still stands. I got side-tracked with, what I thought, was an arithmetic error. I wasn't satisfied, because my intuition still thought that the without-replacement probability should be a smidge higher, because of the reduction in the number of cards. Because of this, I kept thinking about the problem t...">
+<meta name="name" content=", wordpress_migration, " />
+
+        <title>A funny little probability problem - correct  · bblais on the web
+</title>
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="./theme/css/elegant.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="./theme/css/custom.css" media="screen">
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-47048778-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+    </head>
+    <body>
+        <div id="content-sans-footer">
+        <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="./"><span class=site-name>bblais on the web</span></a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right top-menu">
+                            <li ><a href=".">Home</a></li>
+                            <li ><a href="./pages/presentations.html">Presentations</a></li>
+                            <li ><a href="./pages/projects.html">Projects</a></li>
+                            <li ><a href="./pages/publications.html">Publications</a></li>
+                            <li ><a href="./categories.html">Categories</a></li>
+                            <li ><a href="./tags.html">Tags</a></li>
+                            <li ><a href="./archives.html">Archives</a></li>
+                            <li><form class="navbar-search" action="./search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span1"></div>
+                <div class="span10">
+<article>
+<div class="row-fluid">
+    <header class="page-header span10 offset2">
+    <h1><a href="./a-funny-little-probability-problem-correct.html"> A funny little probability problem - correct  </a></h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+        <div class="span8 offset2 article-content">
+
+            <h2 id="introduction">Introduction</h2>
+<p>In a <a href="a-funny-little-probability-problem-4">previous post</a> I made a calculation error, which arrived at an
+unintuitive result - a result that still stands. I got side-tracked
+with, what I thought, was an arithmetic error. I wasn't satisfied,
+because my intuition still thought that the without-replacement
+probability should be a smidge higher, because of the reduction in the
+number of cards. Because of this, I kept thinking about the problem to
+see where it went wrong. I asked another faculty member the same
+question, and although I didn't receive a full answer, it was enough to
+figure out that I was on the right track initially, but was just a
+little sloppy. So what went wrong, and why? Let me reproduce the
+problem, and the <em>correct</em> calculation this time, and then go on to see
+the implications of the error.</p>
+<h2 id="the-problem">The problem</h2>
+<p>You draw two cards from a deck, and ask what is the probability that the
+first is a black card, and the second is a jack. In math notation, we
+want:</p>
+<div class="math">$$  
+P(B1,J2)  
+$$</div>
+<h2 id="the-right-answer-and-how-i-know">The right answer, and how I know</h2>
+<p>The easiest way to be absolutely sure I had the right answer is to
+simply outline every possible two-hand deal, and count the number of
+cards in each case.</p>
+<h3 id="with-replacement">With replacement:</h3>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">Game</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="n">deals</span><span class="o">=</span><span class="p">[]</span>
+<span class="n">deck</span><span class="o">=</span><span class="n">makedeck</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">card1</span> <span class="ow">in</span> <span class="n">deck</span><span class="p">:</span>
+    <span class="n">deck2</span><span class="o">=</span><span class="n">makedeck</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">card2</span> <span class="ow">in</span> <span class="n">deck2</span><span class="p">:</span>
+        <span class="n">deals</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">card1</span><span class="p">,</span><span class="n">card2</span><span class="p">])</span>
+
+<span class="n">found</span><span class="o">=</span><span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">deals</span> <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">color</span><span class="o">==</span><span class="s1">&#39;Black&#39;</span> <span class="ow">and</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">rank</span><span class="o">==</span><span class="mi">11</span><span class="p">]</span>
+</pre></div>
+
+
+<p>The length of "found" is 104, and the length of the "deals" is 2704 (52
+x 52).</p>
+<h3 id="without-replacement">Without replacement:</h3>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">Game</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="n">deals</span><span class="o">=</span><span class="p">[]</span>
+<span class="n">deck</span><span class="o">=</span><span class="n">makedeck</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">card1</span> <span class="ow">in</span> <span class="n">deck</span><span class="p">:</span>
+    <span class="n">deck2</span><span class="o">=</span><span class="n">makedeck</span><span class="p">()</span>
+    <span class="n">deck2</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">card1</span><span class="p">)</span>   <span class="c1"># &lt;------ remove the card</span>
+    <span class="k">for</span> <span class="n">card2</span> <span class="ow">in</span> <span class="n">deck2</span><span class="p">:</span>
+        <span class="n">deals</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">card1</span><span class="p">,</span><span class="n">card2</span><span class="p">])</span>
+
+<span class="n">found</span><span class="o">=</span><span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">deals</span> <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">color</span><span class="o">==</span><span class="s1">&#39;Black&#39;</span> <span class="ow">and</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">rank</span><span class="o">==</span><span class="mi">11</span><span class="p">]</span>
+</pre></div>
+
+
+<p>The length of "found" is 102, and the length of the "deals" is 2652 (52
+x 51), which is the <em>same</em> fraction.</p>
+<h3 id="with-replacement_1">With replacement</h3>
+<p><em>This part was correct, and just repeated here.</em></p>
+<p>In replacement, we replace the first card after drawing it, reshuffle,
+and then draw the second. Thus the two events are independent.</p>
+<div class="math">$$  
+\begin{array}{rcl}  
+P(B1,J2|{\rm replace}) &amp;=&amp; P(B1) \times P(J2) \\  
+&amp;=&amp;\frac{26}{52} \times \frac{4}{52} = \frac{104}{2704}=0.0385  
+\end{array}  
+$$</div>
+<h3 id="without-replacement_1">Without replacement</h3>
+<div class="math">$$  
+\begin{array}{rcl}  
+P(B1,J2|{\rm no-replace}) &amp;=&amp; P(B1) \times P(J2|B1) \\  
+&amp;=&amp;\frac{26}{52} \times
+\left(P(J2|B1,J1)\underline{P(J1|B1)}+P(J2|B1,\overline{J1})\underline{P(\overline{J1}|B1)}\right)\\  
+&amp;=&amp;\frac{26}{52} \times \left(\frac{3}{51} \cdot
+\underline{\frac{2}{26}}+\frac{4}{51} \cdot
+\underline{\frac{24}{26}} \right)\\  
+&amp;=&amp;\frac{26}{52} \times \underline{\left(\frac{102}{51\cdot 26}
+\right)}\\  
+&amp;=&amp;\frac{102}{2652}\\  
+&amp;=&amp;0.0385  
+\end{array}  
+$$</div>
+<p>where I have put boxes, or underline, around where I differ from the
+previous calculation.  </p>
+<h3 id="the-difference">The difference</h3>
+<p>The difference comes from the term like:</p>
+<div class="math">$$  
+P(J2|B1,J1)P(J1|B1)  
+$$</div>
+<p>In the <em>incorrect</em> version, we had</p>
+<div class="math">$$  
+P(J2|B1,J1)P(J1)  
+$$</div>
+<p>Essentially, I was being sloppy, and forgot to copy the right-hand side
+of the conditional, without the <em>B1</em>.</p>
+<p>What I find interesting, which is why I've gone to such a detail, are
+the following:</p>
+<ol>
+<li>how easy it is to make simple arithmetic mistakes in these sorts of
+    problems</li>
+<li>how easy it is to have a subtle rewrite of a problem, and get a
+    different answer</li>
+<li>how a simulation gives a lot of confidence in a result</li>
+</ol>
+<p>I've found, over time, that I don't tend to trust mathematical results
+without a numerical result to support it.  </p>
+<p>Still, it is a cool result, and still somewhat unintuitive - at least at
+first. Thinking in terms of information, it makes sense - knowing that
+the first card is black tells you nothing about the rank of the second
+card.  </p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    var location_protocol = (false) ? 'https' : document.location.protocol;
+    if (location_protocol !== 'http' && location_protocol !== 'https') location_protocol = 'https:';
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+            <section>
+<div class="accordion" id="accordion2">
+    <div class="accordion-group">
+        <div class="accordion-heading">
+            <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
+                href="./a-funny-little-probability-problem-correct.html#disqus_thread">
+                Comments
+            </a>
+        </div>
+        <div id="disqus_thread" class="accordion-body collapse">
+            <div class="accordion-inner">
+                <div class="comments">
+                    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'bblaisontheweb';
+        var disqus_identifier = './a-funny-little-probability-problem-correct.html';
+    var disqus_url = './a-funny-little-probability-problem-correct.html';
+
+    (function() {
+         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+     })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+            <hr/>
+        </div>
+        <section>
+        <div class="span2" style="float:right;font-size:0.9em;">
+            <h4>Published</h4>
+            <time pubdate="pubdate" datetime="2013-03-23T23:23:00-04:00">Mar 23, 2013</time>
+            <h4>Category</h4>
+            <a class="category-link" href="./categories.html#wordpress_migration-ref">wordpress_migration</a>
+<h4><h2>Contact</h2></h4>
+    
+<a href="mailto://bblais@bryant.edu" title="My Email Address" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-envelope sidebar-social-links"></i></a>
+    
+<a href="http://www.linkedin.com/profile/view?id=106100922" title="My LinkedIn Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-linkedin sidebar-social-links"></i></a>
+ 
+<a href="https://plus.google.com/103727926638180804243" rel="publisher" title="My Google+ Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-google-plus sidebar-social-links"></i></a>
+    
+<a href="http://twitter.com/bblais" title="My Twitter Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-twitter sidebar-social-links"></i></a>
+    
+<a href="https://www.youtube.com/channel/UC8cN5_0dy5o9qNPpdLxPa8w" title="My YouTube Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-youtube sidebar-social-links"></i></a>
+
+<h4><h2>Subscribe</h2></h4>
+<a href="http://feeds.feedburner.com/bblaisontheweb" title="Subscribe on Rss" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-rss sidebar-social-links"></i></a>
+<a href="http://twitter.com/bblais" title="Subscribe on Twitter" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-twitter sidebar-social-links"></i></a>
+<a href="http://cloud.feedly.com/#subscription%2Ffeed%2Fhttp://web.bryant.edu/~bblais/" title="Subscribe on Feedly" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-check-square sidebar-social-links"></i></a>
+            <!-- Place this tag where you want the +1 button to render. -->
+<div class="g-plusone" data-size="medium" data-annotation="inline" data-width="300"></div>
+
+<!-- Place this tag after the last +1 button tag. -->
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/platform.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+
+        </div>
+        </section>
+</div>
+</article>
+                </div>
+                <div class="span1"></div>
+            </div>
+        </div>
+    </div>
+<footer>
+<div id="footer">
+    <ul class="footer-content">
+        <li class="elegant-power">Powered by <a href="http://getpelican.com/" title="Pelican Home Page">Pelican</a>. Theme: <a href="http://oncrashreboot.com/pelican-elegant" title="Theme Elegant Home Page">Elegant</a> by <a href="http://oncrashreboot.com" title="Talha Mansoor Home Page">Talha Mansoor</a></li>
+    </ul>
+</div>
+</footer>            <script src="http://code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+            <script type="text/javascript">
+var disqus_shortname = 'bblaisontheweb';
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+<script  language="javascript" type="text/javascript">
+function uncollapse() {
+    if (window.location.hash.match(/^#comment-\d+$/)) {
+        $('#disqus_thread').collapse('show');
+    }
+}
+</script>
+<script type="text/javascript" language="JavaScript">
+uncollapse();
+window.onhashchange=function(){
+    if (window.location.hash.match(/^#comment-\d+$/))
+        window.location.reload(true);
+}
+</script>
+<script>
+$('#disqus_thread').on('shown', function () {
+    var link = document.getElementsByClassName('accordion-toggle');
+    var old_innerHTML = link[0].innerHTML;
+    $(link[0]).fadeOut(500, function() {
+        $(this).text('Click here to hide comments').fadeIn(500);
+    });
+    $('#disqus_thread').on('hidden', function () {
+        $(link[0]).fadeOut(500, function() {
+            $(this).text(old_innerHTML).fadeIn(500);
+        });
+    })
+})
+</script>
+
+
+    </body>
+</html>
