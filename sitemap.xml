@@ -4,1764 +4,1764 @@ xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitem
 xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-<loc>http://bblais.github.io/</loc>
-<lastmod>2016-07-09T20:59:04-00:00</lastmod>
+<loc>https://bblais.github.io/</loc>
+<lastmod>2016-07-09T21:02:54-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/archives.html</loc>
-<lastmod>2016-07-09T20:59:04-00:00</lastmod>
+<loc>https://bblais.github.io/archives.html</loc>
+<lastmod>2016-07-09T21:02:54-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/tags.html</loc>
-<lastmod>2016-07-09T20:59:04-00:00</lastmod>
+<loc>https://bblais.github.io/tags.html</loc>
+<lastmod>2016-07-09T21:02:54-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/categories.html</loc>
-<lastmod>2016-07-09T20:59:04-00:00</lastmod>
+<loc>https://bblais.github.io/categories.html</loc>
+<lastmod>2016-07-09T21:02:54-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/pages/presentations.html</loc>
-<lastmod>2016-07-09T20:59:04-00:00</lastmod>
+<loc>https://bblais.github.io/pages/presentations.html</loc>
+<lastmod>2016-07-09T21:02:54-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/pages/projects.html</loc>
-<lastmod>2016-07-09T20:59:04-00:00</lastmod>
+<loc>https://bblais.github.io/pages/projects.html</loc>
+<lastmod>2016-07-09T21:02:54-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/pages/publications.html</loc>
-<lastmod>2016-07-09T20:59:04-00:00</lastmod>
+<loc>https://bblais.github.io/pages/publications.html</loc>
+<lastmod>2016-07-09T21:02:54-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/laplace-and-twins.html</loc>
+<loc>https://bblais.github.io/laplace-and-twins.html</loc>
 <lastmod>2016-03-28T00:00:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/student-course-evaluations.html</loc>
+<loc>https://bblais.github.io/student-course-evaluations.html</loc>
 <lastmod>2016-01-15T00:00:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/philosophy-and-science.html</loc>
+<loc>https://bblais.github.io/philosophy-and-science.html</loc>
 <lastmod>2016-01-11T00:00:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/incompetence-or-nervousness.html</loc>
+<loc>https://bblais.github.io/incompetence-or-nervousness.html</loc>
 <lastmod>2016-01-03T00:00:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/argument-is-not-evidence.html</loc>
+<loc>https://bblais.github.io/argument-is-not-evidence.html</loc>
 <lastmod>2016-01-02T00:00:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/happy-new-year.html</loc>
+<loc>https://bblais.github.io/happy-new-year.html</loc>
 <lastmod>2016-01-01T00:00:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/end-of-a-long-semester.html</loc>
+<loc>https://bblais.github.io/end-of-a-long-semester.html</loc>
 <lastmod>2015-12-21T00:00:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/disagreeing-with-neil-degrasse-tyson.html</loc>
+<loc>https://bblais.github.io/disagreeing-with-neil-degrasse-tyson.html</loc>
 <lastmod>2015-10-07T00:00:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/answering-unanswerable-questions.html</loc>
+<loc>https://bblais.github.io/answering-unanswerable-questions.html</loc>
 <lastmod>2015-09-11T00:00:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/the-giunta-dillahunty-debate.html</loc>
+<loc>https://bblais.github.io/the-giunta-dillahunty-debate.html</loc>
 <lastmod>2015-08-23T00:00:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/deduction-induction-and-abduction-oh-my.html</loc>
+<loc>https://bblais.github.io/deduction-induction-and-abduction-oh-my.html</loc>
 <lastmod>2015-08-10T00:00:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/evidence-vs-argument.html</loc>
+<loc>https://bblais.github.io/evidence-vs-argument.html</loc>
 <lastmod>2015-07-28T00:00:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/pluto-pluto-here-we-come.html</loc>
+<loc>https://bblais.github.io/pluto-pluto-here-we-come.html</loc>
 <lastmod>2015-07-03T00:00:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/football-physics.html</loc>
+<loc>https://bblais.github.io/football-physics.html</loc>
 <lastmod>2015-06-24T00:00:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/we-find-god-not-guilty-of-existing.html</loc>
+<loc>https://bblais.github.io/we-find-god-not-guilty-of-existing.html</loc>
 <lastmod>2015-05-18T00:00:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/on-miracles.html</loc>
+<loc>https://bblais.github.io/on-miracles.html</loc>
 <lastmod>2015-05-13T00:00:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/its-not-the-new-atheists-that-are-arrogant.html</loc>
+<loc>https://bblais.github.io/its-not-the-new-atheists-that-are-arrogant.html</loc>
 <lastmod>2015-05-12T00:00:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/expressing-ignorance.html</loc>
+<loc>https://bblais.github.io/expressing-ignorance.html</loc>
 <lastmod>2015-05-09T00:00:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/priors-vs-likelihoods.html</loc>
+<loc>https://bblais.github.io/priors-vs-likelihoods.html</loc>
 <lastmod>2015-05-05T00:00:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/superseding-the-t-test.html</loc>
+<loc>https://bblais.github.io/superseding-the-t-test.html</loc>
 <lastmod>2015-04-23T00:00:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/simple-questions-that-get-to-the-heart-of-the-matter.html</loc>
+<loc>https://bblais.github.io/simple-questions-that-get-to-the-heart-of-the-matter.html</loc>
 <lastmod>2015-03-03T00:00:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/misquoting-hume.html</loc>
+<loc>https://bblais.github.io/misquoting-hume.html</loc>
 <lastmod>2015-02-21T00:00:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/testing-the-supernatural.html</loc>
+<loc>https://bblais.github.io/testing-the-supernatural.html</loc>
 <lastmod>2015-02-04T00:00:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/how-to-deflate-a-football-deflating-story.html</loc>
+<loc>https://bblais.github.io/how-to-deflate-a-football-deflating-story.html</loc>
 <lastmod>2015-01-23T00:00:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/demo-vs-experiment.html</loc>
+<loc>https://bblais.github.io/demo-vs-experiment.html</loc>
 <lastmod>2015-01-20T00:00:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/we-should-all-be-biased.html</loc>
+<loc>https://bblais.github.io/we-should-all-be-biased.html</loc>
 <lastmod>2015-01-05T00:00:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/latex-vs-word.html</loc>
+<loc>https://bblais.github.io/latex-vs-word.html</loc>
 <lastmod>2014-12-31T00:00:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/the-longest-night-ever.html</loc>
+<loc>https://bblais.github.io/the-longest-night-ever.html</loc>
 <lastmod>2014-12-23T00:00:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/why-python-is-the-language-everyone-should-learn.html</loc>
+<loc>https://bblais.github.io/why-python-is-the-language-everyone-should-learn.html</loc>
 <lastmod>2014-12-15T00:00:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/evolution-and-morality.html</loc>
+<loc>https://bblais.github.io/evolution-and-morality.html</loc>
 <lastmod>2014-12-02T00:00:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/objective-morality-defined.html</loc>
+<loc>https://bblais.github.io/objective-morality-defined.html</loc>
 <lastmod>2014-11-25T00:00:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/objective-morality.html</loc>
+<loc>https://bblais.github.io/objective-morality.html</loc>
 <lastmod>2014-11-21T00:00:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/statistical-inference-for-everyone-sie.html</loc>
+<loc>https://bblais.github.io/statistical-inference-for-everyone-sie.html</loc>
 <lastmod>2014-11-21T00:00:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/something-from-nothing.html</loc>
+<loc>https://bblais.github.io/something-from-nothing.html</loc>
 <lastmod>2014-10-28T00:00:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/what-is-ai.html</loc>
+<loc>https://bblais.github.io/what-is-ai.html</loc>
 <lastmod>2014-10-14T00:00:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/naturalism-of-the-gaps.html</loc>
+<loc>https://bblais.github.io/naturalism-of-the-gaps.html</loc>
 <lastmod>2014-09-30T00:00:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/three-years-of-weather.html</loc>
+<loc>https://bblais.github.io/three-years-of-weather.html</loc>
 <lastmod>2014-09-23T00:00:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/will-the-sun-rise-tomorrow.html</loc>
+<loc>https://bblais.github.io/will-the-sun-rise-tomorrow.html</loc>
 <lastmod>2014-09-22T00:00:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/theism-vs-atheism.html</loc>
+<loc>https://bblais.github.io/theism-vs-atheism.html</loc>
 <lastmod>2014-09-18T00:00:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/whats-the-harm-in-alternative-medicine.html</loc>
+<loc>https://bblais.github.io/whats-the-harm-in-alternative-medicine.html</loc>
 <lastmod>2014-08-26T00:00:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/what-evidence-would-it-take.html</loc>
+<loc>https://bblais.github.io/what-evidence-would-it-take.html</loc>
 <lastmod>2014-08-15T00:00:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/what-sane-climate-discussion-looks-like.html</loc>
+<loc>https://bblais.github.io/what-sane-climate-discussion-looks-like.html</loc>
 <lastmod>2014-08-05T00:00:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/what-is-science.html</loc>
+<loc>https://bblais.github.io/what-is-science.html</loc>
 <lastmod>2014-07-29T00:00:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/is-faith-the-same-as-trust-or-baseless-belief.html</loc>
+<loc>https://bblais.github.io/is-faith-the-same-as-trust-or-baseless-belief.html</loc>
 <lastmod>2014-07-28T00:00:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/faith-trust-and-evidence.html</loc>
+<loc>https://bblais.github.io/faith-trust-and-evidence.html</loc>
 <lastmod>2014-07-24T00:00:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/bayesian-vs-frequentist-perspectives.html</loc>
+<loc>https://bblais.github.io/bayesian-vs-frequentist-perspectives.html</loc>
 <lastmod>2014-06-19T00:00:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/statistical-heresies-the-movie.html</loc>
+<loc>https://bblais.github.io/statistical-heresies-the-movie.html</loc>
 <lastmod>2014-06-11T00:00:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/turing-test-passed.html</loc>
+<loc>https://bblais.github.io/turing-test-passed.html</loc>
 <lastmod>2014-06-09T00:00:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/its-unreasonable-to-believe-some-true-things.html</loc>
+<loc>https://bblais.github.io/its-unreasonable-to-believe-some-true-things.html</loc>
 <lastmod>2014-06-06T00:00:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/free-or-not-so-free-will.html</loc>
+<loc>https://bblais.github.io/free-or-not-so-free-will.html</loc>
 <lastmod>2014-06-04T00:00:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/do-healing-miracles-happen.html</loc>
+<loc>https://bblais.github.io/do-healing-miracles-happen.html</loc>
 <lastmod>2014-06-03T00:00:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/a-good-bet-lost.html</loc>
+<loc>https://bblais.github.io/a-good-bet-lost.html</loc>
 <lastmod>2014-05-29T00:00:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/pennies.html</loc>
+<loc>https://bblais.github.io/pennies.html</loc>
 <lastmod>2014-05-28T00:00:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/statistical-heresies.html</loc>
+<loc>https://bblais.github.io/statistical-heresies.html</loc>
 <lastmod>2014-05-22T00:00:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/supporting-dualism.html</loc>
+<loc>https://bblais.github.io/supporting-dualism.html</loc>
 <lastmod>2014-05-16T00:00:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/siblings-and-astronomy.html</loc>
+<loc>https://bblais.github.io/siblings-and-astronomy.html</loc>
 <lastmod>2014-05-14T00:00:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/spurious-correlations.html</loc>
+<loc>https://bblais.github.io/spurious-correlations.html</loc>
 <lastmod>2014-05-12T00:00:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/skeptics-vs-realists.html</loc>
+<loc>https://bblais.github.io/skeptics-vs-realists.html</loc>
 <lastmod>2014-05-08T00:00:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/dualism-naturalism-and-other-isms.html</loc>
+<loc>https://bblais.github.io/dualism-naturalism-and-other-isms.html</loc>
 <lastmod>2014-05-06T00:00:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/noah-and-the-flood-did-it-happen-16-february-2008.html</loc>
+<loc>https://bblais.github.io/noah-and-the-flood-did-it-happen-16-february-2008.html</loc>
 <lastmod>2014-03-19T00:00:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/how-to-dodge-the-consequences-of-belief.html</loc>
+<loc>https://bblais.github.io/how-to-dodge-the-consequences-of-belief.html</loc>
 <lastmod>2014-03-13T00:00:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/a-foreshadowing-of-the-end-of-the-world.html</loc>
+<loc>https://bblais.github.io/a-foreshadowing-of-the-end-of-the-world.html</loc>
 <lastmod>2014-03-10T00:00:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/is-astrology-scientific.html</loc>
+<loc>https://bblais.github.io/is-astrology-scientific.html</loc>
 <lastmod>2014-02-26T00:00:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/scientific-knowledge.html</loc>
+<loc>https://bblais.github.io/scientific-knowledge.html</loc>
 <lastmod>2014-02-12T00:00:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/creationism-laid-bare.html</loc>
+<loc>https://bblais.github.io/creationism-laid-bare.html</loc>
 <lastmod>2014-02-06T00:00:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/anyone-using-the-term-scientific-proof-doesnt-know-science.html</loc>
+<loc>https://bblais.github.io/anyone-using-the-term-scientific-proof-doesnt-know-science.html</loc>
 <lastmod>2014-01-31T00:00:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/did-christians-steal-christmas-22-december-2007.html</loc>
+<loc>https://bblais.github.io/did-christians-steal-christmas-22-december-2007.html</loc>
 <lastmod>2014-01-29T00:00:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/unbelievable-project-did-jesus-exist-bart-ehrman-qa-18-august-2012.html</loc>
+<loc>https://bblais.github.io/unbelievable-project-did-jesus-exist-bart-ehrman-qa-18-august-2012.html</loc>
 <lastmod>2014-01-25T00:00:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/properly-basic-obscurantism.html</loc>
+<loc>https://bblais.github.io/properly-basic-obscurantism.html</loc>
 <lastmod>2014-01-24T00:00:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/physics-and-the-flash-mind-reader.html</loc>
+<loc>https://bblais.github.io/physics-and-the-flash-mind-reader.html</loc>
 <lastmod>2014-01-22T00:00:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/philosophy-and-science-whats-the-difference.html</loc>
+<loc>https://bblais.github.io/philosophy-and-science-whats-the-difference.html</loc>
 <lastmod>2014-01-21T00:00:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/chess-morality-and-well-being.html</loc>
+<loc>https://bblais.github.io/chess-morality-and-well-being.html</loc>
 <lastmod>2014-01-17T00:00:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/the-cover-art-for-statistical-inference-for-everyone-sie.html</loc>
+<loc>https://bblais.github.io/the-cover-art-for-statistical-inference-for-everyone-sie.html</loc>
 <lastmod>2014-01-15T00:00:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/statistical-inference-for-everyone-book-announcement.html</loc>
+<loc>https://bblais.github.io/statistical-inference-for-everyone-book-announcement.html</loc>
 <lastmod>2014-01-14T14:52:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/new-year-and-new-website.html</loc>
+<loc>https://bblais.github.io/new-year-and-new-website.html</loc>
 <lastmod>2014-01-14T14:41:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/why-the-new-website.html</loc>
+<loc>https://bblais.github.io/why-the-new-website.html</loc>
 <lastmod>2014-01-13T19:38:55-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/new-website.html</loc>
+<loc>https://bblais.github.io/new-website.html</loc>
 <lastmod>2014-01-10T00:00:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/a-new-year-and-a-deepity.html</loc>
+<loc>https://bblais.github.io/a-new-year-and-a-deepity.html</loc>
 <lastmod>2014-01-06T14:04:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/religion-and-the-illusion-of-moral-authority.html</loc>
+<loc>https://bblais.github.io/religion-and-the-illusion-of-moral-authority.html</loc>
 <lastmod>2013-12-18T14:06:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/a-story-of-humanity.html</loc>
+<loc>https://bblais.github.io/a-story-of-humanity.html</loc>
 <lastmod>2013-12-01T00:03:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/life-meaning-and-entropy.html</loc>
+<loc>https://bblais.github.io/life-meaning-and-entropy.html</loc>
 <lastmod>2013-11-21T23:19:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/the-trinity-and-coherency.html</loc>
+<loc>https://bblais.github.io/the-trinity-and-coherency.html</loc>
 <lastmod>2013-11-19T11:54:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/science-as-entertainment.html</loc>
+<loc>https://bblais.github.io/science-as-entertainment.html</loc>
 <lastmod>2013-11-12T13:30:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/knowledge-faith-and-belief.html</loc>
+<loc>https://bblais.github.io/knowledge-faith-and-belief.html</loc>
 <lastmod>2013-10-24T19:30:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/nobel-prize-the-higgs-and-predictions.html</loc>
+<loc>https://bblais.github.io/nobel-prize-the-higgs-and-predictions.html</loc>
 <lastmod>2013-10-09T16:57:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/the-fallacy-of-all-natural.html</loc>
+<loc>https://bblais.github.io/the-fallacy-of-all-natural.html</loc>
 <lastmod>2013-09-26T14:33:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/moocs-and-treadmills.html</loc>
+<loc>https://bblais.github.io/moocs-and-treadmills.html</loc>
 <lastmod>2013-09-25T18:08:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/what-to-do-when-youre-not-an-expert.html</loc>
+<loc>https://bblais.github.io/what-to-do-when-youre-not-an-expert.html</loc>
 <lastmod>2013-09-19T10:47:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/origins-of-religion-two-hypotheses.html</loc>
+<loc>https://bblais.github.io/origins-of-religion-two-hypotheses.html</loc>
 <lastmod>2013-09-13T09:30:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/the-supernatural-and-the-history-of-cosmology.html</loc>
+<loc>https://bblais.github.io/the-supernatural-and-the-history-of-cosmology.html</loc>
 <lastmod>2013-09-04T20:20:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/god-in-the-head.html</loc>
+<loc>https://bblais.github.io/god-in-the-head.html</loc>
 <lastmod>2013-09-02T12:08:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/presuppositions-and-science.html</loc>
+<loc>https://bblais.github.io/presuppositions-and-science.html</loc>
 <lastmod>2013-08-30T10:22:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/textual-transmission-bottlenecks.html</loc>
+<loc>https://bblais.github.io/textual-transmission-bottlenecks.html</loc>
 <lastmod>2013-08-20T14:58:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/trying-to-figure-out-fiction-i-like-game-of-thrones-semi-fail.html</loc>
+<loc>https://bblais.github.io/trying-to-figure-out-fiction-i-like-game-of-thrones-semi-fail.html</loc>
 <lastmod>2013-08-19T00:20:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/what-would-it-take-for-me-to-believe-the-resurrection.html</loc>
+<loc>https://bblais.github.io/what-would-it-take-for-me-to-believe-the-resurrection.html</loc>
 <lastmod>2013-07-27T23:37:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/a-question-for-theists-why-do-you-not-believe-ufos-are-alien-spacecraft.html</loc>
+<loc>https://bblais.github.io/a-question-for-theists-why-do-you-not-believe-ufos-are-alien-spacecraft.html</loc>
 <lastmod>2013-07-13T01:12:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/unbelievable-project-the-probability-of-the-resurrection.html</loc>
+<loc>https://bblais.github.io/unbelievable-project-the-probability-of-the-resurrection.html</loc>
 <lastmod>2013-07-11T00:02:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/baseball-and-the-naming-of-the-gospels.html</loc>
+<loc>https://bblais.github.io/baseball-and-the-naming-of-the-gospels.html</loc>
 <lastmod>2013-07-07T18:48:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/rules-for-criticizing-opponents.html</loc>
+<loc>https://bblais.github.io/rules-for-criticizing-opponents.html</loc>
 <lastmod>2013-06-14T13:40:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/the-source-of-morality.html</loc>
+<loc>https://bblais.github.io/the-source-of-morality.html</loc>
 <lastmod>2013-06-13T10:03:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/christianity-and-morality.html</loc>
+<loc>https://bblais.github.io/christianity-and-morality.html</loc>
 <lastmod>2013-06-10T12:50:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/miscellaneous-christian-topics-another-counter-to-marshall.html</loc>
+<loc>https://bblais.github.io/miscellaneous-christian-topics-another-counter-to-marshall.html</loc>
 <lastmod>2013-06-07T12:33:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/model-helicopter-guided-by-power-of-thought.html</loc>
+<loc>https://bblais.github.io/model-helicopter-guided-by-power-of-thought.html</loc>
 <lastmod>2013-06-05T23:18:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/evidence-of-other-universes.html</loc>
+<loc>https://bblais.github.io/evidence-of-other-universes.html</loc>
 <lastmod>2013-06-05T09:45:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/star-trek-and-storytelling.html</loc>
+<loc>https://bblais.github.io/star-trek-and-storytelling.html</loc>
 <lastmod>2013-05-30T18:44:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/a-little-about-miracles.html</loc>
+<loc>https://bblais.github.io/a-little-about-miracles.html</loc>
 <lastmod>2013-05-21T18:35:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/creationist-math.html</loc>
+<loc>https://bblais.github.io/creationist-math.html</loc>
 <lastmod>2013-05-10T18:36:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/design-the-origin-of-life-and-creationism.html</loc>
+<loc>https://bblais.github.io/design-the-origin-of-life-and-creationism.html</loc>
 <lastmod>2013-05-06T20:50:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/consciousness-in-infants.html</loc>
+<loc>https://bblais.github.io/consciousness-in-infants.html</loc>
 <lastmod>2013-04-28T00:26:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/some-recent-presentations.html</loc>
+<loc>https://bblais.github.io/some-recent-presentations.html</loc>
 <lastmod>2013-04-24T23:54:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/10-signs-of-intellectual-honesty.html</loc>
+<loc>https://bblais.github.io/10-signs-of-intellectual-honesty.html</loc>
 <lastmod>2013-04-20T14:51:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/a-funny-little-probability-problem-some-closure.html</loc>
+<loc>https://bblais.github.io/a-funny-little-probability-problem-some-closure.html</loc>
 <lastmod>2013-03-25T09:48:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/a-funny-little-probability-problem-correct.html</loc>
+<loc>https://bblais.github.io/a-funny-little-probability-problem-correct.html</loc>
 <lastmod>2013-03-23T23:23:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/a-funny-little-probability-problem-4.html</loc>
+<loc>https://bblais.github.io/a-funny-little-probability-problem-4.html</loc>
 <lastmod>2013-03-23T12:21:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/proof-that-god-exists.html</loc>
+<loc>https://bblais.github.io/proof-that-god-exists.html</loc>
 <lastmod>2013-03-21T11:33:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/unbelievable-project-miracles-and-healing-is-it-evidence-for-the-truth-of-christianity.html</loc>
+<loc>https://bblais.github.io/unbelievable-project-miracles-and-healing-is-it-evidence-for-the-truth-of-christianity.html</loc>
 <lastmod>2013-03-18T19:29:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/unbelievable-project-a-proxy-atheist-explains-why-he-cant-believe.html</loc>
+<loc>https://bblais.github.io/unbelievable-project-a-proxy-atheist-explains-why-he-cant-believe.html</loc>
 <lastmod>2013-03-15T14:33:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/unbelievable-project-the-new-atheism-barry-duke-and-david-marshall-debate.html</loc>
+<loc>https://bblais.github.io/unbelievable-project-the-new-atheism-barry-duke-and-david-marshall-debate.html</loc>
 <lastmod>2013-03-13T15:34:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/unbelievable-project-john-lennox-debates-science-and-god-has-science-buried-god.html</loc>
+<loc>https://bblais.github.io/unbelievable-project-john-lennox-debates-science-and-god-has-science-buried-god.html</loc>
 <lastmod>2013-03-11T14:33:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/unbelievable-project-god-delusion-debate-deluded-by-dawkins.html</loc>
+<loc>https://bblais.github.io/unbelievable-project-god-delusion-debate-deluded-by-dawkins.html</loc>
 <lastmod>2013-03-08T12:17:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/unbelievable-project-atheist-and-christian-bloggers-discuss.html</loc>
+<loc>https://bblais.github.io/unbelievable-project-atheist-and-christian-bloggers-discuss.html</loc>
 <lastmod>2013-03-06T12:13:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/unbelievable-project-gods-existence-free-will-and-faith-the-big-questions.html</loc>
+<loc>https://bblais.github.io/unbelievable-project-gods-existence-free-will-and-faith-the-big-questions.html</loc>
 <lastmod>2013-03-04T14:15:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/unbelievable-project-does-christianity-enslave-are-we-better-off-without-belief-in-god.html</loc>
+<loc>https://bblais.github.io/unbelievable-project-does-christianity-enslave-are-we-better-off-without-belief-in-god.html</loc>
 <lastmod>2013-03-01T10:51:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/unbelievable-project-a-non-believers-armchair-perspective-on-six-years-of-christian-debates.html</loc>
+<loc>https://bblais.github.io/unbelievable-project-a-non-believers-armchair-perspective-on-six-years-of-christian-debates.html</loc>
 <lastmod>2013-02-27T14:30:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/resurrection-linear-regression-and-the-art-of-harmonization.html</loc>
+<loc>https://bblais.github.io/resurrection-linear-regression-and-the-art-of-harmonization.html</loc>
 <lastmod>2013-02-15T21:41:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/there-is-no-population.html</loc>
+<loc>https://bblais.github.io/there-is-no-population.html</loc>
 <lastmod>2013-02-13T01:07:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/science-refutes-god-debate.html</loc>
+<loc>https://bblais.github.io/science-refutes-god-debate.html</loc>
 <lastmod>2012-12-11T13:49:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/logical-vs-reasonable.html</loc>
+<loc>https://bblais.github.io/logical-vs-reasonable.html</loc>
 <lastmod>2012-12-07T13:54:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/god-does-not-exist-clearly.html</loc>
+<loc>https://bblais.github.io/god-does-not-exist-clearly.html</loc>
 <lastmod>2012-11-26T10:34:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/a-few-things-about-carl-sagan.html</loc>
+<loc>https://bblais.github.io/a-few-things-about-carl-sagan.html</loc>
 <lastmod>2012-11-09T16:29:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/bayesian-thinking.html</loc>
+<loc>https://bblais.github.io/bayesian-thinking.html</loc>
 <lastmod>2012-10-16T16:12:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/great-science-ads.html</loc>
+<loc>https://bblais.github.io/great-science-ads.html</loc>
 <lastmod>2012-10-16T12:44:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/breaking-news-doctor-hallucinates-and-is-convinced-that-science-is-wrong.html</loc>
+<loc>https://bblais.github.io/breaking-news-doctor-hallucinates-and-is-convinced-that-science-is-wrong.html</loc>
 <lastmod>2012-10-12T23:42:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/critical-thinking.html</loc>
+<loc>https://bblais.github.io/critical-thinking.html</loc>
 <lastmod>2012-10-11T17:25:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/naturalistic-bias-presupposing-naturalism.html</loc>
+<loc>https://bblais.github.io/naturalistic-bias-presupposing-naturalism.html</loc>
 <lastmod>2012-09-25T11:11:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/aliens.html</loc>
+<loc>https://bblais.github.io/aliens.html</loc>
 <lastmod>2012-09-07T09:57:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/statistics-vs-probability.html</loc>
+<loc>https://bblais.github.io/statistics-vs-probability.html</loc>
 <lastmod>2012-08-31T09:27:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/presuppositionalist-arguments.html</loc>
+<loc>https://bblais.github.io/presuppositionalist-arguments.html</loc>
 <lastmod>2012-08-19T16:01:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/lessons-from-bayes-rule.html</loc>
+<loc>https://bblais.github.io/lessons-from-bayes-rule.html</loc>
 <lastmod>2012-06-03T23:25:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/suppression-of-ideas-in-science.html</loc>
+<loc>https://bblais.github.io/suppression-of-ideas-in-science.html</loc>
 <lastmod>2012-05-14T09:42:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/free-will-and-entropy.html</loc>
+<loc>https://bblais.github.io/free-will-and-entropy.html</loc>
 <lastmod>2012-05-07T10:04:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/on-being-wrong.html</loc>
+<loc>https://bblais.github.io/on-being-wrong.html</loc>
 <lastmod>2012-03-20T00:38:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/evolution-and-rationality.html</loc>
+<loc>https://bblais.github.io/evolution-and-rationality.html</loc>
 <lastmod>2012-03-06T01:23:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/what-is-good-in-religion.html</loc>
+<loc>https://bblais.github.io/what-is-good-in-religion.html</loc>
 <lastmod>2012-03-05T13:53:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/best-quote-in-a-while-about-global-warming.html</loc>
+<loc>https://bblais.github.io/best-quote-in-a-while-about-global-warming.html</loc>
 <lastmod>2012-01-27T18:48:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/bayes-and-hiccups-practical-working-solutions-that-no-one-seems-to-know.html</loc>
+<loc>https://bblais.github.io/bayes-and-hiccups-practical-working-solutions-that-no-one-seems-to-know.html</loc>
 <lastmod>2012-01-14T23:51:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/santa-and-other-delusions.html</loc>
+<loc>https://bblais.github.io/santa-and-other-delusions.html</loc>
 <lastmod>2012-01-04T10:58:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/einstein-and-the-motives-of-scientists.html</loc>
+<loc>https://bblais.github.io/einstein-and-the-motives-of-scientists.html</loc>
 <lastmod>2011-12-27T20:52:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/the-bible-foreshadows-scientific-discoveries.html</loc>
+<loc>https://bblais.github.io/the-bible-foreshadows-scientific-discoveries.html</loc>
 <lastmod>2011-12-22T15:08:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/closed-to-the-supernatural.html</loc>
+<loc>https://bblais.github.io/closed-to-the-supernatural.html</loc>
 <lastmod>2011-12-20T15:41:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/presuppositionalism-vs-evidentialism.html</loc>
+<loc>https://bblais.github.io/presuppositionalism-vs-evidentialism.html</loc>
 <lastmod>2011-12-19T16:29:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/more-fine-tuning-not.html</loc>
+<loc>https://bblais.github.io/more-fine-tuning-not.html</loc>
 <lastmod>2011-12-15T17:34:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/things-science-cant-explain.html</loc>
+<loc>https://bblais.github.io/things-science-cant-explain.html</loc>
 <lastmod>2011-12-09T12:08:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/conversation-with-steve-winsor.html</loc>
+<loc>https://bblais.github.io/conversation-with-steve-winsor.html</loc>
 <lastmod>2011-12-06T15:32:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/whats-wrong-with-this.html</loc>
+<loc>https://bblais.github.io/whats-wrong-with-this.html</loc>
 <lastmod>2011-12-06T14:03:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/best-evidence-for.html</loc>
+<loc>https://bblais.github.io/best-evidence-for.html</loc>
 <lastmod>2011-11-29T12:12:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/a-sensible-post-on-climate-change-for-a-change.html</loc>
+<loc>https://bblais.github.io/a-sensible-post-on-climate-change-for-a-change.html</loc>
 <lastmod>2011-11-09T12:21:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/language-of-science.html</loc>
+<loc>https://bblais.github.io/language-of-science.html</loc>
 <lastmod>2011-11-07T15:47:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/offended-by-prayer-on-a-mural.html</loc>
+<loc>https://bblais.github.io/offended-by-prayer-on-a-mural.html</loc>
 <lastmod>2011-11-07T15:46:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/the-florida-problem-a-new-intuition.html</loc>
+<loc>https://bblais.github.io/the-florida-problem-a-new-intuition.html</loc>
 <lastmod>2011-10-30T13:35:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/faster-than-light-a-likely-solution.html</loc>
+<loc>https://bblais.github.io/faster-than-light-a-likely-solution.html</loc>
 <lastmod>2011-10-16T12:11:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/faster-than-light-why-the-lawyer-is-wrong.html</loc>
+<loc>https://bblais.github.io/faster-than-light-why-the-lawyer-is-wrong.html</loc>
 <lastmod>2011-10-14T15:11:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/mystery-knowledge-science-and-television.html</loc>
+<loc>https://bblais.github.io/mystery-knowledge-science-and-television.html</loc>
 <lastmod>2011-08-03T12:44:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/climate-and-the-moon.html</loc>
+<loc>https://bblais.github.io/climate-and-the-moon.html</loc>
 <lastmod>2011-07-28T09:45:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/knowledge-and-belief.html</loc>
+<loc>https://bblais.github.io/knowledge-and-belief.html</loc>
 <lastmod>2011-07-27T09:52:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/science-and-attitudes-toward-criticism.html</loc>
+<loc>https://bblais.github.io/science-and-attitudes-toward-criticism.html</loc>
 <lastmod>2011-07-26T16:36:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/reaping-the-benefits-of-science-while-hostile-to-science.html</loc>
+<loc>https://bblais.github.io/reaping-the-benefits-of-science-while-hostile-to-science.html</loc>
 <lastmod>2011-06-02T00:15:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/frivolous-research-in-science.html</loc>
+<loc>https://bblais.github.io/frivolous-research-in-science.html</loc>
 <lastmod>2011-05-28T11:43:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/energy-bracelet-experience.html</loc>
+<loc>https://bblais.github.io/energy-bracelet-experience.html</loc>
 <lastmod>2011-03-09T17:01:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/religion-scripture-and-the-source-of-morality.html</loc>
+<loc>https://bblais.github.io/religion-scripture-and-the-source-of-morality.html</loc>
 <lastmod>2011-03-08T15:32:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/wonders-in-science.html</loc>
+<loc>https://bblais.github.io/wonders-in-science.html</loc>
 <lastmod>2011-02-25T10:49:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/a-reasonable-perspective-on-global-warming.html</loc>
+<loc>https://bblais.github.io/a-reasonable-perspective-on-global-warming.html</loc>
 <lastmod>2011-02-24T13:27:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/does-watson-think.html</loc>
+<loc>https://bblais.github.io/does-watson-think.html</loc>
 <lastmod>2011-02-23T11:36:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/creationism-and-strawmen.html</loc>
+<loc>https://bblais.github.io/creationism-and-strawmen.html</loc>
 <lastmod>2011-02-22T06:42:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/wonders-in-science-2.html</loc>
+<loc>https://bblais.github.io/wonders-in-science-2.html</loc>
 <lastmod>2011-02-18T15:17:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/20-years-of-being-an-atheist-ends-today.html</loc>
+<loc>https://bblais.github.io/20-years-of-being-an-atheist-ends-today.html</loc>
 <lastmod>2011-02-17T10:15:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/the-role-of-humanity-into-the-future.html</loc>
+<loc>https://bblais.github.io/the-role-of-humanity-into-the-future.html</loc>
 <lastmod>2011-02-16T13:36:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/bill-oreilly-tides-and-the-god-of-the-gaps.html</loc>
+<loc>https://bblais.github.io/bill-oreilly-tides-and-the-god-of-the-gaps.html</loc>
 <lastmod>2011-02-15T10:50:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/why-i-cant-support-the-darwin-day-resolution.html</loc>
+<loc>https://bblais.github.io/why-i-cant-support-the-darwin-day-resolution.html</loc>
 <lastmod>2011-02-12T17:12:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/the-world-is-flat.html</loc>
+<loc>https://bblais.github.io/the-world-is-flat.html</loc>
 <lastmod>2011-02-11T16:52:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/a-modest-proposal-about-uncertainty.html</loc>
+<loc>https://bblais.github.io/a-modest-proposal-about-uncertainty.html</loc>
 <lastmod>2011-01-29T16:35:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/the-economics-of-religion-more-good-than-harm.html</loc>
+<loc>https://bblais.github.io/the-economics-of-religion-more-good-than-harm.html</loc>
 <lastmod>2011-01-29T14:14:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/rounds-in-australian-open.html</loc>
+<loc>https://bblais.github.io/rounds-in-australian-open.html</loc>
 <lastmod>2011-01-19T14:00:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/predictions-for-the-australian-open.html</loc>
+<loc>https://bblais.github.io/predictions-for-the-australian-open.html</loc>
 <lastmod>2011-01-18T23:53:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/religion-science-and-humility.html</loc>
+<loc>https://bblais.github.io/religion-science-and-humility.html</loc>
 <lastmod>2011-01-14T17:23:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/francis-collins-science-and-religion-how-religion-halts-science.html</loc>
+<loc>https://bblais.github.io/francis-collins-science-and-religion-how-religion-halts-science.html</loc>
 <lastmod>2011-01-10T13:50:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/a-moral-argument-for-god.html</loc>
+<loc>https://bblais.github.io/a-moral-argument-for-god.html</loc>
 <lastmod>2010-12-30T15:53:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/are-science-and-religion-incompatible.html</loc>
+<loc>https://bblais.github.io/are-science-and-religion-incompatible.html</loc>
 <lastmod>2010-12-01T10:59:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/is-x2-positive-or-negative.html</loc>
+<loc>https://bblais.github.io/is-x2-positive-or-negative.html</loc>
 <lastmod>2010-11-22T01:29:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/glenn-beck-on-science.html</loc>
+<loc>https://bblais.github.io/glenn-beck-on-science.html</loc>
 <lastmod>2010-11-22T01:00:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/a-walk-down-memory-lane.html</loc>
+<loc>https://bblais.github.io/a-walk-down-memory-lane.html</loc>
 <lastmod>2010-10-16T15:06:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/power-unbalance.html</loc>
+<loc>https://bblais.github.io/power-unbalance.html</loc>
 <lastmod>2010-10-08T12:56:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/about.html</loc>
+<loc>https://bblais.github.io/about.html</loc>
 <lastmod>2010-09-27T13:31:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/multiple-model-comparisons-revisited.html</loc>
+<loc>https://bblais.github.io/multiple-model-comparisons-revisited.html</loc>
 <lastmod>2010-09-25T17:51:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/god-and-hawking.html</loc>
+<loc>https://bblais.github.io/god-and-hawking.html</loc>
 <lastmod>2010-09-12T16:44:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/why-pseudoscientists-like-the-chi-square-test-and-why-it-shouldnt-be-taught.html</loc>
+<loc>https://bblais.github.io/why-pseudoscientists-like-the-chi-square-test-and-why-it-shouldnt-be-taught.html</loc>
 <lastmod>2010-09-01T17:10:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/orthodox-statistics-conducive-to-pseudo-science.html</loc>
+<loc>https://bblais.github.io/orthodox-statistics-conducive-to-pseudo-science.html</loc>
 <lastmod>2010-08-31T16:28:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/the-non-psychic-octopus.html</loc>
+<loc>https://bblais.github.io/the-non-psychic-octopus.html</loc>
 <lastmod>2010-08-28T01:29:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/a-new-and-content-free-model.html</loc>
+<loc>https://bblais.github.io/a-new-and-content-free-model.html</loc>
 <lastmod>2010-07-11T00:18:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/pascals-global-warming.html</loc>
+<loc>https://bblais.github.io/pascals-global-warming.html</loc>
 <lastmod>2010-06-25T01:40:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/religion-and-scientists.html</loc>
+<loc>https://bblais.github.io/religion-and-scientists.html</loc>
 <lastmod>2010-06-08T15:11:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/one-last-tv-post-about-battlestar-galactica.html</loc>
+<loc>https://bblais.github.io/one-last-tv-post-about-battlestar-galactica.html</loc>
 <lastmod>2010-06-08T12:06:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/battlestar-galactica-lost-and-babylon-5-to-plan-or-not-to-plan.html</loc>
+<loc>https://bblais.github.io/battlestar-galactica-lost-and-babylon-5-to-plan-or-not-to-plan.html</loc>
 <lastmod>2010-06-08T10:59:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/lord-of-the-rings.html</loc>
+<loc>https://bblais.github.io/lord-of-the-rings.html</loc>
 <lastmod>2010-06-07T18:23:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/nice-talk-about-science-and-vaccination.html</loc>
+<loc>https://bblais.github.io/nice-talk-about-science-and-vaccination.html</loc>
 <lastmod>2010-04-19T16:40:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/the-not-so-hidden-flaw-in-this-climate-argument.html</loc>
+<loc>https://bblais.github.io/the-not-so-hidden-flaw-in-this-climate-argument.html</loc>
 <lastmod>2010-02-26T14:12:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/a-bit-of-must-read-economics.html</loc>
+<loc>https://bblais.github.io/a-bit-of-must-read-economics.html</loc>
 <lastmod>2010-02-23T00:53:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/coin-flips-and-names-evil-problems-in-probability-continued.html</loc>
+<loc>https://bblais.github.io/coin-flips-and-names-evil-problems-in-probability-continued.html</loc>
 <lastmod>2010-02-22T12:22:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/magnetic-therapy-getting-under-my-skin.html</loc>
+<loc>https://bblais.github.io/magnetic-therapy-getting-under-my-skin.html</loc>
 <lastmod>2010-02-21T23:06:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/economics.html</loc>
+<loc>https://bblais.github.io/economics.html</loc>
 <lastmod>2010-01-31T16:36:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/faith-and-science.html</loc>
+<loc>https://bblais.github.io/faith-and-science.html</loc>
 <lastmod>2010-01-31T15:18:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/a-couple-of-interesting-videos.html</loc>
+<loc>https://bblais.github.io/a-couple-of-interesting-videos.html</loc>
 <lastmod>2010-01-12T15:22:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/creativity-science-and-the-brain.html</loc>
+<loc>https://bblais.github.io/creativity-science-and-the-brain.html</loc>
 <lastmod>2010-01-12T14:08:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/believing-the-unbelieveable.html</loc>
+<loc>https://bblais.github.io/believing-the-unbelieveable.html</loc>
 <lastmod>2010-01-08T00:42:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/a-teachable-moment-lost.html</loc>
+<loc>https://bblais.github.io/a-teachable-moment-lost.html</loc>
 <lastmod>2010-01-07T19:47:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/there-once-was-a-girl-named-florida-a-k-a-evil-problems-in-probability.html</loc>
+<loc>https://bblais.github.io/there-once-was-a-girl-named-florida-a-k-a-evil-problems-in-probability.html</loc>
 <lastmod>2010-01-05T16:22:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/weird-associations-and-the-brain.html</loc>
+<loc>https://bblais.github.io/weird-associations-and-the-brain.html</loc>
 <lastmod>2010-01-05T14:56:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/cool-little-fact-of-the-day.html</loc>
+<loc>https://bblais.github.io/cool-little-fact-of-the-day.html</loc>
 <lastmod>2010-01-04T15:17:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/polar-bears-data-opinions-and-global-warming.html</loc>
+<loc>https://bblais.github.io/polar-bears-data-opinions-and-global-warming.html</loc>
 <lastmod>2009-12-22T16:16:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/open-information-reproducible-research-and-climategate.html</loc>
+<loc>https://bblais.github.io/open-information-reproducible-research-and-climategate.html</loc>
 <lastmod>2009-12-15T15:42:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/word-of-the-day-micromort.html</loc>
+<loc>https://bblais.github.io/word-of-the-day-micromort.html</loc>
 <lastmod>2009-12-12T13:08:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/climate-change-denial-is-not-the-same-as-evolution-denial.html</loc>
+<loc>https://bblais.github.io/climate-change-denial-is-not-the-same-as-evolution-denial.html</loc>
 <lastmod>2009-12-11T01:00:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/climategate-oh-my.html</loc>
+<loc>https://bblais.github.io/climategate-oh-my.html</loc>
 <lastmod>2009-12-09T10:54:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/universality-of-religion.html</loc>
+<loc>https://bblais.github.io/universality-of-religion.html</loc>
 <lastmod>2009-12-06T14:32:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/a-great-observation.html</loc>
+<loc>https://bblais.github.io/a-great-observation.html</loc>
 <lastmod>2009-12-01T01:13:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/information.html</loc>
+<loc>https://bblais.github.io/information.html</loc>
 <lastmod>2009-11-30T18:52:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/autotune-science-and-creativity.html</loc>
+<loc>https://bblais.github.io/autotune-science-and-creativity.html</loc>
 <lastmod>2009-11-18T10:47:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/yet-another-reason-to-leave-iraq-dowsing-for-bombs.html</loc>
+<loc>https://bblais.github.io/yet-another-reason-to-leave-iraq-dowsing-for-bombs.html</loc>
 <lastmod>2009-11-14T12:13:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/netflix-prize.html</loc>
+<loc>https://bblais.github.io/netflix-prize.html</loc>
 <lastmod>2009-10-12T12:21:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/disturbing-video-misusing-einsteins-name.html</loc>
+<loc>https://bblais.github.io/disturbing-video-misusing-einsteins-name.html</loc>
 <lastmod>2009-10-11T02:01:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/recovery-from-vision.html</loc>
+<loc>https://bblais.github.io/recovery-from-vision.html</loc>
 <lastmod>2009-09-16T21:54:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/probability-problems-and-simulation.html</loc>
+<loc>https://bblais.github.io/probability-problems-and-simulation.html</loc>
 <lastmod>2009-09-16T12:36:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/frequentist-thinking-or-just-bad-math.html</loc>
+<loc>https://bblais.github.io/frequentist-thinking-or-just-bad-math.html</loc>
 <lastmod>2009-09-10T01:25:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/a-nice-series-to-look-at.html</loc>
+<loc>https://bblais.github.io/a-nice-series-to-look-at.html</loc>
 <lastmod>2009-09-02T16:36:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/230-miles-per-gallon.html</loc>
+<loc>https://bblais.github.io/230-miles-per-gallon.html</loc>
 <lastmod>2009-08-12T16:52:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/free-will.html</loc>
+<loc>https://bblais.github.io/free-will.html</loc>
 <lastmod>2009-07-30T12:06:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/neat-way-to-introduce-programming.html</loc>
+<loc>https://bblais.github.io/neat-way-to-introduce-programming.html</loc>
 <lastmod>2009-07-24T17:28:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/silly-challenge-to-silly-statement.html</loc>
+<loc>https://bblais.github.io/silly-challenge-to-silly-statement.html</loc>
 <lastmod>2009-07-24T14:18:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/a-quick-comment-on-error.html</loc>
+<loc>https://bblais.github.io/a-quick-comment-on-error.html</loc>
 <lastmod>2009-07-20T14:05:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/laplace-and-the-divine.html</loc>
+<loc>https://bblais.github.io/laplace-and-the-divine.html</loc>
 <lastmod>2009-07-19T12:04:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/misunderstanding-laplace.html</loc>
+<loc>https://bblais.github.io/misunderstanding-laplace.html</loc>
 <lastmod>2009-07-19T00:58:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/homeopathic-medicine.html</loc>
+<loc>https://bblais.github.io/homeopathic-medicine.html</loc>
 <lastmod>2009-07-10T10:17:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/erroneous-probabilistic-reasoning.html</loc>
+<loc>https://bblais.github.io/erroneous-probabilistic-reasoning.html</loc>
 <lastmod>2009-07-08T22:10:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/a-little-geometry.html</loc>
+<loc>https://bblais.github.io/a-little-geometry.html</loc>
 <lastmod>2009-07-08T01:13:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://bblais.github.io/beginnings.html</loc>
+<loc>https://bblais.github.io/beginnings.html</loc>
 <lastmod>2009-07-07T23:01:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
