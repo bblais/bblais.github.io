@@ -1,5 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>bblais on the web</title><link>https://bblais.github.io/</link><description></description><lastBuildDate>Fri, 19 Aug 2016 00:00:00 -0400</lastBuildDate><item><title>Is Science a Self-Sealing Process?</title><link>https://bblais.github.io/is-science-a-self-sealing-process.html</link><description>&lt;p&gt;&lt;Img src="images/city-view-1427730_1920.jpg"&gt;&lt;/p&gt;
+<rss version="2.0"><channel><title>bblais on the web</title><link>https://bblais.github.io/</link><description></description><lastBuildDate>Tue, 06 Sep 2016 00:00:00 -0400</lastBuildDate><item><title>Mapping Worldview to Probability</title><link>https://bblais.github.io/mapping-worldview-to-probability.html</link><description>&lt;p&gt;&lt;Img src="images/horsehead1.png"&gt;&lt;/p&gt;
+&lt;p&gt;I've heard many times (see &lt;a href="http://donjohnsonministries.org/debate-with-dr-robert-price-part-4/"&gt;here&lt;/a&gt; and &lt;a href="https://www.premierchristianradio.com/Shows/Saturday/Unbelievable/Episodes/Unbelievable-Derren-Brown-show-2-discussing-miracles-and-healing"&gt;here&lt;/a&gt;, for examples) the objection from apologists that certain claims (i.e. supernatural events, miracles, etc…) are ruled either impossible or highly unlikely because of the skeptics "worldview" - that somehow if one has a "worldview" that permits such things, then the evidence would look a lot different.  I agree with this, and think that this is another concept which is improved by mapping it onto probability theory.  For "worldview" read "prior probabilities for the models under consideration" and it becomes clear.  Further, ones &lt;em&gt;prior&lt;/em&gt; probability for a claim is just the &lt;em&gt;posterior&lt;/em&gt; probability, given all of the evidence you've seen in the past.  Bayes' Theorem written this way is&lt;/p&gt;
+&lt;div class="math"&gt;\begin{eqnarray*}
+P(\mbox{model}|\mbox{new evidence}, \mbox{past evidence}) &amp;amp;\sim&amp;amp; P(\mbox{new evidence}|\mbox{model},\mbox{past evidence}) \times \\
+&amp;amp;&amp;amp; \underbrace{P(\mbox{model}|\mbox{past evidence})}_{\mbox{prior}}
+\end{eqnarray*}&lt;/div&gt;
+&lt;p&gt;If you've been presented with evidence in the past which makes, under your state of knowledge, certain miracles &lt;em&gt;more likely&lt;/em&gt; then you'll have a &lt;em&gt;higher&lt;/em&gt; prior probability for a miracle interpretation of a new extraordinary claim.  If you've been presented with evidence in the past which makes, under your state of knowledge, miracles &lt;em&gt;less likely&lt;/em&gt; then you'll have a &lt;em&gt;lower&lt;/em&gt; prior probability for a miracle interpretation of a new extraordinary claim.  There is nothing wrong with this situation.  However, where it goes wrong is when people think that having a high prior probability &lt;em&gt;justifies&lt;/em&gt; the belief, or that someone with a low prior is &lt;em&gt;too&lt;/em&gt; skeptical.  The bottom line is,&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;If your conclusion is highly sensitive to your prior probability, then your evidence is insufficient to make it reasonable to strongly believe the claim.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;If there is good evidence for a claim then you should be able to convince a skeptic.  Excuses like, your &lt;em&gt;prior&lt;/em&gt; probability (i.e. your "worldview") makes the claim less likely its just that…an excuse for the lack of evidence.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    var location_protocol = (false) ? 'https' : document.location.protocol;
+    if (location_protocol !== 'http' &amp;&amp; location_protocol !== 'https') location_protocol = 'https:';
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Brian Blais</dc:creator><pubDate>Tue, 06 Sep 2016 00:00:00 -0400</pubDate><guid isPermaLink="false">tag:bblais.github.io,2016-09-06:mapping-worldview-to-probability.html</guid></item><item><title>Is Science a Self-Sealing Process?</title><link>https://bblais.github.io/is-science-a-self-sealing-process.html</link><description>&lt;p&gt;&lt;Img src="images/city-view-1427730_1920.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;In 1969, &lt;a href="https://en.wikipedia.org/wiki/Moon_landing_conspiracy_theories"&gt;NASA faked the moon landing&lt;/a&gt; - there was a huge conspiracy to cover up the facts that the landing was actually filmed in Hollywood.  Well, that's what the conspiracy theories claim.  What about the eye-witness claims of the astronauts themselves?   They must have been in the conspiracy.  What about all of the people supporting the landing effort - scientists, engineers, film crews, etc…?  They must have also been in the conspiracy.  &lt;/p&gt;
 &lt;p&gt;Conspiracy theories are examples of &lt;em&gt;self-sealing  ideas&lt;/em&gt; - any criticism can be rolled up into the theory, and either used to support the theory or to make it easy to dodge criticism. In general &lt;em&gt;self-sealing  ideas&lt;/em&gt; obstruct efforts to find the truth because they make it particularly challenging to dislodge the bad idea.   As such, scientists try to make sure that all proposed explanations are &lt;em&gt;falsifiable&lt;/em&gt;, and are thus much less likely to fall prey to this effect. &lt;/p&gt;
 &lt;h2 id="argument-for-the-limits-of-science-from-its-self-sealing-methods"&gt;Argument for the limits of science from its self-sealing methods&lt;/h2&gt;
