@@ -1,5 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>bblais on the web</title><link>https://bblais.github.io/</link><description></description><lastBuildDate>Tue, 06 Sep 2016 00:00:00 -0400</lastBuildDate><item><title>Mapping Worldview to Probability</title><link>https://bblais.github.io/mapping-worldview-to-probability.html</link><description>&lt;p&gt;&lt;Img src="images/horsehead1.png"&gt;&lt;/p&gt;
+<rss version="2.0"><channel><title>bblais on the web</title><link>https://bblais.github.io/</link><description></description><lastBuildDate>Thu, 17 Nov 2016 00:00:00 -0500</lastBuildDate><item><title>Probability Does Extend Logic</title><link>https://bblais.github.io/probability-does-extend-logic.html</link><description>&lt;p&gt;&lt;Img src="images/horsehead1.png"&gt;&lt;/p&gt;
+&lt;p&gt;In the article &lt;a href="https://meaningness.com/probability-and-logic"&gt;&lt;em&gt;Probability theory does not extend logic&lt;/em&gt;&lt;/a&gt; David Chapman, the author, criticizes the claim that probability theory generalizes logic to cases with uncertainty.  He is particularly scornful of &lt;a href="https://en.wikipedia.org/wiki/Edwin_Thompson_Jaynes"&gt;E. T. Jaynes'&lt;/a&gt; &lt;a href="http://bayes.wustl.edu/etj/prob/book.pdf"&gt;treatment of this&lt;/a&gt;.  As far as I can see, his criticisms are misplaced.  I have broken the critcisms up into into a couple of categories, and explained the problem with each.  In summary, I couldn't find a &lt;em&gt;specific&lt;/em&gt; problem where a logical conclusion was outside the domain of probability, or a &lt;em&gt;specific&lt;/em&gt; problem where probability theory resulted in an incorrect conclusion that could be demonstrated independently.  Mostly, it seemed to be a criticism of notation and the ambiguity of English.&lt;/p&gt;
+&lt;h2 id="abuse-of-notation"&gt;Abuse of notation&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Suppose you roll a die, and you believe it is fair. Then you believe that the probability it will come up as a three is 1/6. You could write this as P(3) = 1/6.&lt;/p&gt;
+&lt;p&gt;People write things like that all the time, and it is totally legitimate. It might make you slightly uneasy, however. 3 is a number. It’s abstract. Do numbers have probabilities? Not as such. You assign 3 a probability, in this particular context. In a different context—for example, rolling an icosahedral die—it would have a different probability.
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;He goes on to use a more abstract example,&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;the logician C. L. Dodgson demonstrated that some snarks—not all—are boojums. A probabilist may write this generalization as a conditional probability:&lt;/p&gt;
+&lt;p&gt;&lt;span class="math"&gt;\(P(boojum|snark) = 0.4\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;The vertical bar | is read “given”. The statement is understood as something like “if you see a snark, the probability that it is a boojum is 0.4.” Or, “the probability of boojumness given snarkness is 0.4.”&lt;/p&gt;
+&lt;p&gt;Mathematicians would call this “an abuse of notation”; but if it is interpreted intelligently in context, it’s unproblematic. Still, it’s rather queer. What exactly are “snark” and “boojum” supposed to mean here?
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;If you actually read Jaynes, he stresses pedantically that &lt;em&gt;all&lt;/em&gt; probabilities are conditional - there is an &lt;span class="math"&gt;\(I\)&lt;/span&gt; on the right-hand side in &lt;em&gt;all&lt;/em&gt; of his equations.  Most of us (lazily) drop this, but there are some paradoxes that can arise when ignored.  For example, David Chapman's first example &lt;/p&gt;
+&lt;div class="math"&gt;$$
+P(3)=1/6
+$$&lt;/div&gt;
+&lt;p&gt;should be changed to&lt;/p&gt;
+&lt;div class="math"&gt;$$
+P(3|I)=1/6
+$$&lt;/div&gt;
+&lt;p&gt;where the &lt;span class="math"&gt;\(I\)&lt;/span&gt; contains the interpretation (e.g. six-sided vs four-sided die, rolling procedure, &lt;em&gt;any&lt;/em&gt; other knowledge we bring to the table).  So the bulk of this discussion seems to be much ado about nothing.&lt;/p&gt;
+&lt;h2 id="relationships-vs-propositions"&gt;Relationships vs propositions&lt;/h2&gt;
+&lt;p&gt;David Chapman points out the benefits of using predicate logic to express relationships explicitly, such as &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Back to the cave:&lt;/p&gt;
+&lt;p&gt;∀x: ∀y: P(∃z: grue(z) ∧ near(z,x) | person(x) ∧ cave(y) ∧ in(x, y)) = 0.8&lt;/p&gt;
+&lt;p&gt;“If a person (x) is in a cave (y), then the probability that there’s a grue (z) near the person is 0.8.” Most of what is going on this statement is predicate logic, not probability. Remember that for probability theory, propositions are opaque and atomic. As far as it is concerned, “person(x) ∧ cave(y) ∧ in(x, y)” is just a long name for an event that is either observed or not; and so likewise “∃z: grue(z) ∧ near(z,x).” It can’t “look inside” to see that we’re talking about three different things and their relationships.
+In practice, probability theory is often combined with other mathematical methods (such as predicate logic in this case). Probabilists mostly don’t even notice they are doing this. When they use logic, they do so informally and intuitively.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I am no philosopher, nor mathematician, but as far as I can tell the only "work" that is being done by the predicate calculus is a compact, unambiguous  summary of what is expressed in English adequately.  Of course, we'll often (lazily) short-hand even this to &lt;/p&gt;
+&lt;div class="math"&gt;$$
+P({\rm grue}|{\rm cave},I) = 0.8
+$$&lt;/div&gt;
+&lt;p&gt;where again, the &lt;span class="math"&gt;\(I\)&lt;/span&gt; includes the more verbose description.  There is a balance between explicitness and economy of symbols.  I still don't see the conflict - the predicate logic seems to offer nothing more in these cases.&lt;/p&gt;
+&lt;h2 id="specifics-to-generalities"&gt;Specifics to Generalities&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Suppose we sequence DNA from some monsters and find that it sure looks like Arthur and Harold are both fathers of Edward:&lt;/p&gt;
+&lt;p&gt;P(father(Arthur, Edward) | experiment) = 0.99&lt;/p&gt;
+&lt;p&gt;P(father(Harold, Edward) | experiment) = 0.99&lt;/p&gt;
+&lt;p&gt;P(Arthur = Harold | observations) = 0.01&lt;/p&gt;
+&lt;p&gt;This should update our belief that every vertebrate has only one father. How?
+Here we would be reasoning from specifics to generalities (whereas the implicit instantiation trick of Bayesian networks allows us to reason from generalities to specifics). This is outside the scope of probability theory.
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This is definitely wrong.  What we have are experiments (i.e. data) and we have models.  We could easily have models like:&lt;/p&gt;
+&lt;div class="math"&gt;\begin{eqnarray*}
+M_1 &amp;amp;=&amp;amp; \mbox{every vertebrate has only one father} \\
+M_2 &amp;amp;=&amp;amp; \mbox{every vertebrate has either one or two fathers} \\
+\end{eqnarray*}&lt;/div&gt;
+&lt;p&gt;and we'd want to know,&lt;/p&gt;
+&lt;div class="math"&gt;\begin{eqnarray*}
+P(M_1|{\rm data},I) &amp;amp;=&amp;amp;  \cdots \\
+P(M_2|{\rm data},I) &amp;amp;=&amp;amp;  \cdots \\
+\end{eqnarray*}&lt;/div&gt;
+&lt;p&gt;where the data are above.  Although it could get messy, it certainly is not "outside the scope of probability theory".  It comes down to the models.&lt;/p&gt;
+&lt;h2 id="models-and-rationality"&gt;Models and Rationality&lt;/h2&gt;
+&lt;p&gt;David Chapman includes:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Formal systems (such as logic and probability theory) are also only useful once you have a model. Where do those come from? I think it’s important to go about finding models in a rational way—but formal rationality has nothing to offer.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Here I agree - your inference is only as good as your models.  Where did the structure of General Relativity come from, originally?  From the creative process of Einstein.   Models are not derived, but are created.&lt;/p&gt;
+&lt;p&gt;I don't think we spend enough time celebrating the creative enterprise that is the scientific process. &lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    var location_protocol = (false) ? 'https' : document.location.protocol;
+    if (location_protocol !== 'http' &amp;&amp; location_protocol !== 'https') location_protocol = 'https:';
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Brian Blais</dc:creator><pubDate>Thu, 17 Nov 2016 00:00:00 -0500</pubDate><guid isPermaLink="false">tag:bblais.github.io,2016-11-17:probability-does-extend-logic.html</guid></item><item><title>Mapping Worldview to Probability</title><link>https://bblais.github.io/mapping-worldview-to-probability.html</link><description>&lt;p&gt;&lt;Img src="images/horsehead1.png"&gt;&lt;/p&gt;
 &lt;p&gt;I've heard many times (see &lt;a href="http://donjohnsonministries.org/debate-with-dr-robert-price-part-4/"&gt;here&lt;/a&gt; and &lt;a href="https://www.premierchristianradio.com/Shows/Saturday/Unbelievable/Episodes/Unbelievable-Derren-Brown-show-2-discussing-miracles-and-healing"&gt;here&lt;/a&gt;, for examples) the objection from apologists that certain claims (i.e. supernatural events, miracles, etc…) are ruled either impossible or highly unlikely because of the skeptics "worldview" - that somehow if one has a "worldview" that permits such things, then the evidence would look a lot different.  I agree with this, and think that this is another concept which is improved by mapping it onto probability theory.  For "worldview" read "prior probabilities for the models under consideration" and it becomes clear.  Further, ones &lt;em&gt;prior&lt;/em&gt; probability for a claim is just the &lt;em&gt;posterior&lt;/em&gt; probability, given all of the evidence you've seen in the past.  Bayes' Theorem written this way is&lt;/p&gt;
 &lt;div class="math"&gt;\begin{eqnarray*}
 P(\mbox{model}|\mbox{new evidence}, \mbox{past evidence}) &amp;amp;\sim&amp;amp; P(\mbox{new evidence}|\mbox{model},\mbox{past evidence}) \times \\
