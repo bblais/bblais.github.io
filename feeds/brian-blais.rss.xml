@@ -1,5 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>bblais on the web</title><link>https://bblais.github.io/</link><description></description><lastBuildDate>Thu, 17 Nov 2016 00:00:00 -0500</lastBuildDate><item><title>Probability Does Extend Logic</title><link>https://bblais.github.io/probability-does-extend-logic.html</link><description>&lt;p&gt;&lt;Img src="images/horsehead1.png"&gt;&lt;/p&gt;
+<rss version="2.0"><channel><title>bblais on the web</title><link>https://bblais.github.io/</link><description></description><lastBuildDate>Fri, 27 Jan 2017 00:00:00 -0500</lastBuildDate><item><title>Free Will On My Mind</title><link>https://bblais.github.io/free-will-on-my-mind.html</link><description>&lt;p&gt;&lt;img src="images/football.jpg" width=200&gt;&lt;/p&gt;
+&lt;p&gt;Usually when thinking about free will my thoughts run in circles.  However the &lt;a href="https://www.youtube.com/watch?v=k0F4l9A2CzM&amp;amp;list=PL3v5wvkmbVtdBD8upZns_VTaWMhXyYtMQ"&gt;recent talks by Sean Carroll&lt;/a&gt; were some of the clearest exposition on the topic. In summary we have different levels of description. Footballs for example are not in the fundamental laws of physics but that doesn't make footballs any less real - they are an emergent phenomenon. It also doesn't make the word &lt;em&gt;football&lt;/em&gt; any less useful in describing the world at the level of human interactions.  The problem occurs when you try to mix levels of description.&lt;/p&gt;
+&lt;p&gt;The key idea with free will, as described by Sean Carroll, is that we live in a world where uncertainty dominates.  As a result, the fact that the universe is deterministic is irrelevant when describing human behavior - we simply don't have daily, practical access to that determinism.  Free will, then, is a useful construct when discussing agency just as footballs are a useful concept when describing Sunday behavior.&lt;/p&gt;
+&lt;p&gt;And by the way, go Pats!&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Brian Blais</dc:creator><pubDate>Fri, 27 Jan 2017 00:00:00 -0500</pubDate><guid isPermaLink="false">tag:bblais.github.io,2017-01-27:free-will-on-my-mind.html</guid></item><item><title>Jaynes vs Gelman</title><link>https://bblais.github.io/jaynes-vs-gelman.html</link><description>&lt;p&gt;&lt;img src="images/landscape-54998_640.jpg" height=100&gt;&lt;/p&gt;
+&lt;p&gt;I copied a &lt;a href="https://brianblais.wordpress.com/2016/08/20/is-science-a-self-sealing-process/#comment-1306"&gt;comment on my old site&lt;/a&gt;, and am replying to it here.  It is a &lt;em&gt;fantastically interesting question&lt;/em&gt;, which I have been enjoying thinking about.&lt;/p&gt;
+&lt;p&gt;It refers to &lt;a href="http://www.stat.columbia.edu/~gelman/research/published/philosophy.pdf"&gt;a critique of E. T. Jaynes by Andrew Gelman&lt;/a&gt; which I comment on below.  &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I’m working through a hard copy of your book and I stumbled upon Gelman’s criticism that Jayne’s for more messy datasets (people vs physics) without objective parameters might not work well.&lt;/p&gt;
+&lt;p&gt;Gelman seems to take issue with Jayne’s in that:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;The prior or model cannot be falsified and there isn’t enough model checking. He is more falsificationist&lt;/li&gt;
+&lt;li&gt;Gelman has a more frequentist definition of probability&lt;/li&gt;
+&lt;li&gt;Cannot change, adjust or add new priors.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Often impossible to know true prior…then is it ok to have a subjective one?&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;All models are wrong in social science, but some are less wrong or more useful, so important to cycle through models.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Jayne’s seems to be purist and justified, whereas gelman has pragmatic approach from practice and incorporation of other philosophies.&lt;/p&gt;
+&lt;p&gt;Since you have cited Gelman’s book, what are your thoughts on these points? The practical implication is that I’m going to be analyzing social science data, and Gelman per those dimensions seems to make more sense, but Jayne’s is more philosophically grounded.&lt;/p&gt;
+&lt;p&gt;Is your book Pure Jayne’s or would it work for a social scientist? I’m particularly interested in the idea of subjective priors incorporating theory or other non statistical experiments like ABM, falsifying and cycling through models etc&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I'm not sure Gelman is a frequentist, but he is definitely a pragmatist.  He's also working with messy data.  &lt;/p&gt;
+&lt;p&gt;Gelman seems to be against &lt;em&gt;model comparison&lt;/em&gt;, admitting that all of the models are in fact wrong.  This reminds me of a comment Jaynes made that Ronald Fisher (the King of Frequentism) was motivated by the types of problems he was an expert in - genetics - where frequencies &lt;em&gt;were&lt;/em&gt; the data, and populations actually existed.  Gelman prefers model &lt;em&gt;checking&lt;/em&gt; because the models he considers cannot be derived from first-principles or come from estabished quantitative theories.  Compare this to Tom Loredo's paper &lt;a href="http://bayes.wustl.edu/gregory/articles.pdf"&gt;&lt;em&gt;From Laplace to Supernova SN 1987A: Bayesian Inference in Astrophysics&lt;/em&gt;&lt;/a&gt;, an article that was formative for myself.  Loredo's model comparison example "Measuring a Weak Counting Signal" is an icon of what Gelman calls the, &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;view of Bayesian inference as inductive reasoning (what we call here ‘the usual story’)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;In Loredo's case, there are a number of characteristics of the problems he's investigating which are fundamentally different than the problems Gelman faces.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;There is a theoretical justification for the existence of, and the mathematical form of, the "background" effect&lt;/li&gt;
+&lt;li&gt;There is a theoretical justification for the existence of, and the mathematical form of, the "signal" he is working with&lt;/li&gt;
+&lt;li&gt;There is a reasonable justification for the prior probability&lt;/li&gt;
+&lt;li&gt;The result would probably not be very sensitive to the choice of prior&lt;/li&gt;
+&lt;li&gt;Many of the parameters estimated can be independently measured&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;These characteristics of the &lt;em&gt;problem&lt;/em&gt; have profound effects on the &lt;em&gt;models&lt;/em&gt; and the methods for verifying them.  In Gelman's case, with social science data, there are no theoretical models - he's interested only in establishing the existence of relationships.  The parameters cannot be independently verified, and there are no theoretical justifications for priors.  The social scientist must use qualitative correspondence with expert knowledge, knowing that it will be debatable.  The parameters estimated cannot be explored directly.  So, what is the social scientist to do?  Spin out consequences, and compare with observations, the "hypothetico-deductive Bayesian modelling process".&lt;/p&gt;
+&lt;p&gt;Gelman makes a big deal about induction.  Perhaps I am not understanding something, but I don't see the big deal.  Gelman says &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The common core of various conceptions of induction is some form of inference
+from particulars to the general – in the statistical context, presumably, inference from the observations &lt;span class="math"&gt;\(y\)&lt;/span&gt; to parameters &lt;span class="math"&gt;\(\theta\)&lt;/span&gt; describing the data-generating process. But if that
+were all that was meant, then not only is ‘frequentist statistics a theory of inductive inference’ (Mayo &amp;amp; Cox, 2006), but the whole range of guess-and-test behaviors engaged in by animals (Holland, Holyoak, Nisbett, &amp;amp; Thagard, 1986), including those formalized in
+the hypothetico-deductive method, are also inductive. Even the unpromising-sounding procedure, ‘pick a model at random and keep it until its accumulated error gets too big, then pick another model completely at random’, would qualify (and could work surprisingly well under some circumstances – cf. Ashby, 1960; Foster &amp;amp; Young, 2003). So would utterly irrational procedures (‘pick a new random ! when the sum of the least significant digits in &lt;span class="math"&gt;\(y\)&lt;/span&gt; is 13’). Clearly something more is required, or at least implied, by
+those claiming that Bayesian updating is inductive.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Contrary to what Gelman is inferring here, I actually believe that the guess-and-test is in fact inductive, in addition to frequentism being inductive.  What's the "something more" that Bayesian updating has that the others don't?  It has a theoretical justification - any and all other methods that disagree with Bayesian conclusions must violate one of the listed "deciderata" of Jaynes.  This doesn't seem to me to be a controversial statement. There are many methods of induction, but only probability theory properly followed is optimal.  &lt;/p&gt;
+&lt;p&gt;Bayesian approaches can also be &lt;em&gt;deductive&lt;/em&gt;, as Gelman prefers.  Deductive logic is a subset of probability theory, and that's all we're talking about here.  &lt;/p&gt;
+&lt;p&gt;As far as I can tell, Jaynes and Gelman are not really in disagreement.  &lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    var location_protocol = (false) ? 'https' : document.location.protocol;
+    if (location_protocol !== 'http' &amp;&amp; location_protocol !== 'https') location_protocol = 'https:';
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Brian Blais</dc:creator><pubDate>Thu, 24 Nov 2016 00:00:00 -0500</pubDate><guid isPermaLink="false">tag:bblais.github.io,2016-11-24:jaynes-vs-gelman.html</guid></item><item><title>Probability Does Extend Logic</title><link>https://bblais.github.io/probability-does-extend-logic.html</link><description>&lt;p&gt;&lt;Img src="images/horsehead1.png"&gt;&lt;/p&gt;
 &lt;p&gt;In the article &lt;a href="https://meaningness.com/probability-and-logic"&gt;&lt;em&gt;Probability theory does not extend logic&lt;/em&gt;&lt;/a&gt; David Chapman, the author, criticizes the claim that probability theory generalizes logic to cases with uncertainty.  He is particularly scornful of &lt;a href="https://en.wikipedia.org/wiki/Edwin_Thompson_Jaynes"&gt;E. T. Jaynes'&lt;/a&gt; &lt;a href="http://bayes.wustl.edu/etj/prob/book.pdf"&gt;treatment of this&lt;/a&gt;.  As far as I can see, his criticisms are misplaced.  I have broken the critcisms up into into a couple of categories, and explained the problem with each.  In summary, I couldn't find a &lt;em&gt;specific&lt;/em&gt; problem where a logical conclusion was outside the domain of probability, or a &lt;em&gt;specific&lt;/em&gt; problem where probability theory resulted in an incorrect conclusion that could be demonstrated independently.  Mostly, it seemed to be a criticism of notation and the ambiguity of English.&lt;/p&gt;
 &lt;h2 id="abuse-of-notation"&gt;Abuse of notation&lt;/h2&gt;
 &lt;blockquote&gt;
