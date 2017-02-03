@@ -1,5 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>bblais on the web</title><link>https://bblais.github.io/</link><description></description><lastBuildDate>Fri, 27 Jan 2017 00:00:00 -0500</lastBuildDate><item><title>Free Will On My Mind</title><link>https://bblais.github.io/free-will-on-my-mind.html</link><description>&lt;p&gt;&lt;img src="images/football.jpg" width=200&gt;&lt;/p&gt;
+<rss version="2.0"><channel><title>bblais on the web</title><link>https://bblais.github.io/</link><description></description><lastBuildDate>Fri, 03 Feb 2017 00:00:00 -0500</lastBuildDate><item><title>Even if determinism were true it wouldn't matter</title><link>https://bblais.github.io/even-if-determinism-were-true-it-wouldnt-matter.html</link><description>&lt;p&gt;&lt;img src="images/uncertainty.jpg" width=300  align=center&gt;&lt;/p&gt;
+&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;There is a great paper &lt;em&gt;&lt;a href="http://aapt.scitation.org/doi/abs/10.1119/1.3095810?journalCode=ajp"&gt;Thermal noise and the emergence of the arrow of time: A simple model&lt;/a&gt;&lt;/em&gt; that illustrates the notion of the role of uncertainty in the law of increasing entropy.  It starts with a very simple system of particles on a grid that can have one of 4 states - up, down, left, or right.  The rules of this "universe" are entirely deterministic, and are the following:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;First, particles move in the direction they are pointing - particles pointing up move up, those pointing down move down, etc...&lt;/li&gt;
+&lt;li&gt;If a particle hits the edge at this step then it reverses direction - a particle hitting the top reverses and will point down now, etc...&lt;/li&gt;
+&lt;li&gt;Finally, all particles that now find themselves in a cell with two or more particles rotate 90 degrees &lt;em&gt;clockwise&lt;/em&gt; - this represents an interaction. &lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;That's it!  If you start with a system of particles, say, all on the left half this system will evolve to a state which is pretty well mixed.  &lt;/p&gt;
+&lt;p&gt;&lt;img src="images/entropy/1a.png" align=center&gt;&lt;/p&gt;
+&lt;p&gt;One way to measure this is to count the number of particles on the left-half of the box.&lt;/p&gt;
+&lt;p&gt;&lt;img src="images/entropy/1b.png" align=center&gt;&lt;/p&gt;
+&lt;h2 id="unscrambling-the-egg"&gt;Unscrambling the egg&lt;/h2&gt;
+&lt;p&gt;One thing that is interesting is that, although the system is entirely deterministic, it does lead to a well-mixed system over time - entropy increases.  Another thing that is interesting is that if we were to run time backwards -- reverse all of the particles, and make the interaction rotate now &lt;em&gt;counter-clockwise&lt;/em&gt; instead of clockwise -- we should be able to "unwind" the simulation back to its very ordered beginning.  This is like reversing time in the universe and unscrambling an egg. &lt;/p&gt;
+&lt;p&gt;&lt;img src="images/entropy/3.png" align=center&gt;&lt;/p&gt;
+&lt;h2 id="why-dont-we-see-an-egg-unscrambling"&gt;Why don't we see an egg unscrambling?&lt;/h2&gt;
+&lt;p&gt;In the case of the real world, we never see an egg unscramble -- ever.  Why?  Even the slightest variation or uncertainty in the system makes the mixing not reverse.  If, after the mixing, we were to randomly modify just &lt;em&gt;one&lt;/em&gt; particle in the small, simple system described and then try to unmix it by running time backward it won't work.  Even that tiniest change is enough to block us from unscrambling the egg, as shown below.  First the original mixing...&lt;/p&gt;
+&lt;p&gt;&lt;img src="images/entropy/4.png" align=center&gt;&lt;/p&gt;
+&lt;p&gt;and then messing up one particle (can you see which one? compare &lt;span class="math"&gt;\(t=36\)&lt;/span&gt; to &lt;span class="math"&gt;\(t=37\)&lt;/span&gt;)...and then reversing time and trying to "unmix" the system.&lt;/p&gt;
+&lt;p&gt;&lt;img src="images/entropy/7.png" align=center&gt;&lt;/p&gt;
+&lt;h2 id="what-does-it-mean"&gt;What does it mean?&lt;/h2&gt;
+&lt;p&gt;As I stated in &lt;a href="free-will-on-my-mind.html"&gt;a previous post&lt;/a&gt;, "&lt;em&gt;The key idea with free will, as described by Sean Carroll, is that we live in a world where uncertainty dominates.&lt;/em&gt;"  It is a practical matter that even the slightest uncertainty in the simplest and smallest deterministic system leads to the system not behaving deterministically in practice.  Thus, in our own much more complex universe, we should not be overly concerned that there is theoretical conflict between "I could have done otherwise" and determinism.  In practice, which is where we all are, it doesn't matter.&lt;/p&gt;
+&lt;h2 id="code"&gt;Code&lt;/h2&gt;
+&lt;p&gt;The code for these simulations can be &lt;a href="https://gist.github.com/bblais/d7d83320003de94e3c4f1de5501e8266"&gt;found here&lt;/a&gt;.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    var location_protocol = (false) ? 'https' : document.location.protocol;
+    if (location_protocol !== 'http' &amp;&amp; location_protocol !== 'https') location_protocol = 'https:';
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Brian Blais</dc:creator><pubDate>Fri, 03 Feb 2017 00:00:00 -0500</pubDate><guid isPermaLink="false">tag:bblais.github.io,2017-02-03:even-if-determinism-were-true-it-wouldnt-matter.html</guid></item><item><title>Free Will On My Mind</title><link>https://bblais.github.io/free-will-on-my-mind.html</link><description>&lt;p&gt;&lt;img src="images/football.jpg" width=200&gt;&lt;/p&gt;
 &lt;p&gt;Usually when thinking about free will my thoughts run in circles.  However the &lt;a href="https://www.youtube.com/watch?v=k0F4l9A2CzM&amp;amp;list=PL3v5wvkmbVtdBD8upZns_VTaWMhXyYtMQ"&gt;recent talks by Sean Carroll&lt;/a&gt; were some of the clearest exposition on the topic. In summary we have different levels of description. Footballs for example are not in the fundamental laws of physics but that doesn't make footballs any less real - they are an emergent phenomenon. It also doesn't make the word &lt;em&gt;football&lt;/em&gt; any less useful in describing the world at the level of human interactions.  The problem occurs when you try to mix levels of description.&lt;/p&gt;
 &lt;p&gt;The key idea with free will, as described by Sean Carroll, is that we live in a world where uncertainty dominates.  As a result, the fact that the universe is deterministic is irrelevant when describing human behavior - we simply don't have daily, practical access to that determinism.  Free will, then, is a useful construct when discussing agency just as footballs are a useful concept when describing Sunday behavior.&lt;/p&gt;
 &lt;p&gt;And by the way, go Pats!&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Brian Blais</dc:creator><pubDate>Fri, 27 Jan 2017 00:00:00 -0500</pubDate><guid isPermaLink="false">tag:bblais.github.io,2017-01-27:free-will-on-my-mind.html</guid></item><item><title>Jaynes vs Gelman</title><link>https://bblais.github.io/jaynes-vs-gelman.html</link><description>&lt;p&gt;&lt;img src="images/landscape-54998_640.jpg" height=100&gt;&lt;/p&gt;
