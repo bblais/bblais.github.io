@@ -1,5 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>bblais on the web</title><link href="https://bblais.github.io/" rel="alternate"></link><link href="https://bblais.github.io/feeds/brian-blais.atom.xml" rel="self"></link><id>https://bblais.github.io/</id><updated>2017-02-03T00:00:00-05:00</updated><entry><title>Even if determinism were true it wouldn't matter</title><link href="https://bblais.github.io/even-if-determinism-were-true-it-wouldnt-matter.html" rel="alternate"></link><published>2017-02-03T00:00:00-05:00</published><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2017-02-03:even-if-determinism-were-true-it-wouldnt-matter.html</id><summary type="html">&lt;p&gt;&lt;img src="images/uncertainty.jpg" width=300  align=center&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>bblais on the web</title><link href="https://bblais.github.io/" rel="alternate"></link><link href="https://bblais.github.io/feeds/brian-blais.atom.xml" rel="self"></link><id>https://bblais.github.io/</id><updated>2017-02-11T00:00:00-05:00</updated><entry><title>Can you guess my sign?</title><link href="https://bblais.github.io/can-you-guess-my-sign.html" rel="alternate"></link><published>2017-02-11T00:00:00-05:00</published><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2017-02-11:can-you-guess-my-sign.html</id><summary type="html">&lt;p&gt;&lt;img src="images/nasa_zodiac.jpg" width=500  align=center&gt;&lt;/p&gt;
+&lt;p&gt;A friend of mine who is interested in astrology claims that he can determine my astrological sign from some simple questions, and knowing me for years (although not knowing my birthday).  The claim is that he can determine it "well above random chance".   A 20% number was floated out by him, although without many specifics, and I note that this number may depend on the procedures used. Also, this sort of &lt;span class="math"&gt;\(N=1\)&lt;/span&gt; exercise is not exactly compelling regardless of the result but I find it interesting nonetheless. What makes a good test?  What would convince me?  What would unconvince him?&lt;/p&gt;
+&lt;p&gt;Of course we'd have to agree that it was a twelve sign zodiac, not the more "accurate" &lt;a href="http://nasa.tumblr.com/post/150688852794/zodiac"&gt;13 sign zodiac&lt;/a&gt;.  We'd also have to agree on &lt;a href="https://en.wikipedia.org/wiki/Sidereal_and_tropical_astrology"&gt;tropical signs vs sidereal signs&lt;/a&gt;.  And of course, the shift in the signs due to the &lt;a href="http://www.livescience.com/9292-wobbly-earth-means-horoscope-wrong.html"&gt;changing tilt of the Earth over time&lt;/a&gt;.  Of course, I'm not taking this concept too seriously - but I can be convinced if someone shows me the actual data to support it. Data that doesn't collapse under scrutiny.  &lt;/p&gt;
+&lt;p&gt;He then added that he'd prefers to rule out signs one-by-one, leaving the actual sign for last, and the exercise ends if he tries to rule out my actual sign. At first I thought this would make a difference, but if all of the questions are like "are you typically impulsive or cautious" I can't imagine how that could give any information about birthday.  If there is no new information, then there should be no change in the probabilities.  I even did a quick simulation to confirm this, although not worth posting the code, because sometimes ones intuition leads one astray when talking about probabilities. &lt;/p&gt;
+&lt;p&gt;My next question for myself will be to ask: how much data does one need to take in order to tell the difference between a 20% correct astrologer and a random (about 9%) astrologer.  Even at best, if my friend gets my sign wrong he still was 80% likely to do so.  &lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    var location_protocol = (false) ? 'https' : document.location.protocol;
+    if (location_protocol !== 'http' &amp;&amp; location_protocol !== 'https') location_protocol = 'https:';
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</summary></entry><entry><title>Even if determinism were true it wouldn't matter</title><link href="https://bblais.github.io/even-if-determinism-were-true-it-wouldnt-matter.html" rel="alternate"></link><published>2017-02-03T00:00:00-05:00</published><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2017-02-03:even-if-determinism-were-true-it-wouldnt-matter.html</id><summary type="html">&lt;p&gt;&lt;img src="images/uncertainty.jpg" width=300  align=center&gt;&lt;/p&gt;
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;There is a great paper &lt;em&gt;&lt;a href="http://aapt.scitation.org/doi/abs/10.1119/1.3095810?journalCode=ajp"&gt;Thermal noise and the emergence of the arrow of time: A simple model&lt;/a&gt;&lt;/em&gt; that illustrates the notion of the role of uncertainty in the law of increasing entropy.  It starts with a very simple system of particles on a grid that can have one of 4 states - up, down, left, or right.  The rules of this "universe" are entirely deterministic, and are the following:&lt;/p&gt;
 &lt;ol&gt;
