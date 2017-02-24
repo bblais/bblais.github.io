@@ -1,5 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>bblais on the web</title><link>https://bblais.github.io/</link><description></description><lastBuildDate>Fri, 17 Feb 2017 00:00:00 -0500</lastBuildDate><item><title>Climate Change</title><link>https://bblais.github.io/climate-change.html</link><description>&lt;p&gt;In this post, I am reacting to a very interesting and well researched post &lt;a href="https://medium.com/@pullnews/what-i-learned-about-climate-change-the-science-is-not-settled-1e3ae4712ace"&gt;where a liberal argues that the climate science is not as settled as we hear&lt;/a&gt;.  I agree with many points and am critical of other points.  The overall message I think is a good one, however.&lt;/p&gt;
+<rss version="2.0"><channel><title>bblais on the web</title><link>https://bblais.github.io/</link><description></description><lastBuildDate>Fri, 24 Feb 2017 00:00:00 -0500</lastBuildDate><item><title>Pascal's Wager Again</title><link>https://bblais.github.io/pascals-wager-again.html</link><description>&lt;p&gt;I haven't written much on Pascal's Wager, but I had this small thought.  Perhaps someday I'll flesh this out a bit more.&lt;/p&gt;
+&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;In the standard Pascal’s Wager, the calculation goes something like this.  You have two actions:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Believe in God (B)&lt;/li&gt;
+&lt;li&gt;Not believe in God (~B)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Then you have certain rewards and punishments, given the existence of God.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;If there is a God, and you believe, the reward is huge: &lt;span class="math"&gt;\(U(B|G)\gg 1\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;If there is a God, and you &lt;em&gt;dont&lt;/em&gt; believe, the penalty is huge: &lt;span class="math"&gt;\(U(\sim B|G)\ll -1\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;If there is &lt;em&gt;no&lt;/em&gt; God, and you &lt;em&gt;dont&lt;/em&gt; believe, no big deal: &lt;span class="math"&gt;\(U(\sim B|~G)\approx 0\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;If there is &lt;em&gt;no&lt;/em&gt; God, and you &lt;em&gt;do&lt;/em&gt; believe, perhaps you’ve wasted your time a bit: &lt;span class="math"&gt;\(U(B|~G) \approx -{\rm small}\)&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;So you should believe!  Essentially it is an expected value problem, but what if that is not the proper calculation?&lt;/p&gt;
+&lt;h2 id="where-expected-value-breaks-down"&gt;Where Expected Value Breaks Down&lt;/h2&gt;
+&lt;p&gt;Here is an example from E. T. Jaynes (see &lt;a href="http://omega.albany.edu:8008/JaynesBook.html"&gt;his book here&lt;/a&gt; - the chapter on Decision Theory):&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Suppose that you are offered the following opportunity. You can bet any amount you want on the basis that, with probability (&lt;span class="math"&gt;\(1 − 10^{−6}\)&lt;/span&gt;), you will lose your money; but with probability &lt;span class="math"&gt;\(10^{−6}\)&lt;/span&gt;, you will win 1000001 times the amount you had wagered. Again, the criterion of maximizing expected profit says that you should bet all the money you have. Common sense rejects this solution even more forcefully. &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Quoting Laplace we have:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[I]t is apparent that one franc has much greater value for him who possesses only a hundred than for a millionaire. We ought then to distinguish in the hoped-for benefit its absolute from its relative value.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The solution is to not use the expected value of the actual money, &lt;span class="math"&gt;\(M\)&lt;/span&gt;, but the &lt;em&gt;log&lt;/em&gt; of that, &lt;span class="math"&gt;\(\log(M)\)&lt;/span&gt;.  &lt;/p&gt;
+&lt;h2 id="back-to-the-wager"&gt;Back to the Wager&lt;/h2&gt;
+&lt;p&gt;So, in the case of Pascal's Wager we have a similar thing.  If there is no God, then the life we have is the only life we will have.  Gambling that away on the basis of poor evidence is not rational.  This life has more value to the non-believer, so the possibility of a great afterlife isn’t enough to offset the more likely wasting of the only life we know to actually have.  It is for this reason that atheists find meaning in life, and further, they tend to find notions of an afterlife cheap and distracting.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    var location_protocol = (false) ? 'https' : document.location.protocol;
+    if (location_protocol !== 'http' &amp;&amp; location_protocol !== 'https') location_protocol = 'https:';
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Brian Blais</dc:creator><pubDate>Fri, 24 Feb 2017 00:00:00 -0500</pubDate><guid isPermaLink="false">tag:bblais.github.io,2017-02-24:pascals-wager-again.html</guid></item><item><title>Climate Change</title><link>https://bblais.github.io/climate-change.html</link><description>&lt;p&gt;In this post, I am reacting to a very interesting and well researched post &lt;a href="https://medium.com/@pullnews/what-i-learned-about-climate-change-the-science-is-not-settled-1e3ae4712ace"&gt;where a liberal argues that the climate science is not as settled as we hear&lt;/a&gt;.  I agree with many points and am critical of other points.  The overall message I think is a good one, however.&lt;/p&gt;
 &lt;p&gt;This is a lot to go through so my initial thoughts may be a bit scattered as I go through pieces of this document.&lt;/p&gt;
 &lt;p&gt;Let's start with some critique.  The argument that temperature causes CO&lt;span class="math"&gt;\(_2\)&lt;/span&gt; to increase in the past and not vice versa is a pretty terrible argument. The physics is known - they each influence each other. In the past it has been temperature that has changed due to the orbital changes, and that consequently drove increases in CO&lt;span class="math"&gt;\(_2\)&lt;/span&gt;.   But you can just as easily change CO&lt;span class="math"&gt;\(_2\)&lt;/span&gt; directly as in burning fossil fuels and affect temperature. It's not an either-or situation so this argument is misleading.&lt;/p&gt;
 &lt;p&gt;As for whether the earth was warmer a thousand years ago, I am somewhat agnostic. The tree ring data and other proxy data in my view is &lt;em&gt;extremely noisy&lt;/em&gt; and hard to make concrete conclusions. So the uncertainty around the medieval warming period is something to be concerned about.  If it was warmer 500-1000 years ago, many of the stronger claims, about climate change and how unusual the modern time period is, collapse.  The statistical arguments that lead to the hockey stick are not convincing to me and are vulnerable to confirmation bias.&lt;/p&gt;
