@@ -5,49 +5,56 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://bblais.github.io/</loc>
-<lastmod>2017-03-30T21:29:56-00:00</lastmod>
+<lastmod>2017-03-31T06:43:03-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/archives.html</loc>
-<lastmod>2017-03-30T21:29:56-00:00</lastmod>
+<lastmod>2017-03-31T06:43:03-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/tags.html</loc>
-<lastmod>2017-03-30T21:29:56-00:00</lastmod>
+<lastmod>2017-03-31T06:43:03-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/categories.html</loc>
-<lastmod>2017-03-30T21:29:56-00:00</lastmod>
+<lastmod>2017-03-31T06:43:03-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/pages/presentations.html</loc>
-<lastmod>2017-03-30T21:29:56-00:00</lastmod>
+<lastmod>2017-03-31T06:43:03-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/pages/projects.html</loc>
-<lastmod>2017-03-30T21:29:56-00:00</lastmod>
+<lastmod>2017-03-31T06:43:03-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/pages/publications.html</loc>
-<lastmod>2017-03-30T21:29:56-00:00</lastmod>
+<lastmod>2017-03-31T06:43:03-00:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://bblais.github.io/twitter-zombies-and-the-fate-of-the-world.html</loc>
+<lastmod>2017-03-31T00:00:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
