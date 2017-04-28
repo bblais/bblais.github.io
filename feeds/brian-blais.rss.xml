@@ -1,5 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>bblais on the web</title><link>https://bblais.github.io/</link><description></description><lastBuildDate>Fri, 31 Mar 2017 00:00:00 -0400</lastBuildDate><item><title>Twitter, Zombies, and the Fate of the World</title><link>https://bblais.github.io/twitter-zombies-and-the-fate-of-the-world.html</link><description>&lt;p&gt;&lt;img src="images/zombie1.jpg"&gt;&lt;/p&gt;
+<rss version="2.0"><channel><title>bblais on the web</title><link>https://bblais.github.io/</link><description></description><lastBuildDate>Mon, 10 Apr 2017 00:00:00 -0400</lastBuildDate><item><title>Four Types of Bayesian-Frequentist Comparisons</title><link>https://bblais.github.io/four-types-of-bayesian-frequentist-comparisons.html</link><description>&lt;p&gt;&lt;img src="images/ocean-water-1149661_960_720.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;In my conversations with some of my statistics colleagues who are less familiar with Bayes methods, I came up with four categories of problems that come up in Bayesian-Frequentist comparisons.&lt;/p&gt;
+&lt;h2 id="conditional-probability-problems"&gt;Conditional probability problems&lt;/h2&gt;
+&lt;p&gt;An example of this is&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A patient goes to see a doctor. The doctor performs a test with 99 percent reliability--that is, 99 percent of people who are sick test positive and 99 percent of the healthy people test negative. The doctor knows that only 1 percent of the people in the country are sick. Now the question is: if the patient tests positive, what are the chances the patient is sick?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;There are a million of these sorts of questions, and I did about 5-10 of the questions from the actuarial P test.  Clearly the use of Bayes Theorem is essential in all of this, and is uncontroversial on these problems - there really isn’t an alternative.  If you dislike the term "Bayesian" here, as some textbooks seem to, you can refer to these as conditional probability problems but we're talking about the same thing.  So, the difference between so-called Orthodox or Frequentist approaches and so-called Bayesian approaches to problems must lie in other types of problems.  I'll note that intro stats books of all stripes include these problems, and from a Bayesian perspective they are typically limited to these types of problems.&lt;/p&gt;
+&lt;h2 id="sampling-distribution-of-the-mean"&gt;Sampling distribution of the mean&lt;/h2&gt;
+&lt;p&gt;My first encounter with the difference between Frequentist and Bayesian perspectives was in the "sampling distribution of the mean” chapter.  The problem, say, is given a series of measurements of something (i.e. the mass of Saturn, the lengths of flower petals, etc…) what is the best estimate for the underlying quantity - e.g. what is the best estimate of the mass of Saturn and how confident are we in that measurement?  Say, from orbital data, we get the following 10 data points for the mass of Saturn (in Earth-masses):&lt;/p&gt;
+&lt;p&gt;102,  95,  85,  86,  93, 105,  96,  91, 104, 115&lt;/p&gt;
+&lt;p&gt;What is the best estimate for the mass of Saturn, and our uncertainty in that estimate?&lt;/p&gt;
+&lt;p&gt;Both Frequentist and Bayesian methods come up with
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{eqnarray}
+\mu&amp;amp;=&amp;amp;\bar{x} \pm \frac{S}{\sqrt{N}} \\
+\bar{x}&amp;amp;=&amp;amp; \frac{1}{N} \sum_{k=1}^{N} x_k \\
+S^2&amp;amp;=&amp;amp; \frac{1}{(N-1)}\sum_{k=1}^{N} (x_k-\bar{x})^2
+\end{eqnarray}&lt;/div&gt;
+&lt;p&gt;The Bayesian and Frequentist approaches will come up with - numerically - the same answer to this question, but the vocabulary will be different.  One speaks about the probability of the mean value, the other about the properties of the sampling distribution with respect to &lt;span class="math"&gt;\(N\)&lt;/span&gt; data points.  In either case, it makes no difference &lt;em&gt;practically&lt;/em&gt;.&lt;/p&gt;
+&lt;h2 id="jaynes-type-galilean-problems"&gt;Jaynes-type Galilean problems&lt;/h2&gt;
+&lt;p&gt;Where the rubber meets the road is a problem like the one proposed by Lindley, where he flipped a thumbtack and noted that sometimes it lands "point up" and others “point down”. His actual data was:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;U U U D U D U U U U U D  (9 Ups, and 3 Downs)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;And the question is, &lt;em&gt;can we be 95% sure of this tack being an unfair tack?&lt;/em&gt;  Given the physical properties of thumbtacks, we really don’t have any expectation that it &lt;em&gt;should&lt;/em&gt; be fair (unlike a coin, where we have a symmetry argument).  We come up with different answers - quantitatively and possible qualitatively - on this one (see page 54 of the &lt;a href="http://web.bryant.edu/~bblais/pdf/pres_011407.pdf"&gt;presentation on the three-sided coin I gave&lt;/a&gt;)&lt;/p&gt;
+&lt;h2 id="anything-with-the-cauchy-distribution"&gt;Anything with the Cauchy distribution&lt;/h2&gt;
+&lt;p&gt;There is one final category of problems in the comparison with Bayesian and Frequentist methods. &lt;/p&gt;
+&lt;p&gt;Imagine we have a lighthouse which is off shore some known distance, B, and is located along the shore at some unknown location &lt;span class="math"&gt;\(x=a\)&lt;/span&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;         (lighthouse)
+               *          ---
+                           ^
+                           |
+                           B
+                           |
+                           V
+————shore——————+——————————————————————&amp;gt;  x
+              x=a
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;we want to estimate the location (“a”) from a series of locations of flashes on the shore - the lighthouse is spinning around and flashing at random times.  We can only observe where the flash lands on the shore, not the direction it came from.   The data is, for example, the locations of these 10 flashes:&lt;/p&gt;
+&lt;p&gt;-4.89,  1.03,  1.64,  1.17,  0.74,  1.46,  0.76,  -7.16,  0.31,  2.48&lt;/p&gt;
+&lt;p&gt;One can show that the location of a single flash should follow a Cauchy distribution:  &lt;span class="math"&gt;\(p(x|a,B) = B/(B^2 + (x-a)^2)\)&lt;/span&gt;.  This is due to the angular geometry of the problem.&lt;/p&gt;
+&lt;p&gt;The question is, what is the best estimate of “a”?  What is the uncertainty in this estimate? What methods would you employ?  The Bayesian treatment for this problem is in D.S. Sivia’s, &lt;em&gt;Data Analysis: a Bayesian Tutorial, Second Edition&lt;/em&gt; (Oxford, 2006).  A very similar problem is given in &lt;a href="http://www.greenteapress.com/thinkbayes/html/thinkbayes010.html"&gt;Think Bayes&lt;/a&gt; and another nice treatment is on &lt;a href="http://www.di.fc.ul.pt/~jpn/r/bugs/lighthouse.html"&gt;João Pedro Neto's blog&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I'm pretty sure this problem is resistant to any procedure relying on sampling distributions (as all Frequentist procedures are) due to the &lt;a href="https://en.wikipedia.org/wiki/Cauchy_distribution"&gt;peculiar properties of the Cauchy Distribution&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="conclusions"&gt;Conclusions&lt;/h2&gt;
+&lt;p&gt;It is important when discussing different perspectives to keep clear what the vocabulary is - what are we actually talking about?  If you limit the problems to simple conditional probability problems, there isn't any difference between the Bayesian and Frequentist perspectives and one might wonder what the big deal is?  However, if you expand the problem set to include limited &lt;span class="math"&gt;\(N\)&lt;/span&gt; problems, with non-Normal distributions (such as Beta and Cauchy), then the differences start to become apparent.  &lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    var location_protocol = (false) ? 'https' : document.location.protocol;
+    if (location_protocol !== 'http' &amp;&amp; location_protocol !== 'https') location_protocol = 'https:';
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Brian Blais</dc:creator><pubDate>Mon, 10 Apr 2017 00:00:00 -0400</pubDate><guid isPermaLink="false">tag:bblais.github.io,2017-04-10:four-types-of-bayesian-frequentist-comparisons.html</guid></item><item><title>Twitter, Zombies, and the Fate of the World</title><link>https://bblais.github.io/twitter-zombies-and-the-fate-of-the-world.html</link><description>&lt;p&gt;&lt;img src="images/zombie1.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;&lt;a href="http://web.bryant.edu/~bblais/pdf/Twitter Zombies and the Fate of the World.pdf"&gt;Twitter, Zombies, and the Fate of the World&lt;/a&gt;&lt;/em&gt; is my presentation today at the &lt;a href="http://www.bentley.edu/analytics-without-borders"&gt;Analytics without Borders Conference&lt;/a&gt;. &lt;/p&gt;
 &lt;p&gt;Dynamical systems are mathematical constructions containing multiple interacting parts which vary in time. This can include physical systems such as those in astronomy or systems of interacting behaviors like those found in economics. Here we present some recent work combining the dynamical systems approach to several problems, including the spread of ideas on Twitter and the spread of zombie infections, with the statistical methods of Bayesian parameter estimation. We will also present a how-to guide to using these examples in a classroom setting, appropriate for undergraduate students and for the communication of those ideas to the public.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://gist.github.com/bblais/181abd99f878282666b98a29588dda41"&gt;Supplemental Notebook is here&lt;/a&gt;.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Brian Blais</dc:creator><pubDate>Fri, 31 Mar 2017 00:00:00 -0400</pubDate><guid isPermaLink="false">tag:bblais.github.io,2017-03-31:twitter-zombies-and-the-fate-of-the-world.html</guid></item><item><title>Mind Reader and Skepticism</title><link>https://bblais.github.io/mind-reader-and-skepticism.html</link><description>&lt;p&gt;From the archives, but I bumped into this on my computer and was reminded how cool of a demo for skepticism it is.  Enjoy!&lt;/p&gt;
