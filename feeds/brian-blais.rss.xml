@@ -1,5 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>bblais on the web</title><link>https://bblais.github.io/</link><description></description><lastBuildDate>Mon, 10 Apr 2017 00:00:00 -0400</lastBuildDate><item><title>Four Types of Bayesian-Frequentist Comparisons</title><link>https://bblais.github.io/four-types-of-bayesian-frequentist-comparisons.html</link><description>&lt;p&gt;&lt;img src="images/ocean-water-1149661_960_720.jpg"&gt;&lt;/p&gt;
+<rss version="2.0"><channel><title>bblais on the web</title><link>https://bblais.github.io/</link><description></description><lastBuildDate>Fri, 05 May 2017 00:00:00 -0400</lastBuildDate><item><title>Does Art Lead Math?</title><link>https://bblais.github.io/does-art-lead-math.html</link><description>&lt;p&gt;&lt;img src="images/artmath.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;I was sent a very interesting article on &lt;a href="https://theconversation.com/did-artists-lead-the-way-in-mathematics-75355"&gt;the interplay between math and art&lt;/a&gt;.  The basic premise of the article is&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Does art sometimes spur mathematical discovery? There’s no simple answer to this question, but in some instances it seems very likely.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;One example is the Tiles at the Alhambra (shown above), where we have the statements from the article,&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;But what’s fascinating about such Islamic tilings is that the work of anonymous artists and craftsmen also displays a near-perfect mastery of mathematical logic. Mathematicians have identified 17 types of symmetry: bilateral symmetry, rotational symmetry and so forth. At least 16 appear in the tilework of the Alhambra, almost as if they were textbook diagrams.&lt;/p&gt;
+&lt;p&gt;The patterns are not merely beautiful, but mathematically rigorous as well. They explore the fundamental characteristics of symmetry in a surprisingly complete way. Mathematicians, however, did not come up with their analysis of the principles of symmetry until several centuries after the tiles of the Alhambra had been set in place.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The implication here is that if the art work itself "displays a near-perfect mastery of mathematical logic" then the artist must, in some way, understand the mathematics and know that is what they are doing.  &lt;/p&gt;
+&lt;p&gt;I'm reminded of another math-art connection with the &lt;a href="https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza"&gt;Pyramid of Giza&lt;/a&gt;.  If you take, for example, the base length (230.4 m) divided by the height (146.5 m) you get &lt;span class="math"&gt;\(\pi/2\)&lt;/span&gt; out to 3 decimal places.  The Egyptians show no evidence of understanding &lt;span class="math"&gt;\(\pi\)&lt;/span&gt; in other contexts, so is this evidence of advanced math on the part of the Egyptians?  Probably not.  All you need to do is have a &lt;em&gt;process&lt;/em&gt; which gives you this "coincidence".  In the case of Egyptians, all you need to do is measure heights with a standard that you use to make the size of a wheel, and then use that wheel as a standard to roll out long linear distances as is needed to measure the base of a pyramid.  The consequence of geometry guarantees that &lt;span class="math"&gt;\(\pi\)&lt;/span&gt; will come in.&lt;/p&gt;
+&lt;p&gt;The "near-perfect mastery of mathematical logic" in the Tiles at the Alhambra can be made with &lt;a href="http://mathstat.slu.edu/escher/index.php/Tessellations_by_Recognizable_Figures"&gt;some simple tessellation techniques&lt;/a&gt; without any deep understanding of the mathematics.  &lt;/p&gt;
+&lt;p&gt;The other example the article raises is a Pollock painting:&lt;/p&gt;
+&lt;p&gt;&lt;img src="images/pollock.jpg"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;To those who first encountered them, the paintings of Pollock seemed chaotic and senseless. With time, however, we’ve come to see that they have elements of order, though not a traditional sort. Their shapes are simultaneously predictable and unpredictable, in a fashion similar to the pattern of dripping water from a faucet. There’s no way to predict the exact effect of the next drip. But, if we chart the pattern of drips, we find that they fall within a zone that has a clear shape and boundaries.&lt;/p&gt;
+&lt;p&gt;Such unpredictability was once out of bounds for mathematicians. But, in recent years, it has become one of the hottest areas of mathematical exploration. For example, chaos theory explores patterns that are not predictable but fall within a definable range of possibilities, while fractal analysis studies shapes that are similar but not identical.&lt;/p&gt;
+&lt;p&gt;Intriguingly, mathematicians have not been able to accurately describe what Pollock was doing in his paintings. For example, there have been attempts to use fractal analysis to create a numerical “signature” of his style, but so far the method has not worked – we can’t mathematically distinguish Pollock’s autograph work from bad imitations. &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Again, the implication here is that the artist is somehow ahead of his time, and doing things beyond the understanding of the mathematicians.  However, if Pollock is using some complex physical process to produce the painting (e.g. randomly spraying paint all over) then it is not surprising that simple mathematical models won't capture the details.  This, to me, doesn't suggest a connection between art and math but rather suggests that the writer is stretching to make a connection between the two.&lt;/p&gt;
+&lt;p&gt;In all of these comparisons between art and mathematics I am struck with a feeling that the writer is somehow trying to add a layer of legitimacy to the art by connecting it to mathematics or to science.  I don't think this does a service to either the art or the mathematics.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    var location_protocol = (false) ? 'https' : document.location.protocol;
+    if (location_protocol !== 'http' &amp;&amp; location_protocol !== 'https') location_protocol = 'https:';
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Brian Blais</dc:creator><pubDate>Fri, 05 May 2017 00:00:00 -0400</pubDate><guid isPermaLink="false">tag:bblais.github.io,2017-05-05:does-art-lead-math.html</guid></item><item><title>Four Types of Bayesian-Frequentist Comparisons</title><link>https://bblais.github.io/four-types-of-bayesian-frequentist-comparisons.html</link><description>&lt;p&gt;&lt;img src="images/ocean-water-1149661_960_720.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;In my conversations with some of my statistics colleagues who are less familiar with Bayes methods, I came up with four categories of problems that come up in Bayesian-Frequentist comparisons.&lt;/p&gt;
 &lt;h2 id="conditional-probability-problems"&gt;Conditional probability problems&lt;/h2&gt;
 &lt;p&gt;An example of this is&lt;/p&gt;
