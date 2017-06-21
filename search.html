@@ -16,7 +16,16 @@ Licence URI: http://www.os-templates.com/template-terms
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link href="./theme/layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
-        <link rel="stylesheet" type="text/css" href="./theme/css/custom.css" media="screen">
+
+<link rel="stylesheet" href="./theme/tipuesearch/css/normalize.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script src="./theme/tipuesearch/tipuesearch_content.js"></script>
+<link rel="stylesheet" href="./theme/tipuesearch/css/tipuesearch.css">
+<script src="./theme/tipuesearch/tipuesearch_set.js"></script>
+<script src="./theme/tipuesearch/tipuesearch.min.js"></script>
+
     <script type="text/javascript">
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-47048778-1']);
@@ -63,11 +72,23 @@ Licence URI: http://www.os-templates.com/template-terms
 </div>
 
 
-<article>
-    <div class="span8 offset2">
-        <div id="tipue_search_content"><div id="tipue_search_loading"></div></div>
+
+<div class="wrapper row3">
+  <main class="container clear">
+    <!-- main body -->
+    <!-- ################################################################################################ -->
+    <div class="content">
+
+    <form action="search.html">
+    <div class="tipue_search_left"><img src="./theme/tipuesearch/search.png" class="tipue_search_icon"></div>
+    <div class="tipue_search_right"><input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" required></div>
+    <div style="clear: both;"></div>
+    </form>
+
+    <div id="tipue_search_content"></div>
     </div>
-</article>
+    </main>
+    </div>
 
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
@@ -115,10 +136,14 @@ Licence URI: http://www.os-templates.com/template-terms
     <div class="one_quarter">
       <h6 class="title">Search</h6>
       <ul class="nospace linklist">
-        <li><form action="./search.html" onsubmit="return validateForm(this.elements['q'].value)">
-                <input type="text" class="span12" placeholder="Search" name="q" id="tipue_search_input_404">
-                <button class="btn" type="button">Search</button>
-            </form></li>
+<li>
+      <form action="./search.html">
+      <div class="tipue_search_left"><img src="./theme/tipuesearch/search.png" class="tipue_search_icon"></div>
+      <div class="tipue_search_right"><input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" required></div>
+      <div style="clear: both;"></div>
+      </form>
+
+      </li>
       </ul>
     </div>
 
@@ -158,9 +183,6 @@ Licence URI: http://www.os-templates.com/template-terms
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a> 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-<script type="text/javascript" src="./theme/tipuesearch/tipuesearch_set.js"></script>
-<script type="text/javascript" src="./theme/tipuesearch/tipuesearch.min.js"></script>
 <script>
 $(document).ready(function() {
      $('#tipue_search_input').tipuesearch({
@@ -169,8 +191,7 @@ $(document).ready(function() {
          'newWindow': false,
              'contentLocation': './tipuesearch_content.json'
      });
-});
-</script>
+});</script>
 
 </body>
 </html>
