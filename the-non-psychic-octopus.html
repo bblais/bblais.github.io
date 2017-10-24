@@ -93,7 +93,7 @@ behavior, or something else. A typical statistical analysis might start
 with the null hypothesis that the octopus was random, so was choosing
 the teams with probability p=0.5. The likelihood of getting 12 right in
 14 is</p>
-<p><img alt="217E3119-BC22-4A09-B534-D62BAA0BF53C.jpg" src="http://lh3.ggpht.com/_VLTJPGH7Stw/THhaNtjI1-I/AAAAAAAAGgk/vAAgbtrpBvo/217E3119-BC22-4A09-B534-D62BAA0BF53C.jpg?imgmax=800" /></p>
+<p><img alt="217E3119-BC22-4A09-B534-D62BAA0BF53C.jpg" src="http://lh3.ggpht.com/_VLTJPGH7Stw/THhaNtjI1-I/AAAAAAAAGgk/vAAgbtrpBvo/217E3119-BC22-4A09-B534-D62BAA0BF53C.jpg?imgmax=800"></p>
 <p>which is fantastically strong against the null! Even if you do the
 p-value test for the the correct data being more extreme, you get
 p-val=0.00646.</p>
@@ -104,30 +104,30 @@ will be convenient to talk about odds, rather then probability, and
 further to use the log of the odds so that this becomes an arithmetic
 problem. The odds is defined as the ratio of the probability for a
 hypothesis, H, and the probability for the inverse, not H.</p>
-<p><img alt="E5899678-9897-42AF-8CBB-5D687A02A731.jpg" src="http://lh3.ggpht.com/_VLTJPGH7Stw/THhdxnGITTI/AAAAAAAAGg8/ACbEZMN0tMU/E5899678-9897-42AF-8CBB-5D687A02A731.jpg?imgmax=800" /></p>
+<p><img alt="E5899678-9897-42AF-8CBB-5D687A02A731.jpg" src="http://lh3.ggpht.com/_VLTJPGH7Stw/THhdxnGITTI/AAAAAAAAGg8/ACbEZMN0tMU/E5899678-9897-42AF-8CBB-5D687A02A731.jpg?imgmax=800"></p>
 <p>We define the log-odds, or evidence as defined by E. T. Jayes,</p>
-<p><img alt="BAAC0566-3B79-4B44-8F0D-C5046788B491.jpg" src="http://lh5.ggpht.com/_VLTJPGH7Stw/THhc1Q9LrLI/AAAAAAAAGg0/cudVDoIadh0/BAAC0566-3B79-4B44-8F0D-C5046788B491.jpg?imgmax=800" />  </p>
+<p><img alt="BAAC0566-3B79-4B44-8F0D-C5046788B491.jpg" src="http://lh5.ggpht.com/_VLTJPGH7Stw/THhc1Q9LrLI/AAAAAAAAGg0/cudVDoIadh0/BAAC0566-3B79-4B44-8F0D-C5046788B491.jpg?imgmax=800">  </p>
 <p>A few comments before we commence with more calculation. The prior
 evidence reflects our state of knowledge before we see the data. How
 likely is it that an octopus is psychic? Most reasonable people would
 say highly unlikely. Generous odds would be 100:1 against, although
 personally I'd probably put it at least a million to 1 against. Let's be
 generous. That gives us a prior evidence of</p>
-<p><img alt="94E23FDD-36D3-4B6A-B72C-7C759FAAE1B1.jpg" src="http://lh5.ggpht.com/_VLTJPGH7Stw/THhel_nxQGI/AAAAAAAAGhE/2rmhiNW5cCQ/94E23FDD-36D3-4B6A-B72C-7C759FAAE1B1.jpg?imgmax=800" /></p>
+<p><img alt="94E23FDD-36D3-4B6A-B72C-7C759FAAE1B1.jpg" src="http://lh5.ggpht.com/_VLTJPGH7Stw/THhel_nxQGI/AAAAAAAAGhE/2rmhiNW5cCQ/94E23FDD-36D3-4B6A-B72C-7C759FAAE1B1.jpg?imgmax=800"></p>
 <p>If we had been naive, and set equal odds, then this evidence would be
 e=0. So we start with evidence e=-20 for a psychic octopus (which is
 strong evidence against it, because e\&lt;0), and then we observe the data.
 If we assume that a psychic octopus is right 90% of the time, and that
 the only alternative is a random octopus correct 50% of the time, then
 we have added evidence for each correct answer:</p>
-<p><img alt="85F4C7A1-EFC7-4E8C-88B0-E98B846B1F97.jpg" src="http://lh6.ggpht.com/_VLTJPGH7Stw/THhflza23EI/AAAAAAAAGhM/p9tsgV_ze1A/85F4C7A1-EFC7-4E8C-88B0-E98B846B1F97.jpg?imgmax=800" /></p>
+<p><img alt="85F4C7A1-EFC7-4E8C-88B0-E98B846B1F97.jpg" src="http://lh6.ggpht.com/_VLTJPGH7Stw/THhflza23EI/AAAAAAAAGhM/p9tsgV_ze1A/85F4C7A1-EFC7-4E8C-88B0-E98B846B1F97.jpg?imgmax=800"></p>
 <p>Each incorrect answer gives:</p>
-<p><img alt="D48A7B4A-112D-4BC6-A267-95B797A15F9C.jpg" src="http://lh3.ggpht.com/_VLTJPGH7Stw/THhfwRzFycI/AAAAAAAAGhQ/FxOt7RabBAs/D48A7B4A-112D-4BC6-A267-95B797A15F9C.jpg?imgmax=800" /></p>
+<p><img alt="D48A7B4A-112D-4BC6-A267-95B797A15F9C.jpg" src="http://lh3.ggpht.com/_VLTJPGH7Stw/THhfwRzFycI/AAAAAAAAGhQ/FxOt7RabBAs/D48A7B4A-112D-4BC6-A267-95B797A15F9C.jpg?imgmax=800"></p>
 <p>The evidence gets pushed up from the prior with each correct answer, and
 down for each wrong answer. Notice how wrong answers are penalized more
 than right answers. This is because the psychic octopus is pretty good
 (p=0.9). We get a final (posterior) evidence for 12 correct and 2 wrong:</p>
-<p><img alt="5BC4EE45-59BD-4A67-A2FF-779E7EC92145.jpg" src="http://lh5.ggpht.com/_VLTJPGH7Stw/THhgmdqDC1I/AAAAAAAAGhU/WMImRm_gzlY/5BC4EE45-59BD-4A67-A2FF-779E7EC92145.jpg?imgmax=800" /></p>
+<p><img alt="5BC4EE45-59BD-4A67-A2FF-779E7EC92145.jpg" src="http://lh5.ggpht.com/_VLTJPGH7Stw/THhgmdqDC1I/AAAAAAAAGhU/WMImRm_gzlY/5BC4EE45-59BD-4A67-A2FF-779E7EC92145.jpg?imgmax=800"></p>
 <p>which is about 2:1 odds against the psychic octopus.</p>
 <h2 id="more-to-the-story">More to the Story</h2>
 <p>Most pseudoscience gets propagated by people who reason naively. They
