@@ -83,10 +83,61 @@ Licence URI: http://www.os-templates.com/template-terms
 
         <div class="span8 offset2 article-content">
 
-            <p>In a recent <a href="http://opinionator.blogs.nytimes.com/2014/02/09/is-atheism-irrational/">New York Times article</a> we have an interview with Christian philosopher Alvin Plantinga, on the topic of the rationality of atheism.  He runs off the rails pretty early, but makes some comments that can be reasonably formulated in terms of probability theory, and thus be demonstrated to be mathematically reasonable or not, as the case may be.  </p>
+            <p>TODO - be clear on the math on this one</p>
+<p>In a <a href="http://opinionator.blogs.nytimes.com/2014/02/09/is-atheism-irrational/">New York Times article</a> we have an interview with Christian philosopher Alvin Plantinga, on the topic of the rationality of atheism.  He runs off the rails pretty early, but makes some comments that can be reasonably formulated in terms of probability theory, and thus be demonstrated to be mathematically reasonable or not, as the case may be.  </p>
 <blockquote>
 <p>I take atheism to be the belief that there is no such person as the God of the theistic religions.</p>
 <p>But lack of evidence, if indeed evidence is lacking, is no grounds for atheism. No one thinks there is good evidence for the proposition that there are an even number of stars; but also, no one thinks the right conclusion to draw is that there are an uneven number of stars. The right conclusion would instead be agnosticism.</p>
+</blockquote>
+<p>As <em>atheists</em> typically use the terms, the latter is labeled <em>atheism</em> or <em>agnostic atheism</em> while the former would be labeled <em>antitheism</em> or sometimes (but not as often now) <em>strong atheism</em>.  In any event, these are just labels for the mathematical statements:</p>
+<ul>
+<li>
+<p>Theism
+<div class="math">$$
+P({\rm God}|{\rm evidence}) \gg 0.5
+$$</div>
+</p>
+</li>
+<li>
+<p>Atheism
+<div class="math">$$
+P({\rm God}|{\rm evidence}) \sim P({\rm God})
+$$</div>
+</p>
+</li>
+<li>
+<p>Antitheism
+<div class="math">$$
+P({\rm God}|{\rm evidence}) \ll 0.5
+$$</div>
+</p>
+</li>
+</ul>
+<p>When the term agnostic is used a modifier, we are speaking about <em>knowledge</em> which is simply probability above a threshold, say <span class="math">\(\theta \sim 0.99\)</span>.</p>
+<ul>
+<li>
+<p>Gnostic Theism
+<div class="math">$$
+P({\rm God}|{\rm evidence}) &gt; \theta
+$$</div>
+</p>
+</li>
+<li>
+<p>Agnostic Theism
+<div class="math">$$
+0.5 &lt; P({\rm God}|{\rm evidence}) &lt; \theta
+$$</div>
+</p>
+</li>
+<li>
+<p>Agnostic atheism
+<div class="math">$$
+\min\left((1-\theta),P({\rm God})\right) &lt; P({\rm God}|{\rm evidence}) &lt; 0.5
+$$</div>
+</p>
+</li>
+</ul>
+<blockquote>
 <p>Clearly we have a great deal of evidence against teapotism. For example, as far as we know, the only way a teapot could have gotten into orbit around the sun would be if some country with suﬃciently developed space-shot capabilities had shot this pot into orbit. </p>
 <p>The so-called “problem of evil” would presumably be the strongest (and maybe the only) evidence against theism. It does indeed have some strength; it makes sense to think that the probability of theism, given the existence of all the suﬀering and evil our world contains, is fairly low. But of course there are also arguments for theism. Indeed, there are at least a couple of dozen good theistic arguments. So the atheist would have to try to synthesize and balance the probabilities. </p>
 <p>I should make clear rst that I don’t think arguments are needed for rational belief in God. In this regard belief in God is like belief in other minds, or belief in the past. </p>
@@ -108,6 +159,61 @@ But to believe that is to fall into a total skepticism, which leaves you with no
 <blockquote>
 <p>Broadly speaking, they’ll make every attempt to distance themselves from explicit statements like “no god(s) exist”, but only when discussing definitions.  This distancing is painful at times, especially when they dodge and refuse to answer simple questions such as: true or false, God exists.  Or, do any gods exist? Direct answers are difficult to come by</p>
 </blockquote>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
             
             <hr/>
         </div>
