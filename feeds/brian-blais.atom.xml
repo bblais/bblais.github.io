@@ -1,5 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>bblais on the web - Brian Blais</title><link href="https://bblais.github.io/" rel="alternate"></link><link href="https://bblais.github.io/feeds/brian-blais.atom.xml" rel="self"></link><id>https://bblais.github.io/</id><updated>2018-01-08T00:00:00-05:00</updated><entry><title>Happy New Year (again)!</title><link href="https://bblais.github.io/happy-new-year-again.html" rel="alternate"></link><published>2018-01-08T00:00:00-05:00</published><updated>2018-01-08T00:00:00-05:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2018-01-08:/happy-new-year-again.html</id><summary type="html">&lt;p&gt;As &lt;a href="https://bblais.github.io/happy-new-year.html"&gt;I have written before&lt;/a&gt;, I love the idea of New Year’s Day.  It’s a time for reflection, contemplation, self improvement.  I realize that it is technically just another day and just another year, and that one could definitely have any day in the year serve this role …&lt;/p&gt;</summary><content type="html">&lt;p&gt;As &lt;a href="https://bblais.github.io/happy-new-year.html"&gt;I have written before&lt;/a&gt;, I love the idea of New Year’s Day.  It’s a time for reflection, contemplation, self improvement.  I realize that it is technically just another day and just another year, and that one could definitely have any day in the year serve this role, but there still feels like something special for this day.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>bblais on the web - Brian Blais</title><link href="https://bblais.github.io/" rel="alternate"></link><link href="https://bblais.github.io/feeds/brian-blais.atom.xml" rel="self"></link><id>https://bblais.github.io/</id><updated>2018-01-09T00:00:00-05:00</updated><entry><title>Where probabilities and theology meet</title><link href="https://bblais.github.io/where-probabilities-and-theology-meet.html" rel="alternate"></link><published>2018-01-09T00:00:00-05:00</published><updated>2018-01-09T00:00:00-05:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2018-01-09:/where-probabilities-and-theology-meet.html</id><summary type="html">&lt;p&gt;We start with the article &lt;a href="https://calumsblog.com/2012/02/18/resurrection-for-theism/"&gt;&lt;em&gt;Why the resurrection data can be evidence for theism, and why arguments for resurrection need not presuppose theism –
+formal demonstrations&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="summary-of-the-article"&gt;Summary of the article&lt;/h2&gt;
+&lt;p&gt;Definitions:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(T\)&lt;/span&gt; = theism&lt;/li&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(R\)&lt;/span&gt; = the resurrection of Jesus&lt;/li&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(D\)&lt;/span&gt; = specific historical data&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Some definitions, and initial probability assessments.  The numbers are …&lt;/p&gt;</summary><content type="html">&lt;p&gt;We start with the article &lt;a href="https://calumsblog.com/2012/02/18/resurrection-for-theism/"&gt;&lt;em&gt;Why the resurrection data can be evidence for theism, and why arguments for resurrection need not presuppose theism –
+formal demonstrations&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="summary-of-the-article"&gt;Summary of the article&lt;/h2&gt;
+&lt;p&gt;Definitions:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(T\)&lt;/span&gt; = theism&lt;/li&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(R\)&lt;/span&gt; = the resurrection of Jesus&lt;/li&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(D\)&lt;/span&gt; = specific historical data&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Some definitions, and initial probability assessments.  The numbers are not meant to be precise but to convey overall qualitative estimates:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(P(T) \ge 0.01\)&lt;/span&gt; which includes natural theology &lt;/li&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(P(\sim T) = 1- P(T) \le 0.99\)&lt;/span&gt; - prior on atheism&lt;/li&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(P(R|T) \approx 0.0001\)&lt;/span&gt; - unlikely but not extraordinarily so&lt;/li&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(P(R|\sim T) \approx 0.00000001\)&lt;/span&gt; - very unlikely&lt;/li&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(P(D|R) \approx 0.75\)&lt;/span&gt; - relatively high&lt;/li&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(P(D|\sim R) \approx 0.00000001\)&lt;/span&gt; - very unlikely&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Now some calculations.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Probability of the data on atheism&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="math"&gt;\begin{eqnarray}
+P(D|\sim T) &amp;amp;=&amp;amp; P(D| \sim T \cdot R)P(R|\sim T)+P(D| \sim T \cdot \sim R)P(\sim R|\sim T) \\
+&amp;amp;=&amp;amp; 0.75 \cdot 0.00000001 + 0.00000001 \cdot 0.999999999 \\
+&amp;amp;=&amp;amp;0.00000007501
+\end{eqnarray}&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Probability of the data on theism&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="math"&gt;\begin{eqnarray}
+P(D|T) &amp;amp;=&amp;amp; P(D| T \cdot R)P(R|T)+P(D|T \cdot \sim R)P(\sim R|T) \\
+&amp;amp;=&amp;amp; 0.75 \cdot 0.0001 + 0.00000001 \cdot 0.9999 \\
+&amp;amp;=&amp;amp;0.00007501
+\end{eqnarray}&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;From which follows&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="math"&gt;\begin{eqnarray}
+P(T|D) &amp;amp;=&amp;amp; \frac{P(D|T)P(T)}{P(D|T)P(T)+P(D|\sim T)P(\sim T)} \\
+&amp;amp;=&amp;amp;\frac{0.0000751 \cdot 0.01}{0.0000751 \cdot 0.01 + 0.0000000751 \cdot 0.99} \\
+&amp;amp;=&amp;amp;0.977
+\end{eqnarray}&lt;/div&gt;
+&lt;p&gt;
+where the prior probability for theism was &lt;span class="math"&gt;\(P(T)=0.01\)&lt;/span&gt; - definitely an increase in probability given the data!&lt;/p&gt;
+&lt;p&gt;The point of this argument is to "&lt;em&gt;serve as a rejoinder to those philosophers of religion who do not see the argument from miracles as supporting theism at all, or who think that one need to presuppose theism to argue for a miracle&lt;/em&gt;".  Further, "&lt;em&gt;I am not intending to argue that the probabilities given at the start are correct, only that it is in principle very much possible for one to argue to theism from miracle evidence&lt;/em&gt;" and "&lt;em&gt;that it is also possible to argue for a particular miracle without presupposing theism.&lt;/em&gt;"&lt;/p&gt;
+&lt;h2 id="two-concerns-with-this-argument"&gt;Two concerns with this argument&lt;/h2&gt;
+&lt;h3 id="lack-of-well-defined-propositions"&gt;Lack of well-defined propositions&lt;/h3&gt;
+&lt;p&gt;Probability theory only applies to well-defined propositions.  Something like &lt;span class="math"&gt;\(P(T)\)&lt;/span&gt; may not mean anything if the proposition &lt;em&gt;theism is true&lt;/em&gt;, shortened to &lt;span class="math"&gt;\(T\)&lt;/span&gt; is not well defined.  If we are opening it up to all possible theisms, then we have to include deism, good gods, evil gods (think Cthulhu), chaotic gods (think Zeus), multiple gods (think Hinduism), gods as nature (think paganism), etc...  It is unclear to me that, if you include all of that, that you can easily estimate &lt;span class="math"&gt;\(P(T)\)&lt;/span&gt;.  &lt;/p&gt;
+&lt;p&gt;Further, quantities such as &lt;span class="math"&gt;\(P(R|T)\)&lt;/span&gt; become much lower if you include all of those other pieces of theism, &lt;span class="math"&gt;\(T\)&lt;/span&gt;.  I may in the future go through the calculation explicitely. &lt;/p&gt;
+&lt;h3 id="lack-of-a-connection-from-data-to-propositions"&gt;Lack of a connection from data to propositions&lt;/h3&gt;
+&lt;p&gt;What counts as "data" here and how does it connect to the propositions?  For example, the only "data" I know concerning the resurrection are &lt;em&gt;claims&lt;/em&gt; from people, &lt;em&gt;years&lt;/em&gt; (possibly decades) after the event, from non eye-witnesses.  So when Calum writes &lt;span class="math"&gt;\(P(D|\sim R) \approx 0.00000001\)&lt;/span&gt;  (very unlikely), he is clearly wrong.  This sort of terrible evidence for the event is exactly what we'd expect if the event didn't happen.&lt;/p&gt;
+&lt;p&gt;Also part of the "data" has to be what we &lt;em&gt;don't&lt;/em&gt; see - official reports from Romans, mentions (either positive or negative) from contemporaries, physical evidence of &lt;em&gt;any&lt;/em&gt; kind, etc...  When Calum states something like &lt;span class="math"&gt;\(P(D|R) \approx 0.75\)&lt;/span&gt; (very likely), he isn't taking this into account at all.  If the resurrection had actually happened, and the body was in fact missing from a guarded tomb, I would expect Paul to mention it and the trials in Acts to mention it.  Here, the missing data works &lt;em&gt;against&lt;/em&gt; the claim and the proposed probabilities.  &lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content></entry><entry><title>Happy New Year (again)!</title><link href="https://bblais.github.io/happy-new-year-again.html" rel="alternate"></link><published>2018-01-08T00:00:00-05:00</published><updated>2018-01-08T00:00:00-05:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2018-01-08:/happy-new-year-again.html</id><summary type="html">&lt;p&gt;As &lt;a href="https://bblais.github.io/happy-new-year.html"&gt;I have written before&lt;/a&gt;, I love the idea of New Year’s Day.  It’s a time for reflection, contemplation, self improvement.  I realize that it is technically just another day and just another year, and that one could definitely have any day in the year serve this role …&lt;/p&gt;</summary><content type="html">&lt;p&gt;As &lt;a href="https://bblais.github.io/happy-new-year.html"&gt;I have written before&lt;/a&gt;, I love the idea of New Year’s Day.  It’s a time for reflection, contemplation, self improvement.  I realize that it is technically just another day and just another year, and that one could definitely have any day in the year serve this role, but there still feels like something special for this day.&lt;/p&gt;
 &lt;p&gt;Back in 2016 I wrote:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;This year, I want to focus on writing.  My hope is to be able to write 300 words a day - that’s only a page of text.  But if I can do it every day, that’s a book! &lt;/p&gt;
