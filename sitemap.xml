@@ -5,49 +5,49 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://bblais.github.io/</loc>
-<lastmod>2018-01-11T14:35:24-00:00</lastmod>
+<lastmod>2018-01-14T11:41:03-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/archives.html</loc>
-<lastmod>2018-01-11T14:35:24-00:00</lastmod>
+<lastmod>2018-01-14T11:41:03-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/tags.html</loc>
-<lastmod>2018-01-11T14:35:24-00:00</lastmod>
+<lastmod>2018-01-14T11:41:03-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/categories.html</loc>
-<lastmod>2018-01-11T14:35:24-00:00</lastmod>
+<lastmod>2018-01-14T11:41:03-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/pages/presentations.html</loc>
-<lastmod>2018-01-11T14:35:24-00:00</lastmod>
+<lastmod>2018-01-14T11:41:03-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/pages/projects.html</loc>
-<lastmod>2018-01-11T14:35:24-00:00</lastmod>
+<lastmod>2018-01-14T11:41:03-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/pages/publications.html</loc>
-<lastmod>2018-01-11T14:35:24-00:00</lastmod>
+<lastmod>2018-01-14T11:41:03-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -55,6 +55,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://bblais.github.io/how-to-be-productive-part-1-apps.html</loc>
 <lastmod>2018-01-15T00:00:00-05:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://bblais.github.io/im-not-a-denier-im-a-skeptic.html</loc>
+<lastmod>2018-01-11T00:00:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
