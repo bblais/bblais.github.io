@@ -15,16 +15,15 @@ Licence URI: http://www.os-templates.com/template-terms
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link href="https://bblais.github.io/theme/layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
-        <link rel="stylesheet" type="text/css" href="https://bblais.github.io/theme/css/custom.css" media="screen">
+    <link href="/theme/layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+        <link rel="stylesheet" type="text/css" href="/theme/css/custom.css" media="screen">
 
 
-        <link rel="stylesheet" href="https://bblais.github.io/theme/tipuesearch/css/normalize.css">        
-        <link rel="stylesheet" type="text/css" href="https://bblais.github.io/theme/tipuesearch/css/tipuesearch.css">
+        <link rel="stylesheet" href="/theme/tipuesearch/css/normalize.css">        
+        <link rel="stylesheet" type="text/css" href="/theme/tipuesearch/css/tipuesearch.css">
 
 
 
-        <link href="https://bblais.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="bblais on the web - Full Atom Feed" />
     <script type="text/javascript">
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-47048778-1']);
@@ -44,23 +43,23 @@ Licence URI: http://www.os-templates.com/template-terms
   <header id="header" class="clear"> 
     <!-- ################################################################################################ -->
     <div id="logo" class="fl_left">
-      <h1><a href="https://bblais.github.io/">bblais on the web</a></h1>
+      <h1><a href="/">bblais on the web</a></h1>
     </div>
     <!-- ################################################################################################ -->
     <nav id="mainav" class="fl_right">
       <ul class="clear">
-                            <li ><a href="https://bblais.github.io">Home</a></li>
-                            <li ><a href="https://bblais.github.io/pages/presentations.html">Presentations</a></li>
-                            <li ><a href="https://bblais.github.io/pages/projects.html">Projects</a></li>
-                            <li ><a href="https://bblais.github.io/pages/publications.html">Publications</a></li>
+                            <li ><a href="">Home</a></li>
+                            <li ><a href="/pages/presentations.html">Presentations</a></li>
+                            <li ><a href="/pages/projects.html">Projects</a></li>
+                            <li ><a href="/pages/publications.html">Publications</a></li>
 
 
                       <li><a class="drop" href="#">Blog</a>
           <ul>
 
-                            <li ><a href="https://bblais.github.io/categories.html">Categories</a></li>
-                            <li ><a href="https://bblais.github.io/tags.html">Tags</a></li>
-                            <li ><a href="https://bblais.github.io/archives.html">Archives</a></li>
+                            <li ><a href="/categories.html">Categories</a></li>
+                            <li ><a href="/tags.html">Tags</a></li>
+                            <li ><a href="/archives.html">Archives</a></li>
                             </ul>
 
 
@@ -79,7 +78,7 @@ Licence URI: http://www.os-templates.com/template-terms
     <div class="content three_quarter first"> 
 
     <header class="page-header span10 offset2">
-    <h1><a href="https://bblais.github.io/probability-does-extend-logic.html"> Probability Does Extend Logic  </a></h1>
+    <h1><a href="/probability-does-extend-logic.html"> Probability Does Extend Logic  </a></h1>
     </header>
 
         <div class="span8 offset2 article-content">
@@ -95,20 +94,20 @@ Licence URI: http://www.os-templates.com/template-terms
 <p>He goes on to use a more abstract example,</p>
 <blockquote>
 <p>the logician C. L. Dodgson demonstrated that some snarks—not all—are boojums. A probabilist may write this generalization as a conditional probability:</p>
-<p><span class="math">\(P(boojum|snark) = 0.4\)</span></p>
+<p>$P(boojum|snark) = 0.4$</p>
 <p>The vertical bar | is read “given”. The statement is understood as something like “if you see a snark, the probability that it is a boojum is 0.4.” Or, “the probability of boojumness given snarkness is 0.4.”</p>
 <p>Mathematicians would call this “an abuse of notation”; but if it is interpreted intelligently in context, it’s unproblematic. Still, it’s rather queer. What exactly are “snark” and “boojum” supposed to mean here?
 </p>
 </blockquote>
-<p>If you actually read Jaynes, he stresses pedantically that <em>all</em> probabilities are conditional - there is an <span class="math">\(I\)</span> on the right-hand side in <em>all</em> of his equations.  Most of us (lazily) drop this, but there are some paradoxes that can arise when ignored.  For example, David Chapman's first example </p>
-<div class="math">$$
+<p>If you actually read Jaynes, he stresses pedantically that <em>all</em> probabilities are conditional - there is an $I$ on the right-hand side in <em>all</em> of his equations.  Most of us (lazily) drop this, but there are some paradoxes that can arise when ignored.  For example, David Chapman's first example </p>
+<p>$$
 P(3)=1/6
-$$</div>
+$$</p>
 <p>should be changed to</p>
-<div class="math">$$
+<p>$$
 P(3|I)=1/6
-$$</div>
-<p>where the <span class="math">\(I\)</span> contains the interpretation (e.g. six-sided vs four-sided die, rolling procedure, <em>any</em> other knowledge we bring to the table).  So the bulk of this discussion seems to be much ado about nothing.</p>
+$$</p>
+<p>where the $I$ contains the interpretation (e.g. six-sided vs four-sided die, rolling procedure, <em>any</em> other knowledge we bring to the table).  So the bulk of this discussion seems to be much ado about nothing.</p>
 <h2 id="relationships-vs-propositions">Relationships vs propositions</h2>
 <p>David Chapman points out the benefits of using predicate logic to express relationships explicitly, such as </p>
 <blockquote>
@@ -118,10 +117,10 @@ $$</div>
 In practice, probability theory is often combined with other mathematical methods (such as predicate logic in this case). Probabilists mostly don’t even notice they are doing this. When they use logic, they do so informally and intuitively.</p>
 </blockquote>
 <p>I am no philosopher, nor mathematician, but as far as I can tell the only "work" that is being done by the predicate calculus is a compact, unambiguous  summary of what is expressed in English adequately.  Of course, we'll often (lazily) short-hand even this to </p>
-<div class="math">$$
+<p>$$
 P({\rm grue}|{\rm cave},I) = 0.8
-$$</div>
-<p>where again, the <span class="math">\(I\)</span> includes the more verbose description.  There is a balance between explicitness and economy of symbols.  I still don't see the conflict - the predicate logic seems to offer nothing more in these cases.</p>
+$$</p>
+<p>where again, the $I$ includes the more verbose description.  There is a balance between explicitness and economy of symbols.  I still don't see the conflict - the predicate logic seems to offer nothing more in these cases.</p>
 <h2 id="specifics-to-generalities">Specifics to Generalities</h2>
 <blockquote>
 <p>Suppose we sequence DNA from some monsters and find that it sure looks like Arthur and Harold are both fathers of Edward:</p>
@@ -133,15 +132,15 @@ Here we would be reasoning from specifics to generalities (whereas the implicit 
 </p>
 </blockquote>
 <p>This is definitely wrong.  What we have are experiments (i.e. data) and we have models.  We could easily have models like:</p>
-<div class="math">\begin{eqnarray*}
-M_1 &amp;=&amp; \mbox{every vertebrate has only one father} \\
-M_2 &amp;=&amp; \mbox{every vertebrate has either one or two fathers} \\
-\end{eqnarray*}</div>
+<p>\begin{eqnarray<em>}
+M_1 &amp;=&amp; \mbox{every vertebrate has only one father} \
+M_2 &amp;=&amp; \mbox{every vertebrate has either one or two fathers} \
+\end{eqnarray</em>}</p>
 <p>and we'd want to know,</p>
-<div class="math">\begin{eqnarray*}
-P(M_1|{\rm data},I) &amp;=&amp;  \cdots \\
-P(M_2|{\rm data},I) &amp;=&amp;  \cdots \\
-\end{eqnarray*}</div>
+<p>\begin{eqnarray<em>}
+P(M_1|{\rm data},I) &amp;=&amp;  \cdots \
+P(M_2|{\rm data},I) &amp;=&amp;  \cdots \
+\end{eqnarray</em>}</p>
 <p>where the data are above.  Although it could get messy, it certainly is not "outside the scope of probability theory".  It comes down to the models.</p>
 <h2 id="models-and-rationality">Models and Rationality</h2>
 <p>David Chapman includes:</p>
@@ -150,111 +149,7 @@ P(M_2|{\rm data},I) &amp;=&amp;  \cdots \\
 </blockquote>
 <p>Here I agree - your inference is only as good as your models.  Where did the structure of General Relativity come from, originally?  From the creative process of Einstein.   Models are not derived, but are created.</p>
 <p>I don't think we spend enough time celebrating the creative enterprise that is the scientific process. </p>
-<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
-    var align = "center",
-        indent = "0em",
-        linebreak = "false";
-
-    if (false) {
-        align = (screen.width < 768) ? "left" : align;
-        indent = (screen.width < 768) ? "0em" : indent;
-        linebreak = (screen.width < 768) ? 'true' : linebreak;
-    }
-
-    var mathjaxscript = document.createElement('script');
-    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
-    mathjaxscript.type = 'text/javascript';
-    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
-    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
-        "MathJax.Hub.Config({" +
-        "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
-        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
-        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
-        "    displayAlign: '"+ align +"'," +
-        "    displayIndent: '"+ indent +"'," +
-        "    showMathMenu: true," +
-        "    messageStyle: 'normal'," +
-        "    tex2jax: { " +
-        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
-        "        displayMath: [ ['$$','$$'] ]," +
-        "        processEscapes: true," +
-        "        preview: 'TeX'," +
-        "    }, " +
-        "    'HTML-CSS': { " +
-        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
-        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
-        "    }, " +
-        "}); " +
-        "if ('default' !== 'default') {" +
-            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-        "}";
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
-}
-</script>
-            <section>
-<div class="accordion" id="accordion2">
-    <div class="accordion-group">
-        <div class="accordion-heading">
-            <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
-
-                data-disqus-url="https://bblais.github.io/probability-does-extend-logic.html"
-
-                href="https://bblais.github.io/probability-does-extend-logic.html#disqus_thread">
-                Comments
-            </a>
-        </div>
-        <div id="disqus_thread" class="accordion-body collapse">
-            <div class="accordion-inner">
-                <div class="comments">
-                    <div id="disqus_thread"></div>
-<script>
-    /**
-     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-     */
-    /*
-    var disqus_config = function () {
-        //this.page.url = 'https://bblais.github.io/probability-does-extend-logic.html';  // Replace PAGE_URL with your page's canonical URL variable
-        //this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-
-        this.page.url = 'https://bblais.github.io/probability-does-extend-logic.html';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'https://bblais.github.io/probability-does-extend-logic.html';
-
-    };
-    */
-    (function() {  // DON'T EDIT BELOW THIS LINE
-        var d = document, s = d.createElement('script');
-        
-        s.src = '//bblaisontheweb.disqus.com/embed.js';
-        
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-
-
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</section>
-
+            
             <hr/>
         </div>
 
@@ -268,11 +163,11 @@ P(M_2|{\rm data},I) &amp;=&amp;  \cdots \\
             <h4>Published</h4>
             <time pubdate="pubdate" datetime="2016-11-17T00:00:00-05:00">Nov 17, 2016</time>
             <h4>Category</h4>
-            <a class="category-link" href="https://bblais.github.io/categories.html#articles-ref">articles</a>
+            <a class="category-link" href="/categories.html#articles-ref">articles</a>
             <ul>
             <!-- Place this tag where you want the +1 button to render. -->
 <li><div class="g-plusone" data-size="medium" data-annotation="inline" data-width="300"></div></li>
-<li><a href="https://twitter.com/intent/tweet?screen_name=bblais" class="twitter-mention-button" data-text="I like this article...https://bblais.github.io/probability-does-extend-logic.html" data-show-count="false">Tweet to @bblais</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></li>
+<li><a href="https://twitter.com/intent/tweet?screen_name=bblais" class="twitter-mention-button" data-text="I like this article.../probability-does-extend-logic.html" data-show-count="false">Tweet to @bblais</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></li>
 </ul>
 
 
@@ -325,14 +220,14 @@ P(M_2|{\rm data},I) &amp;=&amp;  \cdots \\
     <div class="one_quarter">
       <h6 class="title">Quick Links</h6>
       <ul class="nospace linklist">
-        <li><a href="https://bblais.github.io">Home Page</a></li>
-        <li><a href="https://bblais.github.io/archives.html">Blog</a></li>
+        <li><a href="">Home Page</a></li>
+        <li><a href="/archives.html">Blog</a></li>
 
-        <li><a href="https://bblais.github.io/pages/presentations.html">Presentations</a></li>
-        <li><a href="https://bblais.github.io/pages/projects.html">Projects</a></li>
-        <li><a href="https://bblais.github.io/pages/publications.html">Publications</a></li>
+        <li><a href="/pages/presentations.html">Presentations</a></li>
+        <li><a href="/pages/projects.html">Projects</a></li>
+        <li><a href="/pages/publications.html">Publications</a></li>
 
-        <li><a href="https://bblais.github.io/contact.html">Contact Us</a></li>
+        <li><a href="/contact.html">Contact Us</a></li>
       </ul>
     </div>
 
@@ -341,8 +236,8 @@ P(M_2|{\rm data},I) &amp;=&amp;  \cdots \\
       <h6 class="title">Search</h6>
       <ul class="nospace linklist">
 <li>
-      <form action="https://bblais.github.io/search.html">
-      <div class="tipue_search_left"><img src="https://bblais.github.io/theme/tipuesearch/search.png" class="tipue_search_icon"></div>
+      <form action="/search.html">
+      <div class="tipue_search_left"><img src="/theme/tipuesearch/search.png" class="tipue_search_icon"></div>
       <div class="tipue_search_right"><input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" required></div>
       <div style="clear: both;"></div>
       </form>
@@ -389,43 +284,12 @@ P(M_2|{\rm data},I) &amp;=&amp;  \cdots \\
 <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a> 
     
 <!-- JAVASCRIPTS -->
-<script src="https://bblais.github.io/theme/layout/scripts/jquery.min.js"></script>
-<script src="https://bblais.github.io/theme/layout/scripts/jquery.backtotop.js"></script>
-<script src="https://bblais.github.io/theme/layout/scripts/jquery.mobilemenu.js"></script>
-<script src="https://bblais.github.io/theme/layout/scripts/jquery.flexslider-min.js"></script>
+<script src="/theme/layout/scripts/jquery.min.js"></script>
+<script src="/theme/layout/scripts/jquery.backtotop.js"></script>
+<script src="/theme/layout/scripts/jquery.mobilemenu.js"></script>
+<script src="/theme/layout/scripts/jquery.flexslider-min.js"></script>
 
-             
-<script id="dsq-count-scr" src="//bblaisontheweb.disqus.com/count.js" async></script>
-<script  language="javascript" type="text/javascript">
-function uncollapse() {
-    if (window.location.hash.match(/^#comment-\d+$/)) {
-        $('#disqus_thread').collapse('show');
-    }
-}
-</script>
-<script type="text/javascript" language="JavaScript">
-uncollapse();
-window.onhashchange=function(){
-    if (window.location.hash.match(/^#comment-\d+$/))
-        window.location.reload(true);
-}
-</script>
-<script>
-$('#disqus_thread').on('shown', function () {
-    var link = document.getElementsByClassName('accordion-toggle');
-    var old_innerHTML = link[0].innerHTML;
-    $(link[0]).fadeOut(500, function() {
-        $(this).text('Click here to hide comments').fadeIn(500);
-    });
-    $('#disqus_thread').on('hidden', function () {
-        $(link[0]).fadeOut(500, function() {
-            $(this).text(old_innerHTML).fadeIn(500);
-        });
-    })
-})
-</script>
-
-
+    
 
 </body>
 </html>

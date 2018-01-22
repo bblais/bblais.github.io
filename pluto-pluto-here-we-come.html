@@ -15,16 +15,15 @@ Licence URI: http://www.os-templates.com/template-terms
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link href="https://bblais.github.io/theme/layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
-        <link rel="stylesheet" type="text/css" href="https://bblais.github.io/theme/css/custom.css" media="screen">
+    <link href="/theme/layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+        <link rel="stylesheet" type="text/css" href="/theme/css/custom.css" media="screen">
 
 
-        <link rel="stylesheet" href="https://bblais.github.io/theme/tipuesearch/css/normalize.css">        
-        <link rel="stylesheet" type="text/css" href="https://bblais.github.io/theme/tipuesearch/css/tipuesearch.css">
+        <link rel="stylesheet" href="/theme/tipuesearch/css/normalize.css">        
+        <link rel="stylesheet" type="text/css" href="/theme/tipuesearch/css/tipuesearch.css">
 
 
 
-        <link href="https://bblais.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="bblais on the web - Full Atom Feed" />
     <script type="text/javascript">
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-47048778-1']);
@@ -44,23 +43,23 @@ Licence URI: http://www.os-templates.com/template-terms
   <header id="header" class="clear"> 
     <!-- ################################################################################################ -->
     <div id="logo" class="fl_left">
-      <h1><a href="https://bblais.github.io/">bblais on the web</a></h1>
+      <h1><a href="/">bblais on the web</a></h1>
     </div>
     <!-- ################################################################################################ -->
     <nav id="mainav" class="fl_right">
       <ul class="clear">
-                            <li ><a href="https://bblais.github.io">Home</a></li>
-                            <li ><a href="https://bblais.github.io/pages/presentations.html">Presentations</a></li>
-                            <li ><a href="https://bblais.github.io/pages/projects.html">Projects</a></li>
-                            <li ><a href="https://bblais.github.io/pages/publications.html">Publications</a></li>
+                            <li ><a href="">Home</a></li>
+                            <li ><a href="/pages/presentations.html">Presentations</a></li>
+                            <li ><a href="/pages/projects.html">Projects</a></li>
+                            <li ><a href="/pages/publications.html">Publications</a></li>
 
 
                       <li><a class="drop" href="#">Blog</a>
           <ul>
 
-                            <li ><a href="https://bblais.github.io/categories.html">Categories</a></li>
-                            <li ><a href="https://bblais.github.io/tags.html">Tags</a></li>
-                            <li ><a href="https://bblais.github.io/archives.html">Archives</a></li>
+                            <li ><a href="/categories.html">Categories</a></li>
+                            <li ><a href="/tags.html">Tags</a></li>
+                            <li ><a href="/archives.html">Archives</a></li>
                             </ul>
 
 
@@ -79,7 +78,7 @@ Licence URI: http://www.os-templates.com/template-terms
     <div class="content three_quarter first"> 
 
     <header class="page-header span10 offset2">
-    <h1><a href="https://bblais.github.io/pluto-pluto-here-we-come.html"> Pluto, Pluto, Here We Come  </a></h1>
+    <h1><a href="/pluto-pluto-here-we-come.html"> Pluto, Pluto, Here We Come  </a></h1>
     </header>
 
         <div class="span8 offset2 article-content">
@@ -88,182 +87,60 @@ Licence URI: http://www.os-templates.com/template-terms
 <p>In anticipation of the <a href="https://www.nasa.gov/mission_pages/newhorizons/main/index.html">New Horizons</a> close <a href="https://www.youtube.com/watch?v=EJxwWpaGoJs">flyby of Pluto</a> in a little over a week on July 14, 2015, I read with interest the article "<a href="http://www.wired.com/2015/07/calculating-plutos-mass-snapshots-new-horizons/">Calculating Pluto’s Mass With Snapshots From New Horizons</a>".  This is totally something I would do with my students, although I would have done it a little differently.  Both my approach and theirs are perfectly fine, and come to equivalent answers.  The difference is in which concepts are stressed.  </p>
 <h2 id="assumptions-and-data">Assumptions and Data</h2>
 <p>Using their numbers for the following:</p>
-<div class="math">\begin{eqnarray*}
-\mbox{Period of Orbit}&amp;=&amp;3.2 \mbox{days} \\
+<p>\begin{eqnarray<em>}
+\mbox{Period of Orbit}&amp;=&amp;3.2 \mbox{days} \
 \mbox{Distance between Pluto and Charon}&amp;=&amp;r=1.957\times 10^{4} \mbox{km}
-\end{eqnarray*}</div>
-<p>
+\end{eqnarray</em>}
 I, like the authors of the article, would prefer to calculate this distance using angular distances of the image but I'll use the short-cut they used in the article for expediency.</p>
 <h2 id="keplers-law">Kepler's Law</h2>
 <p>My first deviation uses <a href="https://en.wikipedia.org/wiki/Kepler's_laws_of_planetary_motion#Third_law">Kepler's Law</a>, or rather, <a href="http://astro.physics.uiowa.edu/ITU/glossary/keplers-third-law/">Newton's version of Kepler's Law</a>.  The simplest <em>looking</em> version of this equation uses units of AU for the distances, Solar Masses for the total mass of the orbiting bodies, and years for the period.  In this form, Kepler's Law looks like:
-</p>
-<div class="math">$$
+$$
 T^2 [\mbox{years}] = \frac{r^3 [\mbox{AU}]}{M_{\rm total}[\mbox{solar masses}]}
-$$</div>
-<p>
+$$
 This law basically says that more massive systems, or more tightly bound systems, orbit faster.  In this case the units are a little inconvenient.  Newton's form uses meters, seconds, and kilograms - which also can involve a number of conversions, making it easier to lose track of the concepts.  I prefer an intermediate form, with a conversion factor out front to take care of units.  This form looks like:
-</p>
-<div class="math">$$
+$$
 T^2 [\mbox{days}] = \frac{r^3 [\mbox{km}]}{M_{\rm total}[\mbox{kg}]} \times 7.9\times 10^{10}
-$$</div>
-<p>
+$$
 From this, and the data above, we can arrive at the total mass of the Pluto-Charon system directly as:
-</p>
-<div class="math">\begin{eqnarray*}
-M_{\rm total}[\mbox{kg}] &amp;=&amp;\frac{r^3 [\mbox{km}]}{T^2 [\mbox{days}]}\times 7.9\times 10^{10}\\
+\begin{eqnarray<em>}
+M_{\rm total}[\mbox{kg}] &amp;=&amp;\frac{r^3 [\mbox{km}]}{T^2 [\mbox{days}]}\times 7.9\times 10^{10}\
 &amp;=&amp;\frac{\left(1.957\times 10^{4}\right)^3 [\mbox{km}]}{3.2^2 [\mbox{days}]}\times 7.9\times 10^{10}=1.44\times 10^{22} {\rm kg}
-\end{eqnarray*}</div>
-<p>Notice this number is a bit higher than the mass of Pluto, coming in at <span class="math">\(1.3\times 10^{22} {\rm kg}\)</span>.  That's because the mass calculated here is the total mass of the Pluto-Charon system, so it is <span class="math">\(M_{\rm total} = M_{\rm Pluto}+M_{\rm Charon}=1.44\times 10^{22} {\rm kg}\)</span>.  To get the masses separately, we bring in the concept of the center of mass.</p>
+\end{eqnarray</em>}</p>
+<p>Notice this number is a bit higher than the mass of Pluto, coming in at $1.3\times 10^{22} {\rm kg}$.  That's because the mass calculated here is the total mass of the Pluto-Charon system, so it is $M_{\rm total} = M_{\rm Pluto}+M_{\rm Charon}=1.44\times 10^{22} {\rm kg}$.  To get the masses separately, we bring in the concept of the center of mass.</p>
 <h2 id="center-of-mass">Center of Mass</h2>
 <p>From the video in the <a href="http://www.wired.com/2015/07/calculating-plutos-mass-snapshots-new-horizons/">original article</a>, you can see that Charon orbits about a little "x" in the middle in a big circle, and Pluto orbits about that same "x" in a smaller circle .  That "x" marks the point in space of the <em>center of mass</em> of the two.  It's like two ice skaters holding on to each other as that spin in a circle - each one going in a circle.  If the two are the same size, then the center of their spinning is right in the middle of the two.  If one of the skaters is more massive, then the lighter person spins in a larger circle and the heavier person is pulled only slightly and spins in a smaller circle.  The relationship that they exhibit, mathematically, is
-</p>
-<div class="math">$$
+$$
 m_1 r_1 = m_2 r_2
-$$</div>
-<p>
+$$
 or the product of their masses and the sizes of the circles is the same for both - the more massive object orbits in a smaller circle.  For Pluto and Charon, we can draw these circles from the images taken from the frames of the movies - I used Keynote, but you can use any drawing program.  Even by eye you can see that the size of Pluto's circle is about 1/8 that of Charon's.</p>
 <p>So, from the center of mass, we have</p>
-<div class="math">\begin{eqnarray*}
+<p>\begin{eqnarray<em>}
 M_{\rm Pluto} r_{\rm Pluto} &amp;=&amp; M_{\rm Charon} r_{\rm Charon}
-\end{eqnarray*}</div>
-<p>
+\end{eqnarray</em>}
 or, rearranging and measuring off of the image,
-</p>
-<div class="math">\begin{eqnarray*}
-\frac{M_{\rm Charon}}{M_{\rm Pluto}}&amp;=&amp;\frac{r_{\rm Pluto}}{r_{\rm Charon}} \\
+\begin{eqnarray<em>}
+\frac{M_{\rm Charon}}{M_{\rm Pluto}}&amp;=&amp;\frac{r_{\rm Pluto}}{r_{\rm Charon}} \
 &amp;=&amp;\frac{1}{8}
-\end{eqnarray*}</div>
+\end{eqnarray</em>}</p>
 <h2 id="putting-it-together">Putting it together</h2>
 <p>So we finally have, from Kepler's law, 
-</p>
-<div class="math">$$ 
+$$ 
 M_{\rm Pluto}+M_{\rm Charon}=1.44\times 10^{22} {\rm km}
-$$</div>
-<p>
+$$
 and from center of mass,
-</p>
-<div class="math">\begin{eqnarray*}
+\begin{eqnarray<em>}
 \frac{M_{\rm Charon}}{M_{\rm Pluto}}&amp;=&amp;\frac{1}{8}
-\end{eqnarray*}</div>
-<p>
+\end{eqnarray</em>}
 This leads to 
-</p>
-<div class="math">\begin{eqnarray*}
+\begin{eqnarray<em>}
 M_{\rm Pluto}+\frac{1}{8}M_{\rm Pluto}&amp;=&amp;1.44\times 10^{22} {\rm kg}
-\end{eqnarray*}</div>
-<p>
+\end{eqnarray</em>}
 or
-</p>
-<div class="math">\begin{eqnarray*}
+\begin{eqnarray<em>}
 M_{\rm Pluto}&amp;=&amp;1.28\times 10^{22} {\rm kg}
-\end{eqnarray*}</div>
-<p>
+\end{eqnarray</em>}
 very close to the "right" answer.  Of course, the "right" answer was obtained in exactly the same way, just being more careful.  In fact, this is how we know nearly <em>all</em> of the masses of astronomical entities, from planets to stars to galaxies. </p>
-<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
-    var align = "center",
-        indent = "0em",
-        linebreak = "false";
-
-    if (false) {
-        align = (screen.width < 768) ? "left" : align;
-        indent = (screen.width < 768) ? "0em" : indent;
-        linebreak = (screen.width < 768) ? 'true' : linebreak;
-    }
-
-    var mathjaxscript = document.createElement('script');
-    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
-    mathjaxscript.type = 'text/javascript';
-    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
-    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
-        "MathJax.Hub.Config({" +
-        "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
-        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
-        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
-        "    displayAlign: '"+ align +"'," +
-        "    displayIndent: '"+ indent +"'," +
-        "    showMathMenu: true," +
-        "    messageStyle: 'normal'," +
-        "    tex2jax: { " +
-        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
-        "        displayMath: [ ['$$','$$'] ]," +
-        "        processEscapes: true," +
-        "        preview: 'TeX'," +
-        "    }, " +
-        "    'HTML-CSS': { " +
-        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
-        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
-        "    }, " +
-        "}); " +
-        "if ('default' !== 'default') {" +
-            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-        "}";
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
-}
-</script>
-            <section>
-<div class="accordion" id="accordion2">
-    <div class="accordion-group">
-        <div class="accordion-heading">
-            <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
-
-                data-disqus-url="https://bblais.github.io/pluto-pluto-here-we-come.html"
-
-                href="https://bblais.github.io/pluto-pluto-here-we-come.html#disqus_thread">
-                Comments
-            </a>
-        </div>
-        <div id="disqus_thread" class="accordion-body collapse">
-            <div class="accordion-inner">
-                <div class="comments">
-                    <div id="disqus_thread"></div>
-<script>
-    /**
-     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-     */
-    /*
-    var disqus_config = function () {
-        //this.page.url = 'https://bblais.github.io/pluto-pluto-here-we-come.html';  // Replace PAGE_URL with your page's canonical URL variable
-        //this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-
-        this.page.url = 'https://bblais.github.io/pluto-pluto-here-we-come.html';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'https://bblais.github.io/pluto-pluto-here-we-come.html';
-
-    };
-    */
-    (function() {  // DON'T EDIT BELOW THIS LINE
-        var d = document, s = d.createElement('script');
-        
-        s.src = '//bblaisontheweb.disqus.com/embed.js';
-        
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-
-
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</section>
-
+            
             <hr/>
         </div>
 
@@ -277,11 +154,11 @@ very close to the "right" answer.  Of course, the "right" answer was obtained in
             <h4>Published</h4>
             <time pubdate="pubdate" datetime="2015-07-03T00:00:00-04:00">Jul 3, 2015</time>
             <h4>Category</h4>
-            <a class="category-link" href="https://bblais.github.io/categories.html#articles-ref">articles</a>
+            <a class="category-link" href="/categories.html#articles-ref">articles</a>
             <ul>
             <!-- Place this tag where you want the +1 button to render. -->
 <li><div class="g-plusone" data-size="medium" data-annotation="inline" data-width="300"></div></li>
-<li><a href="https://twitter.com/intent/tweet?screen_name=bblais" class="twitter-mention-button" data-text="I like this article...https://bblais.github.io/pluto-pluto-here-we-come.html" data-show-count="false">Tweet to @bblais</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></li>
+<li><a href="https://twitter.com/intent/tweet?screen_name=bblais" class="twitter-mention-button" data-text="I like this article.../pluto-pluto-here-we-come.html" data-show-count="false">Tweet to @bblais</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></li>
 </ul>
 
 
@@ -334,14 +211,14 @@ very close to the "right" answer.  Of course, the "right" answer was obtained in
     <div class="one_quarter">
       <h6 class="title">Quick Links</h6>
       <ul class="nospace linklist">
-        <li><a href="https://bblais.github.io">Home Page</a></li>
-        <li><a href="https://bblais.github.io/archives.html">Blog</a></li>
+        <li><a href="">Home Page</a></li>
+        <li><a href="/archives.html">Blog</a></li>
 
-        <li><a href="https://bblais.github.io/pages/presentations.html">Presentations</a></li>
-        <li><a href="https://bblais.github.io/pages/projects.html">Projects</a></li>
-        <li><a href="https://bblais.github.io/pages/publications.html">Publications</a></li>
+        <li><a href="/pages/presentations.html">Presentations</a></li>
+        <li><a href="/pages/projects.html">Projects</a></li>
+        <li><a href="/pages/publications.html">Publications</a></li>
 
-        <li><a href="https://bblais.github.io/contact.html">Contact Us</a></li>
+        <li><a href="/contact.html">Contact Us</a></li>
       </ul>
     </div>
 
@@ -350,8 +227,8 @@ very close to the "right" answer.  Of course, the "right" answer was obtained in
       <h6 class="title">Search</h6>
       <ul class="nospace linklist">
 <li>
-      <form action="https://bblais.github.io/search.html">
-      <div class="tipue_search_left"><img src="https://bblais.github.io/theme/tipuesearch/search.png" class="tipue_search_icon"></div>
+      <form action="/search.html">
+      <div class="tipue_search_left"><img src="/theme/tipuesearch/search.png" class="tipue_search_icon"></div>
       <div class="tipue_search_right"><input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" required></div>
       <div style="clear: both;"></div>
       </form>
@@ -398,43 +275,12 @@ very close to the "right" answer.  Of course, the "right" answer was obtained in
 <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a> 
     
 <!-- JAVASCRIPTS -->
-<script src="https://bblais.github.io/theme/layout/scripts/jquery.min.js"></script>
-<script src="https://bblais.github.io/theme/layout/scripts/jquery.backtotop.js"></script>
-<script src="https://bblais.github.io/theme/layout/scripts/jquery.mobilemenu.js"></script>
-<script src="https://bblais.github.io/theme/layout/scripts/jquery.flexslider-min.js"></script>
+<script src="/theme/layout/scripts/jquery.min.js"></script>
+<script src="/theme/layout/scripts/jquery.backtotop.js"></script>
+<script src="/theme/layout/scripts/jquery.mobilemenu.js"></script>
+<script src="/theme/layout/scripts/jquery.flexslider-min.js"></script>
 
-             
-<script id="dsq-count-scr" src="//bblaisontheweb.disqus.com/count.js" async></script>
-<script  language="javascript" type="text/javascript">
-function uncollapse() {
-    if (window.location.hash.match(/^#comment-\d+$/)) {
-        $('#disqus_thread').collapse('show');
-    }
-}
-</script>
-<script type="text/javascript" language="JavaScript">
-uncollapse();
-window.onhashchange=function(){
-    if (window.location.hash.match(/^#comment-\d+$/))
-        window.location.reload(true);
-}
-</script>
-<script>
-$('#disqus_thread').on('shown', function () {
-    var link = document.getElementsByClassName('accordion-toggle');
-    var old_innerHTML = link[0].innerHTML;
-    $(link[0]).fadeOut(500, function() {
-        $(this).text('Click here to hide comments').fadeIn(500);
-    });
-    $('#disqus_thread').on('hidden', function () {
-        $(link[0]).fadeOut(500, function() {
-            $(this).text(old_innerHTML).fadeIn(500);
-        });
-    })
-})
-</script>
-
-
+    
 
 </body>
 </html>
