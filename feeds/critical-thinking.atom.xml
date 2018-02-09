@@ -1,5 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>bblais on the web - critical thinking</title><link href="https://bblais.github.io/" rel="alternate"></link><link href="https://bblais.github.io/feeds/critical-thinking.atom.xml" rel="self"></link><id>https://bblais.github.io/</id><updated>2018-02-05T00:00:00-05:00</updated><entry><title>Facts are Not Enough</title><link href="https://bblais.github.io/facts-are-not-enough.html" rel="alternate"></link><published>2018-02-05T00:00:00-05:00</published><updated>2018-02-05T00:00:00-05:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2018-02-05:/facts-are-not-enough.html</id><summary type="html">&lt;p&gt;&lt;img alt="critical thinking" src="images/landscape-54998_640.jpg"&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>bblais on the web - critical thinking</title><link href="https://bblais.github.io/" rel="alternate"></link><link href="https://bblais.github.io/feeds/critical-thinking.atom.xml" rel="self"></link><id>https://bblais.github.io/</id><updated>2018-02-09T00:00:00-05:00</updated><entry><title>The Power of a Story</title><link href="https://bblais.github.io/the-power-of-a-story.html" rel="alternate"></link><published>2018-02-09T00:00:00-05:00</published><updated>2018-02-09T00:00:00-05:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2018-02-09:/the-power-of-a-story.html</id><summary type="html">&lt;p&gt;&lt;img alt="critical thinking" src="images/ocean-water-1149661_960_720.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;Stories are a powerful influence on thinking.  It is pretty clear that humans communicate best in narratives, and the more that you can use stories to explain a concept the better.  A particularly good example of this statement I found starting with &lt;a href="https://www.linkedin.com/pulse/whats-largest-number-you-can-represent-3-digits-nope-its-ed-trice"&gt;this article&lt;/a&gt;.  It introduces a math problem:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;What's …&lt;/p&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="critical thinking" src="images/ocean-water-1149661_960_720.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;Stories are a powerful influence on thinking.  It is pretty clear that humans communicate best in narratives, and the more that you can use stories to explain a concept the better.  A particularly good example of this statement I found starting with &lt;a href="https://www.linkedin.com/pulse/whats-largest-number-you-can-represent-3-digits-nope-its-ed-trice"&gt;this article&lt;/a&gt;.  It introduces a math problem:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;What's the largest number you can represent with 3 digits? Nope. It's not 999.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;but the article doesn’t continue with the answer, but with:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This post is about my fight against "Standardized Testing" in math….&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;It follows with a story about how his incredibly bright daughter was in trouble for correcting her math teacher.  Her math teacher had said the largest number was 999, and the daughter had (correctly) said it was:&lt;/p&gt;
+&lt;div class="math"&gt;$$
+9^{9^9}
+$$&lt;/div&gt;
+&lt;p&gt;Which is &lt;/p&gt;
+&lt;div class="math"&gt;$$9^{387,420,489} \sim 10^{370,000,000}$$&lt;/div&gt;
+&lt;p&gt;The article continues with the heroic parent arguing with the principle in the defense of his daughter who always gets 100% in math, and is a prodigy.  The argument escalates to the superintendent and culminates in the father demanding that they “go to the national board of education and have everyone who took this test have their answers marked incorrect”.  There’s the moral lesson at the end,&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The truly sad thing is, look how a unique mind was mistreated for being brilliant. How many times does something parallel to this happen in our once great country? How many teachers squelch out the faint cry of genius from some shy personality sitting in the back of a classroom?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;and&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I remind her all of the time about a great quote from Samuel Clemens, aka Mark Twain. "I never let schooling interfere with my education." Don't let common core stand in the way of your own children's education.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;It’s a great story, strikes all the right notes.  By the end, you’re rooting for the daughter against the establishment, you can feel the satisfaction as the establishment squirms, and the cheer at the justice of the final solution.&lt;/p&gt;
+&lt;p&gt;Of course, the story would be much better &lt;strong&gt;if it were true&lt;/strong&gt;.  In Part 2, I will examine the idea of the truth of the story and why we should prefer truth over the emotional power of a story.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content></entry><entry><title>Facts are Not Enough</title><link href="https://bblais.github.io/facts-are-not-enough.html" rel="alternate"></link><published>2018-02-05T00:00:00-05:00</published><updated>2018-02-05T00:00:00-05:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2018-02-05:/facts-are-not-enough.html</id><summary type="html">&lt;p&gt;&lt;img alt="critical thinking" src="images/landscape-54998_640.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;In the October issue of Significance magazine, an article called &lt;a href="http://onlinelibrary.wiley.com/doi/10.1111/j.1740-9713.2017.01066.x/full"&gt;“Why facts are not enough in the fight against fake news”&lt;/a&gt; by Brian Tarran resonated with some of the things I have been thinking.  A few quotes are useful here,&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;“But fake news also satisfies another need: serving up stories …&lt;/p&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="critical thinking" src="images/landscape-54998_640.jpg"&gt;&lt;/p&gt;

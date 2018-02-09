@@ -15,15 +15,16 @@ Licence URI: http://www.os-templates.com/template-terms
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link href="/theme/layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
-        <link rel="stylesheet" type="text/css" href="/theme/css/custom.css" media="screen">
+    <link href="https://bblais.github.io/theme/layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+        <link rel="stylesheet" type="text/css" href="https://bblais.github.io/theme/css/custom.css" media="screen">
 
 
-        <link rel="stylesheet" href="/theme/tipuesearch/css/normalize.css">        
-        <link rel="stylesheet" type="text/css" href="/theme/tipuesearch/css/tipuesearch.css">
+        <link rel="stylesheet" href="https://bblais.github.io/theme/tipuesearch/css/normalize.css">        
+        <link rel="stylesheet" type="text/css" href="https://bblais.github.io/theme/tipuesearch/css/tipuesearch.css">
 
 
 
+        <link href="https://bblais.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="bblais on the web - Full Atom Feed" />
     <script type="text/javascript">
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-47048778-1']);
@@ -43,23 +44,23 @@ Licence URI: http://www.os-templates.com/template-terms
   <header id="header" class="clear"> 
     <!-- ################################################################################################ -->
     <div id="logo" class="fl_left">
-      <h1><a href="/">bblais on the web</a></h1>
+      <h1><a href="https://bblais.github.io/">bblais on the web</a></h1>
     </div>
     <!-- ################################################################################################ -->
     <nav id="mainav" class="fl_right">
       <ul class="clear">
-                            <li ><a href="">Home</a></li>
-                            <li ><a href="/pages/presentations.html">Presentations</a></li>
-                            <li ><a href="/pages/projects.html">Projects</a></li>
-                            <li ><a href="/pages/publications.html">Publications</a></li>
+                            <li ><a href="https://bblais.github.io">Home</a></li>
+                            <li ><a href="https://bblais.github.io/pages/presentations.html">Presentations</a></li>
+                            <li ><a href="https://bblais.github.io/pages/projects.html">Projects</a></li>
+                            <li ><a href="https://bblais.github.io/pages/publications.html">Publications</a></li>
 
 
                       <li><a class="drop" href="#">Blog</a>
           <ul>
 
-                            <li ><a href="/categories.html">Categories</a></li>
-                            <li ><a href="/tags.html">Tags</a></li>
-                            <li ><a href="/archives.html">Archives</a></li>
+                            <li ><a href="https://bblais.github.io/categories.html">Categories</a></li>
+                            <li ><a href="https://bblais.github.io/tags.html">Tags</a></li>
+                            <li ><a href="https://bblais.github.io/archives.html">Archives</a></li>
                             </ul>
 
 
@@ -78,7 +79,7 @@ Licence URI: http://www.os-templates.com/template-terms
     <div class="content three_quarter first"> 
 
     <header class="page-header span10 offset2">
-    <h1><a href="/on-miracles.html"> On Miracles  <small> Hume was right all along </small>  </a></h1>
+    <h1><a href="https://bblais.github.io/on-miracles.html"> On Miracles  <small> Hume was right all along </small>  </a></h1>
     </header>
 
         <div class="span8 offset2 article-content">
@@ -112,12 +113,14 @@ Licence URI: http://www.os-templates.com/template-terms
 <li>the conclusion is more probable given the evidence presented than it is considered independently of that evidence</li>
 </ol>
 </blockquote>
-<p>Point (1) is just either specifying either $P({\rm miracle}|{\rm data})$ directly or establishing only that $P({\rm miracle}|{\rm data})&gt;0.5$.  Point (2) is $P({\rm miracle}|{\rm data})&gt;P({\rm miracle})$.  Point (2) is nearly useless.  For example, you could have
-\begin{eqnarray<em>}
-P({\rm miracle})&amp;=&amp;0.00001 \
+<p>Point (1) is just either specifying either <span class="math">\(P({\rm miracle}|{\rm data})\)</span> directly or establishing only that <span class="math">\(P({\rm miracle}|{\rm data})&gt;0.5\)</span>.  Point (2) is <span class="math">\(P({\rm miracle}|{\rm data})&gt;P({\rm miracle})\)</span>.  Point (2) is nearly useless.  For example, you could have
+</p>
+<div class="math">\begin{eqnarray*}
+P({\rm miracle})&amp;=&amp;0.00001 \\
 P({\rm miracle}|{\rm data})&amp;=&amp;0.001
-\end{eqnarray</em>}
-and still have a seriously unlikely hypothesis, even given a factor of 100 increase in probability of a miracle given the data.  Thus the <em>only</em> thing that matters must be the actual value of $P({\rm miracle}|{\rm data})$.</p>
+\end{eqnarray*}</div>
+<p>
+and still have a seriously unlikely hypothesis, even given a factor of 100 increase in probability of a miracle given the data.  Thus the <em>only</em> thing that matters must be the actual value of <span class="math">\(P({\rm miracle}|{\rm data})\)</span>.</p>
 <p>One such argument for miracles specifies the type of evidence needed to make one confident that one is talking about a miracle.  The article calls this a "criteriological" argument, but all of the arguments dealt with are probabilistic.  What are the criteria, for example?  This one is from Charles Leslie:</p>
 <blockquote>
 <ol>
@@ -132,14 +135,15 @@ and still have a seriously unlikely hypothesis, even given a factor of 100 incre
 <h2 id="probabilistic-arguments">Probabilistic arguments</h2>
 <p>The first form here deals with <em>testimony</em>, with the following assumptions and conventions:</p>
 <ol>
-<li>$T_i\equiv$ the proposition "Witness $i$ testifies to $M$"</li>
-<li>$P(T_i,T_j) = P(T_i)\times P(T_j)$: independence</li>
-<li>$P(T_i|M)=P(T_j|M)$ for all $i$ and $j$: all testimony is equally informative</li>
+<li><span class="math">\(T_i\equiv\)</span> the proposition "Witness <span class="math">\(i\)</span> testifies to <span class="math">\(M\)</span>"</li>
+<li><span class="math">\(P(T_i,T_j) = P(T_i)\times P(T_j)\)</span>: independence</li>
+<li><span class="math">\(P(T_i|M)=P(T_j|M)\)</span> for all <span class="math">\(i\)</span> and <span class="math">\(j\)</span>: all testimony is equally informative</li>
 </ol>
 <p>We then easily derive:
-$$
-\frac{P(M|T_1,T_2,\cdots,T_n)}{P(\sim!M|T_1,T_2,\cdots,T_n)} = \left(\frac{P(T_1|M)}{P(T_1|\sim!M)}\right)^n \times \frac{P(M)}{P(\sim!M)}
-$$</p>
+</p>
+<div class="math">$$
+\frac{P(M|T_1,T_2,\cdots,T_n)}{P(\sim\!M|T_1,T_2,\cdots,T_n)} = \left(\frac{P(T_1|M)}{P(T_1|\sim\!M)}\right)^n \times \frac{P(M)}{P(\sim\!M)}
+$$</div>
 <p>The article then spins this in a positive way toward miracles:</p>
 <blockquote>
 <p>[I]f independent witnesses can be found, who speak truth more frequently than falsehood, <em>it is ALWAYS possible to assign a number of independent witnesses, the improbability of the falsehood of whose concurring testimony shall be greater than the improbability of the alleged miracle.</em> (Babbage 1837: 202, emphasis original; cf. Holder 1998 and Earman 2000)</p>
@@ -148,20 +152,23 @@ $$</p>
 <blockquote>
 <p>When anyone tells me, that he saw a dead man restored to life, I immediately consider with myself, whether it be more probable, that this person should either deceive or be deceived, or that the fact, which he relates, should have really happened. I weigh the one miracle against the other; and according to the superiority, which I discover, I pronounce my decision, and always reject the greater miracle. If the falsehood of the testimony would be more miraculous, than the event which he relates; then, and not till then, can he pretend to command my belief or opinion. (Hume)</p>
 </blockquote>
-<p>The first quote implies that the terms $P(T_1|M)$ and $P(T_1|\sim!M)$ refer to speaking truth vs falsehoods (i.e. lying), as opposed to speaking correctly vs being mistaken.  In the latter, it is very easy to see why, for certain types of extraordinary events, we would expect fallible observers to have $P(T_1|\sim!M)&gt;P(T_1|M)$ and further that even <em>if</em> witnesses were in general slightly more reliable than not, we can't expect the observations to be <em>independent</em> in general.  In the specific case of the (anonymous) Gospel writers, there is strong evidence of <em>dependence</em> in the accounts to make this entire calculation (except in its gross qualitative features) irrelevant.</p>
+<p>The first quote implies that the terms <span class="math">\(P(T_1|M)\)</span> and <span class="math">\(P(T_1|\sim\!M)\)</span> refer to speaking truth vs falsehoods (i.e. lying), as opposed to speaking correctly vs being mistaken.  In the latter, it is very easy to see why, for certain types of extraordinary events, we would expect fallible observers to have <span class="math">\(P(T_1|\sim\!M)&gt;P(T_1|M)\)</span> and further that even <em>if</em> witnesses were in general slightly more reliable than not, we can't expect the observations to be <em>independent</em> in general.  In the specific case of the (anonymous) Gospel writers, there is strong evidence of <em>dependence</em> in the accounts to make this entire calculation (except in its gross qualitative features) irrelevant.</p>
 <h1 id="arguments-against-miracles">Arguments against miracles</h1>
 <p>Quoting Hume again,</p>
 <blockquote>
 <p>The plain consequence is (and it is a general maxim worthy of our attention), “That no testimony is sufficient to establish a miracle, unless the testimony be of such a kind, that its falsehood would be more miraculous, than the fact, which it endeavors to establish: And even in that case, there is a mutual destruction of arguments, and the superior only gives us an assurance suitable to that degree of force, which remains, after deducting the inferior.”</p>
 </blockquote>
 <p>This is correct, and is a direct statement of Bayesian reasoning
-$$
-\frac{P(M|E)}{P(\sim!M|E)} =\frac{P(E|M)}{P(E|\sim!M)} \times\frac{P(M)}{P(\sim!M)}
-$$
-where we can use the approximations $P(E|M)\approx 1$ and $P(\sim!M)\approx 1$ and achieve
-$$
-\frac{P(M|E)}{P(\sim!M|E)} \approx \frac{P(M)}{P(E|\sim!M)}
-$$</p>
+</p>
+<div class="math">$$
+\frac{P(M|E)}{P(\sim\!M|E)} =\frac{P(E|M)}{P(E|\sim\!M)} \times\frac{P(M)}{P(\sim\!M)}
+$$</div>
+<p>
+where we can use the approximations <span class="math">\(P(E|M)\approx 1\)</span> and <span class="math">\(P(\sim\!M)\approx 1\)</span> and achieve
+</p>
+<div class="math">$$
+\frac{P(M|E)}{P(\sim\!M|E)} \approx \frac{P(M)}{P(E|\sim\!M)}
+$$</div>
 <p>The <a href="http://plato.stanford.edu/entries/miracles/">article on miracles</a> continues to try to map this to a philosophical structure (needlessly, I'd say), with the following "simple version" of the argument:</p>
 <blockquote>
 <p>A very simple version of the argument, leaving out the comparison to the laws of nature and focusing on the alleged infirmities of testimony, can be laid out deductively (following Whately, in Paley 1859: 33):</p>
@@ -195,7 +202,7 @@ $$</p>
 <p>It might have been said with some shew of plausibility, that such persons by their knowledge and abilities, their reputation and interest, might have it in their power to countenance and propagate an imposture among the people, and give it some credit in the world. (Leland 1755: 90–91; cf. Beckett 1883: 29–37)</p>
 </blockquote>
 <p>This is, essentially, pointing out fallacy of authority - a good critique.  Science, by its processes, attempts to avoid that as well.  Of course, Hume predates modern science, so I think we can forgive him some sloppiness or poor choice of terminology.</p>
-<p>Hume continues to suggest that the religious context of the miracle claime makes the telling of the miracle story even more likely.  This would increase the probability of obtaining the testimony even if no miracle happened - $P(E|\sim!M)$ increases - making the probability of a miracle go down.  The criticism here?  The effect could happen in the other direction:</p>
+<p>Hume continues to suggest that the religious context of the miracle claime makes the telling of the miracle story even more likely.  This would increase the probability of obtaining the testimony even if no miracle happened - <span class="math">\(P(E|\sim\!M)\)</span> increases - making the probability of a miracle go down.  The criticism here?  The effect could happen in the other direction:</p>
 <blockquote>
 <p>But as George Campbell points out (1762/1839: 48–49), this consideration cuts both ways; the religious nature of the claim may also operate to make it less readily received:</p>
 <blockquote>
@@ -208,7 +215,7 @@ $$</p>
 <blockquote>
 <p>All attempts to draw an evidential parallel between the miracles of the New Testament and the miracle stories of later ecclesiastical history are therefore dubious. There are simply more resources for explaining how the ecclesiastical stories, which were promoted to an established and favorably disposed audience, could have arisen and been believed without there being any truth to the reports.</p>
 </blockquote>
-<p>The argument is quite simple - if there are known cases of miracle claims where no miracle actually occurred, that increase $P(E|\sim!M)$, making the probability of a miracle go down given testimony.  It doesn't matter whether you have good reasons to believe there was no miracle for these cases - it undermines testimony of miracles in general.</p>
+<p>The argument is quite simple - if there are known cases of miracle claims where no miracle actually occurred, that increase <span class="math">\(P(E|\sim\!M)\)</span>, making the probability of a miracle go down given testimony.  It doesn't matter whether you have good reasons to believe there was no miracle for these cases - it undermines testimony of miracles in general.</p>
 <h1 id="in-conclusion">In conclusion</h1>
 <p>So, as far as I can tell, there is no substantive critique to Hume's statements about miracles.  He lacks the rigor of the mathematics of probability, but his wording is so straightforwardly translated to it that I find it difficult to see what the problem is.  I also found it ironic that the entire article, which has been pro-miracle the entire time, ends with this:</p>
 <blockquote>
@@ -222,7 +229,111 @@ $$</p>
 <li><a href="http://web.bryant.edu/~bblais/a-little-about-miracles.html">http://web.bryant.edu/~bblais/a-little-about-miracles.html</a></li>
 <li><a href="http://web.bryant.edu/~bblais/unbelievable-project-miracles-and-healing-is-it-evidence-for-the-truth-of-christianity.html">http://web.bryant.edu/~bblais/unbelievable-project-miracles-and-healing-is-it-evidence-for-the-truth-of-christianity.html</a></li>
 </ol>
-            
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+            <section>
+<div class="accordion" id="accordion2">
+    <div class="accordion-group">
+        <div class="accordion-heading">
+            <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
+
+                data-disqus-url="https://bblais.github.io/on-miracles.html"
+
+                href="https://bblais.github.io/on-miracles.html#disqus_thread">
+                Comments
+            </a>
+        </div>
+        <div id="disqus_thread" class="accordion-body collapse">
+            <div class="accordion-inner">
+                <div class="comments">
+                    <div id="disqus_thread"></div>
+<script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+     */
+    /*
+    var disqus_config = function () {
+        //this.page.url = 'https://bblais.github.io/on-miracles.html';  // Replace PAGE_URL with your page's canonical URL variable
+        //this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+
+        this.page.url = 'https://bblais.github.io/on-miracles.html';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'https://bblais.github.io/on-miracles.html';
+
+    };
+    */
+    (function() {  // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        
+        s.src = '//bblaisontheweb.disqus.com/embed.js';
+        
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
             <hr/>
         </div>
 
@@ -236,11 +347,11 @@ $$</p>
             <h4>Published</h4>
             <time pubdate="pubdate" datetime="2015-05-13T00:00:00-04:00">May 13, 2015</time>
             <h4>Category</h4>
-            <a class="category-link" href="/categories.html#articles-ref">articles</a>
+            <a class="category-link" href="https://bblais.github.io/categories.html#articles-ref">articles</a>
             <ul>
             <!-- Place this tag where you want the +1 button to render. -->
 <li><div class="g-plusone" data-size="medium" data-annotation="inline" data-width="300"></div></li>
-<li><a href="https://twitter.com/intent/tweet?screen_name=bblais" class="twitter-mention-button" data-text="I like this article.../on-miracles.html" data-show-count="false">Tweet to @bblais</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></li>
+<li><a href="https://twitter.com/intent/tweet?screen_name=bblais" class="twitter-mention-button" data-text="I like this article...https://bblais.github.io/on-miracles.html" data-show-count="false">Tweet to @bblais</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></li>
 </ul>
 
 
@@ -293,14 +404,14 @@ $$</p>
     <div class="one_quarter">
       <h6 class="title">Quick Links</h6>
       <ul class="nospace linklist">
-        <li><a href="">Home Page</a></li>
-        <li><a href="/archives.html">Blog</a></li>
+        <li><a href="https://bblais.github.io">Home Page</a></li>
+        <li><a href="https://bblais.github.io/archives.html">Blog</a></li>
 
-        <li><a href="/pages/presentations.html">Presentations</a></li>
-        <li><a href="/pages/projects.html">Projects</a></li>
-        <li><a href="/pages/publications.html">Publications</a></li>
+        <li><a href="https://bblais.github.io/pages/presentations.html">Presentations</a></li>
+        <li><a href="https://bblais.github.io/pages/projects.html">Projects</a></li>
+        <li><a href="https://bblais.github.io/pages/publications.html">Publications</a></li>
 
-        <li><a href="/contact.html">Contact Us</a></li>
+        <li><a href="https://bblais.github.io/contact.html">Contact Us</a></li>
       </ul>
     </div>
 
@@ -309,8 +420,8 @@ $$</p>
       <h6 class="title">Search</h6>
       <ul class="nospace linklist">
 <li>
-      <form action="/search.html">
-      <div class="tipue_search_left"><img src="/theme/tipuesearch/search.png" class="tipue_search_icon"></div>
+      <form action="https://bblais.github.io/search.html">
+      <div class="tipue_search_left"><img src="https://bblais.github.io/theme/tipuesearch/search.png" class="tipue_search_icon"></div>
       <div class="tipue_search_right"><input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" required></div>
       <div style="clear: both;"></div>
       </form>
@@ -357,12 +468,43 @@ $$</p>
 <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a> 
     
 <!-- JAVASCRIPTS -->
-<script src="/theme/layout/scripts/jquery.min.js"></script>
-<script src="/theme/layout/scripts/jquery.backtotop.js"></script>
-<script src="/theme/layout/scripts/jquery.mobilemenu.js"></script>
-<script src="/theme/layout/scripts/jquery.flexslider-min.js"></script>
+<script src="https://bblais.github.io/theme/layout/scripts/jquery.min.js"></script>
+<script src="https://bblais.github.io/theme/layout/scripts/jquery.backtotop.js"></script>
+<script src="https://bblais.github.io/theme/layout/scripts/jquery.mobilemenu.js"></script>
+<script src="https://bblais.github.io/theme/layout/scripts/jquery.flexslider-min.js"></script>
 
-    
+             
+<script id="dsq-count-scr" src="//bblaisontheweb.disqus.com/count.js" async></script>
+<script  language="javascript" type="text/javascript">
+function uncollapse() {
+    if (window.location.hash.match(/^#comment-\d+$/)) {
+        $('#disqus_thread').collapse('show');
+    }
+}
+</script>
+<script type="text/javascript" language="JavaScript">
+uncollapse();
+window.onhashchange=function(){
+    if (window.location.hash.match(/^#comment-\d+$/))
+        window.location.reload(true);
+}
+</script>
+<script>
+$('#disqus_thread').on('shown', function () {
+    var link = document.getElementsByClassName('accordion-toggle');
+    var old_innerHTML = link[0].innerHTML;
+    $(link[0]).fadeOut(500, function() {
+        $(this).text('Click here to hide comments').fadeIn(500);
+    });
+    $('#disqus_thread').on('hidden', function () {
+        $(link[0]).fadeOut(500, function() {
+            $(this).text(old_innerHTML).fadeIn(500);
+        });
+    })
+})
+</script>
+
+
 
 </body>
 </html>
