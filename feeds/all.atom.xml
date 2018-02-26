@@ -1,5 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>bblais on the web</title><link href="https://bblais.github.io/" rel="alternate"></link><link href="https://bblais.github.io/feeds/all.atom.xml" rel="self"></link><id>https://bblais.github.io/</id><updated>2018-02-18T00:00:00-05:00</updated><entry><title>Getting the Definitions Right</title><link href="https://bblais.github.io/getting-the-definitions-right.html" rel="alternate"></link><published>2018-02-18T00:00:00-05:00</published><updated>2018-02-18T00:00:00-05:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2018-02-18:/getting-the-definitions-right.html</id><summary type="html">&lt;p&gt;&lt;img alt="naturalism" src="images/Fallen_Monarchs_1886_by_William_Bliss_Baker.jpg"&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>bblais on the web</title><link href="https://bblais.github.io/" rel="alternate"></link><link href="https://bblais.github.io/feeds/all.atom.xml" rel="self"></link><id>https://bblais.github.io/</id><updated>2018-02-26T00:00:00-05:00</updated><entry><title>Physics Lab Ideas - Structure or No?</title><link href="https://bblais.github.io/physics-lab-ideas-structure-or-no.html" rel="alternate"></link><published>2018-02-26T00:00:00-05:00</published><updated>2018-02-26T00:00:00-05:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2018-02-26:/physics-lab-ideas-structure-or-no.html</id><summary type="html">&lt;p&gt;&lt;img alt="critical thinking" src="images/Science-Background-Fractal-Physics-Abstract-1280081.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;Over the years I have taught introductory physics labs and I have seen that most “canned” labs offer very little to the student in the form of learning.  I summarize them as “here is something known quite well, and you are going to measure it badly”.  Labs measuring the acceleration …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="critical thinking" src="images/Science-Background-Fractal-Physics-Abstract-1280081.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;Over the years I have taught introductory physics labs and I have seen that most “canned” labs offer very little to the student in the form of learning.  I summarize them as “here is something known quite well, and you are going to measure it badly”.  Labs measuring the acceleration due to gravity, &lt;span class="math"&gt;\(g\)&lt;/span&gt;, falls into that category.  How do you improve these sorts of labs?  I have a few ideas.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;choose problems where the answer isn’t known or known well&lt;/li&gt;
+&lt;li&gt;push the limit of a particular simple case into the area where the simple case breaks down&lt;/li&gt;
+&lt;li&gt;have the students design the lab themselves to answer a question&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;So, for the case of the acceleration due to gravity, put it as a model comparison problem:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Model 1 = objects fall with a constant &lt;em&gt;speed&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Model 2 = objects fall with a constant &lt;em&gt;acceleration&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Then you give objects to the students such as pennies, packing peanuts, coffee filters, marbles, etc…  Some objects might be best explained with Model 2 while others with Model 1.  Neither model may describe some perfectly.  How can you tell?  Having the students design the resulting tests makes the laboratory experience a lot more interesting.  I’ll add a selfish note that it makes the labs more interesting &lt;em&gt;for the instructor&lt;/em&gt; as well.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content></entry><entry><title>Getting the Definitions Right</title><link href="https://bblais.github.io/getting-the-definitions-right.html" rel="alternate"></link><published>2018-02-18T00:00:00-05:00</published><updated>2018-02-18T00:00:00-05:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2018-02-18:/getting-the-definitions-right.html</id><summary type="html">&lt;p&gt;&lt;img alt="naturalism" src="images/Fallen_Monarchs_1886_by_William_Bliss_Baker.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;I posted before about  &lt;a href="https://bblais.github.io/3-reasons-why-belief-in-god-makes-sense.html"&gt;3 Reasons Why Belief in God Makes Sense&lt;/a&gt; from the &lt;a href="https://www.premierchristianradio.com/Shows/Saturday/Unbelievable" title="Unbelievable Podcast"&gt;Unbelievable Podcast&lt;/a&gt;. In &lt;a href="https://www.christiantoday.com/article/3-reasons-im-not-an-atheist-and-im-still-a-christian/111411.htm"&gt;another article&lt;/a&gt;, Justin Brierley comments on some of his observations as the moderator of atheist-theist debates.  Some of his observations, unfortunately, are wrong.   For example,&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;“Almost every atheist I meet wears the spectacles …&lt;/p&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="naturalism" src="images/Fallen_Monarchs_1886_by_William_Bliss_Baker.jpg"&gt;&lt;/p&gt;
