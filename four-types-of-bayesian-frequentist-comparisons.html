@@ -15,15 +15,16 @@ Licence URI: http://www.os-templates.com/template-terms
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link href="/theme/layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
-        <link rel="stylesheet" type="text/css" href="/theme/css/custom.css" media="screen">
+    <link href="https://bblais.github.io/theme/layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+        <link rel="stylesheet" type="text/css" href="https://bblais.github.io/theme/css/custom.css" media="screen">
 
 
-        <link rel="stylesheet" href="/theme/tipuesearch/css/normalize.css">        
-        <link rel="stylesheet" type="text/css" href="/theme/tipuesearch/css/tipuesearch.css">
+        <link rel="stylesheet" href="https://bblais.github.io/theme/tipuesearch/css/normalize.css">        
+        <link rel="stylesheet" type="text/css" href="https://bblais.github.io/theme/tipuesearch/css/tipuesearch.css">
 
 
 
+        <link href="https://bblais.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="bblais on the web - Full Atom Feed" />
     <script type="text/javascript">
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-47048778-1']);
@@ -43,23 +44,23 @@ Licence URI: http://www.os-templates.com/template-terms
   <header id="header" class="clear"> 
     <!-- ################################################################################################ -->
     <div id="logo" class="fl_left">
-      <h1><a href="/">bblais on the web</a></h1>
+      <h1><a href="https://bblais.github.io/">bblais on the web</a></h1>
     </div>
     <!-- ################################################################################################ -->
     <nav id="mainav" class="fl_right">
       <ul class="clear">
-                            <li ><a href="">Home</a></li>
-                            <li ><a href="/pages/presentations.html">Presentations</a></li>
-                            <li ><a href="/pages/projects.html">Projects</a></li>
-                            <li ><a href="/pages/publications.html">Publications</a></li>
+                            <li ><a href="https://bblais.github.io">Home</a></li>
+                            <li ><a href="https://bblais.github.io/pages/presentations.html">Presentations</a></li>
+                            <li ><a href="https://bblais.github.io/pages/projects.html">Projects</a></li>
+                            <li ><a href="https://bblais.github.io/pages/publications.html">Publications</a></li>
 
 
                       <li><a class="drop" href="#">Blog</a>
           <ul>
 
-                            <li ><a href="/categories.html">Categories</a></li>
-                            <li ><a href="/tags.html">Tags</a></li>
-                            <li ><a href="/archives.html">Archives</a></li>
+                            <li ><a href="https://bblais.github.io/categories.html">Categories</a></li>
+                            <li ><a href="https://bblais.github.io/tags.html">Tags</a></li>
+                            <li ><a href="https://bblais.github.io/archives.html">Archives</a></li>
                             </ul>
 
 
@@ -78,7 +79,7 @@ Licence URI: http://www.os-templates.com/template-terms
     <div class="content three_quarter first"> 
 
     <header class="page-header span10 offset2">
-    <h1><a href="/four-types-of-bayesian-frequentist-comparisons.html"> Four Types of Bayesian-Frequentist Comparisons  </a></h1>
+    <h1><a href="https://bblais.github.io/four-types-of-bayesian-frequentist-comparisons.html"> Four Types of Bayesian-Frequentist Comparisons  </a></h1>
     </header>
 
         <div class="span8 offset2 article-content">
@@ -96,12 +97,13 @@ Licence URI: http://www.os-templates.com/template-terms
 <p>102,  95,  85,  86,  93, 105,  96,  91, 104, 115</p>
 <p>What is the best estimate for the mass of Saturn, and our uncertainty in that estimate?</p>
 <p>Both Frequentist and Bayesian methods come up with
-\begin{eqnarray}
-\mu&amp;=&amp;\bar{x} \pm \frac{S}{\sqrt{N}} \
-\bar{x}&amp;=&amp; \frac{1}{N} \sum_{k=1}^{N} x_k \
+</p>
+<div class="math">\begin{eqnarray}
+\mu&amp;=&amp;\bar{x} \pm \frac{S}{\sqrt{N}} \\
+\bar{x}&amp;=&amp; \frac{1}{N} \sum_{k=1}^{N} x_k \\
 S^2&amp;=&amp; \frac{1}{(N-1)}\sum_{k=1}^{N} (x_k-\bar{x})^2
-\end{eqnarray}</p>
-<p>The Bayesian and Frequentist approaches will come up with - numerically - the same answer to this question, but the vocabulary will be different.  One speaks about the probability of the mean value, the other about the properties of the sampling distribution with respect to $N$ data points.  In either case, it makes no difference <em>practically</em>.</p>
+\end{eqnarray}</div>
+<p>The Bayesian and Frequentist approaches will come up with - numerically - the same answer to this question, but the vocabulary will be different.  One speaks about the probability of the mean value, the other about the properties of the sampling distribution with respect to <span class="math">\(N\)</span> data points.  In either case, it makes no difference <em>practically</em>.</p>
 <h2 id="jaynes-type-galilean-problems">Jaynes-type Galilean problems</h2>
 <p>Where the rubber meets the road is a problem like the one proposed by Lindley, where he flipped a thumbtack and noted that sometimes it lands "point up" and others “point down”. His actual data was:</p>
 <blockquote>
@@ -110,7 +112,7 @@ S^2&amp;=&amp; \frac{1}{(N-1)}\sum_{k=1}^{N} (x_k-\bar{x})^2
 <p>And the question is, <em>can we be 95% sure of this tack being an unfair tack?</em>  Given the physical properties of thumbtacks, we really don’t have any expectation that it <em>should</em> be fair (unlike a coin, where we have a symmetry argument).  We come up with different answers - quantitatively and possible qualitatively - on this one (see page 54 of the <a href="http://web.bryant.edu/~bblais/pdf/pres_011407.pdf">presentation on the three-sided coin I gave</a>)</p>
 <h2 id="anything-with-the-cauchy-distribution">Anything with the Cauchy distribution</h2>
 <p>There is one final category of problems in the comparison with Bayesian and Frequentist methods. </p>
-<p>Imagine we have a lighthouse which is off shore some known distance, B, and is located along the shore at some unknown location $x=a$:</p>
+<p>Imagine we have a lighthouse which is off shore some known distance, B, and is located along the shore at some unknown location <span class="math">\(x=a\)</span>:</p>
 <div class="highlight"><pre><span></span>         (lighthouse)
                *          ---
                            ^
@@ -125,12 +127,116 @@ S^2&amp;=&amp; \frac{1}{(N-1)}\sum_{k=1}^{N} (x_k-\bar{x})^2
 
 <p>we want to estimate the location (“a”) from a series of locations of flashes on the shore - the lighthouse is spinning around and flashing at random times.  We can only observe where the flash lands on the shore, not the direction it came from.   The data is, for example, the locations of these 10 flashes:</p>
 <p>-4.89,  1.03,  1.64,  1.17,  0.74,  1.46,  0.76,  -7.16,  0.31,  2.48</p>
-<p>One can show that the location of a single flash should follow a Cauchy distribution:  $p(x|a,B) = B/(B^2 + (x-a)^2)$.  This is due to the angular geometry of the problem.</p>
+<p>One can show that the location of a single flash should follow a Cauchy distribution:  <span class="math">\(p(x|a,B) = B/(B^2 + (x-a)^2)\)</span>.  This is due to the angular geometry of the problem.</p>
 <p>The question is, what is the best estimate of “a”?  What is the uncertainty in this estimate? What methods would you employ?  The Bayesian treatment for this problem is in D.S. Sivia’s, <em>Data Analysis: a Bayesian Tutorial, Second Edition</em> (Oxford, 2006).  A very similar problem is given in <a href="http://www.greenteapress.com/thinkbayes/html/thinkbayes010.html">Think Bayes</a> and another nice treatment is on <a href="http://www.di.fc.ul.pt/~jpn/r/bugs/lighthouse.html">João Pedro Neto's blog</a>.</p>
 <p>I'm pretty sure this problem is resistant to any procedure relying on sampling distributions (as all Frequentist procedures are) due to the <a href="https://en.wikipedia.org/wiki/Cauchy_distribution">peculiar properties of the Cauchy Distribution</a>.</p>
 <h2 id="conclusions">Conclusions</h2>
-<p>It is important when discussing different perspectives to keep clear what the vocabulary is - what are we actually talking about?  If you limit the problems to simple conditional probability problems, there isn't any difference between the Bayesian and Frequentist perspectives and one might wonder what the big deal is?  However, if you expand the problem set to include limited $N$ problems, with non-Normal distributions (such as Beta and Cauchy), then the differences start to become apparent.  </p>
-            
+<p>It is important when discussing different perspectives to keep clear what the vocabulary is - what are we actually talking about?  If you limit the problems to simple conditional probability problems, there isn't any difference between the Bayesian and Frequentist perspectives and one might wonder what the big deal is?  However, if you expand the problem set to include limited <span class="math">\(N\)</span> problems, with non-Normal distributions (such as Beta and Cauchy), then the differences start to become apparent.  </p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+            <section>
+<div class="accordion" id="accordion2">
+    <div class="accordion-group">
+        <div class="accordion-heading">
+            <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
+
+                data-disqus-url="https://bblais.github.io/four-types-of-bayesian-frequentist-comparisons.html"
+
+                href="https://bblais.github.io/four-types-of-bayesian-frequentist-comparisons.html#disqus_thread">
+                Comments
+            </a>
+        </div>
+        <div id="disqus_thread" class="accordion-body collapse">
+            <div class="accordion-inner">
+                <div class="comments">
+                    <div id="disqus_thread"></div>
+<script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+     */
+    /*
+    var disqus_config = function () {
+        //this.page.url = 'https://bblais.github.io/four-types-of-bayesian-frequentist-comparisons.html';  // Replace PAGE_URL with your page's canonical URL variable
+        //this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+
+        this.page.url = 'https://bblais.github.io/four-types-of-bayesian-frequentist-comparisons.html';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'https://bblais.github.io/four-types-of-bayesian-frequentist-comparisons.html';
+
+    };
+    */
+    (function() {  // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        
+        s.src = '//bblaisontheweb.disqus.com/embed.js';
+        
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
             <hr/>
         </div>
 
@@ -144,11 +250,11 @@ S^2&amp;=&amp; \frac{1}{(N-1)}\sum_{k=1}^{N} (x_k-\bar{x})^2
             <h4>Published</h4>
             <time pubdate="pubdate" datetime="2017-04-10T00:00:00-04:00">Apr 10, 2017</time>
             <h4>Category</h4>
-            <a class="category-link" href="/categories.html#articles-ref">articles</a>
+            <a class="category-link" href="https://bblais.github.io/categories.html#articles-ref">articles</a>
             <ul>
             <!-- Place this tag where you want the +1 button to render. -->
 <li><div class="g-plusone" data-size="medium" data-annotation="inline" data-width="300"></div></li>
-<li><a href="https://twitter.com/intent/tweet?screen_name=bblais" class="twitter-mention-button" data-text="I like this article.../four-types-of-bayesian-frequentist-comparisons.html" data-show-count="false">Tweet to @bblais</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></li>
+<li><a href="https://twitter.com/intent/tweet?screen_name=bblais" class="twitter-mention-button" data-text="I like this article...https://bblais.github.io/four-types-of-bayesian-frequentist-comparisons.html" data-show-count="false">Tweet to @bblais</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></li>
 </ul>
 
 
@@ -201,14 +307,14 @@ S^2&amp;=&amp; \frac{1}{(N-1)}\sum_{k=1}^{N} (x_k-\bar{x})^2
     <div class="one_quarter">
       <h6 class="title">Quick Links</h6>
       <ul class="nospace linklist">
-        <li><a href="">Home Page</a></li>
-        <li><a href="/archives.html">Blog</a></li>
+        <li><a href="https://bblais.github.io">Home Page</a></li>
+        <li><a href="https://bblais.github.io/archives.html">Blog</a></li>
 
-        <li><a href="/pages/presentations.html">Presentations</a></li>
-        <li><a href="/pages/projects.html">Projects</a></li>
-        <li><a href="/pages/publications.html">Publications</a></li>
+        <li><a href="https://bblais.github.io/pages/presentations.html">Presentations</a></li>
+        <li><a href="https://bblais.github.io/pages/projects.html">Projects</a></li>
+        <li><a href="https://bblais.github.io/pages/publications.html">Publications</a></li>
 
-        <li><a href="/contact.html">Contact Us</a></li>
+        <li><a href="https://bblais.github.io/contact.html">Contact Us</a></li>
       </ul>
     </div>
 
@@ -217,8 +323,8 @@ S^2&amp;=&amp; \frac{1}{(N-1)}\sum_{k=1}^{N} (x_k-\bar{x})^2
       <h6 class="title">Search</h6>
       <ul class="nospace linklist">
 <li>
-      <form action="/search.html">
-      <div class="tipue_search_left"><img src="/theme/tipuesearch/search.png" class="tipue_search_icon"></div>
+      <form action="https://bblais.github.io/search.html">
+      <div class="tipue_search_left"><img src="https://bblais.github.io/theme/tipuesearch/search.png" class="tipue_search_icon"></div>
       <div class="tipue_search_right"><input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" required></div>
       <div style="clear: both;"></div>
       </form>
@@ -265,12 +371,43 @@ S^2&amp;=&amp; \frac{1}{(N-1)}\sum_{k=1}^{N} (x_k-\bar{x})^2
 <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a> 
     
 <!-- JAVASCRIPTS -->
-<script src="/theme/layout/scripts/jquery.min.js"></script>
-<script src="/theme/layout/scripts/jquery.backtotop.js"></script>
-<script src="/theme/layout/scripts/jquery.mobilemenu.js"></script>
-<script src="/theme/layout/scripts/jquery.flexslider-min.js"></script>
+<script src="https://bblais.github.io/theme/layout/scripts/jquery.min.js"></script>
+<script src="https://bblais.github.io/theme/layout/scripts/jquery.backtotop.js"></script>
+<script src="https://bblais.github.io/theme/layout/scripts/jquery.mobilemenu.js"></script>
+<script src="https://bblais.github.io/theme/layout/scripts/jquery.flexslider-min.js"></script>
 
-    
+             
+<script id="dsq-count-scr" src="//bblaisontheweb.disqus.com/count.js" async></script>
+<script  language="javascript" type="text/javascript">
+function uncollapse() {
+    if (window.location.hash.match(/^#comment-\d+$/)) {
+        $('#disqus_thread').collapse('show');
+    }
+}
+</script>
+<script type="text/javascript" language="JavaScript">
+uncollapse();
+window.onhashchange=function(){
+    if (window.location.hash.match(/^#comment-\d+$/))
+        window.location.reload(true);
+}
+</script>
+<script>
+$('#disqus_thread').on('shown', function () {
+    var link = document.getElementsByClassName('accordion-toggle');
+    var old_innerHTML = link[0].innerHTML;
+    $(link[0]).fadeOut(500, function() {
+        $(this).text('Click here to hide comments').fadeIn(500);
+    });
+    $('#disqus_thread').on('hidden', function () {
+        $(link[0]).fadeOut(500, function() {
+            $(this).text(old_innerHTML).fadeIn(500);
+        });
+    })
+})
+</script>
+
+
 
 </body>
 </html>

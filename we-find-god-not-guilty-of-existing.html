@@ -15,15 +15,16 @@ Licence URI: http://www.os-templates.com/template-terms
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link href="/theme/layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
-        <link rel="stylesheet" type="text/css" href="/theme/css/custom.css" media="screen">
+    <link href="https://bblais.github.io/theme/layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+        <link rel="stylesheet" type="text/css" href="https://bblais.github.io/theme/css/custom.css" media="screen">
 
 
-        <link rel="stylesheet" href="/theme/tipuesearch/css/normalize.css">        
-        <link rel="stylesheet" type="text/css" href="/theme/tipuesearch/css/tipuesearch.css">
+        <link rel="stylesheet" href="https://bblais.github.io/theme/tipuesearch/css/normalize.css">        
+        <link rel="stylesheet" type="text/css" href="https://bblais.github.io/theme/tipuesearch/css/tipuesearch.css">
 
 
 
+        <link href="https://bblais.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="bblais on the web - Full Atom Feed" />
     <script type="text/javascript">
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-47048778-1']);
@@ -43,23 +44,23 @@ Licence URI: http://www.os-templates.com/template-terms
   <header id="header" class="clear"> 
     <!-- ################################################################################################ -->
     <div id="logo" class="fl_left">
-      <h1><a href="/">bblais on the web</a></h1>
+      <h1><a href="https://bblais.github.io/">bblais on the web</a></h1>
     </div>
     <!-- ################################################################################################ -->
     <nav id="mainav" class="fl_right">
       <ul class="clear">
-                            <li ><a href="">Home</a></li>
-                            <li ><a href="/pages/presentations.html">Presentations</a></li>
-                            <li ><a href="/pages/projects.html">Projects</a></li>
-                            <li ><a href="/pages/publications.html">Publications</a></li>
+                            <li ><a href="https://bblais.github.io">Home</a></li>
+                            <li ><a href="https://bblais.github.io/pages/presentations.html">Presentations</a></li>
+                            <li ><a href="https://bblais.github.io/pages/projects.html">Projects</a></li>
+                            <li ><a href="https://bblais.github.io/pages/publications.html">Publications</a></li>
 
 
                       <li><a class="drop" href="#">Blog</a>
           <ul>
 
-                            <li ><a href="/categories.html">Categories</a></li>
-                            <li ><a href="/tags.html">Tags</a></li>
-                            <li ><a href="/archives.html">Archives</a></li>
+                            <li ><a href="https://bblais.github.io/categories.html">Categories</a></li>
+                            <li ><a href="https://bblais.github.io/tags.html">Tags</a></li>
+                            <li ><a href="https://bblais.github.io/archives.html">Archives</a></li>
                             </ul>
 
 
@@ -78,7 +79,7 @@ Licence URI: http://www.os-templates.com/template-terms
     <div class="content three_quarter first"> 
 
     <header class="page-header span10 offset2">
-    <h1><a href="/we-find-god-not-guilty-of-existing.html"> We find God "not guilty" of existing  </a></h1>
+    <h1><a href="https://bblais.github.io/we-find-god-not-guilty-of-existing.html"> We find God "not guilty" of existing  </a></h1>
     </header>
 
         <div class="span8 offset2 article-content">
@@ -86,14 +87,15 @@ Licence URI: http://www.os-templates.com/template-terms
             <p>I was listening to the <a href="http://www.premierradio.org.uk/shows/saturday/unbelievable.aspx">Unbelievable podcast</a> on the definition of atheism, whether it is "lack in a belief in God" or "believing that God does not exist" or something else, which got me thinking about how it maps to probability (as I always do).  Matt Dillahunty clearly defines atheism as a lack of belief, and in a court-room analogy says that he finds God "not guilty of existing".  In court, you find the plaintiff "guilty" or "not guilty", not "guilty" or "innocent".  The burden of proof lies squarely with the prosecution.  If they haven't met that burden, then the jury finds the plaintiff "not guilty".  They may, or may not, believe that the plaintiff is innocent.  Establishing <em>innocence</em> in the crime changes the burden of proof to the defendant.  The difference here comes down to priors, which we can see through some illustrative examples mapped to probability.</p>
 <h2 id="odd-and-even-stars">Odd and Even Stars</h2>
 <p>Are there an odd number of stars in the universe or an even number?  Clearly, at any single point in time, there is a correct answer this question.  Given our lack of knowledge, we should have</p>
-<p>$$
+<div class="math">$$
 P(O)=P(E)=\frac{1}{2}
-$$</p>
+$$</div>
 <p>If someone were to claim that there was very likely an odd number of stars, we'd ask for evidence.  If that evidence is not persuasive,</p>
-<p>$$
+<div class="math">$$
 P(O|{\rm evidence}) \sim P(O)
-$$
- then we would certainly <em>lack</em> a belief in the odd-ness of the number of stars yet we would not say that we "believe there is not an odd number of stars".  It is up to the odd-number supporter to provide the evidence to raise our prior probability significantly above $P(O)=0.5$ - they have the burden of proof.  </p>
+$$</div>
+<p>
+ then we would certainly <em>lack</em> a belief in the odd-ness of the number of stars yet we would not say that we "believe there is not an odd number of stars".  It is up to the odd-number supporter to provide the evidence to raise our prior probability significantly above <span class="math">\(P(O)=0.5\)</span> - they have the burden of proof.  </p>
 <h2 id="different-data">Different Data</h2>
 <p>If we imagine data that might actually affect this prior probability, the situation is a bit different.  Let's imagine that through the laws of physics we could demonstrate that</p>
 <ol>
@@ -101,48 +103,162 @@ $$
 <li>single stars are very short-lived</li>
 </ol>
 <p>we may actually have an argument for an even-number of stars in the universe.  In this case, we have
-$$
+</p>
+<div class="math">$$
 P(O|{\rm data}) \ll P(O)
-$$
+$$</div>
+<p>
 and thus
-$$
+</p>
+<div class="math">$$
 P(E|{\rm data}) \gg P(E)
-$$</p>
+$$</div>
 <p>Where one belief goes down, the other goes up.  For our belief in odd-ness to go down our belief in evenness must go up.  We no longer simply <em>lack</em> a belief in odd-ness, we now both <em>believe</em> in even-ness and <em>believe</em> in non-odd-ness.</p>
 <h2 id="more-than-two-outcomes">More than two outcomes</h2>
 <p>Something interesting happens when there are more than two outcomes.  </p>
-<p>$$
+<div class="math">$$
 P(H)=P(R)=P(Y)=\frac{1}{3}
-$$</p>
-<p>Some data that nearly rules out one hypothesis, say $R$, may not speak to either other hypothesis directly, so you get the equal redistribution like:
-\begin{eqnarray}
-\nonumber P(R)&amp;\sim&amp; 0 \
+$$</div>
+<p>Some data that nearly rules out one hypothesis, say <span class="math">\(R\)</span>, may not speak to either other hypothesis directly, so you get the equal redistribution like:
+</p>
+<div class="math">\begin{eqnarray}
+\nonumber P(R)&amp;\sim&amp; 0 \\
 \nonumber P(H)=P(Y)&amp;\sim&amp; 1/2 
-\end{eqnarray}</p>
+\end{eqnarray}</div>
 <p>or it might be the case that the data leaves unchanged the prior probability of one of the hypotheses, raising the probability of the other, like
-\begin{eqnarray}
-\nonumber P(R)&amp;\sim&amp; 0 \
-\nonumber P(H)&amp;\sim&amp; 1/3 \
+</p>
+<div class="math">\begin{eqnarray}
+\nonumber P(R)&amp;\sim&amp; 0 \\
+\nonumber P(H)&amp;\sim&amp; 1/3 \\
 \nonumber P(Y)&amp;\sim&amp; 2/3 
-\end{eqnarray}</p>
-<p>Notice that it is possible to reduce the probability of one hypothesis (i.e. $R$) and not effect the probability of a separate hypothesis (i.e. $H$), when there are more than two outcomes.  It is also possible for the probability of that separate hypothesis (i.e. $H$) to go up, or even go down.  In other words, when there are more than one hypothesis, presenting evidence for (or against) one hypothesis does not always guarantee an adjustment in another hypothesis down (or up).</p>
+\end{eqnarray}</div>
+<p>Notice that it is possible to reduce the probability of one hypothesis (i.e. <span class="math">\(R\)</span>) and not effect the probability of a separate hypothesis (i.e. <span class="math">\(H\)</span>), when there are more than two outcomes.  It is also possible for the probability of that separate hypothesis (i.e. <span class="math">\(H\)</span>) to go up, or even go down.  In other words, when there are more than one hypothesis, presenting evidence for (or against) one hypothesis does not always guarantee an adjustment in another hypothesis down (or up).</p>
 <h2 id="back-to-court">Back to court</h2>
 <p>So, in court, the jury is tasked to decide "guilty" or "not-guilty", rather than "guilty" or "innocent".  Why are these not the same?  Because the <em>claim</em> is that the accused is "guilty" (like "oddness of stars"), so the evidence needs to be established for the claim.  A jury deciding "not-guilty" is saying that 
-$$
+</p>
+<div class="math">$$
 P({\rm guilty}|{\rm evidence}) \sim P({\rm guilty})
-$$
+$$</div>
+<p>
 and the evidence is not convincing.</p>
 <h2 id="back-to-god">Back to God</h2>
 <p>The atheist is just that person who is unconvinced by the evidence, 
-$$
+</p>
+<div class="math">$$
 P({\rm God}|{\rm evidence}) \sim P({\rm God})
-$$
+$$</div>
+<p>
 not the person who believes there is no God,
-$$
+</p>
+<div class="math">$$
 P({\rm God}|{\rm evidence}) \ll 0.5
-$$</p>
+$$</div>
 <p>Atheists find God "not guilty" of existing</p>
-            
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+            <section>
+<div class="accordion" id="accordion2">
+    <div class="accordion-group">
+        <div class="accordion-heading">
+            <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
+
+                data-disqus-url="https://bblais.github.io/we-find-god-not-guilty-of-existing.html"
+
+                href="https://bblais.github.io/we-find-god-not-guilty-of-existing.html#disqus_thread">
+                Comments
+            </a>
+        </div>
+        <div id="disqus_thread" class="accordion-body collapse">
+            <div class="accordion-inner">
+                <div class="comments">
+                    <div id="disqus_thread"></div>
+<script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+     */
+    /*
+    var disqus_config = function () {
+        //this.page.url = 'https://bblais.github.io/we-find-god-not-guilty-of-existing.html';  // Replace PAGE_URL with your page's canonical URL variable
+        //this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+
+        this.page.url = 'https://bblais.github.io/we-find-god-not-guilty-of-existing.html';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'https://bblais.github.io/we-find-god-not-guilty-of-existing.html';
+
+    };
+    */
+    (function() {  // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        
+        s.src = '//bblaisontheweb.disqus.com/embed.js';
+        
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
             <hr/>
         </div>
 
@@ -156,11 +272,11 @@ $$</p>
             <h4>Published</h4>
             <time pubdate="pubdate" datetime="2015-05-18T00:00:00-04:00">May 18, 2015</time>
             <h4>Category</h4>
-            <a class="category-link" href="/categories.html#articles-ref">articles</a>
+            <a class="category-link" href="https://bblais.github.io/categories.html#articles-ref">articles</a>
             <ul>
             <!-- Place this tag where you want the +1 button to render. -->
 <li><div class="g-plusone" data-size="medium" data-annotation="inline" data-width="300"></div></li>
-<li><a href="https://twitter.com/intent/tweet?screen_name=bblais" class="twitter-mention-button" data-text="I like this article.../we-find-god-not-guilty-of-existing.html" data-show-count="false">Tweet to @bblais</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></li>
+<li><a href="https://twitter.com/intent/tweet?screen_name=bblais" class="twitter-mention-button" data-text="I like this article...https://bblais.github.io/we-find-god-not-guilty-of-existing.html" data-show-count="false">Tweet to @bblais</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></li>
 </ul>
 
 
@@ -213,14 +329,14 @@ $$</p>
     <div class="one_quarter">
       <h6 class="title">Quick Links</h6>
       <ul class="nospace linklist">
-        <li><a href="">Home Page</a></li>
-        <li><a href="/archives.html">Blog</a></li>
+        <li><a href="https://bblais.github.io">Home Page</a></li>
+        <li><a href="https://bblais.github.io/archives.html">Blog</a></li>
 
-        <li><a href="/pages/presentations.html">Presentations</a></li>
-        <li><a href="/pages/projects.html">Projects</a></li>
-        <li><a href="/pages/publications.html">Publications</a></li>
+        <li><a href="https://bblais.github.io/pages/presentations.html">Presentations</a></li>
+        <li><a href="https://bblais.github.io/pages/projects.html">Projects</a></li>
+        <li><a href="https://bblais.github.io/pages/publications.html">Publications</a></li>
 
-        <li><a href="/contact.html">Contact Us</a></li>
+        <li><a href="https://bblais.github.io/contact.html">Contact Us</a></li>
       </ul>
     </div>
 
@@ -229,8 +345,8 @@ $$</p>
       <h6 class="title">Search</h6>
       <ul class="nospace linklist">
 <li>
-      <form action="/search.html">
-      <div class="tipue_search_left"><img src="/theme/tipuesearch/search.png" class="tipue_search_icon"></div>
+      <form action="https://bblais.github.io/search.html">
+      <div class="tipue_search_left"><img src="https://bblais.github.io/theme/tipuesearch/search.png" class="tipue_search_icon"></div>
       <div class="tipue_search_right"><input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" required></div>
       <div style="clear: both;"></div>
       </form>
@@ -277,12 +393,43 @@ $$</p>
 <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a> 
     
 <!-- JAVASCRIPTS -->
-<script src="/theme/layout/scripts/jquery.min.js"></script>
-<script src="/theme/layout/scripts/jquery.backtotop.js"></script>
-<script src="/theme/layout/scripts/jquery.mobilemenu.js"></script>
-<script src="/theme/layout/scripts/jquery.flexslider-min.js"></script>
+<script src="https://bblais.github.io/theme/layout/scripts/jquery.min.js"></script>
+<script src="https://bblais.github.io/theme/layout/scripts/jquery.backtotop.js"></script>
+<script src="https://bblais.github.io/theme/layout/scripts/jquery.mobilemenu.js"></script>
+<script src="https://bblais.github.io/theme/layout/scripts/jquery.flexslider-min.js"></script>
 
-    
+             
+<script id="dsq-count-scr" src="//bblaisontheweb.disqus.com/count.js" async></script>
+<script  language="javascript" type="text/javascript">
+function uncollapse() {
+    if (window.location.hash.match(/^#comment-\d+$/)) {
+        $('#disqus_thread').collapse('show');
+    }
+}
+</script>
+<script type="text/javascript" language="JavaScript">
+uncollapse();
+window.onhashchange=function(){
+    if (window.location.hash.match(/^#comment-\d+$/))
+        window.location.reload(true);
+}
+</script>
+<script>
+$('#disqus_thread').on('shown', function () {
+    var link = document.getElementsByClassName('accordion-toggle');
+    var old_innerHTML = link[0].innerHTML;
+    $(link[0]).fadeOut(500, function() {
+        $(this).text('Click here to hide comments').fadeIn(500);
+    });
+    $('#disqus_thread').on('hidden', function () {
+        $(link[0]).fadeOut(500, function() {
+            $(this).text(old_innerHTML).fadeIn(500);
+        });
+    })
+})
+</script>
+
+
 
 </body>
 </html>
