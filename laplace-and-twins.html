@@ -15,16 +15,15 @@ Licence URI: http://www.os-templates.com/template-terms
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link href="https://bblais.github.io/theme/layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
-        <link rel="stylesheet" type="text/css" href="https://bblais.github.io/theme/css/custom.css" media="screen">
+    <link href="/theme/layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+        <link rel="stylesheet" type="text/css" href="/theme/css/custom.css" media="screen">
 
 
-        <link rel="stylesheet" href="https://bblais.github.io/theme/tipuesearch/css/normalize.css">        
-        <link rel="stylesheet" type="text/css" href="https://bblais.github.io/theme/tipuesearch/css/tipuesearch.css">
+        <link rel="stylesheet" href="/theme/tipuesearch/css/normalize.css">        
+        <link rel="stylesheet" type="text/css" href="/theme/tipuesearch/css/tipuesearch.css">
 
 
 
-        <link href="https://bblais.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="bblais on the web - Full Atom Feed" />
     <script type="text/javascript">
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-47048778-1']);
@@ -44,23 +43,23 @@ Licence URI: http://www.os-templates.com/template-terms
   <header id="header" class="clear"> 
     <!-- ################################################################################################ -->
     <div id="logo" class="fl_left">
-      <h1><a href="https://bblais.github.io/">bblais on the web</a></h1>
+      <h1><a href="/">bblais on the web</a></h1>
     </div>
     <!-- ################################################################################################ -->
     <nav id="mainav" class="fl_right">
       <ul class="clear">
-                            <li ><a href="https://bblais.github.io">Home</a></li>
-                            <li ><a href="https://bblais.github.io/pages/presentations.html">Presentations</a></li>
-                            <li ><a href="https://bblais.github.io/pages/projects.html">Projects</a></li>
-                            <li ><a href="https://bblais.github.io/pages/publications.html">Publications</a></li>
+                            <li ><a href="">Home</a></li>
+                            <li ><a href="/pages/presentations.html">Presentations</a></li>
+                            <li ><a href="/pages/projects.html">Projects</a></li>
+                            <li ><a href="/pages/publications.html">Publications</a></li>
 
 
                       <li><a class="drop" href="#">Blog</a>
           <ul>
 
-                            <li ><a href="https://bblais.github.io/categories.html">Categories</a></li>
-                            <li ><a href="https://bblais.github.io/tags.html">Tags</a></li>
-                            <li ><a href="https://bblais.github.io/archives.html">Archives</a></li>
+                            <li ><a href="/categories.html">Categories</a></li>
+                            <li ><a href="/tags.html">Tags</a></li>
+                            <li ><a href="/archives.html">Archives</a></li>
                             </ul>
 
 
@@ -79,7 +78,7 @@ Licence URI: http://www.os-templates.com/template-terms
     <div class="content three_quarter first"> 
 
     <header class="page-header span10 offset2">
-    <h1><a href="https://bblais.github.io/laplace-and-twins.html"> Laplace and Twins  <small> Why Bayes is still right </small>  </a></h1>
+    <h1><a href="/laplace-and-twins.html"> Laplace and Twins  <small> Why Bayes is still right </small>  </a></h1>
     </header>
 
         <div class="span8 offset2 article-content">
@@ -114,54 +113,52 @@ the output of Bayes’ rule (3).</p>
 <h2 id="the-original-calculation-with-knowledge">The original calculation, with knowledge</h2>
 <p>So, let's start with the following knowledge and some notation.</p>
 <ul>
-<li>we've observed twin boy sonograms, a proposition denoted as <span class="math">\(S\)</span></li>
-<li>1/3 of twins are identical, thus <span class="math">\(P(I) \equiv q = 1/3\)</span>.  You'll see why I use <span class="math">\(q\)</span> later.</li>
+<li>we've observed twin boy sonograms, a proposition denoted as $S$</li>
+<li>1/3 of twins are identical, thus $P(I) \equiv q = 1/3$.  You'll see why I use $q$ later.</li>
 </ul>
-<p>We are interested in <span class="math">\(P(I|S)\)</span>.  We can derive a few related probabilities, like</p>
+<p>We are interested in $P(I|S)$.  We can derive a few related probabilities, like</p>
 <ul>
-<li><span class="math">\(P(S|I) = 1/2\)</span>.  This comes from the notion that identical twins must be either BB or GG, and only half of them would give twin <em>boy</em> sonograms.</li>
-<li><span class="math">\(P(S|\sim I) = 1/4\)</span>. This comes from the notion that fraternal twins must be BB, BG, GB or GG, and only 1/4 of them would give twin <em>boy</em> sonograms.</li>
+<li>$P(S|I) = 1/2$.  This comes from the notion that identical twins must be either BB or GG, and only half of them would give twin <em>boy</em> sonograms.</li>
+<li>$P(S|\sim I) = 1/4$. This comes from the notion that fraternal twins must be BB, BG, GB or GG, and only 1/4 of them would give twin <em>boy</em> sonograms.</li>
 </ul>
 <p>Setting the calculation in terms of odds ratios (which I don't like as much as direct probabilities), we get</p>
-<div class="math">\begin{eqnarray}
-\frac{P(I|S)}{P(\sim I|S)} &amp;=&amp; \frac{P(S|I)P(I)}{P(S|\sim I)P(\sim I)} \\
+<p>\begin{eqnarray}
+\frac{P(I|S)}{P(\sim I|S)} &amp;=&amp; \frac{P(S|I)P(I)}{P(S|\sim I)P(\sim I)} \
 &amp;=&amp; \frac{1/2 \times 1/3}{1/4 \times (1-1/3)} = 1
-\end{eqnarray}</div>
-<p>
+\end{eqnarray}
 or 1:1 odds, and thus</p>
-<div class="math">$$P(I|S)=1/2$$</div>
+<p>$$P(I|S)=1/2$$</p>
 <h2 id="what-would-laplace-do">What would Laplace do?</h2>
-<p>The text refers to an "uninformative prior", in a derogatory way, and then proceeds to mistakenly use an <em>informative</em>, incorrect prior and attribute it to Laplace.  Laplace, <a href="http://web.bryant.edu/~bblais/misquoting-hume.html">like Hume</a>, is mischaracterized so often it really is remarkable.  Let's follow through how the text gets the <span class="math">\(P(S|I)=2/3\)</span> presumably what Laplace would do.  To get this, we assume that there are two states (identical and fraternal) and that uninformative means equal probability to these states.  Thus the prior is <span class="math">\(P(I)=1/2\)</span>, and the same calculation proceeds as </p>
-<div class="math">\begin{eqnarray}
-\frac{P(I|S)}{P(\sim I|S)} &amp;=&amp; \frac{P(S|I)P(I)}{P(S|\sim I)P(\sim I)} \\
+<p>The text refers to an "uninformative prior", in a derogatory way, and then proceeds to mistakenly use an <em>informative</em>, incorrect prior and attribute it to Laplace.  Laplace, <a href="http://web.bryant.edu/~bblais/misquoting-hume.html">like Hume</a>, is mischaracterized so often it really is remarkable.  Let's follow through how the text gets the $P(S|I)=2/3$ presumably what Laplace would do.  To get this, we assume that there are two states (identical and fraternal) and that uninformative means equal probability to these states.  Thus the prior is $P(I)=1/2$, and the same calculation proceeds as </p>
+<p>\begin{eqnarray}
+\frac{P(I|S)}{P(\sim I|S)} &amp;=&amp; \frac{P(S|I)P(I)}{P(S|\sim I)P(\sim I)} \
 &amp;=&amp; \frac{1/2 \times 1/2}{1/4 \times (1-1/2)} = 2
-\end{eqnarray}</div>
-<p>
+\end{eqnarray}
 or 2:1 odds and thus</p>
-<div class="math">$$P(I|S)=2/3$$</div>
+<p>$$P(I|S)=2/3$$</p>
 <p>The author then implies that this is clearly wrong, even though it does make sense that different knowledge <em>should</em> lead to different probability assignments.  Regardless, the author calls Laplace the "prime violator" of the "overenthusiastic application" of Bayes Theorem, where Laplace "casually assumed a uniform distribution" for the probability of getting identical twins. However I would say that this is the <em>correct</em> thing to do when one has no information - to do otherwise <em>inserts</em> unjustified information into the system.</p>
 <h2 id="what-would-laplace-really-do">What would Laplace <em>really</em> do?</h2>
-<p>Let's assume Laplace is really starting from scratch, and can't even estimate the number of twins well, so he does use a uniform distribution on <span class="math">\(q\)</span> above.  The proper calculation then is to <em>marginalize</em> over this uniform distribution.  Applying Bayes Theorem, we get</p>
-<div class="math">\begin{eqnarray}
+<p>Let's assume Laplace is really starting from scratch, and can't even estimate the number of twins well, so he does use a uniform distribution on $q$ above.  The proper calculation then is to <em>marginalize</em> over this uniform distribution.  Applying Bayes Theorem, we get</p>
+<p>\begin{eqnarray}
 P(I|S) &amp;=&amp; \int_0^1 \frac{P(S|I) \cdot q}{P(S|I)\cdot q + P(S|\sim I)\cdot (1-q)} P(q) dq
-\end{eqnarray}</div>
+\end{eqnarray}</p>
 <p>As above we have</p>
 <ul>
-<li><span class="math">\(P(S|I) = 1/2\)</span></li>
-<li><span class="math">\(P(S|\sim I) = 1/4\)</span></li>
-<li><span class="math">\(P(q) =\)</span> uniform from 0 to 1</li>
+<li>$P(S|I) = 1/2$</li>
+<li>$P(S|\sim I) = 1/4$</li>
+<li>$P(q) =$ uniform from 0 to 1</li>
 </ul>
 <p>and so we get (with some <a href="http://www.wolframalpha.com/input/?i=integrate+1%2F2*q%2F%5B1%2F4*q%2B1%2F4%5D+for+q+from+0+to+1">Wolfram Alpha magic</a> )</p>
-<div class="math">\begin{eqnarray}
+<p>\begin{eqnarray}
 P(I|S) &amp;=&amp; \int_0^1 \frac{1/2 \cdot q}{1/2\cdot q + 1/4\cdot (1-q)} dq = 2-\log 4 \approx 0.614
-\end{eqnarray}</div>
+\end{eqnarray}</p>
 <p>again, different than our informed probability, but also different than assuming that identical twins must occur 50% of the time.  Essentially, by not knowing that identical twins are actually as rare as 1/3 of all twins, we will overestimate the probability that a pair of boy sonograms would be identical - this is a <em>good</em> thing, not a bad one.  To do otherwise would be assuming knowledge we don't have (at the time).</p>
 <h2 id="what-would-laplace-do-next">What would Laplace do <em>next</em>?</h2>
-<p>Like a good scientist, Laplace would probably follow this line of logic with some data taking.  Imagine he observes <span class="math">\(h\)</span> identical twins in <span class="math">\(N\)</span> twins, he would change his uniform distribution to a Beta distribution - just like a coin flip.  The calculation now looks like:</p>
-<div class="math">\begin{eqnarray}
+<p>Like a good scientist, Laplace would probably follow this line of logic with some data taking.  Imagine he observes $h$ identical twins in $N$ twins, he would change his uniform distribution to a Beta distribution - just like a coin flip.  The calculation now looks like:</p>
+<p>\begin{eqnarray}
 P(I|S) &amp;=&amp; \int_0^1 \frac{1/2 \cdot q}{1/2\cdot q + 1/4\cdot (1-q)} {\rm Beta}(h+1,N+1) dq 
-\end{eqnarray}</div>
-<p>which is easiest done numerically.  Using the sie library from <a href="http://web.bryant.edu/~bblais/statistical-inference-for-everyone-sie.html">my book</a> I have for <span class="math">\(h=0\)</span>, <span class="math">\(N=0\)</span>, </p>
+\end{eqnarray}</p>
+<p>which is easiest done numerically.  Using the sie library from <a href="http://web.bryant.edu/~bblais/statistical-inference-for-everyone-sie.html">my book</a> I have for $h=0$, $N=0$, </p>
 <div class="highlight"><pre><span></span><span class="n">h</span><span class="o">=</span><span class="mi">0</span>
 <span class="n">N</span><span class="o">=</span><span class="mi">0</span>
 
@@ -197,111 +194,7 @@ P(I|S) &amp;=&amp; \int_0^1 \frac{1/2 \cdot q}{1/2\cdot q + 1/4\cdot (1-q)} {\rm
 </blockquote>
 <p>or within 1% of the modern value.  So Laplace would have arrived at a perfectly reasonable answer prior to looking at the data and a well-informed answer within one visit to a French hospital.  </p>
 <p>So, what is the objection to Bayes' Theorem again?</p>
-<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
-    var align = "center",
-        indent = "0em",
-        linebreak = "false";
-
-    if (false) {
-        align = (screen.width < 768) ? "left" : align;
-        indent = (screen.width < 768) ? "0em" : indent;
-        linebreak = (screen.width < 768) ? 'true' : linebreak;
-    }
-
-    var mathjaxscript = document.createElement('script');
-    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
-    mathjaxscript.type = 'text/javascript';
-    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
-    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
-        "MathJax.Hub.Config({" +
-        "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
-        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
-        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
-        "    displayAlign: '"+ align +"'," +
-        "    displayIndent: '"+ indent +"'," +
-        "    showMathMenu: true," +
-        "    messageStyle: 'normal'," +
-        "    tex2jax: { " +
-        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
-        "        displayMath: [ ['$$','$$'] ]," +
-        "        processEscapes: true," +
-        "        preview: 'TeX'," +
-        "    }, " +
-        "    'HTML-CSS': { " +
-        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
-        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
-        "    }, " +
-        "}); " +
-        "if ('default' !== 'default') {" +
-            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-        "}";
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
-}
-</script>
-            <section>
-<div class="accordion" id="accordion2">
-    <div class="accordion-group">
-        <div class="accordion-heading">
-            <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
-
-                data-disqus-url="https://bblais.github.io/laplace-and-twins.html"
-
-                href="https://bblais.github.io/laplace-and-twins.html#disqus_thread">
-                Comments
-            </a>
-        </div>
-        <div id="disqus_thread" class="accordion-body collapse">
-            <div class="accordion-inner">
-                <div class="comments">
-                    <div id="disqus_thread"></div>
-<script>
-    /**
-     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-     */
-    /*
-    var disqus_config = function () {
-        //this.page.url = 'https://bblais.github.io/laplace-and-twins.html';  // Replace PAGE_URL with your page's canonical URL variable
-        //this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-
-        this.page.url = 'https://bblais.github.io/laplace-and-twins.html';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'https://bblais.github.io/laplace-and-twins.html';
-
-    };
-    */
-    (function() {  // DON'T EDIT BELOW THIS LINE
-        var d = document, s = d.createElement('script');
-        
-        s.src = '//bblaisontheweb.disqus.com/embed.js';
-        
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-
-
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</section>
-
+            
             <hr/>
         </div>
 
@@ -315,11 +208,11 @@ P(I|S) &amp;=&amp; \int_0^1 \frac{1/2 \cdot q}{1/2\cdot q + 1/4\cdot (1-q)} {\rm
             <h4>Published</h4>
             <time pubdate="pubdate" datetime="2016-03-28T00:00:00-04:00">Mar 28, 2016</time>
             <h4>Category</h4>
-            <a class="category-link" href="https://bblais.github.io/categories.html#articles-ref">articles</a>
+            <a class="category-link" href="/categories.html#articles-ref">articles</a>
             <ul>
             <!-- Place this tag where you want the +1 button to render. -->
 <li><div class="g-plusone" data-size="medium" data-annotation="inline" data-width="300"></div></li>
-<li><a href="https://twitter.com/intent/tweet?screen_name=bblais" class="twitter-mention-button" data-text="I like this article...https://bblais.github.io/laplace-and-twins.html" data-show-count="false">Tweet to @bblais</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></li>
+<li><a href="https://twitter.com/intent/tweet?screen_name=bblais" class="twitter-mention-button" data-text="I like this article.../laplace-and-twins.html" data-show-count="false">Tweet to @bblais</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></li>
 </ul>
 
 
@@ -372,14 +265,14 @@ P(I|S) &amp;=&amp; \int_0^1 \frac{1/2 \cdot q}{1/2\cdot q + 1/4\cdot (1-q)} {\rm
     <div class="one_quarter">
       <h6 class="title">Quick Links</h6>
       <ul class="nospace linklist">
-        <li><a href="https://bblais.github.io">Home Page</a></li>
-        <li><a href="https://bblais.github.io/archives.html">Blog</a></li>
+        <li><a href="">Home Page</a></li>
+        <li><a href="/archives.html">Blog</a></li>
 
-        <li><a href="https://bblais.github.io/pages/presentations.html">Presentations</a></li>
-        <li><a href="https://bblais.github.io/pages/projects.html">Projects</a></li>
-        <li><a href="https://bblais.github.io/pages/publications.html">Publications</a></li>
+        <li><a href="/pages/presentations.html">Presentations</a></li>
+        <li><a href="/pages/projects.html">Projects</a></li>
+        <li><a href="/pages/publications.html">Publications</a></li>
 
-        <li><a href="https://bblais.github.io/contact.html">Contact Us</a></li>
+        <li><a href="/contact.html">Contact Us</a></li>
       </ul>
     </div>
 
@@ -388,8 +281,8 @@ P(I|S) &amp;=&amp; \int_0^1 \frac{1/2 \cdot q}{1/2\cdot q + 1/4\cdot (1-q)} {\rm
       <h6 class="title">Search</h6>
       <ul class="nospace linklist">
 <li>
-      <form action="https://bblais.github.io/search.html">
-      <div class="tipue_search_left"><img src="https://bblais.github.io/theme/tipuesearch/search.png" class="tipue_search_icon"></div>
+      <form action="/search.html">
+      <div class="tipue_search_left"><img src="/theme/tipuesearch/search.png" class="tipue_search_icon"></div>
       <div class="tipue_search_right"><input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" required></div>
       <div style="clear: both;"></div>
       </form>
@@ -436,43 +329,12 @@ P(I|S) &amp;=&amp; \int_0^1 \frac{1/2 \cdot q}{1/2\cdot q + 1/4\cdot (1-q)} {\rm
 <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a> 
     
 <!-- JAVASCRIPTS -->
-<script src="https://bblais.github.io/theme/layout/scripts/jquery.min.js"></script>
-<script src="https://bblais.github.io/theme/layout/scripts/jquery.backtotop.js"></script>
-<script src="https://bblais.github.io/theme/layout/scripts/jquery.mobilemenu.js"></script>
-<script src="https://bblais.github.io/theme/layout/scripts/jquery.flexslider-min.js"></script>
+<script src="/theme/layout/scripts/jquery.min.js"></script>
+<script src="/theme/layout/scripts/jquery.backtotop.js"></script>
+<script src="/theme/layout/scripts/jquery.mobilemenu.js"></script>
+<script src="/theme/layout/scripts/jquery.flexslider-min.js"></script>
 
-             
-<script id="dsq-count-scr" src="//bblaisontheweb.disqus.com/count.js" async></script>
-<script  language="javascript" type="text/javascript">
-function uncollapse() {
-    if (window.location.hash.match(/^#comment-\d+$/)) {
-        $('#disqus_thread').collapse('show');
-    }
-}
-</script>
-<script type="text/javascript" language="JavaScript">
-uncollapse();
-window.onhashchange=function(){
-    if (window.location.hash.match(/^#comment-\d+$/))
-        window.location.reload(true);
-}
-</script>
-<script>
-$('#disqus_thread').on('shown', function () {
-    var link = document.getElementsByClassName('accordion-toggle');
-    var old_innerHTML = link[0].innerHTML;
-    $(link[0]).fadeOut(500, function() {
-        $(this).text('Click here to hide comments').fadeIn(500);
-    });
-    $('#disqus_thread').on('hidden', function () {
-        $(link[0]).fadeOut(500, function() {
-            $(this).text(old_innerHTML).fadeIn(500);
-        });
-    })
-})
-</script>
-
-
+    
 
 </body>
 </html>
