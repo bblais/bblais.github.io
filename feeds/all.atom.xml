@@ -5818,19 +5818,19 @@ false. Instead one wants to set up a list of models, hypotheses,
 theories to explain the data and evaluate those multiple models. Instead
 of,&lt;/strong&gt;&lt;/p&gt;
 &lt;div class="math"&gt;$$  
-P({\\rm resurrection}|{\\rm data})  
+P({\rm resurrection}|{\rm data})  
 $$&lt;/div&gt;
 &lt;p&gt;&lt;br&gt;
 and&lt;br&gt;
 &lt;/p&gt;
 &lt;div class="math"&gt;$$
-P(\\mbox{not resurrection}|{\\rm data})  
+P(\mbox{not resurrection}|{\rm data})  
 $$&lt;/div&gt;
 &lt;p&gt;&lt;strong&gt;you’d want&lt;/strong&gt;&lt;/p&gt;
 &lt;div class="math"&gt;$$
-P({\\rm resurrection}|{\\rm data}), P({\\rm hallucination}|{\\rm
-data}), P({\\rm legend}|{\\rm data}), P({\\rm literary}|{\\rm data}),
-P({\\rm hoax}|{\\rm data}),$$&lt;/div&gt;
+P({\rm resurrection}|{\rm data}), P({\rm hallucination}|{\rm
+data}), P({\rm legend}|{\rm data}), P({\rm literary}|{\rm data}),
+P({\rm hoax}|{\rm data}),$$&lt;/div&gt;
 &lt;p&gt; etc…&lt;br&gt;
 &lt;strong&gt;where of course each of these models would have many details beyond
 the simple label I’m putting in here. By being explicit with what you’re
