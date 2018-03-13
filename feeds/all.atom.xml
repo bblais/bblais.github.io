@@ -4956,14 +4956,14 @@ begotten, and the Holy Spirit who proceeds."88 The divine Unity is
 Triune.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;This is what I hear:&lt;/p&gt;
-&lt;p&gt;\&lt;span class="math"&gt;\(latex  
-a=b=c\\\\  
-a\\neq b\\\\  
-a\\neq c\\\\  
-c\\neq b  
-\\)&lt;/span&gt;&lt;/p&gt;
+&lt;div class="math"&gt;\begin{eqnarray}
+a&amp;amp;=&amp;amp;b=c\\\\
+a&amp;amp;\neq&amp;amp; b\\\\
+a&amp;amp;\neq&amp;amp; c\\\\
+c&amp;amp;\neq&amp;amp; b  
+\end{eqnarray}&lt;/div&gt;
 &lt;p&gt;And then when I hear a Christian say something like this, which was on
-the Unbelievable facebook forum,&lt;/p&gt;
+the Unbelievable Facebook forum,&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;We [...] stress the Trinity a lot, not only because we think it is
 true but because it explains some things.&lt;/p&gt;
@@ -4974,26 +4974,31 @@ Father) and yet reveal Himself to us (via the Word and Spirit).&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;What I hear is:&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Not only do I think&lt;br&gt;
- \&lt;span class="math"&gt;\(latex  
- a=b=c\\\\  
- a\\neq b\\\\  
- a\\neq c\\\\  
- c\\neq b  
- \\)&lt;/span&gt;&lt;br&gt;
- is true, but it explains a number of things. For one thing, it means
-that&lt;br&gt;
- \&lt;span class="math"&gt;\(latex  
- a+x=b+x  
- \\)&lt;/span&gt;&lt;br&gt;
- is built into the system. For another it helps us understand how&lt;br&gt;
- \&lt;span class="math"&gt;\(latex  
+&lt;p&gt;We [...] stress the X a lot, Not only do I think&lt;br&gt;
+&lt;div class="math"&gt;\begin{eqnarray}
+a&amp;amp;=&amp;amp;b=c\\\\
+a&amp;amp;\neq&amp;amp; b\\\\
+a&amp;amp;\neq&amp;amp; c\\\\
+c&amp;amp;\neq&amp;amp; b  
+\end{eqnarray}&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;is true, but it explains a number of things. For one thing, it means
+that  &lt;/p&gt;
+&lt;p&gt;
+&lt;div class="math"&gt;$$
+a+x=b+x 
+$$&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;is built into the system. For another it helps us understand how&lt;br&gt;
+&lt;div class="math"&gt;$$
  a-x\\neq b-x  
- \\)&lt;/span&gt;&lt;br&gt;
+ $$&lt;/div&gt;
+&lt;br&gt;
  and yet&lt;br&gt;
- \&lt;span class="math"&gt;\(latex  
+&lt;div class="math"&gt;$$
  b-x=c-x  
- \\)&lt;/span&gt;&lt;/p&gt;
+ $$&lt;/div&gt;
+&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;So where am I going wrong here? Where does the analogy break? If you say
 that the Trinity is a "mystery", that is simply an admission that the
@@ -5812,18 +5817,21 @@ isolation, nor is it generally informative to compare model A true or
 false. Instead one wants to set up a list of models, hypotheses,
 theories to explain the data and evaluate those multiple models. Instead
 of,&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;\&lt;span class="math"&gt;\(latex  
+&lt;div class="math"&gt;$$  
 P({\\rm resurrection}|{\\rm data})  
-\\)&lt;/span&gt;&lt;br&gt;
+$$&lt;/div&gt;
+&lt;p&gt;&lt;br&gt;
 and&lt;br&gt;
-\&lt;span class="math"&gt;\(latex  
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
 P(\\mbox{not resurrection}|{\\rm data})  
-\\)&lt;/span&gt;&lt;/p&gt;
+$$&lt;/div&gt;
 &lt;p&gt;&lt;strong&gt;you’d want&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;\&lt;span class="math"&gt;\(latex  
+&lt;div class="math"&gt;$$
 P({\\rm resurrection}|{\\rm data}), P({\\rm hallucination}|{\\rm
 data}), P({\\rm legend}|{\\rm data}), P({\\rm literary}|{\\rm data}),
-P({\\rm hoax}|{\\rm data}),\\)&lt;/span&gt; etc…&lt;br&gt;
+P({\\rm hoax}|{\\rm data}),$$&lt;/div&gt;
+&lt;p&gt; etc…&lt;br&gt;
 &lt;strong&gt;where of course each of these models would have many details beyond
 the simple label I’m putting in here. By being explicit with what you’re
 comparing to, it is easier to see where the different prior
@@ -9356,7 +9364,7 @@ steps:&lt;/p&gt;
 &lt;p&gt;say, out loud, the word "two"&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;\&lt;span class="math"&gt;\(latex {\\vdots }\\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;...&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;By the time you're at 9, they're gone. You may not even need to get up
@@ -9366,62 +9374,7 @@ superior to every other solution I've found...just like Bayesian
 analysis!&lt;/p&gt;
 &lt;p&gt;Well, perhaps the link is a little weak, but it's worth considering. Are
 there other examples of clearly superior practices that just aren't the
-ones that are known?&lt;/p&gt;
-&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
-    var align = "center",
-        indent = "0em",
-        linebreak = "false";
-
-    if (false) {
-        align = (screen.width &lt; 768) ? "left" : align;
-        indent = (screen.width &lt; 768) ? "0em" : indent;
-        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
-    }
-
-    var mathjaxscript = document.createElement('script');
-    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
-    mathjaxscript.type = 'text/javascript';
-    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
-    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
-        "MathJax.Hub.Config({" +
-        "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
-        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
-        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
-        "    displayAlign: '"+ align +"'," +
-        "    displayIndent: '"+ indent +"'," +
-        "    showMathMenu: true," +
-        "    messageStyle: 'normal'," +
-        "    tex2jax: { " +
-        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
-        "        displayMath: [ ['$$','$$'] ]," +
-        "        processEscapes: true," +
-        "        preview: 'TeX'," +
-        "    }, " +
-        "    'HTML-CSS': { " +
-        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
-        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
-        "    }, " +
-        "}); " +
-        "if ('default' !== 'default') {" +
-            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-        "}";
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
-}
-&lt;/script&gt;</content></entry><entry><title>Santa and other delusions</title><link href="https://bblais.github.io/santa-and-other-delusions.html" rel="alternate"></link><published>2012-01-04T10:58:00-05:00</published><updated>2012-01-04T10:58:00-05:00</updated><author><name>brianblais</name></author><id>tag:bblais.github.io,2012-01-04:/santa-and-other-delusions.html</id><summary type="html">&lt;p&gt;Given how I seem to support no delusions, how can I justify perpetuating
+ones that are known?&lt;/p&gt;</content></entry><entry><title>Santa and other delusions</title><link href="https://bblais.github.io/santa-and-other-delusions.html" rel="alternate"></link><published>2012-01-04T10:58:00-05:00</published><updated>2012-01-04T10:58:00-05:00</updated><author><name>brianblais</name></author><id>tag:bblais.github.io,2012-01-04:/santa-and-other-delusions.html</id><summary type="html">&lt;p&gt;Given how I seem to support no delusions, how can I justify perpetuating
 the myth of Santa Claus with my kids (oldest nearing 10)? First, I have
 to say I am not entirely convinced it is a good idea. I'd be open to
 evidence (not just opinion!) of the harm …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Given how I seem to support no delusions, how can I justify perpetuating
@@ -9949,11 +9902,11 @@ the world only makes sense if you do so.&lt;/p&gt;
 argument for X" and "if we assume X, then W, Y, and Z that we observe
 make sense...otherwise W, Y, and Z do not make sense". Both of these are
 done in science all the time. Take, Newton's law of gravitation for
-example. When he proposed the form of the gravitational force, \&lt;span class="math"&gt;\(latex
-{F \\sim 1/r\^2}\\)&lt;/span&gt;, Newton did not provide direct evidence for this
+example. When he proposed the form of the gravitational force, &lt;span class="math"&gt;\(
+F \sim 1/r^2\)&lt;/span&gt;, Newton did not provide direct evidence for this
 form...that was first done only &lt;a href="http://en.wikipedia.org/wiki/Cavendish_experiment"&gt;100 years later by Cavendish&lt;/a&gt;. What
-he did is say was "&lt;em&gt;if&lt;/em&gt; the form of the force is \&lt;span class="math"&gt;\(latex {F \\sim
-1/r\^2}\\)&lt;/span&gt;, then many other things make sense (i.e. motion of the
+he did is say was "&lt;em&gt;if&lt;/em&gt; the form of the force is &lt;span class="math"&gt;\(
+F \sim 1/r^2\)&lt;/span&gt;, then many other things make sense (i.e. motion of the
 planets, the tides, the falling of objects near the surface of the
 Earth, etc...)". In a way, this is a presuppositionalist argument: if we
 take X to be true, then our observations of W, Y, and Z make sense. This
@@ -10084,7 +10037,7 @@ universe."
 &lt;blockquote&gt;
 &lt;p&gt;"Science must be silent on why natural laws take the form that
 they do. For example, why is the gravitational law of the form
-\&lt;span class="math"&gt;\(latex {F \\sim 1/r\^2}\\)&lt;/span&gt;, and not some other form, like inverse
+&lt;span class="math"&gt;\(F \sim 1/r^2\)&lt;/span&gt;, and not some other form, like inverse
 cube? It is precisely, exactly, and eternally an inverse square.
 Why should that be? Science can never give an answer, because it
 is only descriptive, not pre-scriptive of nature.
@@ -10847,13 +10800,13 @@ particular religion. I wonder if the student tried to do that. It would
 seem to be a straightforward solution, that a school system might
 consider, in order to keep itself out of a lawsuit on the issue.&lt;/p&gt;</content></entry><entry><title>The Florida problem - a new intuition</title><link href="https://bblais.github.io/the-florida-problem-a-new-intuition.html" rel="alternate"></link><published>2011-10-30T13:35:00-04:00</published><updated>2011-10-30T13:35:00-04:00</updated><author><name>brianblais</name></author><id>tag:bblais.github.io,2011-10-30:/the-florida-problem-a-new-intuition.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;1. Introduction&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;In a prior couple of posts &lt;a href="https://brianblais.wordpress.com/2010/01/05/there-once-was-a-girl-named-florida-a-k-a-evil-problems-in-probability/"&gt;here&lt;/a&gt; and &lt;a href="https://brianblais.wordpress.com/2010/02/22/coin-flips-and-names-evil-problems-in-probability-continued/"&gt;here&lt;/a&gt; I look into the
-``evil'' probability problem of the girl-named-Florida. This problem
+"evil" probability problem of the girl-named-Florida. This problem
 compares the following two situations:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Say you know a family has two children, and further that at least one
 of them is a girl. What is the …&lt;/p&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;p&gt;&lt;strong&gt;1. Introduction&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;In a prior couple of posts &lt;a href="https://brianblais.wordpress.com/2010/01/05/there-once-was-a-girl-named-florida-a-k-a-evil-problems-in-probability/"&gt;here&lt;/a&gt; and &lt;a href="https://brianblais.wordpress.com/2010/02/22/coin-flips-and-names-evil-problems-in-probability-continued/"&gt;here&lt;/a&gt; I look into the
-``evil'' probability problem of the girl-named-Florida. This problem
+"evil" probability problem of the girl-named-Florida. This problem
 compares the following two situations:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Say you know a family has two children, and further that at least one
@@ -11134,8 +11087,9 @@ the light emitted by the mass). We then have several choices:&lt;/p&gt;
 &lt;p&gt;Guess what? Scientists have explored all these possibilities! The most
 relevant ones to this post have to do with &lt;a href="http://en.wikipedia.org/wiki/Modified_Newtonian_dynamics"&gt;MOND (Modified Newtonian
 Dynamics)&lt;/a&gt;. For example, Newton's law of gravity is of the form&lt;/p&gt;
-&lt;p&gt;\&lt;span class="math"&gt;\(latex \\displaystyle F=\\frac{GMm}{r\^2} = ma \\ \\ \\ \\ \  
-(1)&amp;amp;fg=000000\\)&lt;/span&gt;&lt;/p&gt;
+&lt;div class="math"&gt;$$ 
+F=\frac{GMm}{r^2} = ma 
+$$&lt;/div&gt;
 &lt;p&gt;The consequences of this have been checked out many decimal places, and
 explains things as diverse as the tides, the formation of planetary
 rings, and the development of galaxies. What would it take to displace
@@ -11146,23 +11100,23 @@ of observations which are inconsistent with the current theory. This is
 why it took 200 years to significantly modify Newton's Theory of
 Gravity, with Einsteins General Theory of Relativity. An example of MOND
 could be something like&lt;/p&gt;
-&lt;p&gt;\&lt;span class="math"&gt;\(latex \\displaystyle F=\\frac{GMm}{r\^2} =
-m\\mu\\left(\\frac{a}{a\_o}\\right)a \\ \\ \\ \\ \\ (2)&amp;amp;fg=000000\\)&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;where \&lt;span class="math"&gt;\(latex {\\mu(a/a\_o)}&amp;amp;fg=000000\\)&lt;/span&gt; is a function that needs to be
+&lt;div class="math"&gt;$$
+F=\frac{GMm}{r^2}\times \mu\left(\frac{a}{a_o}\right) 
+$$&lt;/div&gt;
+&lt;p&gt;where &lt;span class="math"&gt;\(\mu(a/a_o)\)&lt;/span&gt; is a function that needs to be
 close to 1 for normal situations (and thus look like Newton's laws), but
 be different for the case of spinning galaxies. In this case there is a
-single parameter, \&lt;span class="math"&gt;\(latex {a\_o}&amp;amp;fg=000000\\)&lt;/span&gt;, which is a critical
+single parameter, &lt;span class="math"&gt;\(a_o\)&lt;/span&gt;, which is a critical
 acceleration far above which the situation is "normal". Typical values
-are around \&lt;span class="math"&gt;\(latex {10\^{-10} {\\rm m/s\^2}}&amp;amp;fg=000000\\)&lt;/span&gt;, and one
-possible form for \&lt;span class="math"&gt;\(latex {\\mu()}&amp;amp;fg=000000\\)&lt;/span&gt; is&lt;/p&gt;
-&lt;p&gt;\&lt;span class="math"&gt;\(latex \\displaystyle \\mu(x) = 1-e\^{-x} \\ \\ \\ \\ \  
-(3)&amp;amp;fg=000000\\)&lt;/span&gt;&lt;/p&gt;
+are around &lt;span class="math"&gt;\( 10^{-10} {\rm m/s^2}\)&lt;/span&gt;, and one
+possible form for &lt;span class="math"&gt;\(\mu()\)&lt;/span&gt; is&lt;/p&gt;
+&lt;div class="math"&gt;$$ \mu(x) = 1-e^{-x}
+$$&lt;/div&gt;
 &lt;p&gt;Near the Earth, this translates to&lt;/p&gt;
-&lt;p&gt;\&lt;span class="math"&gt;\(latex \\displaystyle \\mu(x) =
-0.\\underbrace{99999999\\cdots}\_{10\^{10} {\\rm nines!}} \\ \\ \\ \\ \  
-(4)&amp;amp;fg=000000\\)&lt;/span&gt;&lt;/p&gt;
+&lt;div class="math"&gt;$$ \mu(x) =0.\underbrace{99999999\cdots}_{10^{10} {\rm nines!}} 
+$$&lt;/div&gt;
 &lt;p&gt;On the big scale, on the outskirts of galaxies, the accelerations are
-comparable to \&lt;span class="math"&gt;\(latex {a\_o}&amp;amp;fg=000000\\)&lt;/span&gt; and the predictions can lead to
+comparable to &lt;span class="math"&gt;\(a_o\)&lt;/span&gt; and the predictions can lead to
 consistent mass curves without introducing more mass.&lt;/p&gt;
 &lt;p&gt;The dark matter postulate has also been, and continues to be, explored.
 There are some theoretical reasons to suggest that dark matter exists in
@@ -11190,15 +11144,16 @@ inertial reference frames (i.e. measurements made in situations of
 constant speed). The derivation of the maximum speed is a consequence of
 this, and results in the Lorentz transformation. What we see in these
 equations is a factor entering in throughout of the form&lt;/p&gt;
-&lt;p&gt;\&lt;span class="math"&gt;\(latex \\displaystyle \\gamma = \\frac{1}{\\sqrt{1-v\^2/c\^2}} \\ \\ \  
-\\ \\ (5)&amp;amp;fg=000000\\)&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;where \&lt;span class="math"&gt;\(latex {c}&amp;amp;fg=000000\\)&lt;/span&gt; is the speed of light, and \&lt;span class="math"&gt;\(latex
-{v}&amp;amp;fg=000000\\)&lt;/span&gt; is the speed of an object. This factor goes to infinity
-as \&lt;span class="math"&gt;\(latex {v\\rightarrow c}&amp;amp;fg=000000\\)&lt;/span&gt;, which places the speed limit.
+&lt;div class="math"&gt;$$
+\gamma = \frac{1}{\sqrt{1-v^2/c^2}} 
+$$&lt;/div&gt;
+&lt;p&gt;where &lt;span class="math"&gt;\(c\)&lt;/span&gt; is the speed of light, and &lt;span class="math"&gt;\(v\)&lt;/span&gt; is the speed of an object. This factor goes to infinity
+as &lt;span class="math"&gt;\(v\rightarrow c\)&lt;/span&gt;, which places the speed limit.
 However, in certain circumstances, it might be that the factor takes a
 different form and, say, looks like&lt;/p&gt;
-&lt;p&gt;\&lt;span class="math"&gt;\(latex \\displaystyle \\gamma =
-\\frac{1}{\\sqrt{1-v\^2/c\^2+10\^{-20}}} \\ \\ \\ \\ \\ (6)&amp;amp;fg=000000\\)&lt;/span&gt;&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\gamma = \frac{1}{\sqrt{1-v^2/c^2 +10^{-20}}} 
+$$&lt;/div&gt;
 &lt;p&gt;which would allow speeds greater than the speed of light. This
 simplistic hack will break other parts of the theory, and so a more
 subtle modification would be needed, but it could certainly be

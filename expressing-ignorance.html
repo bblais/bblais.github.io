@@ -15,15 +15,15 @@ Licence URI: http://www.os-templates.com/template-terms
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link href="/theme/layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
-        <link rel="stylesheet" type="text/css" href="/theme/css/custom.css" media="screen">
+    <link href="https://bblais.github.io/theme/layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+        <link rel="stylesheet" type="text/css" href="https://bblais.github.io/theme/css/custom.css" media="screen">
 
 
-        <link rel="stylesheet" href="/theme/tipuesearch/css/normalize.css">        
-        <link rel="stylesheet" type="text/css" href="/theme/tipuesearch/css/tipuesearch.css">
-<script type="text/javascript" src="path-to-MathJax/MathJax.js"></script>
+        <link rel="stylesheet" href="https://bblais.github.io/theme/tipuesearch/css/normalize.css">        
+        <link rel="stylesheet" type="text/css" href="https://bblais.github.io/theme/tipuesearch/css/tipuesearch.css">
 
 
+        <link href="https://bblais.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="bblais on the web - Full Atom Feed" />
     <script type="text/javascript">
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-47048778-1']);
@@ -43,23 +43,23 @@ Licence URI: http://www.os-templates.com/template-terms
   <header id="header" class="clear"> 
     <!-- ################################################################################################ -->
     <div id="logo" class="fl_left">
-      <h1><a href="/">bblais on the web</a></h1>
+      <h1><a href="https://bblais.github.io/">bblais on the web</a></h1>
     </div>
     <!-- ################################################################################################ -->
     <nav id="mainav" class="fl_right">
       <ul class="clear">
-                            <li ><a href="">Home</a></li>
-                            <li ><a href="/pages/presentations.html">Presentations</a></li>
-                            <li ><a href="/pages/projects.html">Projects</a></li>
-                            <li ><a href="/pages/publications.html">Publications</a></li>
+                            <li ><a href="https://bblais.github.io">Home</a></li>
+                            <li ><a href="https://bblais.github.io/pages/presentations.html">Presentations</a></li>
+                            <li ><a href="https://bblais.github.io/pages/projects.html">Projects</a></li>
+                            <li ><a href="https://bblais.github.io/pages/publications.html">Publications</a></li>
 
 
                       <li><a class="drop" href="#">Blog</a>
           <ul>
 
-                            <li ><a href="/categories.html">Categories</a></li>
-                            <li ><a href="/tags.html">Tags</a></li>
-                            <li ><a href="/archives.html">Archives</a></li>
+                            <li ><a href="https://bblais.github.io/categories.html">Categories</a></li>
+                            <li ><a href="https://bblais.github.io/tags.html">Tags</a></li>
+                            <li ><a href="https://bblais.github.io/archives.html">Archives</a></li>
                             </ul>
 
 
@@ -78,18 +78,18 @@ Licence URI: http://www.os-templates.com/template-terms
     <div class="content three_quarter first"> 
 
     <header class="page-header span10 offset2">
-    <h1><a href="/expressing-ignorance.html"> Expressing Ignorance  <small> or why Bayes is not to be feared </small>  </a></h1>
+    <h1><a href="https://bblais.github.io/expressing-ignorance.html"> Expressing Ignorance  <small> or why Bayes is not to be feared </small>  </a></h1>
     </header>
 
         <div class="span8 offset2 article-content">
 
             <p>I continue with my critique of the article <a href="https://whyevolutionistrue.wordpress.com/2015/04/16/why-i-am-not-a-bayesian/">Why I am not a Bayesian</a> by Greg Mayer, where complains about the Bayesian approach to inference, and then espouses Maximum Likelihood methods.  <a href="http://web.bryant.edu/~bblais/priors-vs-likelihoods.html">My previous post</a> looked at the notion of prior vs likelihood, why we commonly use priors (even without always knowing it), and why they are necessary for hypothesis comparison.  Here I wanted to focus on what I consider to be his biggest issue with the Bayes approach, and it is technical in nature.  It happens to be the same issue that I've heard from others - how to specify priors.  Mayer goes further, and says that the specification of ignorance is not well defined.  I admit that there may be cases where that is true, but I haven't seen a convincing one yet.  In the article he outlines the following argument against specifying initial ignorance with a prior:</p>
 <blockquote>
-<p>Let’s look at simple genetic example: a gene with two alleles (forms) at the locus (say alleles $A$ and $a$). The two alleles have frequencies $p + q = 1$, and, if there are no evolutionary forces acting on the population and mating is at random, then the three genotypes ($AA$, $Aa$, and $aa$) will have the frequencies $p^2$, $2pq$, and $q^2$, respectively. If I am addressing the frequency of allele $a$, and I am a Bayesian, then I assign equal prior probability to all possible values of $q$, so</p>
-<p>$P(q&gt;.5) = 0.5$</p>
-<p>But this implies that the frequency of the $aa$ genotype has a non-uniform prior probability distribution</p>
-<p>$P(q^2&gt;0.25) = 0.5$.</p>
-<p>My ignorance concerning $q$ has become rather definite knowledge concerning $q^2$ (which, if there is genetic dominance at the locus, would be the frequency of recessive homozygotes; as in Mendel’s short pea plants, this is a very common way in which we observe the data). This apparent conversion of ‘ignorance’ to ‘knowledge’ will be generally so: prior probabilities are not invariant to parameter transformation (in this case, the transformation is the squaring of $q$). And even more generally, there will be no unique, objective distribution for ignorance. Lacking a genuine prior distribution (which we do have in the diagnosis example above), reasonable men may disagree on how to represent their ignorance. As Royall (1997) put it, “pure ignorance cannot be represented by a probability distribution”.</p>
+<p>Let’s look at simple genetic example: a gene with two alleles (forms) at the locus (say alleles <span class="math">\(A\)</span> and <span class="math">\(a\)</span>). The two alleles have frequencies <span class="math">\(p + q = 1\)</span>, and, if there are no evolutionary forces acting on the population and mating is at random, then the three genotypes (<span class="math">\(AA\)</span>, <span class="math">\(Aa\)</span>, and <span class="math">\(aa\)</span>) will have the frequencies <span class="math">\(p^2\)</span>, <span class="math">\(2pq\)</span>, and <span class="math">\(q^2\)</span>, respectively. If I am addressing the frequency of allele <span class="math">\(a\)</span>, and I am a Bayesian, then I assign equal prior probability to all possible values of <span class="math">\(q\)</span>, so</p>
+<p><span class="math">\(P(q&gt;.5) = 0.5\)</span></p>
+<p>But this implies that the frequency of the <span class="math">\(aa\)</span> genotype has a non-uniform prior probability distribution</p>
+<p><span class="math">\(P(q^2&gt;0.25) = 0.5\)</span>.</p>
+<p>My ignorance concerning <span class="math">\(q\)</span> has become rather definite knowledge concerning <span class="math">\(q^2\)</span> (which, if there is genetic dominance at the locus, would be the frequency of recessive homozygotes; as in Mendel’s short pea plants, this is a very common way in which we observe the data). This apparent conversion of ‘ignorance’ to ‘knowledge’ will be generally so: prior probabilities are not invariant to parameter transformation (in this case, the transformation is the squaring of <span class="math">\(q\)</span>). And even more generally, there will be no unique, objective distribution for ignorance. Lacking a genuine prior distribution (which we do have in the diagnosis example above), reasonable men may disagree on how to represent their ignorance. As Royall (1997) put it, “pure ignorance cannot be represented by a probability distribution”.</p>
 </blockquote>
 <p>This example intrigued me because of its simplicity - it must have some solution.  It also gave me an excuse to play with <a href="http://plot.ly">plotly, the online plotting program</a> and <a href="http://dan.iel.fm/emcee/current/">emcee: The MCMC Hammer</a>, both of which I had been meaning to get some practice in.</p>
 <h2 id="summary">Summary</h2>
@@ -101,44 +101,49 @@ Licence URI: http://www.os-templates.com/template-terms
 </ol>
 <p>Mayer's critique of priors with this genetic example is an example of point (3), and we outline that with a model analogy.  In sum, the "apparent conversion of ‘ignorance’ to ‘knowledge’" that Greg Mayer is so concerned about is in fact not just apparent - it is explicit.  This is not due to some arcane mathematics on priors, but to <em>added information</em>.  What Mayer's considers to be equivalent situations - knowledge of only two possible states, and knowledge of the process that produces those states - are not equivalent at all.  </p>
 <h2 id="the-model-part-1">The Model - Part 1</h2>
-<p>The model that I'm using comes in two steps.  The first step concerns the observation of a system with two states, call them $+$ and $-$, and we want to infer from the observations of these states what the underlying probabilities, denoted $\theta_+$ and $\theta_-$ respectively, are.  The observed data is something as simple as the number observed in one state vs the other, such as
-\begin{eqnarray<em>}
-N_+ &amp;=&amp; 16 \
-N_- &amp;=&amp; 4 \
+<p>The model that I'm using comes in two steps.  The first step concerns the observation of a system with two states, call them <span class="math">\(+\)</span> and <span class="math">\(-\)</span>, and we want to infer from the observations of these states what the underlying probabilities, denoted <span class="math">\(\theta_+\)</span> and <span class="math">\(\theta_-\)</span> respectively, are.  The observed data is something as simple as the number observed in one state vs the other, such as
+</p>
+<div class="math">\begin{eqnarray*}
+N_+ &amp;=&amp; 16 \\
+N_- &amp;=&amp; 4 \\
 N&amp;\equiv&amp; N_+ + N_- = 20
-\end{eqnarray</em>}</p>
+\end{eqnarray*}</div>
 <p>The solution to this is achieved with a straightforward application of Bayes' rule:</p>
-<p>\begin{eqnarray<em>}
-P(\theta_+|{\rm data}) &amp;=&amp; P({\rm data}|\theta_+)\times P(\theta_+)/K \
-P(\theta_-|{\rm data}) &amp;=&amp; \underbrace{P({\rm data}|-)}<em>{\rm likelihood}\times  \underbrace{P(\theta</em>-)}_{\rm prior}/K
-\end{eqnarray</em>}</p>
+<div class="math">\begin{eqnarray*}
+P(\theta_+|{\rm data}) &amp;=&amp; P({\rm data}|\theta_+)\times P(\theta_+)/K \\
+P(\theta_-|{\rm data}) &amp;=&amp; \underbrace{P({\rm data}|-)}_{\rm likelihood}\times  \underbrace{P(\theta_-)}_{\rm prior}/K
+\end{eqnarray*}</div>
 <p>with normalization constant</p>
-<p>\begin{eqnarray<em>}
+<div class="math">\begin{eqnarray*}
 K\equiv P({\rm data}|\theta_+)\times P(\theta_+) + P({\rm data}|\theta_-)\times P(\theta_-)
-\end{eqnarray</em>}
+\end{eqnarray*}</div>
+<p>
 and where the data is defined as 
-\begin{eqnarray<em>}
-{\rm data}&amp;\equiv &amp; \left{ N_+,N \right}
-\end{eqnarray</em>}
+</p>
+<div class="math">\begin{eqnarray*}
+{\rm data}&amp;\equiv &amp; \left\{ N_+,N \right\}
+\end{eqnarray*}</div>
+<p>
 or equivalently
-\begin{eqnarray<em>}
-{\rm data}&amp;\equiv &amp; \left{ N_-,N \right}
-\end{eqnarray</em>}</p>
+</p>
+<div class="math">\begin{eqnarray*}
+{\rm data}&amp;\equiv &amp; \left\{ N_-,N \right\}
+\end{eqnarray*}</div>
 <p>Although analytical solutions exist for this problem, I'll solve it with MCMC both to work on my implementation, but also to see how this could be applied to more challenging cases.  To do this, we specify the log-prior and log-likelihoods for our parameters.  </p>
 <h3 id="prior">Prior</h3>
-<p>Notice that we know <em>nothing</em> about the origin of these states or the process which gives rise to these states, we only observe how many there are.  Thus, we have <em>total ignorance</em> of the $\theta_-$ parameter, and we assign a uniform prior probability to reflect that.</p>
-<p>$$
-P(\theta_-) = \left{\begin{array}{cl}1 &amp; \mbox{ for } 0 \le \theta_- \le 1 \
+<p>Notice that we know <em>nothing</em> about the origin of these states or the process which gives rise to these states, we only observe how many there are.  Thus, we have <em>total ignorance</em> of the <span class="math">\(\theta_-\)</span> parameter, and we assign a uniform prior probability to reflect that.</p>
+<div class="math">$$
+P(\theta_-) = \left\{\begin{array}{cl}1 &amp; \mbox{ for } 0 \le \theta_- \le 1 \\
 0 &amp; \mbox{ otherwise } 
 \end{array}\right.
-$$</p>
+$$</div>
 <h3 id="likelihood">Likelihood</h3>
 <p>Since this is a straightforward Bernoulli process, we have for the likelihood</p>
-<p>$$
-P({\rm data}|\theta_-) = \left(\begin{array}{c}N  \ N_- \end{array}\right) \theta_{-}^{N_-}\times (1-\theta_-)^{N-N-}
-$$</p>
+<div class="math">$$
+P({\rm data}|\theta_-) = \left(\begin{array}{c}N  \\ N_- \end{array}\right) \theta_{-}^{N_-}\times (1-\theta_-)^{N-N-}
+$$</div>
 <h3 id="result">Result</h3>
-<p>The resulting posterior for $\theta_-$ is</p>
+<p>The resulting posterior for <span class="math">\(\theta_-\)</span> is</p>
 <div>
     <a href="https://plot.ly/~bblais/77/" target="_blank" title="$\hat{\theta_-}|^{97.5}_{2.5}=0.219^{+0.200}_{-0.137}$" style="display: block; text-align: center;"><img src="https://plot.ly/~bblais/77.png" alt="$\hat{\theta_-}|^{97.5}_{2.5}=0.219^{+0.200}_{-0.137}$" style="max-width: 100%;"  onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
     <script data-plotly="bblais:77" src="https://plot.ly/embed.js" async></script>
@@ -146,34 +151,34 @@ $$</p>
 
 <p>Again, clearly there is an analytic solution to this part, but that isn't the point.  And I'm not sure whether the second part has an easy solution, but the MCMC approach is just as easy.</p>
 <h2 id="model-part-2">Model - Part 2</h2>
-<p>The second step in the model is when we get some detail of the <em>process</em> by which the $+$ and $-$ states are generated.  Here is the recipe:</p>
+<p>The second step in the model is when we get some detail of the <em>process</em> by which the <span class="math">\(+\)</span> and <span class="math">\(-\)</span> states are generated.  Here is the recipe:</p>
 <ol>
-<li>I flip a two identical thumbtacks, each of which can land with the point up ($U$) or down ($D$) - and I don't know anything about the probability of these two cases. </li>
-<li>If either (or both) of the tacks lands with the point up, that is reported as the $+$ state.  The only remaining case (i.e. both tacks land pointing down), is reported as the $-$ state.</li>
+<li>I flip a two identical thumbtacks, each of which can land with the point up (<span class="math">\(U\)</span>) or down (<span class="math">\(D\)</span>) - and I don't know anything about the probability of these two cases. </li>
+<li>If either (or both) of the tacks lands with the point up, that is reported as the <span class="math">\(+\)</span> state.  The only remaining case (i.e. both tacks land pointing down), is reported as the <span class="math">\(-\)</span> state.</li>
 </ol>
 <p>We have, then, the following mapping:</p>
 <ol>
-<li>$UU \rightarrow +$</li>
-<li>$UD \rightarrow +$</li>
-<li>$DU \rightarrow +$</li>
-<li>$DD \rightarrow -$</li>
+<li><span class="math">\(UU \rightarrow +\)</span></li>
+<li><span class="math">\(UD \rightarrow +\)</span></li>
+<li><span class="math">\(DU \rightarrow +\)</span></li>
+<li><span class="math">\(DD \rightarrow -\)</span></li>
 </ol>
 <p>The parallel with alleles should be obvious.  By keeping it to a simple physical model, I avoid the extra complexities of genetic inheritance, and other biological processes.</p>
 <p>This model, again, is a basic problem in probability, but note the following very important point:</p>
 <p><strong>Our knowledge of the system has changed, so our probabilities must also change.</strong></p>
-<p>The only difference is that our ignorance is now on $\theta_U$ and $\theta_D$, and the probabilities for the $+$ and $-$ states are <em>derived</em> from that, </p>
-<p>\begin{eqnarray<em>}
-\theta_- &amp;=&amp; \theta_D^2 \
+<p>The only difference is that our ignorance is now on <span class="math">\(\theta_U\)</span> and <span class="math">\(\theta_D\)</span>, and the probabilities for the <span class="math">\(+\)</span> and <span class="math">\(-\)</span> states are <em>derived</em> from that, </p>
+<div class="math">\begin{eqnarray*}
+\theta_- &amp;=&amp; \theta_D^2 \\
 \theta_+ &amp;=&amp; 1-\theta_-
-\end{eqnarray</em>}</p>
-<p>Now we have posterior for the underlying parameters, such as $\theta_D$, as well as for the state parameters, such $\theta_-$, which are determined entirely from the underlying parameters.  The posterior for $\theta_D$ is 
+\end{eqnarray*}</div>
+<p>Now we have posterior for the underlying parameters, such as <span class="math">\(\theta_D\)</span>, as well as for the state parameters, such <span class="math">\(\theta_-\)</span>, which are determined entirely from the underlying parameters.  The posterior for <span class="math">\(\theta_D\)</span> is 
 <div>
-    <a href="https://plot.ly/~bblais/84/" target="_blank" title="$\hat{\theta_D}|^{97.5}_{2.5}=0.447^{+0.187}_{-0.184}$" style="display: block; text-align: center;"><img src="https://plot.ly/~bblais/84.png" alt="$\hat{\theta_D}|^{97.5}_{2.5}=0.447^{+0.187}_{-0.184}$" style="max-width: 100%;"  onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+    <a href="https://plot.ly/~bblais/84/" target="_blank" title="<span class="math">\(\hat{\theta_D}|^{97.5}_{2.5}=0.447^{+0.187}_{-0.184}\)</span>" style="display: block; text-align: center;"><img src="https://plot.ly/~bblais/84.png" alt="<span class="math">\(\hat{\theta_D}|^{97.5}_{2.5}=0.447^{+0.187}_{-0.184}\)</span>" style="max-width: 100%;"  onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
     <script data-plotly="bblais:84" src="https://plot.ly/embed.js" async></script>
 </div>
-while the posterior for $\theta_-$ in the Model 2 is
+while the posterior for <span class="math">\(\theta_-\)</span> in the Model 2 is
 <div>
-    <a href="https://plot.ly/~bblais/85/" target="_blank" title="${\hat{\theta}_-}|^{97.5}_{2.5}=0.200^{+0.202}_{-0.131}$" style="display: block; text-align: center;"><img src="https://plot.ly/~bblais/85.png" alt="${\hat{\theta}_-}|^{97.5}_{2.5}=0.200^{+0.202}_{-0.131}$" style="max-width: 100%;"  onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+    <a href="https://plot.ly/~bblais/85/" target="_blank" title="<span class="math">\({\hat{\theta}_-}|^{97.5}_{2.5}=0.200^{+0.202}_{-0.131}\)</span>" style="display: block; text-align: center;"><img src="https://plot.ly/~bblais/85.png" alt="<span class="math">\({\hat{\theta}_-}|^{97.5}_{2.5}=0.200^{+0.202}_{-0.131}\)</span>" style="max-width: 100%;"  onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
     <script data-plotly="bblais:85" src="https://plot.ly/embed.js" async></script>
 </div></p>
 <h2 id="comparisons-and-conclusions">Comparisons and conclusions</h2>
@@ -182,14 +187,118 @@ while the posterior for $\theta_-$ in the Model 2 is
     <a href="https://plot.ly/~bblais/86/" target="_blank" title="Ignorance on +/- vs Ignorance on U/D" style="display: block; text-align: center;"><img src="https://plot.ly/~bblais/86.png" alt="Ignorance on +/- vs Ignorance on U/D" style="max-width: 100%;"  onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
     <script data-plotly="bblais:86" src="https://plot.ly/embed.js" async></script>
 </div>
-We can easily see that, although they are different, there is no <em>practical</em> difference between them given this data. For larger $N$ this difference gets less significant.
+We can easily see that, although they are different, there is no <em>practical</em> difference between them given this data. For larger <span class="math">\(N\)</span> this difference gets less significant.
 <div>
     <a href="https://plot.ly/~bblais/87/" target="_blank" title="Ignorance on +/- vs Ignorance on U/D" style="display: block; text-align: center;"><img src="https://plot.ly/~bblais/87.png" alt="Ignorance on +/- vs Ignorance on U/D" style="max-width: 100%;"  onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
     <script data-plotly="bblais:87" src="https://plot.ly/embed.js" async></script>
 </div></p>
 <p>In sum, the "apparent conversion of ‘ignorance’ to ‘knowledge’" that Greg Mayer is so concerned about is in fact not just apparent - it is explicit.  This is not due to some arcane mathematics on priors, but to <em>added information</em>.  What Mayer's considers to be equivalent situations - knowledge of only two possible states, and knowledge of the process that produces those states - are not equivalent at all.  </p>
 <p>In practice, for this problem, it makes very little difference whether you think of things in terms of Model 1 or Model 2 except in the case of extremely rare underlying events.  This is also as it should be - if you know that the process essentially hides the existence of itself (i.e. the recessive gene is not observed phenotypically) - then you would assign a lower probability for the phenotype than you would if you only knew that there were two possible states and knew nothing about the properties of recessive characteristics.  To repeat, different states of knowledge require different probability assignments - this is a feature, not a bug.</p>
-            
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+            <section>
+<div class="accordion" id="accordion2">
+    <div class="accordion-group">
+        <div class="accordion-heading">
+            <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
+
+                data-disqus-url="https://bblais.github.io/expressing-ignorance.html"
+
+                href="https://bblais.github.io/expressing-ignorance.html#disqus_thread">
+                Comments
+            </a>
+        </div>
+        <div id="disqus_thread" class="accordion-body collapse">
+            <div class="accordion-inner">
+                <div class="comments">
+                    <div id="disqus_thread"></div>
+<script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+     */
+    /*
+    var disqus_config = function () {
+        //this.page.url = 'https://bblais.github.io/expressing-ignorance.html';  // Replace PAGE_URL with your page's canonical URL variable
+        //this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+
+        this.page.url = 'https://bblais.github.io/expressing-ignorance.html';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'https://bblais.github.io/expressing-ignorance.html';
+
+    };
+    */
+    (function() {  // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        
+        s.src = '//bblaisontheweb.disqus.com/embed.js';
+        
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
             <hr/>
         </div>
 
@@ -203,11 +312,11 @@ We can easily see that, although they are different, there is no <em>practical</
             <h4>Published</h4>
             <time pubdate="pubdate" datetime="2015-05-09T00:00:00-04:00">May 9, 2015</time>
             <h4>Category</h4>
-            <a class="category-link" href="/categories.html#articles-ref">articles</a>
+            <a class="category-link" href="https://bblais.github.io/categories.html#articles-ref">articles</a>
             <ul>
             <!-- Place this tag where you want the +1 button to render. -->
 <li><div class="g-plusone" data-size="medium" data-annotation="inline" data-width="300"></div></li>
-<li><a href="https://twitter.com/intent/tweet?screen_name=bblais" class="twitter-mention-button" data-text="I like this article.../expressing-ignorance.html" data-show-count="false">Tweet to @bblais</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></li>
+<li><a href="https://twitter.com/intent/tweet?screen_name=bblais" class="twitter-mention-button" data-text="I like this article...https://bblais.github.io/expressing-ignorance.html" data-show-count="false">Tweet to @bblais</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></li>
 </ul>
 
 
@@ -260,14 +369,14 @@ We can easily see that, although they are different, there is no <em>practical</
     <div class="one_quarter">
       <h6 class="title">Quick Links</h6>
       <ul class="nospace linklist">
-        <li><a href="">Home Page</a></li>
-        <li><a href="/archives.html">Blog</a></li>
+        <li><a href="https://bblais.github.io">Home Page</a></li>
+        <li><a href="https://bblais.github.io/archives.html">Blog</a></li>
 
-        <li><a href="/pages/presentations.html">Presentations</a></li>
-        <li><a href="/pages/projects.html">Projects</a></li>
-        <li><a href="/pages/publications.html">Publications</a></li>
+        <li><a href="https://bblais.github.io/pages/presentations.html">Presentations</a></li>
+        <li><a href="https://bblais.github.io/pages/projects.html">Projects</a></li>
+        <li><a href="https://bblais.github.io/pages/publications.html">Publications</a></li>
 
-        <li><a href="/contact.html">Contact Us</a></li>
+        <li><a href="https://bblais.github.io/contact.html">Contact Us</a></li>
       </ul>
     </div>
 
@@ -276,8 +385,8 @@ We can easily see that, although they are different, there is no <em>practical</
       <h6 class="title">Search</h6>
       <ul class="nospace linklist">
 <li>
-      <form action="/search.html">
-      <div class="tipue_search_left"><img src="/theme/tipuesearch/search.png" class="tipue_search_icon"></div>
+      <form action="https://bblais.github.io/search.html">
+      <div class="tipue_search_left"><img src="https://bblais.github.io/theme/tipuesearch/search.png" class="tipue_search_icon"></div>
       <div class="tipue_search_right"><input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" required></div>
       <div style="clear: both;"></div>
       </form>
@@ -324,13 +433,49 @@ We can easily see that, although they are different, there is no <em>practical</
 <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a> 
     
 <!-- JAVASCRIPTS -->
-<script src="/theme/layout/scripts/jquery.min.js"></script>
-<script src="/theme/layout/scripts/jquery.backtotop.js"></script>
-<script src="/theme/layout/scripts/jquery.mobilemenu.js"></script>
-<script src="/theme/layout/scripts/jquery.flexslider-min.js"></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+<script src="https://bblais.github.io/theme/layout/scripts/jquery.min.js"></script>
+<script src="https://bblais.github.io/theme/layout/scripts/jquery.backtotop.js"></script>
+<script src="https://bblais.github.io/theme/layout/scripts/jquery.mobilemenu.js"></script>
+<script src="https://bblais.github.io/theme/layout/scripts/jquery.flexslider-min.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+  });
+  </script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'></script>
 
-    
+             
+<script id="dsq-count-scr" src="//bblaisontheweb.disqus.com/count.js" async></script>
+<script  language="javascript" type="text/javascript">
+function uncollapse() {
+    if (window.location.hash.match(/^#comment-\d+$/)) {
+        $('#disqus_thread').collapse('show');
+    }
+}
+</script>
+<script type="text/javascript" language="JavaScript">
+uncollapse();
+window.onhashchange=function(){
+    if (window.location.hash.match(/^#comment-\d+$/))
+        window.location.reload(true);
+}
+</script>
+<script>
+$('#disqus_thread').on('shown', function () {
+    var link = document.getElementsByClassName('accordion-toggle');
+    var old_innerHTML = link[0].innerHTML;
+    $(link[0]).fadeOut(500, function() {
+        $(this).text('Click here to hide comments').fadeIn(500);
+    });
+    $('#disqus_thread').on('hidden', function () {
+        $(link[0]).fadeOut(500, function() {
+            $(this).text(old_innerHTML).fadeIn(500);
+        });
+    })
+})
+</script>
+
+
 
 </body>
 </html>

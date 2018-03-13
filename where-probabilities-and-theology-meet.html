@@ -15,15 +15,15 @@ Licence URI: http://www.os-templates.com/template-terms
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link href="/theme/layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
-        <link rel="stylesheet" type="text/css" href="/theme/css/custom.css" media="screen">
+    <link href="https://bblais.github.io/theme/layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+        <link rel="stylesheet" type="text/css" href="https://bblais.github.io/theme/css/custom.css" media="screen">
 
 
-        <link rel="stylesheet" href="/theme/tipuesearch/css/normalize.css">        
-        <link rel="stylesheet" type="text/css" href="/theme/tipuesearch/css/tipuesearch.css">
-<script type="text/javascript" src="path-to-MathJax/MathJax.js"></script>
+        <link rel="stylesheet" href="https://bblais.github.io/theme/tipuesearch/css/normalize.css">        
+        <link rel="stylesheet" type="text/css" href="https://bblais.github.io/theme/tipuesearch/css/tipuesearch.css">
 
 
+        <link href="https://bblais.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="bblais on the web - Full Atom Feed" />
     <script type="text/javascript">
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-47048778-1']);
@@ -43,23 +43,23 @@ Licence URI: http://www.os-templates.com/template-terms
   <header id="header" class="clear"> 
     <!-- ################################################################################################ -->
     <div id="logo" class="fl_left">
-      <h1><a href="/">bblais on the web</a></h1>
+      <h1><a href="https://bblais.github.io/">bblais on the web</a></h1>
     </div>
     <!-- ################################################################################################ -->
     <nav id="mainav" class="fl_right">
       <ul class="clear">
-                            <li ><a href="">Home</a></li>
-                            <li ><a href="/pages/presentations.html">Presentations</a></li>
-                            <li ><a href="/pages/projects.html">Projects</a></li>
-                            <li ><a href="/pages/publications.html">Publications</a></li>
+                            <li ><a href="https://bblais.github.io">Home</a></li>
+                            <li ><a href="https://bblais.github.io/pages/presentations.html">Presentations</a></li>
+                            <li ><a href="https://bblais.github.io/pages/projects.html">Projects</a></li>
+                            <li ><a href="https://bblais.github.io/pages/publications.html">Publications</a></li>
 
 
                       <li><a class="drop" href="#">Blog</a>
           <ul>
 
-                            <li ><a href="/categories.html">Categories</a></li>
-                            <li ><a href="/tags.html">Tags</a></li>
-                            <li ><a href="/archives.html">Archives</a></li>
+                            <li ><a href="https://bblais.github.io/categories.html">Categories</a></li>
+                            <li ><a href="https://bblais.github.io/tags.html">Tags</a></li>
+                            <li ><a href="https://bblais.github.io/archives.html">Archives</a></li>
                             </ul>
 
 
@@ -78,7 +78,7 @@ Licence URI: http://www.os-templates.com/template-terms
     <div class="content three_quarter first"> 
 
     <header class="page-header span10 offset2">
-    <h1><a href="/where-probabilities-and-theology-meet.html"> Where probabilities and theology meet  </a></h1>
+    <h1><a href="https://bblais.github.io/where-probabilities-and-theology-meet.html"> Where probabilities and theology meet  </a></h1>
     </header>
 
         <div class="span8 offset2 article-content">
@@ -89,54 +89,159 @@ formal demonstrations</em></a>.</p>
 <h2 id="summary-of-the-article">Summary of the article</h2>
 <p>Definitions:</p>
 <ul>
-<li>$T$ = theism</li>
-<li>$R$ = the resurrection of Jesus</li>
-<li>$D$ = specific historical data</li>
+<li><span class="math">\(T\)</span> = theism</li>
+<li><span class="math">\(R\)</span> = the resurrection of Jesus</li>
+<li><span class="math">\(D\)</span> = specific historical data</li>
 </ul>
 <p>Some definitions, and initial probability assessments.  The numbers are not meant to be precise but to convey overall qualitative estimates:</p>
 <ul>
-<li>$P(T) \ge 0.01$ which includes natural theology </li>
-<li>$P(\sim T) = 1- P(T) \le 0.99$ - prior on atheism</li>
-<li>$P(R|T) \approx 0.0001$ - unlikely but not extraordinarily so</li>
-<li>$P(R|\sim T) \approx 0.00000001$ - very unlikely</li>
-<li>$P(D|R) \approx 0.75$ - relatively high</li>
-<li>$P(D|\sim R) \approx 0.00000001$ - very unlikely</li>
+<li><span class="math">\(P(T) \ge 0.01\)</span> which includes natural theology </li>
+<li><span class="math">\(P(\sim T) = 1- P(T) \le 0.99\)</span> - prior on atheism</li>
+<li><span class="math">\(P(R|T) \approx 0.0001\)</span> - unlikely but not extraordinarily so</li>
+<li><span class="math">\(P(R|\sim T) \approx 0.00000001\)</span> - very unlikely</li>
+<li><span class="math">\(P(D|R) \approx 0.75\)</span> - relatively high</li>
+<li><span class="math">\(P(D|\sim R) \approx 0.00000001\)</span> - very unlikely</li>
 </ul>
 <p>Now some calculations.</p>
 <ul>
 <li>Probability of the data on atheism</li>
 </ul>
-<p>\begin{eqnarray}
-P(D|\sim T) &amp;=&amp; P(D| \sim T \cdot R)P(R|\sim T)+P(D| \sim T \cdot \sim R)P(\sim R|\sim T) \
-&amp;=&amp; 0.75 \cdot 0.00000001 + 0.00000001 \cdot 0.999999999 \
+<div class="math">\begin{eqnarray}
+P(D|\sim T) &amp;=&amp; P(D| \sim T \cdot R)P(R|\sim T)+P(D| \sim T \cdot \sim R)P(\sim R|\sim T) \\
+&amp;=&amp; 0.75 \cdot 0.00000001 + 0.00000001 \cdot 0.999999999 \\
 &amp;=&amp;0.00000007501
-\end{eqnarray}</p>
+\end{eqnarray}</div>
 <ul>
 <li>Probability of the data on theism</li>
 </ul>
-<p>\begin{eqnarray}
-P(D|T) &amp;=&amp; P(D| T \cdot R)P(R|T)+P(D|T \cdot \sim R)P(\sim R|T) \
-&amp;=&amp; 0.75 \cdot 0.0001 + 0.00000001 \cdot 0.9999 \
+<div class="math">\begin{eqnarray}
+P(D|T) &amp;=&amp; P(D| T \cdot R)P(R|T)+P(D|T \cdot \sim R)P(\sim R|T) \\
+&amp;=&amp; 0.75 \cdot 0.0001 + 0.00000001 \cdot 0.9999 \\
 &amp;=&amp;0.00007501
-\end{eqnarray}</p>
+\end{eqnarray}</div>
 <ul>
 <li>From which follows</li>
 </ul>
-<p>\begin{eqnarray}
-P(T|D) &amp;=&amp; \frac{P(D|T)P(T)}{P(D|T)P(T)+P(D|\sim T)P(\sim T)} \
-&amp;=&amp;\frac{0.0000751 \cdot 0.01}{0.0000751 \cdot 0.01 + 0.0000000751 \cdot 0.99} \
+<div class="math">\begin{eqnarray}
+P(T|D) &amp;=&amp; \frac{P(D|T)P(T)}{P(D|T)P(T)+P(D|\sim T)P(\sim T)} \\
+&amp;=&amp;\frac{0.0000751 \cdot 0.01}{0.0000751 \cdot 0.01 + 0.0000000751 \cdot 0.99} \\
 &amp;=&amp;0.977
-\end{eqnarray}
-where the prior probability for theism was $P(T)=0.01$ - definitely an increase in probability given the data!</p>
+\end{eqnarray}</div>
+<p>
+where the prior probability for theism was <span class="math">\(P(T)=0.01\)</span> - definitely an increase in probability given the data!</p>
 <p>The point of this argument is to "<em>serve as a rejoinder to those philosophers of religion who do not see the argument from miracles as supporting theism at all, or who think that one need to presuppose theism to argue for a miracle</em>".  Further, "<em>I am not intending to argue that the probabilities given at the start are correct, only that it is in principle very much possible for one to argue to theism from miracle evidence</em>" and "<em>that it is also possible to argue for a particular miracle without presupposing theism.</em>"</p>
 <h2 id="two-concerns-with-this-argument">Two concerns with this argument</h2>
 <h3 id="lack-of-well-defined-propositions">Lack of well-defined propositions</h3>
-<p>Probability theory only applies to well-defined propositions.  Something like $P(T)$ may not mean anything if the proposition <em>theism is true</em>, shortened to $T$ is not well defined.  If we are opening it up to all possible theisms, then we have to include deism, good gods, evil gods (think Cthulhu), chaotic gods (think Zeus), multiple gods (think Hinduism), gods as nature (think paganism), etc...  It is unclear to me that, if you include all of that, that you can easily estimate $P(T)$.  </p>
-<p>Further, quantities such as $P(R|T)$ become much lower if you include all of those other pieces of theism, $T$.  I may in the future go through the calculation explicitely. </p>
+<p>Probability theory only applies to well-defined propositions.  Something like <span class="math">\(P(T)\)</span> may not mean anything if the proposition <em>theism is true</em>, shortened to <span class="math">\(T\)</span> is not well defined.  If we are opening it up to all possible theisms, then we have to include deism, good gods, evil gods (think Cthulhu), chaotic gods (think Zeus), multiple gods (think Hinduism), gods as nature (think paganism), etc...  It is unclear to me that, if you include all of that, that you can easily estimate <span class="math">\(P(T)\)</span>.  </p>
+<p>Further, quantities such as <span class="math">\(P(R|T)\)</span> become much lower if you include all of those other pieces of theism, <span class="math">\(T\)</span>.  I may in the future go through the calculation explicitely. </p>
 <h3 id="lack-of-a-connection-from-data-to-propositions">Lack of a connection from data to propositions</h3>
-<p>What counts as "data" here and how does it connect to the propositions?  For example, the only "data" I know concerning the resurrection are <em>claims</em> from people, <em>years</em> (possibly decades) after the event, from non eye-witnesses.  So when Calum writes $P(D|\sim R) \approx 0.00000001$  (very unlikely), he is clearly wrong.  This sort of terrible evidence for the event is exactly what we'd expect if the event didn't happen.</p>
-<p>Also part of the "data" has to be what we <em>don't</em> see - official reports from Romans, mentions (either positive or negative) from contemporaries, physical evidence of <em>any</em> kind, etc...  When Calum states something like $P(D|R) \approx 0.75$ (very likely), he isn't taking this into account at all.  If the resurrection had actually happened, and the body was in fact missing from a guarded tomb, I would expect Paul to mention it and the trials in Acts to mention it.  Here, the missing data works <em>against</em> the claim and the proposed probabilities.  </p>
-            
+<p>What counts as "data" here and how does it connect to the propositions?  For example, the only "data" I know concerning the resurrection are <em>claims</em> from people, <em>years</em> (possibly decades) after the event, from non eye-witnesses.  So when Calum writes <span class="math">\(P(D|\sim R) \approx 0.00000001\)</span>  (very unlikely), he is clearly wrong.  This sort of terrible evidence for the event is exactly what we'd expect if the event didn't happen.</p>
+<p>Also part of the "data" has to be what we <em>don't</em> see - official reports from Romans, mentions (either positive or negative) from contemporaries, physical evidence of <em>any</em> kind, etc...  When Calum states something like <span class="math">\(P(D|R) \approx 0.75\)</span> (very likely), he isn't taking this into account at all.  If the resurrection had actually happened, and the body was in fact missing from a guarded tomb, I would expect Paul to mention it and the trials in Acts to mention it.  Here, the missing data works <em>against</em> the claim and the proposed probabilities.  </p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+            <section>
+<div class="accordion" id="accordion2">
+    <div class="accordion-group">
+        <div class="accordion-heading">
+            <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
+
+                data-disqus-url="https://bblais.github.io/where-probabilities-and-theology-meet.html"
+
+                href="https://bblais.github.io/where-probabilities-and-theology-meet.html#disqus_thread">
+                Comments
+            </a>
+        </div>
+        <div id="disqus_thread" class="accordion-body collapse">
+            <div class="accordion-inner">
+                <div class="comments">
+                    <div id="disqus_thread"></div>
+<script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+     */
+    /*
+    var disqus_config = function () {
+        //this.page.url = 'https://bblais.github.io/where-probabilities-and-theology-meet.html';  // Replace PAGE_URL with your page's canonical URL variable
+        //this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+
+        this.page.url = 'https://bblais.github.io/where-probabilities-and-theology-meet.html';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'https://bblais.github.io/where-probabilities-and-theology-meet.html';
+
+    };
+    */
+    (function() {  // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        
+        s.src = '//bblaisontheweb.disqus.com/embed.js';
+        
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
             <hr/>
         </div>
 
@@ -150,11 +255,11 @@ where the prior probability for theism was $P(T)=0.01$ - definitely an increase 
             <h4>Published</h4>
             <time pubdate="pubdate" datetime="2018-01-09T00:00:00-05:00">Jan 9, 2018</time>
             <h4>Category</h4>
-            <a class="category-link" href="/categories.html#religion-ref">religion</a>
+            <a class="category-link" href="https://bblais.github.io/categories.html#religion-ref">religion</a>
             <ul>
             <!-- Place this tag where you want the +1 button to render. -->
 <li><div class="g-plusone" data-size="medium" data-annotation="inline" data-width="300"></div></li>
-<li><a href="https://twitter.com/intent/tweet?screen_name=bblais" class="twitter-mention-button" data-text="I like this article.../where-probabilities-and-theology-meet.html" data-show-count="false">Tweet to @bblais</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></li>
+<li><a href="https://twitter.com/intent/tweet?screen_name=bblais" class="twitter-mention-button" data-text="I like this article...https://bblais.github.io/where-probabilities-and-theology-meet.html" data-show-count="false">Tweet to @bblais</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></li>
 </ul>
 
 
@@ -207,14 +312,14 @@ where the prior probability for theism was $P(T)=0.01$ - definitely an increase 
     <div class="one_quarter">
       <h6 class="title">Quick Links</h6>
       <ul class="nospace linklist">
-        <li><a href="">Home Page</a></li>
-        <li><a href="/archives.html">Blog</a></li>
+        <li><a href="https://bblais.github.io">Home Page</a></li>
+        <li><a href="https://bblais.github.io/archives.html">Blog</a></li>
 
-        <li><a href="/pages/presentations.html">Presentations</a></li>
-        <li><a href="/pages/projects.html">Projects</a></li>
-        <li><a href="/pages/publications.html">Publications</a></li>
+        <li><a href="https://bblais.github.io/pages/presentations.html">Presentations</a></li>
+        <li><a href="https://bblais.github.io/pages/projects.html">Projects</a></li>
+        <li><a href="https://bblais.github.io/pages/publications.html">Publications</a></li>
 
-        <li><a href="/contact.html">Contact Us</a></li>
+        <li><a href="https://bblais.github.io/contact.html">Contact Us</a></li>
       </ul>
     </div>
 
@@ -223,8 +328,8 @@ where the prior probability for theism was $P(T)=0.01$ - definitely an increase 
       <h6 class="title">Search</h6>
       <ul class="nospace linklist">
 <li>
-      <form action="/search.html">
-      <div class="tipue_search_left"><img src="/theme/tipuesearch/search.png" class="tipue_search_icon"></div>
+      <form action="https://bblais.github.io/search.html">
+      <div class="tipue_search_left"><img src="https://bblais.github.io/theme/tipuesearch/search.png" class="tipue_search_icon"></div>
       <div class="tipue_search_right"><input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" required></div>
       <div style="clear: both;"></div>
       </form>
@@ -271,13 +376,49 @@ where the prior probability for theism was $P(T)=0.01$ - definitely an increase 
 <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a> 
     
 <!-- JAVASCRIPTS -->
-<script src="/theme/layout/scripts/jquery.min.js"></script>
-<script src="/theme/layout/scripts/jquery.backtotop.js"></script>
-<script src="/theme/layout/scripts/jquery.mobilemenu.js"></script>
-<script src="/theme/layout/scripts/jquery.flexslider-min.js"></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+<script src="https://bblais.github.io/theme/layout/scripts/jquery.min.js"></script>
+<script src="https://bblais.github.io/theme/layout/scripts/jquery.backtotop.js"></script>
+<script src="https://bblais.github.io/theme/layout/scripts/jquery.mobilemenu.js"></script>
+<script src="https://bblais.github.io/theme/layout/scripts/jquery.flexslider-min.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+  });
+  </script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'></script>
 
-    
+             
+<script id="dsq-count-scr" src="//bblaisontheweb.disqus.com/count.js" async></script>
+<script  language="javascript" type="text/javascript">
+function uncollapse() {
+    if (window.location.hash.match(/^#comment-\d+$/)) {
+        $('#disqus_thread').collapse('show');
+    }
+}
+</script>
+<script type="text/javascript" language="JavaScript">
+uncollapse();
+window.onhashchange=function(){
+    if (window.location.hash.match(/^#comment-\d+$/))
+        window.location.reload(true);
+}
+</script>
+<script>
+$('#disqus_thread').on('shown', function () {
+    var link = document.getElementsByClassName('accordion-toggle');
+    var old_innerHTML = link[0].innerHTML;
+    $(link[0]).fadeOut(500, function() {
+        $(this).text('Click here to hide comments').fadeIn(500);
+    });
+    $('#disqus_thread').on('hidden', function () {
+        $(link[0]).fadeOut(500, function() {
+            $(this).text(old_innerHTML).fadeIn(500);
+        });
+    })
+})
+</script>
+
+
 
 </body>
 </html>
