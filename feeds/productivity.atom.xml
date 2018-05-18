@@ -1,5 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>bblais on the web - productivity</title><link href="https://bblais.github.io/" rel="alternate"></link><link href="https://bblais.github.io/feeds/productivity.atom.xml" rel="self"></link><id>https://bblais.github.io/</id><updated>2018-02-02T00:00:00-05:00</updated><entry><title>More than Enough Time</title><link href="https://bblais.github.io/more-than-enough-time.html" rel="alternate"></link><published>2018-02-02T00:00:00-05:00</published><updated>2018-02-02T00:00:00-05:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2018-02-02:/more-than-enough-time.html</id><summary type="html">&lt;p&gt;&lt;img alt="productivity" src="images/productivity-1995781_1280.jpg"&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>bblais on the web - productivity</title><link href="https://bblais.github.io/" rel="alternate"></link><link href="https://bblais.github.io/feeds/productivity.atom.xml" rel="self"></link><id>https://bblais.github.io/</id><updated>2018-05-18T00:00:00-04:00</updated><entry><title>Exploring the Idea of Scrum</title><link href="https://bblais.github.io/exploring-the-idea-of-scrum.html" rel="alternate"></link><published>2018-05-18T00:00:00-04:00</published><updated>2018-05-18T00:00:00-04:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2018-05-18:/exploring-the-idea-of-scrum.html</id><summary type="html">&lt;p&gt;&lt;img alt="productivity" src="images/productivity-1995781_1280.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;Although I am not in software development, and I don't work in a lot of teams, I have recently read the book &lt;em&gt;Scrum: The Art of Doing Twice the Work in Half the Time&lt;/em&gt; (&lt;a href="https://www.scruminc.com/new-scrum-the-book/"&gt;https://www.scruminc.com/new-scrum-the-book/&lt;/a&gt;) which I find very interesting and possibly quite useful&lt;sup id="fnref-1"&gt;&lt;a class="footnote-ref" href="#fn-1"&gt;1&lt;/a&gt;&lt;/sup&gt;.  As …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="productivity" src="images/productivity-1995781_1280.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;Although I am not in software development, and I don't work in a lot of teams, I have recently read the book &lt;em&gt;Scrum: The Art of Doing Twice the Work in Half the Time&lt;/em&gt; (&lt;a href="https://www.scruminc.com/new-scrum-the-book/"&gt;https://www.scruminc.com/new-scrum-the-book/&lt;/a&gt;) which I find very interesting and possibly quite useful&lt;sup id="fnref-1"&gt;&lt;a class="footnote-ref" href="#fn-1"&gt;1&lt;/a&gt;&lt;/sup&gt;.  As far as I can tell, the Scrum process derives its value from a few key concepts, which can equally well apply to individuals as well as teams, to academia as well as software development.  These key concepts, as I see them is, &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Work is done in a short, cyclical pattern: 1-2 week "sprints"&lt;/li&gt;
+&lt;li&gt;The work - the goals, on deck (aka backlog), work in progress, and done - is &lt;em&gt;displayed publicly&lt;/em&gt; (or at least prominently to the team) &lt;em&gt;at all times&lt;/em&gt;.  This is typically done with a physical &lt;a href="https://manifesto.co.uk/agile-concepts-scrum-task-board/"&gt;scrum board&lt;/a&gt;, but can also be done in software.&lt;/li&gt;
+&lt;li&gt;A &lt;em&gt;demonstration&lt;/em&gt; occurs at the end a work "sprint".  The result of the sprint is something &lt;em&gt;deliverable&lt;/em&gt; and &lt;em&gt;complete&lt;/em&gt;, even if small, and this is demonstrate to the people to whom the work has value.&lt;/li&gt;
+&lt;li&gt;A &lt;em&gt;review of the process and results&lt;/em&gt; occurs regularly at the end of each sprint&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;If working on a team, we add the further concept&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;A team needs to have &lt;em&gt;absolutely everyone&lt;/em&gt; who is needed to complete the work.  This will often involve people at many levels of a hierarchy.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;As an addition, there are a few other things I learned from the book.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The role of management is to &lt;em&gt;remove the impediments&lt;/em&gt; to getting projects done.  So, part of the review process is to list the impediments to the work so that management can work on that.&lt;/li&gt;
+&lt;li&gt;Short (15-minute) "scrum" meetings answering "what have I done since the last, what are my impediments, what am I going to get done"&lt;/li&gt;
+&lt;li&gt;Focussing on &lt;em&gt;value&lt;/em&gt; rather than work is more productive.&lt;/li&gt;
+&lt;li&gt;The "deliver quickly" and adapt is a better strategy than trying to deliver a large, complete, and possibly incorrect product.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Meanwhile I am also working my way through the book &lt;em&gt;Agile Faculty: Practical Strategies for Managing Research, Service and Teaching.&lt;/em&gt; (&lt;a href="http://press.uchicago.edu/ucp/books/book/chicago/A/bo26106581.html"&gt;http://press.uchicago.edu/ucp/books/book/chicago/A/bo26106581.html&lt;/a&gt;) I'm interested if any of these ideas will help in my own practices, and whether I can gain some benefit for the department and university processes with these ideas.  &lt;/p&gt;
+&lt;div class="footnote"&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id="fn-1"&gt;
+&lt;p&gt;One summary is &lt;a href="http://mightyrasing.com/notes-on-scrum-the-art-of-doing-twice-the-work-in-half-the-time/"&gt;here&lt;/a&gt;&amp;#160;&lt;a class="footnote-backref" href="#fnref-1" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</content></entry><entry><title>More than Enough Time</title><link href="https://bblais.github.io/more-than-enough-time.html" rel="alternate"></link><published>2018-02-02T00:00:00-05:00</published><updated>2018-02-02T00:00:00-05:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2018-02-02:/more-than-enough-time.html</id><summary type="html">&lt;p&gt;&lt;img alt="productivity" src="images/productivity-1995781_1280.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;Here are some notes about time management that I found useful from &lt;a href="https://journal.thriveglobal.com/theres-more-than-enough-time-when-you-use-the-time-you-have-3ffa7adaa5d3"&gt;this article&lt;/a&gt;: &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;If you're with your friends, be with your friends. If you're doing the dishes, do the dishes.&lt;/li&gt;
@@ -65,11 +93,11 @@
 &lt;/ol&gt;
 &lt;p&gt;It seems to be related to the Art of Charm toolbox podcast episode &lt;a href="https://theartofcharm.com/podcast-episodes/aoc-toolbox-quality-want-focus-quantity-episode-683/"&gt;If Quality Is What You Want, Focus on Quantity (Episode 683)&lt;/a&gt;&lt;/p&gt;</content></entry><entry><title>How to be productive - Part 2 - Methods</title><link href="https://bblais.github.io/how-to-be-productive-part-2-methods.html" rel="alternate"></link><published>2018-01-16T00:00:00-05:00</published><updated>2018-01-16T00:00:00-05:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2018-01-16:/how-to-be-productive-part-2-methods.html</id><summary type="html">&lt;p&gt;&lt;img alt="productivity" src="images/productivity-1995781_1280.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;In &lt;a href=""&gt;Part 1 of this series&lt;/a&gt; I describe some of the apps I've used.  Here I speak about some of the methods I have tried to be productive.&lt;/p&gt;
-&lt;h3 id="the-list"&gt;The List&lt;/h3&gt;
+&lt;h3&gt;The List&lt;/h3&gt;
 &lt;p&gt;Here's a list of some of the resources
 &lt;em&gt; &lt;a href="https://gettingthingsdone.com/"&gt;GTD (Getting things done)&lt;/a&gt; - this is perhaps the universal "To Do" methodology …&lt;/em&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="productivity" src="images/productivity-1995781_1280.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;In &lt;a href=""&gt;Part 1 of this series&lt;/a&gt; I describe some of the apps I've used.  Here I speak about some of the methods I have tried to be productive.&lt;/p&gt;
-&lt;h3 id="the-list"&gt;The List&lt;/h3&gt;
+&lt;h3&gt;The List&lt;/h3&gt;
 &lt;p&gt;Here's a list of some of the resources
 &lt;em&gt; &lt;a href="https://gettingthingsdone.com/"&gt;GTD (Getting things done)&lt;/a&gt; - this is perhaps the universal "To Do" methodology.  Most people seem to have a love/hate relationship with this method.
 &lt;/em&gt; &lt;a href="https://zenhabits.net/zen-to-done-ztd-the-ultimate-simple-productivity-system/"&gt;Zen to Done&lt;/a&gt; - a simplification of the GTD method.
@@ -79,7 +107,7 @@
 &lt;/em&gt; &lt;a href="http://www.asianefficiency.com/podcast/"&gt;The Productivity Show&lt;/a&gt; - excellent, specific advice on productivity
 &lt;em&gt; &lt;a href="http://productivity-podcast.com/"&gt;Kevin Kruse - Extreme Productivity&lt;/a&gt; - podcast seems to be over, but binge listen to this!
 &lt;/em&gt; &lt;a href="https://www.mindtools.com/pages/article/pomodoro-technique.htm"&gt;Pomodoro technique&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id="the-takeaway"&gt;The Takeaway&lt;/h3&gt;
+&lt;h3&gt;The Takeaway&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;The filing system for resource materials described in GTD is golden. Basically, just alphabetically, one folder per letter.  Doesn't matter whether you are filing "pet alligators" with "asthma paper" because you know close to where you need to look (e.g. is "asthma" under "asthma" or "medical"?).  There usually isnt so much to look through that it takes long to find, and you &lt;strong&gt;simplify the filing so that you're more likely to do it&lt;/strong&gt;.&lt;/li&gt;
 &lt;li&gt;The "2-minute rule" from GTD and zTD.  If it would take more less than 2 minutes to do, do it right now.  &lt;/li&gt;

@@ -92,7 +92,7 @@ Licence URI: http://www.os-templates.com/template-terms
 <p>My ignorance concerning <span class="math">\(q\)</span> has become rather definite knowledge concerning <span class="math">\(q^2\)</span> (which, if there is genetic dominance at the locus, would be the frequency of recessive homozygotes; as in Mendel’s short pea plants, this is a very common way in which we observe the data). This apparent conversion of ‘ignorance’ to ‘knowledge’ will be generally so: prior probabilities are not invariant to parameter transformation (in this case, the transformation is the squaring of <span class="math">\(q\)</span>). And even more generally, there will be no unique, objective distribution for ignorance. Lacking a genuine prior distribution (which we do have in the diagnosis example above), reasonable men may disagree on how to represent their ignorance. As Royall (1997) put it, “pure ignorance cannot be represented by a probability distribution”.</p>
 </blockquote>
 <p>This example intrigued me because of its simplicity - it must have some solution.  It also gave me an excuse to play with <a href="http://plot.ly">plotly, the online plotting program</a> and <a href="http://dan.iel.fm/emcee/current/">emcee: The MCMC Hammer</a>, both of which I had been meaning to get some practice in.</p>
-<h2 id="summary">Summary</h2>
+<h2>Summary</h2>
 <p>In summary,</p>
 <ol>
 <li>Probability is a measure of our <em>state of knowledge</em>.</li>
@@ -100,7 +100,7 @@ Licence URI: http://www.os-templates.com/template-terms
 <li>Humans are bad an intuiting where information comes from in some cases, and thus often mistakenly think that two problems are equivalent when they are not. </li>
 </ol>
 <p>Mayer's critique of priors with this genetic example is an example of point (3), and we outline that with a model analogy.  In sum, the "apparent conversion of ‘ignorance’ to ‘knowledge’" that Greg Mayer is so concerned about is in fact not just apparent - it is explicit.  This is not due to some arcane mathematics on priors, but to <em>added information</em>.  What Mayer's considers to be equivalent situations - knowledge of only two possible states, and knowledge of the process that produces those states - are not equivalent at all.  </p>
-<h2 id="the-model-part-1">The Model - Part 1</h2>
+<h2>The Model - Part 1</h2>
 <p>The model that I'm using comes in two steps.  The first step concerns the observation of a system with two states, call them <span class="math">\(+\)</span> and <span class="math">\(-\)</span>, and we want to infer from the observations of these states what the underlying probabilities, denoted <span class="math">\(\theta_+\)</span> and <span class="math">\(\theta_-\)</span> respectively, are.  The observed data is something as simple as the number observed in one state vs the other, such as
 </p>
 <div class="math">\begin{eqnarray*}
@@ -130,19 +130,19 @@ or equivalently
 {\rm data}&amp;\equiv &amp; \left\{ N_-,N \right\}
 \end{eqnarray*}</div>
 <p>Although analytical solutions exist for this problem, I'll solve it with MCMC both to work on my implementation, but also to see how this could be applied to more challenging cases.  To do this, we specify the log-prior and log-likelihoods for our parameters.  </p>
-<h3 id="prior">Prior</h3>
+<h3>Prior</h3>
 <p>Notice that we know <em>nothing</em> about the origin of these states or the process which gives rise to these states, we only observe how many there are.  Thus, we have <em>total ignorance</em> of the <span class="math">\(\theta_-\)</span> parameter, and we assign a uniform prior probability to reflect that.</p>
 <div class="math">$$
 P(\theta_-) = \left\{\begin{array}{cl}1 &amp; \mbox{ for } 0 \le \theta_- \le 1 \\
 0 &amp; \mbox{ otherwise } 
 \end{array}\right.
 $$</div>
-<h3 id="likelihood">Likelihood</h3>
+<h3>Likelihood</h3>
 <p>Since this is a straightforward Bernoulli process, we have for the likelihood</p>
 <div class="math">$$
 P({\rm data}|\theta_-) = \left(\begin{array}{c}N  \\ N_- \end{array}\right) \theta_{-}^{N_-}\times (1-\theta_-)^{N-N-}
 $$</div>
-<h3 id="result">Result</h3>
+<h3>Result</h3>
 <p>The resulting posterior for <span class="math">\(\theta_-\)</span> is</p>
 <div>
     <a href="https://plot.ly/~bblais/77/" target="_blank" title="$\hat{\theta_-}|^{97.5}_{2.5}=0.219^{+0.200}_{-0.137}$" style="display: block; text-align: center;"><img src="https://plot.ly/~bblais/77.png" alt="$\hat{\theta_-}|^{97.5}_{2.5}=0.219^{+0.200}_{-0.137}$" style="max-width: 100%;"  onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
@@ -150,7 +150,7 @@ $$</div>
 </div>
 
 <p>Again, clearly there is an analytic solution to this part, but that isn't the point.  And I'm not sure whether the second part has an easy solution, but the MCMC approach is just as easy.</p>
-<h2 id="model-part-2">Model - Part 2</h2>
+<h2>Model - Part 2</h2>
 <p>The second step in the model is when we get some detail of the <em>process</em> by which the <span class="math">\(+\)</span> and <span class="math">\(-\)</span> states are generated.  Here is the recipe:</p>
 <ol>
 <li>I flip a two identical thumbtacks, each of which can land with the point up (<span class="math">\(U\)</span>) or down (<span class="math">\(D\)</span>) - and I don't know anything about the probability of these two cases. </li>
@@ -173,24 +173,24 @@ $$</div>
 \end{eqnarray*}</div>
 <p>Now we have posterior for the underlying parameters, such as <span class="math">\(\theta_D\)</span>, as well as for the state parameters, such <span class="math">\(\theta_-\)</span>, which are determined entirely from the underlying parameters.  The posterior for <span class="math">\(\theta_D\)</span> is 
 <div>
-    <a href="https://plot.ly/~bblais/84/" target="_blank" title="<span class="math">\(\hat{\theta_D}|^{97.5}_{2.5}=0.447^{+0.187}_{-0.184}\)</span>" style="display: block; text-align: center;"><img src="https://plot.ly/~bblais/84.png" alt="<span class="math">\(\hat{\theta_D}|^{97.5}_{2.5}=0.447^{+0.187}_{-0.184}\)</span>" style="max-width: 100%;"  onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
-    <script data-plotly="bblais:84" src="https://plot.ly/embed.js" async></script>
+    <a href="<a href="https://plot.ly/~bblais/84/&quot;">https://plot.ly/~bblais/84/"</a> target="_blank" title="<span class="math">\(\hat{\theta_D}|^{97.5}_{2.5}=0.447^{+0.187}_{-0.184}\)</span>" style="display: block; text-align: center;"><img src="<a href="https://plot.ly/~bblais/84.png&quot;">https://plot.ly/~bblais/84.png"</a> alt="<span class="math">\(\hat{\theta_D}|^{97.5}_{2.5}=0.447^{+0.187}_{-0.184}\)</span>" style="max-width: 100%;"  onerror="this.onerror=null;this.src='<a href="https://plot.ly/404.png';&quot;">https://plot.ly/404.png';"</a> /></a>
+    <script data-plotly="bblais:84" src="<a href="https://plot.ly/embed.js&quot;">https://plot.ly/embed.js"</a> async></script>
 </div>
 while the posterior for <span class="math">\(\theta_-\)</span> in the Model 2 is
 <div>
-    <a href="https://plot.ly/~bblais/85/" target="_blank" title="<span class="math">\({\hat{\theta}_-}|^{97.5}_{2.5}=0.200^{+0.202}_{-0.131}\)</span>" style="display: block; text-align: center;"><img src="https://plot.ly/~bblais/85.png" alt="<span class="math">\({\hat{\theta}_-}|^{97.5}_{2.5}=0.200^{+0.202}_{-0.131}\)</span>" style="max-width: 100%;"  onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
-    <script data-plotly="bblais:85" src="https://plot.ly/embed.js" async></script>
+    <a href="<a href="https://plot.ly/~bblais/85/&quot;">https://plot.ly/~bblais/85/"</a> target="_blank" title="<span class="math">\({\hat{\theta}_-}|^{97.5}_{2.5}=0.200^{+0.202}_{-0.131}\)</span>" style="display: block; text-align: center;"><img src="<a href="https://plot.ly/~bblais/85.png&quot;">https://plot.ly/~bblais/85.png"</a> alt="<span class="math">\({\hat{\theta}_-}|^{97.5}_{2.5}=0.200^{+0.202}_{-0.131}\)</span>" style="max-width: 100%;"  onerror="this.onerror=null;this.src='<a href="https://plot.ly/404.png';&quot;">https://plot.ly/404.png';"</a> /></a>
+    <script data-plotly="bblais:85" src="<a href="https://plot.ly/embed.js&quot;">https://plot.ly/embed.js"</a> async></script>
 </div></p>
-<h2 id="comparisons-and-conclusions">Comparisons and conclusions</h2>
+<h2>Comparisons and conclusions</h2>
 <p>It's a bit more convenient to plot the consequences of Model 1 (ignorance in +/-) and Model 2 (ignorance in U/D), with the same data, both together on the same plot.
 <div>
-    <a href="https://plot.ly/~bblais/86/" target="_blank" title="Ignorance on +/- vs Ignorance on U/D" style="display: block; text-align: center;"><img src="https://plot.ly/~bblais/86.png" alt="Ignorance on +/- vs Ignorance on U/D" style="max-width: 100%;"  onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
-    <script data-plotly="bblais:86" src="https://plot.ly/embed.js" async></script>
+    <a href="<a href="https://plot.ly/~bblais/86/&quot;">https://plot.ly/~bblais/86/"</a> target="_blank" title="Ignorance on +/- vs Ignorance on U/D" style="display: block; text-align: center;"><img src="<a href="https://plot.ly/~bblais/86.png&quot;">https://plot.ly/~bblais/86.png"</a> alt="Ignorance on +/- vs Ignorance on U/D" style="max-width: 100%;"  onerror="this.onerror=null;this.src='<a href="https://plot.ly/404.png';&quot;">https://plot.ly/404.png';"</a> /></a>
+    <script data-plotly="bblais:86" src="<a href="https://plot.ly/embed.js&quot;">https://plot.ly/embed.js"</a> async></script>
 </div>
 We can easily see that, although they are different, there is no <em>practical</em> difference between them given this data. For larger <span class="math">\(N\)</span> this difference gets less significant.
 <div>
-    <a href="https://plot.ly/~bblais/87/" target="_blank" title="Ignorance on +/- vs Ignorance on U/D" style="display: block; text-align: center;"><img src="https://plot.ly/~bblais/87.png" alt="Ignorance on +/- vs Ignorance on U/D" style="max-width: 100%;"  onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
-    <script data-plotly="bblais:87" src="https://plot.ly/embed.js" async></script>
+    <a href="<a href="https://plot.ly/~bblais/87/&quot;">https://plot.ly/~bblais/87/"</a> target="_blank" title="Ignorance on +/- vs Ignorance on U/D" style="display: block; text-align: center;"><img src="<a href="https://plot.ly/~bblais/87.png&quot;">https://plot.ly/~bblais/87.png"</a> alt="Ignorance on +/- vs Ignorance on U/D" style="max-width: 100%;"  onerror="this.onerror=null;this.src='<a href="https://plot.ly/404.png';&quot;">https://plot.ly/404.png';"</a> /></a>
+    <script data-plotly="bblais:87" src="<a href="https://plot.ly/embed.js&quot;">https://plot.ly/embed.js"</a> async></script>
 </div></p>
 <p>In sum, the "apparent conversion of ‘ignorance’ to ‘knowledge’" that Greg Mayer is so concerned about is in fact not just apparent - it is explicit.  This is not due to some arcane mathematics on priors, but to <em>added information</em>.  What Mayer's considers to be equivalent situations - knowledge of only two possible states, and knowledge of the process that produces those states - are not equivalent at all.  </p>
 <p>In practice, for this problem, it makes very little difference whether you think of things in terms of Model 1 or Model 2 except in the case of extremely rare underlying events.  This is also as it should be - if you know that the process essentially hides the existence of itself (i.e. the recessive gene is not observed phenotypically) - then you would assign a lower probability for the phenotype than you would if you only knew that there were two possible states and knew nothing about the properties of recessive characteristics.  To repeat, different states of knowledge require different probability assignments - this is a feature, not a bug.</p>

@@ -83,7 +83,7 @@ Licence URI: http://www.os-templates.com/template-terms
 
         <div class="span8 offset2 article-content">
 
-            <h2 id="introduction">Introduction</h2>
+            <h2>Introduction</h2>
 <p>This weekend I got hooked on a <a href="a-funny-little-probability-problem-correct.html">funny little probability puzzle</a>, and
 have finally found some closure. It started with an off-hand comment by
 a student, which led me to think more deeply about the problem once I
@@ -105,7 +105,7 @@ answer, much to my surprise. After satisfying my surprise with a
 numerical simulation, I thought, "there are clearly cases where it
 <em>does</em> make a difference between replacement and no replacement (drawing
 two jacks, for example), so where does it matter?"</p>
-<h2 id="another-case">Another case</h2>
+<h2>Another case</h2>
 <p>So I did another case:</p>
 <blockquote>
 <p>You draw two cards from a deck, and ask what is the probability that
@@ -119,7 +119,7 @@ notation, we want:</p>
 </p>
 
 </blockquote>
-<h3 id="with-replacement">With replacement:</h3>
+<h3>With replacement:</h3>
 <div class="math">$$
 \begin{array}{rcl}  
 P(F1,J2|{\rm replace}) &amp;=&amp; P(F1) \times P(J2) \  
@@ -128,7 +128,7 @@ P(F1,J2|{\rm replace}) &amp;=&amp; P(F1) \times P(J2) \
 $$</div>
 <p>
 </p></p>
-<h3 id="without-replacement">Without replacement</h3>
+<h3>Without replacement</h3>
 <div class="math">$$
 \begin{array}{rcl}  
 P(F1,J2|{\rm no-replace}) &amp;=&amp; P(F1) \times P(J2|F1) \\  
@@ -140,7 +140,7 @@ P(F1,J2|{\rm no-replace}) &amp;=&amp; P(F1) \times P(J2|F1) \\
 &amp;=&amp;0.0166  
 \end{array}  
 $$</div>
-<h2 id="the-general-case">The General Case</h2>
+<h2>The General Case</h2>
 <p>It appeared to me that there was a pattern - some relationship between
 the number of jacks, the number of cards, and the number of the
 sub-population (color, face, etc...) such that the replacement and the
@@ -173,7 +173,7 @@ P(F1,J2|{\rm no-replace}) &amp;=&amp; P(F1) \times P(J2|F1) \\
 \frac{N_F-N_{JF}}{N_F} \right)  
 \end{array}  
 $$</div>
-<h3 id="solving">Solving</h3>
+<h3>Solving</h3>
 <p>When these two expressions are the same, we have:</p>
 <div class="math">$$
 \begin{array}{rcl}  
