@@ -3,8 +3,6 @@
 &lt;p&gt;Included is an interface to Bayesian MCMC with the emcee package for doing Bayesian parameter estimation and model comparison!&lt;/p&gt;
 &lt;p&gt;&lt;img alt="pyndamics" class="img-fluid" src="https://bblais.github.io/images/pyndamics.png"&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li class="img-fluid"&gt;this &lt;/li&gt;
-&lt;li&gt;another&lt;/li&gt;
 &lt;li&gt;pyndamics: Python Numerical Dynamics Simulator, &lt;a href="https://github.com/bblais/pyndamics"&gt;https://github.com/bblais/pyndamics&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="presentations"&gt;Presentations&lt;/h2&gt;
