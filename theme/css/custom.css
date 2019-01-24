@@ -1,11 +1,15 @@
-body { background: url('../images/background.png'); }
-
-blockquote {
-    font-style: italic;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 20px;
-    padding-left: 15px;
-    border-left: 3px solid #ccc;
+.atheist  {
+    color: #0000AA;
 }
-
+.aq  {
+    color: #0000AA;
+}
+.theist {
+    color: rgb(60, 138, 36);
+}
+.tq {
+    color: rgb(60, 138, 36);
+}
+.me {
+    color: rgb(128, 25, 175);
+}

@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Laplace and Twins  - Why Bayes is still right  · bblais on the web
+</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://bblais.github.io/theme/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="https://bblais.github.io/theme/css/animate.css">
+    
+    <link rel="stylesheet" href="https://bblais.github.io/theme/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://bblais.github.io/theme/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://bblais.github.io/theme/css/magnific-popup.css">
+
+    <link rel="stylesheet" href="https://bblais.github.io/theme/css/aos.css">
+
+    <link rel="stylesheet" href="https://bblais.github.io/theme/css/ionicons.min.css">
+
+    <link rel="stylesheet" href="https://bblais.github.io/theme/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="https://bblais.github.io/theme/css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="https://bblais.github.io/theme/css/flaticon.css">
+    <link rel="stylesheet" href="https://bblais.github.io/theme/css/icomoon.css">
+    <link rel="stylesheet" href="https://bblais.github.io/theme/css/style.css">
+
+    
+    <link rel="stylesheet" type="text/css" href="https://bblais.github.io/theme/css/custom.css" media="screen">
+
+
+
+
+  </head>
+  <body>
+
+	<div id="colorlib-page">
+		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+		<aside id="colorlib-aside" role="complementary" class="js-fullheight text-center">
+
+			<h1 id="colorlib-logo"><a href="https://bblais.github.io">bblais<span>.</span></a></h1>
+			<nav id="colorlib-main-menu" role="navigation">
+				<ul>
+          <li ><a href="https://bblais.github.io/pages/presentations.html">Presentations</a></li>
+          <li ><a href="https://bblais.github.io/pages/projects.html">Projects</a></li>
+          <li ><a href="https://bblais.github.io/pages/publications.html">Publications</a></li>
+          <li ><a href="https://bblais.github.io/archives.html">Archives</a></li>
+          <li ><a href="https://bblais.github.io/about.html">About</a></li>
+          <li ><a href="https://bblais.github.io/contact.html">Contact</a></li>
+          
+        </ul>
+
+        <form action="https://bblais.github.io/search.html" class="search-form">
+            <div class="form-group">
+              <span class="icon icon-search"></span>
+              <input type="text" class="form-control" name="q" placeholder="Search the blog..." ></div>
+                  <div style="clear: both;"></div>
+          </form>
+
+			</nav>
+
+			<div class="colorlib-footer">
+				<ul>
+					<li><a href="https://twitter.com/bblais"><i class="icon-twitter"></i></a></li>
+					<li><a href="https://www.linkedin.com/in/brian-blais-bb66482b/"><i class="icon-linkedin"></i></a></li>
+					<li><a href="https://github.com/bblais"><i class="icon-github"></i></a></li>
+					<li><a href="https://www.youtube.com/channel/UC8cN5_0dy5o9qNPpdLxPa8w"><i class="icon-youtube"></i></a></li>
+					<li><a href="mai&#108;&#116;o&#58;b&#37;6&#50;%6C&#37;61i%&#55;3%40%62ry&#37;61nt%2Eed&#37;7&#53;"><i class="icon-envelope"></i></a></li>
+        </ul>
+				<p style="font-size:x-small"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+          Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> and modified for <a href="http://getpelican.com/">Pelican</a> by <a href="https://bblais.github.io">bblais</a>.</p>        
+			</div>
+    </aside> <!-- END COLORLIB-ASIDE -->
+    
+
+		<div id="colorlib-main">
+
+
+<section class="ftco-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="row">
+
+
+                        <div class="col-md-12">
+                            <div class="blog-entry ftco-animate">
+                                <a href="#" class="img" style="background-image: url(https://bblais.github.io/images/);"></a>
+                                <div class="text pt-2 mt-3">
+                              <span class="category mb-1 d-block"><a href="#">articles</a></span>
+                          <h3 class="mb-4"><a href="https://bblais.github.io/posts/2016/Mar/28/laplace-and-twins/"> Laplace and Twins  <small> Why Bayes is still right </small>  </a></h3>
+                          <p class="mb-4">
+                                <p>From this paper,</p>
+<p><a href="http://statweb.stanford.edu/~ckirby/brad/other/2013Perspective.pdf"><a href="http://statweb.stanford.edu/~ckirby/brad/other/2013Perspective.pdf">http://statweb.stanford.edu/~ckirby/brad/other/2013Perspective.pdf</a></a></p>
+<p>we have the following text:</p>
+<blockquote>
+<p>“Controversial theorem” sounds like an oxymoron, but Bayes’ Rule has played this
+part for two and a half centuries. Twice it has soared to scientific celebrity, twice it has crashed,
+and it is currently enjoying another boom. The Theorem itself is a landmark of logical reasoning
+and the first serious triumph of statistical inference, yet is still treated with suspicion by a
+majority of statisticians. There are reasons to believe in the staying power of its current
+popularity, but also some worrisome signs of trouble ahead.</p>
+<p>Here is a simple but genuine example of the Rule in action (1). A physicist couple I know
+learned, from sonograms, that they were due to be parents of twin boys. “What is the probability
+our twins will be Identical rather than Fraternal?” was their question. There are two pieces of
+relevant evidence: only one-third of twins are Identical; on the other hand, Identicals are twice as
+likely to yield twin boy sonograms, since they are always same-sex while Fraternals are 50/50.
+Putting this together, the Rule correctly concludes that in this case the two pieces balance out,
+and that the odds of Identical are even. Note: the twins were fraternal.</p>
+<p>...</p>
+<p>The trouble and the
+subsequent busts came from overenthusiastic application of the Theorem in the absence of
+genuine prior information, with Laplace as a prime violator. Suppose that in the twins example
+we lacked the “one-third Identicals” prior knowledge. Laplace would have casually assumed a
+uniform distribution between zero and one for the unknown prior probability of Identical
+(yielding 2/3 rather than 1/2 as the answer to the physicists’ question.) In modern parlance,
+Laplace would be trying to assign an “uninformative prior,” one having only neutral effects on
+the output of Bayes’ rule (3).</p>
+</blockquote>
+<h2 id="the-original-calculation-with-knowledge">The original calculation, with knowledge</h2>
+<p>So, let's start with the following knowledge and some notation.</p>
+<ul>
+<li>we've observed twin boy sonograms, a proposition denoted as <span class="math">\(S\)</span></li>
+<li>1/3 of twins are identical, thus <span class="math">\(P(I) \equiv q = 1/3\)</span>.  You'll see why I use <span class="math">\(q\)</span> later.</li>
+</ul>
+<p>We are interested in <span class="math">\(P(I|S)\)</span>.  We can derive a few related probabilities, like</p>
+<ul>
+<li><span class="math">\(P(S|I) = 1/2\)</span>.  This comes from the notion that identical twins must be either BB or GG, and only half of them would give twin <em>boy</em> sonograms.</li>
+<li><span class="math">\(P(S|\sim I) = 1/4\)</span>. This comes from the notion that fraternal twins must be BB, BG, GB or GG, and only 1/4 of them would give twin <em>boy</em> sonograms.</li>
+</ul>
+<p>Setting the calculation in terms of odds ratios (which I don't like as much as direct probabilities), we get</p>
+<div class="math">\begin{eqnarray}
+\frac{P(I|S)}{P(\sim I|S)} &amp;=&amp; \frac{P(S|I)P(I)}{P(S|\sim I)P(\sim I)} \\
+&amp;=&amp; \frac{1/2 \times 1/3}{1/4 \times (1-1/3)} = 1
+\end{eqnarray}</div>
+<p>
+or 1:1 odds, and thus</p>
+<div class="math">$$P(I|S)=1/2$$</div>
+<h2 id="what-would-laplace-do">What would Laplace do?</h2>
+<p>The text refers to an "uninformative prior", in a derogatory way, and then proceeds to mistakenly use an <em>informative</em>, incorrect prior and attribute it to Laplace.  Laplace, <a href="http://web.bryant.edu/~bblais/misquoting-hume.html">like Hume</a>, is mischaracterized so often it really is remarkable.  Let's follow through how the text gets the <span class="math">\(P(S|I)=2/3\)</span> presumably what Laplace would do.  To get this, we assume that there are two states (identical and fraternal) and that uninformative means equal probability to these states.  Thus the prior is <span class="math">\(P(I)=1/2\)</span>, and the same calculation proceeds as </p>
+<div class="math">\begin{eqnarray}
+\frac{P(I|S)}{P(\sim I|S)} &amp;=&amp; \frac{P(S|I)P(I)}{P(S|\sim I)P(\sim I)} \\
+&amp;=&amp; \frac{1/2 \times 1/2}{1/4 \times (1-1/2)} = 2
+\end{eqnarray}</div>
+<p>
+or 2:1 odds and thus</p>
+<div class="math">$$P(I|S)=2/3$$</div>
+<p>The author then implies that this is clearly wrong, even though it does make sense that different knowledge <em>should</em> lead to different probability assignments.  Regardless, the author calls Laplace the "prime violator" of the "overenthusiastic application" of Bayes Theorem, where Laplace "casually assumed a uniform distribution" for the probability of getting identical twins. However I would say that this is the <em>correct</em> thing to do when one has no information - to do otherwise <em>inserts</em> unjustified information into the system.</p>
+<h2 id="what-would-laplace-really-do">What would Laplace <em>really</em> do?</h2>
+<p>Let's assume Laplace is really starting from scratch, and can't even estimate the number of twins well, so he does use a uniform distribution on <span class="math">\(q\)</span> above.  The proper calculation then is to <em>marginalize</em> over this uniform distribution.  Applying Bayes Theorem, we get</p>
+<div class="math">\begin{eqnarray}
+P(I|S) &amp;=&amp; \int_0^1 \frac{P(S|I) \cdot q}{P(S|I)\cdot q + P(S|\sim I)\cdot (1-q)} P(q) dq
+\end{eqnarray}</div>
+<p>As above we have</p>
+<ul>
+<li><span class="math">\(P(S|I) = 1/2\)</span></li>
+<li><span class="math">\(P(S|\sim I) = 1/4\)</span></li>
+<li><span class="math">\(P(q) =\)</span> uniform from 0 to 1</li>
+</ul>
+<p>and so we get (with some <a href="http://www.wolframalpha.com/input/?i=integrate+1%2F2*q%2F%5B1%2F4*q%2B1%2F4%5D+for+q+from+0+to+1">Wolfram Alpha magic</a> )</p>
+<div class="math">\begin{eqnarray}
+P(I|S) &amp;=&amp; \int_0^1 \frac{1/2 \cdot q}{1/2\cdot q + 1/4\cdot (1-q)} dq = 2-\log 4 \approx 0.614
+\end{eqnarray}</div>
+<p>again, different than our informed probability, but also different than assuming that identical twins must occur 50% of the time.  Essentially, by not knowing that identical twins are actually as rare as 1/3 of all twins, we will overestimate the probability that a pair of boy sonograms would be identical - this is a <em>good</em> thing, not a bad one.  To do otherwise would be assuming knowledge we don't have (at the time).</p>
+<h2 id="what-would-laplace-do-next">What would Laplace do <em>next</em>?</h2>
+<p>Like a good scientist, Laplace would probably follow this line of logic with some data taking.  Imagine he observes <span class="math">\(h\)</span> identical twins in <span class="math">\(N\)</span> twins, he would change his uniform distribution to a Beta distribution - just like a coin flip.  The calculation now looks like:</p>
+<div class="math">\begin{eqnarray}
+P(I|S) &amp;=&amp; \int_0^1 \frac{1/2 \cdot q}{1/2\cdot q + 1/4\cdot (1-q)} {\rm Beta}(h+1,N+1) dq 
+\end{eqnarray}</div>
+<p>which is easiest done numerically.  Using the sie library from <a href="http://web.bryant.edu/~bblais/statistical-inference-for-everyone-sie.html">my book</a> I have for <span class="math">\(h=0\)</span>, <span class="math">\(N=0\)</span>, </p>
+<div class="codehilite"><pre><span></span><span class="n">h</span><span class="o">=</span><span class="mi">0</span>
+<span class="n">N</span><span class="o">=</span><span class="mi">0</span>
+
+<span class="n">d</span><span class="o">=</span><span class="n">beta</span><span class="p">(</span><span class="n">h</span><span class="p">,</span><span class="n">N</span><span class="p">)</span>
+<span class="n">q</span><span class="o">=</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1000</span><span class="p">)</span>
+<span class="n">dq</span><span class="o">=</span><span class="n">q</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">q</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">pq</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">q</span><span class="p">)</span>
+
+<span class="n">f</span><span class="o">=</span><span class="nb">sum</span><span class="p">(</span><span class="mf">0.5</span><span class="o">*</span><span class="n">q</span><span class="o">/</span><span class="p">(</span><span class="o">.</span><span class="mi">5</span><span class="o">*</span><span class="n">q</span><span class="o">+.</span><span class="mi">25</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">q</span><span class="p">))</span><span class="o">*</span><span class="n">pq</span><span class="o">*</span><span class="n">dq</span><span class="p">)</span>
+<span class="k">print</span> <span class="n">f</span>
+</pre></div>
+
+
+<blockquote>
+<p>f = 0.614</p>
+</blockquote>
+<p>matching our analytical calculation.  Now, with a modest 30 sets of twins, 10 of which are identical (consistent with our modern observations), we have</p>
+<div class="codehilite"><pre><span></span><span class="n">h</span><span class="o">=</span><span class="mi">10</span>
+<span class="n">N</span><span class="o">=</span><span class="mi">30</span>
+
+<span class="n">d</span><span class="o">=</span><span class="n">beta</span><span class="p">(</span><span class="n">h</span><span class="p">,</span><span class="n">N</span><span class="p">)</span>
+<span class="n">q</span><span class="o">=</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1000</span><span class="p">)</span>
+<span class="n">dq</span><span class="o">=</span><span class="n">q</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">q</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">pq</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">q</span><span class="p">)</span>
+
+<span class="n">f</span><span class="o">=</span><span class="nb">sum</span><span class="p">(</span><span class="mf">0.5</span><span class="o">*</span><span class="n">q</span><span class="o">/</span><span class="p">(</span><span class="o">.</span><span class="mi">5</span><span class="o">*</span><span class="n">q</span><span class="o">+.</span><span class="mi">25</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">q</span><span class="p">))</span><span class="o">*</span><span class="n">pq</span><span class="o">*</span><span class="n">dq</span><span class="p">)</span>
+<span class="k">print</span> <span class="n">f</span>
+</pre></div>
+
+
+<blockquote>
+<p>f = 0.506</p>
+</blockquote>
+<p>or within 1% of the modern value.  So Laplace would have arrived at a perfectly reasonable answer prior to looking at the data and a well-informed answer within one visit to a French hospital.  </p>
+<p>So, what is the objection to Bayes' Theorem again?</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+                            </p>
+                          <div class="author mb-4 d-flex align-items-center">
+                            <div class="ml-3 info">
+                                <p>
+<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-via="bblais" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                                </p>
+                                <span>Published</span>
+                                    <h3><span><time pubdate="pubdate" datetime="2016-03-28T00:00:00-04:00">Mon 28 March 2016</time></span></h3>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'bblaisontheweb'; 
+    var disqus_title = 'Laplace and Twins';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                                </div>
+                            </div>
+                        </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+                    </div>
+                </div><!-- END-->
+                <div class="col-lg-4 sidebar ftco-animate">
+
+                    <div class="sidebar-box ftco-animate">
+                        <h3 class="sidebar-heading">Categories</h3>
+                      <ul class="categories">
+                        <li><a href="https://bblais.github.io/category/articles.html">articles <span>(83)</span></a></li>
+                        <li><a href="https://bblais.github.io/category/critical-thinking.html">critical thinking <span>(4)</span></a></li>
+                        <li><a href="https://bblais.github.io/category/math.html">math <span>(1)</span></a></li>
+                        <li><a href="https://bblais.github.io/category/presentations.html">presentations <span>(3)</span></a></li>
+                        <li><a href="https://bblais.github.io/category/productivity.html">productivity <span>(6)</span></a></li>
+                        <li><a href="https://bblais.github.io/category/projects.html">projects <span>(6)</span></a></li>
+                        <li><a href="https://bblais.github.io/category/religion.html">religion <span>(7)</span></a></li>
+                        <li><a href="https://bblais.github.io/category/science.html">science <span>(5)</span></a></li>
+                        <li><a href="https://bblais.github.io/category/unbelievable-project.html">Unbelievable Project <span>(19)</span></a></li>
+                        <li><a href="https://bblais.github.io/category/wordpress_migration.html">wordpress_migration <span>(160)</span></a></li>
+                      </ul>
+                    </div>
+        
+        
+                    <div class="sidebar-box ftco-animate">
+                      <h3 class="sidebar-heading">Tag Cloud</h3>
+                      <ul class="tagcloud">
+                        <a href="https://bblais.github.io/tag/science.html" class="tag-cloud-link">science (21)</a>
+                        <a href="https://bblais.github.io/tag/dynamical-systems.html" class="tag-cloud-link">dynamical systems (1)</a>
+                        <a href="https://bblais.github.io/tag/sie.html" class="tag-cloud-link">sie (5)</a>
+                        <a href="https://bblais.github.io/tag/neuroscience.html" class="tag-cloud-link">neuroscience (1)</a>
+                        <a href="https://bblais.github.io/tag/statistics.html" class="tag-cloud-link">statistics (4)</a>
+                        <a href="https://bblais.github.io/tag/probability.html" class="tag-cloud-link">probability (8)</a>
+                        <a href="https://bblais.github.io/tag/productivity.html" class="tag-cloud-link">productivity (1)</a>
+                        <a href="https://bblais.github.io/tag/religion.html" class="tag-cloud-link">religion (26)</a>
+                        <a href="https://bblais.github.io/tag/unbelievable-project.html" class="tag-cloud-link">Unbelievable Project (13)</a>
+                        <a href="https://bblais.github.io/tag/unbelievable.html" class="tag-cloud-link">unbelievable (4)</a>
+                        <a href="https://bblais.github.io/tag/education.html" class="tag-cloud-link">education (3)</a>
+                        <a href="https://bblais.github.io/tag/pseudoscience.html" class="tag-cloud-link">pseudoscience (1)</a>
+                        <a href="https://bblais.github.io/tag/creationism.html" class="tag-cloud-link">creationism (2)</a>
+                        <a href="https://bblais.github.io/tag/evolution.html" class="tag-cloud-link">evolution (2)</a>
+                        <a href="https://bblais.github.io/tag/christmas.html" class="tag-cloud-link">Christmas (1)</a>
+                        <a href="https://bblais.github.io/tag/philosophy.html" class="tag-cloud-link">philosophy (2)</a>
+                        <a href="https://bblais.github.io/tag/data.html" class="tag-cloud-link">data (1)</a>
+                        <a href="https://bblais.github.io/tag/chess.html" class="tag-cloud-link">chess (1)</a>
+                        <a href="https://bblais.github.io/tag/morality.html" class="tag-cloud-link">morality (1)</a>
+                        <a href="https://bblais.github.io/tag/dennett.html" class="tag-cloud-link">Dennett (1)</a>
+                        <a href="https://bblais.github.io/tag/web.html" class="tag-cloud-link">web (1)</a>
+                        <a href="https://bblais.github.io/tag/uncategorized.html" class="tag-cloud-link">Uncategorized (2)</a>
+                        <a href="https://bblais.github.io/tag/logic.html" class="tag-cloud-link">Logic (2)</a>
+                        <a href="https://bblais.github.io/tag/fine-tuning.html" class="tag-cloud-link">Fine Tuning (1)</a>
+                      </ul>
+                    </div>
+        
+
+<div class="sidebar-box subs-wrap img" style="background-image: url(https://bblais.github.io/theme/images/bg_1.jpg);">
+    <div class="overlay"></div>
+                    <h3 class="mb-4 sidebar-heading">Newsletter</h3>
+                    <p class="mb-4">Want to hear about the free stuff I make?   Want to hear about what I can do to help your projects?  Sign up here!  Low-traffic, no misuse of your email, opt out any time.</p>
+      <form action="https://formspree.io/b&#37;6&#50;%6C&#37;61i%&#55;3%40%62ry&#37;61nt%2Eed&#37;7&#53;" method="POST" class="subscribe-form">
+        <div class="form-group">
+          <input type="text" class="form-control" name="_replyto" placeholder="Email Address">
+          <input type="submit" value="Subscribe" class="mt-2 btn btn-white submit">
+          <input type="hidden" name="name" value="Newsletter Subscribe" placeholder="Your Name">
+          <input type="hidden" name="_next" value="https://bblais.github.io/thanks.html" />
+        </div>
+      </form>
+    </div>
+            <!-- <div class="sidebar-box subs-wrap img" style="background-image: url(https://bblais.github.io/theme/images/bg_1.jpg);">
+            <div class="overlay"></div>
+                            <h3 class="mb-4 sidebar-heading">Newsletter</h3>
+                            <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia</p>
+              <form action="#" class="subscribe-form">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Email Address">
+                  <input type="submit" value="Subscribe" class="mt-2 btn btn-white submit">
+                </div>
+              </form>
+            </div> -->
+
+            <!-- <div class="sidebar-box ftco-animate">
+                <h3 class="sidebar-heading">Archives</h3>
+              <ul class="categories">
+                  <li><a href="#">October 2018 <span>(10)</span></a></li>
+                <li><a href="#">September 2018 <span>(6)</span></a></li>
+                <li><a href="#">August 2018 <span>(8)</span></a></li>
+                <li><a href="#">July 2018 <span>(2)</span></a></li>
+                <li><a href="#">June 2018 <span>(7)</span></a></li>
+                <li><a href="#">May 2018 <span>(5)</span></a></li>
+              </ul>
+            </div> -->
+
+
+
+          </div><!-- END COL -->
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+            <div class="container px-md-5">
+              <div class="row mb-5">
+                <div class="col-md">
+                  <div class="ftco-footer-widget mb-4 ml-md-4">
+                    <h2 class="ftco-heading-2">Work</h2>
+
+                    <p>Science Department
+                        Bryant University
+                        1150 Douglas Pike
+                        Smithfield, RI
+                        02917
+                    </p>
+                    <p>
+                        Institute for Brain and Neural Systems
+                        Brown University
+                        182 Hope Street Pike
+                        Providence, RI
+                        02912
+                      </p>
+                  </div>
+                </div>
+
+                <!-- <div class="col-md">
+                   <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">Archives</h2>
+                    <ul class="list-unstyled categories">
+                        <li><a href="#">October 2018 <span>(6)</span></a></li>
+                      <li><a href="#">September 2018 <span>(6)</span></a></li>
+                      <li><a href="#">August 2018 <span>(8)</span></a></li>
+                      <li><a href="#">July 2018 <span>(2)</span></a></li>
+                      <li><a href="#">June 2018 <span>(7)</span></a></li>
+                    </ul>
+                  </div>
+                </div> -->
+
+                <div class="col-md">
+                  <div class="ftco-footer-widget mb-4">
+                      <h2 class="ftco-heading-2">Have a Question?</h2>
+                      <div class="block-23 mb-3">
+                        <ul>
+                          <li><span class="icon icon-map-marker"></span><span class="text">1150 Douglas Pike, Smithfield, Rhode Island, USA</span></li>
+                          <li><a href="#"><span class="icon icon-phone"></span><span class="text">(401) 232-6153</span></a></li>
+                          <li><a href="mai&#108;&#116;o&#58;b&#37;6&#50;%6C&#37;61i%&#55;3%40%62ry&#37;61nt%2Eed&#37;7&#53;"><span class="icon icon-envelope"></span><span class="text">b&#37;6&#50;%6C&#37;61i%&#55;3%40%62ry&#37;61nt%2Eed&#37;7&#53;</span></a></li>
+                          <li><a href="https://twitter.com/bblais"><span class="icon icon-twitter"></span><span class="text">bblais</span></a></li>
+                        </ul>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+      
+                  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+        Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> and modified for <a href="http://getpelican.com/">Pelican</a> by <a href="https://bblais.github.io">bblais</a>
+        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                </div>
+              </div>
+            </div>
+          </footer>
+      
+      
+		</div><!-- END COLORLIB-MAIN -->
+	</div><!-- END COLORLIB-PAGE -->
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+  <script src="https://bblais.github.io/theme/js/jquery.min.js"></script>
+  <script src="https://bblais.github.io/theme/js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="https://bblais.github.io/theme/js/popper.min.js"></script>
+  <script src="https://bblais.github.io/theme/js/bootstrap.min.js"></script>
+  <script src="https://bblais.github.io/theme/js/jquery.easing.1.3.js"></script>
+  <script src="https://bblais.github.io/theme/js/jquery.waypoints.min.js"></script>
+  <script src="https://bblais.github.io/theme/js/jquery.stellar.min.js"></script>
+  <script src="https://bblais.github.io/theme/js/owl.carousel.min.js"></script>
+  <script src="https://bblais.github.io/theme/js/jquery.magnific-popup.min.js"></script>
+  <script src="https://bblais.github.io/theme/js/aos.js"></script>
+  <script src="https://bblais.github.io/theme/js/jquery.animateNumber.min.js"></script>
+  <script src="https://bblais.github.io/theme/js/bootstrap-datepicker.js"></script>
+  <script src="https://bblais.github.io/theme/js/jquery.timepicker.min.js"></script>
+  <script src="https://bblais.github.io/theme/js/scrollax.min.js"></script>
+  <script src="https://bblais.github.io/theme/js/google-map.js"></script>
+  <script src="https://bblais.github.io/theme/js/main.js"></script>
+    
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+    });
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+  
+
+
+  </body>
+</html>

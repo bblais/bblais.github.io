@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Pennies!  - An example from Statistical Inference for Everyone  · bblais on the web
+</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://bblais.github.io/theme/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="https://bblais.github.io/theme/css/animate.css">
+    
+    <link rel="stylesheet" href="https://bblais.github.io/theme/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://bblais.github.io/theme/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://bblais.github.io/theme/css/magnific-popup.css">
+
+    <link rel="stylesheet" href="https://bblais.github.io/theme/css/aos.css">
+
+    <link rel="stylesheet" href="https://bblais.github.io/theme/css/ionicons.min.css">
+
+    <link rel="stylesheet" href="https://bblais.github.io/theme/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="https://bblais.github.io/theme/css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="https://bblais.github.io/theme/css/flaticon.css">
+    <link rel="stylesheet" href="https://bblais.github.io/theme/css/icomoon.css">
+    <link rel="stylesheet" href="https://bblais.github.io/theme/css/style.css">
+
+    
+    <link rel="stylesheet" type="text/css" href="https://bblais.github.io/theme/css/custom.css" media="screen">
+
+
+
+
+  </head>
+  <body>
+
+	<div id="colorlib-page">
+		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+		<aside id="colorlib-aside" role="complementary" class="js-fullheight text-center">
+
+			<h1 id="colorlib-logo"><a href="https://bblais.github.io">bblais<span>.</span></a></h1>
+			<nav id="colorlib-main-menu" role="navigation">
+				<ul>
+          <li ><a href="https://bblais.github.io/pages/presentations.html">Presentations</a></li>
+          <li ><a href="https://bblais.github.io/pages/projects.html">Projects</a></li>
+          <li ><a href="https://bblais.github.io/pages/publications.html">Publications</a></li>
+          <li ><a href="https://bblais.github.io/archives.html">Archives</a></li>
+          <li ><a href="https://bblais.github.io/about.html">About</a></li>
+          <li ><a href="https://bblais.github.io/contact.html">Contact</a></li>
+          
+        </ul>
+
+        <form action="https://bblais.github.io/search.html" class="search-form">
+            <div class="form-group">
+              <span class="icon icon-search"></span>
+              <input type="text" class="form-control" name="q" placeholder="Search the blog..." ></div>
+                  <div style="clear: both;"></div>
+          </form>
+
+			</nav>
+
+			<div class="colorlib-footer">
+				<ul>
+					<li><a href="https://twitter.com/bblais"><i class="icon-twitter"></i></a></li>
+					<li><a href="https://www.linkedin.com/in/brian-blais-bb66482b/"><i class="icon-linkedin"></i></a></li>
+					<li><a href="https://github.com/bblais"><i class="icon-github"></i></a></li>
+					<li><a href="https://www.youtube.com/channel/UC8cN5_0dy5o9qNPpdLxPa8w"><i class="icon-youtube"></i></a></li>
+					<li><a href="mai&#108;&#116;o&#58;b&#37;6&#50;%6C&#37;61i%&#55;3%40%62ry&#37;61nt%2Eed&#37;7&#53;"><i class="icon-envelope"></i></a></li>
+        </ul>
+				<p style="font-size:x-small"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+          Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> and modified for <a href="http://getpelican.com/">Pelican</a> by <a href="https://bblais.github.io">bblais</a>.</p>        
+			</div>
+    </aside> <!-- END COLORLIB-ASIDE -->
+    
+
+		<div id="colorlib-main">
+
+
+<section class="ftco-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="row">
+
+
+                        <div class="col-md-12">
+                            <div class="blog-entry ftco-animate">
+                                <a href="#" class="img" style="background-image: url(https://bblais.github.io/images/);"></a>
+                                <div class="text pt-2 mt-3">
+                              <span class="category mb-1 d-block"><a href="#">projects</a></span>
+                          <h3 class="mb-4"><a href="https://bblais.github.io/posts/2014/May/28/pennies/"> Pennies!  <small> An example from Statistical Inference for Everyone </small>  </a></h3>
+                          <p class="mb-4">
+                                <p><img src="images/Saturn_with_Pennies.png" alt="SIE" style="width: 250px;"/></p>
+<p>I just added an example of simple model construction to my textbook, <a href="http://web.bryant.edu/~bblais/statistical-inference-for-everyone-sie.html">Statistical Inference for Everyone</a>.  It's a process I don't think I've ever seen in an intro stats book, but is common in scientific work.  The idea is that you start off with a simple model, collect data, then notice where your simple model breaks, propose a new more complex model, and do the analysis again.  </p>
+<p>The entire data set I use is here, where I have the mass of US Pennies for several years:</p>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>Mass</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1960</td>
+<td>3.133</td>
+</tr>
+<tr>
+<td>1961</td>
+<td>3.083</td>
+</tr>
+<tr>
+<td>1962</td>
+<td>3.175</td>
+</tr>
+<tr>
+<td>1963</td>
+<td>3.120</td>
+</tr>
+<tr>
+<td>1964</td>
+<td>3.100</td>
+</tr>
+<tr>
+<td>1965</td>
+<td>3.060</td>
+</tr>
+<tr>
+<td>1966</td>
+<td>3.100</td>
+</tr>
+<tr>
+<td>1967</td>
+<td>3.100</td>
+</tr>
+<tr>
+<td>1968</td>
+<td>3.073</td>
+</tr>
+<tr>
+<td>1969</td>
+<td>3.076</td>
+</tr>
+<tr>
+<td>1970</td>
+<td>3.100</td>
+</tr>
+<tr>
+<td>1971</td>
+<td>3.110</td>
+</tr>
+<tr>
+<td>1972</td>
+<td>3.080</td>
+</tr>
+<tr>
+<td>1973</td>
+<td>3.100</td>
+</tr>
+<tr>
+<td>1974</td>
+<td>3.093</td>
+</tr>
+<tr>
+<td>1989</td>
+<td>2.516</td>
+</tr>
+<tr>
+<td>1990</td>
+<td>2.500</td>
+</tr>
+<tr>
+<td>1991</td>
+<td>2.500</td>
+</tr>
+<tr>
+<td>1992</td>
+<td>2.500</td>
+</tr>
+<tr>
+<td>1993</td>
+<td>2.503</td>
+</tr>
+<tr>
+<td>1994</td>
+<td>2.500</td>
+</tr>
+<tr>
+<td>1995</td>
+<td>2.497</td>
+</tr>
+<tr>
+<td>1996</td>
+<td>2.500</td>
+</tr>
+<tr>
+<td>1997</td>
+<td>2.494</td>
+</tr>
+<tr>
+<td>1998</td>
+<td>2.512</td>
+</tr>
+<tr>
+<td>1999</td>
+<td>2.521</td>
+</tr>
+<tr>
+<td>2000</td>
+<td>2.499</td>
+</tr>
+<tr>
+<td>2001</td>
+<td>2.523</td>
+</tr>
+<tr>
+<td>2002</td>
+<td>2.518</td>
+</tr>
+<tr>
+<td>2003</td>
+<td>2.520</td>
+</tr>
+</tbody>
+</table>
+<h2 id="single-true-value-model">Single "True" Value Model</h2>
+<p>One starts this analysis loading the first part (earlier than 1975), and applying a model which states that there is a single "true" value.  The best estimate of this value is the sample mean, and the posterior distribution is normal.  A plot of this looks like</p>
+<p><img alt="single" src="images/mass1965_1974_1_value.png"></p>
+<p>If you apply it to all the data, you get something that clearly looks ridiculous:</p>
+<p><img alt="single2" src="images/mass1965_2003_1_value.png"></p>
+<p>It is then that it makes sense to change the model to a two "true" values model.</p>
+<h2 id="double-true-value-model">Double "True" Value Model</h2>
+<p>With this model, we have separate means for the pre- and post-1975 data, and can look at the overlap of the credible intervals, or the posterior distribution of the difference, both of which clearly show a statistically significant difference.</p>
+<p><img alt="double" src="images/mass1965_2003_2_value.png"></p>
+<p><img alt="double diff" src="images/mass1965_2003_2_value_diff.png"></p>
+<h2 id="advantages">Advantages</h2>
+<p>This approach has several advantages over the typically methods used to teach this topic:</p>
+<ol>
+<li>it progresses systematically from simple to complex</li>
+<li>it shows the benefits and limitations of the simple models</li>
+<li>it connects the procedures of the complex models to the earlier ones, so they don't seem like disjoint unrelated topics.</li>
+</ol>
+                            </p>
+                          <div class="author mb-4 d-flex align-items-center">
+                            <div class="ml-3 info">
+                                <p>
+<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-via="bblais" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                                </p>
+                                <span>Published</span>
+                                    <h3><span><time pubdate="pubdate" datetime="2014-05-28T00:00:00-04:00">Wed 28 May 2014</time></span></h3>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'bblaisontheweb'; 
+    var disqus_title = 'Pennies!';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                                </div>
+                            </div>
+                        </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+                    </div>
+                </div><!-- END-->
+                <div class="col-lg-4 sidebar ftco-animate">
+
+                    <div class="sidebar-box ftco-animate">
+                        <h3 class="sidebar-heading">Categories</h3>
+                      <ul class="categories">
+                        <li><a href="https://bblais.github.io/category/articles.html">articles <span>(83)</span></a></li>
+                        <li><a href="https://bblais.github.io/category/critical-thinking.html">critical thinking <span>(4)</span></a></li>
+                        <li><a href="https://bblais.github.io/category/math.html">math <span>(1)</span></a></li>
+                        <li><a href="https://bblais.github.io/category/presentations.html">presentations <span>(3)</span></a></li>
+                        <li><a href="https://bblais.github.io/category/productivity.html">productivity <span>(6)</span></a></li>
+                        <li><a href="https://bblais.github.io/category/projects.html">projects <span>(6)</span></a></li>
+                        <li><a href="https://bblais.github.io/category/religion.html">religion <span>(7)</span></a></li>
+                        <li><a href="https://bblais.github.io/category/science.html">science <span>(5)</span></a></li>
+                        <li><a href="https://bblais.github.io/category/unbelievable-project.html">Unbelievable Project <span>(19)</span></a></li>
+                        <li><a href="https://bblais.github.io/category/wordpress_migration.html">wordpress_migration <span>(160)</span></a></li>
+                      </ul>
+                    </div>
+        
+        
+                    <div class="sidebar-box ftco-animate">
+                      <h3 class="sidebar-heading">Tag Cloud</h3>
+                      <ul class="tagcloud">
+                        <a href="https://bblais.github.io/tag/science.html" class="tag-cloud-link">science (21)</a>
+                        <a href="https://bblais.github.io/tag/dynamical-systems.html" class="tag-cloud-link">dynamical systems (1)</a>
+                        <a href="https://bblais.github.io/tag/sie.html" class="tag-cloud-link">sie (5)</a>
+                        <a href="https://bblais.github.io/tag/neuroscience.html" class="tag-cloud-link">neuroscience (1)</a>
+                        <a href="https://bblais.github.io/tag/statistics.html" class="tag-cloud-link">statistics (4)</a>
+                        <a href="https://bblais.github.io/tag/probability.html" class="tag-cloud-link">probability (8)</a>
+                        <a href="https://bblais.github.io/tag/productivity.html" class="tag-cloud-link">productivity (1)</a>
+                        <a href="https://bblais.github.io/tag/religion.html" class="tag-cloud-link">religion (26)</a>
+                        <a href="https://bblais.github.io/tag/unbelievable-project.html" class="tag-cloud-link">Unbelievable Project (13)</a>
+                        <a href="https://bblais.github.io/tag/unbelievable.html" class="tag-cloud-link">unbelievable (4)</a>
+                        <a href="https://bblais.github.io/tag/education.html" class="tag-cloud-link">education (3)</a>
+                        <a href="https://bblais.github.io/tag/pseudoscience.html" class="tag-cloud-link">pseudoscience (1)</a>
+                        <a href="https://bblais.github.io/tag/creationism.html" class="tag-cloud-link">creationism (2)</a>
+                        <a href="https://bblais.github.io/tag/evolution.html" class="tag-cloud-link">evolution (2)</a>
+                        <a href="https://bblais.github.io/tag/christmas.html" class="tag-cloud-link">Christmas (1)</a>
+                        <a href="https://bblais.github.io/tag/philosophy.html" class="tag-cloud-link">philosophy (2)</a>
+                        <a href="https://bblais.github.io/tag/data.html" class="tag-cloud-link">data (1)</a>
+                        <a href="https://bblais.github.io/tag/chess.html" class="tag-cloud-link">chess (1)</a>
+                        <a href="https://bblais.github.io/tag/morality.html" class="tag-cloud-link">morality (1)</a>
+                        <a href="https://bblais.github.io/tag/dennett.html" class="tag-cloud-link">Dennett (1)</a>
+                        <a href="https://bblais.github.io/tag/web.html" class="tag-cloud-link">web (1)</a>
+                        <a href="https://bblais.github.io/tag/uncategorized.html" class="tag-cloud-link">Uncategorized (2)</a>
+                        <a href="https://bblais.github.io/tag/logic.html" class="tag-cloud-link">Logic (2)</a>
+                        <a href="https://bblais.github.io/tag/fine-tuning.html" class="tag-cloud-link">Fine Tuning (1)</a>
+                      </ul>
+                    </div>
+        
+
+<div class="sidebar-box subs-wrap img" style="background-image: url(https://bblais.github.io/theme/images/bg_1.jpg);">
+    <div class="overlay"></div>
+                    <h3 class="mb-4 sidebar-heading">Newsletter</h3>
+                    <p class="mb-4">Want to hear about the free stuff I make?   Want to hear about what I can do to help your projects?  Sign up here!  Low-traffic, no misuse of your email, opt out any time.</p>
+      <form action="https://formspree.io/b&#37;6&#50;%6C&#37;61i%&#55;3%40%62ry&#37;61nt%2Eed&#37;7&#53;" method="POST" class="subscribe-form">
+        <div class="form-group">
+          <input type="text" class="form-control" name="_replyto" placeholder="Email Address">
+          <input type="submit" value="Subscribe" class="mt-2 btn btn-white submit">
+          <input type="hidden" name="name" value="Newsletter Subscribe" placeholder="Your Name">
+          <input type="hidden" name="_next" value="https://bblais.github.io/thanks.html" />
+        </div>
+      </form>
+    </div>
+            <!-- <div class="sidebar-box subs-wrap img" style="background-image: url(https://bblais.github.io/theme/images/bg_1.jpg);">
+            <div class="overlay"></div>
+                            <h3 class="mb-4 sidebar-heading">Newsletter</h3>
+                            <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia</p>
+              <form action="#" class="subscribe-form">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Email Address">
+                  <input type="submit" value="Subscribe" class="mt-2 btn btn-white submit">
+                </div>
+              </form>
+            </div> -->
+
+            <!-- <div class="sidebar-box ftco-animate">
+                <h3 class="sidebar-heading">Archives</h3>
+              <ul class="categories">
+                  <li><a href="#">October 2018 <span>(10)</span></a></li>
+                <li><a href="#">September 2018 <span>(6)</span></a></li>
+                <li><a href="#">August 2018 <span>(8)</span></a></li>
+                <li><a href="#">July 2018 <span>(2)</span></a></li>
+                <li><a href="#">June 2018 <span>(7)</span></a></li>
+                <li><a href="#">May 2018 <span>(5)</span></a></li>
+              </ul>
+            </div> -->
+
+
+
+          </div><!-- END COL -->
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+            <div class="container px-md-5">
+              <div class="row mb-5">
+                <div class="col-md">
+                  <div class="ftco-footer-widget mb-4 ml-md-4">
+                    <h2 class="ftco-heading-2">Work</h2>
+
+                    <p>Science Department
+                        Bryant University
+                        1150 Douglas Pike
+                        Smithfield, RI
+                        02917
+                    </p>
+                    <p>
+                        Institute for Brain and Neural Systems
+                        Brown University
+                        182 Hope Street Pike
+                        Providence, RI
+                        02912
+                      </p>
+                  </div>
+                </div>
+
+                <!-- <div class="col-md">
+                   <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">Archives</h2>
+                    <ul class="list-unstyled categories">
+                        <li><a href="#">October 2018 <span>(6)</span></a></li>
+                      <li><a href="#">September 2018 <span>(6)</span></a></li>
+                      <li><a href="#">August 2018 <span>(8)</span></a></li>
+                      <li><a href="#">July 2018 <span>(2)</span></a></li>
+                      <li><a href="#">June 2018 <span>(7)</span></a></li>
+                    </ul>
+                  </div>
+                </div> -->
+
+                <div class="col-md">
+                  <div class="ftco-footer-widget mb-4">
+                      <h2 class="ftco-heading-2">Have a Question?</h2>
+                      <div class="block-23 mb-3">
+                        <ul>
+                          <li><span class="icon icon-map-marker"></span><span class="text">1150 Douglas Pike, Smithfield, Rhode Island, USA</span></li>
+                          <li><a href="#"><span class="icon icon-phone"></span><span class="text">(401) 232-6153</span></a></li>
+                          <li><a href="mai&#108;&#116;o&#58;b&#37;6&#50;%6C&#37;61i%&#55;3%40%62ry&#37;61nt%2Eed&#37;7&#53;"><span class="icon icon-envelope"></span><span class="text">b&#37;6&#50;%6C&#37;61i%&#55;3%40%62ry&#37;61nt%2Eed&#37;7&#53;</span></a></li>
+                          <li><a href="https://twitter.com/bblais"><span class="icon icon-twitter"></span><span class="text">bblais</span></a></li>
+                        </ul>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+      
+                  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+        Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> and modified for <a href="http://getpelican.com/">Pelican</a> by <a href="https://bblais.github.io">bblais</a>
+        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                </div>
+              </div>
+            </div>
+          </footer>
+      
+      
+		</div><!-- END COLORLIB-MAIN -->
+	</div><!-- END COLORLIB-PAGE -->
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+  <script src="https://bblais.github.io/theme/js/jquery.min.js"></script>
+  <script src="https://bblais.github.io/theme/js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="https://bblais.github.io/theme/js/popper.min.js"></script>
+  <script src="https://bblais.github.io/theme/js/bootstrap.min.js"></script>
+  <script src="https://bblais.github.io/theme/js/jquery.easing.1.3.js"></script>
+  <script src="https://bblais.github.io/theme/js/jquery.waypoints.min.js"></script>
+  <script src="https://bblais.github.io/theme/js/jquery.stellar.min.js"></script>
+  <script src="https://bblais.github.io/theme/js/owl.carousel.min.js"></script>
+  <script src="https://bblais.github.io/theme/js/jquery.magnific-popup.min.js"></script>
+  <script src="https://bblais.github.io/theme/js/aos.js"></script>
+  <script src="https://bblais.github.io/theme/js/jquery.animateNumber.min.js"></script>
+  <script src="https://bblais.github.io/theme/js/bootstrap-datepicker.js"></script>
+  <script src="https://bblais.github.io/theme/js/jquery.timepicker.min.js"></script>
+  <script src="https://bblais.github.io/theme/js/scrollax.min.js"></script>
+  <script src="https://bblais.github.io/theme/js/google-map.js"></script>
+  <script src="https://bblais.github.io/theme/js/main.js"></script>
+    
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+    });
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+  
+
+
+  </body>
+</html>
