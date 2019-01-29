@@ -1,5 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>bblais on the web - Brian Blais</title><link href="https://bblais.github.io/" rel="alternate"></link><link href="https://bblais.github.io/feeds/brian-blais.atom.xml" rel="self"></link><id>https://bblais.github.io/</id><updated>2019-01-14T00:00:00-05:00</updated><entry><title>Dynamical systems with pyndamics</title><link href="https://bblais.github.io/posts/2019/Jan/14/dynamical-systems-with-pyndamics/" rel="alternate"></link><published>2019-01-14T00:00:00-05:00</published><updated>2019-01-14T00:00:00-05:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2019-01-14:/posts/2019/Jan/14/dynamical-systems-with-pyndamics/</id><summary type="html">&lt;p&gt;Describe dynamical systems in terms of the differential equations without having to write the coding loops or functions.  Easily plot the changes in the variables, show phase plots, and vector …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Describe dynamical systems in terms of the differential equations without having to write the coding loops or functions.  Easily plot the changes in the variables, show phase plots, and vector fields.  Explore examples from modeling the zombie apocalypse, the infectiousness of ideas on Twitter, or the exchange of energy in the Earth climate system.  Useful for teaching dynamical systems for students with little programming experience.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>bblais on the web - Brian Blais</title><link href="https://bblais.github.io/" rel="alternate"></link><link href="https://bblais.github.io/feeds/brian-blais.atom.xml" rel="self"></link><id>https://bblais.github.io/</id><updated>2019-01-29T00:00:00-05:00</updated><entry><title>If at first you don't succeed (for 50 times) you might reconsider</title><link href="https://bblais.github.io/posts/2019/Jan/29/if-at-first-you-dont-succeed-for-50-times-you-might-reconsider/" rel="alternate"></link><published>2019-01-29T00:00:00-05:00</published><updated>2019-01-29T00:00:00-05:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2019-01-29:/posts/2019/Jan/29/if-at-first-you-dont-succeed-for-50-times-you-might-reconsider/</id><summary type="html">&lt;p&gt;Here's a &lt;a href="https://www.quora.com/If-there-is-a-25-chance-of-something-what-is-the-probability-that-you-fail-to-succeed-50-times-in-a-row-before-you-finally-do-succeed/answer/Brian-Blais"&gt;straightforward problem&lt;/a&gt; from Quora - probably found in a textbook - but I try to find a new direction to make it more interesting.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;If there is a 25% chance …&lt;/p&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;p&gt;Here's a &lt;a href="https://www.quora.com/If-there-is-a-25-chance-of-something-what-is-the-probability-that-you-fail-to-succeed-50-times-in-a-row-before-you-finally-do-succeed/answer/Brian-Blais"&gt;straightforward problem&lt;/a&gt; from Quora - probably found in a textbook - but I try to find a new direction to make it more interesting.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;If there is a 25% chance of something, what is the probability that you fail to succeed 50 times in a row before you finally do succeed?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The problem, as stated, gives you a very small probability of 50 failures followed by a success.  As stated, this probability is simply&lt;/p&gt;
+&lt;p&gt;&lt;span class="math"&gt;\(P(S_{51}, F_{1,2,\cdots,50}) = 0.75^{50} \times 0.25 \sim 10^{-7}\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;However, we rarely know that an event has &lt;em&gt;exactly&lt;/em&gt; a probability of 25% - this is usually just a hunch.  Or possibly we &lt;em&gt;believe&lt;/em&gt; the probability to be 25% but in fact it’s actually 0% or in other words (unknowingly) impossible - the claim itself can be wrong.  Further, the way the question is worded almost implies that you're trying to decide to abandon...or not...an action after 50 failures.  This is a different question than the original, I admit, but much closer to what one might expect in a more realistic scenario.&lt;/p&gt;
+&lt;p&gt;Pursuing this adjusted question, say we have the following two possibilities: the original claim that &lt;span class="math"&gt;\(p_{\rm event}=0.25\)&lt;/span&gt; or the claim is false and (for example) &lt;span class="math"&gt;\(p_{\rm event}=0\)&lt;/span&gt;.  Let’s further assume that we are quite sure of the original claim, at level of 99.99%.  With the new question, we are interested in the probability of a success on try 51 after 50 previous failures, which is now a combination of the result of the claim possibly being true and the claim possibly being false.  I will outline the process for &lt;span class="math"&gt;\(m\)&lt;/span&gt; failures instead of 50, so that we can discuss it in a more interesting way.&lt;/p&gt;
+&lt;p&gt;&lt;span class="math"&gt;\(P(S_{51}| F_{1,2,\cdots,50}) = P(S_{51}| F_{1,2,\cdots,m}, {\rm True\ Claim})P({\rm True\ Claim}|F_{1,2,\cdots,m}) + P(S_{51}| F_{1,2,\cdots,m}, {\rm False\ Claim})P({\rm False\ Claim}|F_{1,2,\cdots,m})\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;The key part of this calculation is the comparison of the two possibilities (i.e. the claim is true or the claim is false) after observing 50 failures. We can apply Bayes Rule, &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(P({\rm True\ Claim}|F_{1,2,\cdots,m}) \sim P(F_{1,2,\cdots,m}| {\rm True\ Claim})\cdot P({\rm True\ Claim}) \sim 0.75^m \cdot 0.9999\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(P({\rm False\ Claim}|F_{1,2,\cdots,m}) \sim P(F_{1,2,\cdots,m}| {\rm False\ Claim})\cdot P({\rm False\ Claim})\sim 1 \cdot 0.0001\)&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;After only 32 failures these two probabilities are equal, or in other words, it's even money that the action is even &lt;em&gt;possible&lt;/em&gt;.  After 50 failures, the odds for the original claim are around 180:1 against.  Clearly we are facing the definition of insanity&lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt; at this point.&lt;/p&gt;
+&lt;p&gt;Essentially, because 50 failures is so unlikely for a 25% chance event or action, other possibilities intrude - such as "success &lt;em&gt;at all&lt;/em&gt; is impossible".  There can, of course, be other possibilities that come to mind after many failures beyond the one I explore here.  However, the point that I want to stress is that one should think a little more deeply when faced even with such "simple" problems.&lt;/p&gt;
+&lt;div class="footnote"&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id="fn:1"&gt;
+&lt;p&gt;doing the same thing over and over expecting a different result.&amp;#160;&lt;a class="footnote-backref" href="#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content></entry><entry><title>Dynamical systems with pyndamics</title><link href="https://bblais.github.io/posts/2019/Jan/14/dynamical-systems-with-pyndamics/" rel="alternate"></link><published>2019-01-14T00:00:00-05:00</published><updated>2019-01-14T00:00:00-05:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2019-01-14:/posts/2019/Jan/14/dynamical-systems-with-pyndamics/</id><summary type="html">&lt;p&gt;Describe dynamical systems in terms of the differential equations without having to write the coding loops or functions.  Easily plot the changes in the variables, show phase plots, and vector …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Describe dynamical systems in terms of the differential equations without having to write the coding loops or functions.  Easily plot the changes in the variables, show phase plots, and vector fields.  Explore examples from modeling the zombie apocalypse, the infectiousness of ideas on Twitter, or the exchange of energy in the Earth climate system.  Useful for teaching dynamical systems for students with little programming experience.&lt;/p&gt;
 &lt;p&gt;Included is an interface to Bayesian MCMC with the emcee package for doing Bayesian parameter estimation and model comparison!&lt;/p&gt;
 &lt;p&gt;&lt;img alt="pyndamics" class="img-fluid" src="https://bblais.github.io/images/pyndamics.png"&gt;&lt;/p&gt;
 &lt;ul&gt;
