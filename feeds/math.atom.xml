@@ -1,5 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>bblais on the web - math</title><link href="https://bblais.github.io/" rel="alternate"></link><link href="https://bblais.github.io/feeds/math.atom.xml" rel="self"></link><id>https://bblais.github.io/</id><updated>2019-01-29T00:00:00-05:00</updated><entry><title>If at first you don't succeed (for 50 times) you might reconsider</title><link href="https://bblais.github.io/posts/2019/Jan/29/if-at-first-you-dont-succeed-for-50-times-you-might-reconsider/" rel="alternate"></link><published>2019-01-29T00:00:00-05:00</published><updated>2019-01-29T00:00:00-05:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2019-01-29:/posts/2019/Jan/29/if-at-first-you-dont-succeed-for-50-times-you-might-reconsider/</id><summary type="html">&lt;p&gt;Here's a &lt;a href="https://www.quora.com/If-there-is-a-25-chance-of-something-what-is-the-probability-that-you-fail-to-succeed-50-times-in-a-row-before-you-finally-do-succeed/answer/Brian-Blais"&gt;straightforward problem&lt;/a&gt; from Quora - probably found in a textbook - but I try to find a new direction to make it more interesting.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>bblais on the web - math</title><link href="https://bblais.github.io/" rel="alternate"></link><link href="https://bblais.github.io/feeds/math.atom.xml" rel="self"></link><id>https://bblais.github.io/</id><updated>2019-03-24T00:00:00-04:00</updated><entry><title>An Interesting Twist on the Gambler's Fallacy</title><link href="https://bblais.github.io/posts/2019/Mar/24/an-interesting-twist-on-the-gamblers-fallacy/" rel="alternate"></link><published>2019-03-24T00:00:00-04:00</published><updated>2019-03-24T00:00:00-04:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2019-03-24:/posts/2019/Mar/24/an-interesting-twist-on-the-gamblers-fallacy/</id><summary type="html">&lt;p&gt;I was reminded of the &lt;a href="https://en.wikipedia.org/wiki/Gambler%27s_fallacy"&gt;Gambler's Fallacy&lt;/a&gt; in a &lt;a href="https://theness.com/neurologicablog/index.php/the-gamblers-fallacy/"&gt;recent post by Stephen Novella&lt;/a&gt; and thought of a twist on the fallacy that makes it a bit more subtle.  The …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I was reminded of the &lt;a href="https://en.wikipedia.org/wiki/Gambler%27s_fallacy"&gt;Gambler's Fallacy&lt;/a&gt; in a &lt;a href="https://theness.com/neurologicablog/index.php/the-gamblers-fallacy/"&gt;recent post by Stephen Novella&lt;/a&gt; and thought of a twist on the fallacy that makes it a bit more subtle.  The fallacy is defined,&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The gambler's fallacy, also known as the Monte Carlo fallacy or the fallacy of the maturity of chances, is the mistaken belief that, if something happens more frequently than normal during a given period, it will happen less frequently in the future (or vice versa). In situations where the outcome being observed is truly random and consists of independent trials of a random process, this belief is false.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;If you observe 5 heads in a row, for example, then the probability of another heads is still &lt;span class="math"&gt;\(p=0.5\)&lt;/span&gt;. In other words it is not more (or less) likely to get a tails after a long string of heads in a row. There are however a couple of cases where this doesn't hold.  &lt;/p&gt;
+&lt;h2 id="100-heads"&gt;100 heads&lt;/h2&gt;
+&lt;p&gt;What happens if you observe someone flipping a coin and they achieve 100 heads in a row.  Would you really think that  the probability of another heads is still &lt;span class="math"&gt;\(p=0.5\)&lt;/span&gt;?  Is it even &lt;em&gt;rational&lt;/em&gt; to believe that?  At some point, you would question the &lt;em&gt;independence of trials&lt;/em&gt; assumption.  You might think that the coin is rigged (two heads?) or that the flipping process is rigged (spinning the coin like a frisbee instead of end-over-end motion) or something else.  The mathematics for it is pretty straightforward.  Assume you have two models:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(M_1\)&lt;/span&gt;: the coin-flipping process is random, trials are independent, and the probability of each flip is &lt;span class="math"&gt;\(p=0.5\)&lt;/span&gt; for heads&lt;/li&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(M_2\)&lt;/span&gt;: the coin has two heads, so no matter what the flipping process is the probability of getting heads is &lt;span class="math"&gt;\(p=1\)&lt;/span&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;and our data is &lt;span class="math"&gt;\(m\)&lt;/span&gt; heads flips in a row&lt;/p&gt;
+&lt;div class="math"&gt;$$
+D \equiv \left\{\underbrace{H_1,H_2,H_3,\cdots,H_m}_{\mbox{$m$ flips}}\right\}
+$$&lt;/div&gt;
+&lt;p&gt;We are then interested in whether the &lt;span class="math"&gt;\(m+1\)&lt;/span&gt; flip is a heads, or &lt;span class="math"&gt;\(P(H_{m+1}|D)\)&lt;/span&gt;.  Since we have two possible models which could give this outcome, we break this probability into a sum for each,&lt;/p&gt;
+&lt;div class="math"&gt;$$
+P(H_{m+1}|D) = P(H_{m+1}|D,M_1)P(M_1|D) + P(H_{m+1}|D,M_2)P(M_2|D)
+$$&lt;/div&gt;
+&lt;p&gt;Since in both models the history of flips makes no difference to the next flip we get&lt;/p&gt;
+&lt;div class="math"&gt;\begin{eqnarray}
+P(H_{m+1}|D,M_1) &amp;amp;=&amp;amp; P(H_{m+1}|M_1) = 0.5\\
+P(H_{m+1}|D,M_2) &amp;amp;=&amp;amp; P(H_{m+1}|M_2) = 1
+\end{eqnarray}&lt;/div&gt;
+&lt;p&gt;So, the bulk of the probability comes from the probability of each model given the data.  Applying Bayes' Rule, we get &lt;/p&gt;
+&lt;div class="math"&gt;\begin{eqnarray}
+P(M_1|D) &amp;amp;\sim&amp;amp; P(D|M_1)=\frac{P(M_1) \sim 0.5^m \cdot P(M_1)}{T} \\
+P(M_2|D) &amp;amp;\sim&amp;amp; P(D|M_2)P(M_2)=\frac{1^m \cdot P(M_2)}{T}
+\end{eqnarray}&lt;/div&gt;
+&lt;p&gt;where &lt;span class="math"&gt;\(T\)&lt;/span&gt; is the total probability of the data and the probabilities &lt;span class="math"&gt;\(P(M_1)\)&lt;/span&gt; and &lt;span class="math"&gt;\(P(M_2)\)&lt;/span&gt; are the priors for Model 1 and Model 2, respectively.  &lt;/p&gt;
+&lt;p&gt;We can start figuring out the prior probability by thinking in the following way.  Since we usually don't think a system is rigged unless we start seeing a strong pattern consistent with that, we expect that the prior for &lt;span class="math"&gt;\(M_2\)&lt;/span&gt; should be &lt;em&gt;much less&lt;/em&gt; than for &lt;span class="math"&gt;\(M_1\)&lt;/span&gt;.  Without loss of generality, we assign &lt;span class="math"&gt;\(P(M_1) = 1\)&lt;/span&gt; and &lt;span class="math"&gt;\(P(M_2) = 10^{-a}\)&lt;/span&gt;.  If &lt;span class="math"&gt;\(a=3\)&lt;/span&gt; then Model 2 is 1000x less likely (before the data) than Model 1,  if &lt;span class="math"&gt;\(a=6\)&lt;/span&gt; then Model 2 is 1 million times less likely, etc...  We  consider that the coin might not be independent when the probabilities for the two models -- after the data -- become comparable.  Each heads observation makes Model 1 a bit less likely and Model 2 a bit more so.  In a picture (for the case of &lt;span class="math"&gt;\(a=6\)&lt;/span&gt;) we have&lt;/p&gt;
+&lt;p&gt;&lt;img alt="coin_flips_rigged.png" class="img-fluid" src="https://bblais.github.io/images/coin_flips_rigged.png"&gt;&lt;/p&gt;
+&lt;p&gt;Mathematically we have&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\frac{P(M_2|D)}{P(M_1|D)} = \frac{10^{-a}}{0.5^m} \gt 1
+$$&lt;/div&gt;
+&lt;p&gt;which yields the number of flips, &lt;span class="math"&gt;\(m\)&lt;/span&gt;, to overcome a prior against the two-headed coin, &lt;span class="math"&gt;\(a\)&lt;/span&gt;,&lt;/p&gt;
+&lt;div class="math"&gt;$$
+m&amp;gt; \frac{a}{\log_{10} 2}
+$$&lt;/div&gt;
+&lt;p&gt;For &lt;span class="math"&gt;\(a=6\)&lt;/span&gt; (or initially a million times less likely) then &lt;span class="math"&gt;\(m&amp;gt;19.9\)&lt;/span&gt; flips is needed to overcome that level of initial skepticism. &lt;/p&gt;
+&lt;h2 id="alternating-results-or-quasi-random-processes"&gt;Alternating Results or Quasi-random processes&lt;/h2&gt;
+&lt;p&gt;The same sort of analysis can occur if instead of a string of heads we observe a perfectly oscillating sequence (H,T,H,T,H,T,...).  This, of course, could be the result of a random process but if it continued long enough then even a low prior of a rigged system could be overcome.  &lt;/p&gt;
+&lt;p&gt;The same could occur if you happen to be observing a &lt;a href="https://en.wikipedia.org/wiki/Sobol_sequence"&gt;Sobol Sequence&lt;/a&gt; or some other &lt;a href="https://en.wikipedia.org/wiki/Low-discrepancy_sequence"&gt;quasi-random processes&lt;/a&gt;. These sequences are &lt;em&gt;designed&lt;/em&gt; to be non-independent in order to be more likely to fill the space of numbers evenly.  Thus, if there is a sequence of 5 heads in a row, then under a quasi-random process a tails is in fact &lt;em&gt;more likely&lt;/em&gt; in these sequences as the "fallacy" warns us against.  These processes have some use in sampling for simulations where you want to make sure to cover all the the values of the parameter space evenly and efficiently.&lt;/p&gt;
+&lt;h2 id="conclusion"&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;I am not arguing that the Gambler's Fallacy is wrong, nor am I arguing that we should think every case is rigged.  I am further not suggesting that people are actually good at these problems - they aren't.  We see patterns in random sequences and events all of the time, and perhaps we should be a bit more reticent to ascribe non-randomness to processes for which we have no evidence of a non-random influence.  In other words, our priors for a rigged system should generally be quite low.  However, there can be cases where the system &lt;em&gt;is rigged&lt;/em&gt; and we should be open to that possibility as well.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content></entry><entry><title>If at first you don't succeed (for 50 times) you might reconsider</title><link href="https://bblais.github.io/posts/2019/Jan/29/if-at-first-you-dont-succeed-for-50-times-you-might-reconsider/" rel="alternate"></link><published>2019-01-29T00:00:00-05:00</published><updated>2019-01-29T00:00:00-05:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2019-01-29:/posts/2019/Jan/29/if-at-first-you-dont-succeed-for-50-times-you-might-reconsider/</id><summary type="html">&lt;p&gt;Here's a &lt;a href="https://www.quora.com/If-there-is-a-25-chance-of-something-what-is-the-probability-that-you-fail-to-succeed-50-times-in-a-row-before-you-finally-do-succeed/answer/Brian-Blais"&gt;straightforward problem&lt;/a&gt; from Quora - probably found in a textbook - but I try to find a new direction to make it more interesting.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;If there is a 25% chance …&lt;/p&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;p&gt;Here's a &lt;a href="https://www.quora.com/If-there-is-a-25-chance-of-something-what-is-the-probability-that-you-fail-to-succeed-50-times-in-a-row-before-you-finally-do-succeed/answer/Brian-Blais"&gt;straightforward problem&lt;/a&gt; from Quora - probably found in a textbook - but I try to find a new direction to make it more interesting.&lt;/p&gt;
 &lt;blockquote&gt;
