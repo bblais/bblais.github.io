@@ -5,42 +5,49 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://bblais.github.io/</loc>
-<lastmod>2019-05-18T11:53:53-00:00</lastmod>
+<lastmod>2019-06-16T09:20:35-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/archives.html</loc>
-<lastmod>2019-05-18T11:53:53-00:00</lastmod>
+<lastmod>2019-06-16T09:20:35-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/categories.html</loc>
-<lastmod>2019-05-18T11:53:53-00:00</lastmod>
+<lastmod>2019-06-16T09:20:35-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/pages/presentations.html</loc>
-<lastmod>2019-05-18T11:53:53-00:00</lastmod>
+<lastmod>2019-06-16T09:20:35-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/pages/projects.html</loc>
-<lastmod>2019-05-18T11:53:53-00:00</lastmod>
+<lastmod>2019-06-16T09:20:35-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/pages/publications.html</loc>
-<lastmod>2019-05-18T11:53:53-00:00</lastmod>
+<lastmod>2019-06-16T09:20:35-00:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://bblais.github.io/posts/2019/Jun/16/probability-its-not-just-about-the-math/</loc>
+<lastmod>2019-06-16T00:00:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -2147,7 +2154,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://bblais.github.io/category/math.html</loc>
-<lastmod>2019-03-24T00:00:00-04:56</lastmod>
+<lastmod>2019-06-16T00:00:00-04:56</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
