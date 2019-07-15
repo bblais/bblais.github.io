@@ -312,7 +312,7 @@ S^2&amp;amp;=&amp;amp; \frac{1}{(N-1)}\sum_{k=1}^{N} (x_k-\bar{x})^2
                            B
                            |
                            V
-————shore——————+——————————————————————&amp;amp;gt;  x
+————shore——————+——————————————————————&amp;gt;  x
               x=a
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -1267,13 +1267,13 @@ P(I|S) &amp;amp;=&amp;amp; \int_0^1 \frac{1/2 \cdot q}{1/2\cdot q + 1/4\cdot (1-
 &lt;/ol&gt;
 &lt;p&gt;More lessons?&lt;/p&gt;</content></entry><entry><title>Argument is Not Evidence</title><link href="https://bblais.github.io/posts/2016/Jan/02/argument-is-not-evidence/" rel="alternate"></link><published>2016-01-02T00:00:00-05:00</published><updated>2016-01-02T00:00:00-05:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2016-01-02:/posts/2016/Jan/02/argument-is-not-evidence/</id><summary type="html">&lt;p&gt;So &lt;a href="https://www.youtube.com/watch?v=76Yc_DuZkLY"&gt;the Mr. Deity video&lt;/a&gt;, part two of his new series has an interesting point. The point is that arguments are not evidence. He says that in all of the …&lt;/p&gt;</summary><content type="html">&lt;p&gt;So &lt;a href="https://www.youtube.com/watch?v=76Yc_DuZkLY"&gt;the Mr. Deity video&lt;/a&gt;, part two of his new series has an interesting point. The point is that arguments are not evidence. He says that in all of the debates that he seen between atheists and theists he's never seen anyone bring up this idea which really should show that the theist has lost the debate from the beginning.  I &lt;a href="http://web.bryant.edu/~bblais/evidence-vs-argument.html"&gt;mentioned it here&lt;/a&gt; when I was looking at Blake Giunta debate with Matt Dillahunty.  &lt;/p&gt;
 &lt;p&gt;There are some things that you can learn from proofs - such as mathematical proofs. For example you may find a relationship between two things that was unintuitive at first. However I think in the case of the &lt;em&gt;existence&lt;/em&gt; of an actual thing then you can gain no knowledge from philosophy or argumentation or proof. You really need something that's demonstrable, that's repeatable, something that gets around the biases and failings of the human thought process. &lt;/p&gt;
-&lt;p&gt;I agree wholeheartedly with Mr Deity in stating that science is simply the process people use to bypass the failings of human biases.  I also agree with the idea that the argument is the &lt;em&gt;start&lt;/em&gt;, not the end, of the discussion - the argument serves as a hypothesis.&lt;sup id="fnref:grammar"&gt;&lt;a class="footnote-ref" href="#fn:grammar" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt;  Given that there are a million different intuitive, simple, logically consistent, wrong hypotheses out there the effort must be made by anyone making a claim to find alternate ways of confirming the claims.&lt;br&gt;
+&lt;p&gt;I agree wholeheartedly with Mr Deity in stating that science is simply the process people use to bypass the failings of human biases.  I also agree with the idea that the argument is the &lt;em&gt;start&lt;/em&gt;, not the end, of the discussion - the argument serves as a hypothesis.&lt;sup id="fnref:grammar"&gt;&lt;a class="footnote-ref" href="#fn:grammar"&gt;1&lt;/a&gt;&lt;/sup&gt;  Given that there are a million different intuitive, simple, logically consistent, wrong hypotheses out there the effort must be made by anyone making a claim to find alternate ways of confirming the claims.&lt;br&gt;
 . &lt;/p&gt;
 &lt;div class="footnote"&gt;
 &lt;hr&gt;
 &lt;ol&gt;
 &lt;li id="fn:grammar"&gt;
-&lt;p&gt;I never know whether to use “an” or “a” with hypothesis, either in written form or spoken.  It sounds weird to me either way.&amp;#160;&lt;a class="footnote-backref" href="#fnref:grammar" rev="footnote" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I never know whether to use “an” or “a” with hypothesis, either in written form or spoken.  It sounds weird to me either way.&amp;#160;&lt;a class="footnote-backref" href="#fnref:grammar" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;</content></entry><entry><title>Happy New Year!</title><link href="https://bblais.github.io/posts/2016/Jan/01/happy-new-year/" rel="alternate"></link><published>2016-01-01T00:00:00-05:00</published><updated>2016-01-01T00:00:00-05:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2016-01-01:/posts/2016/Jan/01/happy-new-year/</id><summary type="html">&lt;p&gt;I love the idea of New Year’s Day.  It’s a time for reflection, contemplation, self improvement.  I realize that it is technically just another day, and that one …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I love the idea of New Year’s Day.  It’s a time for reflection, contemplation, self improvement.  I realize that it is technically just another day, and that one could definitely have any day in the year serve this role, but there still feels like something special for this day.  I try to have some modest New Years resolutions.  Ones I have failed in the past are:&lt;/p&gt;
@@ -2438,7 +2438,7 @@ We can easily see that, although they are different, there is no &lt;em&gt;pract
 &lt;p&gt;I decided to implement the same thing using the &lt;a href="http://dan.iel.fm/emcee/current/"&gt;emcee package&lt;/a&gt;.  The full implementation is &lt;a href="http://nbviewer.ipython.org/gist/bblais/7a1c6ec3b4c8d1b0465f"&gt;viewable here&lt;/a&gt;.  My implementation is pretty general, and can handle some arbitrary tests of the variables, like:&lt;/p&gt;
 &lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
 2
-3&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;P&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;(mu1&amp;amp;gt;101) &amp;amp;amp; (mu1&amp;amp;lt;102.1)&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+3&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;P&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;(mu1&amp;gt;101) &amp;amp; (mu1&amp;lt;102.1)&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
 &lt;span class="mf"&gt;0.85502222222222224&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -2447,7 +2447,7 @@ We can easily see that, although they are different, there is no &lt;em&gt;pract
 &lt;p&gt;and&lt;/p&gt;
 &lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
 2
-3&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;P&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;sigma1&amp;amp;lt;sigma2&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+3&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;P&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;sigma1&amp;lt;sigma2&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
 &lt;span class="mf"&gt;0.0060111111111111112&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;

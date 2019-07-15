@@ -5,42 +5,49 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://bblais.github.io/</loc>
-<lastmod>2019-07-11T07:44:23-00:00</lastmod>
+<lastmod>2019-07-15T10:19:21-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/archives.html</loc>
-<lastmod>2019-07-11T07:44:23-00:00</lastmod>
+<lastmod>2019-07-15T10:19:21-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/categories.html</loc>
-<lastmod>2019-07-11T07:44:23-00:00</lastmod>
+<lastmod>2019-07-15T10:19:21-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/pages/presentations.html</loc>
-<lastmod>2019-07-11T07:44:23-00:00</lastmod>
+<lastmod>2019-07-15T10:19:21-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/pages/projects.html</loc>
-<lastmod>2019-07-11T07:44:23-00:00</lastmod>
+<lastmod>2019-07-15T10:19:21-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/pages/publications.html</loc>
-<lastmod>2019-07-11T07:44:23-00:00</lastmod>
+<lastmod>2019-07-15T10:19:21-00:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://bblais.github.io/posts/2019/Jul/15/a-measure-of-faith-probability-in-religious-thought/</loc>
+<lastmod>2019-07-15T00:00:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -2175,7 +2182,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://bblais.github.io/category/projects.html</loc>
-<lastmod>2019-01-14T00:00:00-04:56</lastmod>
+<lastmod>2019-07-15T00:00:00-04:56</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -2210,7 +2217,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://bblais.github.io/tag/science.html</loc>
-<lastmod>2019-01-14T00:00:00-04:56</lastmod>
+<lastmod>2019-07-15T00:00:00-04:56</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://bblais.github.io/tag/statistics.html</loc>
+<lastmod>2019-07-15T00:00:00-04:56</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://bblais.github.io/tag/probability.html</loc>
+<lastmod>2019-07-15T00:00:00-04:56</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://bblais.github.io/tag/religion.html</loc>
+<lastmod>2019-07-15T00:00:00-04:56</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -2237,29 +2265,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://bblais.github.io/tag/statistics.html</loc>
-<lastmod>2019-01-14T00:00:00-04:56</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://bblais.github.io/tag/probability.html</loc>
-<lastmod>2019-01-14T00:00:00-04:56</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
 <loc>https://bblais.github.io/tag/productivity.html</loc>
 <lastmod>2018-05-24T00:00:00-04:56</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://bblais.github.io/tag/religion.html</loc>
-<lastmod>2018-05-22T00:00:00-04:56</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
