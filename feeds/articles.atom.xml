@@ -305,15 +305,15 @@ S^2&amp;amp;=&amp;amp; \frac{1}{(N-1)}\sum_{k=1}^{N} (x_k-\bar{x})^2
 &lt;h2 id="anything-with-the-cauchy-distribution"&gt;Anything with the Cauchy distribution&lt;/h2&gt;
 &lt;p&gt;There is one final category of problems in the comparison with Bayesian and Frequentist methods. &lt;/p&gt;
 &lt;p&gt;Imagine we have a lighthouse which is off shore some known distance, B, and is located along the shore at some unknown location &lt;span class="math"&gt;\(x=a\)&lt;/span&gt;:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;         (lighthouse)
-               *          ---
-                           ^
-                           |
-                           B
-                           |
-                           V
-————shore——————+——————————————————————&amp;gt;  x
-              x=a
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;         &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;lighthouse&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+               &lt;span class="o"&gt;*&lt;/span&gt;          &lt;span class="c1"&gt;---&lt;/span&gt;
+                           &lt;span class="o"&gt;^&lt;/span&gt;
+                           &lt;span class="o"&gt;|&lt;/span&gt;
+                           &lt;span class="n"&gt;B&lt;/span&gt;
+                           &lt;span class="o"&gt;|&lt;/span&gt;
+                           &lt;span class="n"&gt;V&lt;/span&gt;
+&lt;span class="err"&gt;————&lt;/span&gt;&lt;span class="n"&gt;shore&lt;/span&gt;&lt;span class="err"&gt;——————&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="err"&gt;——————————————————————&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;  &lt;span class="n"&gt;x&lt;/span&gt;
+              &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 

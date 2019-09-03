@@ -1,5 +1,153 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>bblais on the web</title><link href="https://bblais.github.io/" rel="alternate"></link><link href="https://bblais.github.io/feeds/all.atom.xml" rel="self"></link><id>https://bblais.github.io/</id><updated>2019-07-15T00:00:00-04:00</updated><entry><title>A Measure of Faith - Probability in Religious Thought</title><link href="https://bblais.github.io/posts/2019/Jul/15/a-measure-of-faith-probability-in-religious-thought/" rel="alternate"></link><published>2019-07-15T00:00:00-04:00</published><updated>2019-07-15T00:00:00-04:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2019-07-15:/posts/2019/Jul/15/a-measure-of-faith-probability-in-religious-thought/</id><summary type="html">&lt;p&gt;From the trivial to the monumental our decisions are governed by – or should be governed by – rational thought. This book explores the role of rational thought as described by the …&lt;/p&gt;</summary><content type="html">&lt;p&gt;From the trivial to the monumental our decisions are governed by – or should be governed by – rational thought. This book explores the role of rational thought as described by the rules of probability applied to the ideas in traditional religious discourse. It provides a basic introduction to the rules of probability for those who want a refresher and then proceeds to apply those rules to standard arguments for the existence of God, the resurrection of Jesus, the evidence for miracles, and the concept of faith. Through this exploration, a common thread of analysis is woven to describe notions of simplicity in explanations, independence of evidence, and the common cognitive biases we all share.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>bblais on the web</title><link href="https://bblais.github.io/" rel="alternate"></link><link href="https://bblais.github.io/feeds/all.atom.xml" rel="self"></link><id>https://bblais.github.io/</id><updated>2019-09-03T00:00:00-04:00</updated><entry><title>Probability of the Resurrection</title><link href="https://bblais.github.io/posts/2019/Sep/03/probability-of-the-resurrection/" rel="alternate"></link><published>2019-09-03T00:00:00-04:00</published><updated>2019-09-03T00:00:00-04:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2019-09-03:/posts/2019/Sep/03/probability-of-the-resurrection/</id><summary type="html">&lt;p&gt;In a recent discussion about the use of probability in a religious context I saw another poor job of a calculation of the Resurrection (I had read several others that …&lt;/p&gt;</summary><content type="html">&lt;p&gt;In a recent discussion about the use of probability in a religious context I saw another poor job of a calculation of the Resurrection (I had read several others that had serious problems).  I then felt that it would be good to sketch out how it &lt;em&gt;should&lt;/em&gt; be done.  The goal here is not to come up with a single number, but to have a structure which invites discussion.  &lt;/p&gt;
+&lt;h2 id="a-smaller-problem"&gt;A smaller problem&lt;/h2&gt;
+&lt;p&gt;We are restricting the problem to the smallest possible case to most easily see the form that the calculation takes when done properly.  The problem is &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A friend of yours flipped a coin three times and got heads three times in a row.  Would this be good evidence for your friend having a coin with two heads compared to, say, a typical coin with 1 heads and 1 tails?  Here we have 2 models (&lt;span class="math"&gt;\(M_1\)&lt;/span&gt;, say, is for the 1-headed coin model and &lt;span class="math"&gt;\(M_2\)&lt;/span&gt; is for the 2-headed coin model), and some observed data (heads, heads, heads in 3 flips).&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;We want to know the probability of each of the models given the data.  In math notation we use the vertical bar,&lt;span class="math"&gt;\(|\)&lt;/span&gt;, as the symbol for "given".  The "data" is summarized as "H H H" for three observed heads flips.  So we want to obtain,
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
+P(M_1 | \text{H H H})  \text{ and } P(M_2 | \text{H H H})
+$$&lt;/div&gt;
+&lt;p&gt;
+following Bayes theorem, we write the top of Bayes equation as 
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
+P(M_1 | \text{H H H}) \sim P(\text{H H H}| M_1) \times P(M_1)
+$$&lt;/div&gt;
+&lt;p&gt;
+and
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
+P(M_2 | \text{H H H}) \sim P(\text{H H H}| M_2) \times P(M_2)
+$$&lt;/div&gt;
+&lt;p&gt;
+Before continuing, let me point out a few things.  First, I'm not using equals here, but the &lt;span class="math"&gt;\(\sim\)&lt;/span&gt; sign to denote that I'm writing just the top part of the equation first.  I'll add these two things up to get the bottom of Bayes in the next step.  I do it as a two-step process to make it easier to write down (i.e. it formats better in text) and to help when we generalize to more than 2 models, where Bayes can get a bit unwieldy. &lt;/p&gt;
+&lt;p&gt;The term &lt;span class="math"&gt;\(P(\text{H H H}| M_1)\)&lt;/span&gt; is the probability we'd see the data if we knew (i.e. we're given) that model 1 is true.  Since &lt;span class="math"&gt;\(M_1\)&lt;/span&gt; is from a fair coin, we get 1/2 probability for each head independently and we don't have any extra counting term, so we'd get the &lt;span class="math"&gt;\(P(\text{H H H}| M_1)=\frac{1}{2}\times\frac{1}{2}\times\frac{1}{2}\)&lt;/span&gt;.  The term &lt;span class="math"&gt;\(P(\text{H H H}| M_2)\)&lt;/span&gt; is the probability we'd see the data if we knew (i.e. we're given) that model 2 is true.  Since &lt;span class="math"&gt;\(M_2\)&lt;/span&gt; is from a rigged two-headed coin, we get a probability of 1 for each head so we'd get the &lt;span class="math"&gt;\(P(\text{H H H}| M_2)=1\times 1\times 1\)&lt;/span&gt;.  &lt;/p&gt;
+&lt;p&gt;The terms &lt;span class="math"&gt;\(P(M_1)\)&lt;/span&gt; and &lt;span class="math"&gt;\(P(M_2)\)&lt;/span&gt; are the prior probabilities of the model - how much we should believe them before we saw the data.  This is probably the most contentious point, and worth dwelling on.  It's not 50%, just because there are two possibilities.  Do we even know if a two-headed coin exists?  Have you ever seen one?  The two models are not symmetric.  Turns out I have seen one!  There's one in my desk, which I love to bring out to fool my students.  :-)  It was found by accident with my daughter going through all of our loose change.  I have never seen one since, but if we just took my house as an example, it's no bigger than a 1/100 of all the quarters.  This can inform the prior as &lt;span class="math"&gt;\(P(M_1) = 0.99\)&lt;/span&gt; and &lt;span class="math"&gt;\(P(M_2) = 0.01\)&lt;/span&gt;.  I would guess that this is a huge &lt;em&gt;over estimate&lt;/em&gt; for the &lt;span class="math"&gt;\(P(M_2)\)&lt;/span&gt; but it's good to run with.  &lt;/p&gt;
+&lt;p&gt;Getting back to our probabilities, we calculate the top terms of Bayes, add them up, and then go back to divide each by that total.  Thus we get:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\begin{align}
+P(M_1 | \text{H H H}) &amp;amp;\sim P(\text{H H H}| M_1) \times P(M_1) = \frac{1}{2}\times\frac{1}{2}\times\frac{1}{2}\times 0.99 = 0.124 \\
+P(M_2 | \text{H H H}) &amp;amp;\sim P(\text{H H H}| M_2) \times P(M_2) = 1\times 1\times 1\times 0.01 = 0.01
+\end{align}
+$$&lt;/div&gt;
+&lt;p&gt;
+(adding them up) &lt;span class="math"&gt;\(T=0.124 + 0.01 = 0.134\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;finally getting (notice the equals now)
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\begin{align}
+P(M_1 | \text{H H H}) &amp;amp;=0.124/T = 0.124/0.134=0.925 \\
+P(M_2 | \text{H H H}) &amp;amp;=0.01/T=0.01/0.134 = 0.075
+\end{align}
+$$&lt;/div&gt;
+&lt;p&gt;
+So, finally, we can have good reason -- by a long shot -- to &lt;em&gt;not believe&lt;/em&gt; that the person has a 2-headed coin.   Although we  have a nearly &lt;span class="math"&gt;\(8\times\)&lt;/span&gt; increase in the probability of that model, &lt;span class="math"&gt;\(M_2\)&lt;/span&gt;, given the observed data of 3 heads, this doesn't bring our confidence up to the level of belief - you'd need more data for that.  &lt;/p&gt;
+&lt;p&gt;This problem has exactly the same structure as the problem under consideration, trying to find the probability of the resurrection given the data we have and the number of possible models.&lt;/p&gt;
+&lt;h2 id="the-problem-at-hand-the-probability-of-the-resurrection"&gt;The problem at hand - the probability of the Resurrection&lt;/h2&gt;
+&lt;p&gt;The proper way to set the problem up, like the coin, is the following.  First, we start with the different models:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(R\)&lt;/span&gt; = Resurrection happened&lt;/li&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(M\)&lt;/span&gt; = Resurrection story made up entirely&lt;/li&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(V\)&lt;/span&gt; = Resurrection story incited by visions from early apostles and embellished&lt;/li&gt;
+&lt;li&gt;etc...&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;and then the math follows just like the example above,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;data = texts of gospels and Paul (and their history)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="math"&gt;\(P(R | \text{data}) \sim P(\text{data} | R) \times P(R)\)&lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(P(M | \text{data}) \sim P(\text{data} | M) \times P(M)\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(P(V | \text{data}) \sim P(\text{data} | V) \times P(V)\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;.... [insert more models if you'd like]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;then add up to &lt;span class="math"&gt;\(T = \ldots\)&lt;/span&gt;, and divide all terms, just like the coin.  &lt;/p&gt;
+&lt;p&gt;Arguments over priors can ensue, but I think it would  be fair to say that &lt;span class="math"&gt;\(P(M)&amp;gt;P(V) \gg P(R)\)&lt;/span&gt;. Although one might question this order (e.g.  arguing that visions are more common than story construction) it is certainly true that resurrections are far less common than stories or visions.  How often do we see resurrections?  How often do we see God raising someone from the dead?  How often have we heard claims of people being raised from the dead, from God or otherwise?  These very simple questions bring the prior for the Resurrection &lt;em&gt;way&lt;/em&gt; down.  The theist will typically counter with something like "I agree that resurrections through &lt;em&gt;natural&lt;/em&gt; processes are extremely unlikely, but if there is a God he could easily make resurrections through &lt;em&gt;supernatural&lt;/em&gt; causes likely."  I'll deal specifically with this objection in detail below but at this point the term &lt;span class="math"&gt;\(P(R)\)&lt;/span&gt; doesn't presuppose any mechanisms - it is just the probability of a resurrection before seeing any data and it should be agreed that this is much lower than visions or stories.&lt;/p&gt;
+&lt;p&gt;Beyond the prior, we note that terms like &lt;span class="math"&gt;\(P(\text{data} | R)\)&lt;/span&gt; have to balance both the positive claims and negative claims.  For example, we might say that this term is quite high from the positive claims -- if the Resurrection actually happened then it easily explains the stories of seeing Jesus afterward.  However, there are things that we probably should have seen -- but don't -- if the Resurrection actually happened.  Some includes the lack of an account of Roman stolen-body litigation (as would have been done to the disciples), the fact that Paul doesn't mention the empty tomb, and the guards at the tomb are only mentioned in Matthew are not mentioned in Mark, Luke, John, or even Paul.  These negative claims are easily explained with the other two models but are not easily explained from the Resurrection model making &lt;span class="math"&gt;\(P(\text{data} | R)\)&lt;/span&gt; much lower than is generally communicated.&lt;/p&gt;
+&lt;h3 id="supernatural-causation"&gt;Supernatural causation&lt;/h3&gt;
+&lt;p&gt;Now, what about the claim that the low priors are mitigated by the issue of God &lt;em&gt;supernaturally&lt;/em&gt; raising Jesus?  Here is where it gets interesting.  If you want to add the possibility of God raising Jesus &lt;em&gt;supernaturally&lt;/em&gt; from the dead we can do this with a process called &lt;em&gt;marginalization&lt;/em&gt;, which is a fancy term for adding up all of the possibilities.  Mathematically it looks like the following,&lt;/p&gt;
+&lt;p&gt;First define some symbols,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(+G\)&lt;/span&gt; = God&lt;/li&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(+S\)&lt;/span&gt; = Supernatural action&lt;/li&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(-G\)&lt;/span&gt; = no God&lt;/li&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(-S\)&lt;/span&gt; = natural action&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We can then draw out the probability terms (which don't mention any specific methods of resurrections) into several terms, each for a different method, and then apply Bayes' rule yielding
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\begin{align}
+P(R | \text{data}) =&amp;amp; P(R, +G,+S | \text{data}) + P(R, -G,+S| \text{data}) + P(R, +G,-S| \text{data}) + P(R, -G,-S| \text{data})\\
+\sim &amp;amp; P(\text{data}|R,+G,+S)P(R|+G,+S)P(+S|+G)P(+G) + \\ \nonumber
+&amp;amp;P(\text{data}|R,-G,+S)P(R|-G,+S)P(+S|-G)P(-G) + \\ \nonumber
+&amp;amp;P(\text{data}|R,+G,-S)P(R|+G,-S)P(-S|+G)P(+G) + \\ \nonumber
+&amp;amp;P(\text{data}|R,-G,-S)P(R|-G,-S)P(-S|-G)P(-G) 
+\end{align}
+$$&lt;/div&gt;
+&lt;p&gt;
+This messy result lets us look at individual terms to see where we might have to examine the data more closely.  Theists state that terms like &lt;span class="math"&gt;\(P(R|-G,-S)\)&lt;/span&gt; are small (unlikely resurrection given no God and only natural action), and I'll grant you that.  How about &lt;span class="math"&gt;\(P( R | +G, -S)\)&lt;/span&gt; or, in words,  why couldn't God have done the resurrection naturally?  How about  $P( R | -G, +S) $ or, in words, couldn't Satan or Stephen Fry's evil God have done the resurrection supernaturally?  How have theists ruled these out?  &lt;/p&gt;
+&lt;p&gt;Suddenly, by opening up some specific alternatives, one needs to follow all of those alternatives -- and their inverses -- through the entire calculation.  You then have to provide evidence for God's supposed actions (&lt;span class="math"&gt;\(P(+S|+G)\)&lt;/span&gt; and &lt;span class="math"&gt;\(P(-S|+G)\)&lt;/span&gt;) reading his inscrutable plan.  You also have to demonstrate that there are not other supernatural agents at play, and that it is likely that God is the one acting. Given that theists have yet to provide &lt;em&gt;any way&lt;/em&gt; of testing supernatural claims &lt;em&gt;at all&lt;/em&gt; it seems like a big feat.  In short, by introducing supernatural causation into the mix, theists have made their life harder -- not easier.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content></entry><entry><title>A Measure of Faith - Probability in Religious Thought</title><link href="https://bblais.github.io/posts/2019/Jul/15/a-measure-of-faith-probability-in-religious-thought/" rel="alternate"></link><published>2019-07-15T00:00:00-04:00</published><updated>2019-07-15T00:00:00-04:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2019-07-15:/posts/2019/Jul/15/a-measure-of-faith-probability-in-religious-thought/</id><summary type="html">&lt;p&gt;From the trivial to the monumental our decisions are governed by – or should be governed by – rational thought. This book explores the role of rational thought as described by the …&lt;/p&gt;</summary><content type="html">&lt;p&gt;From the trivial to the monumental our decisions are governed by – or should be governed by – rational thought. This book explores the role of rational thought as described by the rules of probability applied to the ideas in traditional religious discourse. It provides a basic introduction to the rules of probability for those who want a refresher and then proceeds to apply those rules to standard arguments for the existence of God, the resurrection of Jesus, the evidence for miracles, and the concept of faith. Through this exploration, a common thread of analysis is woven to describe notions of simplicity in explanations, independence of evidence, and the common cognitive biases we all share.&lt;/p&gt;
 &lt;h2 id="the-book"&gt;The Book&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;On Amazon you can get &lt;a href="https://www.amazon.com/Measure-Faith-Probability-Religious-Thought/dp/1099939143"&gt;the print book&lt;/a&gt; or &lt;a href="https://www.amazon.com/Measure-Faith-Probability-Religious-Thought-ebook/dp/B07SMB7RB4"&gt;the Kindle book&lt;/a&gt;&lt;/li&gt;
@@ -710,7 +858,7 @@ and Environmental Degradation: Exploring Models and Questioning the Existence of
 &lt;p&gt;One summary is &lt;a href="http://mightyrasing.com/notes-on-scrum-the-art-of-doing-twice-the-work-in-half-the-time/"&gt;here&lt;/a&gt;&amp;#160;&lt;a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;/div&gt;</content></entry><entry><title>Your Lack of Imagination Can Kill You</title><link href="https://bblais.github.io/posts/2018/Mar/07/your-lack-of-imagination-can-kill-you/" rel="alternate"></link><published>2018-03-07T00:00:00-05:00</published><updated>2018-03-07T00:00:00-05:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2018-03-07:/posts/2018/Mar/07/your-lack-of-imagination-can-kill-you/</id><summary type="html">&lt;p&gt;Here is my &lt;a href="https://www.youtube.com/watch?v=3xAb3aVGVM0&amp;amp;t=2s"&gt;TEDxBryantU talk on Skepticism, Probability, and the Guide to Proper Thinking&lt;/a&gt;!  Even useful for analyzing broken clocks.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Here is my &lt;a href="https://www.youtube.com/watch?v=3xAb3aVGVM0&amp;amp;t=2s"&gt;TEDxBryantU talk on Skepticism, Probability, and the Guide to Proper Thinking&lt;/a&gt;!  Even useful for analyzing broken clocks.&lt;/p&gt;</content></entry><entry><title>Life from non-life and other conundrums</title><link href="https://bblais.github.io/posts/2018/Mar/06/life-from-non-life-and-other-conundrums/" rel="alternate"></link><published>2018-03-06T00:00:00-05:00</published><updated>2018-03-06T00:00:00-05:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2018-03-06:/posts/2018/Mar/06/life-from-non-life-and-other-conundrums/</id><summary type="html">&lt;p&gt;In the &lt;a href="https://www.premierchristianradio.com/Shows/Saturday/Unbelievable/"&gt;Unbelievable podcast&lt;/a&gt; episode &lt;a href="https://www.premierchristianradio.com/Shows/Saturday/Unbelievable/Episodes/Unbelievable-27-Oct-2007-Top-reasons-for-belief"&gt;27 Oct 2007 - Top reasons for belief&lt;/a&gt; there is a discussion about good arguments for God.  Two questions were raised as evidence for God that …&lt;/p&gt;</summary><content type="html">&lt;p&gt;In the &lt;a href="https://www.premierchristianradio.com/Shows/Saturday/Unbelievable/"&gt;Unbelievable podcast&lt;/a&gt; episode &lt;a href="https://www.premierchristianradio.com/Shows/Saturday/Unbelievable/Episodes/Unbelievable-27-Oct-2007-Top-reasons-for-belief"&gt;27 Oct 2007 - Top reasons for belief&lt;/a&gt; there is a discussion about good arguments for God.  Two questions were raised as evidence for God that I think are telling:&lt;/p&gt;
+&lt;/div&gt;</content></entry><entry><title>Your Lack of Imagination Can Kill You</title><link href="https://bblais.github.io/posts/2018/Mar/07/your-lack-of-imagination-can-kill-you/" rel="alternate"></link><published>2018-03-07T00:00:00-05:00</published><updated>2018-03-07T00:00:00-05:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2018-03-07:/posts/2018/Mar/07/your-lack-of-imagination-can-kill-you/</id><content type="html">&lt;p&gt;Here is my &lt;a href="https://www.youtube.com/watch?v=3xAb3aVGVM0&amp;amp;t=2s"&gt;TEDxBryantU talk on Skepticism, Probability, and the Guide to Proper Thinking&lt;/a&gt;!  Even useful for analyzing broken clocks.&lt;/p&gt;</content></entry><entry><title>Life from non-life and other conundrums</title><link href="https://bblais.github.io/posts/2018/Mar/06/life-from-non-life-and-other-conundrums/" rel="alternate"></link><published>2018-03-06T00:00:00-05:00</published><updated>2018-03-06T00:00:00-05:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2018-03-06:/posts/2018/Mar/06/life-from-non-life-and-other-conundrums/</id><summary type="html">&lt;p&gt;In the &lt;a href="https://www.premierchristianradio.com/Shows/Saturday/Unbelievable/"&gt;Unbelievable podcast&lt;/a&gt; episode &lt;a href="https://www.premierchristianradio.com/Shows/Saturday/Unbelievable/Episodes/Unbelievable-27-Oct-2007-Top-reasons-for-belief"&gt;27 Oct 2007 - Top reasons for belief&lt;/a&gt; there is a discussion about good arguments for God.  Two questions were raised as evidence for God that …&lt;/p&gt;</summary><content type="html">&lt;p&gt;In the &lt;a href="https://www.premierchristianradio.com/Shows/Saturday/Unbelievable/"&gt;Unbelievable podcast&lt;/a&gt; episode &lt;a href="https://www.premierchristianradio.com/Shows/Saturday/Unbelievable/Episodes/Unbelievable-27-Oct-2007-Top-reasons-for-belief"&gt;27 Oct 2007 - Top reasons for belief&lt;/a&gt; there is a discussion about good arguments for God.  Two questions were raised as evidence for God that I think are telling:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;how do you get life from non-life?&lt;/li&gt;
 &lt;li&gt;how do you get the personal from the impersonal?&lt;/li&gt;
@@ -1457,15 +1605,15 @@ S^2&amp;amp;=&amp;amp; \frac{1}{(N-1)}\sum_{k=1}^{N} (x_k-\bar{x})^2
 &lt;h2 id="anything-with-the-cauchy-distribution"&gt;Anything with the Cauchy distribution&lt;/h2&gt;
 &lt;p&gt;There is one final category of problems in the comparison with Bayesian and Frequentist methods. &lt;/p&gt;
 &lt;p&gt;Imagine we have a lighthouse which is off shore some known distance, B, and is located along the shore at some unknown location &lt;span class="math"&gt;\(x=a\)&lt;/span&gt;:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;         (lighthouse)
-               *          ---
-                           ^
-                           |
-                           B
-                           |
-                           V
-————shore——————+——————————————————————&amp;gt;  x
-              x=a
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;         &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;lighthouse&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+               &lt;span class="o"&gt;*&lt;/span&gt;          &lt;span class="c1"&gt;---&lt;/span&gt;
+                           &lt;span class="o"&gt;^&lt;/span&gt;
+                           &lt;span class="o"&gt;|&lt;/span&gt;
+                           &lt;span class="n"&gt;B&lt;/span&gt;
+                           &lt;span class="o"&gt;|&lt;/span&gt;
+                           &lt;span class="n"&gt;V&lt;/span&gt;
+&lt;span class="err"&gt;————&lt;/span&gt;&lt;span class="n"&gt;shore&lt;/span&gt;&lt;span class="err"&gt;——————&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="err"&gt;——————————————————————&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;  &lt;span class="n"&gt;x&lt;/span&gt;
+              &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -7248,16 +7396,16 @@ it right, but I wanted to make sure. The math is&lt;/p&gt;
 P=P_o e^{rt}  
 $$&lt;/div&gt;
 &lt;p&gt;The code is:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;r=0.00456
-t=4500.0
-Po=8.0
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;00456&lt;/span&gt;
+&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;4500&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;span class="n"&gt;Po&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;
 
-print Po*exp(r*t)/1e9,&amp;quot;billion&amp;quot;
+&lt;span class="n"&gt;print&lt;/span&gt; &lt;span class="n"&gt;Po&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;exp&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="n"&gt;e9&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;billion&amp;quot;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Yielding&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;6.52849018681 billion
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;52849018681&lt;/span&gt; &lt;span class="n"&gt;billion&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -7268,17 +7416,17 @@ P(t)&amp;amp;=&amp;amp;P_o \times e^{r\cdot t} \\\\
 t&amp;amp;=&amp;amp; \frac{\log(P(t))-\log(P_o)}{r}  
 \end{eqnarray}&lt;/div&gt;
 &lt;p&gt;or&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Po=6.5e9  # current population
-r=0.00456
-P=8       # target population
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;Po&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="n"&gt;e9&lt;/span&gt;  &lt;span class="o"&gt;#&lt;/span&gt; &lt;span class="k"&gt;current&lt;/span&gt; &lt;span class="n"&gt;population&lt;/span&gt;
+&lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;00456&lt;/span&gt;
+&lt;span class="n"&gt;P&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt;       &lt;span class="o"&gt;#&lt;/span&gt; &lt;span class="n"&gt;target&lt;/span&gt; &lt;span class="n"&gt;population&lt;/span&gt;
 
-t=(log(P)-log(Po))/r 
-print t, &amp;quot;years&amp;quot;
+&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;P&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Po&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;r&lt;/span&gt; 
+&lt;span class="n"&gt;print&lt;/span&gt; &lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ss"&gt;&amp;quot;years&amp;quot;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;resulting in&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;-4499.04089302 years.
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;4499&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;04089302&lt;/span&gt; &lt;span class="n"&gt;years&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -7467,9 +7615,7 @@ for Research and Engagement Day (REDay) at …&lt;/p&gt;</summary><content type=
 presentations recently&lt;/a&gt;. Two of particular interest were done today
 for Research and Engagement Day (REDay) at Bryant University.  The first
 on &lt;a href="http://web.bryant.edu/~bblais/pdf/Science%20and%20Faith%20April%202013.pdf"&gt;science and faith&lt;/a&gt;, and the other on the [mathematics of the
-zombie apocalypse][] [with &lt;a href="http://web.bryant.edu/~bblais/pdf/zombies_handout_apr2013.pdf"&gt;a handout&lt;/a&gt;].  Enjoy!&lt;/p&gt;</content></entry><entry><title>10 signs of intellectual honesty</title><link href="https://bblais.github.io/posts/2013/Apr/20/10-signs-of-intellectual-honesty/" rel="alternate"></link><published>2013-04-20T14:51:00-04:00</published><updated>2013-04-20T14:51:00-04:00</updated><author><name>brianblais</name></author><id>tag:bblais.github.io,2013-04-20:/posts/2013/Apr/20/10-signs-of-intellectual-honesty/</id><summary type="html">&lt;p&gt;This post, and others like it, are things I try to communicate to my
-students. Recognizing, and publicly acknowledging ones shortcomings, is
-a big one in my book.&lt;/p&gt;</summary><content type="html">&lt;p&gt;This post, and others like it, are things I try to communicate to my
+zombie apocalypse][] [with &lt;a href="http://web.bryant.edu/~bblais/pdf/zombies_handout_apr2013.pdf"&gt;a handout&lt;/a&gt;].  Enjoy!&lt;/p&gt;</content></entry><entry><title>10 signs of intellectual honesty</title><link href="https://bblais.github.io/posts/2013/Apr/20/10-signs-of-intellectual-honesty/" rel="alternate"></link><published>2013-04-20T14:51:00-04:00</published><updated>2013-04-20T14:51:00-04:00</updated><author><name>brianblais</name></author><id>tag:bblais.github.io,2013-04-20:/posts/2013/Apr/20/10-signs-of-intellectual-honesty/</id><content type="html">&lt;p&gt;This post, and others like it, are things I try to communicate to my
 students. Recognizing, and publicly acknowledging ones shortcomings, is
 a big one in my book.&lt;/p&gt;</content></entry><entry><title>A funny little probability problem - some closure</title><link href="https://bblais.github.io/posts/2013/Mar/25/a-funny-little-probability-problem-some-closure/" rel="alternate"></link><published>2013-03-25T09:48:00-04:00</published><updated>2013-03-25T09:48:00-04:00</updated><author><name>brianblais</name></author><id>tag:bblais.github.io,2013-03-25:/posts/2013/Mar/25/a-funny-little-probability-problem-some-closure/</id><summary type="html">&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;This weekend I got hooked on a &lt;a href="a-funny-little-probability-problem-correct.html"&gt;funny little probability puzzle&lt;/a&gt;, and
@@ -9002,11 +9148,11 @@ this data, the best fit is&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Fig2" src="http://brianblais.files.wordpress.com/2013/02/fig2.png" title="fig2.png"&gt;&lt;/p&gt;
 &lt;p&gt;Overall, not a bad looking fit. However, if we fit to a 10-th power
 polynomial, we can get even better!&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;            10          9          8         7         6         5
--0.0007039 x  + 0.0363 x - 0.8051 x + 10.04 x - 77.13 x + 376.5 x
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;            &lt;span class="mi"&gt;10&lt;/span&gt;          &lt;span class="mi"&gt;9&lt;/span&gt;          &lt;span class="mi"&gt;8&lt;/span&gt;         &lt;span class="mi"&gt;7&lt;/span&gt;         &lt;span class="mi"&gt;6&lt;/span&gt;         &lt;span class="mi"&gt;5&lt;/span&gt;
+&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0007039&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;  &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0363&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;8051&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;04&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="mi"&gt;77&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;13&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;376&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;
 
-         4        3        2
- - 1159 x + 2152 x - 2163 x + 891.8 x - 12.54
+         &lt;span class="mi"&gt;4&lt;/span&gt;        &lt;span class="mi"&gt;3&lt;/span&gt;        &lt;span class="mi"&gt;2&lt;/span&gt;
+ &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="mi"&gt;1159&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;2152&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="mi"&gt;2163&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;891&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="mi"&gt;12&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;54&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -9770,7 +9916,7 @@ to occur. We must reduce emissions of greenhouse gases beginning now.'&lt;/p&gt;
 &lt;p&gt;"In the APS it is OK to discuss whether the mass of the proton changes
 over time and how a multi-universe behaves, but the evidence of global
 warming is incontrovertible?"&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;http://online.wsj.com/article/SB10001424052970204301404577171531838421366.html
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;http&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;online&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;wsj&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;article&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;SB10001424052970204301404577171531838421366&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;html&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>Bayes and Hiccups: Practical working solutions that no one seems to know</title><link href="https://bblais.github.io/posts/2012/Jan/14/bayes-and-hiccups-practical-working-solutions-that-no-one-seems-to-know/" rel="alternate"></link><published>2012-01-14T23:51:00-05:00</published><updated>2012-01-14T23:51:00-05:00</updated><author><name>brianblais</name></author><id>tag:bblais.github.io,2012-01-14:/posts/2012/Jan/14/bayes-and-hiccups-practical-working-solutions-that-no-one-seems-to-know/</id><summary type="html">&lt;p&gt;So I've been interested in Bayesian analysis &lt;a href="http://web.bryant.edu/~bblais/pdf/bryant_pres.pdf"&gt;for some time&lt;/a&gt;. It has a
 fascinating history, described in detail in &lt;a href="http://www.amazon.com/Theory-That-Would-Not-Die/dp/0300169698"&gt;"The theory that would not
 die" by McGrayne&lt;/a&gt; - a truly wonderful …&lt;/p&gt;</summary><content type="html">&lt;p&gt;So I've been interested in Bayesian analysis &lt;a href="http://web.bryant.edu/~bblais/pdf/bryant_pres.pdf"&gt;for some time&lt;/a&gt;. It has a
@@ -11177,8 +11323,7 @@ something, and you get philosophical arguments, then I think you can
 immediately dismiss the claim.  I would also claim (and someone tell me
 if there is a counter example please!) that there is not a single
 example of the existence of an actual thing being first or best
-established from a philosophical argument.  &lt;/p&gt;</content></entry><entry><title>A sensible post on climate change...for a change</title><link href="https://bblais.github.io/posts/2011/Nov/09/a-sensible-post-on-climate-change-for-a-change/" rel="alternate"></link><published>2011-11-09T12:21:00-05:00</published><updated>2011-11-09T12:21:00-05:00</updated><author><name>brianblais</name></author><id>tag:bblais.github.io,2011-11-09:/posts/2011/Nov/09/a-sensible-post-on-climate-change-for-a-change/</id><summary type="html">&lt;p&gt;&lt;a href="http://wattsupwiththat.com/2011/11/01/thank-you-matt-ridley/"&gt;A very reasoned addition&lt;/a&gt; to the climate change discussion. Well
-done!&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="http://wattsupwiththat.com/2011/11/01/thank-you-matt-ridley/"&gt;A very reasoned addition&lt;/a&gt; to the climate change discussion. Well
+established from a philosophical argument.  &lt;/p&gt;</content></entry><entry><title>A sensible post on climate change...for a change</title><link href="https://bblais.github.io/posts/2011/Nov/09/a-sensible-post-on-climate-change-for-a-change/" rel="alternate"></link><published>2011-11-09T12:21:00-05:00</published><updated>2011-11-09T12:21:00-05:00</updated><author><name>brianblais</name></author><id>tag:bblais.github.io,2011-11-09:/posts/2011/Nov/09/a-sensible-post-on-climate-change-for-a-change/</id><content type="html">&lt;p&gt;&lt;a href="http://wattsupwiththat.com/2011/11/01/thank-you-matt-ridley/"&gt;A very reasoned addition&lt;/a&gt; to the climate change discussion. Well
 done!&lt;/p&gt;</content></entry><entry><title>Language of Science</title><link href="https://bblais.github.io/posts/2011/Nov/07/language-of-science/" rel="alternate"></link><published>2011-11-07T15:47:00-05:00</published><updated>2011-11-07T15:47:00-05:00</updated><author><name>brianblais</name></author><id>tag:bblais.github.io,2011-11-07:/posts/2011/Nov/07/language-of-science/</id><summary type="html">&lt;p&gt;One of the things that I noticed, starting as an undergraduate and
 moving into graduate school, is that scientists have a peculiar sort of
 conservative language. They'll say things like …&lt;/p&gt;</summary><content type="html">&lt;p&gt;One of the things that I noticed, starting as an undergraduate and

@@ -1,5 +1,153 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>bblais on the web - religion</title><link href="https://bblais.github.io/" rel="alternate"></link><link href="https://bblais.github.io/feeds/religion.atom.xml" rel="self"></link><id>https://bblais.github.io/</id><updated>2019-02-11T00:00:00-05:00</updated><entry><title>Book Review - "Unbelievable?" by Justin Brierley</title><link href="https://bblais.github.io/posts/2019/Feb/11/book-review-unbelievable-by-justin-brierley/" rel="alternate"></link><published>2019-02-11T00:00:00-05:00</published><updated>2019-02-11T00:00:00-05:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2019-02-11:/posts/2019/Feb/11/book-review-unbelievable-by-justin-brierley/</id><summary type="html">&lt;h2 id="structure-of-the-review"&gt;Structure of the Review&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>bblais on the web - religion</title><link href="https://bblais.github.io/" rel="alternate"></link><link href="https://bblais.github.io/feeds/religion.atom.xml" rel="self"></link><id>https://bblais.github.io/</id><updated>2019-09-03T00:00:00-04:00</updated><entry><title>Probability of the Resurrection</title><link href="https://bblais.github.io/posts/2019/Sep/03/probability-of-the-resurrection/" rel="alternate"></link><published>2019-09-03T00:00:00-04:00</published><updated>2019-09-03T00:00:00-04:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2019-09-03:/posts/2019/Sep/03/probability-of-the-resurrection/</id><summary type="html">&lt;p&gt;In a recent discussion about the use of probability in a religious context I saw another poor job of a calculation of the Resurrection (I had read several others that …&lt;/p&gt;</summary><content type="html">&lt;p&gt;In a recent discussion about the use of probability in a religious context I saw another poor job of a calculation of the Resurrection (I had read several others that had serious problems).  I then felt that it would be good to sketch out how it &lt;em&gt;should&lt;/em&gt; be done.  The goal here is not to come up with a single number, but to have a structure which invites discussion.  &lt;/p&gt;
+&lt;h2 id="a-smaller-problem"&gt;A smaller problem&lt;/h2&gt;
+&lt;p&gt;We are restricting the problem to the smallest possible case to most easily see the form that the calculation takes when done properly.  The problem is &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A friend of yours flipped a coin three times and got heads three times in a row.  Would this be good evidence for your friend having a coin with two heads compared to, say, a typical coin with 1 heads and 1 tails?  Here we have 2 models (&lt;span class="math"&gt;\(M_1\)&lt;/span&gt;, say, is for the 1-headed coin model and &lt;span class="math"&gt;\(M_2\)&lt;/span&gt; is for the 2-headed coin model), and some observed data (heads, heads, heads in 3 flips).&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;We want to know the probability of each of the models given the data.  In math notation we use the vertical bar,&lt;span class="math"&gt;\(|\)&lt;/span&gt;, as the symbol for "given".  The "data" is summarized as "H H H" for three observed heads flips.  So we want to obtain,
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
+P(M_1 | \text{H H H})  \text{ and } P(M_2 | \text{H H H})
+$$&lt;/div&gt;
+&lt;p&gt;
+following Bayes theorem, we write the top of Bayes equation as 
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
+P(M_1 | \text{H H H}) \sim P(\text{H H H}| M_1) \times P(M_1)
+$$&lt;/div&gt;
+&lt;p&gt;
+and
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
+P(M_2 | \text{H H H}) \sim P(\text{H H H}| M_2) \times P(M_2)
+$$&lt;/div&gt;
+&lt;p&gt;
+Before continuing, let me point out a few things.  First, I'm not using equals here, but the &lt;span class="math"&gt;\(\sim\)&lt;/span&gt; sign to denote that I'm writing just the top part of the equation first.  I'll add these two things up to get the bottom of Bayes in the next step.  I do it as a two-step process to make it easier to write down (i.e. it formats better in text) and to help when we generalize to more than 2 models, where Bayes can get a bit unwieldy. &lt;/p&gt;
+&lt;p&gt;The term &lt;span class="math"&gt;\(P(\text{H H H}| M_1)\)&lt;/span&gt; is the probability we'd see the data if we knew (i.e. we're given) that model 1 is true.  Since &lt;span class="math"&gt;\(M_1\)&lt;/span&gt; is from a fair coin, we get 1/2 probability for each head independently and we don't have any extra counting term, so we'd get the &lt;span class="math"&gt;\(P(\text{H H H}| M_1)=\frac{1}{2}\times\frac{1}{2}\times\frac{1}{2}\)&lt;/span&gt;.  The term &lt;span class="math"&gt;\(P(\text{H H H}| M_2)\)&lt;/span&gt; is the probability we'd see the data if we knew (i.e. we're given) that model 2 is true.  Since &lt;span class="math"&gt;\(M_2\)&lt;/span&gt; is from a rigged two-headed coin, we get a probability of 1 for each head so we'd get the &lt;span class="math"&gt;\(P(\text{H H H}| M_2)=1\times 1\times 1\)&lt;/span&gt;.  &lt;/p&gt;
+&lt;p&gt;The terms &lt;span class="math"&gt;\(P(M_1)\)&lt;/span&gt; and &lt;span class="math"&gt;\(P(M_2)\)&lt;/span&gt; are the prior probabilities of the model - how much we should believe them before we saw the data.  This is probably the most contentious point, and worth dwelling on.  It's not 50%, just because there are two possibilities.  Do we even know if a two-headed coin exists?  Have you ever seen one?  The two models are not symmetric.  Turns out I have seen one!  There's one in my desk, which I love to bring out to fool my students.  :-)  It was found by accident with my daughter going through all of our loose change.  I have never seen one since, but if we just took my house as an example, it's no bigger than a 1/100 of all the quarters.  This can inform the prior as &lt;span class="math"&gt;\(P(M_1) = 0.99\)&lt;/span&gt; and &lt;span class="math"&gt;\(P(M_2) = 0.01\)&lt;/span&gt;.  I would guess that this is a huge &lt;em&gt;over estimate&lt;/em&gt; for the &lt;span class="math"&gt;\(P(M_2)\)&lt;/span&gt; but it's good to run with.  &lt;/p&gt;
+&lt;p&gt;Getting back to our probabilities, we calculate the top terms of Bayes, add them up, and then go back to divide each by that total.  Thus we get:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\begin{align}
+P(M_1 | \text{H H H}) &amp;amp;\sim P(\text{H H H}| M_1) \times P(M_1) = \frac{1}{2}\times\frac{1}{2}\times\frac{1}{2}\times 0.99 = 0.124 \\
+P(M_2 | \text{H H H}) &amp;amp;\sim P(\text{H H H}| M_2) \times P(M_2) = 1\times 1\times 1\times 0.01 = 0.01
+\end{align}
+$$&lt;/div&gt;
+&lt;p&gt;
+(adding them up) &lt;span class="math"&gt;\(T=0.124 + 0.01 = 0.134\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;finally getting (notice the equals now)
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\begin{align}
+P(M_1 | \text{H H H}) &amp;amp;=0.124/T = 0.124/0.134=0.925 \\
+P(M_2 | \text{H H H}) &amp;amp;=0.01/T=0.01/0.134 = 0.075
+\end{align}
+$$&lt;/div&gt;
+&lt;p&gt;
+So, finally, we can have good reason -- by a long shot -- to &lt;em&gt;not believe&lt;/em&gt; that the person has a 2-headed coin.   Although we  have a nearly &lt;span class="math"&gt;\(8\times\)&lt;/span&gt; increase in the probability of that model, &lt;span class="math"&gt;\(M_2\)&lt;/span&gt;, given the observed data of 3 heads, this doesn't bring our confidence up to the level of belief - you'd need more data for that.  &lt;/p&gt;
+&lt;p&gt;This problem has exactly the same structure as the problem under consideration, trying to find the probability of the resurrection given the data we have and the number of possible models.&lt;/p&gt;
+&lt;h2 id="the-problem-at-hand-the-probability-of-the-resurrection"&gt;The problem at hand - the probability of the Resurrection&lt;/h2&gt;
+&lt;p&gt;The proper way to set the problem up, like the coin, is the following.  First, we start with the different models:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(R\)&lt;/span&gt; = Resurrection happened&lt;/li&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(M\)&lt;/span&gt; = Resurrection story made up entirely&lt;/li&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(V\)&lt;/span&gt; = Resurrection story incited by visions from early apostles and embellished&lt;/li&gt;
+&lt;li&gt;etc...&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;and then the math follows just like the example above,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;data = texts of gospels and Paul (and their history)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="math"&gt;\(P(R | \text{data}) \sim P(\text{data} | R) \times P(R)\)&lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(P(M | \text{data}) \sim P(\text{data} | M) \times P(M)\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(P(V | \text{data}) \sim P(\text{data} | V) \times P(V)\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;.... [insert more models if you'd like]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;then add up to &lt;span class="math"&gt;\(T = \ldots\)&lt;/span&gt;, and divide all terms, just like the coin.  &lt;/p&gt;
+&lt;p&gt;Arguments over priors can ensue, but I think it would  be fair to say that &lt;span class="math"&gt;\(P(M)&amp;gt;P(V) \gg P(R)\)&lt;/span&gt;. Although one might question this order (e.g.  arguing that visions are more common than story construction) it is certainly true that resurrections are far less common than stories or visions.  How often do we see resurrections?  How often do we see God raising someone from the dead?  How often have we heard claims of people being raised from the dead, from God or otherwise?  These very simple questions bring the prior for the Resurrection &lt;em&gt;way&lt;/em&gt; down.  The theist will typically counter with something like "I agree that resurrections through &lt;em&gt;natural&lt;/em&gt; processes are extremely unlikely, but if there is a God he could easily make resurrections through &lt;em&gt;supernatural&lt;/em&gt; causes likely."  I'll deal specifically with this objection in detail below but at this point the term &lt;span class="math"&gt;\(P(R)\)&lt;/span&gt; doesn't presuppose any mechanisms - it is just the probability of a resurrection before seeing any data and it should be agreed that this is much lower than visions or stories.&lt;/p&gt;
+&lt;p&gt;Beyond the prior, we note that terms like &lt;span class="math"&gt;\(P(\text{data} | R)\)&lt;/span&gt; have to balance both the positive claims and negative claims.  For example, we might say that this term is quite high from the positive claims -- if the Resurrection actually happened then it easily explains the stories of seeing Jesus afterward.  However, there are things that we probably should have seen -- but don't -- if the Resurrection actually happened.  Some includes the lack of an account of Roman stolen-body litigation (as would have been done to the disciples), the fact that Paul doesn't mention the empty tomb, and the guards at the tomb are only mentioned in Matthew are not mentioned in Mark, Luke, John, or even Paul.  These negative claims are easily explained with the other two models but are not easily explained from the Resurrection model making &lt;span class="math"&gt;\(P(\text{data} | R)\)&lt;/span&gt; much lower than is generally communicated.&lt;/p&gt;
+&lt;h3 id="supernatural-causation"&gt;Supernatural causation&lt;/h3&gt;
+&lt;p&gt;Now, what about the claim that the low priors are mitigated by the issue of God &lt;em&gt;supernaturally&lt;/em&gt; raising Jesus?  Here is where it gets interesting.  If you want to add the possibility of God raising Jesus &lt;em&gt;supernaturally&lt;/em&gt; from the dead we can do this with a process called &lt;em&gt;marginalization&lt;/em&gt;, which is a fancy term for adding up all of the possibilities.  Mathematically it looks like the following,&lt;/p&gt;
+&lt;p&gt;First define some symbols,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(+G\)&lt;/span&gt; = God&lt;/li&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(+S\)&lt;/span&gt; = Supernatural action&lt;/li&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(-G\)&lt;/span&gt; = no God&lt;/li&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(-S\)&lt;/span&gt; = natural action&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We can then draw out the probability terms (which don't mention any specific methods of resurrections) into several terms, each for a different method, and then apply Bayes' rule yielding
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\begin{align}
+P(R | \text{data}) =&amp;amp; P(R, +G,+S | \text{data}) + P(R, -G,+S| \text{data}) + P(R, +G,-S| \text{data}) + P(R, -G,-S| \text{data})\\
+\sim &amp;amp; P(\text{data}|R,+G,+S)P(R|+G,+S)P(+S|+G)P(+G) + \\ \nonumber
+&amp;amp;P(\text{data}|R,-G,+S)P(R|-G,+S)P(+S|-G)P(-G) + \\ \nonumber
+&amp;amp;P(\text{data}|R,+G,-S)P(R|+G,-S)P(-S|+G)P(+G) + \\ \nonumber
+&amp;amp;P(\text{data}|R,-G,-S)P(R|-G,-S)P(-S|-G)P(-G) 
+\end{align}
+$$&lt;/div&gt;
+&lt;p&gt;
+This messy result lets us look at individual terms to see where we might have to examine the data more closely.  Theists state that terms like &lt;span class="math"&gt;\(P(R|-G,-S)\)&lt;/span&gt; are small (unlikely resurrection given no God and only natural action), and I'll grant you that.  How about &lt;span class="math"&gt;\(P( R | +G, -S)\)&lt;/span&gt; or, in words,  why couldn't God have done the resurrection naturally?  How about  $P( R | -G, +S) $ or, in words, couldn't Satan or Stephen Fry's evil God have done the resurrection supernaturally?  How have theists ruled these out?  &lt;/p&gt;
+&lt;p&gt;Suddenly, by opening up some specific alternatives, one needs to follow all of those alternatives -- and their inverses -- through the entire calculation.  You then have to provide evidence for God's supposed actions (&lt;span class="math"&gt;\(P(+S|+G)\)&lt;/span&gt; and &lt;span class="math"&gt;\(P(-S|+G)\)&lt;/span&gt;) reading his inscrutable plan.  You also have to demonstrate that there are not other supernatural agents at play, and that it is likely that God is the one acting. Given that theists have yet to provide &lt;em&gt;any way&lt;/em&gt; of testing supernatural claims &lt;em&gt;at all&lt;/em&gt; it seems like a big feat.  In short, by introducing supernatural causation into the mix, theists have made their life harder -- not easier.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content></entry><entry><title>Book Review - "Unbelievable?" by Justin Brierley</title><link href="https://bblais.github.io/posts/2019/Feb/11/book-review-unbelievable-by-justin-brierley/" rel="alternate"></link><published>2019-02-11T00:00:00-05:00</published><updated>2019-02-11T00:00:00-05:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2019-02-11:/posts/2019/Feb/11/book-review-unbelievable-by-justin-brierley/</id><summary type="html">&lt;h2 id="structure-of-the-review"&gt;Structure of the Review&lt;/h2&gt;
 &lt;p&gt;As I finished this review it became apparent that there are two main audiences for what I wrote - those that have yet to read the book …&lt;/p&gt;</summary><content type="html">&lt;h2 id="structure-of-the-review"&gt;Structure of the Review&lt;/h2&gt;
 &lt;p&gt;As I finished this review it became apparent that there are two main audiences for what I wrote - those that have yet to read the book and those that have already read the book.  Therefore I decided to break the review up into two parts, one for each audience.  &lt;/p&gt;
 &lt;h1 id="for-those-that-have-not-yet-read-unbelievable"&gt;For those that have &lt;strong&gt;not&lt;/strong&gt; yet read &lt;em&gt;Unbelievable?&lt;/em&gt;&lt;/h1&gt;
