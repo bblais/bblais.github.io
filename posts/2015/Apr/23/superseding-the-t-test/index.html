@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Superseding the $t$ test  - A Bayesian comparison of means  · bblais on the web
+    <title>Superseding the $t$ test - A Bayesian comparison of means · bblais on the web
 </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -102,7 +102,7 @@
                                 <a href="#" class="img" style="background-image: url(https://bblais.github.io/images/);"></a>
                                 <div class="text pt-2 mt-3">
                               <span class="category mb-1 d-block"><a href="#">articles</a></span>
-                          <h3 class="mb-4"><a href="https://bblais.github.io/posts/2015/Apr/23/superseding-the-t-test/"> Superseding the $t$ test  <small> A Bayesian comparison of means </small>  </a></h3>
+                          <h3 class="mb-4"><a href="https://bblais.github.io/posts/2015/Apr/23/superseding-the-t-test/"> Superseding the $t$ test <small> A Bayesian comparison of means </small>  </a></h3>
                           <p class="mb-4">
                                 <p>There's a very nice paper, <a href="http://www.indiana.edu/~kruschke/articles/Kruschke2013JEPG.pdf">Bayesian estimation supersedes the t test</a>. John K. Kruschke, Journal of Experimental Psychology: General, 2013, v.142(2), pp.573-603. The methods described provide at once posterior probabilities not just for the means of two groups, but their standard deviations, their normality, and effect size.  The <a href="http://www.indiana.edu/~kruschke/BEST/">supporting website</a> has a lot of useful resources, including a number of implementations.  The original implementation is in R, but there is a <a href="https://github.com/strawlab/best">Python implementation using PyMC</a>.</p>
 <p>I decided to implement the same thing using the <a href="http://dan.iel.fm/emcee/current/">emcee package</a>.  The full implementation is <a href="http://nbviewer.ipython.org/gist/bblais/7a1c6ec3b4c8d1b0465f">viewable here</a>.  My implementation is pretty general, and can handle some arbitrary tests of the variables, like:</p>
@@ -373,7 +373,8 @@
       tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
     });
     </script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   
 
 
