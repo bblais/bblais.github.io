@@ -159,9 +159,7 @@
 
 
 <p>Or</p>
-<div class="codehilite"><pre><span></span><span class="n">param_arr</span><span class="o">=</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
-
-<span class="n">param_arr</span><span class="o">=</span><span class="p">[]</span>
+<div class="codehilite"><pre><span></span><span class="n">param_arr</span><span class="o">=</span><span class="p">[]</span>
 <span class="n">result_arr</span><span class="o">=</span><span class="p">[]</span>
 <span class="k">for</span> <span class="n">param</span> <span class="ow">in</span> <span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">100</span><span class="p">):</span>
     <span class="n">result</span><span class="o">=</span><span class="n">some_calculation</span><span class="p">(</span><span class="n">param</span><span class="p">)</span>
@@ -176,7 +174,19 @@
 </pre></div>
 
 
-<p>Both of which seem to have a lot of repetition, and two variables for every one I want to save. I’d love to know if there is a standard solution to this common pattern.   Here’s one that I came up with, which I don’t think it optimum but at least solves the immediate problem.  Defining a Storage class,</p>
+<p>Or</p>
+<div class="codehilite"><pre><span></span><span class="n">param_arr</span><span class="o">=</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">result_arr</span><span class="o">=</span><span class="n">zeros</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">param_arr</span><span class="p">))</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">param</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">param_arr</span><span class="p">):</span>
+    <span class="n">result</span><span class="o">=</span><span class="n">some_calculation</span><span class="p">(</span><span class="n">param</span><span class="p">)</span>    
+    <span class="n">result_arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">result</span>
+
+<span class="n">plot</span><span class="p">(</span><span class="n">param_arr</span><span class="p">,</span><span class="n">result_arr</span><span class="p">)</span>
+</pre></div>
+
+
+<p>The first two solutions seem to have a lot of repetition, and two variables for every one I want to save. The last one seems a bit ugly, and forces me to remember to have an index variable (enumerate or counter), and won't work if I don't know the sizes ahead of time.  I’d love to know if there is a standard solution to this common pattern.   Here’s one that I came up with, which I don’t think it optimum but at least solves the immediate problem.  Defining a Storage class,</p>
 <div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">Storage</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">=</span><span class="p">[]</span>
