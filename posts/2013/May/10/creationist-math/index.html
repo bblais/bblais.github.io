@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="https://bblais.github.io/theme/css/icomoon.css">
     <link rel="stylesheet" href="https://bblais.github.io/theme/css/style.css">
 
+    <link rel="stylesheet" href="https://bblais.github.io/theme/css/pygments.css">
     
     <link rel="stylesheet" type="text/css" href="https://bblais.github.io/theme/css/custom.css" media="screen">
 
@@ -150,16 +151,16 @@ it right, but I wanted to make sure. The math is</p>
 P=P_o e^{rt}  
 $$</div>
 <p>The code is:</p>
-<div class="highlight"><pre><span></span><span class="n">r</span><span class="o">=</span><span class="mi">0</span><span class="p">.</span><span class="mi">00456</span>
-<span class="n">t</span><span class="o">=</span><span class="mi">4500</span><span class="p">.</span><span class="mi">0</span>
-<span class="n">Po</span><span class="o">=</span><span class="mi">8</span><span class="p">.</span><span class="mi">0</span>
+<div class="codehilite" style="background: #202020"><pre style="line-height: 125%"><span></span><span style="color: #d0d0d0">r=</span><span style="color: #3677a9">0</span><span style="color: #d0d0d0">.</span><span style="color: #3677a9">00456</span>
+<span style="color: #d0d0d0">t=</span><span style="color: #3677a9">4500</span><span style="color: #d0d0d0">.</span><span style="color: #3677a9">0</span>
+<span style="color: #d0d0d0">Po=</span><span style="color: #3677a9">8</span><span style="color: #d0d0d0">.</span><span style="color: #3677a9">0</span>
 
-<span class="n">print</span> <span class="n">Po</span><span class="o">*</span><span class="n">exp</span><span class="p">(</span><span class="n">r</span><span class="o">*</span><span class="n">t</span><span class="p">)</span><span class="o">/</span><span class="mi">1</span><span class="n">e9</span><span class="p">,</span><span class="ss">&quot;billion&quot;</span>
+<span style="color: #d0d0d0">print</span> <span style="color: #d0d0d0">Po*exp(r*t)/</span><span style="color: #3677a9">1</span><span style="color: #d0d0d0">e9,</span><span style="color: #ed9d13">&quot;billion&quot;</span>
 </pre></div>
 
 
 <p>Yielding</p>
-<div class="highlight"><pre><span></span><span class="err">6.52849018681 billion</span>
+<div class="codehilite" style="background: #202020"><pre style="line-height: 125%"><span></span><span style="color: #a61717; background-color: #e3d2d2">6.52849018681 billion</span>
 </pre></div>
 
 
@@ -170,17 +171,17 @@ P(t)&amp;=&amp;P_o \times e^{r\cdot t} \\\\
 t&amp;=&amp; \frac{\log(P(t))-\log(P_o)}{r}  
 \end{eqnarray}</div>
 <p>or</p>
-<div class="highlight"><pre><span></span><span class="n">Po</span><span class="o">=</span><span class="mi">6</span><span class="p">.</span><span class="mi">5</span><span class="n">e9</span>  <span class="o">#</span> <span class="k">current</span> <span class="n">population</span>
-<span class="n">r</span><span class="o">=</span><span class="mi">0</span><span class="p">.</span><span class="mi">00456</span>
-<span class="n">P</span><span class="o">=</span><span class="mi">8</span>       <span class="o">#</span> <span class="n">target</span> <span class="n">population</span>
+<div class="codehilite" style="background: #202020"><pre style="line-height: 125%"><span></span><span style="color: #d0d0d0">Po=</span><span style="color: #3677a9">6</span><span style="color: #d0d0d0">.</span><span style="color: #3677a9">5</span><span style="color: #d0d0d0">e9</span>  <span style="color: #d0d0d0">#</span> <span style="color: #6ab825; font-weight: bold">current</span> <span style="color: #d0d0d0">population</span>
+<span style="color: #d0d0d0">r=</span><span style="color: #3677a9">0</span><span style="color: #d0d0d0">.</span><span style="color: #3677a9">00456</span>
+<span style="color: #d0d0d0">P=</span><span style="color: #3677a9">8</span>       <span style="color: #d0d0d0">#</span> <span style="color: #d0d0d0">target</span> <span style="color: #d0d0d0">population</span>
 
-<span class="n">t</span><span class="o">=</span><span class="p">(</span><span class="n">log</span><span class="p">(</span><span class="n">P</span><span class="p">)</span><span class="o">-</span><span class="n">log</span><span class="p">(</span><span class="n">Po</span><span class="p">))</span><span class="o">/</span><span class="n">r</span> 
-<span class="n">print</span> <span class="n">t</span><span class="p">,</span> <span class="ss">&quot;years&quot;</span>
+<span style="color: #d0d0d0">t=(log(P)-log(Po))/r</span> 
+<span style="color: #d0d0d0">print</span> <span style="color: #d0d0d0">t,</span> <span style="color: #ed9d13">&quot;years&quot;</span>
 </pre></div>
 
 
 <p>resulting in</p>
-<div class="highlight"><pre><span></span><span class="err">-4499.04089302 years.</span>
+<div class="codehilite" style="background: #202020"><pre style="line-height: 125%"><span></span><span style="color: #a61717; background-color: #e3d2d2">-4499.04089302 years.</span>
 </pre></div>
 
 
@@ -358,6 +359,7 @@ helpful to these people.</p>
                         <li><a href="https://bblais.github.io/category/math.html">math <span>(4)</span></a></li>
                         <li><a href="https://bblais.github.io/category/presentations.html">presentations <span>(3)</span></a></li>
                         <li><a href="https://bblais.github.io/category/productivity.html">productivity <span>(6)</span></a></li>
+                        <li><a href="https://bblais.github.io/category/programming.html">programming <span>(1)</span></a></li>
                         <li><a href="https://bblais.github.io/category/projects.html">projects <span>(7)</span></a></li>
                         <li><a href="https://bblais.github.io/category/religion.html">religion <span>(9)</span></a></li>
                         <li><a href="https://bblais.github.io/category/science.html">science <span>(5)</span></a></li>
