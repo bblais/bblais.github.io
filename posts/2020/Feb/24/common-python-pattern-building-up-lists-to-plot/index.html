@@ -105,7 +105,7 @@
                               <span class="category mb-1 d-block"><a href="#">programming</a></span>
                           <h3 class="mb-4"><a href="https://bblais.github.io/posts/2020/Feb/24/common-python-pattern-building-up-lists-to-plot/"> Common Python Pattern - Building Up Lists To Plot </a></h3>
                           <p class="mb-4">
-                                <p>I find that a common pattern I implement again and again in python is to build of a list, or multiple lists, turn them into arrays at the end to plot.  An example that stores 4 lists for an <a href="https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology#The_SIR_model">SIR compartmental model</a> looks like,</p>
+                                <p>I find that a common pattern I implement again and again in Python is to build up a list (or multiple lists) in a loop and turn them into arrays at the end for plotting or further calculating.  An example that stores 4 lists of a <a href="https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology#The_SIR_model">SIR compartmental model</a> would look like,</p>
 <div class="codehilite"><pre><span></span><span class="n">t</span><span class="o">=</span><span class="mi">0</span>
 <span class="n">S</span><span class="o">=</span><span class="mi">100</span>
 <span class="n">I</span><span class="o">=</span><span class="mi">1</span>
@@ -143,7 +143,7 @@
 </pre></div>
 
 
-<p>Notice the repetition.  I get the same pattern then running through the values of a parameter, calculating a result, and want to save the result and the parameter.   For the loop I have to seemingly choose between</p>
+<p>Notice the repetition.  I get the same pattern running through the values of a parameter, calculating a result, but then wanting to make a plot of the result vs the parameter.   For the loop I have to seemingly choose between,</p>
 <div class="codehilite"><pre><span></span><span class="n">param_arr</span><span class="o">=</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
 
 <span class="n">result_arr</span><span class="o">=</span><span class="p">[]</span>
@@ -176,7 +176,7 @@
 </pre></div>
 
 
-<p>Both of which seem to have a lot of repetition, and two variables for every one I want to save. I’d love to know if there is a standard solution to this common pattern.   Here’s one that I came up with, which I don’t think it optimum but at least solves the immediate problems.  Defining a Storage class,</p>
+<p>Both of which seem to have a lot of repetition, and two variables for every one I want to save. I’d love to know if there is a standard solution to this common pattern.   Here’s one that I came up with, which I don’t think it optimum but at least solves the immediate problem.  Defining a Storage class,</p>
 <div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">Storage</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">=</span><span class="p">[]</span>
