@@ -47,7 +47,7 @@ P(H_{m+1}|D,M_2) &amp;amp;=&amp;amp; P(H_{m+1}|M_2) = 1
 \end{eqnarray}&lt;/div&gt;
 &lt;p&gt;So, the bulk of the probability comes from the probability of each model given the data.  Applying Bayes' Rule, we get &lt;/p&gt;
 &lt;div class="math"&gt;\begin{eqnarray}
-P(M_1|D) &amp;amp;\sim&amp;amp; P(D|M_1)=\frac{P(M_1) \sim 0.5^m \cdot P(M_1)}{T} \\
+P(M_1|D) &amp;amp;\sim&amp;amp; P(D|M_1)P(M_1)=\frac{0.5^m \cdot P(M_1)}{T} \\
 P(M_2|D) &amp;amp;\sim&amp;amp; P(D|M_2)P(M_2)=\frac{1^m \cdot P(M_2)}{T}
 \end{eqnarray}&lt;/div&gt;
 &lt;p&gt;where &lt;span class="math"&gt;\(T\)&lt;/span&gt; is the total probability of the data and the probabilities &lt;span class="math"&gt;\(P(M_1)\)&lt;/span&gt; and &lt;span class="math"&gt;\(P(M_2)\)&lt;/span&gt; are the priors for Model 1 and Model 2, respectively.  &lt;/p&gt;
