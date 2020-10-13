@@ -5,7 +5,7 @@
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
-    <title>Laplace and Twins - Why Bayes is still right · bblais on the web
+    <title>Laplace and Twins  - Why Bayes is still right  · bblais on the web
 </title>
     <meta name="description" content="">
     <meta name="author" content="Brian Blais">
@@ -131,7 +131,7 @@
 
             <div class="s-content__header col-full">
                 <h1 class="s-content__header-title">
-                    Laplace and Twins <p><span class="h2"> Why Bayes is still right </span></p>  
+                    Laplace and Twins  <p><span class="h2"> Why Bayes is still right </span></p>  
                 </h1>
                 <ul class="s-content__header-meta">
                     <li class="date"><time pubdate="pubdate" datetime="2016-03-28T00:00:00-04:00">Mon 28 March 2016</time></li>
@@ -230,7 +230,7 @@ P(I|S) &amp;=&amp; \int_0^1 \frac{1/2 \cdot q}{1/2\cdot q + 1/4\cdot (1-q)} dq =
 P(I|S) &amp;=&amp; \int_0^1 \frac{1/2 \cdot q}{1/2\cdot q + 1/4\cdot (1-q)} {\rm Beta}(h+1,N+1) dq 
 \end{eqnarray}</div>
 <p>which is easiest done numerically.  Using the sie library from <a href="http://web.bryant.edu/~bblais/statistical-inference-for-everyone-sie.html">my book</a> I have for <span class="math">\(h=0\)</span>, <span class="math">\(N=0\)</span>, </p>
-<div class="codehilite"><pre><span></span><span class="n">h</span><span class="o">=</span><span class="mi">0</span>
+<div class="codehilite"><pre><span></span><code><span class="n">h</span><span class="o">=</span><span class="mi">0</span>
 <span class="n">N</span><span class="o">=</span><span class="mi">0</span>
 
 <span class="n">d</span><span class="o">=</span><span class="n">beta</span><span class="p">(</span><span class="n">h</span><span class="p">,</span><span class="n">N</span><span class="p">)</span>
@@ -240,14 +240,14 @@ P(I|S) &amp;=&amp; \int_0^1 \frac{1/2 \cdot q}{1/2\cdot q + 1/4\cdot (1-q)} {\rm
 
 <span class="n">f</span><span class="o">=</span><span class="nb">sum</span><span class="p">(</span><span class="mf">0.5</span><span class="o">*</span><span class="n">q</span><span class="o">/</span><span class="p">(</span><span class="o">.</span><span class="mi">5</span><span class="o">*</span><span class="n">q</span><span class="o">+.</span><span class="mi">25</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">q</span><span class="p">))</span><span class="o">*</span><span class="n">pq</span><span class="o">*</span><span class="n">dq</span><span class="p">)</span>
 <span class="nb">print</span> <span class="n">f</span>
-</pre></div>
+</code></pre></div>
 
 
 <blockquote>
 <p>f = 0.614</p>
 </blockquote>
 <p>matching our analytical calculation.  Now, with a modest 30 sets of twins, 10 of which are identical (consistent with our modern observations), we have</p>
-<div class="codehilite"><pre><span></span><span class="n">h</span><span class="o">=</span><span class="mi">10</span>
+<div class="codehilite"><pre><span></span><code><span class="n">h</span><span class="o">=</span><span class="mi">10</span>
 <span class="n">N</span><span class="o">=</span><span class="mi">30</span>
 
 <span class="n">d</span><span class="o">=</span><span class="n">beta</span><span class="p">(</span><span class="n">h</span><span class="p">,</span><span class="n">N</span><span class="p">)</span>
@@ -257,7 +257,7 @@ P(I|S) &amp;=&amp; \int_0^1 \frac{1/2 \cdot q}{1/2\cdot q + 1/4\cdot (1-q)} {\rm
 
 <span class="n">f</span><span class="o">=</span><span class="nb">sum</span><span class="p">(</span><span class="mf">0.5</span><span class="o">*</span><span class="n">q</span><span class="o">/</span><span class="p">(</span><span class="o">.</span><span class="mi">5</span><span class="o">*</span><span class="n">q</span><span class="o">+.</span><span class="mi">25</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">q</span><span class="p">))</span><span class="o">*</span><span class="n">pq</span><span class="o">*</span><span class="n">dq</span><span class="p">)</span>
 <span class="nb">print</span> <span class="n">f</span>
-</pre></div>
+</code></pre></div>
 
 
 <blockquote>

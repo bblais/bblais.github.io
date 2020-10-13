@@ -5,7 +5,7 @@
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
-    <title>Creationist Math · bblais on the web
+    <title>Creationist Math  · bblais on the web
 </title>
     <meta name="description" content="">
     <meta name="author" content="Brian Blais">
@@ -131,7 +131,7 @@
 
             <div class="s-content__header col-full">
                 <h1 class="s-content__header-title">
-                    Creationist Math 
+                    Creationist Math  
                 </h1>
                 <ul class="s-content__header-meta">
                     <li class="date"><time pubdate="pubdate" datetime="2013-05-10T18:36:00-04:00">Fri 10 May 2013</time></li>
@@ -200,17 +200,17 @@ it right, but I wanted to make sure. The math is</p>
 P=P_o e^{rt}  
 $$</div>
 <p>The code is:</p>
-<div class="codehilite"><pre><span></span><span class="n">r</span><span class="o">=</span><span class="mi">0</span><span class="p">.</span><span class="mi">00456</span>
+<div class="codehilite"><pre><span></span><code><span class="n">r</span><span class="o">=</span><span class="mi">0</span><span class="p">.</span><span class="mi">00456</span>
 <span class="n">t</span><span class="o">=</span><span class="mi">4500</span><span class="p">.</span><span class="mi">0</span>
 <span class="n">Po</span><span class="o">=</span><span class="mi">8</span><span class="p">.</span><span class="mi">0</span>
 
 <span class="n">print</span> <span class="n">Po</span><span class="o">*</span><span class="n">exp</span><span class="p">(</span><span class="n">r</span><span class="o">*</span><span class="n">t</span><span class="p">)</span><span class="o">/</span><span class="mi">1</span><span class="n">e9</span><span class="p">,</span><span class="ss">&quot;billion&quot;</span>
-</pre></div>
+</code></pre></div>
 
 
 <p>Yielding</p>
-<div class="codehilite"><pre><span></span><span class="err">6.52849018681 billion</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="err">6.52849018681 billion</span>
+</code></pre></div>
 
 
 <p>The other direction is, how long ago were there only 8 people?</p>
@@ -220,18 +220,18 @@ P(t)&amp;=&amp;P_o \times e^{r\cdot t} \\\\
 t&amp;=&amp; \frac{\log(P(t))-\log(P_o)}{r}  
 \end{eqnarray}</div>
 <p>or</p>
-<div class="codehilite"><pre><span></span><span class="n">Po</span><span class="o">=</span><span class="mi">6</span><span class="p">.</span><span class="mi">5</span><span class="n">e9</span>  <span class="o">#</span> <span class="k">current</span> <span class="n">population</span>
+<div class="codehilite"><pre><span></span><code><span class="n">Po</span><span class="o">=</span><span class="mi">6</span><span class="p">.</span><span class="mi">5</span><span class="n">e9</span>  <span class="o">#</span> <span class="k">current</span> <span class="n">population</span>
 <span class="n">r</span><span class="o">=</span><span class="mi">0</span><span class="p">.</span><span class="mi">00456</span>
 <span class="n">P</span><span class="o">=</span><span class="mi">8</span>       <span class="o">#</span> <span class="n">target</span> <span class="n">population</span>
 
 <span class="n">t</span><span class="o">=</span><span class="p">(</span><span class="n">log</span><span class="p">(</span><span class="n">P</span><span class="p">)</span><span class="o">-</span><span class="n">log</span><span class="p">(</span><span class="n">Po</span><span class="p">))</span><span class="o">/</span><span class="n">r</span> 
 <span class="n">print</span> <span class="n">t</span><span class="p">,</span> <span class="ss">&quot;years&quot;</span>
-</pre></div>
+</code></pre></div>
 
 
 <p>resulting in</p>
-<div class="codehilite"><pre><span></span><span class="err">-4499.04089302 years.</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="err">-4499.04089302 years.</span>
+</code></pre></div>
 
 
 <h2 id="is-their-growth-rate-correct">Is their growth rate correct?</h2>

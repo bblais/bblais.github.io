@@ -5,7 +5,7 @@
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
-    <title>Superseding the $t$ test - A Bayesian comparison of means · bblais on the web
+    <title>Superseding the $t$ test  - A Bayesian comparison of means  · bblais on the web
 </title>
     <meta name="description" content="">
     <meta name="author" content="Brian Blais">
@@ -131,7 +131,7 @@
 
             <div class="s-content__header col-full">
                 <h1 class="s-content__header-title">
-                    Superseding the $t$ test <p><span class="h2"> A Bayesian comparison of means </span></p>  
+                    Superseding the $t$ test  <p><span class="h2"> A Bayesian comparison of means </span></p>  
                 </h1>
                 <ul class="s-content__header-meta">
                     <li class="date"><time pubdate="pubdate" datetime="2015-04-23T00:00:00-04:00">Thu 23 April 2015</time></li>
@@ -156,24 +156,24 @@
 <p>I decided to implement the same thing using the <a href="http://dan.iel.fm/emcee/current/">emcee package</a>.  The full implementation is <a href="http://nbviewer.ipython.org/gist/bblais/7a1c6ec3b4c8d1b0465f">viewable here</a>.  My implementation is pretty general, and can handle some arbitrary tests of the variables, like:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">P</span><span class="p">(</span><span class="s1">&#39;(mu1&gt;101) &amp; (mu1&lt;102.1)&#39;</span><span class="p">)</span>
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">model</span><span class="o">.</span><span class="n">P</span><span class="p">(</span><span class="s1">&#39;(mu1&gt;101) &amp; (mu1&lt;102.1)&#39;</span><span class="p">)</span>
 
 <span class="mf">0.85502222222222224</span>
-</pre></div>
+</code></pre></div>
 </td></tr></table>
 
 <p>and</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">P</span><span class="p">(</span><span class="s1">&#39;sigma1&lt;sigma2&#39;</span><span class="p">)</span>
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">model</span><span class="o">.</span><span class="n">P</span><span class="p">(</span><span class="s1">&#39;sigma1&lt;sigma2&#39;</span><span class="p">)</span>
 
 <span class="mf">0.0060111111111111112</span>
-</pre></div>
+</code></pre></div>
 </td></tr></table>
 
 <p>and</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">plot_distribution</span><span class="p">(</span><span class="s1">&#39;Effect Size=(mu1-mu2)/sqrt((sigma1**2+sigma2**2)/2)&#39;</span><span class="p">)</span>
-</pre></div>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">model</span><span class="o">.</span><span class="n">plot_distribution</span><span class="p">(</span><span class="s1">&#39;Effect Size=(mu1-mu2)/sqrt((sigma1**2+sigma2**2)/2)&#39;</span><span class="p">)</span>
+</code></pre></div>
 </td></tr></table>
 
 <p><img alt="effectsize" src="images/effect_size.png"></p>
