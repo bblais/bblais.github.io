@@ -189,7 +189,6 @@
 <span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">I</span><span class="p">)</span>
 </code></pre></div>
 
-
 <p>Notice the repetition.  I get the same pattern running through the values of a parameter, calculating a result, but then wanting to make a plot of the result vs the parameter.   For the loop I have to seemingly choose between,</p>
 <div class="codehilite"><pre><span></span><code><span class="n">param_arr</span><span class="o">=</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
 
@@ -203,7 +202,6 @@
 
 <span class="n">plot</span><span class="p">(</span><span class="n">param_arr</span><span class="p">,</span><span class="n">result_arr</span><span class="p">)</span>
 </code></pre></div>
-
 
 <p>Or</p>
 <div class="codehilite"><pre><span></span><code><span class="n">param_arr</span><span class="o">=</span><span class="p">[]</span>
@@ -220,7 +218,6 @@
 <span class="n">plot</span><span class="p">(</span><span class="n">param_arr</span><span class="p">,</span><span class="n">result_arr</span><span class="p">)</span>
 </code></pre></div>
 
-
 <p>Or</p>
 <div class="codehilite"><pre><span></span><code><span class="n">param_arr</span><span class="o">=</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
 <span class="n">result_arr</span><span class="o">=</span><span class="n">zeros</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">param_arr</span><span class="p">))</span>
@@ -231,7 +228,6 @@
 
 <span class="n">plot</span><span class="p">(</span><span class="n">param_arr</span><span class="p">,</span><span class="n">result_arr</span><span class="p">)</span>
 </code></pre></div>
-
 
 <p>The first two solutions seem to have a lot of repetition, and two variables for every one I want to save. The last one seems a bit ugly, and forces me to remember to have an index variable (enumerate or counter), and won't work if I don't know the sizes ahead of time.  I’d love to know if there is a standard solution to this common pattern.   Here’s one that I came up with, which I don’t think it optimum but at least solves the immediate problem.  Defining a Storage class,</p>
 <div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">Storage</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
@@ -271,7 +267,6 @@
         <span class="k">return</span> <span class="n">vstack</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">arrays</span><span class="p">())</span>
 </code></pre></div>
 
-
 <p>I can rewrite the above SIR model with </p>
 <div class="codehilite"><pre><span></span><code><span class="n">t</span><span class="o">=</span><span class="mi">0</span>
 <span class="n">S</span><span class="o">=</span><span class="mi">100</span>
@@ -303,7 +298,6 @@
 <span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">I</span><span class="p">)</span>
 </code></pre></div>
 
-
 <p>And the parameter exploration example with,</p>
 <div class="codehilite"><pre><span></span><code><span class="n">data</span><span class="o">=</span><span class="n">Storage</span><span class="p">()</span>
 <span class="k">for</span> <span class="n">param</span> <span class="ow">in</span> <span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">100</span><span class="p">):</span>
@@ -315,7 +309,6 @@
 
 <span class="n">plot</span><span class="p">(</span><span class="n">param</span><span class="p">,</span><span class="n">result</span><span class="p">)</span>
 </code></pre></div>
-
 
 <p>What do you think?</p>
 

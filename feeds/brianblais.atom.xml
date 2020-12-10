@@ -494,9 +494,7 @@ in the universe, decades before our ability to actually confirm it, is
 truly astounding.  In times like this I have a feeling of optimism for
 our species, an awe for the amazing structure in the universe that we
 have uncovered, and an excitement for the things that we have yet to
-discover.&lt;/p&gt;
-&lt;p&gt;[helped to fill in an explanation of the fundamental laws of the
-  universe]: &lt;a href="https://www.google.com/url?sa=t&amp;amp;rct=j&amp;amp;q=&amp;amp;esrc=s&amp;amp;source=video&amp;amp;cd=2&amp;amp;cad=rja&amp;amp;ved=0CDkQtwIwAQ&amp;amp;url=http%3A%2F%2Fvimeo.com%2F41038445&amp;amp;ei=44lVUt-eHse64APjvICIAg&amp;amp;usg=AFQjCNEY-1_XGOOn83K1l_sb6tfK-iSwJQ&amp;amp;sig2=kcchFC14cXRJs4EsgemqJA&amp;amp;bvm=bv.53760139,d.dmg"&gt;https://www.google.com/url?sa=t&amp;amp;rct=j&amp;amp;q=&amp;amp;esrc=s&amp;amp;source=video&amp;amp;cd=2&amp;amp;cad=rja&amp;amp;ved=0CDkQtwIwAQ&amp;amp;url=http%3A%2F%2Fvimeo.com%2F41038445&amp;amp;ei=44lVUt-eHse64APjvICIAg&amp;amp;usg=AFQjCNEY-1_XGOOn83K1l_sb6tfK-iSwJQ&amp;amp;sig2=kcchFC14cXRJs4EsgemqJA&amp;amp;bvm=bv.53760139,d.dmg&lt;/a&gt;&lt;/p&gt;</content><category term="wordpress_migration"></category><category term="Science"></category></entry><entry><title>The Fallacy of All-Natural</title><link href="https://bblais.github.io/posts/2013/Sep/26/the-fallacy-of-all-natural/" rel="alternate"></link><published>2013-09-26T14:33:00-04:00</published><updated>2013-09-26T14:33:00-04:00</updated><author><name>brianblais</name></author><id>tag:bblais.github.io,2013-09-26:/posts/2013/Sep/26/the-fallacy-of-all-natural/</id><summary type="html">&lt;p&gt;I was&lt;a href="http://www.huffingtonpost.com/jj-keith/vaccines_b_3829948.html"&gt;reading an article&lt;/a&gt; about the anti-vaccine movement, encouraging
+discover.&lt;/p&gt;</content><category term="wordpress_migration"></category><category term="Science"></category></entry><entry><title>The Fallacy of All-Natural</title><link href="https://bblais.github.io/posts/2013/Sep/26/the-fallacy-of-all-natural/" rel="alternate"></link><published>2013-09-26T14:33:00-04:00</published><updated>2013-09-26T14:33:00-04:00</updated><author><name>brianblais</name></author><id>tag:bblais.github.io,2013-09-26:/posts/2013/Sep/26/the-fallacy-of-all-natural/</id><summary type="html">&lt;p&gt;I was&lt;a href="http://www.huffingtonpost.com/jj-keith/vaccines_b_3829948.html"&gt;reading an article&lt;/a&gt; about the anti-vaccine movement, encouraging
 pro-vaccine supporters to be more vocal - something I support
 whole-heartedly.  In the article there was an awesome quote, that really …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I was&lt;a href="http://www.huffingtonpost.com/jj-keith/vaccines_b_3829948.html"&gt;reading an article&lt;/a&gt; about the anti-vaccine movement, encouraging
 pro-vaccine supporters to be more vocal - something I support
@@ -1917,11 +1915,9 @@ $$&lt;/div&gt;
 &lt;span class="n"&gt;print&lt;/span&gt; &lt;span class="n"&gt;Po&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;exp&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="n"&gt;e9&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;billion&amp;quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;Yielding&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;6.52849018681 billion&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;p&gt;The other direction is, how long ago were there only 8 people?&lt;/p&gt;
 &lt;div class="math"&gt;\begin{eqnarray}  
@@ -1938,11 +1934,9 @@ t&amp;amp;=&amp;amp; \frac{\log(P(t))-\log(P_o)}{r}
 &lt;span class="n"&gt;print&lt;/span&gt; &lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ss"&gt;&amp;quot;years&amp;quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;resulting in&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;-4499.04089302 years.&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;h2 id="is-their-growth-rate-correct"&gt;Is their growth rate correct?&lt;/h2&gt;
 &lt;p&gt;Here I am using &lt;a href="http://www.census.gov/population/international/data/worldpop/table_population.php"&gt;data from census.gov&lt;/a&gt;.  It is possible (in fact likely) that the original post used a slightly
@@ -2149,7 +2143,6 @@ we want:&lt;/p&gt;
 $$&lt;/div&gt;
 &lt;/p&gt;
 &lt;/p&gt;
-
 &lt;/blockquote&gt;
 &lt;p&gt;I compared &lt;em&gt;with replacement&lt;/em&gt; to &lt;em&gt;without replacement&lt;/em&gt;, and got the same
 answer, much to my surprise. After satisfying my surprise with a
@@ -2168,7 +2161,6 @@ notation, we want:&lt;/p&gt;
  $$&lt;/div&gt;
 &lt;/p&gt;
 &lt;/p&gt;
-
 &lt;/blockquote&gt;
 &lt;h3 id="with-replacement"&gt;With replacement:&lt;/h3&gt;
 &lt;div class="math"&gt;$$
@@ -2341,7 +2333,6 @@ cards in each case.&lt;/p&gt;
 &lt;span class="n"&gt;found&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;deals&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;color&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Black&amp;#39;&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;rank&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;The length of "found" is 104, and the length of the "deals" is 2704 (52
 x 52).&lt;/p&gt;
 &lt;h3 id="without-replacement"&gt;Without replacement:&lt;/h3&gt;
@@ -2356,7 +2347,6 @@ x 52).&lt;/p&gt;
 
 &lt;span class="n"&gt;found&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;deals&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;color&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Black&amp;#39;&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;rank&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;p&gt;The length of "found" is 102, and the length of the "deals" is 2652 (52
 x 51), which is the &lt;em&gt;same&lt;/em&gt; fraction.&lt;/p&gt;
@@ -3669,7 +3659,6 @@ polynomial, we can get even better!&lt;/p&gt;
  &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="mi"&gt;1159&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;2152&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="mi"&gt;2163&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;891&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="mi"&gt;12&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;54&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;with a Mean Squared Error of Zero!!!&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Fig4" src="http://brianblais.files.wordpress.com/2013/02/fig4.png" title="fig4.png"&gt;&lt;/p&gt;
 &lt;p&gt;In the field of statistics, this is referred to as over-fitting, and is
@@ -4043,7 +4032,7 @@ regularly posting, now that the semester is starting.  I'm also testing
 out new posting tools.&lt;/p&gt;
 &lt;p&gt;So, as a beginning, I start with an extract from an introductory
 statistics class:&lt;/p&gt;
-&lt;p&gt;![]&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="http://brianblais.files.wordpress.com/2012/08/pastedgraphic-1-1.png"&gt;&lt;/p&gt;
 &lt;p&gt;I had a strong feeling that this was a job for probability, not for
 statistics, so I thought, how would one do this problem:&lt;/p&gt;
 &lt;p&gt;&lt;span style="white-space:pre;"&gt; &lt;/span&gt;We observe  h1=4, N1=10&lt;/p&gt;
@@ -4054,14 +4043,14 @@ threw together this little calculation, where I simply marginalize over
 the single "random coin" parameter, given data 1 (our initial data) and
 look at the probability of various h2's:&lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;
-![1]&lt;/p&gt;
+&lt;img alt="1" src="http://brianblais.files.wordpress.com/2012/08/untitled11.png"&gt;&lt;/p&gt;
 &lt;p&gt;since&lt;/p&gt;
-&lt;p&gt;![2]&lt;/p&gt;
+&lt;p&gt;&lt;img alt="2" src="http://brianblais.files.wordpress.com/2012/08/untitled-2.png"&gt;&lt;/p&gt;
 &lt;p&gt;which also arises in the normalization condition for the beta
 distribution.  This leads to our final solution:&lt;/p&gt;
-&lt;p&gt;![3]&lt;/p&gt;
+&lt;p&gt;&lt;img alt="3" src="http://brianblais.files.wordpress.com/2012/08/untitled-3.png"&gt;&lt;/p&gt;
 &lt;p&gt;which leads to the following plot, for h1=4, N1=10, and N2=100:&lt;/p&gt;
-&lt;p&gt;![4]&lt;/p&gt;
+&lt;p&gt;&lt;img alt="4" src="http://brianblais.files.wordpress.com/2012/08/untitled-4.png"&gt;&lt;/p&gt;
 &lt;p&gt;I can't help but think there is a simplification of the equation, but I
 don't see anything obvious that cancels.  Certainly, for large N's I
 could approximate it. &lt;/p&gt;
@@ -4116,7 +4105,6 @@ maps onto the various pieces of Bayes' Rule, but I figured I'd put up my
 list here and add to it as I think of it.
 
 &lt;/div&gt;
-
 &lt;ul&gt;
 &lt;li&gt;Confidence in a claim should scale with the evidence for that claim&lt;/li&gt;
 &lt;li&gt;Ockham's razor - simpler theories are preferred (i.e. you pay a
@@ -4416,10 +4404,10 @@ itself known, even if it might take a while. Finally, I think there is a
 lot to learn about what is beneficial to human mental well-being and
 societal well-being, and that some of these benefits currently are most
 clearly demonstrated in a religious context. I don't think that they
-need to be exclusively achieved in a religious context.&lt;/p&gt;</content><category term="wordpress_migration"></category></entry><entry><title>Best quote in a while about global warming...</title><link href="https://bblais.github.io/posts/2012/Jan/27/best-quote-in-a-while-about-global-warming/" rel="alternate"></link><published>2012-01-27T18:48:00-05:00</published><updated>2012-01-27T18:48:00-05:00</updated><author><name>brianblais</name></author><id>tag:bblais.github.io,2012-01-27:/posts/2012/Jan/27/best-quote-in-a-while-about-global-warming/</id><summary type="html">&lt;p&gt;In the article &lt;a href=""&gt;Sixteen Concerned Scientists: No Need to Panic About
+need to be exclusively achieved in a religious context.&lt;/p&gt;</content><category term="wordpress_migration"></category></entry><entry><title>Best quote in a while about global warming...</title><link href="https://bblais.github.io/posts/2012/Jan/27/best-quote-in-a-while-about-global-warming/" rel="alternate"></link><published>2012-01-27T18:48:00-05:00</published><updated>2012-01-27T18:48:00-05:00</updated><author><name>brianblais</name></author><id>tag:bblais.github.io,2012-01-27:/posts/2012/Jan/27/best-quote-in-a-while-about-global-warming/</id><summary type="html">&lt;p&gt;In the article &lt;a href="http://online.wsj.com/article/SB10001424052970204301404577171531838421366.html"&gt;Sixteen Concerned Scientists: No Need to Panic About
 Global Warming&lt;/a&gt;, physicist Ivar Giaever is quotes the American
 Physical Society policy on global warming: 'The evidence is
-incontrovertible …&lt;/p&gt;</summary><content type="html">&lt;p&gt;In the article &lt;a href=""&gt;Sixteen Concerned Scientists: No Need to Panic About
+incontrovertible …&lt;/p&gt;</summary><content type="html">&lt;p&gt;In the article &lt;a href="http://online.wsj.com/article/SB10001424052970204301404577171531838421366.html"&gt;Sixteen Concerned Scientists: No Need to Panic About
 Global Warming&lt;/a&gt;, physicist Ivar Giaever is quotes the American
 Physical Society policy on global warming: 'The evidence is
 incontrovertible: Global warming is occurring. If no mitigating actions
@@ -4429,9 +4417,7 @@ to occur. We must reduce emissions of greenhouse gases beginning now.'&lt;/p&gt;
 &lt;p&gt;His next quote is priceless and dead on:&lt;/p&gt;
 &lt;p&gt;"In the APS it is OK to discuss whether the mass of the proton changes
 over time and how a multi-universe behaves, but the evidence of global
-warming is incontrovertible?"&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c"&gt;http://online.wsj.com/article/SB10001424052970204301404577171531838421366.html&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="wordpress_migration"></category></entry><entry><title>Bayes and Hiccups: Practical working solutions that no one seems to know</title><link href="https://bblais.github.io/posts/2012/Jan/14/bayes-and-hiccups-practical-working-solutions-that-no-one-seems-to-know/" rel="alternate"></link><published>2012-01-14T23:51:00-05:00</published><updated>2012-01-14T23:51:00-05:00</updated><author><name>brianblais</name></author><id>tag:bblais.github.io,2012-01-14:/posts/2012/Jan/14/bayes-and-hiccups-practical-working-solutions-that-no-one-seems-to-know/</id><summary type="html">&lt;p&gt;So I've been interested in Bayesian analysis &lt;a href="http://web.bryant.edu/~bblais/pdf/bryant_pres.pdf"&gt;for some time&lt;/a&gt;. It has a
+warming is incontrovertible?"&lt;/p&gt;</content><category term="wordpress_migration"></category></entry><entry><title>Bayes and Hiccups: Practical working solutions that no one seems to know</title><link href="https://bblais.github.io/posts/2012/Jan/14/bayes-and-hiccups-practical-working-solutions-that-no-one-seems-to-know/" rel="alternate"></link><published>2012-01-14T23:51:00-05:00</published><updated>2012-01-14T23:51:00-05:00</updated><author><name>brianblais</name></author><id>tag:bblais.github.io,2012-01-14:/posts/2012/Jan/14/bayes-and-hiccups-practical-working-solutions-that-no-one-seems-to-know/</id><summary type="html">&lt;p&gt;So I've been interested in Bayesian analysis &lt;a href="http://web.bryant.edu/~bblais/pdf/bryant_pres.pdf"&gt;for some time&lt;/a&gt;. It has a
 fascinating history, described in detail in &lt;a href="http://www.amazon.com/Theory-That-Would-Not-Die/dp/0300169698"&gt;"The theory that would not
 die" by McGrayne&lt;/a&gt; - a truly wonderful …&lt;/p&gt;</summary><content type="html">&lt;p&gt;So I've been interested in Bayesian analysis &lt;a href="http://web.bryant.edu/~bblais/pdf/bryant_pres.pdf"&gt;for some time&lt;/a&gt;. It has a
 fascinating history, described in detail in &lt;a href="http://www.amazon.com/Theory-That-Would-Not-Die/dp/0300169698"&gt;"The theory that would not
@@ -4514,11 +4500,11 @@ Santa had helped him up. Very seriously, they looked at me and said
 "Dad, that's just a stuffed Santa".&lt;/p&gt;
 &lt;p&gt;Now I realize that people see agency in non-living things, but it was
 amazing to see the same done on such a selective basis. Now sure what it
-means, except that I have no idea how they perceive the world.&lt;/p&gt;</content><category term="wordpress_migration"></category></entry><entry><title>Einstein and the Motives of Scientists</title><link href="https://bblais.github.io/posts/2011/Dec/27/einstein-and-the-motives-of-scientists/" rel="alternate"></link><published>2011-12-27T20:52:00-05:00</published><updated>2011-12-27T20:52:00-05:00</updated><author><name>brianblais</name></author><id>tag:bblais.github.io,2011-12-27:/posts/2011/Dec/27/einstein-and-the-motives-of-scientists/</id><summary type="html">&lt;p&gt;I just got a &lt;a href="http://thelegalwatchdog.blogspot.com/2011/12/is-it-science-or-pseudoscience.html"&gt;shout out from The Legal Watchdog, Michael Cicchini&lt;/a&gt; for
-a post I did on &lt;a href="http://brianblais.wordpress.com/2011/10/14/faster-than-light-why-the-lawyer-is-wrong/"&gt;dark matter and the speed of light&lt;/a&gt;. His response to
-my criticism …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I just got a &lt;a href="http://thelegalwatchdog.blogspot.com/2011/12/is-it-science-or-pseudoscience.html"&gt;shout out from The Legal Watchdog, Michael Cicchini&lt;/a&gt; for
-a post I did on &lt;a href="http://brianblais.wordpress.com/2011/10/14/faster-than-light-why-the-lawyer-is-wrong/"&gt;dark matter and the speed of light&lt;/a&gt;. His response to
-my criticism of his original posts &lt;a href="http://thelegalwatchdog.blogspot.com/2011/05/times-up-einstein-legal-watchdog.html"&gt;here&lt;/a&gt; and &lt;a href="http://thelegalwatchdog.blogspot.com/2011/09/legal-watchdog-faster-than-speed-of.html"&gt;here&lt;/a&gt; shows that he
+means, except that I have no idea how they perceive the world.&lt;/p&gt;</content><category term="wordpress_migration"></category></entry><entry><title>Einstein and the Motives of Scientists</title><link href="https://bblais.github.io/posts/2011/Dec/27/einstein-and-the-motives-of-scientists/" rel="alternate"></link><published>2011-12-27T20:52:00-05:00</published><updated>2011-12-27T20:52:00-05:00</updated><author><name>brianblais</name></author><id>tag:bblais.github.io,2011-12-27:/posts/2011/Dec/27/einstein-and-the-motives-of-scientists/</id><summary type="html">&lt;p&gt;I just got a [shout out from The Legal Watchdog, Michael Cicchini][] for
+a post I did on [dark matter and the speed of light][]. His response to
+my criticism …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I just got a [shout out from The Legal Watchdog, Michael Cicchini][] for
+a post I did on [dark matter and the speed of light][]. His response to
+my criticism of his original posts [here][] and [here][1] shows that he
 missed the point of my criticism. I'll grant him that I may have come
 off as "condescending", and that my "stick to law" comment could be
 interpreted as more than the strategically exaggerated tone used in a
@@ -4586,8 +4572,8 @@ physics for the past 300 years. I have a big problem with that.&lt;/p&gt;
 &lt;h3 id="the-science"&gt;The Science&lt;/h3&gt;
 &lt;p&gt;So, the motive is wrong, but is the science correct? I'd say, "no" to
 that as well. In the second post, there is a reference to the latest
-faster than light measurements. Mr Cicchini directs me to writer &lt;a href="http://www.washingtonpost.com/national/health-science/particles-faster-than-light-revolution-or-mistake/2011/09/23/gIQArpJzqK_story.html"&gt;Brian
-Vastag&lt;/a&gt; concerning the experiment. In that article, there is this:&lt;/p&gt;
+faster than light measurements. Mr Cicchini directs me to writer [Brian
+Vastag][] concerning the experiment. In that article, there is this:&lt;/p&gt;
 &lt;p&gt;
 &gt; The physicist, Dario Auterio, made no sweeping claims.
 &gt;
@@ -4688,7 +4674,7 @@ Cicchini writes:
 &gt; which science cannot afford.
 &gt; &lt;/p&gt;
 
-&lt;p&gt;For me, this has nothing to do with "laypeople" (a phrase I associate
+For me, this has nothing to do with "laypeople" (a phrase I associate
 more with non-clergy as opposed to non-academic), but with people
 speaking confidently when their confidence is completely unwarranted. I
 don't believe you need a PhD to speak about science in a productive way,
@@ -4703,26 +4689,35 @@ at the language of the scientists doing the faster-than-light
 experiments. This doesn't mean that scientists are above this kind of
 misplaced confidence...I could still list many examples of scientists
 speaking out of their area of expertise, but it is considered a real
-liability in science.&lt;/p&gt;
-&lt;p&gt;So, the bottom line is that where Mr Cicchini sees a conspiracy, the
+liability in science.
+
+So, the bottom line is that where Mr Cicchini sees a conspiracy, the
 facts support a rational scientific discourse. Where Mr Cicchini sees an
 elite academic silencing the criticism by a layperson, the reality is
-that it is rational to critique &lt;em&gt;anyone&lt;/em&gt; speaking confidently of things
+that it is rational to critique *anyone* speaking confidently of things
 they cannot be confident of. Where Mr Cicchini sees a dogmatic,
 unswerving, scientific establishment, the facts support the confidence
 scientists have in centuries old models of the universe that have
 withstood the hammer blows of criticism during those centuries, all
 without buckling. It doesn't mean that the new ideas are necessarily
-&lt;em&gt;wrong&lt;/em&gt;, but it does mean that we are a lot less confident of them &lt;em&gt;for
-good reason&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;[The Trouble With Physics: The Rise of String Theory, The Fall of a
-  Science, and What Comes Next]: &lt;a href="http://www.amazon.com/Trouble-Physics-String-Theory-Science/dp/061891868X"&gt;http://www.amazon.com/Trouble-Physics-String-Theory-Science/dp/061891868X&lt;/a&gt;
+*wrong*, but it does mean that we are a lot less confident of them *for
+good reason*.
+
+  [shout out from The Legal Watchdog, Michael Cicchini]: http://thelegalwatchdog.blogspot.com/2011/12/is-it-science-or-pseudoscience.html
+  [dark matter and the speed of light]: http://brianblais.wordpress.com/2011/10/14/faster-than-light-why-the-lawyer-is-wrong/
+  [here]: http://thelegalwatchdog.blogspot.com/2011/05/times-up-einstein-legal-watchdog.html
+  [1]: http://thelegalwatchdog.blogspot.com/2011/09/legal-watchdog-faster-than-speed-of.html
+  [Brian Vastag]: http://www.washingtonpost.com/national/health-science/particles-faster-than-light-revolution-or-mistake/2011/09/23/gIQArpJzqK_story.html
+  [demonstrate it]: http://www.youtube.com/watch?v=-gQ829OTtI4
+  [The Trouble With Physics: The Rise of String Theory, The Fall of a
+  Science, and What Comes Next]: http://www.amazon.com/Trouble-Physics-String-Theory-Science/dp/061891868X
   ["Time and Classical and Quantum Mechanics: Indeterminacy vs.
-  Discontinuity"]: &lt;a href="http://arxiv.org/pdf/physics/0310055"&gt;http://arxiv.org/pdf/physics/0310055&lt;/a&gt;&lt;/p&gt;</content><category term="wordpress_migration"></category></entry><entry><title>The Bible Foreshadows Scientific Discoveries?</title><link href="https://bblais.github.io/posts/2011/Dec/22/the-bible-foreshadows-scientific-discoveries/" rel="alternate"></link><published>2011-12-22T15:08:00-05:00</published><updated>2011-12-22T15:08:00-05:00</updated><author><name>brianblais</name></author><id>tag:bblais.github.io,2011-12-22:/posts/2011/Dec/22/the-bible-foreshadows-scientific-discoveries/</id><summary type="html">&lt;p&gt;Here is an interesting site &lt;a href="http://www.pleaseconvinceme.com/index/The_Bible_Foreshadows_Scientific_Discoveries"&gt;"The Bible Foreshadows Scientific
-Discoveries"&lt;/a&gt; where there are quotes from the Bible that supposedly
+  Discontinuity"]: http://arxiv.org/pdf/physics/0310055
+  [Einstein's 1905 paper]: http://www.fourmilab.ch/etexts/einstein/specrel/www/</content><category term="wordpress_migration"></category></entry><entry><title>The Bible Foreshadows Scientific Discoveries?</title><link href="https://bblais.github.io/posts/2011/Dec/22/the-bible-foreshadows-scientific-discoveries/" rel="alternate"></link><published>2011-12-22T15:08:00-05:00</published><updated>2011-12-22T15:08:00-05:00</updated><author><name>brianblais</name></author><id>tag:bblais.github.io,2011-12-22:/posts/2011/Dec/22/the-bible-foreshadows-scientific-discoveries/</id><summary type="html">&lt;p&gt;Here is an interesting site ["The Bible Foreshadows Scientific
+Discoveries"][] where there are quotes from the Bible that supposedly
 pre-dated the actual scientific discoveries. It is interesting for the
-number …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Here is an interesting site &lt;a href="http://www.pleaseconvinceme.com/index/The_Bible_Foreshadows_Scientific_Discoveries"&gt;"The Bible Foreshadows Scientific
-Discoveries"&lt;/a&gt; where there are quotes from the Bible that supposedly
+number …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Here is an interesting site ["The Bible Foreshadows Scientific
+Discoveries"][] where there are quotes from the Bible that supposedly
 pre-dated the actual scientific discoveries. It is interesting for the
 number of science errors, and also the failure of any kind of critical
 scientific thinking. I will leave it as an exercise for the reader to
@@ -4897,7 +4892,10 @@ Thermodynamics:
 &gt; perish, but you remain; they will all wear out like a garment.
 &gt; &lt;/p&gt;
 
-&lt;p&gt;Enough said.&lt;/p&gt;</content><category term="wordpress_migration"></category></entry><entry><title>Closed to the supernatural?</title><link href="https://bblais.github.io/posts/2011/Dec/20/closed-to-the-supernatural/" rel="alternate"></link><published>2011-12-20T15:41:00-05:00</published><updated>2011-12-20T15:41:00-05:00</updated><author><name>brianblais</name></author><id>tag:bblais.github.io,2011-12-20:/posts/2011/Dec/20/closed-to-the-supernatural/</id><summary type="html">&lt;p&gt;I have often heard the charge that critics of the concept of God are
+Enough said.
+
+  ["The Bible Foreshadows Scientific Discoveries"]: http://www.pleaseconvinceme.com/index/The_Bible_Foreshadows_Scientific_Discoveries
+  [Earlier, on a different page,]: http://www.PleaseConvinceMe.com/index/pg79638</content><category term="wordpress_migration"></category></entry><entry><title>Closed to the supernatural?</title><link href="https://bblais.github.io/posts/2011/Dec/20/closed-to-the-supernatural/" rel="alternate"></link><published>2011-12-20T15:41:00-05:00</published><updated>2011-12-20T15:41:00-05:00</updated><author><name>brianblais</name></author><id>tag:bblais.github.io,2011-12-20:/posts/2011/Dec/20/closed-to-the-supernatural/</id><summary type="html">&lt;p&gt;I have often heard the charge that critics of the concept of God are
 simply closed to the possibility of a transcendent being, or of
 miracles, or of the supernatural …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I have often heard the charge that critics of the concept of God are
 simply closed to the possibility of a transcendent being, or of
@@ -4913,7 +4911,6 @@ because it is not defined. Ok, so define it!&lt;/p&gt;
 &lt;li&gt;
 &lt;p&gt;Definition of a transcendent being:&lt;/p&gt;
 &lt;p&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;Transcendence refers to the aspect of God's nature which is wholly
 independent of (and removed from) the physical universe.
@@ -4924,7 +4921,6 @@ independent of (and removed from) the physical universe.
 &lt;li&gt;
 &lt;p&gt;definition of supernatural:&lt;/p&gt;
 &lt;p&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;The supernatural is that which is not subject to the laws of
 nature, or more figuratively, that which is said to exist above
@@ -4935,7 +4931,6 @@ and beyond nature. [&lt;a href="http://en.wikipedia.org/wiki/Supernatural"&gt;wi
 &lt;li&gt;
 &lt;p&gt;definition of miracle&lt;/p&gt;
 &lt;p&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;A miracle often denotes an event attributed to divine
 intervention. Alternatively, it may be an event attributed to a
@@ -5121,7 +5116,6 @@ gaps, that could possibly be explained in the future, but were
 &lt;li&gt;
 &lt;p&gt;Science can't explain ultimate origins&lt;/p&gt;
 &lt;p&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;"If the laws that control the universe started with the universe,
 then they could not have caused the universe. If not, then the
@@ -5134,7 +5128,6 @@ universe."
 &lt;li&gt;
 &lt;p&gt;Science can't justify itself&lt;/p&gt;
 &lt;p&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;"Science must be silent on why natural laws take the form that
 they do. For example, why is the gravitational law of the form
@@ -5148,7 +5141,6 @@ is only descriptive, not pre-scriptive of nature.
 &lt;li&gt;
 &lt;p&gt;Science can't explain the origin of life&lt;/p&gt;
 &lt;p&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;"Life depends on code, and information. It is impossible for
 information to be generated from random chemical combination, or
@@ -5159,7 +5151,6 @@ random chance events"
 &lt;li&gt;
 &lt;p&gt;Science can't explain the phenomenon of mind&lt;/p&gt;
 &lt;p&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;There is something different about man, a biological uniqueness.
 This includes the capacity of self knowledge, thought, reason, and
@@ -5261,7 +5252,6 @@ we can all learn when dealing with challenging problems.&lt;/p&gt;
     To: Brian Blais
 
 &lt;/p&gt;
-
 &lt;p&gt;See last Reagan comment..is he right? J&lt;/p&gt;
 &lt;p&gt;Not …&lt;/p&gt;</summary><content type="html">&lt;p&gt;
     From: Steven Winsor 
@@ -5270,7 +5260,6 @@ we can all learn when dealing with challenging problems.&lt;/p&gt;
     To: Brian Blais
 
 &lt;/p&gt;
-
 &lt;p&gt;See last Reagan comment..is he right? J&lt;/p&gt;
 &lt;p&gt;Not claiming there is a God or not...some days I think there could be
 and other days I think there just can't be (especially after some awful
@@ -5289,7 +5278,7 @@ abounding in this country.&lt;/p&gt;
 religion, I think it's good for other people (i.e. "do as I say, don't
 do as I do"...yes, a bit hypocritical J). And I do think Reagan is right
 in the last comment...on balance.&lt;/p&gt;
-&lt;p&gt;![]&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="http://brianblais.files.wordpress.com/2011/12/reagan1.png"&gt;&lt;/p&gt;
 &lt;p&gt;
     From: Brian Blais
     Subject: Re: Remember This Guy? - Genius!
@@ -5297,7 +5286,6 @@ in the last comment...on balance.&lt;/p&gt;
     To: Steven Winsor
 
 &lt;/p&gt;
-
 &lt;p&gt;On Nov 30, 2011, at 10:20 AM, Steven Winsor wrote:&lt;/p&gt;
 &lt;p&gt;
 &gt; *  
@@ -5339,12 +5327,10 @@ For a very good treatment of this, see&lt;/p&gt;
     To: Brian Blais
 
 &lt;/p&gt;
-
 &lt;p&gt;
 &gt; &lt;em&gt;
 &gt;
 &gt; &lt;/p&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;&gt;&lt;br&gt;
  See last Reagan comment..is he right? J&lt;/p&gt;
@@ -5356,7 +5342,6 @@ For a very good treatment of this, see&lt;/p&gt;
 &gt; &lt;em&gt;
 &gt;
 &gt; &lt;/p&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;&gt;&lt;br&gt;
  needs the 'moral anchor' that religion provides (i.e., be good, go to
@@ -5374,7 +5359,6 @@ often less than we desire.&lt;/p&gt;
 &gt; &lt;em&gt;
 &gt;
 &gt; &lt;/p&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;&gt;&lt;br&gt;
  A purely secular society, in my humble opinion, would eventually lead
@@ -5401,13 +5385,11 @@ and humans aren't like that in any significant numbers&lt;br&gt;
     To: Steven Winsor
 
 &lt;/p&gt;
-
 &lt;p&gt;On Nov 30, 2011, at 11:28 AM, Steven Winsor wrote:&lt;/p&gt;
 &lt;p&gt;
 &gt; &lt;em&gt;
 &gt;
 &gt; &lt;/p&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;Correct...one thing doesn't automatically mean another...but it leads,
 in my opinion, eventually to a society where judgments themselves are
@@ -5425,7 +5407,6 @@ is a good example of a secular nation.&lt;/p&gt;
     To: Brian Blais
 
 &lt;/p&gt;
-
 &lt;p&gt;I think Sweden is an exception. Being 1/4 Swedish myself, I am pleased
 of course that they handle their affairs well. And I wonder how secular
 they really are...there is no significant number of churches in Sweden?
@@ -5440,7 +5421,6 @@ are in East Asia.&lt;/p&gt;
     To: Brian Blais
 
 &lt;/p&gt;
-
 &lt;p&gt;Brian, got this from Wikipedia (below in bold): a mixed bag it
 seems...there was state church until 2000...as of 2010, 70% of Swedes
 are members of the Church of Sweden...but religion is not a big part of
@@ -5452,7 +5432,6 @@ Wikipedia passage.J&lt;/p&gt;
 &gt; &lt;em&gt;
 &gt;
 &gt; &lt;/p&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;Religion in Sweden (Wikipedia):&lt;/p&gt;
 &lt;p&gt;Sweden was Christianized from Norse paganism in the 11th century.
@@ -5475,7 +5454,6 @@ Sweden membership attends public worship during an average week; about
     To: Steven Winsor
 
 &lt;/p&gt;
-
 &lt;p&gt;On Nov 30, 2011, at 12:42 PM, Steven Winsor wrote:&lt;/p&gt;
 &lt;p&gt;
 &gt; *  
@@ -5522,7 +5500,6 @@ believed in a personal God."&lt;/p&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/table&gt;
-
 &lt;p&gt;vague deists, mostly, and about 1/4 atheists...seems reasonably secular
 to me, because the morality arguments stem not from deism but from
 theism, of which only about 1/4 are.&lt;/p&gt;
@@ -5540,7 +5517,6 @@ proves that more religiosity doesn't necessarily improve a society.&lt;/p&gt;
     To: Brian Blais
 
 &lt;/p&gt;
-
 &lt;p&gt;Another interesting view of it by astrophysicist Bernard Haisch. He
 mentions 'exceptional human experiences' below (ex. My Royal Flush
 Ace-high scenario?).&lt;/p&gt;
@@ -5561,7 +5537,6 @@ may be that over-arching intelligence somewhere in existence?&lt;/p&gt;
 &gt; &lt;em&gt;
 &gt;
 &gt; &lt;/p&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;Is there an intelligence behind the origin of the Universe?
 Bestsellers by Christopher Hitchins,Richard Dawkins and, Sam
@@ -5625,7 +5600,6 @@ it inhabit the subconscious mind...or conscious?&lt;/p&gt;
     To: Steven Winsor
 
 &lt;/p&gt;
-
 &lt;p&gt;On Dec 1, 2011, at 10:36 AM, Steven Winsor wrote:&lt;/p&gt;
 &lt;p&gt;
 &gt; *  
@@ -5762,7 +5736,6 @@ notion that we are all connected.&lt;/p&gt;
     To: Brian Blais
 
 &lt;/p&gt;
-
 &lt;p&gt;What is cooler than seeing film of Richard Feynman (my favorite
 physicist&lt;br&gt;
 sorry, Brian&lt;br&gt;
@@ -5945,7 +5918,7 @@ at three types of information given:&lt;/p&gt;
 \\frac{12}{56} \\ \\ \\ \\ \\ (1)&amp;amp;fg=000000\\)&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;This can be seen pictorially by listing every possible two-card hand
 and looking at those with two hearts, yielding 12 hands out of 56.&lt;/p&gt;
-&lt;p&gt;![]&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="http://brianblais.files.wordpress.com/2011/10/fig1.png"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;p&gt;
 2.  &lt;em&gt;You're told that at least one of the cards is a heart&lt;/em&gt;. Now we need
 to look at the first and second cards, and eliminate the possibility
@@ -5961,7 +5934,7 @@ then a spade. We then have&lt;/p&gt;
 &lt;p&gt;This can be seen pictorially by listing every possible two-card hand
 &lt;em&gt;with at least one heart&lt;/em&gt; and looking at those with two hearts,
 yielding 12 hands out of 44.&lt;/p&gt;
-&lt;p&gt;![2]&lt;/p&gt;
+&lt;p&gt;&lt;img alt="2" src="http://brianblais.files.wordpress.com/2011/10/fig2.png"&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;em&gt;You're told that at least one of the cards is an ace of hearts&lt;/em&gt;.
@@ -6012,7 +5985,7 @@ difference.&lt;/p&gt;
 &lt;p&gt;This can be seen pictorially by listing every possible two-card hand
 with an ace of hearts and looking at those with two hearts, yielding
 6 hands out of 14.&lt;/p&gt;
-&lt;p&gt;![3]&lt;/p&gt;
+&lt;p&gt;&lt;img alt="3" src="http://brianblais.files.wordpress.com/2011/10/fig3.png"&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;strong&gt;3. Back to the Florida problem&lt;/strong&gt;&lt;/p&gt;
@@ -6705,10 +6678,7 @@ think so.&lt;/p&gt;
 &lt;div class="blogger-post-footer"&gt;
 ![]
 
-&lt;/div&gt;
-
-&lt;p&gt;[“knowing basic facts and concepts about science and having an
-  understanding of how science works.”]: &lt;a href="http://www.nsf.gov/statistics/seind04/c7/c7s2.htm"&gt;http://www.nsf.gov/statistics/seind04/c7/c7s2.htm&lt;/a&gt;&lt;/p&gt;</content><category term="wordpress_migration"></category></entry><entry><title>Science and Attitudes Toward Criticism</title><link href="https://bblais.github.io/posts/2011/Jul/26/science-and-attitudes-toward-criticism/" rel="alternate"></link><published>2011-07-26T16:36:00-04:00</published><updated>2011-07-26T16:36:00-04:00</updated><author><name>brianblais</name></author><id>tag:bblais.github.io,2011-07-26:/posts/2011/Jul/26/science-and-attitudes-toward-criticism/</id><summary type="html">&lt;p&gt;So this morning I got a strong criticism of my post, &lt;a href="http://bblais.blogspot.com/2010/02/not-so-hidden-flaw-in-this-climate.html"&gt;“The Not-so-Hidden
+&lt;/div&gt;</content><category term="wordpress_migration"></category></entry><entry><title>Science and Attitudes Toward Criticism</title><link href="https://bblais.github.io/posts/2011/Jul/26/science-and-attitudes-toward-criticism/" rel="alternate"></link><published>2011-07-26T16:36:00-04:00</published><updated>2011-07-26T16:36:00-04:00</updated><author><name>brianblais</name></author><id>tag:bblais.github.io,2011-07-26:/posts/2011/Jul/26/science-and-attitudes-toward-criticism/</id><summary type="html">&lt;p&gt;So this morning I got a strong criticism of my post, &lt;a href="http://bblais.blogspot.com/2010/02/not-so-hidden-flaw-in-this-climate.html"&gt;“The Not-so-Hidden
 Flaw in this Climate Argument”&lt;/a&gt;, which itself is a criticism of
 someone else’s criticism of a …&lt;/p&gt;</summary><content type="html">&lt;p&gt;So this morning I got a strong criticism of my post, &lt;a href="http://bblais.blogspot.com/2010/02/not-so-hidden-flaw-in-this-climate.html"&gt;“The Not-so-Hidden
 Flaw in this Climate Argument”&lt;/a&gt;, which itself is a criticism of
@@ -7484,16 +7454,15 @@ Lower
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/table&gt;
-
 &lt;div class="blogger-post-footer"&gt;
 !&lt;&gt;
 
 &lt;/div&gt;
 
-&lt;p&gt;[![]]: &lt;a href="http://brianblais.files.wordpress.com/2011/01/upper3.png"&gt;http://brianblais.files.wordpress.com/2011/01/upper3.png&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;[![1]]: &lt;a href="http://brianblais.files.wordpress.com/2011/01/lower1.png"&gt;http://brianblais.files.wordpress.com/2011/01/lower1.png&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;[![2]]: &lt;a href="http://brianblais.files.wordpress.com/2011/01/upper.png"&gt;http://brianblais.files.wordpress.com/2011/01/upper.png&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;[![3]]: &lt;a href="http://brianblais.files.wordpress.com/2011/01/lower2.png"&gt;http://brianblais.files.wordpress.com/2011/01/lower2.png&lt;/a&gt;&lt;/p&gt;</content><category term="wordpress_migration"></category></entry><entry><title>Predictions for the Australian Open</title><link href="https://bblais.github.io/posts/2011/Jan/18/predictions-for-the-australian-open/" rel="alternate"></link><published>2011-01-18T23:53:00-05:00</published><updated>2011-01-18T23:53:00-05:00</updated><author><name>brianblais</name></author><id>tag:bblais.github.io,2011-01-18:/posts/2011/Jan/18/predictions-for-the-australian-open/</id><summary type="html">&lt;p&gt;I am not really into sports, but a student of mine is doing a project on
+&lt;p&gt;[&lt;img alt="" src="http://brianblais.files.wordpress.com/2011/01/upper3.png?w=73"&gt;]: &lt;a href="http://brianblais.files.wordpress.com/2011/01/upper3.png"&gt;http://brianblais.files.wordpress.com/2011/01/upper3.png&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;[&lt;img alt="1" src="http://brianblais.files.wordpress.com/2011/01/lower1.png?w=70"&gt;]: &lt;a href="http://brianblais.files.wordpress.com/2011/01/lower1.png"&gt;http://brianblais.files.wordpress.com/2011/01/lower1.png&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;[&lt;img alt="2" src="http://brianblais.files.wordpress.com/2011/01/upper.png?w=73"&gt;]: &lt;a href="http://brianblais.files.wordpress.com/2011/01/upper.png"&gt;http://brianblais.files.wordpress.com/2011/01/upper.png&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;[&lt;img alt="3" src="http://brianblais.files.wordpress.com/2011/01/lower2.png?w=67"&gt;]: &lt;a href="http://brianblais.files.wordpress.com/2011/01/lower2.png"&gt;http://brianblais.files.wordpress.com/2011/01/lower2.png&lt;/a&gt;&lt;/p&gt;</content><category term="wordpress_migration"></category></entry><entry><title>Predictions for the Australian Open</title><link href="https://bblais.github.io/posts/2011/Jan/18/predictions-for-the-australian-open/" rel="alternate"></link><published>2011-01-18T23:53:00-05:00</published><updated>2011-01-18T23:53:00-05:00</updated><author><name>brianblais</name></author><id>tag:bblais.github.io,2011-01-18:/posts/2011/Jan/18/predictions-for-the-australian-open/</id><summary type="html">&lt;p&gt;I am not really into sports, but a student of mine is doing a project on
 developing an automated system for predicting professional tennis
 matches. We are posting his system's …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I am not really into sports, but a student of mine is doing a project on
 developing an automated system for predicting professional tennis
@@ -7530,14 +7499,13 @@ Lower
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/table&gt;
-
 &lt;div class="blogger-post-footer"&gt;
 !&lt;&gt;
 
 &lt;/div&gt;
 
-&lt;p&gt;[![]]: &lt;a href="http://brianblais.files.wordpress.com/2011/01/upper31.png"&gt;http://brianblais.files.wordpress.com/2011/01/upper31.png&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;[![1]]: &lt;a href="http://brianblais.files.wordpress.com/2011/01/lower.png"&gt;http://brianblais.files.wordpress.com/2011/01/lower.png&lt;/a&gt;&lt;/p&gt;</content><category term="wordpress_migration"></category></entry><entry><title>Religion, Science, and Humility</title><link href="https://bblais.github.io/posts/2011/Jan/14/religion-science-and-humility/" rel="alternate"></link><published>2011-01-14T17:23:00-05:00</published><updated>2011-01-14T17:23:00-05:00</updated><author><name>brianblais</name></author><id>tag:bblais.github.io,2011-01-14:/posts/2011/Jan/14/religion-science-and-humility/</id><summary type="html">&lt;p&gt;I've been listening to the &lt;a href="http://thesciencenetwork.org/programs/beyond-belief-science-religion-reason-and-survival"&gt;"Beyond Belief"&lt;/a&gt; workshop, where many very
+&lt;p&gt;[&lt;img alt="" src="http://brianblais.files.wordpress.com/2011/01/upper31.png?w=78"&gt;]: &lt;a href="http://brianblais.files.wordpress.com/2011/01/upper31.png"&gt;http://brianblais.files.wordpress.com/2011/01/upper31.png&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;[&lt;img alt="1" src="http://brianblais.files.wordpress.com/2011/01/lower.png?w=72"&gt;]: &lt;a href="http://brianblais.files.wordpress.com/2011/01/lower.png"&gt;http://brianblais.files.wordpress.com/2011/01/lower.png&lt;/a&gt;&lt;/p&gt;</content><category term="wordpress_migration"></category></entry><entry><title>Religion, Science, and Humility</title><link href="https://bblais.github.io/posts/2011/Jan/14/religion-science-and-humility/" rel="alternate"></link><published>2011-01-14T17:23:00-05:00</published><updated>2011-01-14T17:23:00-05:00</updated><author><name>brianblais</name></author><id>tag:bblais.github.io,2011-01-14:/posts/2011/Jan/14/religion-science-and-humility/</id><summary type="html">&lt;p&gt;I've been listening to the &lt;a href="http://thesciencenetwork.org/programs/beyond-belief-science-religion-reason-and-survival"&gt;"Beyond Belief"&lt;/a&gt; workshop, where many very
 bright people discuss the role of science and religion in society.  I
 need to go back and re-listen to …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I've been listening to the &lt;a href="http://thesciencenetwork.org/programs/beyond-belief-science-religion-reason-and-survival"&gt;"Beyond Belief"&lt;/a&gt; workshop, where many very
 bright people discuss the role of science and religion in society.  I
@@ -8290,7 +8258,6 @@ pathologically high value*
 &lt;/tr&gt;
 &lt;p&gt;
 &lt;/table&gt;
-
 &lt;h2 id="the-psi-measure-and-log-likelihood"&gt;The &amp;amp;psi-measure and log-likelihood&lt;/h2&gt;
 &lt;p&gt;To understand the other problem with the &amp;amp;chi^2^ test we need to
 understand what the &amp;amp;psi-measure is doing. As above, imagine we have a
@@ -8361,7 +8328,6 @@ to which they are comparing*
 &lt;/tr&gt;
 &lt;p&gt;
 &lt;/table&gt;
-
 &lt;h2 id="still-taught"&gt;Still taught?&lt;/h2&gt;
 &lt;p&gt;So, why is the &amp;amp;chi^2^ test still taught? I don't know. It has
 pathological behavior in simple systems, where somewhat rare events
@@ -8612,19 +8578,16 @@ goes up, could be like:&lt;/p&gt;
 ![A2673E80-F8DF-4075-9854-7A956B9CE989.jpg][]
 
 &lt;/div&gt;
-
 &lt;p&gt;which would predict a nice linear response. What about this:&lt;/p&gt;
 &lt;div style="text-align:center;"&gt;
 ![F7B70424-1CA7-4D17-9A93-B57938360DA8.jpg][]
 
 &lt;/div&gt;
-
 &lt;p&gt;or this?&lt;/p&gt;
 &lt;div style="text-align:center;"&gt;
 ![D11EAF1C-6B62-446A-90CD-A77E4C6D597E.jpg][]
 
 &lt;/div&gt;
-
 &lt;p&gt;Each of these is a translation of "when T goes up, A goes up", but they
 have radically different forms, and they have radically different
 effects. You can't build a proper scientific model in words alone. Words
@@ -9187,7 +9150,6 @@ King Theoden
 &lt;p&gt;
 &lt;/tr&gt;
 &lt;/table&gt;
-
 &lt;p&gt;Any more?&lt;/p&gt;
 &lt;div class="blogger-post-footer"&gt;
 !&lt;&gt;
@@ -9218,7 +9180,7 @@ Theory"&lt;/a&gt; which has such flawed logic itself that I am surprised
 someone wrote it.&lt;/p&gt;
 &lt;h4 id="introduction"&gt;Introduction&lt;/h4&gt;
 &lt;p&gt;
-To summarize the article, I quote the last paragraph:
+To summarize the article, I quote the last paragraph:  
 
 &gt; An idea has been drummed into our heads for decades: that roughly 1%
 &gt; of the atmosphere's content is responsible for shifting the earth's
@@ -9241,7 +9203,7 @@ NASA elementary school guide, which has:&lt;/p&gt;
 to absorb heat.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;
-Then he (correctly) criticizes this guide saying
+Then he (correctly) criticizes this guide saying  
 
 &gt; So how does NASA go wrong? By consistently confusing light and heat,
 &gt; as you see in the illustration below, where infrared light is depicted
@@ -9251,7 +9213,7 @@ Then he (correctly) criticizes this guide saying
 &lt;p&gt;Clearly NASA should have said that greenhouse gases absorb infrared
 light, or radiation.&lt;/p&gt;
 &lt;p&gt;
-Then the author continues with this:
+Then the author continues with this:  
 
 &gt; Why does NASA go wrong? Because it has a flimsy yet lucrative theory
 &gt; to foist on the taxpaying public, that's why. As the space agency
@@ -9266,7 +9228,7 @@ consequence of the basic laws of thermodynamics. Without it, Earth would
 be far less habitable!&lt;/p&gt;
 &lt;h4 id="conduction-convection-radiation-oh-my"&gt;Conduction, Convection, Radiation, Oh My!&lt;/h4&gt;
 &lt;p&gt;
-He continues:
+He continues:  
 
 &gt; To make this idea seem plausible, therefore, it's crucial to fix
 &gt; people's attention on the 1% of the atmosphere that can be heated by
@@ -9283,7 +9245,7 @@ ozone is about 2 to 8 parts per million. That is 0.0002%! Despite this
 trace amount, we get significant warming of the stratosphere &lt;a href="http://apollo.lsc.vsc.edu/classes/met130/notes/chapter1/vert_temp_all.html"&gt;as shown
 here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;
-His reasoning on this issue is
+His reasoning on this issue is  
 
 &gt; Consider too that since most air molecules are infrared-transparent,
 &gt; they can't be heated by the infrared that CO2 and water vapor emit.
@@ -9313,7 +9275,6 @@ is here.&lt;/p&gt;
 ![5ADD81CC-8005-4BA1-915D-5294F80A36C5.jpg][]
 
 &lt;/div&gt;
-
 &lt;p&gt;(From
 &lt;a href="http://oceanworld.tamu.edu/resources/oceanography-book/radiationbalance.htm"&gt;http://oceanworld.tamu.edu/resources/oceanography-book/radiationbalance.htm&lt;/a&gt;,
 which cites Houghton et al., (1996: 58), which using data from Kiehl and
@@ -9372,10 +9333,7 @@ Street. I think I may be becoming more Libertarian in my old age. :)&lt;/p&gt;
 &lt;div class="blogger-post-footer"&gt;
 ![]
 
-&lt;/div&gt;
-
-&lt;p&gt;[read here a nice description of the problems of fixing maximum
-  prices]: &lt;a href="http://www.econlog.econlib.org/library/Enc/PriceControls.html"&gt;http://www.econlog.econlib.org/library/Enc/PriceControls.html&lt;/a&gt;&lt;/p&gt;</content><category term="wordpress_migration"></category></entry><entry><title>Coin flips and names (Evil problems in probability continued)</title><link href="https://bblais.github.io/posts/2010/Feb/22/coin-flips-and-names-evil-problems-in-probability-continued/" rel="alternate"></link><published>2010-02-22T12:22:00-05:00</published><updated>2010-02-22T12:22:00-05:00</updated><author><name>brianblais</name></author><id>tag:bblais.github.io,2010-02-22:/posts/2010/Feb/22/coin-flips-and-names-evil-problems-in-probability-continued/</id><summary type="html">&lt;p&gt;In my &lt;a href="http://bblais.blogspot.com/2010/01/there-once-was-girl-named-florida-aka.html"&gt;post about the girl-named-Florida problem&lt;/a&gt;, there is a factor
+&lt;/div&gt;</content><category term="wordpress_migration"></category></entry><entry><title>Coin flips and names (Evil problems in probability continued)</title><link href="https://bblais.github.io/posts/2010/Feb/22/coin-flips-and-names-evil-problems-in-probability-continued/" rel="alternate"></link><published>2010-02-22T12:22:00-05:00</published><updated>2010-02-22T12:22:00-05:00</updated><author><name>brianblais</name></author><id>tag:bblais.github.io,2010-02-22:/posts/2010/Feb/22/coin-flips-and-names-evil-problems-in-probability-continued/</id><summary type="html">&lt;p&gt;In my &lt;a href="http://bblais.blogspot.com/2010/01/there-once-was-girl-named-florida-aka.html"&gt;post about the girl-named-Florida problem&lt;/a&gt;, there is a factor
 in the analysis looking at the probability of having a girl named
 Florida given that you have two girls …&lt;/p&gt;</summary><content type="html">&lt;p&gt;In my &lt;a href="http://bblais.blogspot.com/2010/01/there-once-was-girl-named-florida-aka.html"&gt;post about the girl-named-Florida problem&lt;/a&gt;, there is a factor
 in the analysis looking at the probability of having a girl named
@@ -9400,14 +9358,12 @@ when dealing with such problems. In the coin flip case we define&lt;/p&gt;
 ![5AA78167-FEF6-4DBE-BA47-8CE19D8CC0F4.jpg][]
 
 &lt;/div&gt;
-
 &lt;p&gt;:&lt;/p&gt;
 &lt;p&gt;and it follows, given the probability of flipping heads is &lt;em&gt;h&lt;/em&gt;,&lt;/p&gt;
 &lt;div style="text-align:center;"&gt;
 ![B305BC0D-48EB-4BCB-929F-0C7BE8F53B21.jpg][]
 
 &lt;/div&gt;
-
 &lt;p&gt;&lt;/p&gt;
 which is just the standard result, subtracting off the possibility of
 having both heads. For h=0.5, this yields the standard result of P(h) =
@@ -9435,7 +9391,6 @@ quick simulation confirmed it as well.&lt;/p&gt;
 &lt;h3 id="simulation"&gt;Simulation&lt;/h3&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;pylab&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;0.1&lt;/span&gt;&lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;10000&lt;/span&gt;&lt;span class="n"&gt;r1&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;rand&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="n"&gt;r2&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;rand&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="n"&gt;N1&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;r1&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;lt&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="n"&gt;N2&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;r2&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;lt&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="n"&gt;case1&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;n1&lt;/span&gt; &lt;span class="ow"&gt;or&lt;/span&gt; &lt;span class="n"&gt;n2&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;n1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;n2&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;zip&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;N1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;N2&lt;/span&gt;&lt;span class="p"&gt;)]&lt;/span&gt;&lt;span class="nb"&gt;print&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Fraction allowing duplicate names: &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;case1&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;count&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nb"&gt;float&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;case1&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;&lt;span class="nb"&gt;print&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Theoretical Value: &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="n"&gt;nn&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[]&lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;n1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;n2&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;zip&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;N1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;N2&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;n1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;        &lt;span class="n"&gt;nn&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="kp"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kc"&gt;False&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;    &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;        &lt;span class="n"&gt;nn&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="kp"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;        &lt;span class="n"&gt;N2&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;nncase2&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;n1&lt;/span&gt; &lt;span class="ow"&gt;or&lt;/span&gt; &lt;span class="n"&gt;n2&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;n1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;n2&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;zip&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;N1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;N2&lt;/span&gt;&lt;span class="p"&gt;)]&lt;/span&gt;&lt;span class="nb"&gt;print&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Fraction not allowing duplicate names: &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;case2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;count&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nb"&gt;float&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;case2&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;h3 id="simulation-result"&gt;Simulation Result&lt;/h3&gt;
 &lt;p&gt;Fraction allowing duplicate names: 0.1853&lt;br&gt;
@@ -9538,7 +9493,6 @@ reads:&lt;/p&gt;
 ![screen-capture-6.png][]
 
 &lt;/div&gt;
-
 &lt;p&gt;I'm no legal expert, but it seems to me that this is filled with medical
 claims, and simply stating "we are not making medical claims" should not
 be enough.&lt;/p&gt;
@@ -9580,10 +9534,7 @@ options?&lt;/p&gt;
 &lt;div class="blogger-post-footer"&gt;
 ![]
 
-&lt;/div&gt;
-
-&lt;p&gt;[another very good summary of some other arguments against magnetic
-  therapy]: &lt;a href="http://quackwatch.org/04ConsumerEducation/QA/magnet.html"&gt;http://quackwatch.org/04ConsumerEducation/QA/magnet.html&lt;/a&gt;&lt;/p&gt;</content><category term="wordpress_migration"></category></entry><entry><title>Economics</title><link href="https://bblais.github.io/posts/2010/Jan/31/economics/" rel="alternate"></link><published>2010-01-31T16:36:00-05:00</published><updated>2010-01-31T16:36:00-05:00</updated><author><name>brianblais</name></author><id>tag:bblais.github.io,2010-01-31:/posts/2010/Jan/31/economics/</id><summary type="html">&lt;p&gt;In a post about &lt;a href="http://gregmankiw.blogspot.com/2010/01/economics.html"&gt;Ten Principles of Economics&lt;/a&gt;, Harvard Professor &lt;a href="http://www.blogger.com/profile/18161221774770492266"&gt;Greg
+&lt;/div&gt;</content><category term="wordpress_migration"></category></entry><entry><title>Economics</title><link href="https://bblais.github.io/posts/2010/Jan/31/economics/" rel="alternate"></link><published>2010-01-31T16:36:00-05:00</published><updated>2010-01-31T16:36:00-05:00</updated><author><name>brianblais</name></author><id>tag:bblais.github.io,2010-01-31:/posts/2010/Jan/31/economics/</id><summary type="html">&lt;p&gt;In a post about &lt;a href="http://gregmankiw.blogspot.com/2010/01/economics.html"&gt;Ten Principles of Economics&lt;/a&gt;, Harvard Professor &lt;a href="http://www.blogger.com/profile/18161221774770492266"&gt;Greg
 Mankiw&lt;/a&gt; writes a little &lt;a href="http://en.wikipedia.org/wiki/Acrostic"&gt;acrostic&lt;/a&gt; device about economics. In
 addition to things like "&lt;strong&gt;E&lt;/strong&gt;verything has a cost. There …&lt;/p&gt;</summary><content type="html">&lt;p&gt;In a post about &lt;a href="http://gregmankiw.blogspot.com/2010/01/economics.html"&gt;Ten Principles of Economics&lt;/a&gt;, Harvard Professor &lt;a href="http://www.blogger.com/profile/18161221774770492266"&gt;Greg
 Mankiw&lt;/a&gt; writes a little &lt;a href="http://en.wikipedia.org/wiki/Acrostic"&gt;acrostic&lt;/a&gt; device about economics. In
@@ -9760,7 +9711,7 @@ with superstition. He points out that much of it is not factually
 correct, but I think he misses a big point in his exposition (one that I
 am quite confident he'd agree with).&lt;/p&gt;
 &lt;p&gt;
-Carl Sagan put it this way:
+Carl Sagan put it this way:   
 
 &gt; At the heart of science is an essential balance between two seemingly
 &gt; contradictory attitudes—an openness to new ideas, no matter how
@@ -9913,7 +9864,7 @@ of them is a girl. What is the probability that they have two girls?&lt;/p&gt;
 &lt;/ul&gt;
 &lt;p&gt;
 so you end up with 1 chance out of 3, or p=0.33. The hard part is the
-following:
+following:  
 
 &gt; Say you know a family has two children, and further that at least one
 &gt; of them is a girl named Florida. What is the probability that they
@@ -10232,10 +10183,7 @@ scientific journals do this as a matter of policy?&lt;/p&gt;
 &lt;div class="blogger-post-footer"&gt;
 ![]
 
-&lt;/div&gt;
-
-&lt;p&gt;[reproducible research in the journal CISE (Computing in Science and
-  Engineering)]: &lt;a href="http://cise.aip.org/dbt/dbt.jsp?KEY=CSENFA&amp;amp;Volume=11&amp;amp;Issue=1"&gt;http://cise.aip.org/dbt/dbt.jsp?KEY=CSENFA&amp;amp;Volume=11&amp;amp;Issue=1&lt;/a&gt;&lt;/p&gt;</content><category term="wordpress_migration"></category></entry><entry><title>Word of the Day: Micromort</title><link href="https://bblais.github.io/posts/2009/Dec/12/word-of-the-day-micromort/" rel="alternate"></link><published>2009-12-12T13:08:00-05:00</published><updated>2009-12-12T13:08:00-05:00</updated><author><name>brianblais</name></author><id>tag:bblais.github.io,2009-12-12:/posts/2009/Dec/12/word-of-the-day-micromort/</id><summary type="html">&lt;p&gt;I'm not starting a new "word of the day" series, but I did learn this
+&lt;/div&gt;</content><category term="wordpress_migration"></category></entry><entry><title>Word of the Day: Micromort</title><link href="https://bblais.github.io/posts/2009/Dec/12/word-of-the-day-micromort/" rel="alternate"></link><published>2009-12-12T13:08:00-05:00</published><updated>2009-12-12T13:08:00-05:00</updated><author><name>brianblais</name></author><id>tag:bblais.github.io,2009-12-12:/posts/2009/Dec/12/word-of-the-day-micromort/</id><summary type="html">&lt;p&gt;I'm not starting a new "word of the day" series, but I did learn this
 work today from the following video on risk analysis:&lt;br&gt;
 youtube &lt;a href="http://www.youtube.com/watch?v=a1PtQ67urG4"&gt;http://www.youtube.com/watch …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;I'm not starting a new "word of the day" series, but I did learn this
 work today from the following video on risk analysis:&lt;br&gt;
@@ -10366,7 +10314,7 @@ so unusal and perhaps due to natural causes.&lt;/p&gt;
 hysterical language of the global warming media is completely
 unjustified.&lt;/p&gt;
 &lt;p&gt;
-From [RealClimate.org][]:
+From [RealClimate.org][]:   
 
 &gt; Phil Jones in discussing the presentation of temperature
 &gt; reconstructions stated that “I’ve just completed Mike’s Nature trick
@@ -10454,12 +10402,12 @@ just leave it up to philosophical ruminations.&lt;/p&gt;
 
 &lt;/div&gt;</content><category term="wordpress_migration"></category></entry><entry><title>A great observation</title><link href="https://bblais.github.io/posts/2009/Dec/01/a-great-observation/" rel="alternate"></link><published>2009-12-01T01:13:00-05:00</published><updated>2009-12-01T01:13:00-05:00</updated><author><name>brianblais</name></author><id>tag:bblais.github.io,2009-12-01:/posts/2009/Dec/01/a-great-observation/</id><summary type="html">&lt;p&gt;
 So [this post][] from Laura Wattenberg's "Baby Name Wizard" blog has a
-wonderful observation:
+wonderful observation:  
 
 &gt; Here's a little pet peeve of mine: nothing rhymes with orange. You've
 &gt; heard that before, right …&lt;/p&gt;</summary><content type="html">&lt;p&gt;
 So [this post][] from Laura Wattenberg's "Baby Name Wizard" blog has a
-wonderful observation:
+wonderful observation:  
 
 &gt; Here's a little pet peeve of mine: nothing rhymes with orange. You've
 &gt; heard that before, right? Orange is famous for its rhymelessness.
@@ -10467,7 +10415,6 @@ wonderful observation:
 &gt; me ask you something. What the heck rhymes with purple?
 &gt;
 &gt; &lt;/p&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;If you stop and think about it, you'll find that English is jam-packed
 with rhymeless common words. What rhymes with empty, or olive, or
@@ -10584,7 +10531,6 @@ were blind from birth. A couple of things really jumped out at me.&lt;/p&gt;
 ![7316DF11-C08C-474C-81E3-786ECED034AF.jpg][]
 
 &lt;/div&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;S.K. could …&lt;/p&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;p&gt;The &lt;a href="http://web.mit.edu/newsoffice/2009/blindness-091609.html"&gt;following article&lt;/a&gt; talks about recovery of vision from people who
 were blind from birth. A couple of things really jumped out at me.&lt;/p&gt;
@@ -10593,7 +10539,6 @@ were blind from birth. A couple of things really jumped out at me.&lt;/p&gt;
 ![7316DF11-C08C-474C-81E3-786ECED034AF.jpg][]
 
 &lt;/div&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;S.K. could identify some shapes (triangles, squares, etc.) when they
 were side-by-side, but not when they overlapped. His brain was unable
@@ -10684,7 +10629,6 @@ chance of having the disease". People, even educated people (even in the
 medical fields) get this one wrong a lot.&lt;/p&gt;
 &lt;div&gt;
 &lt;/div&gt;
-
 &lt;div&gt;
 Pinker contrasts this with "Think of 10,000 people, so we expect 1 to be
 infected and 9,999 to be not infected. You take the test, and the 1
@@ -10693,10 +10637,8 @@ person out of the 9,999 to test positive as well. We know that you
 tested positive, so what is your chance of having the disease?"
 
 &lt;/div&gt;
-
 &lt;div&gt;
 &lt;/div&gt;
-
 &lt;div&gt;
 He claims that people are much better at getting the answer right. In my
 view, this is less about being good at calculating frequencies, and more
@@ -10709,24 +10651,18 @@ Quantitative Approach to the Greenhouse Effect and Global Warming"][],
 which was motivated by the Weight Watchers system.
 
 &lt;/div&gt;
-
 &lt;div&gt;
 &lt;/div&gt;
-
 &lt;div&gt;
 In the weight watchers system, counting calories (215+340+...) is
 replaced by dividing by 50 and rounding (4+7+...). Same result, but
 small numbers are easier to work with.
 
 &lt;/div&gt;
-
 &lt;div class="blogger-post-footer"&gt;
 ![]
 
-&lt;/div&gt;
-
-&lt;p&gt;["Teaching Energy Balance using Round Numbers: A Quantitative Approach
-  to the Greenhouse Effect and Global Warming"]: &lt;a href="http://web.bryant.edu/~bblais/pdf/energy_balance.pdf"&gt;http://web.bryant.edu/~bblais/pdf/energy_balance.pdf&lt;/a&gt;&lt;/p&gt;</content><category term="wordpress_migration"></category></entry><entry><title>A nice series to look at</title><link href="https://bblais.github.io/posts/2009/Sep/02/a-nice-series-to-look-at/" rel="alternate"></link><published>2009-09-02T16:36:00-04:00</published><updated>2009-09-02T16:36:00-04:00</updated><author><name>brianblais</name></author><id>tag:bblais.github.io,2009-09-02:/posts/2009/Sep/02/a-nice-series-to-look-at/</id><summary type="html">&lt;p&gt;Bill Harris has a &lt;a href="http://facilitatedsystems.com/weblog/2009/06/making-more-sense-with-numbers-part-8.html"&gt;nice blog entry&lt;/a&gt; about Bayesian versus Classical
+&lt;/div&gt;</content><category term="wordpress_migration"></category></entry><entry><title>A nice series to look at</title><link href="https://bblais.github.io/posts/2009/Sep/02/a-nice-series-to-look-at/" rel="alternate"></link><published>2009-09-02T16:36:00-04:00</published><updated>2009-09-02T16:36:00-04:00</updated><author><name>brianblais</name></author><id>tag:bblais.github.io,2009-09-02:/posts/2009/Sep/02/a-nice-series-to-look-at/</id><summary type="html">&lt;p&gt;Bill Harris has a &lt;a href="http://facilitatedsystems.com/weblog/2009/06/making-more-sense-with-numbers-part-8.html"&gt;nice blog entry&lt;/a&gt; about Bayesian versus Classical
 stats. I'd like to go through the rest of these posts, because I think
 there is some great stuff …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Bill Harris has a &lt;a href="http://facilitatedsystems.com/weblog/2009/06/making-more-sense-with-numbers-part-8.html"&gt;nice blog entry&lt;/a&gt; about Bayesian versus Classical
 stats. I'd like to go through the rest of these posts, because I think
@@ -10945,7 +10881,7 @@ Our Lives" this past week, and have a couple of thoughts related to it.&lt;/p&gt
 In Chapter 10 he quotes Laplace …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I finished Leonard Mlodinow's "The Drunkard's Walk: How Randomness Rules
 Our Lives" this past week, and have a couple of thoughts related to it.&lt;/p&gt;
 &lt;p&gt;
-In Chapter 10 he quotes Laplace:
+In Chapter 10 he quotes Laplace:  
 
 &gt; "We may regard the present state of the universe as the effect of its
 &gt; past and the cause of its future. An intellect which at a certain
@@ -10960,7 +10896,7 @@ In Chapter 10 he quotes Laplace:
 
 &lt;p&gt;
 and Mlodinow states that this is an expression of determinism. He then
-further states
+further states   
 
 &gt; But for Laplace's dream to hold true, several conditions must be met.
 &gt; First, the laws of nature must dictate a definite future, and we must
@@ -11031,21 +10967,17 @@ can actually kill people by diverting them from legitimate treatment. A
 good analysis of this is at &lt;a href="http://www.csicop.org/si/9709/park.html"&gt;http://www.csicop.org/si/9709/park.html&lt;/a&gt;.&lt;/p&gt;
 &lt;div&gt;
 &lt;/div&gt;
-
 &lt;div&gt;
 The video, however, is quite amusing.
 
 &lt;/div&gt;
-
 &lt;div&gt;
 &lt;/div&gt;
-
 &lt;div&gt;
 [youtube
 http://www.youtube.com/watch?v=HMGIbOGu8q0&amp;color1=0xb1b1b1&amp;color2=0xcfcfcf&amp;hl=en&amp;feature=player\_embedded&amp;fs=1]
 
 &lt;/div&gt;
-
 &lt;div class="blogger-post-footer"&gt;
 ![]
 
@@ -11059,10 +10991,8 @@ series of statements. The experiments were done by Daniel Kahneman and
 Amos Tversky[cite here]. It starts with a description:&lt;/p&gt;
 &lt;div&gt;
 &lt;/div&gt;
-
 &lt;div&gt;
 &lt;/div&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;&lt;div&gt;
 Imagine a woman named Linda, thirty-two years old, single, out-spoken,
@@ -11078,13 +11008,10 @@ They then ask for a ranking of most (1) to least (8) probable for a
 number of statements. The interesting three statements are:
 
 &lt;/div&gt;
-
 &lt;div&gt;
 &lt;/div&gt;
-
 &lt;div&gt;
 &lt;/div&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;&lt;div&gt;
 Linda is active in the feminist movement: 2.1
@@ -11105,19 +11032,15 @@ never be greater than the probability that each will occur individually"
 (italics in original).*
 
 &lt;/div&gt;
-
 &lt;div&gt;
 &lt;/div&gt;
-
 &lt;div&gt;
 The book reports that "even highly trained doctors make this error",
 with the following example.
 
 &lt;/div&gt;
-
 &lt;div&gt;
 &lt;/div&gt;
-
 &lt;div&gt;
 &gt; They presented a group of internists with a serious medical problem: a
 &gt; pulmonary embolism (a blood clot in the lung). If you have that
@@ -11134,10 +11057,8 @@ with the following example.
 &gt; &lt;/p&gt;
 
 &lt;/div&gt;
-
 &lt;div&gt;
 &lt;/div&gt;
-
 &lt;div&gt;
 Now, I haven't read past this point, or the original study, so take what
 I say here with a grain of salt. I wanted to put down my thoughts on
@@ -11146,19 +11067,15 @@ Perhaps what I say now will be inconsistent with other aspects of the
 studies, or further data.
 
 &lt;/div&gt;
-
 &lt;div&gt;
 &lt;/div&gt;
-
 &lt;div&gt;
 **I do not think that one should conclude poor reasoning in these
 examples.**
 
 &lt;/div&gt;
-
 &lt;div&gt;
 &lt;/div&gt;
-
 &lt;div&gt;
 I believe there are two things going on here. One is a property of the
 English language, and the other is a property of human reasoning. In
@@ -11166,20 +11083,17 @@ English, if I were to say "Do you want steak for dinner, or steak and
 potatoes?" one would immediately parse this as choice between
 
 &lt;/div&gt;
-
 &lt;div&gt;
 1.  steak with no potatoes
 2.  steak with potatoes
 
 &lt;/div&gt;
-
 &lt;div&gt;
 Although strict logic would have it otherwise, it is common in English
 to have the implied negative when given a choice like this. If we
 interpret the doctor's choice, we have:
 
 &lt;/div&gt;
-
 &lt;div&gt;
 1.  clot with paralysis and shortness of breath
 2.  clot with paralysis and no shortness of breath
@@ -11214,10 +11128,8 @@ statements would do this, but it is a bit challenging to disentangle
 subtle language interpretations I think.
 
 &lt;/div&gt;
-
 &lt;div&gt;
 &lt;/div&gt;
-
 &lt;div&gt;
 When reading these experiments, I recalled a description from E.T.
 Jaynes about people receiving the same new information, but updating
@@ -11229,7 +11141,6 @@ experience both partial paralysis and shortness of breath?" it is
 interpreted as:
 
 &lt;/div&gt;
-
 &lt;div&gt;
 1.  someone is *claiming* that the patient has an embolism
 2.  the patient is *claiming,*or someone has measured, that she has
@@ -11297,14 +11208,14 @@ see if any of these thoughts pan out.
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
-&lt;p&gt;&lt;/div&gt;
+&lt;/div&gt;
 &lt;div&gt;
 &lt;/div&gt;
 &lt;div&gt;
 &lt;/div&gt;
 &lt;div class="blogger-post-footer"&gt;
-!&amp;lt;&amp;gt;&lt;/p&gt;
+!&lt;&gt;
+
 &lt;/div&gt;</content><category term="wordpress_migration"></category></entry><entry><title>A Little Geometry</title><link href="https://bblais.github.io/posts/2009/Jul/08/a-little-geometry/" rel="alternate"></link><published>2009-07-08T01:13:00-04:00</published><updated>2009-07-08T01:13:00-04:00</updated><author><name>brianblais</name></author><id>tag:bblais.github.io,2009-07-08:/posts/2009/Jul/08/a-little-geometry/</id><summary type="html">&lt;p&gt;I've just finished the book "Euclid's Window" by Leonard Mlodinow, and
 really enjoyed it. The book describe the history of geometry from
 Euclid, Descartes, Gauss, and Einsten. During his coverage …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I've just finished the book "Euclid's Window" by Leonard Mlodinow, and
@@ -11315,14 +11226,14 @@ with me. I don't recall ever seeing a proof of it, or at least no
 memorable proof. This one uses a minimum of jargon and formality...you
 just draw the picture, discuss it for a bit, and you see it!&lt;/p&gt;
 &lt;p&gt;You start with a right triangle, like:&lt;/p&gt;
-&lt;p&gt;[![]]&lt;a href="http://lh5.ggpht.com/_VLTJPGH7Stw/SlockDiaqAI/AAAAAAAADEg/SXQE-41joWc/s800/tri1-thumb.png"&gt;&lt;/a&gt;and you make two constructions, from a square with sides a+b.
+&lt;p&gt;[&lt;img alt="" src="http://lh5.ggpht.com/_VLTJPGH7Stw/SlockDiaqAI/AAAAAAAADEg/SXQE-41joWc/s800/tri1-thumb.png"&gt;]&lt;a href="http://lh5.ggpht.com/_VLTJPGH7Stw/SlockDiaqAI/AAAAAAAADEg/SXQE-41joWc/s800/tri1-thumb.png"&gt;&lt;/a&gt;and you make two constructions, from a square with sides a+b.
 The first construction looks like:&lt;/p&gt;
-&lt;p&gt;[![1]]&lt;a href="http://lh5.ggpht.com/_VLTJPGH7Stw/SlockDiaqAI/AAAAAAAADEg/SXQE-41joWc/s800/tri1-thumb.png"&gt;&lt;/a&gt;which, by eye, you can see that the total area of the square
+&lt;p&gt;[&lt;img alt="1" src="http://lh6.ggpht.com/_VLTJPGH7Stw/Sloclbzm09I/AAAAAAAADEo/U_2qVV8pgVQ/s800/tri2-thumb.png"&gt;]&lt;a href="http://lh5.ggpht.com/_VLTJPGH7Stw/SlockDiaqAI/AAAAAAAADEg/SXQE-41joWc/s800/tri1-thumb.png"&gt;&lt;/a&gt;which, by eye, you can see that the total area of the square
 is the area of 4 triangles (just like our original) plus the area of the
 inner square, which is c*c (which reminds me that I have to figure out
 how to do superscripts and subscripts in this blog. :) )&lt;/p&gt;
 &lt;p&gt;The second construction is nearly the same as the first, and looks like:&lt;/p&gt;
-&lt;p&gt;[![2]]&lt;a href="http://lh5.ggpht.com/_VLTJPGH7Stw/SlockDiaqAI/AAAAAAAADEg/SXQE-41joWc/s800/tri1-thumb.png"&gt;&lt;/a&gt;which, again by eye (with a little shading to make it a bit
+&lt;p&gt;[&lt;img alt="2" src="http://lh3.ggpht.com/_VLTJPGH7Stw/SlocmMI0nqI/AAAAAAAADEw/CfwaSSVlFyA/s800/tri3-thumb.png"&gt;]&lt;a href="http://lh5.ggpht.com/_VLTJPGH7Stw/SlockDiaqAI/AAAAAAAADEg/SXQE-41joWc/s800/tri1-thumb.png"&gt;&lt;/a&gt;which, again by eye (with a little shading to make it a bit
 more obvious), the total area of the square is the area of 4 triangles
 (just like our original) plus the area of the two inner squares, which
 are a*a and b*b. Therefore:&lt;/p&gt;
@@ -11335,9 +11246,9 @@ right triangles.&lt;/p&gt;
 
 &lt;/div&gt;
 
-&lt;p&gt;[![]]: &lt;a href="http://lh3.ggpht.com/_VLTJPGH7Stw/Slock0TZoGI/AAAAAAAADEk/CAlOz_RpWPA/s800/tri1.png"&gt;http://lh3.ggpht.com/_VLTJPGH7Stw/Slock0TZoGI/AAAAAAAADEk/CAlOz_RpWPA/s800/tri1.png&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;[![1]]: &lt;a href="http://lh3.ggpht.com/_VLTJPGH7Stw/Sloclsh2feI/AAAAAAAADEs/2TXbrQNXZeM/s800/tri2.png"&gt;http://lh3.ggpht.com/_VLTJPGH7Stw/Sloclsh2feI/AAAAAAAADEs/2TXbrQNXZeM/s800/tri2.png&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;[![2]]: &lt;a href="http://lh5.ggpht.com/_VLTJPGH7Stw/Slocmf5Z70I/AAAAAAAADE0/QzcdMUmWHG4/s800/tri3.png"&gt;http://lh5.ggpht.com/_VLTJPGH7Stw/Slocmf5Z70I/AAAAAAAADE0/QzcdMUmWHG4/s800/tri3.png&lt;/a&gt;&lt;/p&gt;</content><category term="wordpress_migration"></category></entry><entry><title>Beginnings</title><link href="https://bblais.github.io/posts/2009/Jul/07/beginnings/" rel="alternate"></link><published>2009-07-07T23:01:00-04:00</published><updated>2009-07-07T23:01:00-04:00</updated><author><name>brianblais</name></author><id>tag:bblais.github.io,2009-07-07:/posts/2009/Jul/07/beginnings/</id><summary type="html">&lt;p&gt;Although I seem to have missed the big blog burst, I am starting one now
+&lt;p&gt;[&lt;img alt="" src="http://lh5.ggpht.com/_VLTJPGH7Stw/SlockDiaqAI/AAAAAAAADEg/SXQE-41joWc/s800/tri1-thumb.png"&gt;]: &lt;a href="http://lh3.ggpht.com/_VLTJPGH7Stw/Slock0TZoGI/AAAAAAAADEk/CAlOz_RpWPA/s800/tri1.png"&gt;http://lh3.ggpht.com/_VLTJPGH7Stw/Slock0TZoGI/AAAAAAAADEk/CAlOz_RpWPA/s800/tri1.png&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;[&lt;img alt="1" src="http://lh6.ggpht.com/_VLTJPGH7Stw/Sloclbzm09I/AAAAAAAADEo/U_2qVV8pgVQ/s800/tri2-thumb.png"&gt;]: &lt;a href="http://lh3.ggpht.com/_VLTJPGH7Stw/Sloclsh2feI/AAAAAAAADEs/2TXbrQNXZeM/s800/tri2.png"&gt;http://lh3.ggpht.com/_VLTJPGH7Stw/Sloclsh2feI/AAAAAAAADEs/2TXbrQNXZeM/s800/tri2.png&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;[&lt;img alt="2" src="http://lh3.ggpht.com/_VLTJPGH7Stw/SlocmMI0nqI/AAAAAAAADEw/CfwaSSVlFyA/s800/tri3-thumb.png"&gt;]: &lt;a href="http://lh5.ggpht.com/_VLTJPGH7Stw/Slocmf5Z70I/AAAAAAAADE0/QzcdMUmWHG4/s800/tri3.png"&gt;http://lh5.ggpht.com/_VLTJPGH7Stw/Slocmf5Z70I/AAAAAAAADE0/QzcdMUmWHG4/s800/tri3.png&lt;/a&gt;&lt;/p&gt;</content><category term="wordpress_migration"></category></entry><entry><title>Beginnings</title><link href="https://bblais.github.io/posts/2009/Jul/07/beginnings/" rel="alternate"></link><published>2009-07-07T23:01:00-04:00</published><updated>2009-07-07T23:01:00-04:00</updated><author><name>brianblais</name></author><id>tag:bblais.github.io,2009-07-07:/posts/2009/Jul/07/beginnings/</id><summary type="html">&lt;p&gt;Although I seem to have missed the big blog burst, I am starting one now
 to include my musings on various topics of my interest, from statistics
 and probability to …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Although I seem to have missed the big blog burst, I am starting one now
 to include my musings on various topics of my interest, from statistics

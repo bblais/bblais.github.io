@@ -317,7 +317,6 @@ S^2&amp;amp;=&amp;amp; \frac{1}{(N-1)}\sum_{k=1}^{N} (x_k-\bar{x})^2
 &lt;span class="err"&gt;              x=a&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;we want to estimate the location (“a”) from a series of locations of flashes on the shore - the lighthouse is spinning around and flashing at random times.  We can only observe where the flash lands on the shore, not the direction it came from.   The data is, for example, the locations of these 10 flashes:&lt;/p&gt;
 &lt;p&gt;-4.89,  1.03,  1.64,  1.17,  0.74,  1.46,  0.76,  -7.16,  0.31,  2.48&lt;/p&gt;
 &lt;p&gt;One can show that the location of a single flash should follow a Cauchy distribution:  &lt;span class="math"&gt;\(p(x|a,B) = B/(B^2 + (x-a)^2)\)&lt;/span&gt;.  This is due to the angular geometry of the problem.&lt;/p&gt;
@@ -1147,7 +1146,6 @@ P(I|S) &amp;amp;=&amp;amp; \int_0^1 \frac{1/2 \cdot q}{1/2\cdot q + 1/4\cdot (1-
 &lt;span class="nb"&gt;print&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;blockquote&gt;
 &lt;p&gt;f = 0.614&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1163,7 +1161,6 @@ P(I|S) &amp;amp;=&amp;amp; \int_0^1 \frac{1/2 \cdot q}{1/2\cdot q + 1/4\cdot (1-
 &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;sum&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;0.5&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;q&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;q&lt;/span&gt;&lt;span class="o"&gt;+.&lt;/span&gt;&lt;span class="mi"&gt;25&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;q&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;pq&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;dq&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="nb"&gt;print&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;blockquote&gt;
 &lt;p&gt;f = 0.506&lt;/p&gt;
@@ -2349,27 +2346,29 @@ $$&lt;/div&gt;
 \theta_- &amp;amp;=&amp;amp; \theta_D^2 \\
 \theta_+ &amp;amp;=&amp;amp; 1-\theta_-
 \end{eqnarray*}&lt;/div&gt;
-&lt;p&gt;Now we have posterior for the underlying parameters, such as &lt;span class="math"&gt;\(\theta_D\)&lt;/span&gt;, as well as for the state parameters, such &lt;span class="math"&gt;\(\theta_-\)&lt;/span&gt;, which are determined entirely from the underlying parameters.  The posterior for &lt;span class="math"&gt;\(\theta_D\)&lt;/span&gt; is 
+&lt;p&gt;Now we have posterior for the underlying parameters, such as &lt;span class="math"&gt;\(\theta_D\)&lt;/span&gt;, as well as for the state parameters, such &lt;span class="math"&gt;\(\theta_-\)&lt;/span&gt;, which are determined entirely from the underlying parameters.  The posterior for &lt;span class="math"&gt;\(\theta_D\)&lt;/span&gt; is &lt;/p&gt;
 &lt;div&gt;
-    &lt;a href="&lt;a href="https://plot.ly/~bblais/84/&amp;quot;"&gt;https://plot.ly/~bblais/84/"&lt;/a&gt; target="_blank" title="&lt;span class="math"&gt;\(\hat{\theta_D}|^{97.5}_{2.5}=0.447^{+0.187}_{-0.184}\)&lt;/span&gt;" style="display: block; text-align: center;"&gt;&lt;img src="&lt;a href="https://plot.ly/~bblais/84.png&amp;quot;"&gt;https://plot.ly/~bblais/84.png"&lt;/a&gt; alt="&lt;span class="math"&gt;\(\hat{\theta_D}|^{97.5}_{2.5}=0.447^{+0.187}_{-0.184}\)&lt;/span&gt;" style="max-width: 100%;"  onerror="this.onerror=null;this.src='&lt;a href="https://plot.ly/404.png';&amp;quot;"&gt;https://plot.ly/404.png';"&lt;/a&gt; /&gt;&lt;/a&gt;
-    &lt;script data-plotly="bblais:84" src="&lt;a href="https://plot.ly/embed.js&amp;quot;"&gt;https://plot.ly/embed.js"&lt;/a&gt; async&gt;&lt;/script&gt;
+    &lt;a href="https://plot.ly/~bblais/84/" target="_blank" title="$\hat{\theta_D}|^{97.5}_{2.5}=0.447^{+0.187}_{-0.184}$" style="display: block; text-align: center;"&gt;&lt;img src="https://plot.ly/~bblais/84.png" alt="$\hat{\theta_D}|^{97.5}_{2.5}=0.447^{+0.187}_{-0.184}$" style="max-width: 100%;"  onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /&gt;&lt;/a&gt;
+    &lt;script data-plotly="bblais:84" src="https://plot.ly/embed.js" async&gt;&lt;/script&gt;
 &lt;/div&gt;
-while the posterior for &lt;span class="math"&gt;\(\theta_-\)&lt;/span&gt; in the Model 2 is
+&lt;p&gt;while the posterior for &lt;span class="math"&gt;\(\theta_-\)&lt;/span&gt; in the Model 2 is&lt;/p&gt;
 &lt;div&gt;
-    &lt;a href="&lt;a href="https://plot.ly/~bblais/85/&amp;quot;"&gt;https://plot.ly/~bblais/85/"&lt;/a&gt; target="_blank" title="&lt;span class="math"&gt;\({\hat{\theta}_-}|^{97.5}_{2.5}=0.200^{+0.202}_{-0.131}\)&lt;/span&gt;" style="display: block; text-align: center;"&gt;&lt;img src="&lt;a href="https://plot.ly/~bblais/85.png&amp;quot;"&gt;https://plot.ly/~bblais/85.png"&lt;/a&gt; alt="&lt;span class="math"&gt;\({\hat{\theta}_-}|^{97.5}_{2.5}=0.200^{+0.202}_{-0.131}\)&lt;/span&gt;" style="max-width: 100%;"  onerror="this.onerror=null;this.src='&lt;a href="https://plot.ly/404.png';&amp;quot;"&gt;https://plot.ly/404.png';"&lt;/a&gt; /&gt;&lt;/a&gt;
-    &lt;script data-plotly="bblais:85" src="&lt;a href="https://plot.ly/embed.js&amp;quot;"&gt;https://plot.ly/embed.js"&lt;/a&gt; async&gt;&lt;/script&gt;
-&lt;/div&gt;&lt;/p&gt;
+    &lt;a href="https://plot.ly/~bblais/85/" target="_blank" title="${\hat{\theta}_-}|^{97.5}_{2.5}=0.200^{+0.202}_{-0.131}$" style="display: block; text-align: center;"&gt;&lt;img src="https://plot.ly/~bblais/85.png" alt="${\hat{\theta}_-}|^{97.5}_{2.5}=0.200^{+0.202}_{-0.131}$" style="max-width: 100%;"  onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /&gt;&lt;/a&gt;
+    &lt;script data-plotly="bblais:85" src="https://plot.ly/embed.js" async&gt;&lt;/script&gt;
+&lt;/div&gt;
+
 &lt;h2 id="comparisons-and-conclusions"&gt;Comparisons and conclusions&lt;/h2&gt;
-&lt;p&gt;It's a bit more convenient to plot the consequences of Model 1 (ignorance in +/-) and Model 2 (ignorance in U/D), with the same data, both together on the same plot.
+&lt;p&gt;It's a bit more convenient to plot the consequences of Model 1 (ignorance in +/-) and Model 2 (ignorance in U/D), with the same data, both together on the same plot.&lt;/p&gt;
 &lt;div&gt;
-    &lt;a href="&lt;a href="https://plot.ly/~bblais/86/&amp;quot;"&gt;https://plot.ly/~bblais/86/"&lt;/a&gt; target="_blank" title="Ignorance on +/- vs Ignorance on U/D" style="display: block; text-align: center;"&gt;&lt;img src="&lt;a href="https://plot.ly/~bblais/86.png&amp;quot;"&gt;https://plot.ly/~bblais/86.png"&lt;/a&gt; alt="Ignorance on +/- vs Ignorance on U/D" style="max-width: 100%;"  onerror="this.onerror=null;this.src='&lt;a href="https://plot.ly/404.png';&amp;quot;"&gt;https://plot.ly/404.png';"&lt;/a&gt; /&gt;&lt;/a&gt;
-    &lt;script data-plotly="bblais:86" src="&lt;a href="https://plot.ly/embed.js&amp;quot;"&gt;https://plot.ly/embed.js"&lt;/a&gt; async&gt;&lt;/script&gt;
+    &lt;a href="https://plot.ly/~bblais/86/" target="_blank" title="Ignorance on +/- vs Ignorance on U/D" style="display: block; text-align: center;"&gt;&lt;img src="https://plot.ly/~bblais/86.png" alt="Ignorance on +/- vs Ignorance on U/D" style="max-width: 100%;"  onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /&gt;&lt;/a&gt;
+    &lt;script data-plotly="bblais:86" src="https://plot.ly/embed.js" async&gt;&lt;/script&gt;
 &lt;/div&gt;
-We can easily see that, although they are different, there is no &lt;em&gt;practical&lt;/em&gt; difference between them given this data. For larger &lt;span class="math"&gt;\(N\)&lt;/span&gt; this difference gets less significant.
+&lt;p&gt;We can easily see that, although they are different, there is no &lt;em&gt;practical&lt;/em&gt; difference between them given this data. For larger &lt;span class="math"&gt;\(N\)&lt;/span&gt; this difference gets less significant.&lt;/p&gt;
 &lt;div&gt;
-    &lt;a href="&lt;a href="https://plot.ly/~bblais/87/&amp;quot;"&gt;https://plot.ly/~bblais/87/"&lt;/a&gt; target="_blank" title="Ignorance on +/- vs Ignorance on U/D" style="display: block; text-align: center;"&gt;&lt;img src="&lt;a href="https://plot.ly/~bblais/87.png&amp;quot;"&gt;https://plot.ly/~bblais/87.png"&lt;/a&gt; alt="Ignorance on +/- vs Ignorance on U/D" style="max-width: 100%;"  onerror="this.onerror=null;this.src='&lt;a href="https://plot.ly/404.png';&amp;quot;"&gt;https://plot.ly/404.png';"&lt;/a&gt; /&gt;&lt;/a&gt;
-    &lt;script data-plotly="bblais:87" src="&lt;a href="https://plot.ly/embed.js&amp;quot;"&gt;https://plot.ly/embed.js"&lt;/a&gt; async&gt;&lt;/script&gt;
-&lt;/div&gt;&lt;/p&gt;
+    &lt;a href="https://plot.ly/~bblais/87/" target="_blank" title="Ignorance on +/- vs Ignorance on U/D" style="display: block; text-align: center;"&gt;&lt;img src="https://plot.ly/~bblais/87.png" alt="Ignorance on +/- vs Ignorance on U/D" style="max-width: 100%;"  onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /&gt;&lt;/a&gt;
+    &lt;script data-plotly="bblais:87" src="https://plot.ly/embed.js" async&gt;&lt;/script&gt;
+&lt;/div&gt;
+
 &lt;p&gt;In sum, the "apparent conversion of ‘ignorance’ to ‘knowledge’" that Greg Mayer is so concerned about is in fact not just apparent - it is explicit.  This is not due to some arcane mathematics on priors, but to &lt;em&gt;added information&lt;/em&gt;.  What Mayer's considers to be equivalent situations - knowledge of only two possible states, and knowledge of the process that produces those states - are not equivalent at all.  &lt;/p&gt;
 &lt;p&gt;In practice, for this problem, it makes very little difference whether you think of things in terms of Model 1 or Model 2 except in the case of extremely rare underlying events.  This is also as it should be - if you know that the process essentially hides the existence of itself (i.e. the recessive gene is not observed phenotypically) - then you would assign a lower probability for the phenotype than you would if you only knew that there were two possible states and knew nothing about the properties of recessive characteristics.  To repeat, different states of knowledge require different probability assignments - this is a feature, not a bug.&lt;/p&gt;
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
@@ -2444,7 +2443,6 @@ We can easily see that, although they are different, there is no &lt;em&gt;pract
 &lt;span class="mf"&gt;0.85502222222222224&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
 &lt;p&gt;and&lt;/p&gt;
 &lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
 2
@@ -2453,12 +2451,10 @@ We can easily see that, although they are different, there is no &lt;em&gt;pract
 &lt;span class="mf"&gt;0.0060111111111111112&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
 &lt;p&gt;and&lt;/p&gt;
 &lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot_distribution&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Effect Size=(mu1-mu2)/sqrt((sigma1**2+sigma2**2)/2)&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
 &lt;p&gt;&lt;img alt="effectsize" src="images/effect_size.png"&gt;&lt;/p&gt;
 &lt;p&gt;Hopefully the code will be useful to someone, perhaps just me as I explore similar problems.&lt;/p&gt;</content><category term="articles"></category></entry><entry><title>Simple Questions that Get to the Heart of the Matter</title><link href="https://bblais.github.io/posts/2015/Mar/03/simple-questions-that-get-to-the-heart-of-the-matter/" rel="alternate"></link><published>2015-03-03T00:00:00-05:00</published><updated>2015-03-03T00:00:00-05:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2015-03-03:/posts/2015/Mar/03/simple-questions-that-get-to-the-heart-of-the-matter/</id><summary type="html">&lt;p&gt;E. T. Jaynes wrote extensively about Bayesian inference, and one of his strategies was to use a "Galileo's telescope for statistics", such as outlined in his paper on &lt;a href="http://bayes.wustl.edu/etj/articles/confidence.pdf"&gt;Confidence Intervals …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;E. T. Jaynes wrote extensively about Bayesian inference, and one of his strategies was to use a "Galileo's telescope for statistics", such as outlined in his paper on &lt;a href="http://bayes.wustl.edu/etj/articles/confidence.pdf"&gt;Confidence Intervals vs Bayesian Intervals&lt;/a&gt;.  This method is used to distinguish between two alternate approaches to a problem.  The strategy entails finding particularly simple cases where the two cases yield very different answers, and the correct one is obvious from the context and the simplicity of the problem.  In this way, the difference is magnified like a telescope so that it is clear to the unaided observation.&lt;/p&gt;
 &lt;p&gt;There are, I've found, similar sorts of cases in apologetics.  There are a few questions I've heard that are so simple, yet get to the heart of the matter.  I've collected them here, and always enjoy finding others.  &lt;/p&gt;

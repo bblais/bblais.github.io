@@ -189,7 +189,6 @@
 <span class="p">&lt;/</span><span class="nt">article</span><span class="p">&gt;</span> <span class="c">&lt;!-- end article --&gt;</span>
 </code></pre></div>
 
-
 <p>This is repeated once for many different articles, making for a long <code>index.html</code> file.  In the pelican theme, the <code>index.html</code> loops over all of the articles and generates this long list using <a href="https://jinja.palletsprojects.com/en/2.11.x/">Jinja</a> syntax,</p>
 <div class="codehilite"><pre><span></span><code>{% for article in articles_page.object_list %}
 
@@ -232,7 +231,6 @@
 {% endfor %}
 </code></pre></div>
 
-
 <p>Notice the injection of Python here: </p>
 <ul>
 <li>a loop to generate the html</li>
@@ -258,7 +256,6 @@
 <span class="err">      ├── tag.html              // processed for each tag</span>
 <span class="err">      └── tags.html             // must list all the tags. Can be a tag cloud.</span>
 </code></pre></div>
-
 
 <p>Starting from the free web template, I break off the parts that are included in all of the files and put it in <code>base.html</code>, copying the <a href="https://jinja.palletsprojects.com/en/2.11.x/">Jinja</a> parts from a pelican theme.  Like,</p>
 <div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
@@ -340,7 +337,6 @@
 
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-
 
 <p>which you can compare to the first and last parts of the <code>index.html</code> of the <a href="https://colorlib.com/wp/template/philosophy/">Philosophy</a> template.   </p>
 <p>It took me about a week to iron out most of the nits to get the final version, but the process was just fun.  There is something really satisfying about constructing something like a website by scripting.   Every time I learn something new.  One thing was to include <code>{% block extra_css %}{% endblock %}</code> and <code>{% block extra_js %}{% endblock %}</code> allowing some of the pages to include specific css and js files, which was instrumental in getting the tipue search working.  </p>
