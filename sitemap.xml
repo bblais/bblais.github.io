@@ -5,49 +5,56 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://bblais.github.io/</loc>
-<lastmod>2021-03-22T12:48:26-00:00</lastmod>
+<lastmod>2021-04-09T08:44:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/archives.html</loc>
-<lastmod>2021-03-22T12:48:26-00:00</lastmod>
+<lastmod>2021-04-09T08:44:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/tags.html</loc>
-<lastmod>2021-03-22T12:48:26-00:00</lastmod>
+<lastmod>2021-04-09T08:44:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/categories.html</loc>
-<lastmod>2021-03-22T12:48:26-00:00</lastmod>
+<lastmod>2021-04-09T08:44:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/pages/presentations.html</loc>
-<lastmod>2021-03-22T12:48:26-00:00</lastmod>
+<lastmod>2021-04-09T08:44:11-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/pages/projects.html</loc>
-<lastmod>2021-03-22T12:48:26-00:00</lastmod>
+<lastmod>2021-04-09T08:44:11-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/pages/publications.html</loc>
-<lastmod>2021-03-22T12:48:26-00:00</lastmod>
+<lastmod>2021-04-09T08:44:11-00:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://bblais.github.io/posts/2021/Apr/09/gravitation-attraction/</loc>
+<lastmod>2021-04-09T00:00:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -2336,7 +2343,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://bblais.github.io/category/science.html</loc>
-<lastmod>2020-08-03T00:00:00-04:56</lastmod>
+<lastmod>2021-04-09T00:00:00-04:56</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -2356,6 +2363,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://bblais.github.io/tag/science.html</loc>
+<lastmod>2021-04-09T00:00:00-04:56</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>https://bblais.github.io/tag/bayesian.html</loc>
 <lastmod>2021-02-28T00:00:00-04:56</lastmod>
 <changefreq>daily</changefreq>
@@ -2365,13 +2379,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://bblais.github.io/tag/probability.html</loc>
 <lastmod>2021-02-28T00:00:00-04:56</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://bblais.github.io/tag/science.html</loc>
-<lastmod>2020-08-03T00:00:00-04:56</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

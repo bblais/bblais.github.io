@@ -1,5 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>bblais on the web - Brian Blais</title><link href="https://bblais.github.io/" rel="alternate"></link><link href="https://bblais.github.io/feeds/brian-blais.atom.xml" rel="self"></link><id>https://bblais.github.io/</id><updated>2021-03-22T00:00:00-04:00</updated><entry><title>Fitting parameters in dynamics systems</title><link href="https://bblais.github.io/posts/2021/Mar/22/fitting-parameters-in-dynamics-systems/" rel="alternate"></link><published>2021-03-22T00:00:00-04:00</published><updated>2021-03-22T00:00:00-04:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2021-03-22:/posts/2021/Mar/22/fitting-parameters-in-dynamics-systems/</id><summary type="html">&lt;p&gt;A while ago I wrote this little package called &lt;a href="https://github.com/bblais/pyndamics3"&gt;pyndamics&lt;/a&gt; which was a thin wrapper around the &lt;a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.odeint.html"&gt;scipy odeint&lt;/a&gt; function.  Since then I migrated it using &lt;a href="https://nbdev.fast.ai"&gt;nbdev&lt;/a&gt; to experiment with …&lt;/p&gt;</summary><content type="html">&lt;p&gt;A while ago I wrote this little package called &lt;a href="https://github.com/bblais/pyndamics3"&gt;pyndamics&lt;/a&gt; which was a thin wrapper around the &lt;a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.odeint.html"&gt;scipy odeint&lt;/a&gt; function.  Since then I migrated it using &lt;a href="https://nbdev.fast.ai"&gt;nbdev&lt;/a&gt; to experiment with using jupyter notebooks as the basis for making packages, yielding &lt;a href="https://github.com/bblais/pyndamics3"&gt;pyndamics3&lt;/a&gt;.  I added MCMC support for parameter fitting fairly early, using PyMC, but changed to &lt;a href="https://emcee.readthedocs.io/en/stable/"&gt;emcee&lt;/a&gt; to have an all-python implementation.  (This past month, after upgrading to Big Sur on my Mac, I've been struggling to even install PyMC3 and pystan due to dependencies but that is another story).  &lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>bblais on the web - Brian Blais</title><link href="https://bblais.github.io/" rel="alternate"></link><link href="https://bblais.github.io/feeds/brian-blais.atom.xml" rel="self"></link><id>https://bblais.github.io/</id><updated>2021-04-09T00:00:00-04:00</updated><entry><title>Gravitation Attraction</title><link href="https://bblais.github.io/posts/2021/Apr/09/gravitation-attraction/" rel="alternate"></link><published>2021-04-09T00:00:00-04:00</published><updated>2021-04-09T00:00:00-04:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2021-04-09:/posts/2021/Apr/09/gravitation-attraction/</id><summary type="html">&lt;p&gt;What would happen if two people out in space a few meters apart, abandoned by their spacecraft, decided to wait until gravity pulled them together?  My initial thought was that …&lt;/p&gt;</summary><content type="html">&lt;p&gt;What would happen if two people out in space a few meters apart, abandoned by their spacecraft, decided to wait until gravity pulled them together?  My initial thought was that it would take a really long time, longer than they would practically be able to wait.  The calculation (unless I've done something wrong) seems to indicate otherwise.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://bblais.github.io/images/two people.png" width=200 align=center&gt;&lt;/p&gt;
+&lt;p&gt;My first approach, which is approximate, is to determine the resulting kinetic energy when they come together and assume (badly) that it was a constant acceleration to determine the time.  This will low-ball the time but be easy to calculate. My second approach is to numerically simulate the system in &lt;a href="https://github.com/bblais/pyndamics3"&gt;pyndamics3&lt;/a&gt;.  If I feel like it, I might do the integral later, but after the first approximation I like to look at things numerically (mostly for fun).&lt;/p&gt;
+&lt;p&gt;Let's make the following assumptions:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(m_1\)&lt;/span&gt; = &lt;span class="math"&gt;\(m_2\)&lt;/span&gt; = 100 kg&lt;/li&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(r_{\rm start}=3 {\rm m}\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(r_{\rm end}=0.5 {\rm m}\)&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;then we set up the calculation&lt;/p&gt;
+&lt;div class="math"&gt;\begin{eqnarray}
+-G \frac{m_1 m_2}{r_{\rm start}}  + 0 &amp;amp;=&amp;amp; -G \frac{m_1 m_2}{r_{\rm end}} + \frac{1}{2} m_1 v^2 + \frac{1}{2} m_2 v^2  \\
+ \frac{1}{2} (100 {\rm kg}+100 {\rm kg}) v^2 &amp;amp;=&amp;amp; -6.7\times 10^{-11} \left[\frac{{\rm J}{\rm m}}{{\rm kg}^2}\right]\frac{100 {\rm kg} \cdot 100 {\rm kg}}{3 {\rm m}} - \left( -6.7\times 10^{-11} \left[\frac{{\rm J}{\rm m}}{{\rm kg}^2}\right]\frac{100 {\rm kg} \cdot 100 {\rm kg}}{0.5 {\rm m}}\right)
+\end{eqnarray}&lt;/div&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;In&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt; &lt;span class="n"&gt;G&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;6.7e-11&lt;/span&gt;
+
+&lt;span class="n"&gt;In&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt; &lt;span class="n"&gt;m1&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;
+
+&lt;span class="n"&gt;In&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;9&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt; &lt;span class="n"&gt;m2&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;
+
+&lt;span class="n"&gt;In&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt; &lt;span class="n"&gt;r_start&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;
+
+&lt;span class="n"&gt;In&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt; &lt;span class="n"&gt;r_end&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;0.5&lt;/span&gt;
+
+&lt;span class="n"&gt;In&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;12&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;G&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;m1&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;m2&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;r_start&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;G&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;m1&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;m2&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;r_end&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;Out&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;12&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt; &lt;span class="mf"&gt;1.1166666666666668e-06&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class="math"&gt;\begin{eqnarray}
+\frac{1}{2} (100 {\rm kg}+100 {\rm kg}) v^2 &amp;amp;=&amp;amp; 1.12 \times 10^{-6} {\rm J} \\
+v&amp;amp;=&amp;amp;1.1\times 10^{-4} {\rm m}/{\rm s} 
+\end{eqnarray}&lt;/div&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;In&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;13&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt; &lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;sqrt&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="mf"&gt;1.12e-6&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;m1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;m2&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+
+&lt;span class="n"&gt;In&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;14&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt; &lt;span class="n"&gt;v&lt;/span&gt;
+&lt;span class="n"&gt;Out&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;14&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt; &lt;span class="mf"&gt;0.00010583005244258362&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Assuming a constant acceleration, for each person to travel half of the 2.5 m distance separation, would be&lt;/p&gt;
+&lt;div class="math"&gt;\begin{eqnarray}
+\frac{v_{\rm final}}{2} &amp;amp;=&amp;amp; \frac{2.5 {\rm m}}{t} \\
+t&amp;amp;=&amp;amp; 45000 {\rm s} = 12 {\rm hr}
+\end{eqnarray}&lt;/div&gt;
+&lt;p&gt;which is much shorter time than I was expecting!  &lt;/p&gt;
+&lt;p&gt;Not being satisfied, I implemented it in [pyndamics3]&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;pyndamics3&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;
+&lt;span class="n"&gt;sim&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Simulation&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;sim&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;x1&amp;#39; = v1&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;1.5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;sim&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;x2&amp;#39; = v2&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mf"&gt;1.5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;sim&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;v1&amp;#39; = G*m1*m2/(x2-x1)**2/m1&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;sim&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;v2&amp;#39; = -G*m1*m2/(x2-x1)**2/m2&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;sim&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;params&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;G&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;6.7e-11&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;m1&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;m2&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;second&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;span class="n"&gt;minute&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;60&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;second&lt;/span&gt;
+&lt;span class="n"&gt;hour&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;60&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;minute&lt;/span&gt;
+&lt;span class="n"&gt;day&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;24&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;hour&lt;/span&gt;
+&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;13&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;hour&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;25&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;minute&lt;/span&gt;
+&lt;span class="n"&gt;sim&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src="https://bblais.github.io/images/x1x2.png" width=600 align=center&gt;&lt;/p&gt;
+&lt;p&gt;which clearly shows them coming together in around 1/2 of a day, from their own gravity.  I guess I have to adjust my intuitions for such situations.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="science"></category><category term="science"></category></entry><entry><title>Fitting parameters in dynamics systems</title><link href="https://bblais.github.io/posts/2021/Mar/22/fitting-parameters-in-dynamics-systems/" rel="alternate"></link><published>2021-03-22T00:00:00-04:00</published><updated>2021-03-22T00:00:00-04:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2021-03-22:/posts/2021/Mar/22/fitting-parameters-in-dynamics-systems/</id><summary type="html">&lt;p&gt;A while ago I wrote this little package called &lt;a href="https://github.com/bblais/pyndamics3"&gt;pyndamics&lt;/a&gt; which was a thin wrapper around the &lt;a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.odeint.html"&gt;scipy odeint&lt;/a&gt; function.  Since then I migrated it using &lt;a href="https://nbdev.fast.ai"&gt;nbdev&lt;/a&gt; to experiment with …&lt;/p&gt;</summary><content type="html">&lt;p&gt;A while ago I wrote this little package called &lt;a href="https://github.com/bblais/pyndamics3"&gt;pyndamics&lt;/a&gt; which was a thin wrapper around the &lt;a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.odeint.html"&gt;scipy odeint&lt;/a&gt; function.  Since then I migrated it using &lt;a href="https://nbdev.fast.ai"&gt;nbdev&lt;/a&gt; to experiment with using jupyter notebooks as the basis for making packages, yielding &lt;a href="https://github.com/bblais/pyndamics3"&gt;pyndamics3&lt;/a&gt;.  I added MCMC support for parameter fitting fairly early, using PyMC, but changed to &lt;a href="https://emcee.readthedocs.io/en/stable/"&gt;emcee&lt;/a&gt; to have an all-python implementation.  (This past month, after upgrading to Big Sur on my Mac, I've been struggling to even install PyMC3 and pystan due to dependencies but that is another story).  &lt;/p&gt;
 &lt;p&gt;Recently, it struck me that the &lt;a href="https://lmfit.github.io/lmfit-py/"&gt;lmfit&lt;/a&gt; package might be a straightforward way to add some curve fitting that would work with simpler systems, and take less time than running MCMC.  So, now &lt;a href="https://github.com/bblais/pyndamics3"&gt;pyndamics3&lt;/a&gt; can use &lt;a href="https://lmfit.github.io/lmfit-py/"&gt;lmfit&lt;/a&gt; as a fitting backend.  For example, &lt;/p&gt;
 &lt;h3 id="fitting-linear-growth"&gt;fitting linear growth&lt;/h3&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;pylab&lt;/span&gt; &lt;span class="n"&gt;inline&lt;/span&gt;
