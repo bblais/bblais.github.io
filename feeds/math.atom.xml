@@ -1,5 +1,169 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>bblais on the web - math</title><link href="https://bblais.github.io/" rel="alternate"></link><link href="https://bblais.github.io/feeds/math.atom.xml" rel="self"></link><id>https://bblais.github.io/</id><updated>2021-04-15T00:00:00-04:00</updated><entry><title>Stats 101 Examples with MCMC</title><link href="https://bblais.github.io/posts/2021/Apr/15/stats-101-examples-with-mcmc/" rel="alternate"></link><published>2021-04-15T00:00:00-04:00</published><updated>2021-04-15T00:00:00-04:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2021-04-15:/posts/2021/Apr/15/stats-101-examples-with-mcmc/</id><summary type="html">&lt;p&gt;I'd like to walk through some of the "&lt;em&gt;Statistics 101&lt;/em&gt;" examples (e.g. estimating &lt;span class="math"&gt;\(\mu\)&lt;/span&gt; with known &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt;, estimating a proportion, etc...) for which we have simple analytical solutions, but …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I'd like to walk through some of the "&lt;em&gt;Statistics 101&lt;/em&gt;" examples (e.g. estimating &lt;span class="math"&gt;\(\mu\)&lt;/span&gt; with known &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt;, estimating a proportion, etc...) for which we have simple analytical solutions, but explore them with &lt;a href="https://www.youtube.com/watch?v=vTUwEu53uzs"&gt;MCMC&lt;/a&gt;.  The reason I want to do this is to introduce MCMC on simple cases, which are not much different than more complicated cases, but are better understood.  The second reason is to explore some cases which are nearly as easy, but are never covered in introductory textbooks.  In all of these I'm going to use a python library I make for my science-programming class, &lt;a href="https://github.com/bblais/sci378"&gt;stored on github&lt;/a&gt;, and the &lt;a href="https://emcee.readthedocs.io/en/stable/"&gt;emcee&lt;/a&gt; library.  Install like:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>bblais on the web - math</title><link href="https://bblais.github.io/" rel="alternate"></link><link href="https://bblais.github.io/feeds/math.atom.xml" rel="self"></link><id>https://bblais.github.io/</id><updated>2021-04-28T00:00:00-04:00</updated><entry><title>Stats 101 Examples with MCMC Part 2</title><link href="https://bblais.github.io/posts/2021/Apr/28/stats-101-examples-with-mcmc-part-2/" rel="alternate"></link><published>2021-04-28T00:00:00-04:00</published><updated>2021-04-28T00:00:00-04:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2021-04-28:/posts/2021/Apr/28/stats-101-examples-with-mcmc-part-2/</id><summary type="html">&lt;p&gt;This is another in the series of "&lt;em&gt;Statistics 101&lt;/em&gt;" examples solved with MCMC.  The previous in the series &lt;a href="https://bblais.github.io/posts/2021/Apr/15/stats-101-examples-with-mcmc/"&gt;can be found here&lt;/a&gt;.  In all of these posts I'm going to …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This is another in the series of "&lt;em&gt;Statistics 101&lt;/em&gt;" examples solved with MCMC.  The previous in the series &lt;a href="https://bblais.github.io/posts/2021/Apr/15/stats-101-examples-with-mcmc/"&gt;can be found here&lt;/a&gt;.  In all of these posts I'm going to use a python library I make for my science-programming class, &lt;a href="https://github.com/bblais/sci378"&gt;stored on github&lt;/a&gt;, and the &lt;a href="https://emcee.readthedocs.io/en/stable/"&gt;emcee&lt;/a&gt; library.  Install like:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;pip install &amp;quot;git+git://github.com/bblais/sci378&amp;quot; --upgrade&lt;/span&gt;
+&lt;span class="err"&gt;pip install emcee&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;In this example, like &lt;a href="https://bblais.github.io/posts/2021/Apr/15/stats-101-examples-with-mcmc/"&gt;the last one&lt;/a&gt;, there is some true value, we call &lt;span class="math"&gt;\(\mu\)&lt;/span&gt;.  The &lt;span class="math"&gt;\(N\)&lt;/span&gt; data points we have, &lt;span class="math"&gt;\(\{x_i\}\)&lt;/span&gt;, consist of that true value with added independent, normally-distributed noise of &lt;em&gt;unknown&lt;/em&gt; scale, &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt;.  &lt;/p&gt;
+&lt;p&gt;For a Bayesian solution, we need to specify the likelihood function -- how our model produces the data -- and the prior probability for the parameters.  The likelihood function is determined exactly as before,&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\begin{eqnarray}
+x_i &amp;amp;\sim&amp;amp; \mu + \epsilon_i \\
+P(x_i|\mu,\sigma) &amp;amp;\sim&amp;amp; \text{Normal}(x_i-\mu,\sigma) \\
+P(\{x_i\}|\mu,\sigma) &amp;amp;\sim&amp;amp; \prod_i \text{Normal}(x_i-\mu,\sigma) 
+\end{eqnarray}
+$$&lt;/div&gt;
+&lt;p&gt;
+but with &lt;em&gt;unknown&lt;/em&gt; scale, &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;In the "&lt;em&gt;Statistics 101&lt;/em&gt;" examples, the results are typically equivalent to &lt;em&gt;uniform&lt;/em&gt; priors on the location parameters, but &lt;a href="https://en.wikipedia.org/wiki/Jeffreys_prior"&gt;Jeffreys&lt;/a&gt; priors on &lt;em&gt;scale&lt;/em&gt; parameters, so we'll assume uniform priors on &lt;span class="math"&gt;\(\mu\)&lt;/span&gt; and Jeffreys priors on &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt;&lt;/p&gt;
+&lt;h2 id="setting-up-the-problem"&gt;Setting up the problem&lt;/h2&gt;
+&lt;p&gt;In this example, like &lt;a href="https://bblais.github.io/posts/2021/Apr/15/stats-101-examples-with-mcmc/"&gt;the last one&lt;/a&gt;, there is some true value, we call &lt;span class="math"&gt;\(\mu\)&lt;/span&gt;, with normally-distributed noise but this time with unknown scale, &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt;.  The likelihood function is determined identically as before, &lt;/p&gt;
+&lt;div class="math"&gt;$$
+\begin{eqnarray}
+x_i &amp;amp;\sim&amp;amp; \mu + \epsilon_i \\
+P(x_i|\mu,\sigma) &amp;amp;\sim&amp;amp; \text{Normal}(\mu,\sigma) 
+\end{eqnarray}
+$$&lt;/div&gt;
+&lt;p&gt;
+known &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;and we'll assume uniform priors on &lt;span class="math"&gt;\(\mu\)&lt;/span&gt;.  The prior for &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt;, which we must now estimate, is taken to be a &lt;a href="https://en.wikipedia.org/wiki/Jeffreys_prior"&gt;Jeffreys prior&lt;/a&gt;.  This prior is uniform in &lt;span class="math"&gt;\(\log \sigma\)&lt;/span&gt; or, in other words, uniform in &lt;em&gt;scale&lt;/em&gt;. &lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;lnlike&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;μ&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="c1"&gt;# known σ&lt;/span&gt;
+    &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;lognormalpdf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;μ&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;σ&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;array&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="mf"&gt;12.0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;14&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;16&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;MCMCModel&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;lnlike&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                &lt;span class="n"&gt;μ&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Uniform&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;50&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;50&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+                &lt;span class="n"&gt;σ&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Jeffreys&lt;/span&gt;&lt;span class="p"&gt;(),&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id="running-mcmc-looking-at-the-results"&gt;Running MCMC, looking at the results&lt;/h2&gt;
+&lt;p&gt;Now we run MCMC, plot the chains (so we can see it has converged) and look at distributions,&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run_mcmc&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;800&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;repeat&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot_chains&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;Sampling Prior...&lt;/span&gt;
+&lt;span class="err"&gt;Done.&lt;/span&gt;
+&lt;span class="err"&gt;0.27 s&lt;/span&gt;
+&lt;span class="err"&gt;Running MCMC 1/3...&lt;/span&gt;
+&lt;span class="err"&gt;Done.&lt;/span&gt;
+&lt;span class="err"&gt;2.63 s&lt;/span&gt;
+&lt;span class="err"&gt;Running MCMC 2/3...&lt;/span&gt;
+&lt;span class="err"&gt;Done.&lt;/span&gt;
+&lt;span class="err"&gt;2.79 s&lt;/span&gt;
+&lt;span class="err"&gt;Running MCMC 3/3...&lt;/span&gt;
+&lt;span class="err"&gt;Done.&lt;/span&gt;
+&lt;span class="err"&gt;2.47 s&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img alt="" src="https://bblais.github.io/images/μσ chains.png"&gt;&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot_distributions&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img alt="" src="https://bblais.github.io/images/μt distribution.png"&gt;
+&lt;img alt="" src="https://bblais.github.io/images/σ distribution.png"&gt;&lt;/p&gt;
+&lt;h2 id="comparing-to-textbook-examples"&gt;Comparing to textbook examples&lt;/h2&gt;
+&lt;p&gt;We compare to textbook solution for &lt;span class="math"&gt;\(\mu\)&lt;/span&gt; (i.e. Student t-distribution),&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get_distribution&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;μ&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;-&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;μ̂&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;mean&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;σμ&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;ddof&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;sqrt&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;y_pred&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;exp&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;logtpdf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;_&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;μ̂&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;σμ&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;_&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;y_pred&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;r--&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img alt="" src="https://bblais.github.io/images/compare μ t.png"&gt;&lt;/p&gt;
+&lt;p&gt;and the textbook solution for &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt; (i.e. Chi-square),&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get_distribution&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;σ&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;bins&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;800&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;-&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;V&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mean&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sum&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;logp&lt;/span&gt;&lt;span class="o"&gt;=-&lt;/span&gt;&lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;V&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;
+&lt;span class="n"&gt;y_pred&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;exp&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;logp&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;dx&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;y_pred&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;y_pred&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;y_pred&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sum&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;dx&lt;/span&gt;
+
+&lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;y_pred&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;r--&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;xlim&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img alt="" src="https://bblais.github.io/images/compare σ.png"&gt;&lt;/p&gt;
+&lt;h2 id="tail-area-probabilities"&gt;Tail-area Probabilities&lt;/h2&gt;
+&lt;p&gt;We can easily find the tail-area probability, the Bayesian equivalent to Student-t test, for &lt;span class="math"&gt;\(\mu\)&lt;/span&gt;,&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;P&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;μ&amp;gt;15&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;0.037066666666666664&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;and for &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt;, the Bayesian equivalent to Chi-squared test, &lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;P&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;σ&amp;lt;1&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;0.01985&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="math"></category></entry><entry><title>Stats 101 Examples with MCMC</title><link href="https://bblais.github.io/posts/2021/Apr/15/stats-101-examples-with-mcmc/" rel="alternate"></link><published>2021-04-15T00:00:00-04:00</published><updated>2021-04-15T00:00:00-04:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2021-04-15:/posts/2021/Apr/15/stats-101-examples-with-mcmc/</id><summary type="html">&lt;p&gt;I'd like to walk through some of the "&lt;em&gt;Statistics 101&lt;/em&gt;" examples (e.g. estimating &lt;span class="math"&gt;\(\mu\)&lt;/span&gt; with known &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt;, estimating a proportion, etc...) for which we have simple analytical solutions, but …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I'd like to walk through some of the "&lt;em&gt;Statistics 101&lt;/em&gt;" examples (e.g. estimating &lt;span class="math"&gt;\(\mu\)&lt;/span&gt; with known &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt;, estimating a proportion, etc...) for which we have simple analytical solutions, but explore them with &lt;a href="https://www.youtube.com/watch?v=vTUwEu53uzs"&gt;MCMC&lt;/a&gt;.  The reason I want to do this is to introduce MCMC on simple cases, which are not much different than more complicated cases, but are better understood.  The second reason is to explore some cases which are nearly as easy, but are never covered in introductory textbooks.  In all of these I'm going to use a python library I make for my science-programming class, &lt;a href="https://github.com/bblais/sci378"&gt;stored on github&lt;/a&gt;, and the &lt;a href="https://emcee.readthedocs.io/en/stable/"&gt;emcee&lt;/a&gt; library.  Install like:&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;pip install &amp;quot;git+git://github.com/bblais/sci378&amp;quot; --upgrade&lt;/span&gt;
 &lt;span class="err"&gt;pip install emcee&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
