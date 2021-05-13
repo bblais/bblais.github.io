@@ -267,10 +267,13 @@ make sure it is well defined.&lt;/p&gt;
     mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
     mathjaxscript.type = 'text/javascript';
     mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
-    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
         "MathJax.Hub.Config({" +
         "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
         "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
         "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
         "    displayAlign: '"+ align +"'," +
@@ -284,6 +287,8 @@ make sure it is well defined.&lt;/p&gt;
         "        preview: 'TeX'," +
         "    }, " +
         "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
         "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
         "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
         "    }, " +
@@ -304,6 +309,8 @@ make sure it is well defined.&lt;/p&gt;
                 "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
             "});" +
         "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;</content><category term="wordpress_migration"></category><category term="Religion"></category></entry><entry><title>Science as Entertainment</title><link href="https://bblais.github.io/posts/2013/Nov/12/science-as-entertainment/" rel="alternate"></link><published>2013-11-12T13:30:00-05:00</published><updated>2013-11-12T13:30:00-05:00</updated><author><name>brianblais</name></author><id>tag:bblais.github.io,2013-11-12:/posts/2013/Nov/12/science-as-entertainment/</id><summary type="html">&lt;p&gt;This past weekend I was at a Girl Scouts "Mad Science" program, not as
@@ -1780,10 +1787,13 @@ helpful to these people.&lt;/p&gt;
     mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
     mathjaxscript.type = 'text/javascript';
     mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
-    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
         "MathJax.Hub.Config({" +
         "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
         "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
         "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
         "    displayAlign: '"+ align +"'," +
@@ -1797,6 +1807,8 @@ helpful to these people.&lt;/p&gt;
         "        preview: 'TeX'," +
         "    }, " +
         "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
         "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
         "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
         "    }, " +
@@ -1817,6 +1829,8 @@ helpful to these people.&lt;/p&gt;
                 "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
             "});" +
         "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;</content><category term="wordpress_migration"></category><category term="Religion"></category><category term="Science"></category></entry><entry><title>Design, the Origin of Life, and Creationism</title><link href="https://bblais.github.io/posts/2013/May/06/design-the-origin-of-life-and-creationism/" rel="alternate"></link><published>2013-05-06T20:50:00-04:00</published><updated>2013-05-06T20:50:00-04:00</updated><author><name>brianblais</name></author><id>tag:bblais.github.io,2013-05-06:/posts/2013/May/06/design-the-origin-of-life-and-creationism/</id><summary type="html">&lt;p&gt;I just listened to a recent &lt;a href="http://www.premierradio.org.uk/shows/saturday/unbelievable.aspx"&gt;Unbelievable podcast&lt;/a&gt;, an episode about
@@ -2006,10 +2020,13 @@ fancy math theorem to this effect, but it is still pretty cool.&lt;/p&gt;
     mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
     mathjaxscript.type = 'text/javascript';
     mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
-    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
         "MathJax.Hub.Config({" +
         "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
         "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
         "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
         "    displayAlign: '"+ align +"'," +
@@ -2023,6 +2040,8 @@ fancy math theorem to this effect, but it is still pretty cool.&lt;/p&gt;
         "        preview: 'TeX'," +
         "    }, " +
         "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
         "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
         "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
         "    }, " +
@@ -2043,6 +2062,8 @@ fancy math theorem to this effect, but it is still pretty cool.&lt;/p&gt;
                 "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
             "});" +
         "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;</content><category term="wordpress_migration"></category></entry><entry><title>A funny little probability problem - correct</title><link href="https://bblais.github.io/posts/2013/Mar/23/a-funny-little-probability-problem-correct/" rel="alternate"></link><published>2013-03-23T23:23:00-04:00</published><updated>2013-03-23T23:23:00-04:00</updated><author><name>brianblais</name></author><id>tag:bblais.github.io,2013-03-23:/posts/2013/Mar/23/a-funny-little-probability-problem-correct/</id><summary type="html">&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
@@ -2169,10 +2190,13 @@ card.  &lt;/p&gt;
     mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
     mathjaxscript.type = 'text/javascript';
     mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
-    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
         "MathJax.Hub.Config({" +
         "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
         "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
         "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
         "    displayAlign: '"+ align +"'," +
@@ -2186,6 +2210,8 @@ card.  &lt;/p&gt;
         "        preview: 'TeX'," +
         "    }, " +
         "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
         "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
         "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
         "    }, " +
@@ -2206,6 +2232,8 @@ card.  &lt;/p&gt;
                 "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
             "});" +
         "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;</content><category term="wordpress_migration"></category></entry><entry><title>A funny little probability problem</title><link href="https://bblais.github.io/posts/2013/Mar/23/a-funny-little-probability-problem-4/" rel="alternate"></link><published>2013-03-23T12:21:00-04:00</published><updated>2013-03-23T12:21:00-04:00</updated><author><name>brianblais</name></author><id>tag:bblais.github.io,2013-03-23:/posts/2013/Mar/23/a-funny-little-probability-problem-4/</id><summary type="html">&lt;p&gt;&lt;strong&gt;(Note: this problem has an error...can you find it? I will post the
@@ -2286,10 +2314,13 @@ properties)&lt;/strong&gt;&lt;/p&gt;
     mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
     mathjaxscript.type = 'text/javascript';
     mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
-    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
         "MathJax.Hub.Config({" +
         "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
         "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
         "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
         "    displayAlign: '"+ align +"'," +
@@ -2303,6 +2334,8 @@ properties)&lt;/strong&gt;&lt;/p&gt;
         "        preview: 'TeX'," +
         "    }, " +
         "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
         "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
         "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
         "    }, " +
@@ -2323,6 +2356,8 @@ properties)&lt;/strong&gt;&lt;/p&gt;
                 "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
             "});" +
         "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;</content><category term="wordpress_migration"></category></entry><entry><title>"Proof" that God exists</title><link href="https://bblais.github.io/posts/2013/Mar/21/proof-that-god-exists/" rel="alternate"></link><published>2013-03-21T11:33:00-04:00</published><updated>2013-03-21T11:33:00-04:00</updated><author><name>brianblais</name></author><id>tag:bblais.github.io,2013-03-21:/posts/2013/Mar/21/proof-that-god-exists/</id><summary type="html">&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
@@ -3826,10 +3861,13 @@ they are a distinction without a difference.&lt;/p&gt;
     mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
     mathjaxscript.type = 'text/javascript';
     mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
-    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
         "MathJax.Hub.Config({" +
         "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
         "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
         "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
         "    displayAlign: '"+ align +"'," +
@@ -3843,6 +3881,8 @@ they are a distinction without a difference.&lt;/p&gt;
         "        preview: 'TeX'," +
         "    }, " +
         "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
         "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
         "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
         "    }, " +
@@ -3863,6 +3903,8 @@ they are a distinction without a difference.&lt;/p&gt;
                 "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
             "});" +
         "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;</content><category term="wordpress_migration"></category></entry><entry><title>More fine tuning...NOT</title><link href="https://bblais.github.io/posts/2011/Dec/15/more-fine-tuning-not/" rel="alternate"></link><published>2011-12-15T17:34:00-05:00</published><updated>2011-12-15T17:34:00-05:00</updated><author><name>brianblais</name></author><id>tag:bblais.github.io,2011-12-15:/posts/2011/Dec/15/more-fine-tuning-not/</id><summary type="html">&lt;p&gt;One of the so-called fine-tuned parameters in our solar system
@@ -3988,10 +4030,13 @@ we can all learn when dealing with challenging problems.&lt;/p&gt;
     mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
     mathjaxscript.type = 'text/javascript';
     mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
-    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
         "MathJax.Hub.Config({" +
         "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
         "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
         "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
         "    displayAlign: '"+ align +"'," +
@@ -4005,6 +4050,8 @@ we can all learn when dealing with challenging problems.&lt;/p&gt;
         "        preview: 'TeX'," +
         "    }, " +
         "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
         "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
         "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
         "    }, " +
@@ -4025,6 +4072,8 @@ we can all learn when dealing with challenging problems.&lt;/p&gt;
                 "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
             "});" +
         "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;</content><category term="wordpress_migration"></category></entry><entry><title>Conversation with Steve Winsor</title><link href="https://bblais.github.io/posts/2011/Dec/06/conversation-with-steve-winsor/" rel="alternate"></link><published>2011-12-06T15:32:00-05:00</published><updated>2011-12-06T15:32:00-05:00</updated><author><name>brianblais</name></author><id>tag:bblais.github.io,2011-12-06:/posts/2011/Dec/06/conversation-with-steve-winsor/</id><summary type="html">&lt;p&gt;
@@ -4825,10 +4874,13 @@ violate our intuitions quite so badly.&lt;/p&gt;
     mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
     mathjaxscript.type = 'text/javascript';
     mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
-    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
         "MathJax.Hub.Config({" +
         "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
         "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
         "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
         "    displayAlign: '"+ align +"'," +
@@ -4842,6 +4894,8 @@ violate our intuitions quite so badly.&lt;/p&gt;
         "        preview: 'TeX'," +
         "    }, " +
         "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
         "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
         "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
         "    }, " +
@@ -4862,6 +4916,8 @@ violate our intuitions quite so badly.&lt;/p&gt;
                 "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
             "});" +
         "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;</content><category term="wordpress_migration"></category></entry><entry><title>Faster than light...a likely solution</title><link href="https://bblais.github.io/posts/2011/Oct/16/faster-than-light-a-likely-solution/" rel="alternate"></link><published>2011-10-16T12:11:00-04:00</published><updated>2011-10-16T12:11:00-04:00</updated><author><name>brianblais</name></author><id>tag:bblais.github.io,2011-10-16:/posts/2011/Oct/16/faster-than-light-a-likely-solution/</id><summary type="html">&lt;p&gt;A &lt;a href="http://www.technologyreview.com/blog/arxiv/27260/"&gt;solution to the "faster-than-light" neutrinos&lt;/a&gt; is likely to have
@@ -5029,10 +5085,13 @@ astonishing degree, and any replacement will have to do just as well.&lt;/p&gt;
     mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
     mathjaxscript.type = 'text/javascript';
     mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
-    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
         "MathJax.Hub.Config({" +
         "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
         "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
         "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
         "    displayAlign: '"+ align +"'," +
@@ -5046,6 +5105,8 @@ astonishing degree, and any replacement will have to do just as well.&lt;/p&gt;
         "        preview: 'TeX'," +
         "    }, " +
         "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
         "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
         "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
         "    }, " +
@@ -5066,6 +5127,8 @@ astonishing degree, and any replacement will have to do just as well.&lt;/p&gt;
                 "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
             "});" +
         "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;</content><category term="wordpress_migration"></category></entry><entry><title>Mystery, Knowledge, Science and Television</title><link href="https://bblais.github.io/posts/2011/Aug/03/mystery-knowledge-science-and-television/" rel="alternate"></link><published>2011-08-03T12:44:00-04:00</published><updated>2011-08-03T12:44:00-04:00</updated><author><name>brianblais</name></author><id>tag:bblais.github.io,2011-08-03:/posts/2011/Aug/03/mystery-knowledge-science-and-television/</id><summary type="html">&lt;p&gt;J J Abrams, the creator of the television show “Lost”, gives a &lt;a href="http://www.ted.com/talks/lang/eng/j_j_abrams_mystery_box.html"&gt;Ted
@@ -9555,10 +9618,13 @@ for the two models, P(M~1~)/P(M~2~). Would anyone take a bet like that?&lt;/p&gt
     mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
     mathjaxscript.type = 'text/javascript';
     mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
-    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
         "MathJax.Hub.Config({" +
         "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
         "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
         "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
         "    displayAlign: '"+ align +"'," +
@@ -9572,6 +9638,8 @@ for the two models, P(M~1~)/P(M~2~). Would anyone take a bet like that?&lt;/p&gt
         "        preview: 'TeX'," +
         "    }, " +
         "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
         "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
         "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
         "    }, " +
@@ -9592,6 +9660,8 @@ for the two models, P(M~1~)/P(M~2~). Would anyone take a bet like that?&lt;/p&gt
                 "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
             "});" +
         "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;</content><category term="wordpress_migration"></category></entry><entry><title>A quick comment on error</title><link href="https://bblais.github.io/posts/2009/Jul/20/a-quick-comment-on-error/" rel="alternate"></link><published>2009-07-20T14:05:00-04:00</published><updated>2009-07-20T14:05:00-04:00</updated><author><name>brianblais</name></author><id>tag:bblais.github.io,2009-07-20:/posts/2009/Jul/20/a-quick-comment-on-error/</id><summary type="html">&lt;p&gt;I read &lt;a href="http://www.theweek.com/article/index/98607/Census_Bureau_The_counting_of_America"&gt;this article&lt;/a&gt; in the Week magazine, concerning the upcoming

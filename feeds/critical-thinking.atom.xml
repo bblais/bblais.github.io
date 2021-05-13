@@ -48,10 +48,13 @@ $$&lt;/div&gt;
     mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
     mathjaxscript.type = 'text/javascript';
     mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
-    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
         "MathJax.Hub.Config({" +
         "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
         "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
         "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
         "    displayAlign: '"+ align +"'," +
@@ -65,6 +68,8 @@ $$&lt;/div&gt;
         "        preview: 'TeX'," +
         "    }, " +
         "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
         "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
         "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
         "    }, " +
@@ -85,6 +90,8 @@ $$&lt;/div&gt;
                 "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
             "});" +
         "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;</content><category term="critical thinking"></category></entry><entry><title>Facts are Not Enough</title><link href="https://bblais.github.io/posts/2018/Feb/05/facts-are-not-enough/" rel="alternate"></link><published>2018-02-05T00:00:00-05:00</published><updated>2018-02-05T00:00:00-05:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2018-02-05:/posts/2018/Feb/05/facts-are-not-enough/</id><summary type="html">&lt;p&gt;In the October issue of Significance magazine, an article called &lt;a href="http://onlinelibrary.wiley.com/doi/10.1111/j.1740-9713.2017.01066.x/full"&gt;“Why facts are not enough in the fight against fake news”&lt;/a&gt; by Brian Tarran resonated with some of the things …&lt;/p&gt;</summary><content type="html">&lt;p&gt;In the October issue of Significance magazine, an article called &lt;a href="http://onlinelibrary.wiley.com/doi/10.1111/j.1740-9713.2017.01066.x/full"&gt;“Why facts are not enough in the fight against fake news”&lt;/a&gt; by Brian Tarran resonated with some of the things I have been thinking.  A few quotes are useful here,&lt;/p&gt;

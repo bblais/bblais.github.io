@@ -59,10 +59,13 @@ P(r_{\rm tomorrow}|r_{\rm today}, r_{\rm yesterday}, r_{\rm day before}, \ldots,
     mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
     mathjaxscript.type = 'text/javascript';
     mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
-    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
         "MathJax.Hub.Config({" +
         "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
         "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
         "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
         "    displayAlign: '"+ align +"'," +
@@ -76,6 +79,8 @@ P(r_{\rm tomorrow}|r_{\rm today}, r_{\rm yesterday}, r_{\rm day before}, \ldots,
         "        preview: 'TeX'," +
         "    }, " +
         "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
         "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
         "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
         "    }, " +
@@ -96,6 +101,8 @@ P(r_{\rm tomorrow}|r_{\rm today}, r_{\rm yesterday}, r_{\rm day before}, \ldots,
                 "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
             "});" +
         "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;</content><category term="Unbelievable Project"></category></entry><entry><title>Theism vs Atheism</title><link href="https://bblais.github.io/posts/2014/Sep/18/theism-vs-atheism/" rel="alternate"></link><published>2014-09-18T00:00:00-04:00</published><updated>2014-09-18T00:00:00-04:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2014-09-18:/posts/2014/Sep/18/theism-vs-atheism/</id><summary type="html">&lt;p&gt;On a recent &lt;a href="http://www.premierchristianradio.com/shows/saturday/unbelievable.aspx"&gt;Unbelievable podcast&lt;/a&gt; there is a discussion between  &lt;a href="http://www.premierchristianradio.com/Shows/Saturday/Unbelievable/Episodes/Unbelievable-Is-our-universe-more-likely-on-atheism-or-theism-Calum-Miller-vs-James-Croft"&gt;Calum Miller and James Croft&lt;/a&gt; on the topic "is our universe more likely on atheism or theism?", where Calum introduces …&lt;/p&gt;</summary><content type="html">&lt;p&gt;On a recent &lt;a href="http://www.premierchristianradio.com/shows/saturday/unbelievable.aspx"&gt;Unbelievable podcast&lt;/a&gt; there is a discussion between  &lt;a href="http://www.premierchristianradio.com/Shows/Saturday/Unbelievable/Episodes/Unbelievable-Is-our-universe-more-likely-on-atheism-or-theism-Calum-Miller-vs-James-Croft"&gt;Calum Miller and James Croft&lt;/a&gt; on the topic "is our universe more likely on atheism or theism?", where Calum introduces probabilistic arguments throughout.  Although James does a good job of pressing Calum's arguments in weak points, and framing the argument in a more coherent way, I think there is much more to be said about the weaknesses of this particular argument, and the framing of these problems in terms of probability.  There is a danger in this sort of thing of using mathemtics to give the veneer of authenticity to an argument that is riddled with random guesses, ill-defined concepts, and unsupported premises.  Let's start with some quotes from the episode, so we can see where this is going.&lt;/p&gt;
@@ -157,10 +164,13 @@ or the regularity of the universe is much more likely given fairies than no-fair
     mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
     mathjaxscript.type = 'text/javascript';
     mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
-    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
         "MathJax.Hub.Config({" +
         "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
         "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
         "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
         "    displayAlign: '"+ align +"'," +
@@ -174,6 +184,8 @@ or the regularity of the universe is much more likely given fairies than no-fair
         "        preview: 'TeX'," +
         "    }, " +
         "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
         "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
         "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
         "    }, " +
@@ -194,6 +206,8 @@ or the regularity of the universe is much more likely given fairies than no-fair
                 "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
             "});" +
         "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;</content><category term="Unbelievable Project"></category></entry><entry><title>Is Faith the Same as Trust or Baseless Belief?</title><link href="https://bblais.github.io/posts/2014/Jul/28/is-faith-the-same-as-trust-or-baseless-belief/" rel="alternate"></link><published>2014-07-28T00:00:00-04:00</published><updated>2014-07-28T00:00:00-04:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2014-07-28:/posts/2014/Jul/28/is-faith-the-same-as-trust-or-baseless-belief/</id><summary type="html">&lt;p&gt;I was listening to the &lt;a href="http://www.premierradio.org.uk/shows/saturday/unbelievable.aspx"&gt;Unbelievable podcast&lt;/a&gt; debate between &lt;a href="http://www.premierradio.org.uk/listen/ondemand.aspx?mediaid={1D4751A4-7692-48E0-BB9E-CCDBA08C9AE3}"&gt;Tim McGrew and Peter Boghossian&lt;/a&gt; on the definition of faith, and whether it is a valid way of knowing.  I have …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I was listening to the &lt;a href="http://www.premierradio.org.uk/shows/saturday/unbelievable.aspx"&gt;Unbelievable podcast&lt;/a&gt; debate between &lt;a href="http://www.premierradio.org.uk/listen/ondemand.aspx?mediaid={1D4751A4-7692-48E0-BB9E-CCDBA08C9AE3}"&gt;Tim McGrew and Peter Boghossian&lt;/a&gt; on the definition of faith, and whether it is a valid way of knowing.  I have &lt;a href="http://web.bryant.edu/~bblais/faith-trust-and-evidence.html"&gt;my initial response here&lt;/a&gt;, but want to look at another aspect of it in the current post.&lt;/p&gt;
@@ -303,10 +317,13 @@ or the regularity of the universe is much more likely given fairies than no-fair
     mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
     mathjaxscript.type = 'text/javascript';
     mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
-    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
         "MathJax.Hub.Config({" +
         "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
         "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
         "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
         "    displayAlign: '"+ align +"'," +
@@ -320,6 +337,8 @@ or the regularity of the universe is much more likely given fairies than no-fair
         "        preview: 'TeX'," +
         "    }, " +
         "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
         "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
         "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
         "    }, " +
@@ -340,6 +359,8 @@ or the regularity of the universe is much more likely given fairies than no-fair
                 "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
             "});" +
         "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;</content><category term="Unbelievable Project"></category></entry><entry><title>Do healing miracles happen?</title><link href="https://bblais.github.io/posts/2014/Jun/03/do-healing-miracles-happen/" rel="alternate"></link><published>2014-06-03T00:00:00-04:00</published><updated>2014-06-03T00:00:00-04:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2014-06-03:/posts/2014/Jun/03/do-healing-miracles-happen/</id><summary type="html">&lt;p&gt;As part of the &lt;a href="http://web.bryant.edu/~bblais/unbelievable-project-a-non-believers-armchair-perspective-on-six-years-of-christian-debates.html"&gt;Unbelievable Project&lt;/a&gt;, I am taking notes and "arm-chair" responding to each of the &lt;a href="http://www.premierradio.org.uk/shows/saturday/unbelievable.aspx"&gt;Unbelievable podcast&lt;/a&gt; episodes 
@@ -770,10 +791,13 @@ really gotten to the meat of it when he could have.&lt;/p&gt;
     mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
     mathjaxscript.type = 'text/javascript';
     mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
-    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
         "MathJax.Hub.Config({" +
         "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
         "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
         "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
         "    displayAlign: '"+ align +"'," +
@@ -787,6 +811,8 @@ really gotten to the meat of it when he could have.&lt;/p&gt;
         "        preview: 'TeX'," +
         "    }, " +
         "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
         "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
         "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
         "    }, " +
@@ -807,6 +833,8 @@ really gotten to the meat of it when he could have.&lt;/p&gt;
                 "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
             "});" +
         "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;</content><category term="Unbelievable Project"></category><category term="Probability"></category><category term="Religion"></category><category term="Unbelievable Project"></category></entry><entry><title>Unbelievable Project: Miracles and healing - is it evidence for the truth of Christianity?</title><link href="https://bblais.github.io/posts/2013/Mar/18/unbelievable-project-miracles-and-healing-is-it-evidence-for-the-truth-of-christianity/" rel="alternate"></link><published>2013-03-18T19:29:00-04:00</published><updated>2013-03-18T19:29:00-04:00</updated><author><name>brianblais</name></author><id>tag:bblais.github.io,2013-03-18:/posts/2013/Mar/18/unbelievable-project-miracles-and-healing-is-it-evidence-for-the-truth-of-christianity/</id><summary type="html">&lt;h2 id="unbelievable-17-nov-2007-are-miracles-evidence-for-god-17-november-2007-miracles-and-healing-is-it-evidence-for-the-truth-of-christianity"&gt;Unbelievable? 17 Nov 2007 - Are miracles evidence for God? - 17 November 2007 -- Miracles and healing - is it evidence for the truth of Christianity?&lt;/h2&gt;

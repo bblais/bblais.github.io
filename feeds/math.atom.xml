@@ -1,5 +1,152 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>bblais on the web - math</title><link href="https://bblais.github.io/" rel="alternate"></link><link href="https://bblais.github.io/feeds/math.atom.xml" rel="self"></link><id>https://bblais.github.io/</id><updated>2021-04-28T00:00:00-04:00</updated><entry><title>Stats 101 Examples with MCMC Part 2</title><link href="https://bblais.github.io/posts/2021/Apr/28/stats-101-examples-with-mcmc-part-2/" rel="alternate"></link><published>2021-04-28T00:00:00-04:00</published><updated>2021-04-28T00:00:00-04:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2021-04-28:/posts/2021/Apr/28/stats-101-examples-with-mcmc-part-2/</id><summary type="html">&lt;p&gt;This is another in the series of "&lt;em&gt;Statistics 101&lt;/em&gt;" examples solved with MCMC.  The previous in the series &lt;a href="https://bblais.github.io/posts/2021/Apr/15/stats-101-examples-with-mcmc/"&gt;can be found here&lt;/a&gt;.  In all of these posts I'm going to …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This is another in the series of "&lt;em&gt;Statistics 101&lt;/em&gt;" examples solved with MCMC.  The previous in the series &lt;a href="https://bblais.github.io/posts/2021/Apr/15/stats-101-examples-with-mcmc/"&gt;can be found here&lt;/a&gt;.  In all of these posts I'm going to use a python library I make for my science-programming class, &lt;a href="https://github.com/bblais/sci378"&gt;stored on github&lt;/a&gt;, and the &lt;a href="https://emcee.readthedocs.io/en/stable/"&gt;emcee&lt;/a&gt; library.  Install like:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>bblais on the web - math</title><link href="https://bblais.github.io/" rel="alternate"></link><link href="https://bblais.github.io/feeds/math.atom.xml" rel="self"></link><id>https://bblais.github.io/</id><updated>2021-05-13T00:00:00-04:00</updated><entry><title>Stats 101 Examples with MCMC Part 3</title><link href="https://bblais.github.io/posts/2021/May/13/stats-101-examples-with-mcmc-part-3/" rel="alternate"></link><published>2021-05-13T00:00:00-04:00</published><updated>2021-05-13T00:00:00-04:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2021-05-13:/posts/2021/May/13/stats-101-examples-with-mcmc-part-3/</id><summary type="html">&lt;p&gt;This is another in the series of "&lt;em&gt;Statistics 101&lt;/em&gt;" examples solved with MCMC.  Others in the series:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://bblais.github.io/posts/2021/Apr/15/stats-101-examples-with-mcmc/"&gt;Estimating mean with known 𝜎&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://bblais.github.io/posts/2021/Apr/28/stats-101-examples-with-mcmc-part-2/"&gt;Estimating mean with unknown 𝜎&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In all of …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This is another in the series of "&lt;em&gt;Statistics 101&lt;/em&gt;" examples solved with MCMC.  Others in the series:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://bblais.github.io/posts/2021/Apr/15/stats-101-examples-with-mcmc/"&gt;Estimating mean with known 𝜎&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://bblais.github.io/posts/2021/Apr/28/stats-101-examples-with-mcmc-part-2/"&gt;Estimating mean with unknown 𝜎&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In all of these posts I'm going to use a python library I make for my science-programming class, &lt;a href="https://github.com/bblais/sci378"&gt;stored on github&lt;/a&gt;, and the &lt;a href="https://emcee.readthedocs.io/en/stable/"&gt;emcee&lt;/a&gt; library.  Install like:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;pip install &amp;quot;git+git://github.com/bblais/sci378&amp;quot; --upgrade&lt;/span&gt;
+&lt;span class="err"&gt;pip install emcee&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;In this example the data take the form of a number of "successes", &lt;span class="math"&gt;\(h\)&lt;/span&gt;, in a total number of "trials", &lt;span class="math"&gt;\(N\)&lt;/span&gt;, and we want to estimate the proportion, &lt;span class="math"&gt;\(\theta\)&lt;/span&gt;.  This could be the number of heads observed in &lt;span class="math"&gt;\(N\)&lt;/span&gt; coin flips and we want to estimate the bias in the coin -- what is the probability that it flips heads.  In fact, the data I will use below is from &lt;a href="https://www.jstor.org/stable/2683855?seq=1#metadata_info_tab_contents"&gt;Lindley, 1976. "Inference for a Bernoulli Process (A Bayesian View)"&lt;/a&gt;, where he flips a thumbtack which might be able to produce two states pointing "up" or pointing "down", and gets the data UUUDUDUUUUUD (3 D, 9 U).&lt;/p&gt;
+&lt;h2 id="setting-up-the-problem"&gt;Setting up the problem&lt;/h2&gt;
+&lt;p&gt;For a Bayesian solution, we need to specify the likelihood function -- how our model produces the data -- and the prior probability for the parameters.  The likelihood function is determined from the Bernoulli function,&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\begin{eqnarray}
+P(h|N,\theta) &amp;amp;\sim&amp;amp; \text{Bernoulli}(N,\theta) \\
+\end{eqnarray}
+$$&lt;/div&gt;
+&lt;p&gt;In the "&lt;em&gt;Statistics 101&lt;/em&gt;" examples, the results are typically equivalent to &lt;em&gt;uniform&lt;/em&gt; priors on the location parameters.  This would translate to 
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\begin{eqnarray}
+P(\theta) &amp;amp;\sim&amp;amp; \text{Uniform}(0,1)
+\end{eqnarray}
+$$&lt;/div&gt;
+&lt;p&gt;However there are cases where we have more information.  Even flipping a biased coin, we know that both outcomes (heads and tails) are at least &lt;em&gt;possible&lt;/em&gt; to happen.  Given this, the probabilities &lt;span class="math"&gt;\(P(\theta=0)\)&lt;/span&gt; and &lt;span class="math"&gt;\(P(\theta=1)\)&lt;/span&gt; should be zero and a different prior is justified (sidenote -- the maximum entropy solution to this is a Beta(2,2) distribution or, in other words, assume one heads and one tails have been observed before the data).  I'll continue with this example with uniform priors, because in &lt;a href="https://www.jstor.org/stable/2683855?seq=1#metadata_info_tab_contents"&gt;Lindley, 1976. "Inference for a Bernoulli Process (A Bayesian View)"&lt;/a&gt; he is flipping a particular thumbtack for which it might not be possible for it to, say, flip "down".  His data turns out to be 3 down, 9 up, so we know after the data it was possible for both outcomes but not &lt;em&gt;before&lt;/em&gt; the data.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;lnlike&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;θ&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;h&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;logbernoullipdf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;θ&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;h&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;12&lt;/span&gt;
+&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;MCMCModel&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;lnlike&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                &lt;span class="n"&gt;θ&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Uniform&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+                &lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id="running-mcmc-looking-at-the-results"&gt;Running MCMC, looking at the results&lt;/h2&gt;
+&lt;p&gt;Now we run MCMC, plot the chains (so we can see it has converged) and look at distributions,&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run_mcmc&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;800&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;repeat&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot_chains&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;Sampling Prior...&lt;/span&gt;
+&lt;span class="err"&gt;Done.&lt;/span&gt;
+&lt;span class="err"&gt;0.27 s&lt;/span&gt;
+&lt;span class="err"&gt;Running MCMC 1/3...&lt;/span&gt;
+&lt;span class="err"&gt;Done.&lt;/span&gt;
+&lt;span class="err"&gt;2.63 s&lt;/span&gt;
+&lt;span class="err"&gt;Running MCMC 2/3...&lt;/span&gt;
+&lt;span class="err"&gt;Done.&lt;/span&gt;
+&lt;span class="err"&gt;2.79 s&lt;/span&gt;
+&lt;span class="err"&gt;Running MCMC 3/3...&lt;/span&gt;
+&lt;span class="err"&gt;Done.&lt;/span&gt;
+&lt;span class="err"&gt;2.47 s&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img alt="" src="https://bblais.github.io/images/proportion chains.png"&gt;&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot_distributions&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img alt="" src="https://bblais.github.io/images/proportion distribution.png"&gt;&lt;/p&gt;
+&lt;p&gt;Is this evidence for a biased coin at, say, 95% level?&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;P&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;θ &amp;lt;0.5&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;0.95485&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;yes, just as &lt;a href="https://www.jstor.org/stable/2683855?seq=1#metadata_info_tab_contents"&gt;Lindley, 1976 presents.&lt;/a&gt; &lt;/p&gt;
+&lt;h2 id="comparing-to-textbook-examples"&gt;Comparing to textbook examples&lt;/h2&gt;
+&lt;p&gt;The textbook only considers large sample proportions, with the definition &lt;span class="math"&gt;\(f= h/N\)&lt;/span&gt;. From the Beta distribution we get our estimate of the proportion &lt;/p&gt;
+&lt;div class="math"&gt;\begin{eqnarray}
+\hat{\theta} &amp;amp;\sim&amp;amp; f \\
+\sigma^2 &amp;amp;\sim&amp;amp; \frac{f\cdot (1-f)}{N}
+\end{eqnarray}&lt;/div&gt;
+&lt;p&gt;
+which matches the equations in the standard textbooks.  Comparing to our case, with &lt;span class="math"&gt;\(N=120\)&lt;/span&gt; we get good agreement,&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://bblais.github.io/images/compare proportion N=120.png"&gt;&lt;/p&gt;
+&lt;p&gt;However, we start seeing differences where the textbook treatment isn't as informative as the methods we're using here.  For small samples, say &lt;span class="math"&gt;\(N=12\)&lt;/span&gt;, we see that the textbook approximation breaks down -- especially near the &lt;span class="math"&gt;\(f=0\)&lt;/span&gt; and &lt;span class="math"&gt;\(f=1\)&lt;/span&gt; boundaries, sometimes overestimating our certainty and sometimes underestimating it.  &lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://bblais.github.io/images/compare proportion N=12.png"&gt;&lt;/p&gt;
+&lt;p&gt;Notice, however, that in the current approach we didn't need to change anything to get more robust answers.  Also notice that the current process for this problem is identical to the process for all of the other cases we've considered.  So what we are presenting, compared to the textbook treatments, is a more &lt;em&gt;unified&lt;/em&gt; approach which &lt;em&gt;generalizes&lt;/em&gt; to small samples giving a more &lt;em&gt;correct&lt;/em&gt; analysis for our data.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="math"></category></entry><entry><title>Stats 101 Examples with MCMC Part 2</title><link href="https://bblais.github.io/posts/2021/Apr/28/stats-101-examples-with-mcmc-part-2/" rel="alternate"></link><published>2021-04-28T00:00:00-04:00</published><updated>2021-04-28T00:00:00-04:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2021-04-28:/posts/2021/Apr/28/stats-101-examples-with-mcmc-part-2/</id><summary type="html">&lt;p&gt;This is another in the series of "&lt;em&gt;Statistics 101&lt;/em&gt;" examples solved with MCMC.  The previous in the series &lt;a href="https://bblais.github.io/posts/2021/Apr/15/stats-101-examples-with-mcmc/"&gt;can be found here&lt;/a&gt;.  In all of these posts I'm going to …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This is another in the series of "&lt;em&gt;Statistics 101&lt;/em&gt;" examples solved with MCMC.  The previous in the series &lt;a href="https://bblais.github.io/posts/2021/Apr/15/stats-101-examples-with-mcmc/"&gt;can be found here&lt;/a&gt;.  In all of these posts I'm going to use a python library I make for my science-programming class, &lt;a href="https://github.com/bblais/sci378"&gt;stored on github&lt;/a&gt;, and the &lt;a href="https://emcee.readthedocs.io/en/stable/"&gt;emcee&lt;/a&gt; library.  Install like:&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;pip install &amp;quot;git+git://github.com/bblais/sci378&amp;quot; --upgrade&lt;/span&gt;
 &lt;span class="err"&gt;pip install emcee&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -124,10 +271,13 @@ known &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt;&lt;/p&gt;
     mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
     mathjaxscript.type = 'text/javascript';
     mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
-    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
         "MathJax.Hub.Config({" +
         "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
         "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
         "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
         "    displayAlign: '"+ align +"'," +
@@ -141,6 +291,8 @@ known &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt;&lt;/p&gt;
         "        preview: 'TeX'," +
         "    }, " +
         "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
         "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
         "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
         "    }, " +
@@ -161,6 +313,8 @@ known &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt;&lt;/p&gt;
                 "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
             "});" +
         "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;</content><category term="math"></category></entry><entry><title>Stats 101 Examples with MCMC</title><link href="https://bblais.github.io/posts/2021/Apr/15/stats-101-examples-with-mcmc/" rel="alternate"></link><published>2021-04-15T00:00:00-04:00</published><updated>2021-04-15T00:00:00-04:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2021-04-15:/posts/2021/Apr/15/stats-101-examples-with-mcmc/</id><summary type="html">&lt;p&gt;I'd like to walk through some of the "&lt;em&gt;Statistics 101&lt;/em&gt;" examples (e.g. estimating &lt;span class="math"&gt;\(\mu\)&lt;/span&gt; with known &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt;, estimating a proportion, etc...) for which we have simple analytical solutions, but …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I'd like to walk through some of the "&lt;em&gt;Statistics 101&lt;/em&gt;" examples (e.g. estimating &lt;span class="math"&gt;\(\mu\)&lt;/span&gt; with known &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt;, estimating a proportion, etc...) for which we have simple analytical solutions, but explore them with &lt;a href="https://www.youtube.com/watch?v=vTUwEu53uzs"&gt;MCMC&lt;/a&gt;.  The reason I want to do this is to introduce MCMC on simple cases, which are not much different than more complicated cases, but are better understood.  The second reason is to explore some cases which are nearly as easy, but are never covered in introductory textbooks.  In all of these I'm going to use a python library I make for my science-programming class, &lt;a href="https://github.com/bblais/sci378"&gt;stored on github&lt;/a&gt;, and the &lt;a href="https://emcee.readthedocs.io/en/stable/"&gt;emcee&lt;/a&gt; library.  Install like:&lt;/p&gt;
@@ -250,10 +404,13 @@ known &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt;&lt;/p&gt;
     mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
     mathjaxscript.type = 'text/javascript';
     mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
-    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
         "MathJax.Hub.Config({" +
         "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
         "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
         "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
         "    displayAlign: '"+ align +"'," +
@@ -267,6 +424,8 @@ known &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt;&lt;/p&gt;
         "        preview: 'TeX'," +
         "    }, " +
         "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
         "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
         "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
         "    }, " +
@@ -287,6 +446,8 @@ known &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt;&lt;/p&gt;
                 "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
             "});" +
         "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;</content><category term="math"></category></entry><entry><title>Probability - It's Not Just about the Math</title><link href="https://bblais.github.io/posts/2019/Jun/16/probability-its-not-just-about-the-math/" rel="alternate"></link><published>2019-06-16T00:00:00-04:00</published><updated>2019-06-16T00:00:00-04:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2019-06-16:/posts/2019/Jun/16/probability-its-not-just-about-the-math/</id><summary type="html">&lt;p&gt;When I first learned probability, I thought it was all about math and counting.  Then &lt;a href="https://bayes.wustl.edu/etj/etj.html"&gt;E. T. Jaynes&lt;/a&gt; showed me that probability forms the foundation of rationality itself.  Remarkably very …&lt;/p&gt;</summary><content type="html">&lt;p&gt;When I first learned probability, I thought it was all about math and counting.  Then &lt;a href="https://bayes.wustl.edu/etj/etj.html"&gt;E. T. Jaynes&lt;/a&gt; showed me that probability forms the foundation of rationality itself.  Remarkably very few axioms are needed to constrain the mathematical forms necessary for rational thought and the outcome turns out to be &lt;a href="https://en.wikipedia.org/wiki/Pierre-Simon_Laplace#Analytic_theory_of_probabilities"&gt;Laplace's original formulation&lt;/a&gt;.  What follows are the axioms so that you can appreciate them as much as I.  The paper &lt;em&gt;&lt;a href="https://bayes.wustl.edu/gregory/articles.pdf"&gt;From Laplace to Supernova SN1987A: Bayesian Inference In Astrophysics&lt;/a&gt;&lt;/em&gt; by Tom Loredo is an excellent and complete guide to this, including quantitative examples.  &lt;/p&gt;
@@ -372,10 +533,13 @@ $$&lt;/div&gt;
     mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
     mathjaxscript.type = 'text/javascript';
     mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
-    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
         "MathJax.Hub.Config({" +
         "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
         "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
         "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
         "    displayAlign: '"+ align +"'," +
@@ -389,6 +553,8 @@ $$&lt;/div&gt;
         "        preview: 'TeX'," +
         "    }, " +
         "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
         "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
         "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
         "    }, " +
@@ -409,6 +575,8 @@ $$&lt;/div&gt;
                 "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
             "});" +
         "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;</content><category term="math"></category></entry><entry><title>If at first you don't succeed (for 50 times) you might reconsider</title><link href="https://bblais.github.io/posts/2019/Jan/29/if-at-first-you-dont-succeed-for-50-times-you-might-reconsider/" rel="alternate"></link><published>2019-01-29T00:00:00-05:00</published><updated>2019-01-29T00:00:00-05:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2019-01-29:/posts/2019/Jan/29/if-at-first-you-dont-succeed-for-50-times-you-might-reconsider/</id><summary type="html">&lt;p&gt;Here's a &lt;a href="https://www.quora.com/If-there-is-a-25-chance-of-something-what-is-the-probability-that-you-fail-to-succeed-50-times-in-a-row-before-you-finally-do-succeed/answer/Brian-Blais"&gt;straightforward problem&lt;/a&gt; from Quora - probably found in a textbook - but I try to find a new direction to make it more interesting.&lt;/p&gt;
@@ -452,10 +620,13 @@ $$&lt;/div&gt;
     mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
     mathjaxscript.type = 'text/javascript';
     mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
-    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
         "MathJax.Hub.Config({" +
         "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
         "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
         "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
         "    displayAlign: '"+ align +"'," +
@@ -469,6 +640,8 @@ $$&lt;/div&gt;
         "        preview: 'TeX'," +
         "    }, " +
         "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
         "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
         "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
         "    }, " +
@@ -489,6 +662,8 @@ $$&lt;/div&gt;
                 "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
             "});" +
         "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;</content><category term="math"></category></entry><entry><title>Cool theorem - angle bisector</title><link href="https://bblais.github.io/posts/2018/Jan/29/cool-theorem-angle-bisector/" rel="alternate"></link><published>2018-01-29T00:00:00-05:00</published><updated>2018-01-29T00:00:00-05:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2018-01-29:/posts/2018/Jan/29/cool-theorem-angle-bisector/</id><summary type="html">&lt;p&gt;I was helping my daughter with geometry the other day and &lt;a href="https://en.wikipedia.org/wiki/Angle_bisector_theorem"&gt;this cute theorem popped up in the examples&lt;/a&gt;.  For some reason I don't recall ever seeing it before, and …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I was helping my daughter with geometry the other day and &lt;a href="https://en.wikipedia.org/wiki/Angle_bisector_theorem"&gt;this cute theorem popped up in the examples&lt;/a&gt;.  For some reason I don't recall ever seeing it before, and it struck me as somehow particularly elegant.  I have used (many times) the specific - &lt;a href="http://ceemrr.com/Geometry1/RightTriangles/RightTriangles4.html"&gt;more limited version with isosceles triangles&lt;/a&gt; - but to see the generalization was just neat.&lt;/p&gt;

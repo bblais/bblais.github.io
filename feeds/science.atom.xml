@@ -77,10 +77,13 @@ t&amp;amp;=&amp;amp; 45000 {\rm s} = 12 {\rm hr}
     mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
     mathjaxscript.type = 'text/javascript';
     mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
-    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
         "MathJax.Hub.Config({" +
         "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
         "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
         "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
         "    displayAlign: '"+ align +"'," +
@@ -94,6 +97,8 @@ t&amp;amp;=&amp;amp; 45000 {\rm s} = 12 {\rm hr}
         "        preview: 'TeX'," +
         "    }, " +
         "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
         "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
         "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
         "    }, " +
@@ -114,6 +119,8 @@ t&amp;amp;=&amp;amp; 45000 {\rm s} = 12 {\rm hr}
                 "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
             "});" +
         "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;</content><category term="science"></category><category term="science"></category></entry><entry><title>A Simple Physics Problem Gets Messy</title><link href="https://bblais.github.io/posts/2020/Aug/03/a-simple-physics-problem-gets-messy/" rel="alternate"></link><published>2020-08-03T00:00:00-04:00</published><updated>2020-08-03T00:00:00-04:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2020-08-03:/posts/2020/Aug/03/a-simple-physics-problem-gets-messy/</id><summary type="html">&lt;p&gt;A physics problem from a practice AP test came to my attention, when my daughter was in AP physics this past spring.  I went over her solutions when she did …&lt;/p&gt;</summary><content type="html">&lt;p&gt;A physics problem from a practice AP test came to my attention, when my daughter was in AP physics this past spring.  I went over her solutions when she did the practice questions so that she would have another resource to explain the concepts involved.  Due the new format this year, adjusting to the COVID-19 restrictions, there were &lt;em&gt;only four such practice problems&lt;/em&gt; available to work from.  Although the four questions were generally pretty good, I thought, &lt;a href="https://youtu.be/L1oIsHMB1RQ?t=1751"&gt;the official solution&lt;/a&gt; to a quarter of one of the questions was simply incorrect. &lt;/p&gt;
@@ -540,10 +547,13 @@ $$&lt;/div&gt;
     mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
     mathjaxscript.type = 'text/javascript';
     mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
-    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
         "MathJax.Hub.Config({" +
         "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
         "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
         "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
         "    displayAlign: '"+ align +"'," +
@@ -557,6 +567,8 @@ $$&lt;/div&gt;
         "        preview: 'TeX'," +
         "    }, " +
         "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
         "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
         "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
         "    }, " +
@@ -577,6 +589,8 @@ $$&lt;/div&gt;
                 "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
             "});" +
         "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;</content><category term="science"></category><category term="science"></category></entry><entry><title>10 dogmas of science dismantled</title><link href="https://bblais.github.io/posts/2018/Jun/18/10-dogmas-of-science-dismantled/" rel="alternate"></link><published>2018-06-18T00:00:00-04:00</published><updated>2018-06-18T00:00:00-04:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2018-06-18:/posts/2018/Jun/18/10-dogmas-of-science-dismantled/</id><summary type="html">&lt;p&gt;In  his &lt;a href="https://www.youtube.com/watch?v=1TerTgDEgUE&amp;amp;t=583s"&gt;talk about the limitations of science&lt;/a&gt;, Rupert Sheldrake lists the "10 dogmas of modern science" (also listed here in text  &lt;a href="http://wariscrime.com/new/the-ten-dogmas-of-modern-science/"&gt;&lt;a href="http://wariscrime.com/new/the-ten-dogmas-of-modern-science/"&gt;http://wariscrime.com/new/the-ten-dogmas-of-modern-science/&lt;/a&gt;&lt;/a&gt;).  They are:&lt;/p&gt;
@@ -630,10 +644,13 @@ $$&lt;/div&gt;
     mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
     mathjaxscript.type = 'text/javascript';
     mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
-    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
         "MathJax.Hub.Config({" +
         "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
         "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
         "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
         "    displayAlign: '"+ align +"'," +
@@ -647,6 +664,8 @@ $$&lt;/div&gt;
         "        preview: 'TeX'," +
         "    }, " +
         "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
         "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
         "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
         "    }, " +
@@ -667,6 +686,8 @@ $$&lt;/div&gt;
                 "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
             "});" +
         "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;</content><category term="science"></category></entry><entry><title>Sea Slug Brains</title><link href="https://bblais.github.io/posts/2018/Feb/07/sea-slug-brains/" rel="alternate"></link><published>2018-02-07T00:00:00-05:00</published><updated>2018-02-07T00:00:00-05:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2018-02-07:/posts/2018/Feb/07/sea-slug-brains/</id><summary type="html">&lt;p&gt;I learned a somewhat disturbing fact about sea squirts recently - once they find their permanent home &lt;a href="https://www.psychologytoday.com/blog/choke/201207/how-humans-learn-lessons-the-sea-squirt"&gt;they eat their own brain&lt;/a&gt; because they don’t need it anymore - their brain …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I learned a somewhat disturbing fact about sea squirts recently - once they find their permanent home &lt;a href="https://www.psychologytoday.com/blog/choke/201207/how-humans-learn-lessons-the-sea-squirt"&gt;they eat their own brain&lt;/a&gt; because they don’t need it anymore - their brain becomes a resource-heavy extraneous organ.  Yikes!  The article continues to explore the idea of how “Our body and mind are tightly connected. The body is an important part of the learning process.”, a concept which is not stressed enough.  &lt;/p&gt;</content><category term="science"></category></entry><entry><title>I'm not a Denier, I'm a Skeptic</title><link href="https://bblais.github.io/posts/2018/Jan/11/im-not-a-denier-im-a-skeptic/" rel="alternate"></link><published>2018-01-11T00:00:00-05:00</published><updated>2018-01-11T00:00:00-05:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2018-01-11:/posts/2018/Jan/11/im-not-a-denier-im-a-skeptic/</id><summary type="html">&lt;p&gt;In this tumultuous time, it is important to not demonize people who disagree with you.  It is also important to recognize that people can have nuanced views on complex subjects …&lt;/p&gt;</summary><content type="html">&lt;p&gt;In this tumultuous time, it is important to not demonize people who disagree with you.  It is also important to recognize that people can have nuanced views on complex subjects. Calling someone a denier when they have such views is not constructive.  For example, from &lt;a href="http://judithcurry.com/2015/04/28/making-nonsense-of-climate-denial/"&gt;"Making (non)sense of climate denial"&lt;/a&gt; we have:&lt;/p&gt;
