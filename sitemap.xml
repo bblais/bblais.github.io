@@ -5,70 +5,77 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://bblais.github.io/</loc>
-<lastmod>2021-05-13T10:07:33-00:00</lastmod>
+<lastmod>2021-05-17T08:44:38-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/about.html</loc>
-<lastmod>2021-05-13T10:07:33-00:00</lastmod>
+<lastmod>2021-05-17T08:44:38-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/archives.html</loc>
-<lastmod>2021-05-13T10:07:33-00:00</lastmod>
+<lastmod>2021-05-17T08:44:38-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/contact.html</loc>
-<lastmod>2021-05-13T10:07:33-00:00</lastmod>
+<lastmod>2021-05-17T08:44:38-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/thanks.html</loc>
-<lastmod>2021-05-13T10:07:33-00:00</lastmod>
+<lastmod>2021-05-17T08:44:38-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/search.html</loc>
-<lastmod>2021-05-13T10:07:33-00:00</lastmod>
+<lastmod>2021-05-17T08:44:38-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/tags.html</loc>
-<lastmod>2021-05-13T10:07:33-00:00</lastmod>
+<lastmod>2021-05-17T08:44:38-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/pages/presentations.html</loc>
-<lastmod>2021-05-13T10:07:33-00:00</lastmod>
+<lastmod>2021-05-17T08:44:38-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/pages/projects.html</loc>
-<lastmod>2021-05-13T10:07:33-00:00</lastmod>
+<lastmod>2021-05-17T08:44:38-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/pages/publications.html</loc>
-<lastmod>2021-05-13T10:07:33-00:00</lastmod>
+<lastmod>2021-05-17T08:44:38-00:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://bblais.github.io/posts/2021/May/17/converting-folder-of-mp3-to-audiobook-for-apple-books/</loc>
+<lastmod>2021-05-17T00:00:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -2364,7 +2371,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://bblais.github.io/category/programming.html</loc>
-<lastmod>2021-03-22T00:00:00-04:56</lastmod>
+<lastmod>2021-05-17T00:00:00-04:56</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

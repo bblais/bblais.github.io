@@ -95,7 +95,7 @@
                                     <li><a href="https://bblais.github.io/category/media.html">media <span>(9)</span></a></li>
                                     <li><a href="https://bblais.github.io/category/presentations.html">presentations <span>(3)</span></a></li>
                                     <li><a href="https://bblais.github.io/category/productivity.html">productivity <span>(6)</span></a></li>
-                                    <li><a href="https://bblais.github.io/category/programming.html">programming <span>(3)</span></a></li>
+                                    <li><a href="https://bblais.github.io/category/programming.html">programming <span>(4)</span></a></li>
                                     <li><a href="https://bblais.github.io/category/projects.html">projects <span>(4)</span></a></li>
                                     <li><a href="https://bblais.github.io/category/religion.html">religion <span>(10)</span></a></li>
                                     <li><a href="https://bblais.github.io/category/science.html">science <span>(7)</span></a></li>
@@ -167,7 +167,7 @@
 -G \frac{m_1 m_2}{r_{\rm start}}  + 0 &amp;=&amp; -G \frac{m_1 m_2}{r_{\rm end}} + \frac{1}{2} m_1 v^2 + \frac{1}{2} m_2 v^2  \\
  \frac{1}{2} (100 {\rm kg}+100 {\rm kg}) v^2 &amp;=&amp; -6.7\times 10^{-11} \left[\frac{{\rm J}{\rm m}}{{\rm kg}^2}\right]\frac{100 {\rm kg} \cdot 100 {\rm kg}}{3 {\rm m}} - \left( -6.7\times 10^{-11} \left[\frac{{\rm J}{\rm m}}{{\rm kg}^2}\right]\frac{100 {\rm kg} \cdot 100 {\rm kg}}{0.5 {\rm m}}\right)
 \end{eqnarray}</div>
-<div class="codehilite"><pre><span></span><code><span class="n">In</span> <span class="p">[</span><span class="mi">7</span><span class="p">]:</span> <span class="n">G</span><span class="o">=</span><span class="mf">6.7e-11</span>
+<div class="highlight"><pre><span></span><code><span class="n">In</span> <span class="p">[</span><span class="mi">7</span><span class="p">]:</span> <span class="n">G</span><span class="o">=</span><span class="mf">6.7e-11</span>
 
 <span class="n">In</span> <span class="p">[</span><span class="mi">8</span><span class="p">]:</span> <span class="n">m1</span><span class="o">=</span><span class="mi">100</span>
 
@@ -185,7 +185,7 @@
 \frac{1}{2} (100 {\rm kg}+100 {\rm kg}) v^2 &amp;=&amp; 1.12 \times 10^{-6} {\rm J} \\
 v&amp;=&amp;1.1\times 10^{-4} {\rm m}/{\rm s} 
 \end{eqnarray}</div>
-<div class="codehilite"><pre><span></span><code><span class="n">In</span> <span class="p">[</span><span class="mi">13</span><span class="p">]:</span> <span class="n">v</span><span class="o">=</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="mf">1.12e-6</span><span class="o">/</span><span class="p">(</span><span class="n">m1</span><span class="o">+</span><span class="n">m2</span><span class="p">))</span>
+<div class="highlight"><pre><span></span><code><span class="n">In</span> <span class="p">[</span><span class="mi">13</span><span class="p">]:</span> <span class="n">v</span><span class="o">=</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="mf">1.12e-6</span><span class="o">/</span><span class="p">(</span><span class="n">m1</span><span class="o">+</span><span class="n">m2</span><span class="p">))</span>
 
 <span class="n">In</span> <span class="p">[</span><span class="mi">14</span><span class="p">]:</span> <span class="n">v</span>
 <span class="n">Out</span><span class="p">[</span><span class="mi">14</span><span class="p">]:</span> <span class="mf">0.00010583005244258362</span>
@@ -198,7 +198,7 @@ t&amp;=&amp; 45000 {\rm s} = 12 {\rm hr}
 \end{eqnarray}</div>
 <p>which is much shorter time than I was expecting!  </p>
 <p>Not being satisfied, I implemented it in [pyndamics3]</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">pyndamics3</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pyndamics3</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="n">sim</span><span class="o">=</span><span class="n">Simulation</span><span class="p">()</span>
 <span class="n">sim</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;x1&#39; = v1&quot;</span><span class="p">,</span><span class="o">-</span><span class="mf">1.5</span><span class="p">,</span><span class="n">plot</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">sim</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;x2&#39; = v2&quot;</span><span class="p">,</span><span class="mf">1.5</span><span class="p">,</span><span class="n">plot</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>

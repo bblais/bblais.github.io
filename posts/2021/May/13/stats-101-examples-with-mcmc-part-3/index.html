@@ -95,7 +95,7 @@
                                     <li><a href="https://bblais.github.io/category/media.html">media <span>(9)</span></a></li>
                                     <li><a href="https://bblais.github.io/category/presentations.html">presentations <span>(3)</span></a></li>
                                     <li><a href="https://bblais.github.io/category/productivity.html">productivity <span>(6)</span></a></li>
-                                    <li><a href="https://bblais.github.io/category/programming.html">programming <span>(3)</span></a></li>
+                                    <li><a href="https://bblais.github.io/category/programming.html">programming <span>(4)</span></a></li>
                                     <li><a href="https://bblais.github.io/category/projects.html">projects <span>(4)</span></a></li>
                                     <li><a href="https://bblais.github.io/category/religion.html">religion <span>(10)</span></a></li>
                                     <li><a href="https://bblais.github.io/category/science.html">science <span>(7)</span></a></li>
@@ -158,7 +158,7 @@
 <li><a href="https://bblais.github.io/posts/2021/Apr/28/stats-101-examples-with-mcmc-part-2/">Estimating mean with unknown 𝜎</a></li>
 </ul>
 <p>In all of these posts I'm going to use a python library I make for my science-programming class, <a href="https://github.com/bblais/sci378">stored on github</a>, and the <a href="https://emcee.readthedocs.io/en/stable/">emcee</a> library.  Install like:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">pip install &quot;git+git://github.com/bblais/sci378&quot; --upgrade</span>
+<div class="highlight"><pre><span></span><code><span class="err">pip install &quot;git+git://github.com/bblais/sci378&quot; --upgrade</span>
 <span class="err">pip install emcee</span>
 </code></pre></div>
 
@@ -178,7 +178,7 @@ P(\theta) &amp;\sim&amp; \text{Uniform}(0,1)
 \end{eqnarray}
 $$</div>
 <p>However there are cases where we have more information.  Even flipping a biased coin, we know that both outcomes (heads and tails) are at least <em>possible</em> to happen.  Given this, the probabilities <span class="math">\(P(\theta=0)\)</span> and <span class="math">\(P(\theta=1)\)</span> should be zero and a different prior is justified (sidenote -- the maximum entropy solution to this is a Beta(2,2) distribution or, in other words, assume one heads and one tails have been observed before the data).  I'll continue with this example with uniform priors, because in <a href="https://www.jstor.org/stable/2683855?seq=1#metadata_info_tab_contents">Lindley, 1976. "Inference for a Bernoulli Process (A Bayesian View)"</a> he is flipping a particular thumbtack for which it might not be possible for it to, say, flip "down".  His data turns out to be 3 down, 9 up, so we know after the data it was possible for both outcomes but not <em>before</em> the data.</p>
-<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">lnlike</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="n">θ</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">lnlike</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="n">θ</span><span class="p">):</span>
     <span class="n">h</span><span class="p">,</span><span class="n">N</span><span class="o">=</span><span class="n">data</span>
     <span class="k">return</span> <span class="n">logbernoullipdf</span><span class="p">(</span><span class="n">θ</span><span class="p">,</span><span class="n">h</span><span class="p">,</span><span class="n">N</span><span class="p">)</span>
 
@@ -190,11 +190,11 @@ $$</div>
 
 <h2 id="running-mcmc-looking-at-the-results">Running MCMC, looking at the results</h2>
 <p>Now we run MCMC, plot the chains (so we can see it has converged) and look at distributions,</p>
-<div class="codehilite"><pre><span></span><code><span class="n">model</span><span class="o">.</span><span class="n">run_mcmc</span><span class="p">(</span><span class="mi">800</span><span class="p">,</span><span class="n">repeat</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">model</span><span class="o">.</span><span class="n">run_mcmc</span><span class="p">(</span><span class="mi">800</span><span class="p">,</span><span class="n">repeat</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
 <span class="n">model</span><span class="o">.</span><span class="n">plot_chains</span><span class="p">()</span>
 </code></pre></div>
 
-<div class="codehilite"><pre><span></span><code><span class="err">Sampling Prior...</span>
+<div class="highlight"><pre><span></span><code><span class="err">Sampling Prior...</span>
 <span class="err">Done.</span>
 <span class="err">0.27 s</span>
 <span class="err">Running MCMC 1/3...</span>
@@ -209,15 +209,15 @@ $$</div>
 </code></pre></div>
 
 <p><img alt="" src="https://bblais.github.io/images/proportion chains.png"></p>
-<div class="codehilite"><pre><span></span><code><span class="n">model</span><span class="o">.</span><span class="n">plot_distributions</span><span class="p">()</span>
+<div class="highlight"><pre><span></span><code><span class="n">model</span><span class="o">.</span><span class="n">plot_distributions</span><span class="p">()</span>
 </code></pre></div>
 
 <p><img alt="" src="https://bblais.github.io/images/proportion distribution.png"></p>
 <p>Is this evidence for a biased coin at, say, 95% level?</p>
-<div class="codehilite"><pre><span></span><code><span class="n">model</span><span class="o">.</span><span class="n">P</span><span class="p">(</span><span class="s2">&quot;θ &lt;0.5&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">model</span><span class="o">.</span><span class="n">P</span><span class="p">(</span><span class="s2">&quot;θ &lt;0.5&quot;</span><span class="p">)</span>
 </code></pre></div>
 
-<div class="codehilite"><pre><span></span><code><span class="err">0.95485</span>
+<div class="highlight"><pre><span></span><code><span class="err">0.95485</span>
 </code></pre></div>
 
 <p>yes, just as <a href="https://www.jstor.org/stable/2683855?seq=1#metadata_info_tab_contents">Lindley, 1976 presents.</a> </p>
