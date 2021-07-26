@@ -10,8 +10,8 @@
 &lt;li&gt;&lt;a href="https://bblais.github.io/posts/2021/Apr/28/stats-101-examples-with-mcmc-part-2/"&gt;Estimating mean with unknown 𝜎&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;In all of these posts I'm going to use a python library I make for my science-programming class, &lt;a href="https://github.com/bblais/sci378"&gt;stored on github&lt;/a&gt;, and the &lt;a href="https://emcee.readthedocs.io/en/stable/"&gt;emcee&lt;/a&gt; library.  Install like:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;pip install &amp;quot;git+git://github.com/bblais/sci378&amp;quot; --upgrade&lt;/span&gt;
-&lt;span class="err"&gt;pip install emcee&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pip install &amp;quot;git+git://github.com/bblais/sci378&amp;quot; --upgrade
+pip install emcee
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;In this example the data take the form of a number of "successes", &lt;span class="math"&gt;\(h\)&lt;/span&gt;, in a total number of "trials", &lt;span class="math"&gt;\(N\)&lt;/span&gt;, and we want to estimate the proportion, &lt;span class="math"&gt;\(\theta\)&lt;/span&gt;.  This could be the number of heads observed in &lt;span class="math"&gt;\(N\)&lt;/span&gt; coin flips and we want to estimate the bias in the coin -- what is the probability that it flips heads.  In fact, the data I will use below is from &lt;a href="https://www.jstor.org/stable/2683855?seq=1#metadata_info_tab_contents"&gt;Lindley, 1976. "Inference for a Bernoulli Process (A Bayesian View)"&lt;/a&gt;, where he flips a thumbtack which might be able to produce two states pointing "up" or pointing "down", and gets the data UUUDUDUUUUUD (3 D, 9 U).&lt;/p&gt;
@@ -46,18 +46,18 @@ $$&lt;/div&gt;
 &lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot_chains&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;Sampling Prior...&lt;/span&gt;
-&lt;span class="err"&gt;Done.&lt;/span&gt;
-&lt;span class="err"&gt;0.27 s&lt;/span&gt;
-&lt;span class="err"&gt;Running MCMC 1/3...&lt;/span&gt;
-&lt;span class="err"&gt;Done.&lt;/span&gt;
-&lt;span class="err"&gt;2.63 s&lt;/span&gt;
-&lt;span class="err"&gt;Running MCMC 2/3...&lt;/span&gt;
-&lt;span class="err"&gt;Done.&lt;/span&gt;
-&lt;span class="err"&gt;2.79 s&lt;/span&gt;
-&lt;span class="err"&gt;Running MCMC 3/3...&lt;/span&gt;
-&lt;span class="err"&gt;Done.&lt;/span&gt;
-&lt;span class="err"&gt;2.47 s&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;Sampling Prior...
+Done.
+0.27 s
+Running MCMC 1/3...
+Done.
+2.63 s
+Running MCMC 2/3...
+Done.
+2.79 s
+Running MCMC 3/3...
+Done.
+2.47 s
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;img alt="" src="https://bblais.github.io/images/proportion chains.png"&gt;&lt;/p&gt;
@@ -69,7 +69,7 @@ $$&lt;/div&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;P&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;θ &amp;lt;0.5&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;0.95485&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="mf"&gt;0.95485&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;yes, just as &lt;a href="https://www.jstor.org/stable/2683855?seq=1#metadata_info_tab_contents"&gt;Lindley, 1976 presents.&lt;/a&gt; &lt;/p&gt;
@@ -147,8 +147,8 @@ which matches the equations in the standard textbooks.  Comparing to our case, w
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;</content><category term="math"></category></entry><entry><title>Stats 101 Examples with MCMC Part 2</title><link href="https://bblais.github.io/posts/2021/Apr/28/stats-101-examples-with-mcmc-part-2/" rel="alternate"></link><published>2021-04-28T00:00:00-04:00</published><updated>2021-04-28T00:00:00-04:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2021-04-28:/posts/2021/Apr/28/stats-101-examples-with-mcmc-part-2/</id><summary type="html">&lt;p&gt;This is another in the series of "&lt;em&gt;Statistics 101&lt;/em&gt;" examples solved with MCMC.  The previous in the series &lt;a href="https://bblais.github.io/posts/2021/Apr/15/stats-101-examples-with-mcmc/"&gt;can be found here&lt;/a&gt;.  In all of these posts I'm going to …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This is another in the series of "&lt;em&gt;Statistics 101&lt;/em&gt;" examples solved with MCMC.  The previous in the series &lt;a href="https://bblais.github.io/posts/2021/Apr/15/stats-101-examples-with-mcmc/"&gt;can be found here&lt;/a&gt;.  In all of these posts I'm going to use a python library I make for my science-programming class, &lt;a href="https://github.com/bblais/sci378"&gt;stored on github&lt;/a&gt;, and the &lt;a href="https://emcee.readthedocs.io/en/stable/"&gt;emcee&lt;/a&gt; library.  Install like:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;pip install &amp;quot;git+git://github.com/bblais/sci378&amp;quot; --upgrade&lt;/span&gt;
-&lt;span class="err"&gt;pip install emcee&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pip install &amp;quot;git+git://github.com/bblais/sci378&amp;quot; --upgrade
+pip install emcee
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;In this example, like &lt;a href="https://bblais.github.io/posts/2021/Apr/15/stats-101-examples-with-mcmc/"&gt;the last one&lt;/a&gt;, there is some true value, we call &lt;span class="math"&gt;\(\mu\)&lt;/span&gt;.  The &lt;span class="math"&gt;\(N\)&lt;/span&gt; data points we have, &lt;span class="math"&gt;\(\{x_i\}\)&lt;/span&gt;, consist of that true value with added independent, normally-distributed noise of &lt;em&gt;unknown&lt;/em&gt; scale, &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt;.  &lt;/p&gt;
@@ -192,18 +192,18 @@ known &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt;&lt;/p&gt;
 &lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot_chains&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;Sampling Prior...&lt;/span&gt;
-&lt;span class="err"&gt;Done.&lt;/span&gt;
-&lt;span class="err"&gt;0.27 s&lt;/span&gt;
-&lt;span class="err"&gt;Running MCMC 1/3...&lt;/span&gt;
-&lt;span class="err"&gt;Done.&lt;/span&gt;
-&lt;span class="err"&gt;2.63 s&lt;/span&gt;
-&lt;span class="err"&gt;Running MCMC 2/3...&lt;/span&gt;
-&lt;span class="err"&gt;Done.&lt;/span&gt;
-&lt;span class="err"&gt;2.79 s&lt;/span&gt;
-&lt;span class="err"&gt;Running MCMC 3/3...&lt;/span&gt;
-&lt;span class="err"&gt;Done.&lt;/span&gt;
-&lt;span class="err"&gt;2.47 s&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;Sampling Prior...
+Done.
+0.27 s
+Running MCMC 1/3...
+Done.
+2.63 s
+Running MCMC 2/3...
+Done.
+2.79 s
+Running MCMC 3/3...
+Done.
+2.47 s
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;img alt="" src="https://bblais.github.io/images/μσ chains.png"&gt;&lt;/p&gt;
@@ -246,14 +246,14 @@ known &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;P&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;μ&amp;gt;15&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;0.037066666666666664&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="mf"&gt;0.037066666666666664&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;and for &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt;, the Bayesian equivalent to Chi-squared test, &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;P&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;σ&amp;lt;1&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;0.01985&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="mf"&gt;0.01985&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
@@ -318,8 +318,8 @@ known &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt;&lt;/p&gt;
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;</content><category term="math"></category></entry><entry><title>Stats 101 Examples with MCMC</title><link href="https://bblais.github.io/posts/2021/Apr/15/stats-101-examples-with-mcmc/" rel="alternate"></link><published>2021-04-15T00:00:00-04:00</published><updated>2021-04-15T00:00:00-04:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2021-04-15:/posts/2021/Apr/15/stats-101-examples-with-mcmc/</id><summary type="html">&lt;p&gt;I'd like to walk through some of the "&lt;em&gt;Statistics 101&lt;/em&gt;" examples (e.g. estimating &lt;span class="math"&gt;\(\mu\)&lt;/span&gt; with known &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt;, estimating a proportion, etc...) for which we have simple analytical solutions, but …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I'd like to walk through some of the "&lt;em&gt;Statistics 101&lt;/em&gt;" examples (e.g. estimating &lt;span class="math"&gt;\(\mu\)&lt;/span&gt; with known &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt;, estimating a proportion, etc...) for which we have simple analytical solutions, but explore them with &lt;a href="https://www.youtube.com/watch?v=vTUwEu53uzs"&gt;MCMC&lt;/a&gt;.  The reason I want to do this is to introduce MCMC on simple cases, which are not much different than more complicated cases, but are better understood.  The second reason is to explore some cases which are nearly as easy, but are never covered in introductory textbooks.  In all of these I'm going to use a python library I make for my science-programming class, &lt;a href="https://github.com/bblais/sci378"&gt;stored on github&lt;/a&gt;, and the &lt;a href="https://emcee.readthedocs.io/en/stable/"&gt;emcee&lt;/a&gt; library.  Install like:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;pip install &amp;quot;git+git://github.com/bblais/sci378&amp;quot; --upgrade&lt;/span&gt;
-&lt;span class="err"&gt;pip install emcee&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pip install &amp;quot;git+git://github.com/bblais/sci378&amp;quot; --upgrade
+pip install emcee
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;We'll start with the easiest example:  there is some true value, we call &lt;span class="math"&gt;\(\mu\)&lt;/span&gt;.  The &lt;span class="math"&gt;\(N\)&lt;/span&gt; data points we have, &lt;span class="math"&gt;\(\{x_i\}\)&lt;/span&gt;, consist of that true value with added independent, normally-distributed noise of &lt;em&gt;known&lt;/em&gt; scale, &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt;.  &lt;/p&gt;
@@ -351,18 +351,18 @@ known &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt;&lt;/p&gt;
 &lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot_chains&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;Sampling Prior...&lt;/span&gt;
-&lt;span class="err"&gt;Done.&lt;/span&gt;
-&lt;span class="err"&gt;0.21 s&lt;/span&gt;
-&lt;span class="err"&gt;Running MCMC 1/3...&lt;/span&gt;
-&lt;span class="err"&gt;Done.&lt;/span&gt;
-&lt;span class="err"&gt;2.23 s&lt;/span&gt;
-&lt;span class="err"&gt;Running MCMC 2/3...&lt;/span&gt;
-&lt;span class="err"&gt;Done.&lt;/span&gt;
-&lt;span class="err"&gt;2.24 s&lt;/span&gt;
-&lt;span class="err"&gt;Running MCMC 3/3...&lt;/span&gt;
-&lt;span class="err"&gt;Done.&lt;/span&gt;
-&lt;span class="err"&gt;2.51 s&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;Sampling Prior...
+Done.
+0.21 s
+Running MCMC 1/3...
+Done.
+2.23 s
+Running MCMC 2/3...
+Done.
+2.24 s
+Running MCMC 3/3...
+Done.
+2.51 s
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;img alt="" src="https://bblais.github.io/images/μ chains.png"&gt;&lt;/p&gt;
@@ -385,7 +385,7 @@ known &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;P&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;μ&amp;gt;15&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;0.037066666666666664&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="mf"&gt;0.037066666666666664&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;This simple example can be a template for more complex problems, which I will explore in later posts of this series.  What do you think?&lt;/p&gt;
