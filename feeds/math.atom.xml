@@ -1,5 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>bblais on the web - math</title><link href="https://bblais.github.io/" rel="alternate"></link><link href="https://bblais.github.io/feeds/math.atom.xml" rel="self"></link><id>https://bblais.github.io/</id><updated>2021-05-13T00:00:00-04:00</updated><entry><title>Stats 101 Examples with MCMC Part 3</title><link href="https://bblais.github.io/posts/2021/May/13/stats-101-examples-with-mcmc-part-3/" rel="alternate"></link><published>2021-05-13T00:00:00-04:00</published><updated>2021-05-13T00:00:00-04:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2021-05-13:/posts/2021/May/13/stats-101-examples-with-mcmc-part-3/</id><summary type="html">&lt;p&gt;This is another in the series of "&lt;em&gt;Statistics 101&lt;/em&gt;" examples solved with MCMC.  Others in the series:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>bblais on the web - math</title><link href="https://bblais.github.io/" rel="alternate"></link><link href="https://bblais.github.io/feeds/math.atom.xml" rel="self"></link><id>https://bblais.github.io/</id><updated>2021-08-11T00:00:00-04:00</updated><entry><title>Stats 101 Examples with MCMC Part 4</title><link href="https://bblais.github.io/posts/2021/Aug/11/stats-101-examples-with-mcmc-part-4/" rel="alternate"></link><published>2021-08-11T00:00:00-04:00</published><updated>2021-08-11T00:00:00-04:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2021-08-11:/posts/2021/Aug/11/stats-101-examples-with-mcmc-part-4/</id><summary type="html">&lt;p&gt;This is another in the series of "&lt;em&gt;Statistics 101&lt;/em&gt;" examples solved with MCMC.  Others in the series:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://bblais.github.io/posts/2021/Apr/15/stats-101-examples-with-mcmc/"&gt;Estimating mean with known 𝜎&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://bblais.github.io/posts/2021/Apr/28/stats-101-examples-with-mcmc-part-2/"&gt;Estimating mean with unknown 𝜎&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://bblais.github.io/posts/2021/May/13/stats-101-examples-with-mcmc-part-3/"&gt;Estimating a proportion …&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;This is another in the series of "&lt;em&gt;Statistics 101&lt;/em&gt;" examples solved with MCMC.  Others in the series:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://bblais.github.io/posts/2021/Apr/15/stats-101-examples-with-mcmc/"&gt;Estimating mean with known 𝜎&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://bblais.github.io/posts/2021/Apr/28/stats-101-examples-with-mcmc-part-2/"&gt;Estimating mean with unknown 𝜎&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://bblais.github.io/posts/2021/May/13/stats-101-examples-with-mcmc-part-3/"&gt;Estimating a proportion&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In all of these posts I'm going to use a python library I make for my science-programming class, &lt;a href="https://github.com/bblais/sci378"&gt;stored on github&lt;/a&gt;, and the &lt;a href="https://emcee.readthedocs.io/en/stable/"&gt;emcee&lt;/a&gt; library.  Install like:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pip install &amp;quot;git+git://github.com/bblais/sci378&amp;quot; --upgrade
+pip install emcee
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;In this example, like &lt;a href="https://bblais.github.io/posts/2021/Apr/15/stats-101-examples-with-mcmc/"&gt;another  one in the series&lt;/a&gt;, there is some true value, we call &lt;span class="math"&gt;\(x_o\)&lt;/span&gt;.  The &lt;span class="math"&gt;\(N\)&lt;/span&gt; data points we have, &lt;span class="math"&gt;\(\{x_i\}\)&lt;/span&gt;, consist of that true value drawn from a particular distribution, in this case the &lt;a href="https://en.wikipedia.org/wiki/Cauchy_distribution"&gt;Cauchy distribution&lt;/a&gt;:&lt;/p&gt;
+&lt;div class="math"&gt;$$
+P(x|\mu,\gamma)= \frac{1}{\pi\gamma}\left(\frac{\gamma^2}{(x-x_o)^2+\gamma^2}\right)
+$$&lt;/div&gt;
+&lt;p&gt;&lt;img alt="" src="https://bblais.github.io/images/Pasted image 20210731113326.png"&gt;&lt;/p&gt;
+&lt;p&gt;This distribution has &lt;a href="https://en.wikipedia.org/wiki/Cauchy_distribution#Occurrence_and_applications"&gt;a number of applications&lt;/a&gt;, many of which occur in cases of circular geometry.  I was introduced to it with the so-called &lt;a href="https://bayes.wustl.edu/sfg/why.pdf"&gt;lighthouse problem&lt;/a&gt; and E T Jaynes's excellent &lt;a href="http://bayes.wustl.edu/etj/articles/confidence.pdf"&gt;Confidence Intervals vs Bayesian Intervals&lt;/a&gt; paper.&lt;/p&gt;
+&lt;p&gt;Although this distribution has a single-peak with a central value, &lt;span class="math"&gt;\(x_o\)&lt;/span&gt;,  and looks vaguely Gaussian, it has many mathematical properties which make it much different.  For example, it has an &lt;em&gt;undefined mean and variance,&lt;/em&gt; and thus doesn't satisfy the conditions for the central limit theorem.   As such it is never covered in introductory statistics classes.  However, with the computational approach described here, it is no harder to work with the Cauchy than the Normal.&lt;/p&gt;
+&lt;h2 id="setting-up-the-problem"&gt;Setting up the problem&lt;/h2&gt;
+&lt;p&gt;In E T Jaynes's example, the data consist simply of two data points:  &lt;span class="math"&gt;\(\{x_i\} = \{3,5\}\)&lt;/span&gt;.  Remarkably, frequentist methods can't address this problem.  The likelihood is set in the same way as &lt;a href="https://bblais.github.io/posts/2021/Apr/28/stats-101-examples-with-mcmc-part-2/"&gt;previous posts&lt;/a&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;lnlike&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;x_o&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;γ&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;logcauchypdf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;x_o&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;γ&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;array&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="mf"&gt;3.&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;MCMCModel&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;lnlike&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                &lt;span class="n"&gt;x_o&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Uniform&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;50&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;50&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+                &lt;span class="n"&gt;γ&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Jeffreys&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+                &lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id="running-mcmc-looking-at-the-results"&gt;Running MCMC, looking at the results&lt;/h2&gt;
+&lt;p&gt;Now we run MCMC, plot the chains (so we can see it has converged) and look at distributions,&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run_mcmc&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1500&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;repeat&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot_chains&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;Sampling Prior...
+Done.
+0.43 s
+Running MCMC 1/3...
+Done.
+3.74 s
+Running MCMC 2/3...
+Done.
+3.61 s
+Running MCMC 3/3...
+Done.
+3.66 s
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img alt="" src="https://bblais.github.io/images/Pasted image 20210731115421.png"&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot_distributions&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img alt="" src="https://bblais.github.io/images/Pasted image 20210731115437.png"&gt;&lt;/p&gt;
+&lt;h2 id="comparing-to-intution-and-conclusions"&gt;Comparing to intution and conclusions&lt;/h2&gt;
+&lt;p&gt;Although the Cauchy has no defined mean value, one can show that the &lt;em&gt;median&lt;/em&gt; of the data is a best estimate for the central value, &lt;span class="math"&gt;\(x_o\)&lt;/span&gt; -- although that doesn't give the uncertainties.  Thus, the estimate we find above, &lt;span class="math"&gt;\(x_o \sim 4\)&lt;/span&gt;, matches what we intuit to be the correct answer.&lt;/p&gt;
+&lt;p&gt;The point here, however, is that the same Bayesian methods for finding the best estimates and the uncertainties works for this case like all the others -- with very little extra work -- whereas traditional methods fail.  It is telling that statistics textbooks &lt;em&gt;uniformly ignore this entire distribution&lt;/em&gt; as far as I can tell just to avoid the problems with it.  The Bayesian approach, in contrast, provides a uniform procedure to address all such problems and that procedure consistently produces useful results.  &lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="math"></category><category term="MCMC"></category><category term="Bayesian"></category></entry><entry><title>Stats 101 Examples with MCMC Part 3</title><link href="https://bblais.github.io/posts/2021/May/13/stats-101-examples-with-mcmc-part-3/" rel="alternate"></link><published>2021-05-13T00:00:00-04:00</published><updated>2021-05-13T00:00:00-04:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2021-05-13:/posts/2021/May/13/stats-101-examples-with-mcmc-part-3/</id><summary type="html">&lt;p&gt;This is another in the series of "&lt;em&gt;Statistics 101&lt;/em&gt;" examples solved with MCMC.  Others in the series:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://bblais.github.io/posts/2021/Apr/15/stats-101-examples-with-mcmc/"&gt;Estimating mean with known 𝜎&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://bblais.github.io/posts/2021/Apr/28/stats-101-examples-with-mcmc-part-2/"&gt;Estimating mean with unknown 𝜎&lt;/a&gt;&lt;/li&gt;
