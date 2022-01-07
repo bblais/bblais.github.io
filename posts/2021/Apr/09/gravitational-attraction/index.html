@@ -70,10 +70,12 @@
 <li><span class="math">\(r_{\rm end}=0.5 {\rm m}\)</span></li>
 </ul>
 <p>then we set up the calculation</p>
-<div class="math">\begin{eqnarray}
--G \frac{m_1 m_2}{r_{\rm start}}  + 0 &amp;=&amp; -G \frac{m_1 m_2}{r_{\rm end}} + \frac{1}{2} m_1 v^2 + \frac{1}{2} m_2 v^2  \\
- \frac{1}{2} (100 {\rm kg}+100 {\rm kg}) v^2 &amp;=&amp; -6.7\times 10^{-11} \left[\frac{{\rm J}{\rm m}}{{\rm kg}^2}\right]\frac{100 {\rm kg} \cdot 100 {\rm kg}}{3 {\rm m}} - \left( -6.7\times 10^{-11} \left[\frac{{\rm J}{\rm m}}{{\rm kg}^2}\right]\frac{100 {\rm kg} \cdot 100 {\rm kg}}{0.5 {\rm m}}\right)
-\end{eqnarray}</div>
+<div class="math">$$
+\begin{aligned}
+-G \frac{m_1 m_2}{r_{\rm start}}  + 0 &amp;= -G \frac{m_1 m_2}{r_{\rm end}} + \frac{1}{2} m_1 v^2 + \frac{1}{2} m_2 v^2  \\
+ \frac{1}{2} (100 {\rm kg}+100 {\rm kg}) v^2 &amp;= -6.7\times 10^{-11} \left[\frac{{\rm J}{\rm m}}{{\rm kg}^2}\right]\frac{100 {\rm kg} \cdot 100 {\rm kg}}{3 {\rm m}} - \left( -6.7\times 10^{-11} \left[\frac{{\rm J}{\rm m}}{{\rm kg}^2}\right]\frac{100 {\rm kg} \cdot 100 {\rm kg}}{0.5 {\rm m}}\right)
+\end{aligned}
+$$</div>
 <div class="highlight"><pre><span></span><code><span class="n">In</span> <span class="p">[</span><span class="mi">7</span><span class="p">]:</span> <span class="n">G</span><span class="o">=</span><span class="mf">6.7e-11</span>
 
 <span class="n">In</span> <span class="p">[</span><span class="mi">8</span><span class="p">]:</span> <span class="n">m1</span><span class="o">=</span><span class="mi">100</span>
@@ -88,10 +90,12 @@
 <span class="n">Out</span><span class="p">[</span><span class="mi">12</span><span class="p">]:</span> <span class="mf">1.1166666666666668e-06</span>
 </code></pre></div>
 
-<div class="math">\begin{eqnarray}
+<div class="math">$$
+\begin{aligned}
 \frac{1}{2} (100 {\rm kg}+100 {\rm kg}) v^2 &amp;=&amp; 1.12 \times 10^{-6} {\rm J} \\
 v&amp;=&amp;1.1\times 10^{-4} {\rm m}/{\rm s} 
-\end{eqnarray}</div>
+\end{aligned}
+$$</div>
 <div class="highlight"><pre><span></span><code><span class="n">In</span> <span class="p">[</span><span class="mi">13</span><span class="p">]:</span> <span class="n">v</span><span class="o">=</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="mf">1.12e-6</span><span class="o">/</span><span class="p">(</span><span class="n">m1</span><span class="o">+</span><span class="n">m2</span><span class="p">))</span>
 
 <span class="n">In</span> <span class="p">[</span><span class="mi">14</span><span class="p">]:</span> <span class="n">v</span>
@@ -99,10 +103,12 @@ v&amp;=&amp;1.1\times 10^{-4} {\rm m}/{\rm s}
 </code></pre></div>
 
 <p>Assuming a constant acceleration, for each person to travel half of the 2.5 m distance separation, would be</p>
-<div class="math">\begin{eqnarray}
+<div class="math">$$
+\begin{aligned}
 \frac{v_{\rm final}}{2} &amp;=&amp; \frac{2.5 {\rm m}}{t} \\
 t&amp;=&amp; 45000 {\rm s} = 12 {\rm hr}
-\end{eqnarray}</div>
+\end{aligned}
+$$</div>
 <p>which is much shorter time than I was expecting!  </p>
 <p>Not being satisfied, I implemented it in [pyndamics3]</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pyndamics3</span> <span class="kn">import</span> <span class="o">*</span>
@@ -240,7 +246,7 @@ t&amp;=&amp; 45000 {\rm s} = 12 {\rm hr}
                                             <li><a href="https://bblais.github.io/category/programming.html">programming <span>(4)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/projects.html">projects <span>(4)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/religion.html">religion <span>(11)</span></a></li>
-                                            <li><a href="https://bblais.github.io/category/science.html">science <span>(7)</span></a></li>
+                                            <li><a href="https://bblais.github.io/category/science.html">science <span>(8)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/unbelievable-project.html">Unbelievable Project <span>(19)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/wordpress_migration.html">wordpress_migration <span>(160)</span></a></li>
      

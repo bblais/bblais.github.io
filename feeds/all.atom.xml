@@ -1,5 +1,409 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>bblais on the web</title><link href="https://bblais.github.io/" rel="alternate"></link><link href="https://bblais.github.io/feeds/all.atom.xml" rel="self"></link><id>https://bblais.github.io/</id><updated>2021-12-09T00:00:00-05:00</updated><entry><title>Science as a metal detector</title><link href="https://bblais.github.io/posts/2021/Dec/09/science-as-a-metal-detector/" rel="alternate"></link><published>2021-12-09T00:00:00-05:00</published><updated>2021-12-09T00:00:00-05:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2021-12-09:/posts/2021/Dec/09/science-as-a-metal-detector/</id><summary type="html">&lt;p&gt;In my post about &lt;a href="https://bblais.github.io/posts/2014/Sep/30/naturalism-of-the-gaps/#comment-5620221669"&gt;"naturalism of the gaps"&lt;/a&gt; I stated that in evaluating claims, &lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>bblais on the web</title><link href="https://bblais.github.io/" rel="alternate"></link><link href="https://bblais.github.io/feeds/all.atom.xml" rel="self"></link><id>https://bblais.github.io/</id><updated>2022-01-07T00:00:00-05:00</updated><entry><title>Simulating Stochastic Processes</title><link href="https://bblais.github.io/posts/2022/Jan/07/simulating-stochastic-processes/" rel="alternate"></link><published>2022-01-07T00:00:00-05:00</published><updated>2022-01-07T00:00:00-05:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2022-01-07:/posts/2022/Jan/07/simulating-stochastic-processes/</id><summary type="html">&lt;p&gt;In this post we are going to explore the simulation of stochastic (i.e. random) processes, and work our way to understanding how the Gillespie algorithm works.  We'll be using …&lt;/p&gt;</summary><content type="html">&lt;p&gt;In this post we are going to explore the simulation of stochastic (i.e. random) processes, and work our way to understanding how the Gillespie algorithm works.  We'll be using mostly straightforward Python, except for my &lt;code&gt;Storage&lt;/code&gt; class from &lt;a href="https://bblais.github.io/posts/2020/Feb/24/common-python-pattern-building-up-lists-to-plot/"&gt;https://bblais.github.io/posts/2020/Feb/24/common-python-pattern-building-up-lists-to-plot/&lt;/a&gt; and some default plotting preferences specified in &lt;a href="https://raw.githubusercontent.com/bblais/Python-for-Science/master/science/science.mplstyle"&gt;https://raw.githubusercontent.com/bblais/Python-for-Science/master/science/science.mplstyle&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="imports"&gt;Imports&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;pylab&lt;/span&gt; &lt;span class="n"&gt;inline&lt;/span&gt;
+&lt;span class="n"&gt;style&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;use&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;science.mplstyle&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;Memory&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Storage&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id="a-simple-problem"&gt;A simple problem&lt;/h2&gt;
+&lt;p&gt;In this first problem, we have a process that occurs with probability &lt;span class="math"&gt;\(p=0.02\)&lt;/span&gt; per second.  When an event happens, the number &lt;span class="math"&gt;\(n\)&lt;/span&gt; is incremented by 1.  The average linear rate of increase will be the same as &lt;span class="math"&gt;\(p\)&lt;/span&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;number_of_simulations&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;20&lt;/span&gt;
+&lt;span class="n"&gt;dt&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;1.0&lt;/span&gt;
+&lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;0.02&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;_&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;number_of_simulations&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;S&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Storage&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;
+    &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;
+    &lt;span class="n"&gt;S&lt;/span&gt;&lt;span class="o"&gt;+=&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;
+    &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="mi"&gt;1000&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;rand&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;dt&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;+=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
+
+        &lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="o"&gt;+=&lt;/span&gt;&lt;span class="n"&gt;dt&lt;/span&gt;
+
+        &lt;span class="n"&gt;S&lt;/span&gt;&lt;span class="o"&gt;+=&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;
+
+    &lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;S&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;arrays&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;b-o&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;alpha&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;0.01&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+
+&lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;r-&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+
+&lt;span class="n"&gt;ylabel&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$n$&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;xlabel&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$t$&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img alt="output_6_1.png" src="https://bblais.github.io/images/output_6_1.png"&gt;&lt;/p&gt;
+&lt;p&gt;To motivate the faster algorithm, let's run a bunch of simulations, and record the time to the first event only.  Then count up how many events happen at the various times.  &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;S&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Storage&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;50000&lt;/span&gt;
+&lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;0.03&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;_&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+
+    &lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;
+    &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;rand&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="k"&gt;break&lt;/span&gt;
+
+        &lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="o"&gt;+=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
+
+    &lt;span class="n"&gt;S&lt;/span&gt;&lt;span class="o"&gt;+=&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+
+&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;S&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;arrays&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;tn&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;h&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;hist&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;200&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="n"&gt;xlabel&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;time to first event&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;ylabel&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;number of events&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+
+&lt;span class="n"&gt;slope&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;intercept&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;polyfit&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;tn&lt;/span&gt;&lt;span class="p"&gt;[:&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;&lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;[:&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;]),&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;tn&lt;/span&gt;&lt;span class="p"&gt;[:&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;&lt;span class="n"&gt;exp&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;slope&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;tn&lt;/span&gt;&lt;span class="p"&gt;[:&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;intercept&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;r-&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;λ&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt;
+&lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;tn&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;exp&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;λ&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;tn&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;k--&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;lw&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img alt="Pasted image 20220106220712.png" src="https://bblais.github.io/images/Pasted image 20220106220712.png"&gt;&lt;/p&gt;
+&lt;p&gt;which looks exponential, so we compare it to an exponentiial fit (linear fit to the log) and an exponential with a decay factor &lt;span class="math"&gt;\(\lambda=p\)&lt;/span&gt;.  The fit is quite good!&lt;/p&gt;
+&lt;p&gt;To normalize analytically (and make it a proper probability function), we need to make sure that the integral over &lt;span class="math"&gt;\(t\)&lt;/span&gt;  is 1,&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\begin{aligned}
+p(t)&amp;amp;= p_o e^{-\lambda t}\\
+\int_0^{+\infty} p_o e^{-\lambda t} dt &amp;amp;=1 \\
+\left.\left(\frac{1}{-\lambda}\right)p_o e^{-\lambda t}\right|^{+\infty}_{0} &amp;amp;=1 \\
+0 - \left(\frac{1}{-\lambda}\right)p_o &amp;amp;=1 \\
+p_o &amp;amp;=\lambda
+\end{aligned}
+$$&lt;/div&gt;
+&lt;p&gt;
+therefore the distribution is &lt;/p&gt;
+&lt;div class="math"&gt;$$
+p(t) = \lambda e^{-\lambda t}
+$$&lt;/div&gt;
+&lt;p&gt;
+which can be seen here &lt;a href="https://en.wikipedia.org/wiki/Exponential_distribution"&gt;https://en.wikipedia.org/wiki/Exponential_distribution&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="towards-gillespie"&gt;Towards Gillespie&lt;/h2&gt;
+&lt;p&gt;Instead of flipping the coin every millisecond (i.e. constant time), we can randomly pick a &lt;em&gt;time&lt;/em&gt; from an exponential distribution -- the time to the next event (i.e. dynamic time).&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;constant_time&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;n0&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;t_max&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1000&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;0.02&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;dt&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;S_mat&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[]&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;_&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="n"&gt;S&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Storage&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+        &lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;
+        &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;n0&lt;/span&gt;
+        &lt;span class="n"&gt;S&lt;/span&gt;&lt;span class="o"&gt;+=&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;
+        &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;t_max&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;rand&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;dt&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;+=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
+
+            &lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="o"&gt;+=&lt;/span&gt;&lt;span class="n"&gt;dt&lt;/span&gt;
+
+            &lt;span class="n"&gt;S&lt;/span&gt;&lt;span class="o"&gt;+=&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;
+
+        &lt;span class="n"&gt;S_mat&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;S&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;S_mat&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;and&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;dynamic_time&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;n0&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;t_max&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1000&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;0.02&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;dt&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;S_mat&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[]&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;_&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="n"&gt;S&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Storage&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+        &lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;
+        &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;n0&lt;/span&gt;
+        &lt;span class="n"&gt;S&lt;/span&gt;&lt;span class="o"&gt;+=&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;
+        &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;t_max&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;λ&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt;
+            &lt;span class="n"&gt;t_next&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exponential&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;λ&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+            &lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;t_next&lt;/span&gt;
+            &lt;span class="n"&gt;S&lt;/span&gt;&lt;span class="o"&gt;+=&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;
+
+            &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;+=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
+            &lt;span class="n"&gt;S&lt;/span&gt;&lt;span class="o"&gt;+=&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;
+
+
+        &lt;span class="n"&gt;S_mat&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;S&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;S_mat&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;to get&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;figure&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;figsize&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;12&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="n"&gt;subplot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;S&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;constant_time&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;S&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;arrays&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;b-o&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;alpha&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;0.01&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;ylabel&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$n$&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Constant Time&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;xlim&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;1000&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="n"&gt;gca&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;set_xticklabels&lt;/span&gt;&lt;span class="p"&gt;([]);&lt;/span&gt;
+
+
+&lt;span class="n"&gt;subplot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;S&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;dynamic_time&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;S&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;arrays&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;b-o&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;alpha&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;0.1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;ylabel&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$n$&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;xlabel&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$t$&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Dynamic Time&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;xlim&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;1000&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img alt="Pasted image 20220106221326.png" src="https://bblais.github.io/images/Pasted image 20220106221326.png"&gt;&lt;/p&gt;
+&lt;p&gt;Timing this, we get more than 10x faster with the dynamic time.  This would be more if the rates were lower. &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;timeit&lt;/span&gt; &lt;span class="n"&gt;S_mat&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;constant_time&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;18.8 ms ± 614 µs per loop (mean ± std. dev. of 7 runs, 10 loops each)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;timeit&lt;/span&gt; &lt;span class="n"&gt;S_mat&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;dynamic_time&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;1.39 ms ± 29.3 µs per loop (mean ± std. dev. of 7 runs, 1000 loops each)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="gillespie"&gt;Gillespie&lt;/h2&gt;
+&lt;p&gt;We now can extend the problem to the next simplest case, where two types of events can happen, say a birth probability and a death probability.  This extension will have two added complexities from the previous example:
+1. more than one type of event
+2. the probabilities for those events, which determine the rates, depend on the variables and thus depend on time&lt;/p&gt;
+&lt;p&gt;In the simple birth-death process we have,&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\begin{aligned}
+p_\text{birth}&amp;amp;=b\cdot n\\
+p_\text{death}&amp;amp;=d\cdot n\\
+\end{aligned}
+$$&lt;/div&gt;
+&lt;p&gt;
+where &lt;span class="math"&gt;\(b\)&lt;/span&gt; and &lt;span class="math"&gt;\(d\)&lt;/span&gt; are the per-capita probability for a birth or death, respectively, and where a birth results in &lt;span class="math"&gt;\(n\rightarrow n+1\)&lt;/span&gt; and a death results in &lt;span class="math"&gt;\(n\rightarrow n-1\)&lt;/span&gt;.  The Gillespie algorithm proceeds in two steps
+1. generate the next time (like above) for &lt;em&gt;some&lt;/em&gt; event using the sum of the rates of all of the possible events
+2. randomly choose one of the possible events, weighted by their prospective rates -- faster processes chosen more often&lt;/p&gt;
+&lt;p&gt;In code this could look like&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;no&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;
+&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;0.03&lt;/span&gt;
+&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;0.02&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;_&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;S&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Storage&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+    &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;no&lt;/span&gt;
+    &lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;
+    &lt;span class="n"&gt;S&lt;/span&gt;&lt;span class="o"&gt;+=&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;
+    &lt;span class="n"&gt;t_max&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;200&lt;/span&gt;
+    &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;t_max&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;pb&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;
+        &lt;span class="n"&gt;pd&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;
+
+        &lt;span class="n"&gt;rates&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;pb&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;pd&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+        &lt;span class="n"&gt;total_rates&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;sum&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;rates&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="n"&gt;total_rates&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="k"&gt;break&lt;/span&gt;
+        &lt;span class="n"&gt;time_next&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exponential&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="n"&gt;total_rates&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;rand&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;total_rates&lt;/span&gt;
+
+        &lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="o"&gt;+=&lt;/span&gt;&lt;span class="n"&gt;time_next&lt;/span&gt;
+        &lt;span class="n"&gt;S&lt;/span&gt;&lt;span class="o"&gt;+=&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;pb&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;+=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
+        &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;-=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
+
+        &lt;span class="n"&gt;S&lt;/span&gt;&lt;span class="o"&gt;+=&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;
+
+    &lt;span class="n"&gt;S&lt;/span&gt;&lt;span class="o"&gt;+=&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;
+    &lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;S&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;arrays&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;b.-&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;alpha&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;0.1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+
+&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;linspace&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;t_max&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;no&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;exp&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;r-&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;    
+&lt;span class="n"&gt;xlabel&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;time&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;ylabel&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$n$&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;xlim&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;t_max&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img alt="Pasted image 20220107080030.png" src="https://bblais.github.io/images/Pasted image 20220107080030.png"&gt;&lt;/p&gt;
+&lt;p&gt;for large N, this should look like the solution&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\frac{dn}{dt}=b\cdot n - d\cdot n
+$$&lt;/div&gt;
+&lt;p&gt;
+which will be exponential (population growth),
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
+n=n_o e^{(b-d)\cdot t}
+$$&lt;/div&gt;
+&lt;p&gt;
+which you can see in the red.  In the small-&lt;span class="math"&gt;\(N\)&lt;/span&gt; case (like the one above, starting with &lt;span class="math"&gt;\(n=5\)&lt;/span&gt;, there is a lot of variation, but the &lt;em&gt;average&lt;/em&gt; is the exponential curve.  Changing &lt;span class="math"&gt;\(n_o=500\)&lt;/span&gt; we can see the variation reduces considerably.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Pasted image 20220107080819.png" src="https://bblais.github.io/images/Pasted image 20220107080819.png"&gt;&lt;/p&gt;
+&lt;h2 id="gillespie-with-sir-model"&gt;Gillespie with SIR Model&lt;/h2&gt;
+&lt;p&gt;As a final example we look at a probabilistic &lt;a href="https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology#The_SIR_model"&gt;SIR model&lt;/a&gt;.  In this model we have three sub-populations or compartments, &lt;span class="math"&gt;\(S\)&lt;/span&gt;, &lt;span class="math"&gt;\(I\)&lt;/span&gt;, and &lt;span class="math"&gt;\(R\)&lt;/span&gt; for Susceptible, Infected, and Recovered.  The Susceptible become infected at a rate of &lt;span class="math"&gt;\(\beta S I\)&lt;/span&gt; and the Infected recover at a rate of &lt;span class="math"&gt;\(\gamma I\)&lt;/span&gt;.  Another way to write this is as two possible events.&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\begin{aligned}
+S,I &amp;amp;\stackrel{\beta S I}{\longrightarrow} S-1, I+1\\
+I,R &amp;amp;\stackrel{\gamma I}{\longrightarrow} I-1, R+1\\
+\end{aligned}
+$$&lt;/div&gt;
+&lt;p&gt;
+So, Gillespie follows by&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;generate the next time (like above) for &lt;em&gt;some&lt;/em&gt; event (e.g. one of the two above) using the sum of the rates of all of the possible events&lt;/li&gt;
+&lt;li&gt;randomly choose one of the possible events, weighted by their prospective rates -- faster processes chosen more often&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;number_of_sims&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;
+
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;_&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;number_of_sims&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+
+    &lt;span class="n"&gt;Io&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
+    &lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;
+    &lt;span class="n"&gt;tmax&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;
+
+
+    &lt;span class="n"&gt;Io&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
+    &lt;span class="n"&gt;β&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
+    &lt;span class="n"&gt;γ&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;0.5&lt;/span&gt;
+
+
+    &lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;0.0&lt;/span&gt;
+    &lt;span class="n"&gt;ni&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Io&lt;/span&gt;
+    &lt;span class="n"&gt;ns&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;ni&lt;/span&gt;
+    &lt;span class="n"&gt;nr&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;
+
+    &lt;span class="n"&gt;S&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Storage&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;S&lt;/span&gt;&lt;span class="o"&gt;+=&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;ns&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;ni&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;nr&lt;/span&gt;    
+
+    &lt;span class="n"&gt;tw&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;0.0&lt;/span&gt;
+    &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;tmax&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="n"&gt;w1&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;β&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;ns&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;ni&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;N&lt;/span&gt;  &lt;span class="c1"&gt;# infect&lt;/span&gt;
+        &lt;span class="n"&gt;w2&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;γ&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;ni&lt;/span&gt; &lt;span class="c1"&gt;# recover&lt;/span&gt;
+        &lt;span class="n"&gt;w&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;w1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;w2&lt;/span&gt;    
+
+        &lt;span class="n"&gt;tn&lt;/span&gt;&lt;span class="o"&gt;=-&lt;/span&gt;&lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;rand&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;w&lt;/span&gt;  &lt;span class="c1"&gt;# when&amp;#39;s the next thing happening?&lt;/span&gt;
+        &lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;tn&lt;/span&gt;
+        &lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;rand&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;w&lt;/span&gt;  &lt;span class="c1"&gt;# which thing happened?&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;r&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;w1&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+            &lt;span class="n"&gt;ns&lt;/span&gt;&lt;span class="o"&gt;-=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
+            &lt;span class="n"&gt;ni&lt;/span&gt;&lt;span class="o"&gt;+=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
+        &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; 
+            &lt;span class="n"&gt;nr&lt;/span&gt;&lt;span class="o"&gt;+=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
+            &lt;span class="n"&gt;ni&lt;/span&gt;&lt;span class="o"&gt;-=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
+
+
+        &lt;span class="n"&gt;S&lt;/span&gt;&lt;span class="o"&gt;+=&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;ns&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;ni&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;nr&lt;/span&gt;
+
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;ni&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="k"&gt;break&lt;/span&gt;
+
+
+    &lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;ns&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;ni&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;nr&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;S&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;arrays&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+    &lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;ns&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;b&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;alpha&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;0.1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;ni&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;g&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;alpha&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;0.1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;nr&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;r&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;alpha&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;0.1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;    
+
+
+
+&lt;span class="c1"&gt;# these numbers taken from a pyndamics simulation, just for comparison&lt;/span&gt;
+&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;S&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;I&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;R&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;array&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt; &lt;span class="mf"&gt;0.&lt;/span&gt;        &lt;span class="p"&gt;,&lt;/span&gt;  &lt;span class="mf"&gt;1.57894737&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;  &lt;span class="mf"&gt;3.15789474&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;  &lt;span class="mf"&gt;4.73684211&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;  &lt;span class="mf"&gt;6.31578947&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+         &lt;span class="mf"&gt;7.89473684&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;  &lt;span class="mf"&gt;9.47368421&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;11.05263158&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;12.63157895&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;14.21052632&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="mf"&gt;15.78947368&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;17.36842105&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;18.94736842&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;20.52631579&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;22.10526316&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="mf"&gt;23.68421053&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;25.26315789&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;26.84210526&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;28.42105263&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;30.&lt;/span&gt;        &lt;span class="p"&gt;]),&lt;/span&gt;
+         &lt;span class="n"&gt;array&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="mf"&gt;99.&lt;/span&gt;        &lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;96.68233609&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;92.04102645&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;83.73584541&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;71.42053096&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                &lt;span class="mf"&gt;57.24621795&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;44.66960674&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;35.51429297&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;29.55644131&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;25.85923582&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                &lt;span class="mf"&gt;23.59619256&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;22.21121513&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;21.36043856&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;20.83578683&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;20.51122022&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                &lt;span class="mf"&gt;20.31000289&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;20.18506816&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;20.10742367&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;20.05914037&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;20.02910249&lt;/span&gt;&lt;span class="p"&gt;]),&lt;/span&gt;
+         &lt;span class="n"&gt;array&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt; &lt;span class="mf"&gt;1.&lt;/span&gt;        &lt;span class="p"&gt;,&lt;/span&gt;  &lt;span class="mf"&gt;2.13320482&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;  &lt;span class="mf"&gt;4.31469633&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;  &lt;span class="mf"&gt;7.89149267&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;12.25267231&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                &lt;span class="mf"&gt;15.36581863&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;15.53893182&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;13.22645672&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;10.00259897&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;  &lt;span class="mf"&gt;7.01814482&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                 &lt;span class="mf"&gt;4.70207514&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;  &lt;span class="mf"&gt;3.0626549&lt;/span&gt; &lt;span class="p"&gt;,&lt;/span&gt;  &lt;span class="mf"&gt;1.96059584&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;  &lt;span class="mf"&gt;1.2418213&lt;/span&gt; &lt;span class="p"&gt;,&lt;/span&gt;  &lt;span class="mf"&gt;0.78139042&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                 &lt;span class="mf"&gt;0.48968045&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;  &lt;span class="mf"&gt;0.30609591&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;  &lt;span class="mf"&gt;0.19103806&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;  &lt;span class="mf"&gt;0.11911362&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;  &lt;span class="mf"&gt;0.07422209&lt;/span&gt;&lt;span class="p"&gt;]),&lt;/span&gt;
+         &lt;span class="n"&gt;array&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt; &lt;span class="mf"&gt;0.&lt;/span&gt;        &lt;span class="p"&gt;,&lt;/span&gt;  &lt;span class="mf"&gt;1.18445909&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;  &lt;span class="mf"&gt;3.64427722&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;  &lt;span class="mf"&gt;8.37266192&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;16.32679674&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                &lt;span class="mf"&gt;27.38796342&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;39.79146144&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;51.25925031&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;60.44095972&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;67.12261936&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                &lt;span class="mf"&gt;71.7017323&lt;/span&gt; &lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;74.72612997&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;76.6789656&lt;/span&gt; &lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;77.92239186&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;78.70738935&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                &lt;span class="mf"&gt;79.20031666&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;79.50883592&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;79.70153827&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;79.821746&lt;/span&gt;  &lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;79.89667542&lt;/span&gt;&lt;span class="p"&gt;]))&lt;/span&gt;
+
+
+&lt;span class="c1"&gt;# these are here to get the legend with the right colors&lt;/span&gt;
+&lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;S&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;b-&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;label&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;S&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;I&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;g-&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;label&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;I&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;R&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;r-&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;label&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;R&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;    
+&lt;span class="n"&gt;legend&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="n"&gt;xlabel&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;time&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;ylabel&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;number&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img alt="Pasted image 20220107082918.png" src="https://bblais.github.io/images/Pasted image 20220107082918.png"&gt;&lt;/p&gt;
+&lt;p&gt;The comparison is made with a &lt;a href="https://bblais.github.io/pyndamics3/tutorial.zombies.html#SIR-Model"&gt;continuous version of the model using the pyndamics3 library&lt;/a&gt;.  We will see later that we can use &lt;a href="https://bblais.github.io/pyndamics3/"&gt;pyndamics3&lt;/a&gt; to do &lt;a href="https://bblais.github.io/pyndamics3/stochastic.html#Stochastic-SIR-Model"&gt;stochastic algorithms as well&lt;/a&gt;.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="science"></category></entry><entry><title>Science as a metal detector</title><link href="https://bblais.github.io/posts/2021/Dec/09/science-as-a-metal-detector/" rel="alternate"></link><published>2021-12-09T00:00:00-05:00</published><updated>2021-12-09T00:00:00-05:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2021-12-09:/posts/2021/Dec/09/science-as-a-metal-detector/</id><summary type="html">&lt;p&gt;In my post about &lt;a href="https://bblais.github.io/posts/2014/Sep/30/naturalism-of-the-gaps/#comment-5620221669"&gt;"naturalism of the gaps"&lt;/a&gt; I stated that in evaluating claims, &lt;/p&gt;
 &lt;blockquote&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;em&gt;Methodological naturalism&lt;/em&gt; is the only choice we have available, because no one has demonstrated any procedure …&lt;/li&gt;&lt;/ol&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;p&gt;In my post about &lt;a href="https://bblais.github.io/posts/2014/Sep/30/naturalism-of-the-gaps/#comment-5620221669"&gt;"naturalism of the gaps"&lt;/a&gt; I stated that in evaluating claims, &lt;/p&gt;
@@ -30,8 +434,8 @@
 &lt;li&gt;&lt;a href="https://bblais.github.io/posts/2021/May/13/stats-101-examples-with-mcmc-part-3/"&gt;Estimating a proportion&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;In all of these posts I'm going to use a python library I make for my science-programming class, &lt;a href="https://github.com/bblais/sci378"&gt;stored on github&lt;/a&gt;, and the &lt;a href="https://emcee.readthedocs.io/en/stable/"&gt;emcee&lt;/a&gt; library.  Install like:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pip install &amp;quot;git+git://github.com/bblais/sci378&amp;quot; --upgrade
-pip install emcee
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;pip install &amp;quot;git+git://github.com/bblais/sci378&amp;quot; --upgrade&lt;/span&gt;
+&lt;span class="err"&gt;pip install emcee&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;In this example, like &lt;a href="https://bblais.github.io/posts/2021/Apr/15/stats-101-examples-with-mcmc/"&gt;another  one in the series&lt;/a&gt;, there is some true value, we call &lt;span class="math"&gt;\(x_o\)&lt;/span&gt;.  The &lt;span class="math"&gt;\(N\)&lt;/span&gt; data points we have, &lt;span class="math"&gt;\(\{x_i\}\)&lt;/span&gt;, consist of that true value drawn from a particular distribution, in this case the &lt;a href="https://en.wikipedia.org/wiki/Cauchy_distribution"&gt;Cauchy distribution&lt;/a&gt;:&lt;/p&gt;
@@ -60,18 +464,18 @@ $$&lt;/div&gt;
 &lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot_chains&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;Sampling Prior...
-Done.
-0.43 s
-Running MCMC 1/3...
-Done.
-3.74 s
-Running MCMC 2/3...
-Done.
-3.61 s
-Running MCMC 3/3...
-Done.
-3.66 s
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;Sampling Prior...&lt;/span&gt;
+&lt;span class="err"&gt;Done.&lt;/span&gt;
+&lt;span class="err"&gt;0.43 s&lt;/span&gt;
+&lt;span class="err"&gt;Running MCMC 1/3...&lt;/span&gt;
+&lt;span class="err"&gt;Done.&lt;/span&gt;
+&lt;span class="err"&gt;3.74 s&lt;/span&gt;
+&lt;span class="err"&gt;Running MCMC 2/3...&lt;/span&gt;
+&lt;span class="err"&gt;Done.&lt;/span&gt;
+&lt;span class="err"&gt;3.61 s&lt;/span&gt;
+&lt;span class="err"&gt;Running MCMC 3/3...&lt;/span&gt;
+&lt;span class="err"&gt;Done.&lt;/span&gt;
+&lt;span class="err"&gt;3.66 s&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;img alt="" src="https://bblais.github.io/images/Pasted image 20210731115421.png"&gt;&lt;/p&gt;
@@ -163,24 +567,24 @@ Done.
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Output:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;[&amp;#39;Open Conversations/Open Conversation #001-vCEu612_tbc.mp3&amp;#39;,
-&amp;#39;Open Conversations/Open Conversation #002-DW6LTgzxI2c.mp3&amp;#39;,
-&amp;#39;Open Conversations/Open Conversation #003-yxF3OJpLW8w.mp3&amp;#39;,
-&amp;#39;Open Conversations/Open Conversation #004-kBSczog9hjY.mp3&amp;#39;,
-&amp;#39;Open Conversations/Open Conversation #005-Ba9JeLKLx4M.mp3&amp;#39;,
-&amp;#39;Open Conversations/Open Conversation #006 _ Defining Terms and Open Conversation with JIL-ypzf9gCPMW4.mp3&amp;#39;,
-&amp;#39;Open Conversations/Open Conversation #007-mrzHt60jaJ0.mp3&amp;#39;,
-&amp;#39;Open Conversations/Open Conversation #008- Socially Distanced New Year Open Hangout - PineCreek, Cam, Erin, Autumn, Rob, etc-8yGK_yh-CTY.mp3&amp;#39;,
-&amp;#39;Open Conversations/Open Conversation #009-T-V0VnGG_FI.mp3&amp;#39;,
-&amp;#39;Open Conversations/Open Conversation #010-IcN-O-cbP80.mp3&amp;#39;,
-&amp;#39;Open Conversations/Open Conversation #011-hfIJLjO7xss.mp3&amp;#39;,
-&amp;#39;Open Conversations/Open Conversation #012-XD-Al7-_ezM.mp3&amp;#39;,
-&amp;#39;Open Conversations/Open Conversation #013-WxwxA5I-pN4.mp3&amp;#39;,
-&amp;#39;Open Conversations/Open Conversation #014-STmBT9OSNVw.mp3&amp;#39;,
-&amp;#39;Open Conversations/Open Conversation #015-ClVDRgd29aY.mp3&amp;#39;,
-&amp;#39;Open Conversations/Open Conversation #016-RjiSEfq4NJY.mp3&amp;#39;,
-&amp;#39;Open Conversations/Open Conversation #017 - 500 Arguments Against Christianity Aftershow-TVEEgX6NqbE.mp3&amp;#39;,
-&amp;#39;Open Conversations/Open Conversation #018 - James Fodor, Causation, Craig and more...-Kj3L8L3vXZI.mp3&amp;#39;]
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;[&amp;#39;Open Conversations/Open Conversation #001-vCEu612_tbc.mp3&amp;#39;,&lt;/span&gt;
+&lt;span class="err"&gt;&amp;#39;Open Conversations/Open Conversation #002-DW6LTgzxI2c.mp3&amp;#39;,&lt;/span&gt;
+&lt;span class="err"&gt;&amp;#39;Open Conversations/Open Conversation #003-yxF3OJpLW8w.mp3&amp;#39;,&lt;/span&gt;
+&lt;span class="err"&gt;&amp;#39;Open Conversations/Open Conversation #004-kBSczog9hjY.mp3&amp;#39;,&lt;/span&gt;
+&lt;span class="err"&gt;&amp;#39;Open Conversations/Open Conversation #005-Ba9JeLKLx4M.mp3&amp;#39;,&lt;/span&gt;
+&lt;span class="err"&gt;&amp;#39;Open Conversations/Open Conversation #006 _ Defining Terms and Open Conversation with JIL-ypzf9gCPMW4.mp3&amp;#39;,&lt;/span&gt;
+&lt;span class="err"&gt;&amp;#39;Open Conversations/Open Conversation #007-mrzHt60jaJ0.mp3&amp;#39;,&lt;/span&gt;
+&lt;span class="err"&gt;&amp;#39;Open Conversations/Open Conversation #008- Socially Distanced New Year Open Hangout - PineCreek, Cam, Erin, Autumn, Rob, etc-8yGK_yh-CTY.mp3&amp;#39;,&lt;/span&gt;
+&lt;span class="err"&gt;&amp;#39;Open Conversations/Open Conversation #009-T-V0VnGG_FI.mp3&amp;#39;,&lt;/span&gt;
+&lt;span class="err"&gt;&amp;#39;Open Conversations/Open Conversation #010-IcN-O-cbP80.mp3&amp;#39;,&lt;/span&gt;
+&lt;span class="err"&gt;&amp;#39;Open Conversations/Open Conversation #011-hfIJLjO7xss.mp3&amp;#39;,&lt;/span&gt;
+&lt;span class="err"&gt;&amp;#39;Open Conversations/Open Conversation #012-XD-Al7-_ezM.mp3&amp;#39;,&lt;/span&gt;
+&lt;span class="err"&gt;&amp;#39;Open Conversations/Open Conversation #013-WxwxA5I-pN4.mp3&amp;#39;,&lt;/span&gt;
+&lt;span class="err"&gt;&amp;#39;Open Conversations/Open Conversation #014-STmBT9OSNVw.mp3&amp;#39;,&lt;/span&gt;
+&lt;span class="err"&gt;&amp;#39;Open Conversations/Open Conversation #015-ClVDRgd29aY.mp3&amp;#39;,&lt;/span&gt;
+&lt;span class="err"&gt;&amp;#39;Open Conversations/Open Conversation #016-RjiSEfq4NJY.mp3&amp;#39;,&lt;/span&gt;
+&lt;span class="err"&gt;&amp;#39;Open Conversations/Open Conversation #017 - 500 Arguments Against Christianity Aftershow-TVEEgX6NqbE.mp3&amp;#39;,&lt;/span&gt;
+&lt;span class="err"&gt;&amp;#39;Open Conversations/Open Conversation #018 - James Fodor, Causation, Craig and more...-Kj3L8L3vXZI.mp3&amp;#39;]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;album&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;folder&lt;/span&gt;
@@ -196,24 +600,24 @@ Done.
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Output:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;[&amp;#39;Open Conversations - Ep #001&amp;#39;,
-&amp;#39;Open Conversations - Ep #002&amp;#39;,
-&amp;#39;Open Conversations - Ep #003&amp;#39;,
-&amp;#39;Open Conversations - Ep #004&amp;#39;,
-&amp;#39;Open Conversations - Ep #005&amp;#39;,
-&amp;#39;Open Conversations - Ep #006 _ Defining Terms and Open Conversation with JIL&amp;#39;,
-&amp;#39;Open Conversations - Ep #007&amp;#39;,
-&amp;#39;Open Conversations - Ep #008- Socially Distanced New Year Open Hangout - PineCreek, Cam, Erin, Autumn, Rob, etc&amp;#39;,
-&amp;#39;Open Conversations - Ep #009&amp;#39;,
-&amp;#39;Open Conversations - Ep #010&amp;#39;,
-&amp;#39;Open Conversations - Ep #011&amp;#39;,
-&amp;#39;Open Conversations - Ep #012&amp;#39;,
-&amp;#39;Open Conversations - Ep #013&amp;#39;,
-&amp;#39;Open Conversations - Ep #014&amp;#39;,
-&amp;#39;Open Conversations - Ep #015&amp;#39;,
-&amp;#39;Open Conversations - Ep #016&amp;#39;,
-&amp;#39;Open Conversations - Ep #017 - 500 Arguments Against Christianity Aftershow&amp;#39;,
-&amp;#39;Open Conversations - Ep #018 - James Fodor, Causation, Craig and more...&amp;#39;]
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;[&amp;#39;Open Conversations - Ep #001&amp;#39;,&lt;/span&gt;
+&lt;span class="err"&gt;&amp;#39;Open Conversations - Ep #002&amp;#39;,&lt;/span&gt;
+&lt;span class="err"&gt;&amp;#39;Open Conversations - Ep #003&amp;#39;,&lt;/span&gt;
+&lt;span class="err"&gt;&amp;#39;Open Conversations - Ep #004&amp;#39;,&lt;/span&gt;
+&lt;span class="err"&gt;&amp;#39;Open Conversations - Ep #005&amp;#39;,&lt;/span&gt;
+&lt;span class="err"&gt;&amp;#39;Open Conversations - Ep #006 _ Defining Terms and Open Conversation with JIL&amp;#39;,&lt;/span&gt;
+&lt;span class="err"&gt;&amp;#39;Open Conversations - Ep #007&amp;#39;,&lt;/span&gt;
+&lt;span class="err"&gt;&amp;#39;Open Conversations - Ep #008- Socially Distanced New Year Open Hangout - PineCreek, Cam, Erin, Autumn, Rob, etc&amp;#39;,&lt;/span&gt;
+&lt;span class="err"&gt;&amp;#39;Open Conversations - Ep #009&amp;#39;,&lt;/span&gt;
+&lt;span class="err"&gt;&amp;#39;Open Conversations - Ep #010&amp;#39;,&lt;/span&gt;
+&lt;span class="err"&gt;&amp;#39;Open Conversations - Ep #011&amp;#39;,&lt;/span&gt;
+&lt;span class="err"&gt;&amp;#39;Open Conversations - Ep #012&amp;#39;,&lt;/span&gt;
+&lt;span class="err"&gt;&amp;#39;Open Conversations - Ep #013&amp;#39;,&lt;/span&gt;
+&lt;span class="err"&gt;&amp;#39;Open Conversations - Ep #014&amp;#39;,&lt;/span&gt;
+&lt;span class="err"&gt;&amp;#39;Open Conversations - Ep #015&amp;#39;,&lt;/span&gt;
+&lt;span class="err"&gt;&amp;#39;Open Conversations - Ep #016&amp;#39;,&lt;/span&gt;
+&lt;span class="err"&gt;&amp;#39;Open Conversations - Ep #017 - 500 Arguments Against Christianity Aftershow&amp;#39;,&lt;/span&gt;
+&lt;span class="err"&gt;&amp;#39;Open Conversations - Ep #018 - James Fodor, Causation, Craig and more...&amp;#39;]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;strong&gt;NOTE:&lt;/strong&gt; Having the album name in the track title, followed by " - " and the track name seems to be important for the Books app to get the title and tracks right for some reason.&lt;/p&gt;
@@ -271,8 +675,8 @@ Done.
 &lt;li&gt;&lt;a href="https://bblais.github.io/posts/2021/Apr/28/stats-101-examples-with-mcmc-part-2/"&gt;Estimating mean with unknown 𝜎&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;In all of these posts I'm going to use a python library I make for my science-programming class, &lt;a href="https://github.com/bblais/sci378"&gt;stored on github&lt;/a&gt;, and the &lt;a href="https://emcee.readthedocs.io/en/stable/"&gt;emcee&lt;/a&gt; library.  Install like:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pip install &amp;quot;git+git://github.com/bblais/sci378&amp;quot; --upgrade
-pip install emcee
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;pip install &amp;quot;git+git://github.com/bblais/sci378&amp;quot; --upgrade&lt;/span&gt;
+&lt;span class="err"&gt;pip install emcee&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;In this example the data take the form of a number of "successes", &lt;span class="math"&gt;\(h\)&lt;/span&gt;, in a total number of "trials", &lt;span class="math"&gt;\(N\)&lt;/span&gt;, and we want to estimate the proportion, &lt;span class="math"&gt;\(\theta\)&lt;/span&gt;.  This could be the number of heads observed in &lt;span class="math"&gt;\(N\)&lt;/span&gt; coin flips and we want to estimate the bias in the coin -- what is the probability that it flips heads.  In fact, the data I will use below is from &lt;a href="https://www.jstor.org/stable/2683855?seq=1#metadata_info_tab_contents"&gt;Lindley, 1976. "Inference for a Bernoulli Process (A Bayesian View)"&lt;/a&gt;, where he flips a thumbtack which might be able to produce two states pointing "up" or pointing "down", and gets the data UUUDUDUUUUUD (3 D, 9 U).&lt;/p&gt;
@@ -307,18 +711,18 @@ $$&lt;/div&gt;
 &lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot_chains&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;Sampling Prior...
-Done.
-0.27 s
-Running MCMC 1/3...
-Done.
-2.63 s
-Running MCMC 2/3...
-Done.
-2.79 s
-Running MCMC 3/3...
-Done.
-2.47 s
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;Sampling Prior...&lt;/span&gt;
+&lt;span class="err"&gt;Done.&lt;/span&gt;
+&lt;span class="err"&gt;0.27 s&lt;/span&gt;
+&lt;span class="err"&gt;Running MCMC 1/3...&lt;/span&gt;
+&lt;span class="err"&gt;Done.&lt;/span&gt;
+&lt;span class="err"&gt;2.63 s&lt;/span&gt;
+&lt;span class="err"&gt;Running MCMC 2/3...&lt;/span&gt;
+&lt;span class="err"&gt;Done.&lt;/span&gt;
+&lt;span class="err"&gt;2.79 s&lt;/span&gt;
+&lt;span class="err"&gt;Running MCMC 3/3...&lt;/span&gt;
+&lt;span class="err"&gt;Done.&lt;/span&gt;
+&lt;span class="err"&gt;2.47 s&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;img alt="" src="https://bblais.github.io/images/proportion chains.png"&gt;&lt;/p&gt;
@@ -330,7 +734,7 @@ Done.
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;P&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;θ &amp;lt;0.5&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="mf"&gt;0.95485&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;0.95485&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;yes, just as &lt;a href="https://www.jstor.org/stable/2683855?seq=1#metadata_info_tab_contents"&gt;Lindley, 1976 presents.&lt;/a&gt; &lt;/p&gt;
@@ -408,8 +812,8 @@ which matches the equations in the standard textbooks.  Comparing to our case, w
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;</content><category term="math"></category></entry><entry><title>Stats 101 Examples with MCMC Part 2</title><link href="https://bblais.github.io/posts/2021/Apr/28/stats-101-examples-with-mcmc-part-2/" rel="alternate"></link><published>2021-04-28T00:00:00-04:00</published><updated>2021-04-28T00:00:00-04:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2021-04-28:/posts/2021/Apr/28/stats-101-examples-with-mcmc-part-2/</id><summary type="html">&lt;p&gt;This is another in the series of "&lt;em&gt;Statistics 101&lt;/em&gt;" examples solved with MCMC.  The previous in the series &lt;a href="https://bblais.github.io/posts/2021/Apr/15/stats-101-examples-with-mcmc/"&gt;can be found here&lt;/a&gt;.  In all of these posts I'm going to …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This is another in the series of "&lt;em&gt;Statistics 101&lt;/em&gt;" examples solved with MCMC.  The previous in the series &lt;a href="https://bblais.github.io/posts/2021/Apr/15/stats-101-examples-with-mcmc/"&gt;can be found here&lt;/a&gt;.  In all of these posts I'm going to use a python library I make for my science-programming class, &lt;a href="https://github.com/bblais/sci378"&gt;stored on github&lt;/a&gt;, and the &lt;a href="https://emcee.readthedocs.io/en/stable/"&gt;emcee&lt;/a&gt; library.  Install like:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pip install &amp;quot;git+git://github.com/bblais/sci378&amp;quot; --upgrade
-pip install emcee
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;pip install &amp;quot;git+git://github.com/bblais/sci378&amp;quot; --upgrade&lt;/span&gt;
+&lt;span class="err"&gt;pip install emcee&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;In this example, like &lt;a href="https://bblais.github.io/posts/2021/Apr/15/stats-101-examples-with-mcmc/"&gt;the last one&lt;/a&gt;, there is some true value, we call &lt;span class="math"&gt;\(\mu\)&lt;/span&gt;.  The &lt;span class="math"&gt;\(N\)&lt;/span&gt; data points we have, &lt;span class="math"&gt;\(\{x_i\}\)&lt;/span&gt;, consist of that true value with added independent, normally-distributed noise of &lt;em&gt;unknown&lt;/em&gt; scale, &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt;.  &lt;/p&gt;
@@ -453,18 +857,18 @@ known &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt;&lt;/p&gt;
 &lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot_chains&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;Sampling Prior...
-Done.
-0.27 s
-Running MCMC 1/3...
-Done.
-2.63 s
-Running MCMC 2/3...
-Done.
-2.79 s
-Running MCMC 3/3...
-Done.
-2.47 s
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;Sampling Prior...&lt;/span&gt;
+&lt;span class="err"&gt;Done.&lt;/span&gt;
+&lt;span class="err"&gt;0.27 s&lt;/span&gt;
+&lt;span class="err"&gt;Running MCMC 1/3...&lt;/span&gt;
+&lt;span class="err"&gt;Done.&lt;/span&gt;
+&lt;span class="err"&gt;2.63 s&lt;/span&gt;
+&lt;span class="err"&gt;Running MCMC 2/3...&lt;/span&gt;
+&lt;span class="err"&gt;Done.&lt;/span&gt;
+&lt;span class="err"&gt;2.79 s&lt;/span&gt;
+&lt;span class="err"&gt;Running MCMC 3/3...&lt;/span&gt;
+&lt;span class="err"&gt;Done.&lt;/span&gt;
+&lt;span class="err"&gt;2.47 s&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;img alt="" src="https://bblais.github.io/images/μσ chains.png"&gt;&lt;/p&gt;
@@ -507,14 +911,14 @@ Done.
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;P&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;μ&amp;gt;15&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="mf"&gt;0.037066666666666664&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;0.037066666666666664&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;and for &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt;, the Bayesian equivalent to Chi-squared test, &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;P&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;σ&amp;lt;1&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="mf"&gt;0.01985&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;0.01985&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
@@ -579,8 +983,8 @@ Done.
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;</content><category term="math"></category></entry><entry><title>Stats 101 Examples with MCMC</title><link href="https://bblais.github.io/posts/2021/Apr/15/stats-101-examples-with-mcmc/" rel="alternate"></link><published>2021-04-15T00:00:00-04:00</published><updated>2021-04-15T00:00:00-04:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2021-04-15:/posts/2021/Apr/15/stats-101-examples-with-mcmc/</id><summary type="html">&lt;p&gt;I'd like to walk through some of the "&lt;em&gt;Statistics 101&lt;/em&gt;" examples (e.g. estimating &lt;span class="math"&gt;\(\mu\)&lt;/span&gt; with known &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt;, estimating a proportion, etc...) for which we have simple analytical solutions, but …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I'd like to walk through some of the "&lt;em&gt;Statistics 101&lt;/em&gt;" examples (e.g. estimating &lt;span class="math"&gt;\(\mu\)&lt;/span&gt; with known &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt;, estimating a proportion, etc...) for which we have simple analytical solutions, but explore them with &lt;a href="https://www.youtube.com/watch?v=vTUwEu53uzs"&gt;MCMC&lt;/a&gt;.  The reason I want to do this is to introduce MCMC on simple cases, which are not much different than more complicated cases, but are better understood.  The second reason is to explore some cases which are nearly as easy, but are never covered in introductory textbooks.  In all of these I'm going to use a python library I make for my science-programming class, &lt;a href="https://github.com/bblais/sci378"&gt;stored on github&lt;/a&gt;, and the &lt;a href="https://emcee.readthedocs.io/en/stable/"&gt;emcee&lt;/a&gt; library.  Install like:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pip install &amp;quot;git+git://github.com/bblais/sci378&amp;quot; --upgrade
-pip install emcee
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;pip install &amp;quot;git+git://github.com/bblais/sci378&amp;quot; --upgrade&lt;/span&gt;
+&lt;span class="err"&gt;pip install emcee&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;We'll start with the easiest example:  there is some true value, we call &lt;span class="math"&gt;\(\mu\)&lt;/span&gt;.  The &lt;span class="math"&gt;\(N\)&lt;/span&gt; data points we have, &lt;span class="math"&gt;\(\{x_i\}\)&lt;/span&gt;, consist of that true value with added independent, normally-distributed noise of &lt;em&gt;known&lt;/em&gt; scale, &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt;.  &lt;/p&gt;
@@ -612,18 +1016,18 @@ known &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt;&lt;/p&gt;
 &lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot_chains&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;Sampling Prior...
-Done.
-0.21 s
-Running MCMC 1/3...
-Done.
-2.23 s
-Running MCMC 2/3...
-Done.
-2.24 s
-Running MCMC 3/3...
-Done.
-2.51 s
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;Sampling Prior...&lt;/span&gt;
+&lt;span class="err"&gt;Done.&lt;/span&gt;
+&lt;span class="err"&gt;0.21 s&lt;/span&gt;
+&lt;span class="err"&gt;Running MCMC 1/3...&lt;/span&gt;
+&lt;span class="err"&gt;Done.&lt;/span&gt;
+&lt;span class="err"&gt;2.23 s&lt;/span&gt;
+&lt;span class="err"&gt;Running MCMC 2/3...&lt;/span&gt;
+&lt;span class="err"&gt;Done.&lt;/span&gt;
+&lt;span class="err"&gt;2.24 s&lt;/span&gt;
+&lt;span class="err"&gt;Running MCMC 3/3...&lt;/span&gt;
+&lt;span class="err"&gt;Done.&lt;/span&gt;
+&lt;span class="err"&gt;2.51 s&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;img alt="" src="https://bblais.github.io/images/μ chains.png"&gt;&lt;/p&gt;
@@ -646,7 +1050,7 @@ Done.
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;P&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;μ&amp;gt;15&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="mf"&gt;0.037066666666666664&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;0.037066666666666664&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;This simple example can be a template for more complex problems, which I will explore in later posts of this series.  What do you think?&lt;/p&gt;
@@ -721,10 +1125,12 @@ Done.
 &lt;li&gt;&lt;span class="math"&gt;\(r_{\rm end}=0.5 {\rm m}\)&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;then we set up the calculation&lt;/p&gt;
-&lt;div class="math"&gt;\begin{eqnarray}
--G \frac{m_1 m_2}{r_{\rm start}}  + 0 &amp;amp;=&amp;amp; -G \frac{m_1 m_2}{r_{\rm end}} + \frac{1}{2} m_1 v^2 + \frac{1}{2} m_2 v^2  \\
- \frac{1}{2} (100 {\rm kg}+100 {\rm kg}) v^2 &amp;amp;=&amp;amp; -6.7\times 10^{-11} \left[\frac{{\rm J}{\rm m}}{{\rm kg}^2}\right]\frac{100 {\rm kg} \cdot 100 {\rm kg}}{3 {\rm m}} - \left( -6.7\times 10^{-11} \left[\frac{{\rm J}{\rm m}}{{\rm kg}^2}\right]\frac{100 {\rm kg} \cdot 100 {\rm kg}}{0.5 {\rm m}}\right)
-\end{eqnarray}&lt;/div&gt;
+&lt;div class="math"&gt;$$
+\begin{aligned}
+-G \frac{m_1 m_2}{r_{\rm start}}  + 0 &amp;amp;= -G \frac{m_1 m_2}{r_{\rm end}} + \frac{1}{2} m_1 v^2 + \frac{1}{2} m_2 v^2  \\
+ \frac{1}{2} (100 {\rm kg}+100 {\rm kg}) v^2 &amp;amp;= -6.7\times 10^{-11} \left[\frac{{\rm J}{\rm m}}{{\rm kg}^2}\right]\frac{100 {\rm kg} \cdot 100 {\rm kg}}{3 {\rm m}} - \left( -6.7\times 10^{-11} \left[\frac{{\rm J}{\rm m}}{{\rm kg}^2}\right]\frac{100 {\rm kg} \cdot 100 {\rm kg}}{0.5 {\rm m}}\right)
+\end{aligned}
+$$&lt;/div&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;In&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt; &lt;span class="n"&gt;G&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;6.7e-11&lt;/span&gt;
 
 &lt;span class="n"&gt;In&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt; &lt;span class="n"&gt;m1&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;
@@ -739,10 +1145,12 @@ Done.
 &lt;span class="n"&gt;Out&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;12&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt; &lt;span class="mf"&gt;1.1166666666666668e-06&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;div class="math"&gt;\begin{eqnarray}
+&lt;div class="math"&gt;$$
+\begin{aligned}
 \frac{1}{2} (100 {\rm kg}+100 {\rm kg}) v^2 &amp;amp;=&amp;amp; 1.12 \times 10^{-6} {\rm J} \\
 v&amp;amp;=&amp;amp;1.1\times 10^{-4} {\rm m}/{\rm s} 
-\end{eqnarray}&lt;/div&gt;
+\end{aligned}
+$$&lt;/div&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;In&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;13&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt; &lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;sqrt&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="mf"&gt;1.12e-6&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;m1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;m2&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
 
 &lt;span class="n"&gt;In&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;14&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt; &lt;span class="n"&gt;v&lt;/span&gt;
@@ -750,10 +1158,12 @@ v&amp;amp;=&amp;amp;1.1\times 10^{-4} {\rm m}/{\rm s}
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Assuming a constant acceleration, for each person to travel half of the 2.5 m distance separation, would be&lt;/p&gt;
-&lt;div class="math"&gt;\begin{eqnarray}
+&lt;div class="math"&gt;$$
+\begin{aligned}
 \frac{v_{\rm final}}{2} &amp;amp;=&amp;amp; \frac{2.5 {\rm m}}{t} \\
 t&amp;amp;=&amp;amp; 45000 {\rm s} = 12 {\rm hr}
-\end{eqnarray}&lt;/div&gt;
+\end{aligned}
+$$&lt;/div&gt;
 &lt;p&gt;which is much shorter time than I was expecting!  &lt;/p&gt;
 &lt;p&gt;Not being satisfied, I implemented it in [pyndamics3]&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;pyndamics3&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;
@@ -1038,8 +1448,8 @@ which matches the form of &lt;span class="math"&gt;\(R_o\)&lt;/span&gt;.&lt;/p&g
 &lt;span class="n"&gt;soln&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;[-asin(sqrt(2)*v*sqrt(1/(g*h + v**2))/2),
- asin(sqrt(2)*v*sqrt(1/(g*h + v**2))/2)]
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;[-asin(sqrt(2)*v*sqrt(1/(g*h + v**2))/2),&lt;/span&gt;
+&lt;span class="err"&gt; asin(sqrt(2)*v*sqrt(1/(g*h + v**2))/2)]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;sin_θ_at_max&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;sym&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sqrt&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;sym&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sqrt&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;g&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;h&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;
@@ -1247,7 +1657,7 @@ $$&lt;/div&gt;
 &lt;p&gt;&lt;img alt="png" src="https://bblais.github.io/images/AP20/output_26_1.png"&gt;&lt;/p&gt;
 &lt;p&gt;Here's an example with decreasing with angle.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;  &lt;span class="c1"&gt;# true value&lt;/span&gt;
-&lt;span class="n"&gt;x0&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;.4&lt;/span&gt;
+&lt;span class="n"&gt;x0&lt;/span&gt;&lt;span class="o"&gt;=.&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;
 &lt;span class="n"&gt;m&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;0.01&lt;/span&gt;
 &lt;span class="n"&gt;h&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;20&lt;/span&gt;
 &lt;span class="n"&gt;g&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;
@@ -1479,21 +1889,21 @@ $$&lt;/div&gt;
 &lt;/ul&gt;
 &lt;p&gt;This provides a level of control that is hard to match.  &lt;/p&gt;
 &lt;p&gt;To make the theme, as shown in the docs, you need to just make the following files&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;  ├── &lt;span class="nv"&gt;static&lt;/span&gt;
-  │   ├── &lt;span class="nv"&gt;css&lt;/span&gt;
-  │   └── &lt;span class="nv"&gt;images&lt;/span&gt;
-  └── &lt;span class="nv"&gt;templates&lt;/span&gt;
-      ├── &lt;span class="nv"&gt;archives&lt;/span&gt;.&lt;span class="nv"&gt;html&lt;/span&gt;         &lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="nv"&gt;to&lt;/span&gt; &lt;span class="nv"&gt;display&lt;/span&gt; &lt;span class="nv"&gt;archives&lt;/span&gt;
-      ├── &lt;span class="nv"&gt;period_archives&lt;/span&gt;.&lt;span class="nv"&gt;html&lt;/span&gt;  &lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="nv"&gt;to&lt;/span&gt; &lt;span class="nv"&gt;display&lt;/span&gt; &lt;span class="nv"&gt;time&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nv"&gt;period&lt;/span&gt; &lt;span class="nv"&gt;archives&lt;/span&gt;
-      ├── &lt;span class="nv"&gt;article&lt;/span&gt;.&lt;span class="nv"&gt;html&lt;/span&gt;          &lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="nv"&gt;processed&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nv"&gt;each&lt;/span&gt; &lt;span class="nv"&gt;article&lt;/span&gt;
-      ├── &lt;span class="nv"&gt;author&lt;/span&gt;.&lt;span class="nv"&gt;html&lt;/span&gt;           &lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="nv"&gt;processed&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nv"&gt;each&lt;/span&gt; &lt;span class="nv"&gt;author&lt;/span&gt;
-      ├── &lt;span class="nv"&gt;authors&lt;/span&gt;.&lt;span class="nv"&gt;html&lt;/span&gt;          &lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="nv"&gt;must&lt;/span&gt; &lt;span class="nv"&gt;list&lt;/span&gt; &lt;span class="nv"&gt;all&lt;/span&gt; &lt;span class="nv"&gt;the&lt;/span&gt; &lt;span class="nv"&gt;authors&lt;/span&gt;
-      ├── &lt;span class="nv"&gt;categories&lt;/span&gt;.&lt;span class="nv"&gt;html&lt;/span&gt;       &lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="nv"&gt;must&lt;/span&gt; &lt;span class="nv"&gt;list&lt;/span&gt; &lt;span class="nv"&gt;all&lt;/span&gt; &lt;span class="nv"&gt;the&lt;/span&gt; &lt;span class="nv"&gt;categories&lt;/span&gt;
-      ├── &lt;span class="nv"&gt;category&lt;/span&gt;.&lt;span class="nv"&gt;html&lt;/span&gt;         &lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="nv"&gt;processed&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nv"&gt;each&lt;/span&gt; &lt;span class="nv"&gt;category&lt;/span&gt;
-      ├── &lt;span class="nv"&gt;index&lt;/span&gt;.&lt;span class="nv"&gt;html&lt;/span&gt;            &lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="nv"&gt;the&lt;/span&gt; &lt;span class="nv"&gt;index&lt;/span&gt; &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;list&lt;/span&gt; &lt;span class="nv"&gt;all&lt;/span&gt; &lt;span class="nv"&gt;the&lt;/span&gt; &lt;span class="nv"&gt;articles&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt;
-      ├── &lt;span class="nv"&gt;page&lt;/span&gt;.&lt;span class="nv"&gt;html&lt;/span&gt;             &lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="nv"&gt;processed&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nv"&gt;each&lt;/span&gt; &lt;span class="nv"&gt;page&lt;/span&gt;
-      ├── &lt;span class="nv"&gt;tag&lt;/span&gt;.&lt;span class="nv"&gt;html&lt;/span&gt;              &lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="nv"&gt;processed&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nv"&gt;each&lt;/span&gt; &lt;span class="nv"&gt;tag&lt;/span&gt;
-      └── &lt;span class="nv"&gt;tags&lt;/span&gt;.&lt;span class="nv"&gt;html&lt;/span&gt;             &lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="nv"&gt;must&lt;/span&gt; &lt;span class="nv"&gt;list&lt;/span&gt; &lt;span class="nv"&gt;all&lt;/span&gt; &lt;span class="nv"&gt;the&lt;/span&gt; &lt;span class="nv"&gt;tags&lt;/span&gt;. &lt;span class="nv"&gt;Can&lt;/span&gt; &lt;span class="nv"&gt;be&lt;/span&gt; &lt;span class="nv"&gt;a&lt;/span&gt; &lt;span class="nv"&gt;tag&lt;/span&gt; &lt;span class="nv"&gt;cloud&lt;/span&gt;.
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;  ├── static&lt;/span&gt;
+&lt;span class="err"&gt;  │   ├── css&lt;/span&gt;
+&lt;span class="err"&gt;  │   └── images&lt;/span&gt;
+&lt;span class="err"&gt;  └── templates&lt;/span&gt;
+&lt;span class="err"&gt;      ├── archives.html         // to display archives&lt;/span&gt;
+&lt;span class="err"&gt;      ├── period_archives.html  // to display time-period archives&lt;/span&gt;
+&lt;span class="err"&gt;      ├── article.html          // processed for each article&lt;/span&gt;
+&lt;span class="err"&gt;      ├── author.html           // processed for each author&lt;/span&gt;
+&lt;span class="err"&gt;      ├── authors.html          // must list all the authors&lt;/span&gt;
+&lt;span class="err"&gt;      ├── categories.html       // must list all the categories&lt;/span&gt;
+&lt;span class="err"&gt;      ├── category.html         // processed for each category&lt;/span&gt;
+&lt;span class="err"&gt;      ├── index.html            // the index (list all the articles)&lt;/span&gt;
+&lt;span class="err"&gt;      ├── page.html             // processed for each page&lt;/span&gt;
+&lt;span class="err"&gt;      ├── tag.html              // processed for each tag&lt;/span&gt;
+&lt;span class="err"&gt;      └── tags.html             // must list all the tags. Can be a tag cloud.&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Starting from the free web template, I break off the parts that are included in all of the files and put it in &lt;code&gt;base.html&lt;/code&gt;, copying the &lt;a href="https://jinja.palletsprojects.com/en/2.11.x/"&gt;Jinja&lt;/a&gt; parts from a pelican theme.  Like,&lt;/p&gt;
@@ -2550,7 +2960,7 @@ and Environmental Degradation: Exploring Models and Questioning the Existence of
 &lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;li&gt;Blais, B.S. and Cooper, L.N 2008. &lt;a href="http://www.scholarpedia.org/article/BCM_theory"&gt;BCM Theory&lt;/a&gt; . &lt;em&gt;Scholarpedia&lt;/em&gt; 3(3):1570.&lt;blockquote&gt;
-&lt;p&gt;BCM (Bienenstock et al., 1982) refers to the theory of synaptic modification first proposed by Elie Bienenstock, Leon Cooper, and Paul Munro in 1982 to account for experiments measuring the selectivity of neurons in primary sensory [8]cortex and its dependency on neuronal input. It is characterized by a rule expressing synaptic change as a Hebb-like product of the presynaptic activity and a nonlinear function, \phi(y;\theta_M) , of postsynatic activity, y. For low values of the postsynaptic activity ( y&amp;lt;\theta_M ), \phi is negative; for y&amp;gt;\theta_M , \phi is positive. The rule is stabilized by allowing the modification threshold, \theta_M , to vary as a super-linear function of the previous activity of the cell. Unlike traditional methods of stabilizing Hebbian learning, this "sliding threshold" provides a mechanism for incoming patterns, as opposed to converging afferents, to compete. A detailed exploration can be found in the book Theory of Cortical Plasticity (Cooper et al., 2004). For an open-source implementation of the BCM, amongst other synaptic modification rules, see the Plasticity package&lt;a href="http://plasticity.googlecode.com/"&gt;[1]&lt;/a&gt; .&lt;/p&gt;
+&lt;p&gt;BCM (Bienenstock et al., 1982) refers to the theory of synaptic modification first proposed by Elie Bienenstock, Leon Cooper, and Paul Munro in 1982 to account for experiments measuring the selectivity of neurons in primary sensory [8]cortex and its dependency on neuronal input. It is characterized by a rule expressing synaptic change as a Hebb-like product of the presynaptic activity and a nonlinear function, \phi(y;\theta_M) , of postsynatic activity, y. For low values of the postsynaptic activity ( y&amp;lt;\theta_M ), \phi is negative; for y&amp;gt;\theta_M , \phi is positive. The rule is stabilized by allowing the modification threshold, \theta_M , to vary as a super-linear function of the previous activity of the cell. Unlike traditional methods of stabilizing Hebbian learning, this "sliding threshold" provides a mechanism for incoming patterns, as opposed to converging afferents, to compete. A detailed exploration can be found in the book Theory of Cortical Plasticity (Cooper et al., 2004). For an open-source implementation of the BCM, amongst other synaptic modification rules, see the Plasticity package1(&lt;a href="http://plasticity.googlecode.com/"&gt;http://plasticity.googlecode.com/&lt;/a&gt;) .&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Shouval, H.Z, Gavornik, J. P., Shuler, M., Bear, M. F., and Blais, B.S. 2007. &lt;a href="http://web.bryant.edu/~bblais/pdf/CRCNS07.pdf"&gt;Learning Reward Timing using Reinforced Expression of Synaptic Plasticity&lt;/a&gt;  In &lt;em&gt;Collaborative Research in Computational Neuroscience (CRCNS) Conference&lt;/em&gt;.&lt;/p&gt;&lt;blockquote&gt;
@@ -3450,15 +3860,15 @@ S^2&amp;amp;=&amp;amp; \frac{1}{(N-1)}\sum_{k=1}^{N} (x_k-\bar{x})^2
 &lt;h2 id="anything-with-the-cauchy-distribution"&gt;Anything with the Cauchy distribution&lt;/h2&gt;
 &lt;p&gt;There is one final category of problems in the comparison with Bayesian and Frequentist methods. &lt;/p&gt;
 &lt;p&gt;Imagine we have a lighthouse which is off shore some known distance, B, and is located along the shore at some unknown location &lt;span class="math"&gt;\(x=a\)&lt;/span&gt;:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;         (lighthouse)
-               *          ---
-                           ^
-                           |
-                           B
-                           |
-                           V
-————shore——————+——————————————————————&amp;gt;  x
-              x=a
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;         (lighthouse)&lt;/span&gt;
+&lt;span class="err"&gt;               *          ---&lt;/span&gt;
+&lt;span class="err"&gt;                           ^&lt;/span&gt;
+&lt;span class="err"&gt;                           |&lt;/span&gt;
+&lt;span class="err"&gt;                           B&lt;/span&gt;
+&lt;span class="err"&gt;                           |&lt;/span&gt;
+&lt;span class="err"&gt;                           V&lt;/span&gt;
+&lt;span class="err"&gt;————shore——————+——————————————————————&amp;gt;  x&lt;/span&gt;
+&lt;span class="err"&gt;              x=a&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;we want to estimate the location (“a”) from a series of locations of flashes on the shore - the lighthouse is spinning around and flashing at random times.  We can only observe where the flash lands on the shore, not the direction it came from.   The data is, for example, the locations of these 10 flashes:&lt;/p&gt;
@@ -4320,7 +4730,7 @@ P(I|S) &amp;amp;=&amp;amp; \int_0^1 \frac{1/2 \cdot q}{1/2\cdot q + 1/4\cdot (1-
 &lt;span class="n"&gt;dq&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;q&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;q&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;span class="n"&gt;pq&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pdf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;q&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
-&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;sum&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;0.5&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;q&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;.5&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;q&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mf"&gt;.25&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;q&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;pq&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;dq&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;sum&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;0.5&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;q&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;q&lt;/span&gt;&lt;span class="o"&gt;+.&lt;/span&gt;&lt;span class="mi"&gt;25&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;q&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;pq&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;dq&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="nb"&gt;print&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -4336,7 +4746,7 @@ P(I|S) &amp;amp;=&amp;amp; \int_0^1 \frac{1/2 \cdot q}{1/2\cdot q + 1/4\cdot (1-
 &lt;span class="n"&gt;dq&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;q&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;q&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;span class="n"&gt;pq&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pdf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;q&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
-&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;sum&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;0.5&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;q&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;.5&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;q&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mf"&gt;.25&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;q&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;pq&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;dq&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;sum&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;0.5&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;q&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;q&lt;/span&gt;&lt;span class="o"&gt;+.&lt;/span&gt;&lt;span class="mi"&gt;25&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;q&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;pq&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;dq&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="nb"&gt;print&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -5666,23 +6076,23 @@ $$&lt;/div&gt;
 &lt;p&gt;My guess is "no", but why?  The &lt;em&gt;likelihood&lt;/em&gt; (i.e. how well the hypothesis supports the data) is exceptionally high. Higher, I'd say, than nearly any other hypothesis.  Actually, now that I think about it, the hypothesis "aliens that like the number 12 and influence octopi made it happen" is a better one.  These are clearly ridiculous because they are &lt;em&gt;implausible&lt;/em&gt; to start, and thus have a lower &lt;em&gt;prior probability&lt;/em&gt;.  In fact Bayesianism is asking the only interesting question, and it provides the framework to actually compare hypotheses, something that frequentist methods fail spectacularly at.&lt;/p&gt;
 &lt;p&gt;Greg Mayer is a Bayesian, he just fails to admit it.&lt;/p&gt;</content><category term="articles"></category></entry><entry><title>Superseding the $t$ test</title><link href="https://bblais.github.io/posts/2015/Apr/23/superseding-the-t-test/" rel="alternate"></link><published>2015-04-23T00:00:00-04:00</published><updated>2015-04-23T00:00:00-04:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2015-04-23:/posts/2015/Apr/23/superseding-the-t-test/</id><summary type="html">&lt;p&gt;There's a very nice paper, &lt;a href="http://www.indiana.edu/~kruschke/articles/Kruschke2013JEPG.pdf"&gt;Bayesian estimation supersedes the t test&lt;/a&gt;. John K. Kruschke, Journal of Experimental Psychology: General, 2013, v.142(2), pp.573-603. The methods described provide at …&lt;/p&gt;</summary><content type="html">&lt;p&gt;There's a very nice paper, &lt;a href="http://www.indiana.edu/~kruschke/articles/Kruschke2013JEPG.pdf"&gt;Bayesian estimation supersedes the t test&lt;/a&gt;. John K. Kruschke, Journal of Experimental Psychology: General, 2013, v.142(2), pp.573-603. The methods described provide at once posterior probabilities not just for the means of two groups, but their standard deviations, their normality, and effect size.  The &lt;a href="http://www.indiana.edu/~kruschke/BEST/"&gt;supporting website&lt;/a&gt; has a lot of useful resources, including a number of implementations.  The original implementation is in R, but there is a &lt;a href="https://github.com/strawlab/best"&gt;Python implementation using PyMC&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;I decided to implement the same thing using the &lt;a href="http://dan.iel.fm/emcee/current/"&gt;emcee package&lt;/a&gt;.  The full implementation is &lt;a href="http://nbviewer.ipython.org/gist/bblais/7a1c6ec3b4c8d1b0465f"&gt;viewable here&lt;/a&gt;.  My implementation is pretty general, and can handle some arbitrary tests of the variables, like:&lt;/p&gt;
-&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
-&lt;span class="normal"&gt;2&lt;/span&gt;
-&lt;span class="normal"&gt;3&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;P&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;(mu1&amp;gt;101) &amp;amp; (mu1&amp;lt;102.1)&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2
+3&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;P&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;(mu1&amp;gt;101) &amp;amp; (mu1&amp;lt;102.1)&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
 &lt;span class="mf"&gt;0.85502222222222224&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;p&gt;and&lt;/p&gt;
-&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
-&lt;span class="normal"&gt;2&lt;/span&gt;
-&lt;span class="normal"&gt;3&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;P&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;sigma1&amp;lt;sigma2&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2
+3&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;P&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;sigma1&amp;lt;sigma2&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
 &lt;span class="mf"&gt;0.0060111111111111112&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;p&gt;and&lt;/p&gt;
-&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot_distribution&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Effect Size=(mu1-mu2)/sqrt((sigma1**2+sigma2**2)/2)&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot_distribution&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Effect Size=(mu1-mu2)/sqrt((sigma1**2+sigma2**2)/2)&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;p&gt;&lt;img alt="effectsize" src="images/effect_size.png"&gt;&lt;/p&gt;
@@ -9369,15 +9779,15 @@ it right, but I wanted to make sure. The math is&lt;/p&gt;
 P=P_o e^{rt}  
 $$&lt;/div&gt;
 &lt;p&gt;The code is:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;r=0.00456
-t=4500.0
-Po=8.0
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;00456&lt;/span&gt;
+&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;4500&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;span class="n"&gt;Po&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;
 
-print Po*exp(r*t)/1e9,&amp;quot;billion&amp;quot;
+&lt;span class="n"&gt;print&lt;/span&gt; &lt;span class="n"&gt;Po&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;exp&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="n"&gt;e9&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;billion&amp;quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Yielding&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="mf"&gt;6.52849018681&lt;/span&gt; &lt;span class="n"&gt;billion&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;6.52849018681 billion&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;The other direction is, how long ago were there only 8 people?&lt;/p&gt;
@@ -9387,16 +9797,16 @@ P(t)&amp;amp;=&amp;amp;P_o \times e^{r\cdot t} \\\\
 t&amp;amp;=&amp;amp; \frac{\log(P(t))-\log(P_o)}{r}  
 \end{eqnarray}&lt;/div&gt;
 &lt;p&gt;or&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;Po=6.5e9  # current population
-r=0.00456
-P=8       # target population
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;Po&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="n"&gt;e9&lt;/span&gt;  &lt;span class="o"&gt;#&lt;/span&gt; &lt;span class="k"&gt;current&lt;/span&gt; &lt;span class="n"&gt;population&lt;/span&gt;
+&lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;00456&lt;/span&gt;
+&lt;span class="n"&gt;P&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt;       &lt;span class="o"&gt;#&lt;/span&gt; &lt;span class="n"&gt;target&lt;/span&gt; &lt;span class="n"&gt;population&lt;/span&gt;
 
-t=(log(P)-log(Po))/r 
-print t, &amp;quot;years&amp;quot;
+&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;P&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Po&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;r&lt;/span&gt; 
+&lt;span class="n"&gt;print&lt;/span&gt; &lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ss"&gt;&amp;quot;years&amp;quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;resulting in&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;-4499.04089302 years.
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;-4499.04089302 years.&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h2 id="is-their-growth-rate-correct"&gt;Is their growth rate correct?&lt;/h2&gt;
@@ -11141,11 +11551,11 @@ this data, the best fit is&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Fig2" src="http://brianblais.files.wordpress.com/2013/02/fig2.png" title="fig2.png"&gt;&lt;/p&gt;
 &lt;p&gt;Overall, not a bad looking fit. However, if we fit to a 10-th power
 polynomial, we can get even better!&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;            10          9          8         7         6         5
--0.0007039 x  + 0.0363 x - 0.8051 x + 10.04 x - 77.13 x + 376.5 x
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;            &lt;span class="mi"&gt;10&lt;/span&gt;          &lt;span class="mi"&gt;9&lt;/span&gt;          &lt;span class="mi"&gt;8&lt;/span&gt;         &lt;span class="mi"&gt;7&lt;/span&gt;         &lt;span class="mi"&gt;6&lt;/span&gt;         &lt;span class="mi"&gt;5&lt;/span&gt;
+&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0007039&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;  &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0363&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;8051&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;04&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="mi"&gt;77&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;13&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;376&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;
 
-         4        3        2
- - 1159 x + 2152 x - 2163 x + 891.8 x - 12.54
+         &lt;span class="mi"&gt;4&lt;/span&gt;        &lt;span class="mi"&gt;3&lt;/span&gt;        &lt;span class="mi"&gt;2&lt;/span&gt;
+ &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="mi"&gt;1159&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;2152&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="mi"&gt;2163&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;891&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="mi"&gt;12&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;54&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;with a Mean Squared Error of Zero!!!&lt;/p&gt;
@@ -18094,7 +18504,7 @@ particularly unintuitive.&lt;/p&gt;
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;random&lt;/span&gt;
 &lt;span class="n"&gt;turn&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;
 &lt;span class="n"&gt;win&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;
-&lt;span class="n"&gt;human&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;False&lt;/span&gt;
+&lt;span class="n"&gt;human&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;False&lt;/span&gt;
 
 &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="n"&gt;turn&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="mi"&gt;500&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
 
@@ -18124,15 +18534,15 @@ particularly unintuitive.&lt;/p&gt;
             &lt;span class="n"&gt;your_second_answer&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;door_choices&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 
     &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;your_second_answer&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="n"&gt;prize&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-        &lt;span class="nb"&gt;print&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;You win!&amp;quot;&lt;/span&gt;
+        &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;You win!&amp;quot;&lt;/span&gt;
         &lt;span class="n"&gt;win&lt;/span&gt;&lt;span class="o"&gt;+=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
     &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-        &lt;span class="nb"&gt;print&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;You Lose!&amp;quot;&lt;/span&gt;
+        &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;You Lose!&amp;quot;&lt;/span&gt;
 
     &lt;span class="n"&gt;turn&lt;/span&gt;&lt;span class="o"&gt;+=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
 
 
-&lt;span class="nb"&gt;print&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Winning percentage: &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="nb"&gt;float&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;win&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;turn&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Winning percentage: &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="nb"&gt;float&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;win&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;turn&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="wordpress_migration"></category></entry><entry><title>Frequentist thinking, or just bad math?</title><link href="https://bblais.github.io/posts/2009/Sep/10/frequentist-thinking-or-just-bad-math/" rel="alternate"></link><published>2009-09-10T01:25:00-04:00</published><updated>2009-09-10T01:25:00-04:00</updated><author><name>brianblais</name></author><id>tag:bblais.github.io,2009-09-10:/posts/2009/Sep/10/frequentist-thinking-or-just-bad-math/</id><summary type="html">&lt;p&gt;In Steven Pinker's excellent book "How the Mind Works", he describes how
 people are bad at probability assessments, but are much better at
 frequency assessments (pg 348). It almost comes …&lt;/p&gt;</summary><content type="html">&lt;p&gt;In Steven Pinker's excellent book "How the Mind Works", he describes how

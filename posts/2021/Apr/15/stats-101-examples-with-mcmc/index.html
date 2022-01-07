@@ -60,8 +60,8 @@
 
 
 									<p>I'd like to walk through some of the "<em>Statistics 101</em>" examples (e.g. estimating <span class="math">\(\mu\)</span> with known <span class="math">\(\sigma\)</span>, estimating a proportion, etc...) for which we have simple analytical solutions, but explore them with <a href="https://www.youtube.com/watch?v=vTUwEu53uzs">MCMC</a>.  The reason I want to do this is to introduce MCMC on simple cases, which are not much different than more complicated cases, but are better understood.  The second reason is to explore some cases which are nearly as easy, but are never covered in introductory textbooks.  In all of these I'm going to use a python library I make for my science-programming class, <a href="https://github.com/bblais/sci378">stored on github</a>, and the <a href="https://emcee.readthedocs.io/en/stable/">emcee</a> library.  Install like:</p>
-<div class="highlight"><pre><span></span><code>pip install &quot;git+git://github.com/bblais/sci378&quot; --upgrade
-pip install emcee
+<div class="highlight"><pre><span></span><code><span class="err">pip install &quot;git+git://github.com/bblais/sci378&quot; --upgrade</span>
+<span class="err">pip install emcee</span>
 </code></pre></div>
 
 <p>We'll start with the easiest example:  there is some true value, we call <span class="math">\(\mu\)</span>.  The <span class="math">\(N\)</span> data points we have, <span class="math">\(\{x_i\}\)</span>, consist of that true value with added independent, normally-distributed noise of <em>known</em> scale, <span class="math">\(\sigma\)</span>.  </p>
@@ -93,18 +93,18 @@ known <span class="math">\(\sigma\)</span></p>
 <span class="n">model</span><span class="o">.</span><span class="n">plot_chains</span><span class="p">()</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code>Sampling Prior...
-Done.
-0.21 s
-Running MCMC 1/3...
-Done.
-2.23 s
-Running MCMC 2/3...
-Done.
-2.24 s
-Running MCMC 3/3...
-Done.
-2.51 s
+<div class="highlight"><pre><span></span><code><span class="err">Sampling Prior...</span>
+<span class="err">Done.</span>
+<span class="err">0.21 s</span>
+<span class="err">Running MCMC 1/3...</span>
+<span class="err">Done.</span>
+<span class="err">2.23 s</span>
+<span class="err">Running MCMC 2/3...</span>
+<span class="err">Done.</span>
+<span class="err">2.24 s</span>
+<span class="err">Running MCMC 3/3...</span>
+<span class="err">Done.</span>
+<span class="err">2.51 s</span>
 </code></pre></div>
 
 <p><img alt="" src="https://bblais.github.io/images/μ chains.png"></p>
@@ -127,7 +127,7 @@ Done.
 <div class="highlight"><pre><span></span><code><span class="n">model</span><span class="o">.</span><span class="n">P</span><span class="p">(</span><span class="s1">&#39;μ&gt;15&#39;</span><span class="p">)</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="mf">0.037066666666666664</span>
+<div class="highlight"><pre><span></span><code><span class="err">0.037066666666666664</span>
 </code></pre></div>
 
 <p>This simple example can be a template for more complex problems, which I will explore in later posts of this series.  What do you think?</p>
@@ -248,7 +248,7 @@ Done.
                                             <li><a href="https://bblais.github.io/category/programming.html">programming <span>(4)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/projects.html">projects <span>(4)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/religion.html">religion <span>(11)</span></a></li>
-                                            <li><a href="https://bblais.github.io/category/science.html">science <span>(7)</span></a></li>
+                                            <li><a href="https://bblais.github.io/category/science.html">science <span>(8)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/unbelievable-project.html">Unbelievable Project <span>(19)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/wordpress_migration.html">wordpress_migration <span>(160)</span></a></li>
      
