@@ -427,15 +427,17 @@ So, Gillespie follows by&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://bblais.github.io/posts/2021/Apr/15/stats-101-examples-with-mcmc/"&gt;Estimating mean with known 𝜎&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://bblais.github.io/posts/2021/Apr/28/stats-101-examples-with-mcmc-part-2/"&gt;Estimating mean with unknown 𝜎&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://bblais.github.io/posts/2021/May/13/stats-101-examples-with-mcmc-part-3/"&gt;Estimating a proportion …&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;This is another in the series of "&lt;em&gt;Statistics 101&lt;/em&gt;" examples solved with MCMC.  Others in the series:&lt;/p&gt;
+&lt;li&gt;&lt;a href="https://bblais.github.io/posts/2021/May/13/stats-101-examples-with-mcmc-part-3/"&gt;Estimating a proportion&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In all …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This is another in the series of "&lt;em&gt;Statistics 101&lt;/em&gt;" examples solved with MCMC.  Others in the series:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://bblais.github.io/posts/2021/Apr/15/stats-101-examples-with-mcmc/"&gt;Estimating mean with known 𝜎&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://bblais.github.io/posts/2021/Apr/28/stats-101-examples-with-mcmc-part-2/"&gt;Estimating mean with unknown 𝜎&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://bblais.github.io/posts/2021/May/13/stats-101-examples-with-mcmc-part-3/"&gt;Estimating a proportion&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;In all of these posts I'm going to use a python library I make for my science-programming class, &lt;a href="https://github.com/bblais/sci378"&gt;stored on github&lt;/a&gt;, and the &lt;a href="https://emcee.readthedocs.io/en/stable/"&gt;emcee&lt;/a&gt; library.  Install like:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;pip install &amp;quot;git+git://github.com/bblais/sci378&amp;quot; --upgrade&lt;/span&gt;
-&lt;span class="err"&gt;pip install emcee&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pip install &amp;quot;git+git://github.com/bblais/sci378&amp;quot; --upgrade
+pip install emcee
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;In this example, like &lt;a href="https://bblais.github.io/posts/2021/Apr/15/stats-101-examples-with-mcmc/"&gt;another  one in the series&lt;/a&gt;, there is some true value, we call &lt;span class="math"&gt;\(x_o\)&lt;/span&gt;.  The &lt;span class="math"&gt;\(N\)&lt;/span&gt; data points we have, &lt;span class="math"&gt;\(\{x_i\}\)&lt;/span&gt;, consist of that true value drawn from a particular distribution, in this case the &lt;a href="https://en.wikipedia.org/wiki/Cauchy_distribution"&gt;Cauchy distribution&lt;/a&gt;:&lt;/p&gt;
@@ -464,18 +466,18 @@ $$&lt;/div&gt;
 &lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot_chains&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;Sampling Prior...&lt;/span&gt;
-&lt;span class="err"&gt;Done.&lt;/span&gt;
-&lt;span class="err"&gt;0.43 s&lt;/span&gt;
-&lt;span class="err"&gt;Running MCMC 1/3...&lt;/span&gt;
-&lt;span class="err"&gt;Done.&lt;/span&gt;
-&lt;span class="err"&gt;3.74 s&lt;/span&gt;
-&lt;span class="err"&gt;Running MCMC 2/3...&lt;/span&gt;
-&lt;span class="err"&gt;Done.&lt;/span&gt;
-&lt;span class="err"&gt;3.61 s&lt;/span&gt;
-&lt;span class="err"&gt;Running MCMC 3/3...&lt;/span&gt;
-&lt;span class="err"&gt;Done.&lt;/span&gt;
-&lt;span class="err"&gt;3.66 s&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;Sampling Prior...
+Done.
+0.43 s
+Running MCMC 1/3...
+Done.
+3.74 s
+Running MCMC 2/3...
+Done.
+3.61 s
+Running MCMC 3/3...
+Done.
+3.66 s
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;img alt="" src="https://bblais.github.io/images/Pasted image 20210731115421.png"&gt;&lt;/p&gt;
@@ -567,24 +569,24 @@ $$&lt;/div&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Output:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;[&amp;#39;Open Conversations/Open Conversation #001-vCEu612_tbc.mp3&amp;#39;,&lt;/span&gt;
-&lt;span class="err"&gt;&amp;#39;Open Conversations/Open Conversation #002-DW6LTgzxI2c.mp3&amp;#39;,&lt;/span&gt;
-&lt;span class="err"&gt;&amp;#39;Open Conversations/Open Conversation #003-yxF3OJpLW8w.mp3&amp;#39;,&lt;/span&gt;
-&lt;span class="err"&gt;&amp;#39;Open Conversations/Open Conversation #004-kBSczog9hjY.mp3&amp;#39;,&lt;/span&gt;
-&lt;span class="err"&gt;&amp;#39;Open Conversations/Open Conversation #005-Ba9JeLKLx4M.mp3&amp;#39;,&lt;/span&gt;
-&lt;span class="err"&gt;&amp;#39;Open Conversations/Open Conversation #006 _ Defining Terms and Open Conversation with JIL-ypzf9gCPMW4.mp3&amp;#39;,&lt;/span&gt;
-&lt;span class="err"&gt;&amp;#39;Open Conversations/Open Conversation #007-mrzHt60jaJ0.mp3&amp;#39;,&lt;/span&gt;
-&lt;span class="err"&gt;&amp;#39;Open Conversations/Open Conversation #008- Socially Distanced New Year Open Hangout - PineCreek, Cam, Erin, Autumn, Rob, etc-8yGK_yh-CTY.mp3&amp;#39;,&lt;/span&gt;
-&lt;span class="err"&gt;&amp;#39;Open Conversations/Open Conversation #009-T-V0VnGG_FI.mp3&amp;#39;,&lt;/span&gt;
-&lt;span class="err"&gt;&amp;#39;Open Conversations/Open Conversation #010-IcN-O-cbP80.mp3&amp;#39;,&lt;/span&gt;
-&lt;span class="err"&gt;&amp;#39;Open Conversations/Open Conversation #011-hfIJLjO7xss.mp3&amp;#39;,&lt;/span&gt;
-&lt;span class="err"&gt;&amp;#39;Open Conversations/Open Conversation #012-XD-Al7-_ezM.mp3&amp;#39;,&lt;/span&gt;
-&lt;span class="err"&gt;&amp;#39;Open Conversations/Open Conversation #013-WxwxA5I-pN4.mp3&amp;#39;,&lt;/span&gt;
-&lt;span class="err"&gt;&amp;#39;Open Conversations/Open Conversation #014-STmBT9OSNVw.mp3&amp;#39;,&lt;/span&gt;
-&lt;span class="err"&gt;&amp;#39;Open Conversations/Open Conversation #015-ClVDRgd29aY.mp3&amp;#39;,&lt;/span&gt;
-&lt;span class="err"&gt;&amp;#39;Open Conversations/Open Conversation #016-RjiSEfq4NJY.mp3&amp;#39;,&lt;/span&gt;
-&lt;span class="err"&gt;&amp;#39;Open Conversations/Open Conversation #017 - 500 Arguments Against Christianity Aftershow-TVEEgX6NqbE.mp3&amp;#39;,&lt;/span&gt;
-&lt;span class="err"&gt;&amp;#39;Open Conversations/Open Conversation #018 - James Fodor, Causation, Craig and more...-Kj3L8L3vXZI.mp3&amp;#39;]&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;[&amp;#39;Open Conversations/Open Conversation #001-vCEu612_tbc.mp3&amp;#39;,
+&amp;#39;Open Conversations/Open Conversation #002-DW6LTgzxI2c.mp3&amp;#39;,
+&amp;#39;Open Conversations/Open Conversation #003-yxF3OJpLW8w.mp3&amp;#39;,
+&amp;#39;Open Conversations/Open Conversation #004-kBSczog9hjY.mp3&amp;#39;,
+&amp;#39;Open Conversations/Open Conversation #005-Ba9JeLKLx4M.mp3&amp;#39;,
+&amp;#39;Open Conversations/Open Conversation #006 _ Defining Terms and Open Conversation with JIL-ypzf9gCPMW4.mp3&amp;#39;,
+&amp;#39;Open Conversations/Open Conversation #007-mrzHt60jaJ0.mp3&amp;#39;,
+&amp;#39;Open Conversations/Open Conversation #008- Socially Distanced New Year Open Hangout - PineCreek, Cam, Erin, Autumn, Rob, etc-8yGK_yh-CTY.mp3&amp;#39;,
+&amp;#39;Open Conversations/Open Conversation #009-T-V0VnGG_FI.mp3&amp;#39;,
+&amp;#39;Open Conversations/Open Conversation #010-IcN-O-cbP80.mp3&amp;#39;,
+&amp;#39;Open Conversations/Open Conversation #011-hfIJLjO7xss.mp3&amp;#39;,
+&amp;#39;Open Conversations/Open Conversation #012-XD-Al7-_ezM.mp3&amp;#39;,
+&amp;#39;Open Conversations/Open Conversation #013-WxwxA5I-pN4.mp3&amp;#39;,
+&amp;#39;Open Conversations/Open Conversation #014-STmBT9OSNVw.mp3&amp;#39;,
+&amp;#39;Open Conversations/Open Conversation #015-ClVDRgd29aY.mp3&amp;#39;,
+&amp;#39;Open Conversations/Open Conversation #016-RjiSEfq4NJY.mp3&amp;#39;,
+&amp;#39;Open Conversations/Open Conversation #017 - 500 Arguments Against Christianity Aftershow-TVEEgX6NqbE.mp3&amp;#39;,
+&amp;#39;Open Conversations/Open Conversation #018 - James Fodor, Causation, Craig and more...-Kj3L8L3vXZI.mp3&amp;#39;]
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;album&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;folder&lt;/span&gt;
@@ -600,24 +602,24 @@ $$&lt;/div&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Output:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;[&amp;#39;Open Conversations - Ep #001&amp;#39;,&lt;/span&gt;
-&lt;span class="err"&gt;&amp;#39;Open Conversations - Ep #002&amp;#39;,&lt;/span&gt;
-&lt;span class="err"&gt;&amp;#39;Open Conversations - Ep #003&amp;#39;,&lt;/span&gt;
-&lt;span class="err"&gt;&amp;#39;Open Conversations - Ep #004&amp;#39;,&lt;/span&gt;
-&lt;span class="err"&gt;&amp;#39;Open Conversations - Ep #005&amp;#39;,&lt;/span&gt;
-&lt;span class="err"&gt;&amp;#39;Open Conversations - Ep #006 _ Defining Terms and Open Conversation with JIL&amp;#39;,&lt;/span&gt;
-&lt;span class="err"&gt;&amp;#39;Open Conversations - Ep #007&amp;#39;,&lt;/span&gt;
-&lt;span class="err"&gt;&amp;#39;Open Conversations - Ep #008- Socially Distanced New Year Open Hangout - PineCreek, Cam, Erin, Autumn, Rob, etc&amp;#39;,&lt;/span&gt;
-&lt;span class="err"&gt;&amp;#39;Open Conversations - Ep #009&amp;#39;,&lt;/span&gt;
-&lt;span class="err"&gt;&amp;#39;Open Conversations - Ep #010&amp;#39;,&lt;/span&gt;
-&lt;span class="err"&gt;&amp;#39;Open Conversations - Ep #011&amp;#39;,&lt;/span&gt;
-&lt;span class="err"&gt;&amp;#39;Open Conversations - Ep #012&amp;#39;,&lt;/span&gt;
-&lt;span class="err"&gt;&amp;#39;Open Conversations - Ep #013&amp;#39;,&lt;/span&gt;
-&lt;span class="err"&gt;&amp;#39;Open Conversations - Ep #014&amp;#39;,&lt;/span&gt;
-&lt;span class="err"&gt;&amp;#39;Open Conversations - Ep #015&amp;#39;,&lt;/span&gt;
-&lt;span class="err"&gt;&amp;#39;Open Conversations - Ep #016&amp;#39;,&lt;/span&gt;
-&lt;span class="err"&gt;&amp;#39;Open Conversations - Ep #017 - 500 Arguments Against Christianity Aftershow&amp;#39;,&lt;/span&gt;
-&lt;span class="err"&gt;&amp;#39;Open Conversations - Ep #018 - James Fodor, Causation, Craig and more...&amp;#39;]&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;[&amp;#39;Open Conversations - Ep #001&amp;#39;,
+&amp;#39;Open Conversations - Ep #002&amp;#39;,
+&amp;#39;Open Conversations - Ep #003&amp;#39;,
+&amp;#39;Open Conversations - Ep #004&amp;#39;,
+&amp;#39;Open Conversations - Ep #005&amp;#39;,
+&amp;#39;Open Conversations - Ep #006 _ Defining Terms and Open Conversation with JIL&amp;#39;,
+&amp;#39;Open Conversations - Ep #007&amp;#39;,
+&amp;#39;Open Conversations - Ep #008- Socially Distanced New Year Open Hangout - PineCreek, Cam, Erin, Autumn, Rob, etc&amp;#39;,
+&amp;#39;Open Conversations - Ep #009&amp;#39;,
+&amp;#39;Open Conversations - Ep #010&amp;#39;,
+&amp;#39;Open Conversations - Ep #011&amp;#39;,
+&amp;#39;Open Conversations - Ep #012&amp;#39;,
+&amp;#39;Open Conversations - Ep #013&amp;#39;,
+&amp;#39;Open Conversations - Ep #014&amp;#39;,
+&amp;#39;Open Conversations - Ep #015&amp;#39;,
+&amp;#39;Open Conversations - Ep #016&amp;#39;,
+&amp;#39;Open Conversations - Ep #017 - 500 Arguments Against Christianity Aftershow&amp;#39;,
+&amp;#39;Open Conversations - Ep #018 - James Fodor, Causation, Craig and more...&amp;#39;]
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;strong&gt;NOTE:&lt;/strong&gt; Having the album name in the track title, followed by " - " and the track name seems to be important for the Books app to get the title and tracks right for some reason.&lt;/p&gt;
@@ -669,14 +671,14 @@ $$&lt;/div&gt;
 &lt;li&gt;&lt;a href="https://bblais.github.io/posts/2021/Apr/15/stats-101-examples-with-mcmc/"&gt;Estimating mean with known 𝜎&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://bblais.github.io/posts/2021/Apr/28/stats-101-examples-with-mcmc-part-2/"&gt;Estimating mean with unknown 𝜎&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;In all of …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This is another in the series of "&lt;em&gt;Statistics 101&lt;/em&gt;" examples solved with MCMC.  Others in the series:&lt;/p&gt;
+&lt;p&gt;In all of these posts …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This is another in the series of "&lt;em&gt;Statistics 101&lt;/em&gt;" examples solved with MCMC.  Others in the series:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://bblais.github.io/posts/2021/Apr/15/stats-101-examples-with-mcmc/"&gt;Estimating mean with known 𝜎&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://bblais.github.io/posts/2021/Apr/28/stats-101-examples-with-mcmc-part-2/"&gt;Estimating mean with unknown 𝜎&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;In all of these posts I'm going to use a python library I make for my science-programming class, &lt;a href="https://github.com/bblais/sci378"&gt;stored on github&lt;/a&gt;, and the &lt;a href="https://emcee.readthedocs.io/en/stable/"&gt;emcee&lt;/a&gt; library.  Install like:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;pip install &amp;quot;git+git://github.com/bblais/sci378&amp;quot; --upgrade&lt;/span&gt;
-&lt;span class="err"&gt;pip install emcee&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pip install &amp;quot;git+git://github.com/bblais/sci378&amp;quot; --upgrade
+pip install emcee
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;In this example the data take the form of a number of "successes", &lt;span class="math"&gt;\(h\)&lt;/span&gt;, in a total number of "trials", &lt;span class="math"&gt;\(N\)&lt;/span&gt;, and we want to estimate the proportion, &lt;span class="math"&gt;\(\theta\)&lt;/span&gt;.  This could be the number of heads observed in &lt;span class="math"&gt;\(N\)&lt;/span&gt; coin flips and we want to estimate the bias in the coin -- what is the probability that it flips heads.  In fact, the data I will use below is from &lt;a href="https://www.jstor.org/stable/2683855?seq=1#metadata_info_tab_contents"&gt;Lindley, 1976. "Inference for a Bernoulli Process (A Bayesian View)"&lt;/a&gt;, where he flips a thumbtack which might be able to produce two states pointing "up" or pointing "down", and gets the data UUUDUDUUUUUD (3 D, 9 U).&lt;/p&gt;
@@ -711,18 +713,18 @@ $$&lt;/div&gt;
 &lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot_chains&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;Sampling Prior...&lt;/span&gt;
-&lt;span class="err"&gt;Done.&lt;/span&gt;
-&lt;span class="err"&gt;0.27 s&lt;/span&gt;
-&lt;span class="err"&gt;Running MCMC 1/3...&lt;/span&gt;
-&lt;span class="err"&gt;Done.&lt;/span&gt;
-&lt;span class="err"&gt;2.63 s&lt;/span&gt;
-&lt;span class="err"&gt;Running MCMC 2/3...&lt;/span&gt;
-&lt;span class="err"&gt;Done.&lt;/span&gt;
-&lt;span class="err"&gt;2.79 s&lt;/span&gt;
-&lt;span class="err"&gt;Running MCMC 3/3...&lt;/span&gt;
-&lt;span class="err"&gt;Done.&lt;/span&gt;
-&lt;span class="err"&gt;2.47 s&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;Sampling Prior...
+Done.
+0.27 s
+Running MCMC 1/3...
+Done.
+2.63 s
+Running MCMC 2/3...
+Done.
+2.79 s
+Running MCMC 3/3...
+Done.
+2.47 s
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;img alt="" src="https://bblais.github.io/images/proportion chains.png"&gt;&lt;/p&gt;
@@ -734,7 +736,7 @@ $$&lt;/div&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;P&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;θ &amp;lt;0.5&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;0.95485&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="mf"&gt;0.95485&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;yes, just as &lt;a href="https://www.jstor.org/stable/2683855?seq=1#metadata_info_tab_contents"&gt;Lindley, 1976 presents.&lt;/a&gt; &lt;/p&gt;
@@ -812,8 +814,8 @@ which matches the equations in the standard textbooks.  Comparing to our case, w
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;</content><category term="math"></category></entry><entry><title>Stats 101 Examples with MCMC Part 2</title><link href="https://bblais.github.io/posts/2021/Apr/28/stats-101-examples-with-mcmc-part-2/" rel="alternate"></link><published>2021-04-28T00:00:00-04:00</published><updated>2021-04-28T00:00:00-04:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2021-04-28:/posts/2021/Apr/28/stats-101-examples-with-mcmc-part-2/</id><summary type="html">&lt;p&gt;This is another in the series of "&lt;em&gt;Statistics 101&lt;/em&gt;" examples solved with MCMC.  The previous in the series &lt;a href="https://bblais.github.io/posts/2021/Apr/15/stats-101-examples-with-mcmc/"&gt;can be found here&lt;/a&gt;.  In all of these posts I'm going to …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This is another in the series of "&lt;em&gt;Statistics 101&lt;/em&gt;" examples solved with MCMC.  The previous in the series &lt;a href="https://bblais.github.io/posts/2021/Apr/15/stats-101-examples-with-mcmc/"&gt;can be found here&lt;/a&gt;.  In all of these posts I'm going to use a python library I make for my science-programming class, &lt;a href="https://github.com/bblais/sci378"&gt;stored on github&lt;/a&gt;, and the &lt;a href="https://emcee.readthedocs.io/en/stable/"&gt;emcee&lt;/a&gt; library.  Install like:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;pip install &amp;quot;git+git://github.com/bblais/sci378&amp;quot; --upgrade&lt;/span&gt;
-&lt;span class="err"&gt;pip install emcee&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pip install &amp;quot;git+git://github.com/bblais/sci378&amp;quot; --upgrade
+pip install emcee
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;In this example, like &lt;a href="https://bblais.github.io/posts/2021/Apr/15/stats-101-examples-with-mcmc/"&gt;the last one&lt;/a&gt;, there is some true value, we call &lt;span class="math"&gt;\(\mu\)&lt;/span&gt;.  The &lt;span class="math"&gt;\(N\)&lt;/span&gt; data points we have, &lt;span class="math"&gt;\(\{x_i\}\)&lt;/span&gt;, consist of that true value with added independent, normally-distributed noise of &lt;em&gt;unknown&lt;/em&gt; scale, &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt;.  &lt;/p&gt;
@@ -857,18 +859,18 @@ known &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt;&lt;/p&gt;
 &lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot_chains&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;Sampling Prior...&lt;/span&gt;
-&lt;span class="err"&gt;Done.&lt;/span&gt;
-&lt;span class="err"&gt;0.27 s&lt;/span&gt;
-&lt;span class="err"&gt;Running MCMC 1/3...&lt;/span&gt;
-&lt;span class="err"&gt;Done.&lt;/span&gt;
-&lt;span class="err"&gt;2.63 s&lt;/span&gt;
-&lt;span class="err"&gt;Running MCMC 2/3...&lt;/span&gt;
-&lt;span class="err"&gt;Done.&lt;/span&gt;
-&lt;span class="err"&gt;2.79 s&lt;/span&gt;
-&lt;span class="err"&gt;Running MCMC 3/3...&lt;/span&gt;
-&lt;span class="err"&gt;Done.&lt;/span&gt;
-&lt;span class="err"&gt;2.47 s&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;Sampling Prior...
+Done.
+0.27 s
+Running MCMC 1/3...
+Done.
+2.63 s
+Running MCMC 2/3...
+Done.
+2.79 s
+Running MCMC 3/3...
+Done.
+2.47 s
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;img alt="" src="https://bblais.github.io/images/μσ chains.png"&gt;&lt;/p&gt;
@@ -911,14 +913,14 @@ known &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;P&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;μ&amp;gt;15&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;0.037066666666666664&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="mf"&gt;0.037066666666666664&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;and for &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt;, the Bayesian equivalent to Chi-squared test, &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;P&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;σ&amp;lt;1&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;0.01985&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="mf"&gt;0.01985&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
@@ -983,8 +985,8 @@ known &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt;&lt;/p&gt;
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;</content><category term="math"></category></entry><entry><title>Stats 101 Examples with MCMC</title><link href="https://bblais.github.io/posts/2021/Apr/15/stats-101-examples-with-mcmc/" rel="alternate"></link><published>2021-04-15T00:00:00-04:00</published><updated>2021-04-15T00:00:00-04:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2021-04-15:/posts/2021/Apr/15/stats-101-examples-with-mcmc/</id><summary type="html">&lt;p&gt;I'd like to walk through some of the "&lt;em&gt;Statistics 101&lt;/em&gt;" examples (e.g. estimating &lt;span class="math"&gt;\(\mu\)&lt;/span&gt; with known &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt;, estimating a proportion, etc...) for which we have simple analytical solutions, but …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I'd like to walk through some of the "&lt;em&gt;Statistics 101&lt;/em&gt;" examples (e.g. estimating &lt;span class="math"&gt;\(\mu\)&lt;/span&gt; with known &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt;, estimating a proportion, etc...) for which we have simple analytical solutions, but explore them with &lt;a href="https://www.youtube.com/watch?v=vTUwEu53uzs"&gt;MCMC&lt;/a&gt;.  The reason I want to do this is to introduce MCMC on simple cases, which are not much different than more complicated cases, but are better understood.  The second reason is to explore some cases which are nearly as easy, but are never covered in introductory textbooks.  In all of these I'm going to use a python library I make for my science-programming class, &lt;a href="https://github.com/bblais/sci378"&gt;stored on github&lt;/a&gt;, and the &lt;a href="https://emcee.readthedocs.io/en/stable/"&gt;emcee&lt;/a&gt; library.  Install like:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;pip install &amp;quot;git+git://github.com/bblais/sci378&amp;quot; --upgrade&lt;/span&gt;
-&lt;span class="err"&gt;pip install emcee&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pip install &amp;quot;git+git://github.com/bblais/sci378&amp;quot; --upgrade
+pip install emcee
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;We'll start with the easiest example:  there is some true value, we call &lt;span class="math"&gt;\(\mu\)&lt;/span&gt;.  The &lt;span class="math"&gt;\(N\)&lt;/span&gt; data points we have, &lt;span class="math"&gt;\(\{x_i\}\)&lt;/span&gt;, consist of that true value with added independent, normally-distributed noise of &lt;em&gt;known&lt;/em&gt; scale, &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt;.  &lt;/p&gt;
@@ -1016,18 +1018,18 @@ known &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt;&lt;/p&gt;
 &lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot_chains&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;Sampling Prior...&lt;/span&gt;
-&lt;span class="err"&gt;Done.&lt;/span&gt;
-&lt;span class="err"&gt;0.21 s&lt;/span&gt;
-&lt;span class="err"&gt;Running MCMC 1/3...&lt;/span&gt;
-&lt;span class="err"&gt;Done.&lt;/span&gt;
-&lt;span class="err"&gt;2.23 s&lt;/span&gt;
-&lt;span class="err"&gt;Running MCMC 2/3...&lt;/span&gt;
-&lt;span class="err"&gt;Done.&lt;/span&gt;
-&lt;span class="err"&gt;2.24 s&lt;/span&gt;
-&lt;span class="err"&gt;Running MCMC 3/3...&lt;/span&gt;
-&lt;span class="err"&gt;Done.&lt;/span&gt;
-&lt;span class="err"&gt;2.51 s&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;Sampling Prior...
+Done.
+0.21 s
+Running MCMC 1/3...
+Done.
+2.23 s
+Running MCMC 2/3...
+Done.
+2.24 s
+Running MCMC 3/3...
+Done.
+2.51 s
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;img alt="" src="https://bblais.github.io/images/μ chains.png"&gt;&lt;/p&gt;
@@ -1050,7 +1052,7 @@ known &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;P&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;μ&amp;gt;15&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;0.037066666666666664&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="mf"&gt;0.037066666666666664&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;This simple example can be a template for more complex problems, which I will explore in later posts of this series.  What do you think?&lt;/p&gt;
@@ -1448,8 +1450,8 @@ which matches the form of &lt;span class="math"&gt;\(R_o\)&lt;/span&gt;.&lt;/p&g
 &lt;span class="n"&gt;soln&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;[-asin(sqrt(2)*v*sqrt(1/(g*h + v**2))/2),&lt;/span&gt;
-&lt;span class="err"&gt; asin(sqrt(2)*v*sqrt(1/(g*h + v**2))/2)]&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;[-asin(sqrt(2)*v*sqrt(1/(g*h + v**2))/2),
+ asin(sqrt(2)*v*sqrt(1/(g*h + v**2))/2)]
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;sin_θ_at_max&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;sym&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sqrt&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;sym&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sqrt&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;g&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;h&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;
@@ -1657,7 +1659,7 @@ $$&lt;/div&gt;
 &lt;p&gt;&lt;img alt="png" src="https://bblais.github.io/images/AP20/output_26_1.png"&gt;&lt;/p&gt;
 &lt;p&gt;Here's an example with decreasing with angle.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;  &lt;span class="c1"&gt;# true value&lt;/span&gt;
-&lt;span class="n"&gt;x0&lt;/span&gt;&lt;span class="o"&gt;=.&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;
+&lt;span class="n"&gt;x0&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;.4&lt;/span&gt;
 &lt;span class="n"&gt;m&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;0.01&lt;/span&gt;
 &lt;span class="n"&gt;h&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;20&lt;/span&gt;
 &lt;span class="n"&gt;g&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;
@@ -1889,21 +1891,21 @@ $$&lt;/div&gt;
 &lt;/ul&gt;
 &lt;p&gt;This provides a level of control that is hard to match.  &lt;/p&gt;
 &lt;p&gt;To make the theme, as shown in the docs, you need to just make the following files&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;  ├── static&lt;/span&gt;
-&lt;span class="err"&gt;  │   ├── css&lt;/span&gt;
-&lt;span class="err"&gt;  │   └── images&lt;/span&gt;
-&lt;span class="err"&gt;  └── templates&lt;/span&gt;
-&lt;span class="err"&gt;      ├── archives.html         // to display archives&lt;/span&gt;
-&lt;span class="err"&gt;      ├── period_archives.html  // to display time-period archives&lt;/span&gt;
-&lt;span class="err"&gt;      ├── article.html          // processed for each article&lt;/span&gt;
-&lt;span class="err"&gt;      ├── author.html           // processed for each author&lt;/span&gt;
-&lt;span class="err"&gt;      ├── authors.html          // must list all the authors&lt;/span&gt;
-&lt;span class="err"&gt;      ├── categories.html       // must list all the categories&lt;/span&gt;
-&lt;span class="err"&gt;      ├── category.html         // processed for each category&lt;/span&gt;
-&lt;span class="err"&gt;      ├── index.html            // the index (list all the articles)&lt;/span&gt;
-&lt;span class="err"&gt;      ├── page.html             // processed for each page&lt;/span&gt;
-&lt;span class="err"&gt;      ├── tag.html              // processed for each tag&lt;/span&gt;
-&lt;span class="err"&gt;      └── tags.html             // must list all the tags. Can be a tag cloud.&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;  ├── &lt;span class="nv"&gt;static&lt;/span&gt;
+  │   ├── &lt;span class="nv"&gt;css&lt;/span&gt;
+  │   └── &lt;span class="nv"&gt;images&lt;/span&gt;
+  └── &lt;span class="nv"&gt;templates&lt;/span&gt;
+      ├── &lt;span class="nv"&gt;archives&lt;/span&gt;.&lt;span class="nv"&gt;html&lt;/span&gt;         &lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="nv"&gt;to&lt;/span&gt; &lt;span class="nv"&gt;display&lt;/span&gt; &lt;span class="nv"&gt;archives&lt;/span&gt;
+      ├── &lt;span class="nv"&gt;period_archives&lt;/span&gt;.&lt;span class="nv"&gt;html&lt;/span&gt;  &lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="nv"&gt;to&lt;/span&gt; &lt;span class="nv"&gt;display&lt;/span&gt; &lt;span class="nv"&gt;time&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nv"&gt;period&lt;/span&gt; &lt;span class="nv"&gt;archives&lt;/span&gt;
+      ├── &lt;span class="nv"&gt;article&lt;/span&gt;.&lt;span class="nv"&gt;html&lt;/span&gt;          &lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="nv"&gt;processed&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nv"&gt;each&lt;/span&gt; &lt;span class="nv"&gt;article&lt;/span&gt;
+      ├── &lt;span class="nv"&gt;author&lt;/span&gt;.&lt;span class="nv"&gt;html&lt;/span&gt;           &lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="nv"&gt;processed&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nv"&gt;each&lt;/span&gt; &lt;span class="nv"&gt;author&lt;/span&gt;
+      ├── &lt;span class="nv"&gt;authors&lt;/span&gt;.&lt;span class="nv"&gt;html&lt;/span&gt;          &lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="nv"&gt;must&lt;/span&gt; &lt;span class="nv"&gt;list&lt;/span&gt; &lt;span class="nv"&gt;all&lt;/span&gt; &lt;span class="nv"&gt;the&lt;/span&gt; &lt;span class="nv"&gt;authors&lt;/span&gt;
+      ├── &lt;span class="nv"&gt;categories&lt;/span&gt;.&lt;span class="nv"&gt;html&lt;/span&gt;       &lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="nv"&gt;must&lt;/span&gt; &lt;span class="nv"&gt;list&lt;/span&gt; &lt;span class="nv"&gt;all&lt;/span&gt; &lt;span class="nv"&gt;the&lt;/span&gt; &lt;span class="nv"&gt;categories&lt;/span&gt;
+      ├── &lt;span class="nv"&gt;category&lt;/span&gt;.&lt;span class="nv"&gt;html&lt;/span&gt;         &lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="nv"&gt;processed&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nv"&gt;each&lt;/span&gt; &lt;span class="nv"&gt;category&lt;/span&gt;
+      ├── &lt;span class="nv"&gt;index&lt;/span&gt;.&lt;span class="nv"&gt;html&lt;/span&gt;            &lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="nv"&gt;the&lt;/span&gt; &lt;span class="nv"&gt;index&lt;/span&gt; &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;list&lt;/span&gt; &lt;span class="nv"&gt;all&lt;/span&gt; &lt;span class="nv"&gt;the&lt;/span&gt; &lt;span class="nv"&gt;articles&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt;
+      ├── &lt;span class="nv"&gt;page&lt;/span&gt;.&lt;span class="nv"&gt;html&lt;/span&gt;             &lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="nv"&gt;processed&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nv"&gt;each&lt;/span&gt; &lt;span class="nv"&gt;page&lt;/span&gt;
+      ├── &lt;span class="nv"&gt;tag&lt;/span&gt;.&lt;span class="nv"&gt;html&lt;/span&gt;              &lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="nv"&gt;processed&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nv"&gt;each&lt;/span&gt; &lt;span class="nv"&gt;tag&lt;/span&gt;
+      └── &lt;span class="nv"&gt;tags&lt;/span&gt;.&lt;span class="nv"&gt;html&lt;/span&gt;             &lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="nv"&gt;must&lt;/span&gt; &lt;span class="nv"&gt;list&lt;/span&gt; &lt;span class="nv"&gt;all&lt;/span&gt; &lt;span class="nv"&gt;the&lt;/span&gt; &lt;span class="nv"&gt;tags&lt;/span&gt;. &lt;span class="nv"&gt;Can&lt;/span&gt; &lt;span class="nv"&gt;be&lt;/span&gt; &lt;span class="nv"&gt;a&lt;/span&gt; &lt;span class="nv"&gt;tag&lt;/span&gt; &lt;span class="nv"&gt;cloud&lt;/span&gt;.
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Starting from the free web template, I break off the parts that are included in all of the files and put it in &lt;code&gt;base.html&lt;/code&gt;, copying the &lt;a href="https://jinja.palletsprojects.com/en/2.11.x/"&gt;Jinja&lt;/a&gt; parts from a pelican theme.  Like,&lt;/p&gt;
@@ -3860,15 +3862,15 @@ S^2&amp;amp;=&amp;amp; \frac{1}{(N-1)}\sum_{k=1}^{N} (x_k-\bar{x})^2
 &lt;h2 id="anything-with-the-cauchy-distribution"&gt;Anything with the Cauchy distribution&lt;/h2&gt;
 &lt;p&gt;There is one final category of problems in the comparison with Bayesian and Frequentist methods. &lt;/p&gt;
 &lt;p&gt;Imagine we have a lighthouse which is off shore some known distance, B, and is located along the shore at some unknown location &lt;span class="math"&gt;\(x=a\)&lt;/span&gt;:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;         (lighthouse)&lt;/span&gt;
-&lt;span class="err"&gt;               *          ---&lt;/span&gt;
-&lt;span class="err"&gt;                           ^&lt;/span&gt;
-&lt;span class="err"&gt;                           |&lt;/span&gt;
-&lt;span class="err"&gt;                           B&lt;/span&gt;
-&lt;span class="err"&gt;                           |&lt;/span&gt;
-&lt;span class="err"&gt;                           V&lt;/span&gt;
-&lt;span class="err"&gt;————shore——————+——————————————————————&amp;gt;  x&lt;/span&gt;
-&lt;span class="err"&gt;              x=a&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;         (lighthouse)
+               *          ---
+                           ^
+                           |
+                           B
+                           |
+                           V
+————shore——————+——————————————————————&amp;gt;  x
+              x=a
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;we want to estimate the location (“a”) from a series of locations of flashes on the shore - the lighthouse is spinning around and flashing at random times.  We can only observe where the flash lands on the shore, not the direction it came from.   The data is, for example, the locations of these 10 flashes:&lt;/p&gt;
@@ -4730,7 +4732,7 @@ P(I|S) &amp;amp;=&amp;amp; \int_0^1 \frac{1/2 \cdot q}{1/2\cdot q + 1/4\cdot (1-
 &lt;span class="n"&gt;dq&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;q&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;q&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;span class="n"&gt;pq&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pdf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;q&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
-&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;sum&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;0.5&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;q&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;q&lt;/span&gt;&lt;span class="o"&gt;+.&lt;/span&gt;&lt;span class="mi"&gt;25&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;q&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;pq&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;dq&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;sum&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;0.5&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;q&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;.5&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;q&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mf"&gt;.25&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;q&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;pq&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;dq&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="nb"&gt;print&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -4746,7 +4748,7 @@ P(I|S) &amp;amp;=&amp;amp; \int_0^1 \frac{1/2 \cdot q}{1/2\cdot q + 1/4\cdot (1-
 &lt;span class="n"&gt;dq&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;q&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;q&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;span class="n"&gt;pq&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pdf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;q&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
-&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;sum&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;0.5&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;q&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;q&lt;/span&gt;&lt;span class="o"&gt;+.&lt;/span&gt;&lt;span class="mi"&gt;25&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;q&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;pq&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;dq&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;sum&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;0.5&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;q&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;.5&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;q&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mf"&gt;.25&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;q&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;pq&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;dq&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="nb"&gt;print&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -6076,23 +6078,23 @@ $$&lt;/div&gt;
 &lt;p&gt;My guess is "no", but why?  The &lt;em&gt;likelihood&lt;/em&gt; (i.e. how well the hypothesis supports the data) is exceptionally high. Higher, I'd say, than nearly any other hypothesis.  Actually, now that I think about it, the hypothesis "aliens that like the number 12 and influence octopi made it happen" is a better one.  These are clearly ridiculous because they are &lt;em&gt;implausible&lt;/em&gt; to start, and thus have a lower &lt;em&gt;prior probability&lt;/em&gt;.  In fact Bayesianism is asking the only interesting question, and it provides the framework to actually compare hypotheses, something that frequentist methods fail spectacularly at.&lt;/p&gt;
 &lt;p&gt;Greg Mayer is a Bayesian, he just fails to admit it.&lt;/p&gt;</content><category term="articles"></category></entry><entry><title>Superseding the $t$ test</title><link href="https://bblais.github.io/posts/2015/Apr/23/superseding-the-t-test/" rel="alternate"></link><published>2015-04-23T00:00:00-04:00</published><updated>2015-04-23T00:00:00-04:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2015-04-23:/posts/2015/Apr/23/superseding-the-t-test/</id><summary type="html">&lt;p&gt;There's a very nice paper, &lt;a href="http://www.indiana.edu/~kruschke/articles/Kruschke2013JEPG.pdf"&gt;Bayesian estimation supersedes the t test&lt;/a&gt;. John K. Kruschke, Journal of Experimental Psychology: General, 2013, v.142(2), pp.573-603. The methods described provide at …&lt;/p&gt;</summary><content type="html">&lt;p&gt;There's a very nice paper, &lt;a href="http://www.indiana.edu/~kruschke/articles/Kruschke2013JEPG.pdf"&gt;Bayesian estimation supersedes the t test&lt;/a&gt;. John K. Kruschke, Journal of Experimental Psychology: General, 2013, v.142(2), pp.573-603. The methods described provide at once posterior probabilities not just for the means of two groups, but their standard deviations, their normality, and effect size.  The &lt;a href="http://www.indiana.edu/~kruschke/BEST/"&gt;supporting website&lt;/a&gt; has a lot of useful resources, including a number of implementations.  The original implementation is in R, but there is a &lt;a href="https://github.com/strawlab/best"&gt;Python implementation using PyMC&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;I decided to implement the same thing using the &lt;a href="http://dan.iel.fm/emcee/current/"&gt;emcee package&lt;/a&gt;.  The full implementation is &lt;a href="http://nbviewer.ipython.org/gist/bblais/7a1c6ec3b4c8d1b0465f"&gt;viewable here&lt;/a&gt;.  My implementation is pretty general, and can handle some arbitrary tests of the variables, like:&lt;/p&gt;
-&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
-2
-3&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;P&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;(mu1&amp;gt;101) &amp;amp; (mu1&amp;lt;102.1)&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;P&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;(mu1&amp;gt;101) &amp;amp; (mu1&amp;lt;102.1)&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
 &lt;span class="mf"&gt;0.85502222222222224&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;p&gt;and&lt;/p&gt;
-&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
-2
-3&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;P&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;sigma1&amp;lt;sigma2&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;P&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;sigma1&amp;lt;sigma2&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
 &lt;span class="mf"&gt;0.0060111111111111112&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;p&gt;and&lt;/p&gt;
-&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot_distribution&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Effect Size=(mu1-mu2)/sqrt((sigma1**2+sigma2**2)/2)&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot_distribution&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Effect Size=(mu1-mu2)/sqrt((sigma1**2+sigma2**2)/2)&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;p&gt;&lt;img alt="effectsize" src="images/effect_size.png"&gt;&lt;/p&gt;
@@ -7875,9 +7877,7 @@ over there for a bit.  &lt;/p&gt;
 &lt;p&gt;Let me know if things work, or don't!  I'd love to know if comments work, and if it is easy to follow updates via Atom, or perhaps RSS.  You can contact me at &lt;em&gt;bblais at &lt;a href="http://gmail.com"&gt;gmail.com&lt;/a&gt; or bryant.edu&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;I'm still playing, so expect changes!&lt;/p&gt;</content><category term="articles"></category><category term="web"></category></entry><entry><title>New Website</title><link href="https://bblais.github.io/posts/2014/Jan/10/new-website/" rel="alternate"></link><published>2014-01-10T00:00:00-05:00</published><updated>2014-01-10T00:00:00-05:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2014-01-10:/posts/2014/Jan/10/new-website/</id><summary type="html">&lt;p&gt;I completely redid my website, and am still playing with a lot of the organization, etc...  I'm hoping that it will be both easier to use, and include more detailed …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I completely redid my website, and am still playing with a lot of the organization, etc...  I'm hoping that it will be both easier to use, and include more detailed information about my current projects and my progress in different areas.  I think I've ported everything over, but we'll see!&lt;/p&gt;</content><category term="articles"></category></entry><entry><title>A New Year and a Deepity</title><link href="https://bblais.github.io/posts/2014/Jan/06/a-new-year-and-a-deepity/" rel="alternate"></link><published>2014-01-06T14:04:00-05:00</published><updated>2014-01-06T14:04:00-05:00</updated><author><name>brianblais</name></author><id>tag:bblais.github.io,2014-01-06:/posts/2014/Jan/06/a-new-year-and-a-deepity/</id><summary type="html">&lt;p&gt;A short video by Fr. Robert Barron, to start off the new year.&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://[youtube=http://www.youtube.com"&gt;[youtube=http://www.youtube.com&lt;/a&gt;/watch?v=1zMf_8hkCdc&amp;amp;w=560&amp;amp;h=315]&lt;/p&gt;
-&lt;p&gt;Here is the summary:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;He …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;A short video by Fr. Robert Barron, to start off the new year.&lt;/p&gt;
+&lt;p&gt;Here is the summary …&lt;/p&gt;</summary><content type="html">&lt;p&gt;A short video by Fr. Robert Barron, to start off the new year.&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://[youtube=http://www.youtube.com"&gt;[youtube=http://www.youtube.com&lt;/a&gt;/watch?v=1zMf_8hkCdc&amp;amp;w=560&amp;amp;h=315]&lt;/p&gt;
 &lt;p&gt;Here is the summary:&lt;/p&gt;
 &lt;ul&gt;
@@ -9779,15 +9779,15 @@ it right, but I wanted to make sure. The math is&lt;/p&gt;
 P=P_o e^{rt}  
 $$&lt;/div&gt;
 &lt;p&gt;The code is:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;00456&lt;/span&gt;
-&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;4500&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;
-&lt;span class="n"&gt;Po&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;r=0.00456
+t=4500.0
+Po=8.0
 
-&lt;span class="n"&gt;print&lt;/span&gt; &lt;span class="n"&gt;Po&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;exp&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="n"&gt;e9&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;billion&amp;quot;&lt;/span&gt;
+print Po*exp(r*t)/1e9,&amp;quot;billion&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Yielding&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;6.52849018681 billion&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="mf"&gt;6.52849018681&lt;/span&gt; &lt;span class="n"&gt;billion&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;The other direction is, how long ago were there only 8 people?&lt;/p&gt;
@@ -9797,16 +9797,16 @@ P(t)&amp;amp;=&amp;amp;P_o \times e^{r\cdot t} \\\\
 t&amp;amp;=&amp;amp; \frac{\log(P(t))-\log(P_o)}{r}  
 \end{eqnarray}&lt;/div&gt;
 &lt;p&gt;or&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;Po&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="n"&gt;e9&lt;/span&gt;  &lt;span class="o"&gt;#&lt;/span&gt; &lt;span class="k"&gt;current&lt;/span&gt; &lt;span class="n"&gt;population&lt;/span&gt;
-&lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;00456&lt;/span&gt;
-&lt;span class="n"&gt;P&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt;       &lt;span class="o"&gt;#&lt;/span&gt; &lt;span class="n"&gt;target&lt;/span&gt; &lt;span class="n"&gt;population&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;Po=6.5e9  # current population
+r=0.00456
+P=8       # target population
 
-&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;P&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Po&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;r&lt;/span&gt; 
-&lt;span class="n"&gt;print&lt;/span&gt; &lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ss"&gt;&amp;quot;years&amp;quot;&lt;/span&gt;
+t=(log(P)-log(Po))/r 
+print t, &amp;quot;years&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;resulting in&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;-4499.04089302 years.&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;-4499.04089302 years.
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h2 id="is-their-growth-rate-correct"&gt;Is their growth rate correct?&lt;/h2&gt;
@@ -11551,11 +11551,11 @@ this data, the best fit is&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Fig2" src="http://brianblais.files.wordpress.com/2013/02/fig2.png" title="fig2.png"&gt;&lt;/p&gt;
 &lt;p&gt;Overall, not a bad looking fit. However, if we fit to a 10-th power
 polynomial, we can get even better!&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;            &lt;span class="mi"&gt;10&lt;/span&gt;          &lt;span class="mi"&gt;9&lt;/span&gt;          &lt;span class="mi"&gt;8&lt;/span&gt;         &lt;span class="mi"&gt;7&lt;/span&gt;         &lt;span class="mi"&gt;6&lt;/span&gt;         &lt;span class="mi"&gt;5&lt;/span&gt;
-&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0007039&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;  &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0363&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;8051&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;04&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="mi"&gt;77&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;13&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;376&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;            10          9          8         7         6         5
+-0.0007039 x  + 0.0363 x - 0.8051 x + 10.04 x - 77.13 x + 376.5 x
 
-         &lt;span class="mi"&gt;4&lt;/span&gt;        &lt;span class="mi"&gt;3&lt;/span&gt;        &lt;span class="mi"&gt;2&lt;/span&gt;
- &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="mi"&gt;1159&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;2152&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="mi"&gt;2163&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;891&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="mi"&gt;12&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;54&lt;/span&gt;
+         4        3        2
+ - 1159 x + 2152 x - 2163 x + 891.8 x - 12.54
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;with a Mean Squared Error of Zero!!!&lt;/p&gt;
@@ -16541,7 +16541,7 @@ advanced to the state of Science, whatever the matter may be."&lt;/p&gt;
 climate change:&lt;/p&gt;
 &lt;p&gt;[![ssp_temp_capture.png][]]&lt;a href="https://blogger.googleusercontent.com/tracker/6965073194684424505-30814405432299300?l=bblais.blogspot.com"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The argument is a little dated, actually, most famously &lt;a href="http://en.wikipedia.org/wiki/Pascal's_Wager"&gt;presented in
-the 1600's&lt;/a&gt; well …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I was just alerted to the following video supporting strong action for
+the …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;I was just alerted to the following video supporting strong action for
 climate change:&lt;/p&gt;
 &lt;p&gt;[![ssp_temp_capture.png][]]&lt;a href="https://blogger.googleusercontent.com/tracker/6965073194684424505-30814405432299300?l=bblais.blogspot.com"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The argument is a little dated, actually, most famously &lt;a href="http://en.wikipedia.org/wiki/Pascal's_Wager"&gt;presented in
@@ -18504,7 +18504,7 @@ particularly unintuitive.&lt;/p&gt;
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;random&lt;/span&gt;
 &lt;span class="n"&gt;turn&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;
 &lt;span class="n"&gt;win&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;
-&lt;span class="n"&gt;human&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;False&lt;/span&gt;
+&lt;span class="n"&gt;human&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;False&lt;/span&gt;
 
 &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="n"&gt;turn&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="mi"&gt;500&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
 
@@ -18534,15 +18534,15 @@ particularly unintuitive.&lt;/p&gt;
             &lt;span class="n"&gt;your_second_answer&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;door_choices&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 
     &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;your_second_answer&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="n"&gt;prize&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-        &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;You win!&amp;quot;&lt;/span&gt;
+        &lt;span class="nb"&gt;print&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;You win!&amp;quot;&lt;/span&gt;
         &lt;span class="n"&gt;win&lt;/span&gt;&lt;span class="o"&gt;+=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
     &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-        &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;You Lose!&amp;quot;&lt;/span&gt;
+        &lt;span class="nb"&gt;print&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;You Lose!&amp;quot;&lt;/span&gt;
 
     &lt;span class="n"&gt;turn&lt;/span&gt;&lt;span class="o"&gt;+=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
 
 
-&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Winning percentage: &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="nb"&gt;float&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;win&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;turn&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Winning percentage: &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="nb"&gt;float&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;win&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;turn&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="wordpress_migration"></category></entry><entry><title>Frequentist thinking, or just bad math?</title><link href="https://bblais.github.io/posts/2009/Sep/10/frequentist-thinking-or-just-bad-math/" rel="alternate"></link><published>2009-09-10T01:25:00-04:00</published><updated>2009-09-10T01:25:00-04:00</updated><author><name>brianblais</name></author><id>tag:bblais.github.io,2009-09-10:/posts/2009/Sep/10/frequentist-thinking-or-just-bad-math/</id><summary type="html">&lt;p&gt;In Steven Pinker's excellent book "How the Mind Works", he describes how
 people are bad at probability assessments, but are much better at
 frequency assessments (pg 348). It almost comes …&lt;/p&gt;</summary><content type="html">&lt;p&gt;In Steven Pinker's excellent book "How the Mind Works", he describes how

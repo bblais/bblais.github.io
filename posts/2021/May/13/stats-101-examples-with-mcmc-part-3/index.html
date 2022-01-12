@@ -10,9 +10,9 @@
 </title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="http://localhost:8000/theme/css/main.css" />
+		<link rel="stylesheet" href="https://bblais.github.io/theme/css/main.css" />
 
-        <link rel="stylesheet" type="text/css" href="http://localhost:8000/theme/css/custom.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="https://bblais.github.io/theme/css/custom.css" media="screen">
     
 	</head>
 	<body class="is-preload">
@@ -27,7 +27,7 @@
 
 					<!-- Header -->
 						<header id="header">
-							<a href="http://localhost:8000/index.html" class="logo"><strong>bblais on the web</strong></a>
+							<a href="https://bblais.github.io/index.html" class="logo"><strong>bblais on the web</strong></a>
 							<ul class="icons">
 								<li><a href="https://twitter.com/bblais" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
 								<li><a href="https://www.linkedin.com/in/brian-blais-bb66482b/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
@@ -52,11 +52,11 @@
  <h2> Estimating a proportion </h2> 
 										<p><strong><time pubdate="pubdate" datetime="2021-05-13T00:00:00-04:00">Thu 13 May 2021</strong>
 												In  
-													<em><a href="http://localhost:8000/category/math.html">#math</a></em>
+													<em><a href="https://bblais.github.io/category/math.html">#math</a></em>
 										</p>
 									</header>
 
-										<span class="image left"><img src="http://localhost:8000/images/edge2edge-media-uKlneQRwaxY-unsplash.jpg"></span>
+										<span class="image left"><img src="https://bblais.github.io/images/edge2edge-media-uKlneQRwaxY-unsplash.jpg"></span>
 
 
 									<p>This is another in the series of "<em>Statistics 101</em>" examples solved with MCMC.  Others in the series:</p>
@@ -65,8 +65,8 @@
 <li><a href="https://bblais.github.io/posts/2021/Apr/28/stats-101-examples-with-mcmc-part-2/">Estimating mean with unknown 𝜎</a></li>
 </ul>
 <p>In all of these posts I'm going to use a python library I make for my science-programming class, <a href="https://github.com/bblais/sci378">stored on github</a>, and the <a href="https://emcee.readthedocs.io/en/stable/">emcee</a> library.  Install like:</p>
-<div class="highlight"><pre><span></span><code><span class="err">pip install &quot;git+git://github.com/bblais/sci378&quot; --upgrade</span>
-<span class="err">pip install emcee</span>
+<div class="highlight"><pre><span></span><code>pip install &quot;git+git://github.com/bblais/sci378&quot; --upgrade
+pip install emcee
 </code></pre></div>
 
 <p>In this example the data take the form of a number of "successes", <span class="math">\(h\)</span>, in a total number of "trials", <span class="math">\(N\)</span>, and we want to estimate the proportion, <span class="math">\(\theta\)</span>.  This could be the number of heads observed in <span class="math">\(N\)</span> coin flips and we want to estimate the bias in the coin -- what is the probability that it flips heads.  In fact, the data I will use below is from <a href="https://www.jstor.org/stable/2683855?seq=1#metadata_info_tab_contents">Lindley, 1976. "Inference for a Bernoulli Process (A Bayesian View)"</a>, where he flips a thumbtack which might be able to produce two states pointing "up" or pointing "down", and gets the data UUUDUDUUUUUD (3 D, 9 U).</p>
@@ -101,30 +101,30 @@ $$</div>
 <span class="n">model</span><span class="o">.</span><span class="n">plot_chains</span><span class="p">()</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="err">Sampling Prior...</span>
-<span class="err">Done.</span>
-<span class="err">0.27 s</span>
-<span class="err">Running MCMC 1/3...</span>
-<span class="err">Done.</span>
-<span class="err">2.63 s</span>
-<span class="err">Running MCMC 2/3...</span>
-<span class="err">Done.</span>
-<span class="err">2.79 s</span>
-<span class="err">Running MCMC 3/3...</span>
-<span class="err">Done.</span>
-<span class="err">2.47 s</span>
+<div class="highlight"><pre><span></span><code>Sampling Prior...
+Done.
+0.27 s
+Running MCMC 1/3...
+Done.
+2.63 s
+Running MCMC 2/3...
+Done.
+2.79 s
+Running MCMC 3/3...
+Done.
+2.47 s
 </code></pre></div>
 
-<p><img alt="" src="http://localhost:8000/images/proportion chains.png"></p>
+<p><img alt="" src="https://bblais.github.io/images/proportion chains.png"></p>
 <div class="highlight"><pre><span></span><code><span class="n">model</span><span class="o">.</span><span class="n">plot_distributions</span><span class="p">()</span>
 </code></pre></div>
 
-<p><img alt="" src="http://localhost:8000/images/proportion distribution.png"></p>
+<p><img alt="" src="https://bblais.github.io/images/proportion distribution.png"></p>
 <p>Is this evidence for a biased coin at, say, 95% level?</p>
 <div class="highlight"><pre><span></span><code><span class="n">model</span><span class="o">.</span><span class="n">P</span><span class="p">(</span><span class="s2">&quot;θ &lt;0.5&quot;</span><span class="p">)</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="err">0.95485</span>
+<div class="highlight"><pre><span></span><code><span class="mf">0.95485</span>
 </code></pre></div>
 
 <p>yes, just as <a href="https://www.jstor.org/stable/2683855?seq=1#metadata_info_tab_contents">Lindley, 1976 presents.</a> </p>
@@ -136,9 +136,9 @@ $$</div>
 \end{eqnarray}</div>
 <p>
 which matches the equations in the standard textbooks.  Comparing to our case, with <span class="math">\(N=120\)</span> we get good agreement,</p>
-<p><img alt="" src="http://localhost:8000/images/compare proportion N=120.png"></p>
+<p><img alt="" src="https://bblais.github.io/images/compare proportion N=120.png"></p>
 <p>However, we start seeing differences where the textbook treatment isn't as informative as the methods we're using here.  For small samples, say <span class="math">\(N=12\)</span>, we see that the textbook approximation breaks down -- especially near the <span class="math">\(f=0\)</span> and <span class="math">\(f=1\)</span> boundaries, sometimes overestimating our certainty and sometimes underestimating it.  </p>
-<p><img alt="" src="http://localhost:8000/images/compare proportion N=12.png"></p>
+<p><img alt="" src="https://bblais.github.io/images/compare proportion N=12.png"></p>
 <p>Notice, however, that in the current approach we didn't need to change anything to get more robust answers.  Also notice that the current process for this problem is identical to the process for all of the other cases we've considered.  So what we are presenting, compared to the textbook treatments, is a more <em>unified</em> approach which <em>generalizes</em> to small samples giving a more <em>correct</em> analysis for our data.</p>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
@@ -232,7 +232,7 @@ which matches the equations in the standard textbooks.  Comparing to our case, w
 
                         <!-- Search -->
                         <section id="search" class="alt">
-                            <form class="navbar-search" action="http://localhost:8000/search.html" onsubmit="return validateForm(this.elements['q'].value);"> 
+                            <form class="navbar-search" action="https://bblais.github.io/search.html" onsubmit="return validateForm(this.elements['q'].value);"> 
                                 <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form>
                         </section>
 
@@ -242,32 +242,32 @@ which matches the equations in the standard textbooks.  Comparing to our case, w
                                     <h2>Menu</h2>
                                 </header>
                                 <ul>
-                                    <li><a href="http://localhost:8000/index.html">Homepage</a></li>
+                                    <li><a href="https://bblais.github.io/index.html">Homepage</a></li>
                                     <li>
-                                        <span class="opener"><a href="http://localhost:8000/index.html#0" title="">Blog</a></span>
+                                        <span class="opener"><a href="https://bblais.github.io/index.html#0" title="">Blog</a></span>
                                         <ul>
-                                            <li><a href="http://localhost:8000/index.html#blog">Recent</a></li>
-                                            <li><a href="http://localhost:8000/category/articles.html">articles <span>(85)</span></a></li>
-                                            <li><a href="http://localhost:8000/category/books.html">books <span>(3)</span></a></li>
-                                            <li><a href="http://localhost:8000/category/critical-thinking.html">critical thinking <span>(4)</span></a></li>
-                                            <li><a href="http://localhost:8000/category/math.html">math <span>(8)</span></a></li>
-                                            <li><a href="http://localhost:8000/category/media.html">media <span>(10)</span></a></li>
-                                            <li><a href="http://localhost:8000/category/presentations.html">presentations <span>(3)</span></a></li>
-                                            <li><a href="http://localhost:8000/category/productivity.html">productivity <span>(6)</span></a></li>
-                                            <li><a href="http://localhost:8000/category/programming.html">programming <span>(4)</span></a></li>
-                                            <li><a href="http://localhost:8000/category/projects.html">projects <span>(4)</span></a></li>
-                                            <li><a href="http://localhost:8000/category/religion.html">religion <span>(11)</span></a></li>
-                                            <li><a href="http://localhost:8000/category/science.html">science <span>(8)</span></a></li>
-                                            <li><a href="http://localhost:8000/category/unbelievable-project.html">Unbelievable Project <span>(19)</span></a></li>
-                                            <li><a href="http://localhost:8000/category/wordpress_migration.html">wordpress_migration <span>(160)</span></a></li>
+                                            <li><a href="https://bblais.github.io/index.html#blog">Recent</a></li>
+                                            <li><a href="https://bblais.github.io/category/articles.html">articles <span>(85)</span></a></li>
+                                            <li><a href="https://bblais.github.io/category/books.html">books <span>(3)</span></a></li>
+                                            <li><a href="https://bblais.github.io/category/critical-thinking.html">critical thinking <span>(4)</span></a></li>
+                                            <li><a href="https://bblais.github.io/category/math.html">math <span>(8)</span></a></li>
+                                            <li><a href="https://bblais.github.io/category/media.html">media <span>(10)</span></a></li>
+                                            <li><a href="https://bblais.github.io/category/presentations.html">presentations <span>(3)</span></a></li>
+                                            <li><a href="https://bblais.github.io/category/productivity.html">productivity <span>(6)</span></a></li>
+                                            <li><a href="https://bblais.github.io/category/programming.html">programming <span>(4)</span></a></li>
+                                            <li><a href="https://bblais.github.io/category/projects.html">projects <span>(4)</span></a></li>
+                                            <li><a href="https://bblais.github.io/category/religion.html">religion <span>(11)</span></a></li>
+                                            <li><a href="https://bblais.github.io/category/science.html">science <span>(8)</span></a></li>
+                                            <li><a href="https://bblais.github.io/category/unbelievable-project.html">Unbelievable Project <span>(19)</span></a></li>
+                                            <li><a href="https://bblais.github.io/category/wordpress_migration.html">wordpress_migration <span>(160)</span></a></li>
      
                                         </ul>
                                     </li>
-                                    <li><a href="http://localhost:8000/pages/presentations.html">Presentations</a></li>
-                                    <li><a href="http://localhost:8000/pages/projects.html">Projects</a></li>
-                                    <li><a href="http://localhost:8000/pages/publications.html">Publications</a></li>
-                                    <li><a href="http://localhost:8000/archives.html">Archives</a></li>
-                                    <li><a href="http://localhost:8000/about.html">About</a></li>
+                                    <li><a href="https://bblais.github.io/pages/presentations.html">Presentations</a></li>
+                                    <li><a href="https://bblais.github.io/pages/projects.html">Projects</a></li>
+                                    <li><a href="https://bblais.github.io/pages/publications.html">Publications</a></li>
+                                    <li><a href="https://bblais.github.io/archives.html">Archives</a></li>
+                                    <li><a href="https://bblais.github.io/about.html">About</a></li>
                                 </ul>
                             </nav>
 
@@ -279,22 +279,22 @@ which matches the equations in the standard textbooks.  Comparing to our case, w
 
                                 <div class="mini-posts">
                                         <article>
-                                            <a href="http://localhost:8000/posts/2021/Apr/09/gravitational-attraction/" class="image">
-                                                <img src="http://localhost:8000/images/muzammil-soorma-R11bppS4q8o-unsplash.jpg" alt="muzammil-soorma-R11bppS4q8o-unsplash.jpg">
+                                            <a href="https://bblais.github.io/posts/2021/Apr/09/gravitational-attraction/" class="image">
+                                                <img src="https://bblais.github.io/images/muzammil-soorma-R11bppS4q8o-unsplash.jpg" alt="muzammil-soorma-R11bppS4q8o-unsplash.jpg">
                                             </a>
                                             <p><strong>Gravitational Attraction </strong>
                                                 <p>What would happen if two people out in space a few meters apart, abandoned by their spacecraft, decided to wait until gravity pulled them together?  My initial thought was that …</p></p>
                                         </article>
                                         <article>
-                                            <a href="http://localhost:8000/posts/2020/Aug/03/a-simple-physics-problem-gets-messy/" class="image">
-                                                <img src="http://localhost:8000/images/roman-mager-5mZ_M06Fc9g-unsplash.jpg" alt="roman-mager-5mZ_M06Fc9g-unsplash.jpg">
+                                            <a href="https://bblais.github.io/posts/2020/Aug/03/a-simple-physics-problem-gets-messy/" class="image">
+                                                <img src="https://bblais.github.io/images/roman-mager-5mZ_M06Fc9g-unsplash.jpg" alt="roman-mager-5mZ_M06Fc9g-unsplash.jpg">
                                             </a>
                                             <p><strong>A Simple Physics Problem Gets Messy </strong>
                                                 <p>A physics problem from a practice AP test came to my attention, when my daughter was in AP physics this past spring.  I went over her solutions when she did …</p></p>
                                         </article>
                                         <article>
-                                            <a href="http://localhost:8000/posts/2020/Jul/09/skepticism-and-dubious-medical-procedures/" class="image">
-                                                <img src="http://localhost:8000/images/mohamed-nohassi-odxB5oIG_iA-unsplash.jpg" alt="mohamed-nohassi-odxB5oIG_iA-unsplash.jpg">
+                                            <a href="https://bblais.github.io/posts/2020/Jul/09/skepticism-and-dubious-medical-procedures/" class="image">
+                                                <img src="https://bblais.github.io/images/mohamed-nohassi-odxB5oIG_iA-unsplash.jpg" alt="mohamed-nohassi-odxB5oIG_iA-unsplash.jpg">
                                             </a>
                                             <p><strong>Skepticism and Dubious Medical Procedures </strong>
                                                 <p>In my discussion with Jonathan McLatchie on the Still Unbelievable podcast, I said that there hasn’t been a verified miracle claim even since Hume’s essay on miracles.  Here I look into the papers he references in response.</p></p>
@@ -332,12 +332,12 @@ which matches the equations in the standard textbooks.  Comparing to our case, w
 
 
     <!-- Scripts -->
-	<script src="http://localhost:8000/theme/js/jquery.min.js"></script>
-	<script src="http://localhost:8000/theme/js/elegant.prod.9e9d5ce754.js"></script>
-	<script src="http://localhost:8000/theme/js/browser.min.js"></script>
-	<script src="http://localhost:8000/theme/js/breakpoints.min.js"></script>
-	<script src="http://localhost:8000/theme/js/util.js"></script>
-	<script src="http://localhost:8000/theme/js/main.js"></script>
+	<script src="https://bblais.github.io/theme/js/jquery.min.js"></script>
+	<script src="https://bblais.github.io/theme/js/elegant.prod.9e9d5ce754.js"></script>
+	<script src="https://bblais.github.io/theme/js/browser.min.js"></script>
+	<script src="https://bblais.github.io/theme/js/breakpoints.min.js"></script>
+	<script src="https://bblais.github.io/theme/js/util.js"></script>
+	<script src="https://bblais.github.io/theme/js/main.js"></script>
 	<script>
 		function validateForm(query)
 		{

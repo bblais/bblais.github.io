@@ -18,9 +18,7 @@ goes.  For right now I may duplicate posts, or at least point the posts
 over there for a bit.  &lt;/p&gt;
 &lt;p&gt;Let me know what you think!  Anything broken?&lt;/p&gt;</content><category term="wordpress_migration"></category></entry><entry><title>A New Year and a Deepity</title><link href="https://bblais.github.io/posts/2014/Jan/06/a-new-year-and-a-deepity/" rel="alternate"></link><published>2014-01-06T14:04:00-05:00</published><updated>2014-01-06T14:04:00-05:00</updated><author><name>brianblais</name></author><id>tag:bblais.github.io,2014-01-06:/posts/2014/Jan/06/a-new-year-and-a-deepity/</id><summary type="html">&lt;p&gt;A short video by Fr. Robert Barron, to start off the new year.&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://[youtube=http://www.youtube.com"&gt;[youtube=http://www.youtube.com&lt;/a&gt;/watch?v=1zMf_8hkCdc&amp;amp;w=560&amp;amp;h=315]&lt;/p&gt;
-&lt;p&gt;Here is the summary:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;He …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;A short video by Fr. Robert Barron, to start off the new year.&lt;/p&gt;
+&lt;p&gt;Here is the summary …&lt;/p&gt;</summary><content type="html">&lt;p&gt;A short video by Fr. Robert Barron, to start off the new year.&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://[youtube=http://www.youtube.com"&gt;[youtube=http://www.youtube.com&lt;/a&gt;/watch?v=1zMf_8hkCdc&amp;amp;w=560&amp;amp;h=315]&lt;/p&gt;
 &lt;p&gt;Here is the summary:&lt;/p&gt;
 &lt;ul&gt;
@@ -1666,15 +1664,15 @@ it right, but I wanted to make sure. The math is&lt;/p&gt;
 P=P_o e^{rt}  
 $$&lt;/div&gt;
 &lt;p&gt;The code is:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;00456&lt;/span&gt;
-&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;4500&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;
-&lt;span class="n"&gt;Po&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;r=0.00456
+t=4500.0
+Po=8.0
 
-&lt;span class="n"&gt;print&lt;/span&gt; &lt;span class="n"&gt;Po&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;exp&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="n"&gt;e9&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;billion&amp;quot;&lt;/span&gt;
+print Po*exp(r*t)/1e9,&amp;quot;billion&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Yielding&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;6.52849018681 billion&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="mf"&gt;6.52849018681&lt;/span&gt; &lt;span class="n"&gt;billion&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;The other direction is, how long ago were there only 8 people?&lt;/p&gt;
@@ -1684,16 +1682,16 @@ P(t)&amp;amp;=&amp;amp;P_o \times e^{r\cdot t} \\\\
 t&amp;amp;=&amp;amp; \frac{\log(P(t))-\log(P_o)}{r}  
 \end{eqnarray}&lt;/div&gt;
 &lt;p&gt;or&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;Po&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="n"&gt;e9&lt;/span&gt;  &lt;span class="o"&gt;#&lt;/span&gt; &lt;span class="k"&gt;current&lt;/span&gt; &lt;span class="n"&gt;population&lt;/span&gt;
-&lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;00456&lt;/span&gt;
-&lt;span class="n"&gt;P&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt;       &lt;span class="o"&gt;#&lt;/span&gt; &lt;span class="n"&gt;target&lt;/span&gt; &lt;span class="n"&gt;population&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;Po=6.5e9  # current population
+r=0.00456
+P=8       # target population
 
-&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;P&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Po&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;r&lt;/span&gt; 
-&lt;span class="n"&gt;print&lt;/span&gt; &lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ss"&gt;&amp;quot;years&amp;quot;&lt;/span&gt;
+t=(log(P)-log(Po))/r 
+print t, &amp;quot;years&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;resulting in&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;-4499.04089302 years.&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;-4499.04089302 years.
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h2 id="is-their-growth-rate-correct"&gt;Is their growth rate correct?&lt;/h2&gt;
@@ -2469,11 +2467,11 @@ this data, the best fit is&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Fig2" src="http://brianblais.files.wordpress.com/2013/02/fig2.png" title="fig2.png"&gt;&lt;/p&gt;
 &lt;p&gt;Overall, not a bad looking fit. However, if we fit to a 10-th power
 polynomial, we can get even better!&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;            &lt;span class="mi"&gt;10&lt;/span&gt;          &lt;span class="mi"&gt;9&lt;/span&gt;          &lt;span class="mi"&gt;8&lt;/span&gt;         &lt;span class="mi"&gt;7&lt;/span&gt;         &lt;span class="mi"&gt;6&lt;/span&gt;         &lt;span class="mi"&gt;5&lt;/span&gt;
-&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0007039&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;  &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0363&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;8051&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;04&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="mi"&gt;77&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;13&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;376&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;            10          9          8         7         6         5
+-0.0007039 x  + 0.0363 x - 0.8051 x + 10.04 x - 77.13 x + 376.5 x
 
-         &lt;span class="mi"&gt;4&lt;/span&gt;        &lt;span class="mi"&gt;3&lt;/span&gt;        &lt;span class="mi"&gt;2&lt;/span&gt;
- &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="mi"&gt;1159&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;2152&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="mi"&gt;2163&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;891&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="mi"&gt;12&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;54&lt;/span&gt;
+         4        3        2
+ - 1159 x + 2152 x - 2163 x + 891.8 x - 12.54
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;with a Mean Squared Error of Zero!!!&lt;/p&gt;
@@ -7459,7 +7457,7 @@ advanced to the state of Science, whatever the matter may be."&lt;/p&gt;
 climate change:&lt;/p&gt;
 &lt;p&gt;[![ssp_temp_capture.png][]]&lt;a href="https://blogger.googleusercontent.com/tracker/6965073194684424505-30814405432299300?l=bblais.blogspot.com"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The argument is a little dated, actually, most famously &lt;a href="http://en.wikipedia.org/wiki/Pascal's_Wager"&gt;presented in
-the 1600's&lt;/a&gt; well …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I was just alerted to the following video supporting strong action for
+the …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;I was just alerted to the following video supporting strong action for
 climate change:&lt;/p&gt;
 &lt;p&gt;[![ssp_temp_capture.png][]]&lt;a href="https://blogger.googleusercontent.com/tracker/6965073194684424505-30814405432299300?l=bblais.blogspot.com"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The argument is a little dated, actually, most famously &lt;a href="http://en.wikipedia.org/wiki/Pascal's_Wager"&gt;presented in
@@ -9422,7 +9420,7 @@ particularly unintuitive.&lt;/p&gt;
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;random&lt;/span&gt;
 &lt;span class="n"&gt;turn&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;
 &lt;span class="n"&gt;win&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;
-&lt;span class="n"&gt;human&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;False&lt;/span&gt;
+&lt;span class="n"&gt;human&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;False&lt;/span&gt;
 
 &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="n"&gt;turn&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="mi"&gt;500&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
 
@@ -9452,15 +9450,15 @@ particularly unintuitive.&lt;/p&gt;
             &lt;span class="n"&gt;your_second_answer&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;door_choices&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 
     &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;your_second_answer&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="n"&gt;prize&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-        &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;You win!&amp;quot;&lt;/span&gt;
+        &lt;span class="nb"&gt;print&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;You win!&amp;quot;&lt;/span&gt;
         &lt;span class="n"&gt;win&lt;/span&gt;&lt;span class="o"&gt;+=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
     &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-        &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;You Lose!&amp;quot;&lt;/span&gt;
+        &lt;span class="nb"&gt;print&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;You Lose!&amp;quot;&lt;/span&gt;
 
     &lt;span class="n"&gt;turn&lt;/span&gt;&lt;span class="o"&gt;+=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
 
 
-&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Winning percentage: &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="nb"&gt;float&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;win&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;turn&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Winning percentage: &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="nb"&gt;float&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;win&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;turn&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="wordpress_migration"></category></entry><entry><title>Frequentist thinking, or just bad math?</title><link href="https://bblais.github.io/posts/2009/Sep/10/frequentist-thinking-or-just-bad-math/" rel="alternate"></link><published>2009-09-10T01:25:00-04:00</published><updated>2009-09-10T01:25:00-04:00</updated><author><name>brianblais</name></author><id>tag:bblais.github.io,2009-09-10:/posts/2009/Sep/10/frequentist-thinking-or-just-bad-math/</id><summary type="html">&lt;p&gt;In Steven Pinker's excellent book "How the Mind Works", he describes how
 people are bad at probability assessments, but are much better at
 frequency assessments (pg 348). It almost comes …&lt;/p&gt;</summary><content type="html">&lt;p&gt;In Steven Pinker's excellent book "How the Mind Works", he describes how
