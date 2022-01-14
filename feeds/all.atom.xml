@@ -1,5 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>bblais on the web</title><link href="https://bblais.github.io/" rel="alternate"></link><link href="https://bblais.github.io/feeds/all.atom.xml" rel="self"></link><id>https://bblais.github.io/</id><updated>2022-01-07T00:00:00-05:00</updated><entry><title>Simulating Stochastic Processes</title><link href="https://bblais.github.io/posts/2022/Jan/07/simulating-stochastic-processes/" rel="alternate"></link><published>2022-01-07T00:00:00-05:00</published><updated>2022-01-07T00:00:00-05:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2022-01-07:/posts/2022/Jan/07/simulating-stochastic-processes/</id><summary type="html">&lt;p&gt;In this post we are going to explore the simulation of stochastic (i.e. random) processes, and work our way to understanding how the Gillespie algorithm works.  We'll be using …&lt;/p&gt;</summary><content type="html">&lt;p&gt;In this post we are going to explore the simulation of stochastic (i.e. random) processes, and work our way to understanding how the Gillespie algorithm works.  We'll be using mostly straightforward Python, except for my &lt;code&gt;Storage&lt;/code&gt; class from &lt;a href="https://bblais.github.io/posts/2020/Feb/24/common-python-pattern-building-up-lists-to-plot/"&gt;https://bblais.github.io/posts/2020/Feb/24/common-python-pattern-building-up-lists-to-plot/&lt;/a&gt; and some default plotting preferences specified in &lt;a href="https://raw.githubusercontent.com/bblais/Python-for-Science/master/science/science.mplstyle"&gt;https://raw.githubusercontent.com/bblais/Python-for-Science/master/science/science.mplstyle&lt;/a&gt;.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>bblais on the web</title><link href="https://bblais.github.io/" rel="alternate"></link><link href="https://bblais.github.io/feeds/all.atom.xml" rel="self"></link><id>https://bblais.github.io/</id><updated>2022-01-14T00:00:00-05:00</updated><entry><title>Chemical Reaction Dynamics</title><link href="https://bblais.github.io/posts/2022/Jan/14/chemical-reaction-dynamics/" rel="alternate"></link><published>2022-01-14T00:00:00-05:00</published><updated>2022-01-14T00:00:00-05:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2022-01-14:/posts/2022/Jan/14/chemical-reaction-dynamics/</id><summary type="html">&lt;p&gt;As an exercise, I like to reproduce computational papers, but with my own tools.  This let's me know that I understand completely what is being  written and in many cases …&lt;/p&gt;</summary><content type="html">&lt;p&gt;As an exercise, I like to reproduce computational papers, but with my own tools.  This let's me know that I understand completely what is being  written and in many cases allows me to extend and debug my own tools.  I'm going to do a series of these as I work through some of my reading list.  The first one I'm doing is available here:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.cs.princeton.edu/picasso/mats/matlab/princeton_spring06.pdf"&gt;&lt;a href="https://www.cs.princeton.edu/picasso/mats/matlab/princeton_spring06.pdf"&gt;https://www.cs.princeton.edu/picasso/mats/matlab/princeton_spring06.pdf&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;In this case, not only was I able to reproduce the results of the text, but it uncovered two bugs in my &lt;a href="https://bblais.github.io/pyndamics3/"&gt;&lt;code&gt;pyndamics3&lt;/code&gt;&lt;/a&gt; package which I was able to fix.  &lt;/p&gt;
+&lt;p&gt;The main system in the text being solved is&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Pasted image 20220113102335.png" src="https://bblais.github.io/images/Pasted image 20220113102335.png"&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;pylab&lt;/span&gt; &lt;span class="n"&gt;inline&lt;/span&gt;
+
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;pyndamics3&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Simulation&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;pyndamics3.chem&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;ChemSimulation&lt;/span&gt;
+
+&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;20&lt;/span&gt;
+&lt;span class="n"&gt;k3&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;0.00577&lt;/span&gt;
+&lt;span class="n"&gt;k4&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;0.0001925&lt;/span&gt;
+&lt;span class="n"&gt;k1&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;.01&lt;/span&gt;
+
+&lt;span class="n"&gt;sim&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;ChemSimulation&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+&lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class="sd"&gt;D --k1--&amp;gt; D+M&lt;/span&gt;
+&lt;span class="sd"&gt;M --k2--&amp;gt; M+P&lt;/span&gt;
+&lt;span class="sd"&gt;M --k3--&amp;gt; ϕ&lt;/span&gt;
+&lt;span class="sd"&gt;P --k4--&amp;gt; ϕ&lt;/span&gt;
+&lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;D&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;M&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;ϕ&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;P&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;k1&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;k1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;k2&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;k3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;k3&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;k3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;k4&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;k4&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;sim&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;components&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;
+
+&lt;span class="n"&gt;sim&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;4e4&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Output:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;[&amp;#39;D&amp;#39;] k1 [&amp;#39;D&amp;#39;, &amp;#39;M&amp;#39;]&lt;/span&gt;
+&lt;span class="k"&gt;[&amp;#39;M&amp;#39;] k2 [&amp;#39;M&amp;#39;, &amp;#39;P&amp;#39;]&lt;/span&gt;
+&lt;span class="k"&gt;[&amp;#39;M&amp;#39;] k3 [&amp;#39;ϕ&amp;#39;]&lt;/span&gt;
+&lt;span class="k"&gt;[&amp;#39;P&amp;#39;] k4 [&amp;#39;ϕ&amp;#39;]&lt;/span&gt;
+&lt;span class="na"&gt;Components [&amp;#39;D&amp;#39;, &amp;#39;M&amp;#39;, &amp;#39;P&amp;#39;, &amp;#39;ϕ&amp;#39;]&lt;/span&gt;
+&lt;span class="na"&gt;Parameters [&amp;#39;k1&amp;#39;, &amp;#39;k2&amp;#39;, &amp;#39;k3&amp;#39;, &amp;#39;k4&amp;#39;]&lt;/span&gt;
+&lt;span class="na"&gt;diffeqs [&amp;quot;D&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;0&amp;quot;, &amp;quot;M&amp;#39; =  +k1*D -k3*M&amp;quot;, &amp;quot;P&amp;#39; =  +k2*M -k4*P&amp;quot;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;which yields figures like:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Pasted image 20220113102516.png" src="https://bblais.github.io/images/Pasted image 20220113102516.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Pasted image 20220113102541.png" src="https://bblais.github.io/images/Pasted image 20220113102541.png"&gt;
+&lt;img alt="Pasted image 20220113102550.png" src="https://bblais.github.io/images/Pasted image 20220113102550.png"&gt;&lt;/p&gt;
+&lt;p&gt;The text points out,&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Pasted image 20220113102608.png" src="https://bblais.github.io/images/Pasted image 20220113102608.png"&gt;&lt;/p&gt;
+&lt;p&gt;which we can find by looking at the end of the array for each of those variables.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;sim&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;P&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;&lt;span class="n"&gt;sim&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;M&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;(1038.4743123361338, 1.7331022510164473)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The paper then adds the exercise&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Pasted image 20220113102710.png" src="https://bblais.github.io/images/Pasted image 20220113102710.png"&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;
+&lt;span class="n"&gt;k3&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;0.00577&lt;/span&gt;
+&lt;span class="n"&gt;k4&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;0.0001925&lt;/span&gt;
+&lt;span class="n"&gt;k1&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;.01&lt;/span&gt;
+
+&lt;span class="n"&gt;sim&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;ChemSimulation&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+&lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class="sd"&gt;D --k1--&amp;gt; D+M&lt;/span&gt;
+&lt;span class="sd"&gt;M --k2--&amp;gt; M+P&lt;/span&gt;
+&lt;span class="sd"&gt;M --k3--&amp;gt; ϕ&lt;/span&gt;
+&lt;span class="sd"&gt;P --k4--&amp;gt; ϕ&lt;/span&gt;
+&lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;D&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;M&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;ϕ&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;P&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;k1&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;k1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;k2&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;k3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;k3&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;k3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;k4&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;k4&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;sim&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;components&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;I discovered that by originally doing&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;sim&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;1e4&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;sim&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;P&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;&lt;span class="n"&gt;sim&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;M&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;(88.21709421325941, 1.7331022259104094)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;it didn't match the fixed point stated in the text!  So Iooked at the plot&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Pasted image 20220113103003.png" src="https://bblais.github.io/images/Pasted image 20220113103003.png"&gt;&lt;/p&gt;
+&lt;p&gt;and saw it hadn't converged.  Increasing the run time&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;sim&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;1e5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;sim&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;P&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;&lt;span class="n"&gt;sim&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;M&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;(103.8961031134814, 1.7331022530369293)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img alt="Pasted image 20220113103146.png" src="https://bblais.github.io/images/Pasted image 20220113103146.png"&gt;&lt;/p&gt;
+&lt;p&gt;It converged and we got the same answer as in the text.&lt;/p&gt;
+&lt;p&gt;Another time I will extend this to the stochastic version, which is in the second part of the text.&lt;/p&gt;</content><category term="science"></category></entry><entry><title>Simulating Stochastic Processes</title><link href="https://bblais.github.io/posts/2022/Jan/07/simulating-stochastic-processes/" rel="alternate"></link><published>2022-01-07T00:00:00-05:00</published><updated>2022-01-07T00:00:00-05:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2022-01-07:/posts/2022/Jan/07/simulating-stochastic-processes/</id><summary type="html">&lt;p&gt;In this post we are going to explore the simulation of stochastic (i.e. random) processes, and work our way to understanding how the Gillespie algorithm works.  We'll be using …&lt;/p&gt;</summary><content type="html">&lt;p&gt;In this post we are going to explore the simulation of stochastic (i.e. random) processes, and work our way to understanding how the Gillespie algorithm works.  We'll be using mostly straightforward Python, except for my &lt;code&gt;Storage&lt;/code&gt; class from &lt;a href="https://bblais.github.io/posts/2020/Feb/24/common-python-pattern-building-up-lists-to-plot/"&gt;https://bblais.github.io/posts/2020/Feb/24/common-python-pattern-building-up-lists-to-plot/&lt;/a&gt; and some default plotting preferences specified in &lt;a href="https://raw.githubusercontent.com/bblais/Python-for-Science/master/science/science.mplstyle"&gt;https://raw.githubusercontent.com/bblais/Python-for-Science/master/science/science.mplstyle&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id="imports"&gt;Imports&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;pylab&lt;/span&gt; &lt;span class="n"&gt;inline&lt;/span&gt;
 &lt;span class="n"&gt;style&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;use&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;science.mplstyle&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
