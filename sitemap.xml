@@ -5,77 +5,84 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://bblais.github.io/</loc>
-<lastmod>2022-02-05T14:54:18-00:00</lastmod>
+<lastmod>2022-02-09T06:14:05-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/about.html</loc>
-<lastmod>2022-02-05T14:54:18-00:00</lastmod>
+<lastmod>2022-02-09T06:14:05-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/archives.html</loc>
-<lastmod>2022-02-05T14:54:18-00:00</lastmod>
+<lastmod>2022-02-09T06:14:05-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/contact.html</loc>
-<lastmod>2022-02-05T14:54:18-00:00</lastmod>
+<lastmod>2022-02-09T06:14:05-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/thanks.html</loc>
-<lastmod>2022-02-05T14:54:18-00:00</lastmod>
+<lastmod>2022-02-09T06:14:05-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/search.html</loc>
-<lastmod>2022-02-05T14:54:18-00:00</lastmod>
+<lastmod>2022-02-09T06:14:05-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/tags.html</loc>
-<lastmod>2022-02-05T14:54:18-00:00</lastmod>
+<lastmod>2022-02-09T06:14:05-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/search.html</loc>
-<lastmod>2022-02-05T14:54:18-00:00</lastmod>
+<lastmod>2022-02-09T06:14:05-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/pages/presentations.html</loc>
-<lastmod>2022-02-05T14:54:18-00:00</lastmod>
+<lastmod>2022-02-09T06:14:05-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/pages/projects.html</loc>
-<lastmod>2022-02-05T14:54:18-00:00</lastmod>
+<lastmod>2022-02-09T06:14:05-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/pages/publications.html</loc>
-<lastmod>2022-02-05T14:54:18-00:00</lastmod>
+<lastmod>2022-02-09T06:14:05-00:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://bblais.github.io/posts/2022/Feb/07/miracles-are-rare-except-when-they-arent/</loc>
+<lastmod>2022-02-07T00:00:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -2455,7 +2462,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://bblais.github.io/category/religion.html</loc>
-<lastmod>2022-02-03T00:00:00-04:56</lastmod>
+<lastmod>2022-02-07T00:00:00-04:56</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -2477,6 +2484,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://bblais.github.io/category/wordpress_migration.html</loc>
 <lastmod>2014-01-14T14:52:00-04:56</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://bblais.github.io/tag/unbelievable.html</loc>
+<lastmod>2022-02-07T00:00:00-04:56</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -2608,13 +2622,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://bblais.github.io/tag/unbelievable.html</loc>
-<lastmod>2018-03-05T00:00:00-04:56</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
 <loc>https://bblais.github.io/tag/education.html</loc>
 <lastmod>2014-11-21T00:00:00-04:56</lastmod>
 <changefreq>daily</changefreq>
@@ -2714,7 +2721,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://bblais.github.io/author/brian-blais.html</loc>
-<lastmod>2022-02-03T00:00:00-04:56</lastmod>
+<lastmod>2022-02-07T00:00:00-04:56</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
