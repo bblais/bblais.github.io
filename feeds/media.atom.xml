@@ -397,7 +397,85 @@
 &lt;p&gt;It's 9 hours long, but I am only on for the first 7 hours.  &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;On YouTube: &lt;a href="https://youtu.be/yeCBpO7pSRM"&gt;https://youtu.be/yeCBpO7pSRM&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><category term="media"></category><category term="bayesian"></category><category term="probability"></category><category term="religion"></category></entry><entry><title>Bayes vs Apologetics</title><link href="https://bblais.github.io/posts/2021/Feb/28/bayes-vs-apologetics/" rel="alternate"></link><published>2021-02-28T00:00:00-05:00</published><updated>2021-02-28T00:00:00-05:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2021-02-28:/posts/2021/Feb/28/bayes-vs-apologetics/</id><summary type="html">&lt;p&gt;In this episode, David (the &lt;a href="https://gracefulatheist.com"&gt;Graceful Atheist&lt;/a&gt; and I explore how Bayes theorem can structure our thinking.  We bounce ideas off each other, talk about injecting information into arguments, and …&lt;/p&gt;</summary><content type="html">&lt;p&gt;In this episode, David (the &lt;a href="https://gracefulatheist.com"&gt;Graceful Atheist&lt;/a&gt; and I explore how Bayes theorem can structure our thinking.  We bounce ideas off each other, talk about injecting information into arguments, and how the lack of imagination in exploring alternatives undermines the case for many apologist arguments.  We touch on decision theory and conspiracy theories, reiterating the fact that our beliefs have real-world consequences.  &lt;/p&gt;
+&lt;/ul&gt;
+&lt;p&gt;I started a summary:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Part 1: 0:0:0 to 2:52:00&lt;/li&gt;
+&lt;li&gt;Part 2: coming soon&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This isn't a complete log of everything said, but I tried to include the main points.  I also started with a transcript, and edited it for clarity (e.g. removing ums, and repetition) but there may still be some weird typos from the computer generated transcript that I didn't catch. I will try to quote Nathan, James, Kamil and myself if it comes from the episode.  All other text is mine, commentary either at the time or sometime afterward. &lt;/p&gt;
+&lt;p&gt;The main issues are:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;ignoring priors because there's no prior probability in their calculation, so they really aren't doing Bayes&lt;/li&gt;
+&lt;li&gt;inconsistent use of priors -- when they address naturalistic alternatives they say, this is implausible -- so they do consider priors, but only when it suits them&lt;/li&gt;
+&lt;li&gt;they don't support the claim that their preferred model (e.g. Yahweh raised Jesus from the dead) actually produces the evidence with the high likelihood&lt;/li&gt;
+&lt;li&gt;they don't seriously consider alternatives, either natural or supernatural&lt;/li&gt;
+&lt;li&gt;they don't motivate their numbers with comparable rare events, or they would have seen that their calculation of an odds ratio of &lt;span class="math"&gt;\(10^{44}\)&lt;/span&gt; is ridiculous&lt;/li&gt;
+&lt;li&gt;they uncritically take the claims in the New Testament as the actual data we have, as opposed to the fact that what we have are ancient &lt;em&gt;texts&lt;/em&gt; that contain those claims&lt;/li&gt;
+&lt;li&gt;an uncritical view of New Testament documents, and an unprofessional response to traditional scholarship&lt;/li&gt;
+&lt;/ol&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="media"></category><category term="bayesian"></category><category term="probability"></category><category term="religion"></category></entry><entry><title>Bayes vs Apologetics</title><link href="https://bblais.github.io/posts/2021/Feb/28/bayes-vs-apologetics/" rel="alternate"></link><published>2021-02-28T00:00:00-05:00</published><updated>2021-02-28T00:00:00-05:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2021-02-28:/posts/2021/Feb/28/bayes-vs-apologetics/</id><summary type="html">&lt;p&gt;In this episode, David (the &lt;a href="https://gracefulatheist.com"&gt;Graceful Atheist&lt;/a&gt; and I explore how Bayes theorem can structure our thinking.  We bounce ideas off each other, talk about injecting information into arguments, and …&lt;/p&gt;</summary><content type="html">&lt;p&gt;In this episode, David (the &lt;a href="https://gracefulatheist.com"&gt;Graceful Atheist&lt;/a&gt; and I explore how Bayes theorem can structure our thinking.  We bounce ideas off each other, talk about injecting information into arguments, and how the lack of imagination in exploring alternatives undermines the case for many apologist arguments.  We touch on decision theory and conspiracy theories, reiterating the fact that our beliefs have real-world consequences.  &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;On Anchor: &lt;a href="https://anchor.fm/gracefulatheist/episodes/Brian-Blais-Bayes-vs-Apologetics-er67c4"&gt;https://anchor.fm/gracefulatheist/episodes/Brian-Blais-Bayes-vs-Apologetics-er67c4&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;On iTunes: &lt;a href="https://podcasts.apple.com/us/podcast/graceful-atheist-podcast/id1456800368?itsct=podcast_box&amp;amp;itscg=30200"&gt;https://podcasts.apple.com/us/podcast/graceful-atheist-podcast/id1456800368?itsct=podcast_box&amp;amp;itscg=30200&lt;/a&gt;&lt;/li&gt;
