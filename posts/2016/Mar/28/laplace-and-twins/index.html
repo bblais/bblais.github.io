@@ -106,7 +106,7 @@ the output of Bayes’ rule (3).</p>
 or 1:1 odds, and thus</p>
 <div class="math">$$P(I|S)=1/2$$</div>
 <h2 id="what-would-laplace-do">What would Laplace do?</h2>
-<p>The text refers to an "uninformative prior", in a derogatory way, and then proceeds to mistakenly use an <em>informative</em>, incorrect prior and attribute it to Laplace.  Laplace, <a href="http://web.bryant.edu/~bblais/misquoting-hume.html">like Hume</a>, is mischaracterized so often it really is remarkable.  Let's follow through how the text gets the <span class="math">\(P(S|I)=2/3\)</span> presumably what Laplace would do.  To get this, we assume that there are two states (identical and fraternal) and that uninformative means equal probability to these states.  Thus the prior is <span class="math">\(P(I)=1/2\)</span>, and the same calculation proceeds as </p>
+<p>The text refers to an "uninformative prior", in a derogatory way, and then proceeds to mistakenly use an <em>informative</em>, incorrect prior and attribute it to Laplace.  Laplace, <a href="https://bblais.github.io/posts/2015/Feb/21/misquoting-hume/">like Hume</a>, is mischaracterized so often it really is remarkable.  Let's follow through how the text gets the <span class="math">\(P(S|I)=2/3\)</span> presumably what Laplace would do.  To get this, we assume that there are two states (identical and fraternal) and that uninformative means equal probability to these states.  Thus the prior is <span class="math">\(P(I)=1/2\)</span>, and the same calculation proceeds as </p>
 <div class="math">\begin{eqnarray}
 \frac{P(I|S)}{P(\sim I|S)} &amp;=&amp; \frac{P(S|I)P(I)}{P(S|\sim I)P(\sim I)} \\
 &amp;=&amp; \frac{1/2 \times 1/2}{1/4 \times (1-1/2)} = 2
@@ -136,7 +136,7 @@ P(I|S) &amp;=&amp; \int_0^1 \frac{1/2 \cdot q}{1/2\cdot q + 1/4\cdot (1-q)} dq =
 <div class="math">\begin{eqnarray}
 P(I|S) &amp;=&amp; \int_0^1 \frac{1/2 \cdot q}{1/2\cdot q + 1/4\cdot (1-q)} {\rm Beta}(h+1,N+1) dq 
 \end{eqnarray}</div>
-<p>which is easiest done numerically.  Using the sie library from <a href="http://web.bryant.edu/~bblais/statistical-inference-for-everyone-sie.html">my book</a> I have for <span class="math">\(h=0\)</span>, <span class="math">\(N=0\)</span>, </p>
+<p>which is easiest done numerically.  Using the sie library from <a href="https://bblais.github.io/posts/2014/Nov/21/statistical-inference-for-everyone-sie/">my book</a> I have for <span class="math">\(h=0\)</span>, <span class="math">\(N=0\)</span>, </p>
 <div class="highlight"><pre><span></span><code><span class="n">h</span><span class="o">=</span><span class="mi">0</span>
 <span class="n">N</span><span class="o">=</span><span class="mi">0</span>
 
