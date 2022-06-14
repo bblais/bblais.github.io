@@ -1,0 +1,419 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Sometimes more testimony is worse.  - Scientific methods impact source reliability  · bblais on the web
+</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="https://bblais.github.io/theme/css/main.css" />
+
+        <link rel="stylesheet" type="text/css" href="https://bblais.github.io/theme/css/custom.css" media="screen">
+    
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+        <div id="wrapper">
+
+		<!-- Main -->
+			<div id="main">
+
+				<div class="inner">
+
+					<!-- Header -->
+						<header id="header">
+							<a href="https://bblais.github.io/index.html" class="logo"><strong>bblais on the web</strong></a>
+							<ul class="icons">
+								<li><a href="https://twitter.com/bblais" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="https://www.linkedin.com/in/brian-blais-bb66482b/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+								<li><a href="https://github.com/bblais" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="https://bblais.github.io/feeds/all.atom.xml" class="icon solid fa-rss"><span class="label">YouTube</span></a></li>
+								<li><a href="mai&#108;&#116;o&#58;b&#37;6&#50;%6C&#37;61i%&#55;3%40%62ry&#37;61nt%2Eed&#37;7&#53;" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+								<li><a href="https://www.youtube.com/channel/UC8cN5_0dy5o9qNPpdLxPa8w" class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
+							</ul>
+						</header>
+
+
+
+
+
+
+
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h1>Sometimes more testimony is worse.</h1> 
+ <h2> Scientific methods impact source reliability </h2> 
+										<p><strong><time pubdate="pubdate" datetime="2022-06-14T00:00:00-04:00">Tue 14 June 2022</strong>
+												In  
+													<em><a href="https://bblais.github.io/category/religion.html">#religion</a></em>
+										</p>
+									</header>
+
+										<span class="image left"><img src="https://bblais.github.io/images/zwaddi-YvYBOSiBJE8-unsplash.jpg"></span>
+
+
+									<p>When asked the question raised by McLatchie, </p>
+<p><img alt="Pasted image 20220614074246.png" src="https://bblais.github.io/images/Pasted image 20220614074246.png"></p>
+<p>I would have to say that new testimony does not raise my probability for a miracle, mostly because all prior attempts to do so have been debunked or at best shown to be profoundly unreliable.   This lowers my credence in the sources, even if I don't have time to investigate in detail the next new claim.  Am I being hyper-skeptical?  I don't think so -- I'm simply adjusting my beliefs to the evidence, and that evidence is that miracle claims have not met their burden of proof.  How could this problem be addressed for me?   In modern settings, having randomized-controlled studies of miracles would be the best  -- because those claims that use this process have shown themselves to be reliable, and thus <span class="math">\(a\rightarrow 0\)</span> in the model described below.  Given modern miracle claims, and their issues, I don't think that any ancient source could convince me of miracles -- their reliability on matters of the physical, chemical, and biological world has been shown to be terrible, thus <span class="math">\(a\rightarrow 1\)</span> in the model below.  </p>
+<p>Although this model is a simplification, it is useful to see that the adjustment of probabilities needs to be taken with care and that unintuitive and non-monotonic effects can easily occur.  Even if for a single data point, the probability of a model increases, the same can't be said of an accumulation of data points unless one is sure that all of the simplifying assumptions are correct -- and they never are.</p>
+<h2 id="introduction">Introduction</h2>
+<p>In response to Paulogia's tweet:</p>
+<p><img alt="Pasted image 20220614074210.png" src="https://bblais.github.io/images/Pasted image 20220614074210.png"></p>
+<p>Jonathan McLatchie has a reply that got me thinking:</p>
+<p><img alt="Pasted image 20220614074246.png" src="https://bblais.github.io/images/Pasted image 20220614074246.png"></p>
+<p>It relates to an idea about testimonies I've heard around, but <a href="https://youtu.be/GH11Ur8cjwM?t=931">clearly stated by Timothy McGrew</a>:</p>
+<p><img alt="Pasted image 20220614073547.png" src="https://bblais.github.io/images/Pasted image 20220614073547.png"></p>
+<blockquote>
+<p>What the Math Means - A sufficient number of <em>independent</em> testimonies, each of which has <em>at least a certain minimum amount of force</em>, will overcome any finite presumption against a miracle.  Hume's "everlasting check" fails; a cumulative case can, in principle, make any miracle claim credible. </p>
+</blockquote>
+<p>It's a mathematical fact that if we have all of the following...</p>
+<ol>
+<li>several data points, <span class="math">\(D_1, D_2, \ldots, D_n\)</span> </li>
+<li>for each, the probability of the miracle, <span class="math">\(M\)</span>, is greater than it's negation, <span class="math">\(\bar{M}\)</span>: <span class="math">\(P(M|D_i)/P(\bar{M}|D_i)&gt;1\)</span></li>
+<li>the data are logically independent, <span class="math">\(P(D_i|M,D_j)=P(D_i|M)\)</span></li>
+</ol>
+<p>then we can look at the posterior odds for the miracle,</p>
+<div class="math">$$
+\begin{aligned}
+ O &amp;\equiv \frac{P(M|D_1, D_2, \ldots, D_n)}{P(\bar{M}|D_1, D_2, \ldots, D_n)} \\
+ &amp;=\frac{P(D_1, D_2, \ldots, D_n|M)P(M)}{P(D_1, D_2, \ldots, D_n|\bar{M})P(\bar{M})} \\
+ &amp;=\underbrace{\frac{P(D_1|M)\cdot P(D_2|M) \cdots P(D_n|M)}{P(D_1|\bar{M})\cdot P(D_2|\bar{M}) \cdots P(D_n|\bar{M})}}_{\text{cumulative testimony}}\times \underbrace{\frac{P(M)}{P(\bar{M})}}_{\text{prior odds}} \\
+ \end{aligned}
+$$</div>
+<p>
+and the cumulative testimony can, in principle (for sufficiently large <span class="math">\(n\)</span>), overwhelm <em>any</em> small prior odds.  The McGrews use this fact in their article <a href="https://onlinelibrary.wiley.com/doi/10.1002/9781444308334.ch11">The Argument from Miracles: A Cumulative Case for the Resurrection of Jesus of Nazareth</a>, but definitely check out the <a href="https://bblais.github.io/posts/2021/Aug/29/bad-apologetics-ep-18-bayes-machine-goes-brrrrrrrrr/">9-hour analysis of the problems with this article</a>.  (<a href="https://bblais.github.io/posts/2022/Mar/30/bad-apologetics-on-bayes-part-1/">Part 1 of a summary can be found here</a>).</p>
+<p>Typical (and perfectly reasonable) responses to this are:</p>
+<ol>
+<li>the independence of the data are not established</li>
+<li>the data themselves are not what are often claimed -- the McGrews will often say that, for example, a data point is <span class="math">\(D_W = \text{the women found the tomb}\)</span> when in fact that data point should be <span class="math">\(D_{TW} = \text{there is a text that says that the women found the tomb}\)</span>. </li>
+<li>the priors are overestimated, or ignored, and the likelihoods are overestimated</li>
+<li>there is no way to corroborate the data</li>
+</ol>
+<p>In this post, I want to explore point 2 above, that we do not have a claim itself, but instead we have someone <em>making</em> a claim.  This provides one extra level of indirectness to the evidence.  I want to discuss this, because I think this fact alone accounts for most of my own reticence in accepting extraordinary claims, why the methods of science work so well, and seems to show a naïveté in the apologists use of evidence.   I also think this point is rarely addressed.</p>
+<h2 id="setting-up-the-problem">Setting up the problem</h2>
+<p>In <a href="https://bayes.wustl.edu/etj/etj.html">E.T. Jaynes</a> book on <a href="https://www.amazon.com/Probability-Theory-Science-T-Jaynes/dp/0521592712">Probability Theory</a> in Chapter 5 on peculiar uses of probability theory, he explores the idea of diverging probability assignments due to ones perspective on the source of the information.  This idea motivated my particular approach here.  </p>
+<p>We have the proposition, <span class="math">\(M\equiv \text{a miracle occurred}\)</span>, for which we have a prior, 
+</p>
+<div class="math">$$\begin{aligned}
+P(M) &amp;\equiv m\\
+P(\bar{M}) &amp;\equiv 1-m\\
+\end{aligned}$$</div>
+<p>
+Note, that for <em>miracle</em> here you can substitute any extraordinary claim.  Our data consists not of extraordinary observations of the world but of a series of <em>claims</em> about such observations.  This can include sources such as</p>
+<ul>
+<li>statements from people who made the observations</li>
+<li>texts, in this case ancient texts, which include the claims</li>
+<li>second- and third-hand accounts of observations</li>
+</ul>
+<p>For the sake of concreteness, I'll say that the data is <span class="math">\(C \equiv \text{person X has made a claim of } M\)</span>.</p>
+<p>For the sake of charity, we will assume that if a miracle has occurred, then the person would make that claim with certainty, 
+</p>
+<div class="math">$$
+P(C|M)=1
+$$</div>
+<p>
+Also for charity, we will ignore data that we'd expect under <span class="math">\(M\)</span> but do not observe.  </p>
+<p>If the miracle did not occur, we might expect someone to make the claim that there was a miracle anyway.  This could be from a simple mistake, someone who interprets the world, in general, in terms of divine-action (e.g. rain is caused by the Gods, etc...).  It could be from outright lying.  It could be from lack of proper observational controls, or lack of information.  Any of these could lead someone to make a claim of <span class="math">\(M\)</span> even if its negation, <span class="math">\(\bar{M}\)</span>, is actually true.  I simplify this to some constant probability,
+</p>
+<div class="math">$$
+P(C|\bar{M})=a
+$$</div>
+<p>
+We can now write down with this simple model, the probability of a miracle given this data,
+</p>
+<div class="math">$$
+\begin{aligned}
+P(M|C) &amp;= \frac{P(D|M)P(M)}{P(D|M)P(M)+P(D|\bar{M})P(\bar{M})} \\
+&amp;=\frac{1\cdot m}{1\cdot m + a\cdot (1-m)} = \frac{m}{m+a\cdot(1-m)}
+\end{aligned}
+$$</div>
+<p>
+It's good to pause to see if this form makes sense.  If <span class="math">\(a=0\)</span>, which means that if there is no miracle, person <span class="math">\(X\)</span> will never make the claim that there is one.  This leads to <span class="math">\(P(M|C)_{a=0} = 1\)</span> which is what is expected -- the claim of a miracle can't be mistaken.   What if person <span class="math">\(X\)</span> always reports a miracle, even if there isn't one?  In that case <span class="math">\(a=1\)</span> and we get <span class="math">\(P(M|C)_{a=1} = m\)</span> which is our prior probability for a miracle.  Essentially, this person with <span class="math">\(a=1\)</span> gives no useful information -- they are the proverbial boy who cried miracle.  No new information means that our probabilities do not change and we are left with our original prior probability.</p>
+<p>We can think of <span class="math">\(a\)</span> as a measure of the reliability (or rather unreliability) of the source, with <span class="math">\(a=0\)</span> being completely reliable and <span class="math">\(a=1\)</span> being (nearly) unreliable.  I say "nearly" because we are still assuming that person <span class="math">\(X\)</span> reliably communicates a miracle if it does occur.  </p>
+<p>One thing to note about our charitable choices in this model is that that the probability can never go lower than the initial prior.  This is clearly wrong, because one can potentially have disconfirming evidence for a miracle, but we are not considering this here.  Thus, at the outset, this model has a pro-miracle bias built in.  Even with this bias it will become clear how we can counter miracle claims by exploring the scientific process in a bit more detail below.  First, we reproduce the McGrew observation above using this model, by accumulating multiple independent claims, <span class="math">\(C_0, C_1, C_2, \ldots, C_n\)</span>.  Following the process above (<a href="https://www.wolframalpha.com/input?i=w%3Dm%2F%28m%2Ba*%281-m%29%29%3B+x%3Dw%2F%28w%2Ba*%281-w%29%29%3B+y%3Dx%2F%28x%2Ba*%281-x%29%29%3B+z%3Dy%2F%28y%2Ba*%281-y%29%29%3B+">checking with WolframAlpha</a>) we get</p>
+<div class="math">$$
+\begin{aligned}
+P(M|C_0, C_1, C_2, \ldots, C_n) &amp;= \frac{m}{m+a^n\cdot(1-m)}
+\end{aligned}
+$$</div>
+<p>
+A couple of examples would look like</p>
+<p><img alt="Pasted image 20220614091756.png" src="https://bblais.github.io/images/Pasted image 20220614091756.png"></p>
+<p>One can show that, with a high enough <span class="math">\(n\)</span>, even a very low prior (<span class="math">\(m \ll 1\)</span>) and a really unreliable source (<span class="math">\(a \sim 1\)</span>) you can recover the probability of the miracle.  In the example above, I show for a slightly low prior for miracle (<span class="math">\(m=0.1\)</span>) and a marginally unreliable source (<span class="math">\(a=0.8\)</span>) we recover the probability of a miracle (<span class="math">\(P(M|C_0, \ldots, C_n)&gt;0.5\)</span>) in about 10 data points whereas with a lower prior by a factor of 100 and a more unreliable source, it takes <span class="math">\(n=66\)</span> points.   One can question whether the claims-data used to support miracles rise to this number (I don't think it does), but that will not be my main point here.  </p>
+<h2 id="enter-the-methods-of-science">Enter the methods of science</h2>
+<p>The process of data and model comparison doesn't exist in a vacuum.  It's against a backdrop of science demonstrating that many (all?) of the claims for miracles and most extraordinary claims (e.g. UFOs, alien abductions, homeopathy, etc...) have been shown to be false or at best unsubstantiated.  It is my personal experience that none of the <a href="https://bblais.github.io/search.html?q=miracles">miracle claims that have been presented to me</a> withstand even the slightest level of scrutiny.  There's a <a href="https://bblais.github.io/posts/2022/Mar/23/a-long-discussion-about-miracles/">very long discussion on the best cases here</a> with the same result -- one problem after another.  How does this affect the model above?   Imagine the following process:</p>
+<ul>
+<li>Claim 1 <span class="math">\(\rightarrow\)</span> debunking of Claim 1 <span class="math">\(\rightarrow\)</span> Claim 2 <span class="math">\(\rightarrow\)</span> debunking of Claim 2 <span class="math">\(\rightarrow\)</span> Claim 3 <span class="math">\(\rightarrow\)</span> debunking of Claim 3 <span class="math">\(\rightarrow \cdots\)</span> </li>
+</ul>
+<p>which pretty much describes my personal experience with the evidence for miracles (and most extraordinary claims).  Each time a claim is put up, and I investigate it, I find it lacking -- usually in pretty mundane and straightforward ways.  Either the claim is completely debunked or at a minimum shown to be not reliable.  What this process does is change how <em>reliable</em> the sources are, so that next time, similar claims might be less likely. In the model, <span class="math">\(a\)</span> is pushed toward the value of <span class="math">\(1\)</span> each time a claim is dispensed with.  Mathematically, a simple way to accomplish this is to add to <span class="math">\(a\)</span> some fraction, <span class="math">\(\gamma\)</span>, of the remaining distance between <span class="math">\(1\)</span> and the current value of <span class="math">\(a\)</span>.  In this way, <span class="math">\(a\)</span> is pushed toward <span class="math">\(1\)</span> but will never reach or exceed it.  </p>
+<div class="math">$$
+a \rightarrow a+\gamma\cdot (1-a)
+$$</div>
+<p>
+thus the source-reliability, <span class="math">\(a\)</span>, is no longer a constant but depends on how many (<span class="math">\(n\)</span>) claims have been presented (and dispensed with).  We can <a href="https://www.wolframalpha.com/input?i=a_n%3Da_n-1+%2B+gamma*%281-a_n-1%29">find <span class="math">\(a\)</span> as a function of <span class="math">\(n\)</span></a>, </p>
+<div class="math">$$
+a(n) = (a_0 + \gamma -1)\cdot (1-\gamma)^{n-1}+1
+$$</div>
+<p>
+where <span class="math">\(a_0\)</span> is the initial assessment of the reliability of the source of the claims.  A quick pause to see that this makes sense:  if <span class="math">\(\gamma=0\)</span> there is no change to the reliability of the claims, and we have our original value <span class="math">\(a(n)=a_0\)</span>.  If <span class="math">\(\gamma=1\)</span> then even after the first claim, the source becomes completely unreliable, <span class="math">\(a=1\)</span>.   </p>
+<p>This new process gives us a messier posterior for the miracle,</p>
+<div class="math">$$
+\begin{aligned}
+P(M|C_0, C_1, C_2, \ldots, C_n) &amp;= \frac{m}{m+\left((a_0 + \gamma -1)\cdot (1-\gamma)^{n-1}+1\right)^n\cdot(1-m)}
+\end{aligned}
+$$</div>
+<p>
+But easy to look at numerically,</p>
+<p><img alt="Pasted image 20220614100045.png" src="https://bblais.github.io/images/Pasted image 20220614100045.png"></p>
+<p>We can see the effect of claims being shown to be unreliable can make further testimony <em>less reliable</em>, even in a model which has a definitively pro-miracle bias.  One can see in the curves on the left that the initial claims increase the probability of a miracle, but as they get debunked that initial increase in confidence is erased, and further testimony reduces the probability of claims back to the prior. </p>
+<h2 id="conclusion">Conclusion</h2>
+<p>When asked the question raised by McLatchie, </p>
+<p><img alt="Pasted image 20220614074246.png" src="https://bblais.github.io/images/Pasted image 20220614074246.png"></p>
+<p>I would have to say that new testimony does not raise my probability for a miracle, mostly because all prior attempts to do so have been debunked or at best shown to be profoundly unreliable.   This lowers my credence in the sources, even if I don't have time to investigate in detail the next new claim.  Am I being hyper-skeptical?  I don't think so -- I'm simply adjusting my beliefs to the evidence, and that evidence is that miracle claims have not met their burden of proof.  How could this problem be addressed for me?   In modern settings, having randomized-controlled studies of miracles would be the best  -- because those claims that use this process have shown themselves to be reliable, and thus <span class="math">\(a\rightarrow 0\)</span> in the model above.  Given modern miracle claims, and their issues, I don't think that any ancient source could convince me of miracles -- their reliability on matters of the physical, chemical, and biological world has been shown to be terrible, thus <span class="math">\(a\rightarrow 1\)</span>.  </p>
+<p>Although this model is a simplification, it is useful to see that the adjustment of probabilities needs to be taken with care and that unintuitive and non-monotonic effects can easily occur.  Even if for a single data point, the probability of a model increases, the same can't be said of an accumulation of data points unless one is sure that the simplifying assumptions are correct -- and they never are.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+
+
+								</section>
+
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT 
+     *  THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR 
+     *  PLATFORM OR CMS.
+     *  
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: 
+     *  https://disqus.com/admin/universalcode/#configuration-variables
+     */
+    
+    // var disqus_config = function () {
+    //     // Replace PAGE_URL with your page's canonical URL variable
+    //     this.page.url = PAGE_URL;  
+        
+    //     // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    //     this.page.identifier = PAGE_IDENTIFIER; 
+    // };
+    
+    
+    (function() {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
+        var d = document, s = d.createElement('script');
+        var disqus_shortname = "bblaisontheweb"; 
+        var disqus_title = "Sometimes more testimony is worse.";
+        
+        // IMPORTANT: Replace EXAMPLE with your forum shortname!
+        s.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+        
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>
+    Please enable JavaScript to view the 
+    <a href="https://disqus.com/?ref_noscript" rel="nofollow">
+        comments powered by Disqus.
+    </a>
+</noscript>
+
+
+
+
+
+
+
+
+
+				</div>
+			</div>
+	
+				<!-- Sidebar -->
+                <div id="sidebar">
+                    <div class="inner">
+
+                        <!-- Search -->
+                        <section id="search" class="alt">
+                            <form class="navbar-search" action="https://bblais.github.io/search.html" onsubmit="return validateForm(this.elements['q'].value);"> 
+                                <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form>
+                        </section>
+
+                        <!-- Menu -->
+                            <nav id="menu">
+                                <header class="major">
+                                    <h2>Menu</h2>
+                                </header>
+                                <ul>
+                                    <li><a href="https://bblais.github.io/index.html">Homepage</a></li>
+                                    <li>
+                                        <span class="opener"><a href="https://bblais.github.io/index.html#0" title="">Blog</a></span>
+                                        <ul>
+                                            <li><a href="https://bblais.github.io/index.html#blog">Recent</a></li>
+                                            <li><a href="https://bblais.github.io/category/articles.html">articles <span>(85)</span></a></li>
+                                            <li><a href="https://bblais.github.io/category/books.html">books <span>(3)</span></a></li>
+                                            <li><a href="https://bblais.github.io/category/critical-thinking.html">critical thinking <span>(4)</span></a></li>
+                                            <li><a href="https://bblais.github.io/category/math.html">math <span>(8)</span></a></li>
+                                            <li><a href="https://bblais.github.io/category/media.html">media <span>(11)</span></a></li>
+                                            <li><a href="https://bblais.github.io/category/presentations.html">presentations <span>(3)</span></a></li>
+                                            <li><a href="https://bblais.github.io/category/productivity.html">productivity <span>(6)</span></a></li>
+                                            <li><a href="https://bblais.github.io/category/programming.html">programming <span>(4)</span></a></li>
+                                            <li><a href="https://bblais.github.io/category/projects.html">projects <span>(4)</span></a></li>
+                                            <li><a href="https://bblais.github.io/category/religion.html">religion <span>(18)</span></a></li>
+                                            <li><a href="https://bblais.github.io/category/science.html">science <span>(10)</span></a></li>
+                                            <li><a href="https://bblais.github.io/category/unbelievable-project.html">Unbelievable Project <span>(19)</span></a></li>
+                                            <li><a href="https://bblais.github.io/category/wordpress_migration.html">wordpress_migration <span>(160)</span></a></li>
+     
+                                        </ul>
+                                    </li>
+                                    <li><a href="https://bblais.github.io/pages/presentations.html">Presentations</a></li>
+                                    <li><a href="https://bblais.github.io/pages/projects.html">Projects</a></li>
+                                    <li><a href="https://bblais.github.io/pages/publications.html">Publications</a></li>
+                                    <li><a href="https://bblais.github.io/archives.html">Archives</a></li>
+                                    <li><a href="https://bblais.github.io/about.html">About</a></li>
+                                </ul>
+                            </nav>
+
+                        <!-- Section -->
+                            <section>
+                                <header class="major">
+                                    <h2>Popular Posts</h2>
+                                </header>
+
+                                <div class="mini-posts">
+                                        <article>
+                                            <a href="https://bblais.github.io/posts/2021/Apr/09/gravitational-attraction/" class="image">
+                                                <img src="https://bblais.github.io/images/muzammil-soorma-R11bppS4q8o-unsplash.jpg" alt="muzammil-soorma-R11bppS4q8o-unsplash.jpg">
+                                            </a>
+                                            <p><strong>Gravitational Attraction </strong>
+                                                <p>What would happen if two people out in space a few meters apart, abandoned by their spacecraft, decided to wait until gravity pulled them together?  My initial thought was that …</p></p>
+                                        </article>
+                                        <article>
+                                            <a href="https://bblais.github.io/posts/2020/Aug/03/a-simple-physics-problem-gets-messy/" class="image">
+                                                <img src="https://bblais.github.io/images/roman-mager-5mZ_M06Fc9g-unsplash.jpg" alt="roman-mager-5mZ_M06Fc9g-unsplash.jpg">
+                                            </a>
+                                            <p><strong>A Simple Physics Problem Gets Messy </strong>
+                                                <p>A physics problem from a practice AP test came to my attention, when my daughter was in AP physics this past spring.  I went over her solutions when she did …</p></p>
+                                        </article>
+                                        <article>
+                                            <a href="https://bblais.github.io/posts/2020/Jul/09/skepticism-and-dubious-medical-procedures/" class="image">
+                                                <img src="https://bblais.github.io/images/mohamed-nohassi-odxB5oIG_iA-unsplash.jpg" alt="mohamed-nohassi-odxB5oIG_iA-unsplash.jpg">
+                                            </a>
+                                            <p><strong>Skepticism and Dubious Medical Procedures </strong>
+                                                <p>In my discussion with Jonathan McLatchie on the Still Unbelievable podcast, I said that there hasn’t been a verified miracle claim even since Hume’s essay on miracles.  Here I look into the papers he references in response.</p></p>
+                                        </article>
+                                </div>
+                            </section>
+
+                        <!-- Section -->
+                            <section>
+                                <header class="major">
+                                    <h2>Get in touch</h2>
+                                </header>
+                                <p>What problems are you interested in?  How can I help?</p>
+                                <ul class="contact">
+                                    <li class="icon brands fa-twitter"><a href="https://twitter.com/bblais">@bblais</a></li>
+                                    <li class="icon solid fa-envelope"><a href='mai&#108;&#116;o&#58;b&#37;6&#50;%6C&#37;61i%&#55;3%40%62ry&#37;61nt%2Eed&#37;7&#53;'>b&#98;&#108;&#97;is&#64;bry&#97;&#110;t&#46;&#101;d&#117;</a></li>
+                                    <li class="icon solid fa-phone"><a href="tel://4012326153">(401) 232-6153</a></li>
+                                    <li class="icon solid fa-home">Bryant University<br>
+                                        1150 Douglas Pike<br>
+                                        Smithfield, RI<br>
+                                        02917 US</li>
+                                </ul>
+                            </section>
+
+                        <!-- Footer -->
+                            <footer id="footer">
+                                <p class="copyright">&copy; 2021 - All rights reserved. Adapted from <a href="https://html5up.net/editorial">Editorial Theme</a> html5up.net | @ajlkn, 
+                                    Converted to <a href="https://blog.getpelican.com">Pelican</a> theme by <a href="#">Brian Blais</a>. </p>
+                            </footer>
+
+                    </div>
+                </div>
+
+		</div>
+
+
+    <!-- Scripts -->
+	<script src="https://bblais.github.io/theme/js/jquery.min.js"></script>
+	<script src="https://bblais.github.io/theme/js/elegant.prod.9e9d5ce754.js"></script>
+	<script src="https://bblais.github.io/theme/js/browser.min.js"></script>
+	<script src="https://bblais.github.io/theme/js/breakpoints.min.js"></script>
+	<script src="https://bblais.github.io/theme/js/util.js"></script>
+	<script src="https://bblais.github.io/theme/js/main.js"></script>
+	<script>
+		function validateForm(query)
+		{
+			return (query.length > 0);
+		}
+	</script>
+	
+	
+	</body>
+</html>
