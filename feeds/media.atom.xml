@@ -395,17 +395,19 @@
 }
 &lt;/script&gt;</content><category term="media"></category><category term="unbelievable"></category><category term="religion"></category></entry><entry><title>Bad Apologetics Ep 18 - Bayes Machine goes BRRRRRRRRR</title><link href="https://bblais.github.io/posts/2021/Aug/29/bad-apologetics-ep-18-bayes-machine-goes-brrrrrrrrr/" rel="alternate"></link><published>2021-08-29T00:00:00-04:00</published><updated>2021-08-29T00:00:00-04:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2021-08-29:/posts/2021/Aug/29/bad-apologetics-ep-18-bayes-machine-goes-brrrrrrrrr/</id><summary type="html">&lt;p&gt;In this YouTube episode, &lt;a href="https://youtu.be/yeCBpO7pSRM"&gt;Bad Apologetics Ep 18 - Bayes Machine goes BRRRRRRRRR&lt;/a&gt; I join &lt;a href="https://www.youtube.com/channel/UCy63pdWnpupE8MfxpMNfRNg"&gt;Nathan Ormond&lt;/a&gt;, &lt;a href="https://www.idc.com/getdoc.jsp?containerId=PRF004699"&gt;Kamil Gregor&lt;/a&gt;, and &lt;a href="https://www.youtube.com/channel/UCcprhl4otMOQPL5PDbtbheQ"&gt;James Fodor&lt;/a&gt; to discuss &lt;a href="https://timothymcgrew.com"&gt;Timothy&lt;/a&gt; and &lt;a href="http://www.lydiamcgrew.com"&gt;Lydia&lt;/a&gt; McGrew's article in &lt;a href="https://onlinelibrary.wiley.com/doi/book/10.1002/9781444308334"&gt;The …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;In this YouTube episode, &lt;a href="https://youtu.be/yeCBpO7pSRM"&gt;Bad Apologetics Ep 18 - Bayes Machine goes BRRRRRRRRR&lt;/a&gt; I join &lt;a href="https://www.youtube.com/channel/UCy63pdWnpupE8MfxpMNfRNg"&gt;Nathan Ormond&lt;/a&gt;, &lt;a href="https://www.idc.com/getdoc.jsp?containerId=PRF004699"&gt;Kamil Gregor&lt;/a&gt;, and &lt;a href="https://www.youtube.com/channel/UCcprhl4otMOQPL5PDbtbheQ"&gt;James Fodor&lt;/a&gt; to discuss &lt;a href="https://timothymcgrew.com"&gt;Timothy&lt;/a&gt; and &lt;a href="http://www.lydiamcgrew.com"&gt;Lydia&lt;/a&gt; McGrew's article in &lt;a href="https://onlinelibrary.wiley.com/doi/book/10.1002/9781444308334"&gt;The Blackwell Companion to Natural Theology&lt;/a&gt; entitled "Chapter 11 - The Argument from Miracles: A Cumulative Case for the Resurrection of Jesus of Nazareth".  &lt;/p&gt;
 &lt;p&gt;It's 9 hours long, but I am only on for the first 7 hours.  &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;On YouTube: &lt;a href="https://youtu.be/yeCBpO7pSRM"&gt;https://youtu.be/yeCBpO7pSRM&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;I started a summary.  The parts of this document are here:&lt;/p&gt;
+&lt;p&gt;I wrote a summary in 3 parts here:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="https://bblais.github.io/posts/2021/Aug/29/bad-apologetics-ep-18-bayes-machine-goes-brrrrrrrrr/"&gt;Original Post&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://bblais.github.io/posts/2022/Mar/30/bad-apologetics-on-bayes-part-1/"&gt;Part 1: 1-3 hr&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://bblais.github.io/posts/2022/Jul/12/bad-apologetics-on-bayes-part-2/"&gt;Part 2: 3-6 hr&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Part 3: TBD&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://bblais.github.io/posts/2022/Jul/13/bad-apologetics-on-bayes-part-3/"&gt;Part 3: 6-9 hr&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;This isn't a complete log of everything said, but I tried to include the main points.  I also started with a transcript, and edited it for clarity (e.g. removing ums, and repetition) but there may still be some weird typos from the computer generated transcript that I didn't catch. I will try to quote Nathan, James, Kamil and myself if it comes from the episode.  All other text is mine, commentary either at the time or sometime afterward. &lt;/p&gt;
+&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Table of Contents&lt;/span&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#tldr"&gt;TLDR&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;p&gt;And the link for the full video on YouTube: &lt;a href="https://youtu.be/yeCBpO7pSRM"&gt;https://youtu.be/yeCBpO7pSRM&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="tldr"&gt;TLDR&lt;/h2&gt;
 &lt;p&gt;The main issues are:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;ignoring priors because there's no prior probability in their calculation, so they really aren't doing Bayes&lt;/li&gt;
@@ -415,6 +417,9 @@
 &lt;li&gt;they don't motivate their numbers with comparable rare events, or they would have seen that their calculation of an odds ratio of &lt;span class="math"&gt;\(10^{44}\)&lt;/span&gt; is ridiculous&lt;/li&gt;
 &lt;li&gt;they uncritically take the claims in the New Testament as the actual data we have, as opposed to the fact that what we have are ancient &lt;em&gt;texts&lt;/em&gt; that contain those claims&lt;/li&gt;
 &lt;li&gt;an uncritical view of New Testament documents, and an unprofessional response to traditional scholarship&lt;/li&gt;
+&lt;li&gt;they don't even seem to think about why something would be explained by their preferred resurrection hypothesis.  It's just assumed that everything is explained. And then they ask, how do you, skeptic, explain this?&lt;/li&gt;
+&lt;li&gt;they make up claims with no supporting citations (especially with respect to how new communities form and how hallucinations work)&lt;/li&gt;
+&lt;li&gt;they don't make the very easy step of looking at what's actually happening in the world with religious people and actually getting some data, getting some background knowledge about how people actually function &lt;/li&gt;
 &lt;/ol&gt;
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
