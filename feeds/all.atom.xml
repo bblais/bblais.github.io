@@ -2089,13 +2089,13 @@ So are we going to admit that it is far more likely that Jean Luc had visited?  
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Output:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;[&amp;#39;D&amp;#39;] k1 [&amp;#39;D&amp;#39;, &amp;#39;M&amp;#39;]&lt;/span&gt;
-&lt;span class="k"&gt;[&amp;#39;M&amp;#39;] k2 [&amp;#39;M&amp;#39;, &amp;#39;P&amp;#39;]&lt;/span&gt;
-&lt;span class="k"&gt;[&amp;#39;M&amp;#39;] k3 [&amp;#39;ϕ&amp;#39;]&lt;/span&gt;
-&lt;span class="k"&gt;[&amp;#39;P&amp;#39;] k4 [&amp;#39;ϕ&amp;#39;]&lt;/span&gt;
-&lt;span class="na"&gt;Components [&amp;#39;D&amp;#39;, &amp;#39;M&amp;#39;, &amp;#39;P&amp;#39;, &amp;#39;ϕ&amp;#39;]&lt;/span&gt;
-&lt;span class="na"&gt;Parameters [&amp;#39;k1&amp;#39;, &amp;#39;k2&amp;#39;, &amp;#39;k3&amp;#39;, &amp;#39;k4&amp;#39;]&lt;/span&gt;
-&lt;span class="na"&gt;diffeqs [&amp;quot;D&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;0&amp;quot;, &amp;quot;M&amp;#39; =  +k1*D -k3*M&amp;quot;, &amp;quot;P&amp;#39; =  +k2*M -k4*P&amp;quot;]&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;[&amp;#39;D&amp;#39;] k1 [&amp;#39;D&amp;#39;, &amp;#39;M&amp;#39;]&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="k"&gt;[&amp;#39;M&amp;#39;] k2 [&amp;#39;M&amp;#39;, &amp;#39;P&amp;#39;]&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="k"&gt;[&amp;#39;M&amp;#39;] k3 [&amp;#39;ϕ&amp;#39;]&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="k"&gt;[&amp;#39;P&amp;#39;] k4 [&amp;#39;ϕ&amp;#39;]&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="na"&gt;Components [&amp;#39;D&amp;#39;, &amp;#39;M&amp;#39;, &amp;#39;P&amp;#39;, &amp;#39;ϕ&amp;#39;]&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="na"&gt;Parameters [&amp;#39;k1&amp;#39;, &amp;#39;k2&amp;#39;, &amp;#39;k3&amp;#39;, &amp;#39;k4&amp;#39;]&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="na"&gt;diffeqs [&amp;quot;D&amp;#39;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;0&amp;quot;, &amp;quot;M&amp;#39; =  +k1*D -k3*M&amp;quot;, &amp;quot;P&amp;#39; =  +k2*M -k4*P&amp;quot;]&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;which yields figures like:&lt;/p&gt;
@@ -2666,9 +2666,7 @@ So, Gillespie follows by&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://bblais.github.io/posts/2021/Apr/15/stats-101-examples-with-mcmc/"&gt;Estimating mean with known 𝜎&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://bblais.github.io/posts/2021/Apr/28/stats-101-examples-with-mcmc-part-2/"&gt;Estimating mean with unknown 𝜎&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://bblais.github.io/posts/2021/May/13/stats-101-examples-with-mcmc-part-3/"&gt;Estimating a proportion&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;In all …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This is another in the series of "&lt;em&gt;Statistics 101&lt;/em&gt;" examples solved with MCMC.  Others in the series:&lt;/p&gt;
+&lt;li&gt;&lt;a href="https://bblais.github.io/posts/2021/May/13/stats-101-examples-with-mcmc-part-3/"&gt;Estimating a proportion …&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;This is another in the series of "&lt;em&gt;Statistics 101&lt;/em&gt;" examples solved with MCMC.  Others in the series:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://bblais.github.io/posts/2021/Apr/15/stats-101-examples-with-mcmc/"&gt;Estimating mean with known 𝜎&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://bblais.github.io/posts/2021/Apr/28/stats-101-examples-with-mcmc-part-2/"&gt;Estimating mean with unknown 𝜎&lt;/a&gt;&lt;/li&gt;
@@ -2910,7 +2908,7 @@ Done.
 &lt;li&gt;&lt;a href="https://bblais.github.io/posts/2021/Apr/15/stats-101-examples-with-mcmc/"&gt;Estimating mean with known 𝜎&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://bblais.github.io/posts/2021/Apr/28/stats-101-examples-with-mcmc-part-2/"&gt;Estimating mean with unknown 𝜎&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;In all of these posts …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This is another in the series of "&lt;em&gt;Statistics 101&lt;/em&gt;" examples solved with MCMC.  Others in the series:&lt;/p&gt;
+&lt;p&gt;In all of …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This is another in the series of "&lt;em&gt;Statistics 101&lt;/em&gt;" examples solved with MCMC.  Others in the series:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://bblais.github.io/posts/2021/Apr/15/stats-101-examples-with-mcmc/"&gt;Estimating mean with known 𝜎&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://bblais.github.io/posts/2021/Apr/28/stats-101-examples-with-mcmc-part-2/"&gt;Estimating mean with unknown 𝜎&lt;/a&gt;&lt;/li&gt;
@@ -2975,7 +2973,7 @@ Done.
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;P&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;θ &amp;lt;0.5&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="mf"&gt;0.95485&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="mf"&gt;0.95485&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;yes, just as &lt;a href="https://www.jstor.org/stable/2683855?seq=1#metadata_info_tab_contents"&gt;Lindley, 1976 presents.&lt;/a&gt; &lt;/p&gt;
@@ -3152,14 +3150,14 @@ Done.
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;P&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;μ&amp;gt;15&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="mf"&gt;0.037066666666666664&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="mf"&gt;0.037066666666666664&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;and for &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt;, the Bayesian equivalent to Chi-squared test, &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;P&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;σ&amp;lt;1&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="mf"&gt;0.01985&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="mf"&gt;0.01985&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
@@ -3291,7 +3289,7 @@ Done.
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;P&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;μ&amp;gt;15&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="mf"&gt;0.037066666666666664&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="mf"&gt;0.037066666666666664&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;This simple example can be a template for more complex problems, which I will explore in later posts of this series.  What do you think?&lt;/p&gt;
@@ -4076,7 +4074,7 @@ $$&lt;/div&gt;
         &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
     &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 
-&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;article&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="c"&gt;&amp;lt;!-- end article --&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;article&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="cm"&gt;&amp;lt;!-- end article --&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;This is repeated once for many different articles, making for a long &lt;code&gt;index.html&lt;/code&gt; file.  In the pelican theme, the &lt;code&gt;index.html&lt;/code&gt; loops over all of the articles and generates this long list using &lt;a href="https://jinja.palletsprojects.com/en/2.11.x/"&gt;Jinja&lt;/a&gt; syntax,&lt;/p&gt;
@@ -4116,7 +4114,7 @@ $$&lt;/div&gt;
             &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
         &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 
-    &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;article&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="c"&gt;&amp;lt;!-- end article --&amp;gt;&lt;/span&gt;
+    &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;article&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="cm"&gt;&amp;lt;!-- end article --&amp;gt;&lt;/span&gt;
 
 {% endfor %}
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -4152,33 +4150,33 @@ $$&lt;/div&gt;
 &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;html&lt;/span&gt; &lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;no-js&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;lang&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;en&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;head&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 
-    &lt;span class="c"&gt;&amp;lt;!--- basic page needs&lt;/span&gt;
-&lt;span class="c"&gt;    ================================================== --&amp;gt;&lt;/span&gt;
+    &lt;span class="cm"&gt;&amp;lt;!--- basic page needs&lt;/span&gt;
+&lt;span class="cm"&gt;    ================================================== --&amp;gt;&lt;/span&gt;
     &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;meta&lt;/span&gt; &lt;span class="na"&gt;charset&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;utf-8&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
     &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;title&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;{% block title %}{{ SITENAME|striptags }}{% endblock title %}&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;title&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
     &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;meta&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;description&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;content&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
     &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;meta&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;author&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;content&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Brian Blais&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 
-    &lt;span class="c"&gt;&amp;lt;!-- mobile specific metas&lt;/span&gt;
-&lt;span class="c"&gt;    ================================================== --&amp;gt;&lt;/span&gt;
+    &lt;span class="cm"&gt;&amp;lt;!-- mobile specific metas&lt;/span&gt;
+&lt;span class="cm"&gt;    ================================================== --&amp;gt;&lt;/span&gt;
     &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;meta&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;viewport&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;content&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;width=device-width, initial-scale=1, maximum-scale=1&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 
     {% block head_links %}
 
-    &lt;span class="c"&gt;&amp;lt;!-- CSS&lt;/span&gt;
-&lt;span class="c"&gt;    ================================================== --&amp;gt;&lt;/span&gt;
+    &lt;span class="cm"&gt;&amp;lt;!-- CSS&lt;/span&gt;
+&lt;span class="cm"&gt;    ================================================== --&amp;gt;&lt;/span&gt;
     &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;link&lt;/span&gt; &lt;span class="na"&gt;rel&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;stylesheet&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;href&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;{{ SITEURL }}/theme/css/base.css&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
     &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;link&lt;/span&gt; &lt;span class="na"&gt;rel&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;stylesheet&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;href&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;{{ SITEURL }}/theme/css/vendor.css&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
     &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;link&lt;/span&gt; &lt;span class="na"&gt;rel&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;stylesheet&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;href&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;{{ SITEURL }}/theme/css/main.css&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 
     {% block extra_css %}{% endblock %}
-    &lt;span class="c"&gt;&amp;lt;!-- favicons&lt;/span&gt;
-&lt;span class="c"&gt;    ================================================== --&amp;gt;&lt;/span&gt;
+    &lt;span class="cm"&gt;&amp;lt;!-- favicons&lt;/span&gt;
+&lt;span class="cm"&gt;    ================================================== --&amp;gt;&lt;/span&gt;
     &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;link&lt;/span&gt; &lt;span class="na"&gt;rel&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;shortcut icon&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;href&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;{{ SITEURL }}/favicon.ico&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;image/x-icon&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
     &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;link&lt;/span&gt; &lt;span class="na"&gt;rel&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;icon&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;href&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;{{ SITEURL }}/favicon.ico&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;image/x-icon&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 
-    &lt;span class="c"&gt;&amp;lt;!-- script&lt;/span&gt;
-&lt;span class="c"&gt;    ================================================== --&amp;gt;&lt;/span&gt;
+    &lt;span class="cm"&gt;&amp;lt;!-- script&lt;/span&gt;
+&lt;span class="cm"&gt;    ================================================== --&amp;gt;&lt;/span&gt;
     &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;{{ SITEURL }}/theme/js/modernizr.js&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
     &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;{{ SITEURL }}/theme/js/pace.min.js&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
     {% endblock head_links %}
@@ -4197,8 +4195,8 @@ $$&lt;/div&gt;
         {% include &amp;#39;footer.html&amp;#39; %}
 
 
-    &lt;span class="c"&gt;&amp;lt;!-- preloader&lt;/span&gt;
-&lt;span class="c"&gt;    ================================================== --&amp;gt;&lt;/span&gt;
+    &lt;span class="cm"&gt;&amp;lt;!-- preloader&lt;/span&gt;
+&lt;span class="cm"&gt;    ================================================== --&amp;gt;&lt;/span&gt;
     &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="na"&gt;id&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;preloader&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
         &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="na"&gt;id&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;loader&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
             &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;line-scale&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
@@ -4214,8 +4212,8 @@ $$&lt;/div&gt;
 
     {% block script %}
 
-    &lt;span class="c"&gt;&amp;lt;!-- Java Script&lt;/span&gt;
-&lt;span class="c"&gt;    ================================================== --&amp;gt;&lt;/span&gt;
+    &lt;span class="cm"&gt;&amp;lt;!-- Java Script&lt;/span&gt;
+&lt;span class="cm"&gt;    ================================================== --&amp;gt;&lt;/span&gt;
     &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;{{ SITEURL }}/theme/js/jquery-3.2.1.min.js&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
     &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;{{ SITEURL }}/theme/js/plugins.js&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
     &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;{{ SITEURL }}/theme/js/main.js&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
@@ -10114,7 +10112,9 @@ over there for a bit.  &lt;/p&gt;
 &lt;p&gt;Let me know if things work, or don't!  I'd love to know if comments work, and if it is easy to follow updates via Atom, or perhaps RSS.  You can contact me at &lt;em&gt;bblais at &lt;a href="http://gmail.com"&gt;gmail.com&lt;/a&gt; or bryant.edu&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;I'm still playing, so expect changes!&lt;/p&gt;</content><category term="articles"></category><category term="web"></category></entry><entry><title>New Website</title><link href="https://bblais.github.io/posts/2014/Jan/10/new-website/" rel="alternate"></link><published>2014-01-10T00:00:00-05:00</published><updated>2014-01-10T00:00:00-05:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2014-01-10:/posts/2014/Jan/10/new-website/</id><summary type="html">&lt;p&gt;I completely redid my website, and am still playing with a lot of the organization, etc...  I'm hoping that it will be both easier to use, and include more detailed …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I completely redid my website, and am still playing with a lot of the organization, etc...  I'm hoping that it will be both easier to use, and include more detailed information about my current projects and my progress in different areas.  I think I've ported everything over, but we'll see!&lt;/p&gt;</content><category term="articles"></category></entry><entry><title>A New Year and a Deepity</title><link href="https://bblais.github.io/posts/2014/Jan/06/a-new-year-and-a-deepity/" rel="alternate"></link><published>2014-01-06T14:04:00-05:00</published><updated>2014-01-06T14:04:00-05:00</updated><author><name>brianblais</name></author><id>tag:bblais.github.io,2014-01-06:/posts/2014/Jan/06/a-new-year-and-a-deepity/</id><summary type="html">&lt;p&gt;A short video by Fr. Robert Barron, to start off the new year.&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://[youtube=http://www.youtube.com"&gt;[youtube=http://www.youtube.com&lt;/a&gt;/watch?v=1zMf_8hkCdc&amp;amp;w=560&amp;amp;h=315]&lt;/p&gt;
-&lt;p&gt;Here is the summary …&lt;/p&gt;</summary><content type="html">&lt;p&gt;A short video by Fr. Robert Barron, to start off the new year.&lt;/p&gt;
+&lt;p&gt;Here is the summary:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;He …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;A short video by Fr. Robert Barron, to start off the new year.&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://[youtube=http://www.youtube.com"&gt;[youtube=http://www.youtube.com&lt;/a&gt;/watch?v=1zMf_8hkCdc&amp;amp;w=560&amp;amp;h=315]&lt;/p&gt;
 &lt;p&gt;Here is the summary:&lt;/p&gt;
 &lt;ul&gt;
@@ -12024,7 +12024,7 @@ print Po*exp(r*t)/1e9,&amp;quot;billion&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Yielding&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="mf"&gt;6.52849018681&lt;/span&gt; &lt;span class="n"&gt;billion&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="mf"&gt;6.52849018681&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;billion&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;The other direction is, how long ago were there only 8 people?&lt;/p&gt;
@@ -18778,7 +18778,7 @@ advanced to the state of Science, whatever the matter may be."&lt;/p&gt;
 climate change:&lt;/p&gt;
 &lt;p&gt;[![ssp_temp_capture.png][]]&lt;a href="https://blogger.googleusercontent.com/tracker/6965073194684424505-30814405432299300?l=bblais.blogspot.com"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The argument is a little dated, actually, most famously &lt;a href="http://en.wikipedia.org/wiki/Pascal's_Wager"&gt;presented in
-the …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;I was just alerted to the following video supporting strong action for
+the 1600's&lt;/a&gt; well …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I was just alerted to the following video supporting strong action for
 climate change:&lt;/p&gt;
 &lt;p&gt;[![ssp_temp_capture.png][]]&lt;a href="https://blogger.googleusercontent.com/tracker/6965073194684424505-30814405432299300?l=bblais.blogspot.com"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The argument is a little dated, actually, most famously &lt;a href="http://en.wikipedia.org/wiki/Pascal's_Wager"&gt;presented in

@@ -3,9 +3,7 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://bblais.github.io/posts/2021/Apr/15/stats-101-examples-with-mcmc/"&gt;Estimating mean with known 𝜎&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://bblais.github.io/posts/2021/Apr/28/stats-101-examples-with-mcmc-part-2/"&gt;Estimating mean with unknown 𝜎&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://bblais.github.io/posts/2021/May/13/stats-101-examples-with-mcmc-part-3/"&gt;Estimating a proportion&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;In all …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This is another in the series of "&lt;em&gt;Statistics 101&lt;/em&gt;" examples solved with MCMC.  Others in the series:&lt;/p&gt;
+&lt;li&gt;&lt;a href="https://bblais.github.io/posts/2021/May/13/stats-101-examples-with-mcmc-part-3/"&gt;Estimating a proportion …&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;This is another in the series of "&lt;em&gt;Statistics 101&lt;/em&gt;" examples solved with MCMC.  Others in the series:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://bblais.github.io/posts/2021/Apr/15/stats-101-examples-with-mcmc/"&gt;Estimating mean with known 𝜎&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://bblais.github.io/posts/2021/Apr/28/stats-101-examples-with-mcmc-part-2/"&gt;Estimating mean with unknown 𝜎&lt;/a&gt;&lt;/li&gt;
@@ -130,7 +128,7 @@ Done.
 &lt;li&gt;&lt;a href="https://bblais.github.io/posts/2021/Apr/15/stats-101-examples-with-mcmc/"&gt;Estimating mean with known 𝜎&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://bblais.github.io/posts/2021/Apr/28/stats-101-examples-with-mcmc-part-2/"&gt;Estimating mean with unknown 𝜎&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;In all of these posts …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This is another in the series of "&lt;em&gt;Statistics 101&lt;/em&gt;" examples solved with MCMC.  Others in the series:&lt;/p&gt;
+&lt;p&gt;In all of …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This is another in the series of "&lt;em&gt;Statistics 101&lt;/em&gt;" examples solved with MCMC.  Others in the series:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://bblais.github.io/posts/2021/Apr/15/stats-101-examples-with-mcmc/"&gt;Estimating mean with known 𝜎&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://bblais.github.io/posts/2021/Apr/28/stats-101-examples-with-mcmc-part-2/"&gt;Estimating mean with unknown 𝜎&lt;/a&gt;&lt;/li&gt;
@@ -195,7 +193,7 @@ Done.
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;P&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;θ &amp;lt;0.5&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="mf"&gt;0.95485&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="mf"&gt;0.95485&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;yes, just as &lt;a href="https://www.jstor.org/stable/2683855?seq=1#metadata_info_tab_contents"&gt;Lindley, 1976 presents.&lt;/a&gt; &lt;/p&gt;
@@ -372,14 +370,14 @@ Done.
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;P&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;μ&amp;gt;15&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="mf"&gt;0.037066666666666664&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="mf"&gt;0.037066666666666664&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;and for &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt;, the Bayesian equivalent to Chi-squared test, &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;P&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;σ&amp;lt;1&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="mf"&gt;0.01985&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="mf"&gt;0.01985&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
@@ -511,7 +509,7 @@ Done.
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;P&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;μ&amp;gt;15&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="mf"&gt;0.037066666666666664&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="mf"&gt;0.037066666666666664&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;This simple example can be a template for more complex problems, which I will explore in later posts of this series.  What do you think?&lt;/p&gt;

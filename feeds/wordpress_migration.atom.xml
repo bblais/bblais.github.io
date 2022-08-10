@@ -18,7 +18,9 @@ goes.  For right now I may duplicate posts, or at least point the posts
 over there for a bit.  &lt;/p&gt;
 &lt;p&gt;Let me know what you think!  Anything broken?&lt;/p&gt;</content><category term="wordpress_migration"></category></entry><entry><title>A New Year and a Deepity</title><link href="https://bblais.github.io/posts/2014/Jan/06/a-new-year-and-a-deepity/" rel="alternate"></link><published>2014-01-06T14:04:00-05:00</published><updated>2014-01-06T14:04:00-05:00</updated><author><name>brianblais</name></author><id>tag:bblais.github.io,2014-01-06:/posts/2014/Jan/06/a-new-year-and-a-deepity/</id><summary type="html">&lt;p&gt;A short video by Fr. Robert Barron, to start off the new year.&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://[youtube=http://www.youtube.com"&gt;[youtube=http://www.youtube.com&lt;/a&gt;/watch?v=1zMf_8hkCdc&amp;amp;w=560&amp;amp;h=315]&lt;/p&gt;
-&lt;p&gt;Here is the summary …&lt;/p&gt;</summary><content type="html">&lt;p&gt;A short video by Fr. Robert Barron, to start off the new year.&lt;/p&gt;
+&lt;p&gt;Here is the summary:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;He …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;A short video by Fr. Robert Barron, to start off the new year.&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://[youtube=http://www.youtube.com"&gt;[youtube=http://www.youtube.com&lt;/a&gt;/watch?v=1zMf_8hkCdc&amp;amp;w=560&amp;amp;h=315]&lt;/p&gt;
 &lt;p&gt;Here is the summary:&lt;/p&gt;
 &lt;ul&gt;
@@ -1672,7 +1674,7 @@ print Po*exp(r*t)/1e9,&amp;quot;billion&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Yielding&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="mf"&gt;6.52849018681&lt;/span&gt; &lt;span class="n"&gt;billion&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="mf"&gt;6.52849018681&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;billion&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;The other direction is, how long ago were there only 8 people?&lt;/p&gt;
@@ -7457,7 +7459,7 @@ advanced to the state of Science, whatever the matter may be."&lt;/p&gt;
 climate change:&lt;/p&gt;
 &lt;p&gt;[![ssp_temp_capture.png][]]&lt;a href="https://blogger.googleusercontent.com/tracker/6965073194684424505-30814405432299300?l=bblais.blogspot.com"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The argument is a little dated, actually, most famously &lt;a href="http://en.wikipedia.org/wiki/Pascal's_Wager"&gt;presented in
-the …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;I was just alerted to the following video supporting strong action for
+the 1600's&lt;/a&gt; well …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I was just alerted to the following video supporting strong action for
 climate change:&lt;/p&gt;
 &lt;p&gt;[![ssp_temp_capture.png][]]&lt;a href="https://blogger.googleusercontent.com/tracker/6965073194684424505-30814405432299300?l=bblais.blogspot.com"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The argument is a little dated, actually, most famously &lt;a href="http://en.wikipedia.org/wiki/Pascal's_Wager"&gt;presented in

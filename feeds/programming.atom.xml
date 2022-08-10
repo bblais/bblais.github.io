@@ -197,7 +197,7 @@
         &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
     &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 
-&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;article&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="c"&gt;&amp;lt;!-- end article --&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;article&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="cm"&gt;&amp;lt;!-- end article --&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;This is repeated once for many different articles, making for a long &lt;code&gt;index.html&lt;/code&gt; file.  In the pelican theme, the &lt;code&gt;index.html&lt;/code&gt; loops over all of the articles and generates this long list using &lt;a href="https://jinja.palletsprojects.com/en/2.11.x/"&gt;Jinja&lt;/a&gt; syntax,&lt;/p&gt;
@@ -237,7 +237,7 @@
             &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
         &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 
-    &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;article&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="c"&gt;&amp;lt;!-- end article --&amp;gt;&lt;/span&gt;
+    &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;article&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="cm"&gt;&amp;lt;!-- end article --&amp;gt;&lt;/span&gt;
 
 {% endfor %}
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -273,33 +273,33 @@
 &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;html&lt;/span&gt; &lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;no-js&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;lang&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;en&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;head&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 
-    &lt;span class="c"&gt;&amp;lt;!--- basic page needs&lt;/span&gt;
-&lt;span class="c"&gt;    ================================================== --&amp;gt;&lt;/span&gt;
+    &lt;span class="cm"&gt;&amp;lt;!--- basic page needs&lt;/span&gt;
+&lt;span class="cm"&gt;    ================================================== --&amp;gt;&lt;/span&gt;
     &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;meta&lt;/span&gt; &lt;span class="na"&gt;charset&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;utf-8&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
     &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;title&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;{% block title %}{{ SITENAME|striptags }}{% endblock title %}&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;title&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
     &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;meta&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;description&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;content&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
     &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;meta&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;author&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;content&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Brian Blais&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 
-    &lt;span class="c"&gt;&amp;lt;!-- mobile specific metas&lt;/span&gt;
-&lt;span class="c"&gt;    ================================================== --&amp;gt;&lt;/span&gt;
+    &lt;span class="cm"&gt;&amp;lt;!-- mobile specific metas&lt;/span&gt;
+&lt;span class="cm"&gt;    ================================================== --&amp;gt;&lt;/span&gt;
     &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;meta&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;viewport&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;content&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;width=device-width, initial-scale=1, maximum-scale=1&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 
     {% block head_links %}
 
-    &lt;span class="c"&gt;&amp;lt;!-- CSS&lt;/span&gt;
-&lt;span class="c"&gt;    ================================================== --&amp;gt;&lt;/span&gt;
+    &lt;span class="cm"&gt;&amp;lt;!-- CSS&lt;/span&gt;
+&lt;span class="cm"&gt;    ================================================== --&amp;gt;&lt;/span&gt;
     &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;link&lt;/span&gt; &lt;span class="na"&gt;rel&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;stylesheet&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;href&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;{{ SITEURL }}/theme/css/base.css&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
     &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;link&lt;/span&gt; &lt;span class="na"&gt;rel&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;stylesheet&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;href&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;{{ SITEURL }}/theme/css/vendor.css&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
     &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;link&lt;/span&gt; &lt;span class="na"&gt;rel&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;stylesheet&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;href&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;{{ SITEURL }}/theme/css/main.css&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 
     {% block extra_css %}{% endblock %}
-    &lt;span class="c"&gt;&amp;lt;!-- favicons&lt;/span&gt;
-&lt;span class="c"&gt;    ================================================== --&amp;gt;&lt;/span&gt;
+    &lt;span class="cm"&gt;&amp;lt;!-- favicons&lt;/span&gt;
+&lt;span class="cm"&gt;    ================================================== --&amp;gt;&lt;/span&gt;
     &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;link&lt;/span&gt; &lt;span class="na"&gt;rel&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;shortcut icon&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;href&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;{{ SITEURL }}/favicon.ico&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;image/x-icon&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
     &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;link&lt;/span&gt; &lt;span class="na"&gt;rel&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;icon&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;href&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;{{ SITEURL }}/favicon.ico&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;image/x-icon&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 
-    &lt;span class="c"&gt;&amp;lt;!-- script&lt;/span&gt;
-&lt;span class="c"&gt;    ================================================== --&amp;gt;&lt;/span&gt;
+    &lt;span class="cm"&gt;&amp;lt;!-- script&lt;/span&gt;
+&lt;span class="cm"&gt;    ================================================== --&amp;gt;&lt;/span&gt;
     &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;{{ SITEURL }}/theme/js/modernizr.js&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
     &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;{{ SITEURL }}/theme/js/pace.min.js&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
     {% endblock head_links %}
@@ -318,8 +318,8 @@
         {% include &amp;#39;footer.html&amp;#39; %}
 
 
-    &lt;span class="c"&gt;&amp;lt;!-- preloader&lt;/span&gt;
-&lt;span class="c"&gt;    ================================================== --&amp;gt;&lt;/span&gt;
+    &lt;span class="cm"&gt;&amp;lt;!-- preloader&lt;/span&gt;
+&lt;span class="cm"&gt;    ================================================== --&amp;gt;&lt;/span&gt;
     &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="na"&gt;id&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;preloader&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
         &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="na"&gt;id&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;loader&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
             &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;line-scale&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
@@ -335,8 +335,8 @@
 
     {% block script %}
 
-    &lt;span class="c"&gt;&amp;lt;!-- Java Script&lt;/span&gt;
-&lt;span class="c"&gt;    ================================================== --&amp;gt;&lt;/span&gt;
+    &lt;span class="cm"&gt;&amp;lt;!-- Java Script&lt;/span&gt;
+&lt;span class="cm"&gt;    ================================================== --&amp;gt;&lt;/span&gt;
     &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;{{ SITEURL }}/theme/js/jquery-3.2.1.min.js&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
     &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;{{ SITEURL }}/theme/js/plugins.js&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
     &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;{{ SITEURL }}/theme/js/main.js&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
