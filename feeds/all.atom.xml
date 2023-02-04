@@ -1,5 +1,180 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>bblais on the web</title><link href="https://bblais.github.io/" rel="alternate"></link><link href="https://bblais.github.io/feeds/all.atom.xml" rel="self"></link><id>https://bblais.github.io/</id><updated>2022-11-08T00:00:00-05:00</updated><entry><title>One Rule to Rule Them All</title><link href="https://bblais.github.io/posts/2022/Nov/08/one-rule-to-rule-them-all/" rel="alternate"></link><published>2022-11-08T00:00:00-05:00</published><updated>2022-11-08T00:00:00-05:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2022-11-08:/posts/2022/Nov/08/one-rule-to-rule-them-all/</id><summary type="html">&lt;p&gt;I'm giving a talk at the Fall Cross-Disciplinary Research, Teaching and Technology Symposium on Wednesday November 9th, 2:00PM – 5:00PM at Bryant University.  The theme this semester is Bayesian …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I'm giving a talk at the Fall Cross-Disciplinary Research, Teaching and Technology Symposium on Wednesday November 9th, 2:00PM – 5:00PM at Bryant University.  The theme this semester is Bayesian Methods, so I get to opine about all thing Bayes!  &lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>bblais on the web</title><link href="https://bblais.github.io/" rel="alternate"></link><link href="https://bblais.github.io/feeds/all.atom.xml" rel="self"></link><id>https://bblais.github.io/</id><updated>2023-02-04T00:00:00-05:00</updated><entry><title>Walking through 6 Ways to Use ChatGPT to Learn Code</title><link href="https://bblais.github.io/posts/2023/Feb/04/walking-through-6-ways-to-use-chatgpt-to-learn-code/" rel="alternate"></link><published>2023-02-04T00:00:00-05:00</published><updated>2023-02-04T00:00:00-05:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2023-02-04:/posts/2023/Feb/04/walking-through-6-ways-to-use-chatgpt-to-learn-code/</id><summary type="html">&lt;p&gt;So I was poking around on the web and decided to watch the video "THE Game Changer for Learning to Code"  &lt;a href="https://www.youtube.com/embed/H1fBdboJeBo"&gt;https://www.youtube.com/embed/H1fBdboJeBo&lt;/a&gt; and then attempt …&lt;/p&gt;</summary><content type="html">&lt;p&gt;So I was poking around on the web and decided to watch the video "THE Game Changer for Learning to Code"  &lt;a href="https://www.youtube.com/embed/H1fBdboJeBo"&gt;https://www.youtube.com/embed/H1fBdboJeBo&lt;/a&gt; and then attempt to use it on code I use in class.  &lt;/p&gt;
+&lt;p&gt;TLDR:  Describing vocabulary, describing code, making suggestions for improving code, and finding resources all very useful.  Generating code is super dangerous (ChatGPT makes incorrect code) and using it in many cases can be considered plagiarism, just as if you copied from another person.&lt;/p&gt;
+&lt;h3 id="describing-vocabulary-useful"&gt;Describing vocabulary -- useful&lt;/h3&gt;
+&lt;p&gt;I started with,&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;ME&lt;/strong&gt;:  you're a professor trying to teach a student about euler's method. how would you phrase it?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;ChatGPT&lt;/strong&gt;:
+Euler's method is a numerical method used to approximate the solution to a first-order ordinary differential equation (ODE). It is a simple and straightforward way of approximating the solution by using the tangent line to the solution curve at a given point. The basic idea behind Euler's method is to divide the interval of interest into smaller sub-intervals and then estimate the value of the solution at the end of each sub-interval by using the tangent line. This process is then repeated, starting at the end of each sub-interval, until the desired level of accuracy is reached. Euler's method is a powerful tool for solving ODEs and is widely used in many scientific and engineering applications.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Not bad.  Seems useful to describe vocabulary.&lt;/p&gt;
+&lt;h3 id="describing-code-useful"&gt;Describing code -- useful&lt;/h3&gt;
+&lt;p&gt;Then I gave it some code I used in class,&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;ME:&lt;/strong&gt; Can you explain what this code is doing: &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;x_start&lt;/span&gt;&lt;span class="o"&gt;=-&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;
+&lt;span class="n"&gt;x_end&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;15&lt;/span&gt;
+&lt;span class="n"&gt;step&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
+
+&lt;span class="n"&gt;S&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Storage&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;x_start&lt;/span&gt;
+&lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;=&lt;/span&gt;&lt;span class="n"&gt;x_end&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+
+    &lt;span class="c1"&gt;# print(x,&amp;quot; &amp;quot;,end=&amp;quot;&amp;quot;)&lt;/span&gt;
+
+    &lt;span class="n"&gt;y_left&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;fun&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;step&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;y_right&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;fun&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;step&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+    &lt;span class="n"&gt;m&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;y_right&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;y_left&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;step&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# rise over run&lt;/span&gt;
+
+    &lt;span class="n"&gt;S&lt;/span&gt;&lt;span class="o"&gt;+=&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt;   &lt;span class="c1"&gt;# saving the result for later&lt;/span&gt;
+
+    &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;step&lt;/span&gt;
+
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;done.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;S&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;arrays&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;  &lt;span class="c1"&gt;# give me the saved results as two arrays&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;ChatGPT&lt;/strong&gt;: This code is implementing a numerical method called the midpoint method to estimate the derivative of a function &lt;code&gt;fun&lt;/code&gt; over a range &lt;code&gt;x_start&lt;/code&gt; to &lt;code&gt;x_end&lt;/code&gt; with a step size &lt;code&gt;step&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;Storage&lt;/code&gt; class is used to store the results of the midpoint method at each iteration. The &lt;code&gt;x&lt;/code&gt; variable is initialized to &lt;code&gt;x_start&lt;/code&gt; and the loop continues until &lt;code&gt;x&lt;/code&gt; is greater than &lt;code&gt;x_end&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;In each iteration, the values of the function &lt;code&gt;fun&lt;/code&gt; at &lt;code&gt;x-step/2&lt;/code&gt; and &lt;code&gt;x+step/2&lt;/code&gt; are calculated and stored in &lt;code&gt;y_left&lt;/code&gt; and &lt;code&gt;y_right&lt;/code&gt; respectively. The derivative at the midpoint &lt;code&gt;x&lt;/code&gt; is then estimated as the rise over run &lt;code&gt;m = (y_right - y_left) / step&lt;/code&gt;. The result is stored in the &lt;code&gt;Storage&lt;/code&gt; object &lt;code&gt;S&lt;/code&gt; using the &lt;code&gt;+=&lt;/code&gt; operator.&lt;/p&gt;
+&lt;p&gt;Finally, after the loop, the results stored in &lt;code&gt;S&lt;/code&gt; are retrieved as two arrays &lt;code&gt;x&lt;/code&gt; and &lt;code&gt;m&lt;/code&gt; using the &lt;code&gt;arrays()&lt;/code&gt; method.&lt;/p&gt;
+&lt;p&gt;The midpoint method is a simple numerical method to estimate the derivative of a function. It is based on the idea that the derivative of a function at a point can be estimated as the average rate of change over a small interval around that point.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;That is really impressive, and I think quite useful for students.&lt;/p&gt;
+&lt;h3 id="improving-code-somewhat-useful"&gt;Improving code -- somewhat useful&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;ME:&lt;/strong&gt; how would you improve that code?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;ChatGPT:&lt;/strong&gt;  Here are a few suggestions to improve the code:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Use functions: You can define the midpoint method as a function and reuse it for different functions and different intervals. This makes the code more modular and easier to maintain.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Document the code: Adding comments and documentation to the code can help someone who is unfamiliar with the code understand what it does. For example, you can add a comment explaining the purpose of the code and what each variable represents.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Input validation: You can add input validation to check if the step size &lt;code&gt;step&lt;/code&gt; is positive and non-zero. You can also add input validation to check if the interval &lt;code&gt;x_start&lt;/code&gt; to &lt;code&gt;x_end&lt;/code&gt; is well-defined.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Use &lt;code&gt;numpy&lt;/code&gt; arrays: The &lt;code&gt;numpy&lt;/code&gt; library provides arrays that are optimized for numerical computations. Instead of using the &lt;code&gt;Storage&lt;/code&gt; class, you can use &lt;code&gt;numpy&lt;/code&gt; arrays to store the results of the midpoint method.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Plotting: You can use a plotting library such as &lt;code&gt;matplotlib&lt;/code&gt; to visualize the results of the midpoint method. This can be helpful in understanding the results and detecting any issues with the code.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;By making these changes, you can make the code more readable, reusable, and understandable.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Most of this is good.  I laugh at (2) because I notoriously do not put documentation in.  Perhaps I should use ChatGPT to document my class code?  I don't use (4) for a couple of reasons.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;you need to know ahead of time how many values you need to save if you use arrays&lt;/li&gt;
+&lt;li&gt;there is extra boilerplate code for setting up the initial arrays, and saving the data in the right indices&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The &lt;code&gt;Storage()&lt;/code&gt; class I made solves these problems, and is &lt;a href="https://bblais.github.io/posts/2020/Feb/24/common-python-pattern-building-up-lists-to-plot/"&gt;discussed in more detail here&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;Of course, ChatGPT wouldn't be expected to know that, but it does highlight some limitations.   We do (5) in later cells, and will do (1) later, but this code was just an introduction.  &lt;/p&gt;
+&lt;h3 id="new-code-dangerous"&gt;New code -- dangerous!&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;ME:&lt;/strong&gt;  how would you use this code to find the minimum and maximum of a function? please show the resulting code&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;What I was looking for is to use the derivative code above, find where it equals (or is close to) zero and return those points.  What I got was &lt;strong&gt;incorrect code&lt;/strong&gt; described perfectly.  &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;ChatGPT:&lt;/strong&gt; To find the minimum and maximum of a function using this code, you can modify the code to keep track of the minimum and maximum values of the derivative. If the derivative at a point is zero, it means that the function has a local extremum (minimum or maximum) at that point.&lt;/p&gt;
+&lt;p&gt;Here's an updated version of the code that finds the minimum and maximum of a function:&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;midpoint_method&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;fun&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;x_start&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;x_end&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;step&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;x_start&lt;/span&gt;
+    &lt;span class="n"&gt;min_x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;max_x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt;
+    &lt;span class="n"&gt;min_m&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;max_m&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt;
+    &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;=&lt;/span&gt; &lt;span class="n"&gt;x_end&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;y_left&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;fun&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;step&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;y_right&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;fun&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;step&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;y_right&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;y_left&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="n"&gt;step&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;min_m&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt; &lt;span class="ow"&gt;or&lt;/span&gt; &lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;min_m&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;min_m&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;m&lt;/span&gt;
+            &lt;span class="n"&gt;min_x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;max_m&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt; &lt;span class="ow"&gt;or&lt;/span&gt; &lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;max_m&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;max_m&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;m&lt;/span&gt;
+            &lt;span class="n"&gt;max_x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;
+        &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="n"&gt;step&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;min_x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;min_m&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;max_x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;max_m&lt;/span&gt;
+
+&lt;span class="n"&gt;x_start&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;
+&lt;span class="n"&gt;x_end&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;15&lt;/span&gt;
+&lt;span class="n"&gt;step&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+
+&lt;span class="n"&gt;min_x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;min_m&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;max_x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;max_m&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;midpoint_method&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;fun&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;x_start&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;x_end&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;step&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Minimum at x=&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;min_x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot; with derivative &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;min_m&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Maximum at x=&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;max_x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot; with derivative &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;max_m&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;In this updated version of the code, a function &lt;code&gt;midpoint_method&lt;/code&gt; is defined to encapsulate the midpoint method. The function takes four arguments: &lt;code&gt;fun&lt;/code&gt;, &lt;code&gt;x_start&lt;/code&gt;, &lt;code&gt;x_end&lt;/code&gt;, and &lt;code&gt;step&lt;/code&gt;. The function returns four values: the &lt;code&gt;x&lt;/code&gt;-coordinates and the values of the minimum and maximum derivatives.&lt;/p&gt;
+&lt;p&gt;In the main part of the code, the &lt;code&gt;midpoint_method&lt;/code&gt; function is called with the input parameters, and the results are stored in &lt;code&gt;min_x&lt;/code&gt;, &lt;code&gt;min_m&lt;/code&gt;, &lt;code&gt;max_x&lt;/code&gt;, and &lt;code&gt;max_m&lt;/code&gt;. Finally, the minimum and maximum are printed.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This printed the &lt;strong&gt;minimum and maximum of the derivative not the function&lt;/strong&gt;.  Unless you knew what was going on, this would be seriously dangerous to use.&lt;/p&gt;
+&lt;h3 id="finding-resources-useful"&gt;Finding resources -- useful&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;ME:&lt;/strong&gt; where can I learn more about numerical derivatives in python and include specific links&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;ChatGPT:&lt;/strong&gt; Here are several resources with specific links to help you learn about numerical derivatives in Python:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Online tutorials:&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The official Python documentation has a section on numerical differentiation: &lt;a href="https://docs.python.org/3/tutorial/floatingpoint.html"&gt;&lt;a href="https://docs.python.org/3/tutorial/floatingpoint.html"&gt;https://docs.python.org/3/tutorial/floatingpoint.html&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;A comprehensive tutorial on numerical derivatives in Python can be found here: &lt;a href="https://realpython.com/numerical-derivatives-python/"&gt;&lt;a href="https://realpython.com/numerical-derivatives-python/"&gt;https://realpython.com/numerical-derivatives-python/&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Books:&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;"Python for Data Analysis" by Wes McKinney covers the use of numerical methods in data analysis and provides examples using Python: &lt;a href="https://www.amazon.com/Python-Data-Analysis-Wrangling-IPython/dp/1491957662"&gt;&lt;a href="https://www.amazon.com/Python-Data-Analysis-Wrangling-IPython/dp/1491957662"&gt;https://www.amazon.com/Python-Data-Analysis-Wrangling-IPython/dp/1491957662&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;"Numerical Python" by Robert Johansson covers numerical methods and scientific computing using the Python programming language: &lt;a href="https://www.amazon.com/Numerical-Python-Scientific-Computing-Array/dp/1491911662"&gt;&lt;a href="https://www.amazon.com/Numerical-Python-Scientific-Computing-Array/dp/1491911662"&gt;https://www.amazon.com/Numerical-Python-Scientific-Computing-Array/dp/1491911662&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Online courses:&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Coursera offers several online courses on numerical methods and scientific computing in Python: &lt;a href="https://www.coursera.org/courses?query=numerical%20python"&gt;&lt;a href="https://www.coursera.org/courses?query=numerical%20python"&gt;https://www.coursera.org/courses?query=numerical%20python&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;Udemy also has several online courses that cover numerical methods in Python: &lt;a href="https://www.udemy.com/topic/numerical-methods/"&gt;&lt;a href="https://www.udemy.com/topic/numerical-methods/"&gt;https://www.udemy.com/topic/numerical-methods/&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;edX offers a course on numerical methods for scientific computing with Python: &lt;a href="https://www.edx.org/learn/numerical-methods-for-scientific-computing-with-python"&gt;&lt;a href="https://www.edx.org/learn/numerical-methods-for-scientific-computing-with-python"&gt;https://www.edx.org/learn/numerical-methods-for-scientific-computing-with-python&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Scientific libraries:&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The &lt;code&gt;numpy&lt;/code&gt; library in Python has a comprehensive documentation on numerical derivatives: &lt;a href="https://numpy.org/doc/stable/reference/routines.math.html#derivatives"&gt;&lt;a href="https://numpy.org/doc/stable/reference/routines.math.html#derivatives"&gt;https://numpy.org/doc/stable/reference/routines.math.html#derivatives&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The &lt;code&gt;scipy&lt;/code&gt; library also has a section on numerical derivatives: &lt;a href="https://docs.scipy.org/doc/scipy/reference/signal.html#differentiation"&gt;&lt;a href="https://docs.scipy.org/doc/scipy/reference/signal.html#differentiation"&gt;https://docs.scipy.org/doc/scipy/reference/signal.html#differentiation&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Community resources:&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Stack Overflow is a great resource for asking questions and getting help with numerical derivatives in Python: &lt;a href="https://stackoverflow.com/questions/tagged/python"&gt;&lt;a href="https://stackoverflow.com/questions/tagged/python"&gt;https://stackoverflow.com/questions/tagged/python&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;The official Python mailing list is another good resource for asking questions and getting help: &lt;a href="https://mail.python.org/mailman/listinfo/python-list"&gt;&lt;a href="https://mail.python.org/mailman/listinfo/python-list"&gt;https://mail.python.org/mailman/listinfo/python-list&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Reddit has several communities dedicated to Python programming, including r/learnpython and r/python, where you can ask questions and get help with numerical derivatives: &lt;a href="https://www.reddit.com/r/learnpython/"&gt;&lt;a href="https://www.reddit.com/r/learnpython/"&gt;https://www.reddit.com/r/learnpython/&lt;/a&gt;&lt;/a&gt; and &lt;a href="https://www.reddit.com/r/python/"&gt;&lt;a href="https://www.reddit.com/r/python/"&gt;https://www.reddit.com/r/python/&lt;/a&gt;&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;h3 id="heres-the-video-again"&gt;Here's the Video Again&lt;/h3&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/H1fBdboJeBo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen&gt;&lt;/iframe&gt;</content><category term="programming"></category></entry><entry><title>One Rule to Rule Them All</title><link href="https://bblais.github.io/posts/2022/Nov/08/one-rule-to-rule-them-all/" rel="alternate"></link><published>2022-11-08T00:00:00-05:00</published><updated>2022-11-08T00:00:00-05:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2022-11-08:/posts/2022/Nov/08/one-rule-to-rule-them-all/</id><summary type="html">&lt;p&gt;I'm giving a talk at the Fall Cross-Disciplinary Research, Teaching and Technology Symposium on Wednesday November 9th, 2:00PM – 5:00PM at Bryant University.  The theme this semester is Bayesian …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I'm giving a talk at the Fall Cross-Disciplinary Research, Teaching and Technology Symposium on Wednesday November 9th, 2:00PM – 5:00PM at Bryant University.  The theme this semester is Bayesian Methods, so I get to opine about all thing Bayes!  &lt;/p&gt;
 &lt;p&gt;&lt;a href="https://bblais.github.io/images/One Rule to Rule Them All.pdf"&gt;Here are my slides.&lt;/a&gt;&lt;/p&gt;</content><category term="science"></category><category term="statistics"></category><category term="bayesian"></category></entry><entry><title>Miracles with Brian Blais</title><link href="https://bblais.github.io/posts/2022/Nov/01/miracles-with-brian-blais/" rel="alternate"></link><published>2022-11-01T00:00:00-04:00</published><updated>2022-11-01T00:00:00-04:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2022-11-01:/posts/2022/Nov/01/miracles-with-brian-blais/</id><summary type="html">&lt;p&gt;Matthew and Andrew welcome me back to talk about miracles. Andrew gives an update on the failed prayer to heal his eyesight, and towards the end of the show, there …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Matthew and Andrew welcome me back to talk about miracles. Andrew gives an update on the failed prayer to heal his eyesight, and towards the end of the show, there is a special appearance by David from Skeptics and Seekers.   We reference the &lt;a href="https://bblais.github.io/posts/2022/Mar/23/a-long-discussion-about-miracles/"&gt;long discussion about miracles&lt;/a&gt; from my appearance on the Digital Gnosis YouTube channel.&lt;/p&gt;
 &lt;p&gt;This podcast episode can be obtained at&lt;/p&gt;
 &lt;ul&gt;
