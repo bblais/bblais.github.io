@@ -5,77 +5,84 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://bblais.github.io/</loc>
-<lastmod>2023-02-04T10:32:11-00:00</lastmod>
+<lastmod>2023-02-26T20:01:04-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/about.html</loc>
-<lastmod>2023-02-04T10:32:11-00:00</lastmod>
+<lastmod>2023-02-26T20:01:04-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/archives.html</loc>
-<lastmod>2023-02-04T10:32:11-00:00</lastmod>
+<lastmod>2023-02-26T20:01:04-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/contact.html</loc>
-<lastmod>2023-02-04T10:32:11-00:00</lastmod>
+<lastmod>2023-02-26T20:01:04-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/thanks.html</loc>
-<lastmod>2023-02-04T10:32:11-00:00</lastmod>
+<lastmod>2023-02-26T20:01:04-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/search.html</loc>
-<lastmod>2023-02-04T10:32:11-00:00</lastmod>
+<lastmod>2023-02-26T20:01:04-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/tags.html</loc>
-<lastmod>2023-02-04T10:32:11-00:00</lastmod>
+<lastmod>2023-02-26T20:01:04-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/search.html</loc>
-<lastmod>2023-02-04T10:32:11-00:00</lastmod>
+<lastmod>2023-02-26T20:01:04-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/pages/presentations.html</loc>
-<lastmod>2023-02-04T10:32:11-00:00</lastmod>
+<lastmod>2023-02-26T20:01:04-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/pages/projects.html</loc>
-<lastmod>2023-02-04T10:32:11-00:00</lastmod>
+<lastmod>2023-02-26T20:01:04-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/pages/publications.html</loc>
-<lastmod>2023-02-04T10:32:11-00:00</lastmod>
+<lastmod>2023-02-26T20:01:04-00:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://bblais.github.io/posts/2023/Feb/23/probability-and-the-independence-of-testimony/</loc>
+<lastmod>2023-02-23T00:00:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -2539,7 +2546,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://bblais.github.io/category/religion.html</loc>
-<lastmod>2022-07-23T00:00:00-04:56</lastmod>
+<lastmod>2023-02-23T00:00:00-04:56</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -2798,7 +2805,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://bblais.github.io/author/brian-blais.html</loc>
-<lastmod>2023-02-04T00:00:00-04:56</lastmod>
+<lastmod>2023-02-23T00:00:00-04:56</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

@@ -1,5 +1,236 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>bblais on the web - religion</title><link href="https://bblais.github.io/" rel="alternate"></link><link href="https://bblais.github.io/feeds/religion.atom.xml" rel="self"></link><id>https://bblais.github.io/</id><updated>2022-07-23T00:00:00-04:00</updated><entry><title>The "God" of the Philosophers Is Empty</title><link href="https://bblais.github.io/posts/2022/Jul/23/the-god-of-the-philosophers-is-empty/" rel="alternate"></link><published>2022-07-23T00:00:00-04:00</published><updated>2022-07-23T00:00:00-04:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2022-07-23:/posts/2022/Jul/23/the-god-of-the-philosophers-is-empty/</id><summary type="html">&lt;p&gt;So I recently had a bit of a discussion which ended somewhat abruptly with complaints of category errors on my part and implied scientism.  The initial Tweet was:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>bblais on the web - religion</title><link href="https://bblais.github.io/" rel="alternate"></link><link href="https://bblais.github.io/feeds/religion.atom.xml" rel="self"></link><id>https://bblais.github.io/</id><updated>2023-02-23T00:00:00-05:00</updated><entry><title>Probability and the Independence of Testimony</title><link href="https://bblais.github.io/posts/2023/Feb/23/probability-and-the-independence-of-testimony/" rel="alternate"></link><published>2023-02-23T00:00:00-05:00</published><updated>2023-02-23T00:00:00-05:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2023-02-23:/posts/2023/Feb/23/probability-and-the-independence-of-testimony/</id><summary type="html">&lt;p&gt;In a &lt;a href="https://bblais.github.io/posts/2022/Jun/14/sometimes-more-testimony-is-worse/"&gt;previous post&lt;/a&gt; I examined a simple model of the interaction of testimony with scientific inquiry, and how it can affect the probabilities of the truth of miracle claims …&lt;/p&gt;</summary><content type="html">&lt;p&gt;In a &lt;a href="https://bblais.github.io/posts/2022/Jun/14/sometimes-more-testimony-is-worse/"&gt;previous post&lt;/a&gt; I examined a simple model of the interaction of testimony with scientific inquiry, and how it can affect the probabilities of the truth of miracle claims.  In this post I examine a single result from  &lt;a href="https://timothymcgrew.com"&gt;Timothy&lt;/a&gt; and &lt;a href="http://www.lydiamcgrew.com"&gt;Lydia&lt;/a&gt; McGrews' article in &lt;a href="https://onlinelibrary.wiley.com/doi/book/10.1002/9781444308334"&gt;The Blackwell Companion to Natural Theology&lt;/a&gt; entitled "Chapter 11 - The Argument from Miracles: A Cumulative Case for the Resurrection of Jesus of Nazareth".  This paper is covered both in this YouTube episode, &lt;a href="https://youtu.be/yeCBpO7pSRM"&gt;Bad Apologetics Ep 18 - Bayes Machine goes BRRRRRRRRR&lt;/a&gt; with &lt;a href="https://www.youtube.com/channel/UCy63pdWnpupE8MfxpMNfRNg"&gt;Nathan Ormond&lt;/a&gt;, &lt;a href="https://www.idc.com/getdoc.jsp?containerId=PRF004699"&gt;Kamil Gregor&lt;/a&gt;, and &lt;a href="https://www.youtube.com/channel/UCcprhl4otMOQPL5PDbtbheQ"&gt;James Fodor&lt;/a&gt;, and summarized in text form on my blog &lt;a href="https://bblais.github.io/posts/2021/Aug/29/bad-apologetics-ep-18-bayes-machine-goes-brrrrrrrrr/"&gt;starting here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The result I want to look at is here:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Pasted image 20220713065658.png" src="https://bblais.github.io/images/Pasted image 20220713065658.png"&gt;&lt;/p&gt;
+&lt;p&gt;The basic idea the McGrews have is that there are &lt;span class="math"&gt;\(N=15\)&lt;/span&gt; data points each with a Bayes factor of 1000, each completely independent from the others, leading to the product of probabilities yielding  Bayes factor of around &lt;span class="math"&gt;\(1000^{15}=10^{45}\)&lt;/span&gt; (one of their Bayes factors is only 100 so they get &lt;span class="math"&gt;\(10^{44}\)&lt;/span&gt;, but the idea is the same).  I'll use &lt;span class="math"&gt;\(10^{45}\)&lt;/span&gt; in this post for mathematical simplicity below.  We discuss &lt;a href="https://youtu.be/yeCBpO7pSRM"&gt;in the video above&lt;/a&gt; how ridiculous &lt;span class="math"&gt;\(10^{44}\)&lt;/span&gt; is as a Bayes factor -- that there may not even be modern physical theories with Bayes factors that high. However, in this post, I want to take a direction that I haven't seen before but I think is enlightening.&lt;/p&gt;
+&lt;p&gt;TLDR:  One can be supremely confident that all 15 sources are statistically independent, at probability of &lt;span class="math"&gt;\(p=0.9995\)&lt;/span&gt; (which is far higher than many scientific claims in published journals), and still not be able to justify the miracle claim due to the small uncertainty.   This fact alone should disqualify the result the McGrews present.&lt;/p&gt;
+&lt;h2 id="imperfect-information"&gt;Imperfect Information&lt;/h2&gt;
+&lt;p&gt;One of the properties of all inference, particularly historical inference, is that there is some level of uncertainty.   Do we know that, say, two claims in an ancient document are &lt;em&gt;statistically&lt;/em&gt; independent?  That's very hard to establish.  The typical approach is to argue that the claims are &lt;em&gt;textually&lt;/em&gt; independent and thus more likely to be &lt;em&gt;statistically&lt;/em&gt; independent.  This is a loose inference, because it is very easy for two texts to draw from the same oral tradition and thus not represent independent information.  It's even hard in modern contexts to establish statistical independence between people making claims, even when you can interrogate the people and investigate the claims directly -- neither of which we can do for ancient texts.  &lt;/p&gt;
+&lt;p&gt;So, that being said, it seems plausible that there is some degree of uncertainty in even establishing the independence of data sources.  I'd like to explore how much uncertainty the McGrews calculation can tolerate and still maintain their argument.  It is a sign of the strength of an argument if it can withstand some reasonable level of uncertainty. &lt;/p&gt;
+&lt;h2 id="definitions"&gt;Definitions&lt;/h2&gt;
+&lt;p&gt;I use the same notation as I did in &lt;a href="https://bblais.github.io/posts/2022/Jun/14/sometimes-more-testimony-is-worse/"&gt;this post on testimony&lt;/a&gt;. &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;we have several data points, &lt;span class="math"&gt;\(D_1, D_2, \ldots, D_n\)&lt;/span&gt; &lt;/li&gt;
+&lt;li&gt;we have the proposition, &lt;span class="math"&gt;\(M\equiv \text{a miracle occurred}\)&lt;/span&gt;, for which we have a prior, &lt;div class="math"&gt;$$\begin{aligned}
+P(M) &amp;amp;\equiv m\\
+P(\bar{M}) &amp;amp;\equiv 1-m\\
+\end{aligned}$$&lt;/div&gt;Note, that for &lt;em&gt;miracle&lt;/em&gt; here you can substitute any extraordinary claim.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We're interested in &lt;span class="math"&gt;\(P(M|D_1, D_2, \ldots, D_n)\)&lt;/span&gt;, but to establish a couple more definitions, let's look at the two-data case.&lt;/p&gt;
+&lt;h2 id="the-two-data-independent-case"&gt;The two-data independent case&lt;/h2&gt;
+&lt;p&gt;In the two data case we have
+&lt;/p&gt;
+&lt;div class="math"&gt;$$\begin{aligned}
+P(M|D_1, D_2) &amp;amp;= P(D_1|M)P(D_2|M,D_1)P(M)\\
+P(\bar{M}|D_1, D_2) &amp;amp;= P(D_1|\bar{M})P(D_2|\bar{M},D_1)P(\bar{M})\\
+\end{aligned}
+$$&lt;/div&gt;
+&lt;p&gt;
+We define the likelihood term for a single data point as,
+&lt;/p&gt;
+&lt;div class="math"&gt;$$\begin{aligned}
+P(D_1|M) &amp;amp;\equiv d\\
+P(D_1|\bar{M}) &amp;amp;\equiv b
+\end{aligned}$$&lt;/div&gt;
+&lt;p&gt;
+The McGrews do not specify these probabilities numerically, but only specify their ratio, which is the single-point Bayes Factor they (arbitrarily) assume,&lt;/p&gt;
+&lt;div class="math"&gt;$$d/b=1000$$&lt;/div&gt;
+&lt;p&gt;
+They also assume independence of all the sources, which would imply,
+&lt;/p&gt;
+&lt;div class="math"&gt;$$\begin{aligned}
+P(D_2|M,D_1) &amp;amp;= P(D_2|M) \equiv d\\
+P(D_2|\bar{M},D_1) &amp;amp;= P(D_2|\bar{M}) \equiv b
+\end{aligned}$$&lt;/div&gt;
+&lt;p&gt;The odds ratio then becomes,&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\begin{aligned}
+ O &amp;amp;\equiv \frac{P(M|D_1, D_2)}{P(\bar{M}|D_1, D_2)} \\
+ &amp;amp;=\underbrace{\frac{P(D_1|M)\cdot P(D_2|M) }{P(D_1|\bar{M})\cdot P(D_2|\bar{M})}}_{\text{cumulative testimony}}\times \underbrace{\frac{P(M)}{P(\bar{M})}}_{\text{prior odds}} \\
+ &amp;amp;=\frac{d^2 \cdot m}{b^2\cdot (1-m)}
+ \end{aligned}
+$$&lt;/div&gt;
+&lt;h2 id="the-n-data-independent-case"&gt;The &lt;span class="math"&gt;\(n\)&lt;/span&gt;-data independent case&lt;/h2&gt;
+&lt;p&gt;Following the same procedure for &lt;span class="math"&gt;\(n\)&lt;/span&gt; points, we have,&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\begin{aligned}
+ O &amp;amp;\equiv \frac{P(M|D_1, D_2, \ldots, D_n)}{P(\bar{M}|D_1, D_2, \ldots, D_n)} \\
+ &amp;amp;=\frac{P(D_1, D_2, \ldots, D_n|M)P(M)}{P(D_1, D_2, \ldots, D_n|\bar{M})P(\bar{M})} \\
+ &amp;amp;=\underbrace{\frac{P(D_1|M)\cdot P(D_2|M) \cdots P(D_n|M)}{P(D_1|\bar{M})\cdot P(D_2|\bar{M}) \cdots P(D_n|\bar{M})}}_{\text{cumulative testimony}}\times \underbrace{\frac{P(M)}{P(\bar{M})}}_{\text{prior odds}} \\
+ &amp;amp;= \frac{d^N}{b^N}\cdot \frac{P(M)}{P(\bar{M})}
+ \end{aligned}
+$$&lt;/div&gt;
+&lt;p&gt;for the McGrews, &lt;span class="math"&gt;\(N=15\)&lt;/span&gt; and &lt;span class="math"&gt;\(d/b=1000\)&lt;/span&gt; and so they claim that the prior odds, &lt;span class="math"&gt;\(\frac{P(M)}{P(\bar{M})}\)&lt;/span&gt; needs to be less than &lt;span class="math"&gt;\(10^{-45}\)&lt;/span&gt; to overcome and they can't imagine that happening except for an overly skeptical person. &lt;/p&gt;
+&lt;h2 id="first-look-at-dependence"&gt;First look at dependence&lt;/h2&gt;
+&lt;p&gt;Now what happens if the data are not independent or, if you prefer to avoid the double-negative, if the data are &lt;em&gt;dependent&lt;/em&gt;?  Then the probability of the second data point will be different, but how?  &lt;/p&gt;
+&lt;p&gt;Imagine someone observes a fair coin that has been flipped and is lying on the table.  They write down the result and leave the room.  They then come back in, observe the coin and write the result.  If during their absence, &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;someone flipped the coin again -- the second result will have the same probability as the first, and the result of the first flip will tell you nothing about the result of the second, &lt;span class="math"&gt;\(P(H_1)=1/2, P(H_2|H_1)=P(H_2)=1/2\)&lt;/span&gt; -- &lt;strong&gt;independent&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;no one touched the coin -- the second result is entirely determined by the first, &lt;span class="math"&gt;\(P(H_1)=1/2, P(H_2|H_1)=1\)&lt;/span&gt; -- &lt;strong&gt;dependent&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;someone turned the coin over on the table, changing heads to tails -- the second result is entirely determined by the first, &lt;span class="math"&gt;\(P(H_1)=1/2, P(H_2|H_1)=0\)&lt;/span&gt; -- &lt;strong&gt;dependent&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Since we can have any possibility in between, we need to know the process of the dependence to determine at a minimum whether the value even goes up or down.  In the case of testimony, it is far more likely for new testimony that is dependent on old testimony to give the same or similar information as the old.  It would be odd indeed (even though the McGrews argue for this) for the new testimony to tend to be the opposite of the old.  The consequences of this odd view is explored in the video and also &lt;a href="https://bblais.github.io/posts/2022/Jul/13/bad-apologetics-on-bayes-part-3/#independence"&gt;in the summary here&lt;/a&gt; so I won't go into it in this post.&lt;/p&gt;
+&lt;p&gt;In the case of &lt;span class="math"&gt;\(D_2\)&lt;/span&gt; being completely dependent on &lt;span class="math"&gt;\(D_1\)&lt;/span&gt;, it is the case that &lt;span class="math"&gt;\(D_2\)&lt;/span&gt; adds no new information.  Or in other words, knowing &lt;span class="math"&gt;\(D_1\)&lt;/span&gt; it follows that &lt;span class="math"&gt;\(D_2\)&lt;/span&gt; is true necessarily,&lt;/p&gt;
+&lt;div class="math"&gt;$$\begin{aligned}
+P(D_2|M,D_1) &amp;amp;= 1\\
+P(D_2|\bar{M},D_1) &amp;amp;= 1
+\end{aligned}$$&lt;/div&gt;
+&lt;p&gt;In the &lt;span class="math"&gt;\(n\)&lt;/span&gt;-data point case, this becomes,&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\begin{aligned}
+ O &amp;amp;\equiv \frac{P(M|D_1, D_2, \ldots, D_n)}{P(\bar{M}|D_1, D_2, \ldots, D_n)} \\
+ &amp;amp;=\frac{P(D_1, D_2, \ldots, D_n|M)P(M)}{P(D_1, D_2, \ldots, D_n|\bar{M})P(\bar{M})} \\
+ &amp;amp;=\underbrace{\frac{P(D_1|M)\cdot P(D_2|M) \cdots P(D_n|M)}{P(D_1|\bar{M})\cdot P(D_2|\bar{M}) \cdots P(D_n|\bar{M})}}_{\text{cumulative testimony}}\times \underbrace{\frac{P(M)}{P(\bar{M})}}_{\text{prior odds}} \\
+ &amp;amp;=\underbrace{\frac{P(D_1|M)\cdot 1\cdots 1}{P(D_1|\bar{M})\cdot 1\cdots 1}}_{\text{cumulative testimony}}\times \underbrace{\frac{P(M)}{P(\bar{M})}}_{\text{prior odds}} \\
+ &amp;amp;= \frac{d}{b}\cdot \frac{m}{1-m}
+ \end{aligned}
+$$&lt;/div&gt;
+&lt;p&gt;Using the McGrews numbers here, we get&lt;/p&gt;
+&lt;div class="math"&gt;$$
+O= 1000 \cdot \frac{P(M)}{P(\bar{M})}
+$$&lt;/div&gt;
+&lt;p&gt;
+which means that the prior odds for a miracle need only be more then 1 in 1000 against to overcome this evidence -- not a very strong case for the miracle.  Clearly dependent sources undermine the McGrews' case.  But how much dependency is needed?&lt;/p&gt;
+&lt;h2 id="the-first-model"&gt;The first model&lt;/h2&gt;
+&lt;p&gt;We'll start with the following simplified model of the uncertainty in the establishment of independence.  For each data point after the first there is some probability that the data point is independent of the first.  We'll call that value &lt;span class="math"&gt;\(\beta\)&lt;/span&gt;.  For intuition, note that&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(\beta=1\)&lt;/span&gt; means we're certain the data point, &lt;span class="math"&gt;\(D_i\)&lt;/span&gt;, is completely independent of the first, &lt;span class="math"&gt;\(D_1\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(\beta=0\)&lt;/span&gt; means we're certain the data point, &lt;span class="math"&gt;\(D_i\)&lt;/span&gt;, is completely dependent on the first, &lt;span class="math"&gt;\(D_1\)&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Later we generalize this calculation to the case of partial dependency, but the conclusion is identical to this simpler model which is a little more intuitive.&lt;/p&gt;
+&lt;p&gt;For the 2-data point case we have,&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\begin{aligned}
+P(M|D_1,D_2)&amp;amp;=P(D_2|M,D_1)P(D_1|M)P(M) \\
+    &amp;amp;=(\beta\cdot d + (1-\beta)\cdot 1)\cdot d \cdot P(M)
+\end{aligned}
+$$&lt;/div&gt;
+&lt;p&gt;
+where the likelihood term for the second data point, &lt;span class="math"&gt;\(P(D_2|M,D_1)\)&lt;/span&gt; is broken up into two pieces -- a value of &lt;span class="math"&gt;\(d\)&lt;/span&gt; for the independent case with probability &lt;span class="math"&gt;\(\beta\)&lt;/span&gt; and a value of 1 for the dependent case with probability  &lt;span class="math"&gt;\(1-\beta\)&lt;/span&gt;.   Generalizing this to the &lt;span class="math"&gt;\(n\)&lt;/span&gt;-data point case,&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\begin{aligned}
+ O &amp;amp;\equiv \frac{P(M|D_1, D_2, \ldots, D_n)}{P(\bar{M}|D_1, D_2, \ldots, D_n)} \\
+ &amp;amp;=\frac{(\beta d + (1-\beta))^{N-1}\cdot d}{(\beta b + (1-\beta))^{N-1}\cdot b}\cdot \frac{P(M)}{P(\bar{M})}
+ \end{aligned}
+$$&lt;/div&gt;
+&lt;h3 id="reproduce-the-mcgrews-result"&gt;Reproduce the McGrews' Result&lt;/h3&gt;
+&lt;p&gt;To reproduce the result of the McGrews, we have the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(\beta=1\)&lt;/span&gt; : we're certain that the data are all independent&lt;/li&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(d=10^{-3}\)&lt;/span&gt; and &lt;span class="math"&gt;\(b=10^{-6}\)&lt;/span&gt; giving an odds ratio for one data point &lt;span class="math"&gt;\(O=1000\)&lt;/span&gt;.  &lt;/li&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(N=15\)&lt;/span&gt; (again, technically they have one point which has an odds ratio of 100 so their answer is &lt;span class="math"&gt;\(O=10^{44}\)&lt;/span&gt; whereas our answer here is &lt;span class="math"&gt;\(O=10^{45}\)&lt;/span&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;From the equation above we get
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\begin{aligned}
+ O &amp;amp;\equiv \frac{P(M|D_1, D_2, \ldots, D_n)}{P(\bar{M}|D_1, D_2, \ldots, D_n)} \\
+ &amp;amp;=\frac{(1\cdot 10^{-3} + (1-1))^{15-1}\cdot 10^{-3}}{(1\cdot 10^{-6} + (1-1))^{N-1}\cdot 10^{-6} }\cdot \frac{P(M)}{P(\bar{M})}\\
+ &amp;amp;=10^{45}\cdot \frac{P(M)}{P(\bar{M})}
+ \end{aligned}
+ $$&lt;/div&gt;
+&lt;h2 id="how-does-the-uncertainty-affect-the-mcgrews-result"&gt;How does the uncertainty affect the McGrews' Result?&lt;/h2&gt;
+&lt;p&gt;The question here is how much uncertainty can this argument tolerate?  In other words, how far can &lt;span class="math"&gt;\(\beta\)&lt;/span&gt; deviate from a value of 1 before the odds ratio comes down to a reasonable level?&lt;/p&gt;
+&lt;h3 id="an-aside-on-a-reasonable-prior-for-the-miracle"&gt;An aside on a reasonable prior for the miracle&lt;/h3&gt;
+&lt;p&gt;A very rough, maximum level for the prior for the Resurrection of Jesus can be obtained using the following logic.  There are 8 billion people on the planet, perhaps twice that much in all of history, and (at least for the Christians) only one supported Resurrection.  So that would mean, whether or not one believes in the Resurrection, the prior should be no larger than 1 in 10 billion.  This I think is the maximum possible value of a prior I'd consider.  It is comparable to the &lt;a href="https://bblais.github.io/posts/2014/Sep/22/will-the-sun-rise-tomorrow/"&gt;naive model the probability of the sun rising which I discuss elsewhere&lt;/a&gt;, without taking into account anything we have come to understand from science so is clearly an extremely conservative upper bound.&lt;/p&gt;
+&lt;h3 id="back-to-the-effect-of-beta"&gt;Back to the effect of &lt;span class="math"&gt;\(\beta\)&lt;/span&gt;&lt;/h3&gt;
+&lt;p&gt;We want to know where the first part of the odds ratio,&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\begin{aligned}
+ \frac{(\beta d + (1-\beta))^{N-1}\cdot d}{(\beta b + (1-\beta))^{N-1}\cdot b}
+ \end{aligned}
+$$&lt;/div&gt;
+&lt;p&gt;
+drops below &lt;span class="math"&gt;\(10^{10}\)&lt;/span&gt; so that the prior odds &lt;span class="math"&gt;\(\frac{P(M)}{P(\bar{M})}\sim 10^{-10}\)&lt;/span&gt; will overwhelm it and the argument fails. This point can be seen by observing a plot of the log base 10-odds ratio as a function of β and noting where the value dips below 10.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Pasted image 20230226182719.png" src="https://bblais.github.io/images/Pasted image 20230226182719.png"&gt;
+This result surprised me.  The tiniest deviation from the absolute certainty that all 15 sources are statistically independent brings the odds ratio down to the mundane.  It drops below &lt;span class="math"&gt;\(10^{10}\)&lt;/span&gt; at around &lt;span class="math"&gt;\(\beta=0.9995\)&lt;/span&gt;! &lt;/p&gt;
+&lt;p&gt;What this means is that one can be supremely confident that all 15 sources are statistically independent, at probability of &lt;span class="math"&gt;\(p=0.9995\)&lt;/span&gt; (which is far higher than many scientific claims in published journals), and still not be able to justify the miracle claim due to the small uncertainty.   This fact alone should disqualify the result. &lt;/p&gt;
+&lt;h2 id="partial-dependency"&gt;Partial dependency&lt;/h2&gt;
+&lt;p&gt;One could criticize this result by saying that the choice isn't between perfectly independent and perfectly dependence, but that one can be partially dependent but mostly independent and that may be enough.  TLDR on this section -- you get the same result as the previous solution.&lt;/p&gt;
+&lt;p&gt;To handle this, we reparameterize the 2-data point case.  Instead of the independent case &lt;span class="math"&gt;\(P(D_2|M,D_1)=d\)&lt;/span&gt; or the dependent case &lt;span class="math"&gt;\(P(D_2|M,D_1)=1\)&lt;/span&gt; we have a tunable version &lt;span class="math"&gt;\(P(D_2|M,D_1)=d+\alpha (1-d)\)&lt;/span&gt; where &lt;span class="math"&gt;\(\alpha\)&lt;/span&gt; measures how dependent each point is, from totally independent (&lt;span class="math"&gt;\(\alpha=0\)&lt;/span&gt;) to totally dependent (&lt;span class="math"&gt;\(\alpha=1\)&lt;/span&gt;).  So each data point can be partially, but not totally, dependent.  The &lt;span class="math"&gt;\(n\)&lt;/span&gt;-data point generalization becomes&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\begin{aligned}
+ O &amp;amp;=\frac{(d+\alpha (1-d))^{N-1}\cdot d}{(b + \alpha(1-b))^{N-1}\cdot b}\cdot \frac{P(M)}{P(\bar{M})}
+ \end{aligned}
+$$&lt;/div&gt;
+&lt;p&gt;The question here is how far from the perfect independence can we have before things break.  The result is the same as before,
+&lt;img alt="Pasted image 20230226184237.png" src="https://bblais.github.io/images/Pasted image 20230226184237.png"&gt;&lt;/p&gt;
+&lt;p&gt;The tiniest deviation from independence results in the argument completely collapsing.&lt;/p&gt;
+&lt;h2 id="conclusions"&gt;Conclusions&lt;/h2&gt;
+&lt;p&gt;As stated before, what this means is that one can be supremely confident that all 15 sources are statistically independent, at probability of &lt;span class="math"&gt;\(p=0.9995\)&lt;/span&gt; (which is far higher than many scientific claims in published journals), and still not be able to justify the miracle claim due to the small uncertainty.   This fact alone should disqualify the result. &lt;/p&gt;
+&lt;p&gt;Also, it speaks to the total naivety of the apologists calculations.  They wrap their argument in seemingly technical and advanced Bayesian analyses, yet they don't seem to recognize that their argument comes down to assuming that testimony, evidence, and the scientific methods are identical to simple coin-flip experiments.  &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;They ignore the effect of multiple models causing non-monotonic effects (see the high-low-nines deck example in &lt;a href="https://github.com/bblais/Statistical-Inference-for-Everyone/raw/master/Statistical%20Inference%20For%20Everyone.pdf"&gt;Chapter 4 of Statistical Inference for Everyone&lt;/a&gt; which I also reference in a &lt;a href="https://bblais.github.io/posts/2022/Jan/18/bad-apologetics/"&gt;response to Jonathan McLatchie&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;They ignore the impact that previous debunkings of claims affect the probability of the next claim given (see this post about &lt;a href="https://bblais.github.io/posts/2022/Jun/14/sometimes-more-testimony-is-worse/"&gt;testimony and the scientific process&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;They ignore the possible uncertainty in the assumptions and data they are using, projecting an unwarranted confidence in the conclusions (this post)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;So when I hear things like this from Jonathan McLatchie &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;"To this question, I would point out that (contrary to popular notions) it is not necessary for a hypothesis to be able to make high probability predictions in order for it to be well evidentially supported. Rather, it is only necessary that the pertinent data be rendered &lt;em&gt;more probable&lt;/em&gt; given the hypothesis than it would be on its falsehood." (&lt;a href="https://jonathanmclatchie.com/bayesian-probability-and-the-resurrection-a-reply-to-brian-blais/"&gt;post here&lt;/a&gt;)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I remind myself that this is a totally simplistic way of approaching probability problems, especially in the case of things as messy as human testimony and ancient documents. &lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="religion"></category></entry><entry><title>The "God" of the Philosophers Is Empty</title><link href="https://bblais.github.io/posts/2022/Jul/23/the-god-of-the-philosophers-is-empty/" rel="alternate"></link><published>2022-07-23T00:00:00-04:00</published><updated>2022-07-23T00:00:00-04:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2022-07-23:/posts/2022/Jul/23/the-god-of-the-philosophers-is-empty/</id><summary type="html">&lt;p&gt;So I recently had a bit of a discussion which ended somewhat abruptly with complaints of category errors on my part and implied scientism.  The initial Tweet was:&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://twitter.com/dryapologist/status/1548281913873313792"&gt;https://twitter …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;So I recently had a bit of a discussion which ended somewhat abruptly with complaints of category errors on my part and implied scientism.  The initial Tweet was:&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://twitter.com/dryapologist/status/1548281913873313792"&gt;https://twitter.com/dryapologist/status/1548281913873313792&lt;/a&gt;
 &lt;img alt="Pasted image 20220723111528.png" src="https://bblais.github.io/images/Pasted image 20220723111528.png"&gt;&lt;/p&gt;
@@ -730,7 +961,7 @@ We can now write down with this simple model, the probability of a miracle given
 &lt;/p&gt;
 &lt;div class="math"&gt;$$
 \begin{aligned}
-P(M|C) &amp;amp;= \frac{P(D|M)P(M)}{P(D|M)P(M)+P(D|\bar{M})P(\bar{M})} \\
+P(M|C) &amp;amp;= \frac{P(C|M)P(M)}{P(C|M)P(M)+P(C|\bar{M})P(\bar{M})} \\
 &amp;amp;=\frac{1\cdot m}{1\cdot m + a\cdot (1-m)} = \frac{m}{m+a\cdot(1-m)}
 \end{aligned}
 $$&lt;/div&gt;

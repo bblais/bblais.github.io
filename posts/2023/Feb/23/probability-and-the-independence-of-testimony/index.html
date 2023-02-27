@@ -1,0 +1,470 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Probability and the Independence of Testimony  · bblais on the web
+</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="https://bblais.github.io/theme/css/main.css" />
+
+        <link rel="stylesheet" type="text/css" href="https://bblais.github.io/theme/css/custom.css" media="screen">
+    
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+        <div id="wrapper">
+
+		<!-- Main -->
+			<div id="main">
+
+				<div class="inner">
+
+					<!-- Header -->
+						<header id="header">
+							<a href="https://bblais.github.io/index.html" class="logo"><strong>bblais on the web</strong></a>
+							<ul class="icons">
+								<li><a href="https://twitter.com/bblais" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="https://www.linkedin.com/in/brian-blais-bb66482b/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+								<li><a href="https://github.com/bblais" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="https://bblais.github.io/feeds/all.atom.xml" class="icon solid fa-rss"><span class="label">YouTube</span></a></li>
+								<li><a href="mai&#108;&#116;o&#58;b&#37;6&#50;%6C&#37;61i%&#55;3%40%62ry&#37;61nt%2Eed&#37;7&#53;" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+								<li><a href="https://www.youtube.com/channel/UC8cN5_0dy5o9qNPpdLxPa8w" class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
+							</ul>
+						</header>
+
+
+
+
+
+
+
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h1>Probability and the Independence of Testimony</h1> 
+ 
+										<p><strong><time pubdate="pubdate" datetime="2023-02-23T00:00:00-05:00">Thu 23 February 2023</strong>
+												In  
+													<em><a href="https://bblais.github.io/category/religion.html">#religion</a></em>
+										</p>
+									</header>
+
+										<span class="image left"><img src="https://bblais.github.io/images/zwaddi-YvYBOSiBJE8-unsplash.jpg"></span>
+
+
+									<p>In a <a href="https://bblais.github.io/posts/2022/Jun/14/sometimes-more-testimony-is-worse/">previous post</a> I examined a simple model of the interaction of testimony with scientific inquiry, and how it can affect the probabilities of the truth of miracle claims.  In this post I examine a single result from  <a href="https://timothymcgrew.com">Timothy</a> and <a href="http://www.lydiamcgrew.com">Lydia</a> McGrews' article in <a href="https://onlinelibrary.wiley.com/doi/book/10.1002/9781444308334">The Blackwell Companion to Natural Theology</a> entitled "Chapter 11 - The Argument from Miracles: A Cumulative Case for the Resurrection of Jesus of Nazareth".  This paper is covered both in this YouTube episode, <a href="https://youtu.be/yeCBpO7pSRM">Bad Apologetics Ep 18 - Bayes Machine goes BRRRRRRRRR</a> with <a href="https://www.youtube.com/channel/UCy63pdWnpupE8MfxpMNfRNg">Nathan Ormond</a>, <a href="https://www.idc.com/getdoc.jsp?containerId=PRF004699">Kamil Gregor</a>, and <a href="https://www.youtube.com/channel/UCcprhl4otMOQPL5PDbtbheQ">James Fodor</a>, and summarized in text form on my blog <a href="https://bblais.github.io/posts/2021/Aug/29/bad-apologetics-ep-18-bayes-machine-goes-brrrrrrrrr/">starting here</a>.</p>
+<p>The result I want to look at is here:</p>
+<p><img alt="Pasted image 20220713065658.png" src="https://bblais.github.io/images/Pasted image 20220713065658.png"></p>
+<p>The basic idea the McGrews have is that there are <span class="math">\(N=15\)</span> data points each with a Bayes factor of 1000, each completely independent from the others, leading to the product of probabilities yielding  Bayes factor of around <span class="math">\(1000^{15}=10^{45}\)</span> (one of their Bayes factors is only 100 so they get <span class="math">\(10^{44}\)</span>, but the idea is the same).  I'll use <span class="math">\(10^{45}\)</span> in this post for mathematical simplicity below.  We discuss <a href="https://youtu.be/yeCBpO7pSRM">in the video above</a> how ridiculous <span class="math">\(10^{44}\)</span> is as a Bayes factor -- that there may not even be modern physical theories with Bayes factors that high. However, in this post, I want to take a direction that I haven't seen before but I think is enlightening.</p>
+<p>TLDR:  One can be supremely confident that all 15 sources are statistically independent, at probability of <span class="math">\(p=0.9995\)</span> (which is far higher than many scientific claims in published journals), and still not be able to justify the miracle claim due to the small uncertainty.   This fact alone should disqualify the result the McGrews present.</p>
+<h2 id="imperfect-information">Imperfect Information</h2>
+<p>One of the properties of all inference, particularly historical inference, is that there is some level of uncertainty.   Do we know that, say, two claims in an ancient document are <em>statistically</em> independent?  That's very hard to establish.  The typical approach is to argue that the claims are <em>textually</em> independent and thus more likely to be <em>statistically</em> independent.  This is a loose inference, because it is very easy for two texts to draw from the same oral tradition and thus not represent independent information.  It's even hard in modern contexts to establish statistical independence between people making claims, even when you can interrogate the people and investigate the claims directly -- neither of which we can do for ancient texts.  </p>
+<p>So, that being said, it seems plausible that there is some degree of uncertainty in even establishing the independence of data sources.  I'd like to explore how much uncertainty the McGrews calculation can tolerate and still maintain their argument.  It is a sign of the strength of an argument if it can withstand some reasonable level of uncertainty. </p>
+<h2 id="definitions">Definitions</h2>
+<p>I use the same notation as I did in <a href="https://bblais.github.io/posts/2022/Jun/14/sometimes-more-testimony-is-worse/">this post on testimony</a>. </p>
+<ul>
+<li>we have several data points, <span class="math">\(D_1, D_2, \ldots, D_n\)</span> </li>
+<li>we have the proposition, <span class="math">\(M\equiv \text{a miracle occurred}\)</span>, for which we have a prior, <div class="math">$$\begin{aligned}
+P(M) &amp;\equiv m\\
+P(\bar{M}) &amp;\equiv 1-m\\
+\end{aligned}$$</div>Note, that for <em>miracle</em> here you can substitute any extraordinary claim.</li>
+</ul>
+<p>We're interested in <span class="math">\(P(M|D_1, D_2, \ldots, D_n)\)</span>, but to establish a couple more definitions, let's look at the two-data case.</p>
+<h2 id="the-two-data-independent-case">The two-data independent case</h2>
+<p>In the two data case we have
+</p>
+<div class="math">$$\begin{aligned}
+P(M|D_1, D_2) &amp;= P(D_1|M)P(D_2|M,D_1)P(M)\\
+P(\bar{M}|D_1, D_2) &amp;= P(D_1|\bar{M})P(D_2|\bar{M},D_1)P(\bar{M})\\
+\end{aligned}
+$$</div>
+<p>
+We define the likelihood term for a single data point as,
+</p>
+<div class="math">$$\begin{aligned}
+P(D_1|M) &amp;\equiv d\\
+P(D_1|\bar{M}) &amp;\equiv b
+\end{aligned}$$</div>
+<p>
+The McGrews do not specify these probabilities numerically, but only specify their ratio, which is the single-point Bayes Factor they (arbitrarily) assume,</p>
+<div class="math">$$d/b=1000$$</div>
+<p>
+They also assume independence of all the sources, which would imply,
+</p>
+<div class="math">$$\begin{aligned}
+P(D_2|M,D_1) &amp;= P(D_2|M) \equiv d\\
+P(D_2|\bar{M},D_1) &amp;= P(D_2|\bar{M}) \equiv b
+\end{aligned}$$</div>
+<p>The odds ratio then becomes,</p>
+<div class="math">$$
+\begin{aligned}
+ O &amp;\equiv \frac{P(M|D_1, D_2)}{P(\bar{M}|D_1, D_2)} \\
+ &amp;=\underbrace{\frac{P(D_1|M)\cdot P(D_2|M) }{P(D_1|\bar{M})\cdot P(D_2|\bar{M})}}_{\text{cumulative testimony}}\times \underbrace{\frac{P(M)}{P(\bar{M})}}_{\text{prior odds}} \\
+ &amp;=\frac{d^2 \cdot m}{b^2\cdot (1-m)}
+ \end{aligned}
+$$</div>
+<h2 id="the-n-data-independent-case">The <span class="math">\(n\)</span>-data independent case</h2>
+<p>Following the same procedure for <span class="math">\(n\)</span> points, we have,</p>
+<div class="math">$$
+\begin{aligned}
+ O &amp;\equiv \frac{P(M|D_1, D_2, \ldots, D_n)}{P(\bar{M}|D_1, D_2, \ldots, D_n)} \\
+ &amp;=\frac{P(D_1, D_2, \ldots, D_n|M)P(M)}{P(D_1, D_2, \ldots, D_n|\bar{M})P(\bar{M})} \\
+ &amp;=\underbrace{\frac{P(D_1|M)\cdot P(D_2|M) \cdots P(D_n|M)}{P(D_1|\bar{M})\cdot P(D_2|\bar{M}) \cdots P(D_n|\bar{M})}}_{\text{cumulative testimony}}\times \underbrace{\frac{P(M)}{P(\bar{M})}}_{\text{prior odds}} \\
+ &amp;= \frac{d^N}{b^N}\cdot \frac{P(M)}{P(\bar{M})}
+ \end{aligned}
+$$</div>
+<p>for the McGrews, <span class="math">\(N=15\)</span> and <span class="math">\(d/b=1000\)</span> and so they claim that the prior odds, <span class="math">\(\frac{P(M)}{P(\bar{M})}\)</span> needs to be less than <span class="math">\(10^{-45}\)</span> to overcome and they can't imagine that happening except for an overly skeptical person. </p>
+<h2 id="first-look-at-dependence">First look at dependence</h2>
+<p>Now what happens if the data are not independent or, if you prefer to avoid the double-negative, if the data are <em>dependent</em>?  Then the probability of the second data point will be different, but how?  </p>
+<p>Imagine someone observes a fair coin that has been flipped and is lying on the table.  They write down the result and leave the room.  They then come back in, observe the coin and write the result.  If during their absence, </p>
+<ol>
+<li>someone flipped the coin again -- the second result will have the same probability as the first, and the result of the first flip will tell you nothing about the result of the second, <span class="math">\(P(H_1)=1/2, P(H_2|H_1)=P(H_2)=1/2\)</span> -- <strong>independent</strong></li>
+<li>no one touched the coin -- the second result is entirely determined by the first, <span class="math">\(P(H_1)=1/2, P(H_2|H_1)=1\)</span> -- <strong>dependent</strong></li>
+<li>someone turned the coin over on the table, changing heads to tails -- the second result is entirely determined by the first, <span class="math">\(P(H_1)=1/2, P(H_2|H_1)=0\)</span> -- <strong>dependent</strong></li>
+</ol>
+<p>Since we can have any possibility in between, we need to know the process of the dependence to determine at a minimum whether the value even goes up or down.  In the case of testimony, it is far more likely for new testimony that is dependent on old testimony to give the same or similar information as the old.  It would be odd indeed (even though the McGrews argue for this) for the new testimony to tend to be the opposite of the old.  The consequences of this odd view is explored in the video and also <a href="https://bblais.github.io/posts/2022/Jul/13/bad-apologetics-on-bayes-part-3/#independence">in the summary here</a> so I won't go into it in this post.</p>
+<p>In the case of <span class="math">\(D_2\)</span> being completely dependent on <span class="math">\(D_1\)</span>, it is the case that <span class="math">\(D_2\)</span> adds no new information.  Or in other words, knowing <span class="math">\(D_1\)</span> it follows that <span class="math">\(D_2\)</span> is true necessarily,</p>
+<div class="math">$$\begin{aligned}
+P(D_2|M,D_1) &amp;= 1\\
+P(D_2|\bar{M},D_1) &amp;= 1
+\end{aligned}$$</div>
+<p>In the <span class="math">\(n\)</span>-data point case, this becomes,</p>
+<div class="math">$$
+\begin{aligned}
+ O &amp;\equiv \frac{P(M|D_1, D_2, \ldots, D_n)}{P(\bar{M}|D_1, D_2, \ldots, D_n)} \\
+ &amp;=\frac{P(D_1, D_2, \ldots, D_n|M)P(M)}{P(D_1, D_2, \ldots, D_n|\bar{M})P(\bar{M})} \\
+ &amp;=\underbrace{\frac{P(D_1|M)\cdot P(D_2|M) \cdots P(D_n|M)}{P(D_1|\bar{M})\cdot P(D_2|\bar{M}) \cdots P(D_n|\bar{M})}}_{\text{cumulative testimony}}\times \underbrace{\frac{P(M)}{P(\bar{M})}}_{\text{prior odds}} \\
+ &amp;=\underbrace{\frac{P(D_1|M)\cdot 1\cdots 1}{P(D_1|\bar{M})\cdot 1\cdots 1}}_{\text{cumulative testimony}}\times \underbrace{\frac{P(M)}{P(\bar{M})}}_{\text{prior odds}} \\
+ &amp;= \frac{d}{b}\cdot \frac{m}{1-m}
+ \end{aligned}
+$$</div>
+<p>Using the McGrews numbers here, we get</p>
+<div class="math">$$
+O= 1000 \cdot \frac{P(M)}{P(\bar{M})}
+$$</div>
+<p>
+which means that the prior odds for a miracle need only be more then 1 in 1000 against to overcome this evidence -- not a very strong case for the miracle.  Clearly dependent sources undermine the McGrews' case.  But how much dependency is needed?</p>
+<h2 id="the-first-model">The first model</h2>
+<p>We'll start with the following simplified model of the uncertainty in the establishment of independence.  For each data point after the first there is some probability that the data point is independent of the first.  We'll call that value <span class="math">\(\beta\)</span>.  For intuition, note that</p>
+<ul>
+<li><span class="math">\(\beta=1\)</span> means we're certain the data point, <span class="math">\(D_i\)</span>, is completely independent of the first, <span class="math">\(D_1\)</span></li>
+<li><span class="math">\(\beta=0\)</span> means we're certain the data point, <span class="math">\(D_i\)</span>, is completely dependent on the first, <span class="math">\(D_1\)</span></li>
+</ul>
+<p>Later we generalize this calculation to the case of partial dependency, but the conclusion is identical to this simpler model which is a little more intuitive.</p>
+<p>For the 2-data point case we have,</p>
+<div class="math">$$
+\begin{aligned}
+P(M|D_1,D_2)&amp;=P(D_2|M,D_1)P(D_1|M)P(M) \\
+    &amp;=(\beta\cdot d + (1-\beta)\cdot 1)\cdot d \cdot P(M)
+\end{aligned}
+$$</div>
+<p>
+where the likelihood term for the second data point, <span class="math">\(P(D_2|M,D_1)\)</span> is broken up into two pieces -- a value of <span class="math">\(d\)</span> for the independent case with probability <span class="math">\(\beta\)</span> and a value of 1 for the dependent case with probability  <span class="math">\(1-\beta\)</span>.   Generalizing this to the <span class="math">\(n\)</span>-data point case,</p>
+<div class="math">$$
+\begin{aligned}
+ O &amp;\equiv \frac{P(M|D_1, D_2, \ldots, D_n)}{P(\bar{M}|D_1, D_2, \ldots, D_n)} \\
+ &amp;=\frac{(\beta d + (1-\beta))^{N-1}\cdot d}{(\beta b + (1-\beta))^{N-1}\cdot b}\cdot \frac{P(M)}{P(\bar{M})}
+ \end{aligned}
+$$</div>
+<h3 id="reproduce-the-mcgrews-result">Reproduce the McGrews' Result</h3>
+<p>To reproduce the result of the McGrews, we have the following:</p>
+<ul>
+<li><span class="math">\(\beta=1\)</span> : we're certain that the data are all independent</li>
+<li><span class="math">\(d=10^{-3}\)</span> and <span class="math">\(b=10^{-6}\)</span> giving an odds ratio for one data point <span class="math">\(O=1000\)</span>.  </li>
+<li><span class="math">\(N=15\)</span> (again, technically they have one point which has an odds ratio of 100 so their answer is <span class="math">\(O=10^{44}\)</span> whereas our answer here is <span class="math">\(O=10^{45}\)</span>)</li>
+</ul>
+<p>From the equation above we get
+</p>
+<div class="math">$$
+\begin{aligned}
+ O &amp;\equiv \frac{P(M|D_1, D_2, \ldots, D_n)}{P(\bar{M}|D_1, D_2, \ldots, D_n)} \\
+ &amp;=\frac{(1\cdot 10^{-3} + (1-1))^{15-1}\cdot 10^{-3}}{(1\cdot 10^{-6} + (1-1))^{N-1}\cdot 10^{-6} }\cdot \frac{P(M)}{P(\bar{M})}\\
+ &amp;=10^{45}\cdot \frac{P(M)}{P(\bar{M})}
+ \end{aligned}
+ $$</div>
+<h2 id="how-does-the-uncertainty-affect-the-mcgrews-result">How does the uncertainty affect the McGrews' Result?</h2>
+<p>The question here is how much uncertainty can this argument tolerate?  In other words, how far can <span class="math">\(\beta\)</span> deviate from a value of 1 before the odds ratio comes down to a reasonable level?</p>
+<h3 id="an-aside-on-a-reasonable-prior-for-the-miracle">An aside on a reasonable prior for the miracle</h3>
+<p>A very rough, maximum level for the prior for the Resurrection of Jesus can be obtained using the following logic.  There are 8 billion people on the planet, perhaps twice that much in all of history, and (at least for the Christians) only one supported Resurrection.  So that would mean, whether or not one believes in the Resurrection, the prior should be no larger than 1 in 10 billion.  This I think is the maximum possible value of a prior I'd consider.  It is comparable to the <a href="https://bblais.github.io/posts/2014/Sep/22/will-the-sun-rise-tomorrow/">naive model the probability of the sun rising which I discuss elsewhere</a>, without taking into account anything we have come to understand from science so is clearly an extremely conservative upper bound.</p>
+<h3 id="back-to-the-effect-of-beta">Back to the effect of <span class="math">\(\beta\)</span></h3>
+<p>We want to know where the first part of the odds ratio,</p>
+<div class="math">$$
+\begin{aligned}
+ \frac{(\beta d + (1-\beta))^{N-1}\cdot d}{(\beta b + (1-\beta))^{N-1}\cdot b}
+ \end{aligned}
+$$</div>
+<p>
+drops below <span class="math">\(10^{10}\)</span> so that the prior odds <span class="math">\(\frac{P(M)}{P(\bar{M})}\sim 10^{-10}\)</span> will overwhelm it and the argument fails. This point can be seen by observing a plot of the log base 10-odds ratio as a function of β and noting where the value dips below 10.</p>
+<p><img alt="Pasted image 20230226182719.png" src="https://bblais.github.io/images/Pasted image 20230226182719.png">
+This result surprised me.  The tiniest deviation from the absolute certainty that all 15 sources are statistically independent brings the odds ratio down to the mundane.  It drops below <span class="math">\(10^{10}\)</span> at around <span class="math">\(\beta=0.9995\)</span>! </p>
+<p>What this means is that one can be supremely confident that all 15 sources are statistically independent, at probability of <span class="math">\(p=0.9995\)</span> (which is far higher than many scientific claims in published journals), and still not be able to justify the miracle claim due to the small uncertainty.   This fact alone should disqualify the result. </p>
+<h2 id="partial-dependency">Partial dependency</h2>
+<p>One could criticize this result by saying that the choice isn't between perfectly independent and perfectly dependence, but that one can be partially dependent but mostly independent and that may be enough.  TLDR on this section -- you get the same result as the previous solution.</p>
+<p>To handle this, we reparameterize the 2-data point case.  Instead of the independent case <span class="math">\(P(D_2|M,D_1)=d\)</span> or the dependent case <span class="math">\(P(D_2|M,D_1)=1\)</span> we have a tunable version <span class="math">\(P(D_2|M,D_1)=d+\alpha (1-d)\)</span> where <span class="math">\(\alpha\)</span> measures how dependent each point is, from totally independent (<span class="math">\(\alpha=0\)</span>) to totally dependent (<span class="math">\(\alpha=1\)</span>).  So each data point can be partially, but not totally, dependent.  The <span class="math">\(n\)</span>-data point generalization becomes</p>
+<div class="math">$$
+\begin{aligned}
+ O &amp;=\frac{(d+\alpha (1-d))^{N-1}\cdot d}{(b + \alpha(1-b))^{N-1}\cdot b}\cdot \frac{P(M)}{P(\bar{M})}
+ \end{aligned}
+$$</div>
+<p>The question here is how far from the perfect independence can we have before things break.  The result is the same as before,
+<img alt="Pasted image 20230226184237.png" src="https://bblais.github.io/images/Pasted image 20230226184237.png"></p>
+<p>The tiniest deviation from independence results in the argument completely collapsing.</p>
+<h2 id="conclusions">Conclusions</h2>
+<p>As stated before, what this means is that one can be supremely confident that all 15 sources are statistically independent, at probability of <span class="math">\(p=0.9995\)</span> (which is far higher than many scientific claims in published journals), and still not be able to justify the miracle claim due to the small uncertainty.   This fact alone should disqualify the result. </p>
+<p>Also, it speaks to the total naivety of the apologists calculations.  They wrap their argument in seemingly technical and advanced Bayesian analyses, yet they don't seem to recognize that their argument comes down to assuming that testimony, evidence, and the scientific methods are identical to simple coin-flip experiments.  </p>
+<ul>
+<li>They ignore the effect of multiple models causing non-monotonic effects (see the high-low-nines deck example in <a href="https://github.com/bblais/Statistical-Inference-for-Everyone/raw/master/Statistical%20Inference%20For%20Everyone.pdf">Chapter 4 of Statistical Inference for Everyone</a> which I also reference in a <a href="https://bblais.github.io/posts/2022/Jan/18/bad-apologetics/">response to Jonathan McLatchie</a>)</li>
+<li>They ignore the impact that previous debunkings of claims affect the probability of the next claim given (see this post about <a href="https://bblais.github.io/posts/2022/Jun/14/sometimes-more-testimony-is-worse/">testimony and the scientific process</a>)</li>
+<li>They ignore the possible uncertainty in the assumptions and data they are using, projecting an unwarranted confidence in the conclusions (this post)</li>
+</ul>
+<p>So when I hear things like this from Jonathan McLatchie </p>
+<blockquote>
+<p>"To this question, I would point out that (contrary to popular notions) it is not necessary for a hypothesis to be able to make high probability predictions in order for it to be well evidentially supported. Rather, it is only necessary that the pertinent data be rendered <em>more probable</em> given the hypothesis than it would be on its falsehood." (<a href="https://jonathanmclatchie.com/bayesian-probability-and-the-resurrection-a-reply-to-brian-blais/">post here</a>)</p>
+</blockquote>
+<p>I remind myself that this is a totally simplistic way of approaching probability problems, especially in the case of things as messy as human testimony and ancient documents. </p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+
+
+								</section>
+
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT 
+     *  THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR 
+     *  PLATFORM OR CMS.
+     *  
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: 
+     *  https://disqus.com/admin/universalcode/#configuration-variables
+     */
+    
+    // var disqus_config = function () {
+    //     // Replace PAGE_URL with your page's canonical URL variable
+    //     this.page.url = PAGE_URL;  
+        
+    //     // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    //     this.page.identifier = PAGE_IDENTIFIER; 
+    // };
+    
+    
+    (function() {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
+        var d = document, s = d.createElement('script');
+        var disqus_shortname = "bblaisontheweb"; 
+        var disqus_title = "Probability and the Independence of Testimony";
+        
+        // IMPORTANT: Replace EXAMPLE with your forum shortname!
+        s.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+        
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>
+    Please enable JavaScript to view the 
+    <a href="https://disqus.com/?ref_noscript" rel="nofollow">
+        comments powered by Disqus.
+    </a>
+</noscript>
+
+
+
+
+
+
+
+
+
+				</div>
+			</div>
+	
+				<!-- Sidebar -->
+                <div id="sidebar">
+                    <div class="inner">
+
+                        <!-- Search -->
+                        <section id="search" class="alt">
+                            <form class="navbar-search" action="https://bblais.github.io/search.html" onsubmit="return validateForm(this.elements['q'].value);"> 
+                                <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form>
+                        </section>
+
+                        <!-- Menu -->
+                            <nav id="menu">
+                                <header class="major">
+                                    <h2>Menu</h2>
+                                </header>
+                                <ul>
+                                    <li><a href="https://bblais.github.io/index.html">Homepage</a></li>
+                                    <li>
+                                        <span class="opener"><a href="https://bblais.github.io/index.html#0" title="">Blog</a></span>
+                                        <ul>
+                                            <li><a href="https://bblais.github.io/index.html#blog">Recent</a></li>
+                                            <li><a href="https://bblais.github.io/category/articles.html">articles <span>(85)</span></a></li>
+                                            <li><a href="https://bblais.github.io/category/books.html">books <span>(3)</span></a></li>
+                                            <li><a href="https://bblais.github.io/category/critical-thinking.html">critical thinking <span>(4)</span></a></li>
+                                            <li><a href="https://bblais.github.io/category/math.html">math <span>(8)</span></a></li>
+                                            <li><a href="https://bblais.github.io/category/media.html">media <span>(12)</span></a></li>
+                                            <li><a href="https://bblais.github.io/category/presentations.html">presentations <span>(3)</span></a></li>
+                                            <li><a href="https://bblais.github.io/category/productivity.html">productivity <span>(6)</span></a></li>
+                                            <li><a href="https://bblais.github.io/category/programming.html">programming <span>(5)</span></a></li>
+                                            <li><a href="https://bblais.github.io/category/projects.html">projects <span>(4)</span></a></li>
+                                            <li><a href="https://bblais.github.io/category/religion.html">religion <span>(23)</span></a></li>
+                                            <li><a href="https://bblais.github.io/category/science.html">science <span>(11)</span></a></li>
+                                            <li><a href="https://bblais.github.io/category/unbelievable-project.html">Unbelievable Project <span>(19)</span></a></li>
+                                            <li><a href="https://bblais.github.io/category/wordpress_migration.html">wordpress_migration <span>(160)</span></a></li>
+     
+                                        </ul>
+                                    </li>
+                                    <li><a href="https://bblais.github.io/pages/presentations.html">Presentations</a></li>
+                                    <li><a href="https://bblais.github.io/pages/projects.html">Projects</a></li>
+                                    <li><a href="https://bblais.github.io/pages/publications.html">Publications</a></li>
+                                    <li><a href="https://bblais.github.io/archives.html">Archives</a></li>
+                                    <li><a href="https://bblais.github.io/about.html">About</a></li>
+                                </ul>
+                            </nav>
+
+                        <!-- Section -->
+                            <section>
+                                <header class="major">
+                                    <h2>Popular Posts</h2>
+                                </header>
+
+                                <div class="mini-posts">
+                                        <article>
+                                            <a href="https://bblais.github.io/posts/2021/Apr/09/gravitational-attraction/" class="image">
+                                                <img src="https://bblais.github.io/images/muzammil-soorma-R11bppS4q8o-unsplash.jpg" alt="muzammil-soorma-R11bppS4q8o-unsplash.jpg">
+                                            </a>
+                                            <p><strong>Gravitational Attraction </strong>
+                                                <p>What would happen if two people out in space a few meters apart, abandoned by their spacecraft, decided to wait until gravity pulled them together?  My initial thought was that …</p></p>
+                                        </article>
+                                        <article>
+                                            <a href="https://bblais.github.io/posts/2020/Aug/03/a-simple-physics-problem-gets-messy/" class="image">
+                                                <img src="https://bblais.github.io/images/roman-mager-5mZ_M06Fc9g-unsplash.jpg" alt="roman-mager-5mZ_M06Fc9g-unsplash.jpg">
+                                            </a>
+                                            <p><strong>A Simple Physics Problem Gets Messy </strong>
+                                                <p>A physics problem from a practice AP test came to my attention, when my daughter was in AP physics this past spring.  I went over her solutions when she did …</p></p>
+                                        </article>
+                                        <article>
+                                            <a href="https://bblais.github.io/posts/2020/Jul/09/skepticism-and-dubious-medical-procedures/" class="image">
+                                                <img src="https://bblais.github.io/images/mohamed-nohassi-odxB5oIG_iA-unsplash.jpg" alt="mohamed-nohassi-odxB5oIG_iA-unsplash.jpg">
+                                            </a>
+                                            <p><strong>Skepticism and Dubious Medical Procedures </strong>
+                                                <p>In my discussion with Jonathan McLatchie on the Still Unbelievable podcast, I said that there hasn’t been a verified miracle claim even since Hume’s essay on miracles.  Here I look into the papers he references in response.</p></p>
+                                        </article>
+                                </div>
+                            </section>
+
+                        <!-- Section -->
+                            <section>
+                                <header class="major">
+                                    <h2>Get in touch</h2>
+                                </header>
+                                <p>What problems are you interested in?  How can I help?</p>
+                                <ul class="contact">
+                                    <li class="icon brands fa-twitter"><a href="https://twitter.com/bblais">@bblais</a></li>
+                                    <li class="icon solid fa-envelope"><a href='mai&#108;&#116;o&#58;b&#37;6&#50;%6C&#37;61i%&#55;3%40%62ry&#37;61nt%2Eed&#37;7&#53;'>b&#98;&#108;&#97;is&#64;bry&#97;&#110;t&#46;&#101;d&#117;</a></li>
+                                    <li class="icon solid fa-phone"><a href="tel://4012326153">(401) 232-6153</a></li>
+                                    <li class="icon solid fa-home">Bryant University<br>
+                                        1150 Douglas Pike<br>
+                                        Smithfield, RI<br>
+                                        02917 US</li>
+                                </ul>
+                            </section>
+
+                        <!-- Footer -->
+                            <footer id="footer">
+                                <p class="copyright">&copy; 2021 - All rights reserved. Adapted from <a href="https://html5up.net/editorial">Editorial Theme</a> html5up.net | @ajlkn, 
+                                    Converted to <a href="https://blog.getpelican.com">Pelican</a> theme by <a href="#">Brian Blais</a>. </p>
+                            </footer>
+
+                    </div>
+                </div>
+
+		</div>
+
+
+    <!-- Scripts -->
+	<script src="https://bblais.github.io/theme/js/jquery.min.js"></script>
+	<script src="https://bblais.github.io/theme/js/elegant.prod.9e9d5ce754.js"></script>
+	<script src="https://bblais.github.io/theme/js/browser.min.js"></script>
+	<script src="https://bblais.github.io/theme/js/breakpoints.min.js"></script>
+	<script src="https://bblais.github.io/theme/js/util.js"></script>
+	<script src="https://bblais.github.io/theme/js/main.js"></script>
+	<script>
+		function validateForm(query)
+		{
+			return (query.length > 0);
+		}
+	</script>
+	
+	
+	</body>
+</html>
