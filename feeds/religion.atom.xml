@@ -1,5 +1,145 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>bblais on the web - religion</title><link href="https://bblais.github.io/" rel="alternate"></link><link href="https://bblais.github.io/feeds/religion.atom.xml" rel="self"></link><id>https://bblais.github.io/</id><updated>2023-02-23T00:00:00-05:00</updated><entry><title>Probability and the Independence of Testimony</title><link href="https://bblais.github.io/posts/2023/Feb/23/probability-and-the-independence-of-testimony/" rel="alternate"></link><published>2023-02-23T00:00:00-05:00</published><updated>2023-02-23T00:00:00-05:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2023-02-23:/posts/2023/Feb/23/probability-and-the-independence-of-testimony/</id><summary type="html">&lt;p&gt;In a &lt;a href="https://bblais.github.io/posts/2022/Jun/14/sometimes-more-testimony-is-worse/"&gt;previous post&lt;/a&gt; I examined a simple model of the interaction of testimony with scientific inquiry, and how it can affect the probabilities of the truth of miracle claims …&lt;/p&gt;</summary><content type="html">&lt;p&gt;In a &lt;a href="https://bblais.github.io/posts/2022/Jun/14/sometimes-more-testimony-is-worse/"&gt;previous post&lt;/a&gt; I examined a simple model of the interaction of testimony with scientific inquiry, and how it can affect the probabilities of the truth of miracle claims.  In this post I examine a single result from  &lt;a href="https://timothymcgrew.com"&gt;Timothy&lt;/a&gt; and &lt;a href="http://www.lydiamcgrew.com"&gt;Lydia&lt;/a&gt; McGrews' article in &lt;a href="https://onlinelibrary.wiley.com/doi/book/10.1002/9781444308334"&gt;The Blackwell Companion to Natural Theology&lt;/a&gt; entitled "Chapter 11 - The Argument from Miracles: A Cumulative Case for the Resurrection of Jesus of Nazareth".  This paper is covered both in this YouTube episode, &lt;a href="https://youtu.be/yeCBpO7pSRM"&gt;Bad Apologetics Ep 18 - Bayes Machine goes BRRRRRRRRR&lt;/a&gt; with &lt;a href="https://www.youtube.com/channel/UCy63pdWnpupE8MfxpMNfRNg"&gt;Nathan Ormond&lt;/a&gt;, &lt;a href="https://www.idc.com/getdoc.jsp?containerId=PRF004699"&gt;Kamil Gregor&lt;/a&gt;, and &lt;a href="https://www.youtube.com/channel/UCcprhl4otMOQPL5PDbtbheQ"&gt;James Fodor&lt;/a&gt;, and summarized in text form on my blog &lt;a href="https://bblais.github.io/posts/2021/Aug/29/bad-apologetics-ep-18-bayes-machine-goes-brrrrrrrrr/"&gt;starting here&lt;/a&gt;.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>bblais on the web - religion</title><link href="https://bblais.github.io/" rel="alternate"></link><link href="https://bblais.github.io/feeds/religion.atom.xml" rel="self"></link><id>https://bblais.github.io/</id><updated>2023-05-11T00:00:00-04:00</updated><entry><title>Claims are not (always) evidence</title><link href="https://bblais.github.io/posts/2023/May/11/claims-are-not-always-evidence/" rel="alternate"></link><published>2023-05-11T00:00:00-04:00</published><updated>2023-05-11T00:00:00-04:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2023-05-11:/posts/2023/May/11/claims-are-not-always-evidence/</id><summary type="html">&lt;p&gt;Here's my short rambling rant about the claims-evidence distinction.  In a number of debates, but more famously &lt;a href="https://www.youtube.com/live/a-wIaCRIdOA?feature=share"&gt;this one with Jonathan McLatchie&lt;/a&gt;, Matt Dillahunty states that "claims are not evidence …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Here's my short rambling rant about the claims-evidence distinction.  In a number of debates, but more famously &lt;a href="https://www.youtube.com/live/a-wIaCRIdOA?feature=share"&gt;this one with Jonathan McLatchie&lt;/a&gt;, Matt Dillahunty states that "claims are not evidence".  It became so heated that it led to the &lt;a href="https://www.youtube.com/live/a-wIaCRIdOA?feature=share&amp;amp;t=4763"&gt;infamous rage-quit by Johnathan&lt;/a&gt;.     &lt;a href="https://www.youtube.com/live/a-wIaCRIdOA?feature=share&amp;amp;t=8755"&gt;Matt later clarifies&lt;/a&gt; that &lt;em&gt;propositions&lt;/em&gt; are never evidence, and he's separating the idea of a claim from its context (i.e. the person stating it). &lt;/p&gt;
+&lt;p&gt;Then there were a number of Twitter threads like:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Pasted image 20230326194340.png" src="https://bblais.github.io/images/Pasted image 20230326194340.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Pasted image 20230327100009.png" src="https://bblais.github.io/images/Pasted image 20230327100009.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Pasted image 20230327100027.png" src="https://bblais.github.io/images/Pasted image 20230327100027.png"&gt;
+&lt;img alt="Pasted image 20230327100056.png" src="https://bblais.github.io/images/Pasted image 20230327100056.png"&gt;&lt;/p&gt;
+&lt;p&gt;And now &lt;a href="https://youtu.be/OjtMYgCgLYo"&gt;Paulogia weighs in&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Like most of these arguments, it comes down to the definitions and being very careful with the vocabulary.  Let's start with the definition of evidence from the &lt;a href="https://plato.stanford.edu/entries/evidence/"&gt;Stanford Encyclopedia of Philosophy&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;the following probabilistic explication of what it is for &lt;em&gt;E&lt;/em&gt; to be evidence for &lt;em&gt;H&lt;/em&gt;: &lt;/p&gt;
+&lt;p&gt;&lt;em&gt;E&lt;/em&gt; is evidence for &lt;em&gt;H&lt;/em&gt; if and only if Prob(&lt;em&gt;H&lt;/em&gt;/&lt;em&gt;E&lt;/em&gt;) &amp;gt; Prob(&lt;em&gt;H&lt;/em&gt;).[&lt;a href="https://plato.stanford.edu/entries/evidence/notes.html#23"&gt;23&lt;/a&gt; ]&lt;/p&gt;
+&lt;p&gt;That is, &lt;em&gt;E&lt;/em&gt; is evidence for &lt;em&gt;H&lt;/em&gt; just in case the conditional probability of &lt;em&gt;H&lt;/em&gt; on &lt;em&gt;E&lt;/em&gt; is greater than the unconditional probability of &lt;em&gt;H&lt;/em&gt;. Thus, the fact that &lt;em&gt;the suspect's blood is on the knife&lt;/em&gt; is evidence for the hypothesis that &lt;em&gt;the suspect committed the murder&lt;/em&gt; if and only if the probability that the suspect committed the murder is greater given that his blood is on the knife than it would be otherwise.&lt;/p&gt;
+&lt;p&gt;Similarly &lt;/p&gt;
+&lt;p&gt;&lt;em&gt;E&lt;/em&gt; is evidence against &lt;em&gt;H&lt;/em&gt; if and only if Prob(&lt;em&gt;H&lt;/em&gt;/&lt;em&gt;E&lt;/em&gt;) &amp;lt; Prob(&lt;em&gt;H&lt;/em&gt;).&lt;/p&gt;
+&lt;p&gt;That is, &lt;em&gt;E&lt;/em&gt; is evidence against &lt;em&gt;H&lt;/em&gt; just in case the conditional probability of &lt;em&gt;H&lt;/em&gt; on &lt;em&gt;E&lt;/em&gt; is less than the unconditional probability of &lt;em&gt;H&lt;/em&gt;. Thus, the fact that &lt;em&gt;the suspect's fingerprints are not on the knife_is evidence against the hypothesis that _the suspect committed the murder&lt;/em&gt; if and only if the probability that the suspect committed the murder is lower given the absence of his fingerprints on the knife than it would be otherwise. Within this probabilistic model, verification (in the sense of conclusive confirmation) would involve bestowing probability 1 on an hypothesis while falsification would involve bestowing probability 0 on it.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The problem with the word "claim" is that it seems to combine both the proposition (which is not evidence) and the fact that a person is making the claim (which can add some degree of evidence). This is a matter of usage. If you can substitute in your sentence the word "proposition" for "claim" then it will not be evidence. But in a sentence like "Matt claims to have a dog" you can't do that, so the word is mixed and thus may be evidence.&lt;/p&gt;
+&lt;p&gt;The proposition “it’s five o’clock” is non evidential. Someone saying it - even if they are conveying a “fact” - does carry evidence. A fact is just that thing which has a high posterior probability. Someone making it a statement is just a recognition that for that person they have a high posterior for that statement and thus don’t feel compelled to defend it. In English if you said “So and so &lt;em&gt;claims&lt;/em&gt; that it is 5 o’clock” there is an implied negative -- it implies that you don’t believe them. I think that’s because in most cases where someone says it is 5 o'clock, that it is such a mundane claim (priors are high) and it is unlikely that someone would lie or be seriously mistaken (alternatives are unlikely) that we need not question the high the posterior. When we stress the word &lt;em&gt;claim&lt;/em&gt; in the sentence, it implies the negative.  The reason why someone gets upset at having to defend it doesn’t have anything to do with the statement-claim distinctions and everything to do with the implied conclusion of this questioning: you think they are either lying or seriously mistaken on a trivial statement/claim. They would take offense at that — rightly so. &lt;/p&gt;
+&lt;p&gt;Now someone making the statement “Jesus rose from the dead” they may actually believe it as a fact. Is this a claim or statement? Does it provide evidence? I’d say this is a claim like the ones above but does not provide evidence for the claim because the prior is super low and the alternatives could be made more likely given this statement and no other evidence (because many people make similar statements and have always been shown wrong). This means that the statement/testimony may not increase the posterior (it may in fact lower it).  Again, I don’t see the useful distinction between statement and claim except perhaps as a label where, perhaps, a statement is an indication of a high prior and a claim focuses more on the likelihood part of the probability?&lt;/p&gt;</content><category term="religion"></category></entry><entry><title>Extraordinary claims require extraordinary evidence</title><link href="https://bblais.github.io/posts/2023/May/02/extraordinary-claims-require-extraordinary-evidence/" rel="alternate"></link><published>2023-05-02T00:00:00-04:00</published><updated>2023-05-02T00:00:00-04:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2023-05-02:/posts/2023/May/02/extraordinary-claims-require-extraordinary-evidence/</id><summary type="html">&lt;blockquote&gt;
+&lt;p&gt;Extraordinary claims require extraordinary evidence - Carl Sagan&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I think no pithy quote has caused so much angst with apologists than this one from Carl Sagan, directed in particular to religious …&lt;/p&gt;</summary><content type="html">&lt;blockquote&gt;
+&lt;p&gt;Extraordinary claims require extraordinary evidence - Carl Sagan&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I think no pithy quote has caused so much angst with apologists than this one from Carl Sagan, directed in particular to religious miracle claims.  Before looking into it a bit more specifically, I want to point out that the word "claim" here refers to "explanation" or "proposition" and not to testimony (which would include a form of evidence).  I'll have more to say about this in another post.  If we are talking about testimony as the evidence, then we need to break the "claim" into the "explanation" part and the "evidence" part (see &lt;a href="https://bblais.github.io/posts/2023/May/11/claims-are-not-always-evidence/"&gt;my ramble on claims and evidence here&lt;/a&gt;).  &lt;/p&gt;
+&lt;p&gt;To see an overly technical treatment of this by an apologist, we can look to Tim McGrew's treatment on Erik Manning's channel, as well as one of his own on the related topic of Hume.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;McGrew's Sagan video:   &lt;a href="https://youtu.be/LD2hQFTJsK0"&gt;https://youtu.be/LD2hQFTJsK0&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;McGrew's Hume video: &lt;a href="https://www.youtube.com/watch?v=H7Gv8Fw_fFE&amp;amp;list=WL&amp;amp;index=12"&gt;https://www.youtube.com/watch?v=H7Gv8Fw_fFE&amp;amp;list=WL&amp;amp;index=12&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I'll give more detailed responses to these videos later, but here I just want to map the Sagan quote to probabilities.&lt;/p&gt;
+&lt;h2 id="the-analysis"&gt;The analysis&lt;/h2&gt;
+&lt;p&gt;For me, it seems straightforward to set up.  We start with some notation.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(D\)&lt;/span&gt; = data, or the evidence&lt;/li&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(M_i\)&lt;/span&gt; = the various models, or explanations, or claims.  We'll treat &lt;span class="math"&gt;\(M_o\)&lt;/span&gt; as the extraordinary explanation and &lt;span class="math"&gt;\(M_1, M_2, \ldots\)&lt;/span&gt; as the mundane explanations&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Bayes theorem then has&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\begin{aligned}
+P(M_o|D) &amp;amp;= \frac{P(D|M_o)P(M_o)}{P(D|M_o)P(M_o)+P(D|M_1)P(M_1)+P(D|M_2)P(M_2)+\cdots} \\
+&amp;amp;=\frac{P(D|M_o)P(M_o)}{P(D|M_o)P(M_o)+\sum_{i=1}^{N}P(D|M_i)P(M_i)}
+\end{aligned}
+$$&lt;/div&gt;
+&lt;p&gt;
+We can simplify this by merging all of the mundane explanations together into &lt;span class="math"&gt;\(M_1\)&lt;/span&gt;, which is also equivalent to &lt;span class="math"&gt;\(\sim M_o\)&lt;/span&gt;
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\begin{aligned}
+P(M_o|D) &amp;amp;= \frac{P(D|M_o)P(M_o)}{P(D|M_o)P(M_o)+P(D|M_1)P(M_1)}
+\end{aligned}
+$$&lt;/div&gt;
+&lt;p&gt;
+which leads to
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\begin{aligned}
+P(M_o|D) &amp;amp;= \frac{P(D|M_o)P(M_o)}{P(D|M_o)P(M_o)+P(D|M_1)P(M_1)} \\
+&amp;amp;=\frac{P(D|M_o)P(M_o)}{P(D|M_o)P(M_o)}\left(\frac{1}{1+\frac{P(D|M_1)P(M_1)}{P(D|M_o)P(M_o)}}\right)\\
+&amp;amp;\equiv \frac{1}{1+r}
+\end{aligned}
+$$&lt;/div&gt;
+&lt;p&gt;
+where &lt;span class="math"&gt;\(r=P(D|M_1)P(M_1)/P(D|M_o)/P(M_o)\)&lt;/span&gt; which was a long-winded way of getting to the odds form of Bayes theorem.  &lt;/p&gt;
+&lt;p&gt;In order for the posterior for the extraordinary claim to rise above &lt;span class="math"&gt;\(P(M_o|D) &amp;gt;0.5\)&lt;/span&gt; then &lt;span class="math"&gt;\(r&amp;lt;1\)&lt;/span&gt;. 
+To map the phrase to values we have,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;extraordinary claim &lt;span class="math"&gt;\(\equiv\)&lt;/span&gt; low prior:  &lt;span class="math"&gt;\(P(M_o)\ll 1\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;mundane claim &lt;span class="math"&gt;\(\equiv\)&lt;/span&gt; high prior:  &lt;span class="math"&gt;\(P(M_1) \sim 1\)&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This means that &lt;span class="math"&gt;\(P(M_1)/P(M_o)\gg 1\)&lt;/span&gt; which immediately implies for &lt;span class="math"&gt;\(r&amp;lt;1\)&lt;/span&gt; that &lt;span class="math"&gt;\(P(D|M_o) \gg P(D|M_1)\)&lt;/span&gt;.  &lt;/p&gt;
+&lt;p&gt;Now, let's assume that the extraordinary claim perfectly fits the observed data, so that we have &lt;span class="math"&gt;\(P(D|M_o)\sim 1\)&lt;/span&gt;. What the last statement implies is that to justify your extraordinary claim, you must have 
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
+P(D|M_1)\ll 1
+$$&lt;/div&gt;
+&lt;p&gt;
+or every other mundane claim must be nearly ruled out, not just unlikely.  This is exactly what science does -- construct situations (i.e. controlled experiments) to make any mundane explanation nearly impossible.  The level of "nearly impossible" depends of course on the extraordinariness of the primary claim.  &lt;/p&gt;
+&lt;p&gt;I find this consequence so straightforward, that I find it baffling that it is at all contentious.  &lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="religion"></category></entry><entry><title>Probability and the Independence of Testimony</title><link href="https://bblais.github.io/posts/2023/Feb/23/probability-and-the-independence-of-testimony/" rel="alternate"></link><published>2023-02-23T00:00:00-05:00</published><updated>2023-02-23T00:00:00-05:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2023-02-23:/posts/2023/Feb/23/probability-and-the-independence-of-testimony/</id><summary type="html">&lt;p&gt;In a &lt;a href="https://bblais.github.io/posts/2022/Jun/14/sometimes-more-testimony-is-worse/"&gt;previous post&lt;/a&gt; I examined a simple model of the interaction of testimony with scientific inquiry, and how it can affect the probabilities of the truth of miracle claims …&lt;/p&gt;</summary><content type="html">&lt;p&gt;In a &lt;a href="https://bblais.github.io/posts/2022/Jun/14/sometimes-more-testimony-is-worse/"&gt;previous post&lt;/a&gt; I examined a simple model of the interaction of testimony with scientific inquiry, and how it can affect the probabilities of the truth of miracle claims.  In this post I examine a single result from  &lt;a href="https://timothymcgrew.com"&gt;Timothy&lt;/a&gt; and &lt;a href="http://www.lydiamcgrew.com"&gt;Lydia&lt;/a&gt; McGrews' article in &lt;a href="https://onlinelibrary.wiley.com/doi/book/10.1002/9781444308334"&gt;The Blackwell Companion to Natural Theology&lt;/a&gt; entitled "Chapter 11 - The Argument from Miracles: A Cumulative Case for the Resurrection of Jesus of Nazareth".  This paper is covered both in this YouTube episode, &lt;a href="https://youtu.be/yeCBpO7pSRM"&gt;Bad Apologetics Ep 18 - Bayes Machine goes BRRRRRRRRR&lt;/a&gt; with &lt;a href="https://www.youtube.com/channel/UCy63pdWnpupE8MfxpMNfRNg"&gt;Nathan Ormond&lt;/a&gt;, &lt;a href="https://www.idc.com/getdoc.jsp?containerId=PRF004699"&gt;Kamil Gregor&lt;/a&gt;, and &lt;a href="https://www.youtube.com/channel/UCcprhl4otMOQPL5PDbtbheQ"&gt;James Fodor&lt;/a&gt;, and summarized in text form on my blog &lt;a href="https://bblais.github.io/posts/2021/Aug/29/bad-apologetics-ep-18-bayes-machine-goes-brrrrrrrrr/"&gt;starting here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;The result I want to look at is here:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Pasted image 20220713065658.png" src="https://bblais.github.io/images/Pasted image 20220713065658.png"&gt;&lt;/p&gt;
 &lt;p&gt;The basic idea the McGrews have is that there are &lt;span class="math"&gt;\(N=15\)&lt;/span&gt; data points each with a Bayes factor of 1000, each completely independent from the others, leading to the product of probabilities yielding  Bayes factor of around &lt;span class="math"&gt;\(1000^{15}=10^{45}\)&lt;/span&gt; (one of their Bayes factors is only 100 so they get &lt;span class="math"&gt;\(10^{44}\)&lt;/span&gt;, but the idea is the same).  I'll use &lt;span class="math"&gt;\(10^{45}\)&lt;/span&gt; in this post for mathematical simplicity below.  We discuss &lt;a href="https://youtu.be/yeCBpO7pSRM"&gt;in the video above&lt;/a&gt; how ridiculous &lt;span class="math"&gt;\(10^{44}\)&lt;/span&gt; is as a Bayes factor -- that there may not even be modern physical theories with Bayes factors that high. However, in this post, I want to take a direction that I haven't seen before but I think is enlightening.&lt;/p&gt;
