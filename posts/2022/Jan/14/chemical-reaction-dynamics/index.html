@@ -60,7 +60,7 @@
 
 
 									<p>As an exercise, I like to reproduce computational papers, but with my own tools.  This let's me know that I understand completely what is being  written and in many cases allows me to extend and debug my own tools.  I'm going to do a series of these as I work through some of my reading list.  The first one I'm doing is available here:</p>
-<p><a href="https://www.cs.princeton.edu/picasso/mats/matlab/princeton_spring06.pdf"><a href="https://www.cs.princeton.edu/picasso/mats/matlab/princeton_spring06.pdf">https://www.cs.princeton.edu/picasso/mats/matlab/princeton_spring06.pdf</a></a></p>
+<p><a href="https://www.cs.princeton.edu/picasso/mats/matlab/princeton_spring06.pdf">https://www.cs.princeton.edu/picasso/mats/matlab/princeton_spring06.pdf</a></p>
 <p>In this case, not only was I able to reproduce the results of the text, but it uncovered two bugs in my <a href="https://bblais.github.io/pyndamics3/"><code>pyndamics3</code></a> package which I was able to fix.  </p>
 <p>The main system in the text being solved is</p>
 <p><img alt="Pasted image 20220113102335.png" src="https://bblais.github.io/images/Pasted image 20220113102335.png"></p>
@@ -89,13 +89,13 @@
 </code></pre></div>
 
 <p>Output:</p>
-<div class="highlight"><pre><span></span><code><span class="k">[&#39;D&#39;] k1 [&#39;D&#39;, &#39;M&#39;]</span><span class="w"></span>
-<span class="k">[&#39;M&#39;] k2 [&#39;M&#39;, &#39;P&#39;]</span><span class="w"></span>
-<span class="k">[&#39;M&#39;] k3 [&#39;ϕ&#39;]</span><span class="w"></span>
-<span class="k">[&#39;P&#39;] k4 [&#39;ϕ&#39;]</span><span class="w"></span>
-<span class="na">Components [&#39;D&#39;, &#39;M&#39;, &#39;P&#39;, &#39;ϕ&#39;]</span><span class="w"></span>
-<span class="na">Parameters [&#39;k1&#39;, &#39;k2&#39;, &#39;k3&#39;, &#39;k4&#39;]</span><span class="w"></span>
-<span class="na">diffeqs [&quot;D&#39;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">0&quot;, &quot;M&#39; =  +k1*D -k3*M&quot;, &quot;P&#39; =  +k2*M -k4*P&quot;]</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="k">[&#39;D&#39;] k1 [&#39;D&#39;, &#39;M&#39;]</span>
+<span class="k">[&#39;M&#39;] k2 [&#39;M&#39;, &#39;P&#39;]</span>
+<span class="k">[&#39;M&#39;] k3 [&#39;ϕ&#39;]</span>
+<span class="k">[&#39;P&#39;] k4 [&#39;ϕ&#39;]</span>
+<span class="na">Components [&#39;D&#39;, &#39;M&#39;, &#39;P&#39;, &#39;ϕ&#39;]</span>
+<span class="na">Parameters [&#39;k1&#39;, &#39;k2&#39;, &#39;k3&#39;, &#39;k4&#39;]</span>
+<span class="na">diffeqs [&quot;D&#39;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">0&quot;, &quot;M&#39; =  +k1*D -k3*M&quot;, &quot;P&#39; =  +k2*M -k4*P&quot;]</span>
 </code></pre></div>
 
 <p>which yields figures like:</p>

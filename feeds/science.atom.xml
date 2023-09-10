@@ -33,7 +33,7 @@
 &lt;li&gt;keep all parties blind to the treatment and placebo groups (rules out observer and Rosenthal effects)&lt;/li&gt;
 &lt;li&gt;keep all treatments narrow and quantitative (rules out multiple treatment and memory distortion) &lt;/li&gt;
 &lt;/ul&gt;</content><category term="science"></category></entry><entry><title>Chemical Reaction Dynamics</title><link href="https://bblais.github.io/posts/2022/Jan/14/chemical-reaction-dynamics/" rel="alternate"></link><published>2022-01-14T00:00:00-05:00</published><updated>2022-01-14T00:00:00-05:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2022-01-14:/posts/2022/Jan/14/chemical-reaction-dynamics/</id><summary type="html">&lt;p&gt;As an exercise, I like to reproduce computational papers, but with my own tools.  This let's me know that I understand completely what is being  written and in many cases …&lt;/p&gt;</summary><content type="html">&lt;p&gt;As an exercise, I like to reproduce computational papers, but with my own tools.  This let's me know that I understand completely what is being  written and in many cases allows me to extend and debug my own tools.  I'm going to do a series of these as I work through some of my reading list.  The first one I'm doing is available here:&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.cs.princeton.edu/picasso/mats/matlab/princeton_spring06.pdf"&gt;&lt;a href="https://www.cs.princeton.edu/picasso/mats/matlab/princeton_spring06.pdf"&gt;https://www.cs.princeton.edu/picasso/mats/matlab/princeton_spring06.pdf&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.cs.princeton.edu/picasso/mats/matlab/princeton_spring06.pdf"&gt;https://www.cs.princeton.edu/picasso/mats/matlab/princeton_spring06.pdf&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;In this case, not only was I able to reproduce the results of the text, but it uncovered two bugs in my &lt;a href="https://bblais.github.io/pyndamics3/"&gt;&lt;code&gt;pyndamics3&lt;/code&gt;&lt;/a&gt; package which I was able to fix.  &lt;/p&gt;
 &lt;p&gt;The main system in the text being solved is&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Pasted image 20220113102335.png" src="https://bblais.github.io/images/Pasted image 20220113102335.png"&gt;&lt;/p&gt;
@@ -62,13 +62,13 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Output:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;[&amp;#39;D&amp;#39;] k1 [&amp;#39;D&amp;#39;, &amp;#39;M&amp;#39;]&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="k"&gt;[&amp;#39;M&amp;#39;] k2 [&amp;#39;M&amp;#39;, &amp;#39;P&amp;#39;]&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="k"&gt;[&amp;#39;M&amp;#39;] k3 [&amp;#39;ϕ&amp;#39;]&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="k"&gt;[&amp;#39;P&amp;#39;] k4 [&amp;#39;ϕ&amp;#39;]&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="na"&gt;Components [&amp;#39;D&amp;#39;, &amp;#39;M&amp;#39;, &amp;#39;P&amp;#39;, &amp;#39;ϕ&amp;#39;]&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="na"&gt;Parameters [&amp;#39;k1&amp;#39;, &amp;#39;k2&amp;#39;, &amp;#39;k3&amp;#39;, &amp;#39;k4&amp;#39;]&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="na"&gt;diffeqs [&amp;quot;D&amp;#39;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;0&amp;quot;, &amp;quot;M&amp;#39; =  +k1*D -k3*M&amp;quot;, &amp;quot;P&amp;#39; =  +k2*M -k4*P&amp;quot;]&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;[&amp;#39;D&amp;#39;] k1 [&amp;#39;D&amp;#39;, &amp;#39;M&amp;#39;]&lt;/span&gt;
+&lt;span class="k"&gt;[&amp;#39;M&amp;#39;] k2 [&amp;#39;M&amp;#39;, &amp;#39;P&amp;#39;]&lt;/span&gt;
+&lt;span class="k"&gt;[&amp;#39;M&amp;#39;] k3 [&amp;#39;ϕ&amp;#39;]&lt;/span&gt;
+&lt;span class="k"&gt;[&amp;#39;P&amp;#39;] k4 [&amp;#39;ϕ&amp;#39;]&lt;/span&gt;
+&lt;span class="na"&gt;Components [&amp;#39;D&amp;#39;, &amp;#39;M&amp;#39;, &amp;#39;P&amp;#39;, &amp;#39;ϕ&amp;#39;]&lt;/span&gt;
+&lt;span class="na"&gt;Parameters [&amp;#39;k1&amp;#39;, &amp;#39;k2&amp;#39;, &amp;#39;k3&amp;#39;, &amp;#39;k4&amp;#39;]&lt;/span&gt;
+&lt;span class="na"&gt;diffeqs [&amp;quot;D&amp;#39;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;0&amp;quot;, &amp;quot;M&amp;#39; =  +k1*D -k3*M&amp;quot;, &amp;quot;P&amp;#39; =  +k2*M -k4*P&amp;quot;]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;which yields figures like:&lt;/p&gt;
@@ -126,7 +126,7 @@
 
 &lt;p&gt;&lt;img alt="Pasted image 20220113103146.png" src="https://bblais.github.io/images/Pasted image 20220113103146.png"&gt;&lt;/p&gt;
 &lt;p&gt;It converged and we got the same answer as in the text.&lt;/p&gt;
-&lt;p&gt;Another time I will extend this to the stochastic version, which is in the second part of the text.&lt;/p&gt;</content><category term="science"></category></entry><entry><title>Simulating Stochastic Processes</title><link href="https://bblais.github.io/posts/2022/Jan/07/simulating-stochastic-processes/" rel="alternate"></link><published>2022-01-07T00:00:00-05:00</published><updated>2022-01-07T00:00:00-05:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2022-01-07:/posts/2022/Jan/07/simulating-stochastic-processes/</id><summary type="html">&lt;p&gt;In this post we are going to explore the simulation of stochastic (i.e. random) processes, and work our way to understanding how the Gillespie algorithm works.  We'll be using …&lt;/p&gt;</summary><content type="html">&lt;p&gt;In this post we are going to explore the simulation of stochastic (i.e. random) processes, and work our way to understanding how the Gillespie algorithm works.  We'll be using mostly straightforward Python, except for my &lt;code&gt;Storage&lt;/code&gt; class from &lt;a href="https://bblais.github.io/posts/2020/Feb/24/common-python-pattern-building-up-lists-to-plot/"&gt;https://bblais.github.io/posts/2020/Feb/24/common-python-pattern-building-up-lists-to-plot/&lt;/a&gt; and some default plotting preferences specified in &lt;a href="https://raw.githubusercontent.com/bblais/Python-for-Science/master/science/science.mplstyle"&gt;https://raw.githubusercontent.com/bblais/Python-for-Science/master/science/science.mplstyle&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Another time I will extend this to the stochastic version, which is in the second part of the text.&lt;/p&gt;</content><category term="science"></category></entry><entry><title>Simulating Stochastic Processes</title><link href="https://bblais.github.io/posts/2022/Jan/07/simulating-stochastic-processes/" rel="alternate"></link><published>2022-01-07T00:00:00-05:00</published><updated>2022-01-07T00:00:00-05:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2022-01-07:/posts/2022/Jan/07/simulating-stochastic-processes/</id><summary type="html">&lt;p&gt;In this post we are going to explore the simulation of stochastic (i.e. random) processes, and work our way to understanding how the Gillespie algorithm works.  We'll be using …&lt;/p&gt;</summary><content type="html">&lt;p&gt;In this post we are going to explore the simulation of stochastic (i.e. random) processes, and work our way to understanding how the Gillespie algorithm works.  We'll be using mostly straightforward Python, except for my &lt;code&gt;Storage&lt;/code&gt; class from https://bblais.github.io/posts/2020/Feb/24/common-python-pattern-building-up-lists-to-plot/ and some default plotting preferences specified in https://raw.githubusercontent.com/bblais/Python-for-Science/master/science/science.mplstyle.&lt;/p&gt;
 &lt;h2 id="imports"&gt;Imports&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;pylab&lt;/span&gt; &lt;span class="n"&gt;inline&lt;/span&gt;
 &lt;span class="n"&gt;style&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;use&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;science.mplstyle&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -211,7 +211,7 @@ therefore the distribution is &lt;/p&gt;
 p(t) = \lambda e^{-\lambda t}
 $$&lt;/div&gt;
 &lt;p&gt;
-which can be seen here &lt;a href="https://en.wikipedia.org/wiki/Exponential_distribution"&gt;https://en.wikipedia.org/wiki/Exponential_distribution&lt;/a&gt;&lt;/p&gt;
+which can be seen here https://en.wikipedia.org/wiki/Exponential_distribution&lt;/p&gt;
 &lt;h2 id="towards-gillespie"&gt;Towards Gillespie&lt;/h2&gt;
 &lt;p&gt;Instead of flipping the coin every millisecond (i.e. constant time), we can randomly pick a &lt;em&gt;time&lt;/em&gt; from an exponential distribution -- the time to the next event (i.e. dynamic time).&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;constant_time&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;n0&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;t_max&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1000&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;0.02&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;dt&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
@@ -672,7 +672,7 @@ $$&lt;/div&gt;
 &lt;p&gt;(c) Explain how the student should use the measurements in order to accomplish the student's purpose. Explicitly explain how the relationship between &lt;span class="math"&gt;\(F\)&lt;/span&gt; and &lt;span class="math"&gt;\(x\)&lt;/span&gt; can be tested and the value of &lt;span class="math"&gt;\(B\)&lt;/span&gt; determined.&lt;/p&gt;
 &lt;p&gt;(d) Suppose that the table is not level, so that the cart, upon becoming a projectile, has a sight upward launch angle. How would the true value of &lt;span class="math"&gt;\(B\)&lt;/span&gt; compare to the value calculated by a student following your procedure and data analysis outlined above?&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;The official solution to the questions is posted is here:  &lt;a href="https://youtu.be/L1oIsHMB1RQ?t=1751"&gt;https://youtu.be/L1oIsHMB1RQ?t=1751&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The official solution to the questions is posted is here:  https://youtu.be/L1oIsHMB1RQ?t=1751&lt;/p&gt;
 &lt;h2 id="determining-b"&gt;Determining &lt;span class="math"&gt;\(B\)&lt;/span&gt;&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;(a) State the measurements that the student should make, and give each measurement a meaningful algebraic symbol.&lt;/p&gt;
@@ -726,7 +726,7 @@ $$&lt;/div&gt;
 &lt;blockquote&gt;
 &lt;p&gt;If launch angle is a little bit up, the value of the range [&lt;span class="math"&gt;\(R\)&lt;/span&gt; in my notation, &lt;span class="math"&gt;\(D\)&lt;/span&gt; in theirs] will be a little bit farther than they ideally would have been, so if you get a farther distance &lt;span class="math"&gt;\(R\)&lt;/span&gt; than you should have gotten, then you would get a higher &lt;span class="math"&gt;\(B\)&lt;/span&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;Hidden in this solution, but one not stated in the problem, is an assumption which we'll discuss later.  We continue our solution of the ramp projectile.  The range launched from a height &lt;span class="math"&gt;\(h\)&lt;/span&gt; at an angle &lt;span class="math"&gt;\(\theta\)&lt;/span&gt; is (&lt;a href="https://en.wikipedia.org/wiki/Range_of_a_projectile"&gt;https://en.wikipedia.org/wiki/Range_of_a_projectile&lt;/a&gt;),&lt;/p&gt;
+&lt;p&gt;Hidden in this solution, but one not stated in the problem, is an assumption which we'll discuss later.  We continue our solution of the ramp projectile.  The range launched from a height &lt;span class="math"&gt;\(h\)&lt;/span&gt; at an angle &lt;span class="math"&gt;\(\theta\)&lt;/span&gt; is (https://en.wikipedia.org/wiki/Range_of_a_projectile),&lt;/p&gt;
 &lt;div class="math"&gt;$$
 R_1=\frac{v^2}{2g} \left(1+\sqrt{1+\frac{2gh}{v^2\sin^2(\theta)}}\right)\sin(2\theta)
 $$&lt;/div&gt;
@@ -956,7 +956,7 @@ U&amp;amp;= \frac{B x_o^4}{4} \\
 \end{aligned}
 $$&lt;/div&gt;
 &lt;p&gt;This leads to a range equation like the one above for &lt;span class="math"&gt;\(R_1\)&lt;/span&gt;, but with an angle-dependent speed.  We'll call this range &lt;span class="math"&gt;\(R_2\)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;(&lt;a href="https://en.wikipedia.org/wiki/Range_of_a_projectile"&gt;https://en.wikipedia.org/wiki/Range_of_a_projectile&lt;/a&gt;),&lt;/p&gt;
+&lt;p&gt;(https://en.wikipedia.org/wiki/Range_of_a_projectile),&lt;/p&gt;
 &lt;div class="math"&gt;$$
 \begin{aligned}
 R_1&amp;amp;=\frac{v^2}{2g} \left(1+\sqrt{1+\frac{2gh}{v^2\sin^2(\theta)}}\right)\sin(2\theta)\\
@@ -1130,10 +1130,10 @@ $$&lt;/div&gt;
     (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</content><category term="science"></category><category term="science"></category></entry><entry><title>10 dogmas of science dismantled</title><link href="https://bblais.github.io/posts/2018/Jun/18/10-dogmas-of-science-dismantled/" rel="alternate"></link><published>2018-06-18T00:00:00-04:00</published><updated>2018-06-18T00:00:00-04:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2018-06-18:/posts/2018/Jun/18/10-dogmas-of-science-dismantled/</id><summary type="html">&lt;p&gt;In  his &lt;a href="https://www.youtube.com/watch?v=1TerTgDEgUE&amp;amp;t=583s"&gt;talk about the limitations of science&lt;/a&gt;, Rupert Sheldrake lists the "10 dogmas of modern science" (also listed here in text  &lt;a href="http://wariscrime.com/new/the-ten-dogmas-of-modern-science/"&gt;&lt;a href="http://wariscrime.com/new/the-ten-dogmas-of-modern-science/"&gt;http://wariscrime.com/new/the-ten-dogmas-of-modern-science/&lt;/a&gt;&lt;/a&gt;).  They are:&lt;/p&gt;
+&lt;/script&gt;</content><category term="science"></category><category term="science"></category></entry><entry><title>10 dogmas of science dismantled</title><link href="https://bblais.github.io/posts/2018/Jun/18/10-dogmas-of-science-dismantled/" rel="alternate"></link><published>2018-06-18T00:00:00-04:00</published><updated>2018-06-18T00:00:00-04:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2018-06-18:/posts/2018/Jun/18/10-dogmas-of-science-dismantled/</id><summary type="html">&lt;p&gt;In  his &lt;a href="https://www.youtube.com/watch?v=1TerTgDEgUE&amp;amp;t=583s"&gt;talk about the limitations of science&lt;/a&gt;, Rupert Sheldrake lists the "10 dogmas of modern science" (also listed here in text  &lt;a href="http://wariscrime.com/new/the-ten-dogmas-of-modern-science/"&gt;http://wariscrime.com/new/the-ten-dogmas-of-modern-science/&lt;/a&gt;).  They are:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;ol&gt;
-&lt;li&gt;Everything …&lt;/li&gt;&lt;/ol&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;p&gt;In  his &lt;a href="https://www.youtube.com/watch?v=1TerTgDEgUE&amp;amp;t=583s"&gt;talk about the limitations of science&lt;/a&gt;, Rupert Sheldrake lists the "10 dogmas of modern science" (also listed here in text  &lt;a href="http://wariscrime.com/new/the-ten-dogmas-of-modern-science/"&gt;&lt;a href="http://wariscrime.com/new/the-ten-dogmas-of-modern-science/"&gt;http://wariscrime.com/new/the-ten-dogmas-of-modern-science/&lt;/a&gt;&lt;/a&gt;).  They are:&lt;/p&gt;
+&lt;li&gt;Everything …&lt;/li&gt;&lt;/ol&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;p&gt;In  his &lt;a href="https://www.youtube.com/watch?v=1TerTgDEgUE&amp;amp;t=583s"&gt;talk about the limitations of science&lt;/a&gt;, Rupert Sheldrake lists the "10 dogmas of modern science" (also listed here in text  &lt;a href="http://wariscrime.com/new/the-ten-dogmas-of-modern-science/"&gt;http://wariscrime.com/new/the-ten-dogmas-of-modern-science/&lt;/a&gt;).  They are:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;ol&gt;
 &lt;li&gt;Everything is essentially mechanical. Dogs, for example, are complex mechanisms, rather than living organisms with goals of their own. Even people are machines, ‘lumbering robots’, in Richard Dawkins’s vivid phrase, with brains that are like genetically programmed computers.&lt;/li&gt;

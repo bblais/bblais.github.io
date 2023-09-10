@@ -295,6 +295,67 @@ but then also states &lt;/p&gt;
     (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
+&lt;/script&gt;&lt;script type='text/javascript'&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
 &lt;/script&gt;</summary><content type="html">&lt;p&gt;In my conversations with some of my statistics colleagues who are less familiar with Bayes methods, I came up with four categories of problems that come up in Bayesian-Frequentist comparisons.&lt;/p&gt;
 &lt;h2 id="conditional-probability-problems"&gt;Conditional probability problems&lt;/h2&gt;
 &lt;p&gt;An example of this is&lt;/p&gt;
@@ -1085,9 +1146,9 @@ P(\mbox{model}|\mbox{new evidence}, \mbox{past evidence}) &amp;amp;\sim&amp;amp;
 &lt;/ol&gt;
 &lt;p&gt;And the other case&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Inerrantism&lt;/strong&gt; has been very successful in the past in coming up with &lt;strong&gt;literal&lt;/strong&gt; explanations by presupposing &lt;strong&gt;inerrancy&lt;/strong&gt; in the Bible (i.e. methodological &lt;strong&gt; inerrantism&lt;/strong&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Inerrantism&lt;/strong&gt; has been very successful in the past in coming up with &lt;strong&gt;literal&lt;/strong&gt; explanations by presupposing &lt;strong&gt;inerrancy&lt;/strong&gt; in the Bible (i.e. methodological ** inerrantism**).&lt;/li&gt;
 &lt;li&gt;We are faced with an explanation that may go beyond &lt;strong&gt;inerrantism&lt;/strong&gt; (i.e. a supposed contradiction).&lt;/li&gt;
-&lt;li&gt;We reject the "supposed contradiction" as a matter of method (i.e. methodological &lt;strong&gt; inerrantism&lt;/strong&gt; again).&lt;/li&gt;
+&lt;li&gt;We reject the "supposed contradiction" as a matter of method (i.e. methodological ** inerrantism** again).&lt;/li&gt;
 &lt;li&gt;We claim that eventually we will find a &lt;strong&gt;literal&lt;/strong&gt; explanation for the contradiction (i.e. context, misinterpretation, we don't have the original, etc…).&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Each of these cases clearly leads to incorrect conclusions, yet the process seals itself away from the injection of the truth.  Blake claims that the same problem happens with science in general - it seals itself away from the injection of the truth of supernatural claims.&lt;/p&gt;
@@ -1103,12 +1164,12 @@ P(\mbox{model}|\mbox{new evidence}, \mbox{past evidence}) &amp;amp;\sim&amp;amp;
 &lt;p&gt;Science isn't the only show in town because it excludes the contenders as a matter of method. It is the only show in town because the contenders never showed up.&lt;/p&gt;</content><category term="articles"></category></entry><entry><title>What Makes an Explanation Bad?</title><link href="https://bblais.github.io/posts/2016/Jul/29/what-makes-an-explanation-bad/" rel="alternate"></link><published>2016-07-29T00:00:00-04:00</published><updated>2016-07-29T00:00:00-04:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2016-07-29:/posts/2016/Jul/29/what-makes-an-explanation-bad/</id><summary type="html">&lt;p&gt;In &lt;a href="https://www.ted.com/talks/david_deutsch_a_new_way_to_explain_explanation"&gt;David Deutsch's TED Talk&lt;/a&gt; he describes what makes good and bad explanations.  In particular he outlines what makes scientific explanations good ones whereas mythological ones bad.  Many people claim …&lt;/p&gt;</summary><content type="html">&lt;p&gt;In &lt;a href="https://www.ted.com/talks/david_deutsch_a_new_way_to_explain_explanation"&gt;David Deutsch's TED Talk&lt;/a&gt; he describes what makes good and bad explanations.  In particular he outlines what makes scientific explanations good ones whereas mythological ones bad.  Many people claim that what makes an explanation bad is its lack of testability - goblins are a bad explanation for my car breaking down because you cannot test for goblins.  Although somewhat true, this is not the primary problem with the explanation, according to Deutsch.  The problem is that, even if shown to be false, the goblin explanation is &lt;em&gt;too easy to vary&lt;/em&gt;.  We can tweak it slightly to get the different prediction.  The example in the talk refers to the Greek gods creating the seasons, and that one can easily modify the presumed behavior of those gods to get any result you'd like.  &lt;/p&gt;
 &lt;p&gt;In science, we look for explanations that one can't wiggle out of.  If it is wrong, it must be discarded.  The Higgs boson held a specific and irreplaceable role in the overall theory, and if not observed the theory would have to be seriously rethought and restructured.  Some of the issues with string theory is that it predicts too much, and is too flexible, and thus fails as an explanation.  &lt;/p&gt;
 &lt;p&gt;A very similar idea I had &lt;a href="https://bblais.github.io/posts/2013/Feb/15/resurrection-linear-regression-and-the-art-of-harmonization/"&gt;written about before&lt;/a&gt;, with respect to the accounts of the resurrection of Jesus.  An explanation that is too flexible becomes meaningless, and shouldn't be relied on.  It's the same idea that underscores &lt;em&gt;overfitting&lt;/em&gt; in regression and neural network models and the role of Ockam's razor.&lt;/p&gt;</content><category term="articles"></category></entry><entry><title>Laplace and Twins</title><link href="https://bblais.github.io/posts/2016/Mar/28/laplace-and-twins/" rel="alternate"></link><published>2016-03-28T00:00:00-04:00</published><updated>2016-03-28T00:00:00-04:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2016-03-28:/posts/2016/Mar/28/laplace-and-twins/</id><summary type="html">&lt;p&gt;From this paper,&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://statweb.stanford.edu/~ckirby/brad/other/2013Perspective.pdf"&gt;&lt;a href="http://statweb.stanford.edu/~ckirby/brad/other/2013Perspective.pdf"&gt;http://statweb.stanford.edu/~ckirby/brad/other/2013Perspective.pdf&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://statweb.stanford.edu/~ckirby/brad/other/2013Perspective.pdf"&gt;http://statweb.stanford.edu/~ckirby/brad/other/2013Perspective.pdf&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;we have the following text:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;“Controversial theorem” sounds like an oxymoron, but Bayes’ Rule has played this
 part …&lt;/p&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;p&gt;From this paper,&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://statweb.stanford.edu/~ckirby/brad/other/2013Perspective.pdf"&gt;&lt;a href="http://statweb.stanford.edu/~ckirby/brad/other/2013Perspective.pdf"&gt;http://statweb.stanford.edu/~ckirby/brad/other/2013Perspective.pdf&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://statweb.stanford.edu/~ckirby/brad/other/2013Perspective.pdf"&gt;http://statweb.stanford.edu/~ckirby/brad/other/2013Perspective.pdf&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;we have the following text:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;“Controversial theorem” sounds like an oxymoron, but Bayes’ Rule has played this
@@ -2539,25 +2600,25 @@ $$&lt;/div&gt;
 &lt;p&gt;My guess is "no", but why?  The &lt;em&gt;likelihood&lt;/em&gt; (i.e. how well the hypothesis supports the data) is exceptionally high. Higher, I'd say, than nearly any other hypothesis.  Actually, now that I think about it, the hypothesis "aliens that like the number 12 and influence octopi made it happen" is a better one.  These are clearly ridiculous because they are &lt;em&gt;implausible&lt;/em&gt; to start, and thus have a lower &lt;em&gt;prior probability&lt;/em&gt;.  In fact Bayesianism is asking the only interesting question, and it provides the framework to actually compare hypotheses, something that frequentist methods fail spectacularly at.&lt;/p&gt;
 &lt;p&gt;Greg Mayer is a Bayesian, he just fails to admit it.&lt;/p&gt;</content><category term="articles"></category></entry><entry><title>Superseding the $t$ test</title><link href="https://bblais.github.io/posts/2015/Apr/23/superseding-the-t-test/" rel="alternate"></link><published>2015-04-23T00:00:00-04:00</published><updated>2015-04-23T00:00:00-04:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2015-04-23:/posts/2015/Apr/23/superseding-the-t-test/</id><summary type="html">&lt;p&gt;There's a very nice paper, &lt;a href="http://www.indiana.edu/~kruschke/articles/Kruschke2013JEPG.pdf"&gt;Bayesian estimation supersedes the t test&lt;/a&gt;. John K. Kruschke, Journal of Experimental Psychology: General, 2013, v.142(2), pp.573-603. The methods described provide at …&lt;/p&gt;</summary><content type="html">&lt;p&gt;There's a very nice paper, &lt;a href="http://www.indiana.edu/~kruschke/articles/Kruschke2013JEPG.pdf"&gt;Bayesian estimation supersedes the t test&lt;/a&gt;. John K. Kruschke, Journal of Experimental Psychology: General, 2013, v.142(2), pp.573-603. The methods described provide at once posterior probabilities not just for the means of two groups, but their standard deviations, their normality, and effect size.  The &lt;a href="http://www.indiana.edu/~kruschke/BEST/"&gt;supporting website&lt;/a&gt; has a lot of useful resources, including a number of implementations.  The original implementation is in R, but there is a &lt;a href="https://github.com/strawlab/best"&gt;Python implementation using PyMC&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;I decided to implement the same thing using the &lt;a href="http://dan.iel.fm/emcee/current/"&gt;emcee package&lt;/a&gt;.  The full implementation is &lt;a href="http://nbviewer.ipython.org/gist/bblais/7a1c6ec3b4c8d1b0465f"&gt;viewable here&lt;/a&gt;.  My implementation is pretty general, and can handle some arbitrary tests of the variables, like:&lt;/p&gt;
-&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
 &lt;span class="normal"&gt;2&lt;/span&gt;
-&lt;span class="normal"&gt;3&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;P&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;(mu1&amp;gt;101) &amp;amp; (mu1&amp;lt;102.1)&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;P&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;(mu1&amp;gt;101) &amp;amp; (mu1&amp;lt;102.1)&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
 &lt;span class="mf"&gt;0.85502222222222224&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
+
 &lt;p&gt;and&lt;/p&gt;
-&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
 &lt;span class="normal"&gt;2&lt;/span&gt;
-&lt;span class="normal"&gt;3&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;P&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;sigma1&amp;lt;sigma2&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;P&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;sigma1&amp;lt;sigma2&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
 &lt;span class="mf"&gt;0.0060111111111111112&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
+
 &lt;p&gt;and&lt;/p&gt;
-&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot_distribution&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Effect Size=(mu1-mu2)/sqrt((sigma1**2+sigma2**2)/2)&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;div class="highlight"&gt;&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot_distribution&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Effect Size=(mu1-mu2)/sqrt((sigma1**2+sigma2**2)/2)&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
+
 &lt;p&gt;&lt;img alt="effectsize" src="images/effect_size.png"&gt;&lt;/p&gt;
 &lt;p&gt;Hopefully the code will be useful to someone, perhaps just me as I explore similar problems.&lt;/p&gt;</content><category term="articles"></category></entry><entry><title>Simple Questions that Get to the Heart of the Matter</title><link href="https://bblais.github.io/posts/2015/Mar/03/simple-questions-that-get-to-the-heart-of-the-matter/" rel="alternate"></link><published>2015-03-03T00:00:00-05:00</published><updated>2015-03-03T00:00:00-05:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2015-03-03:/posts/2015/Mar/03/simple-questions-that-get-to-the-heart-of-the-matter/</id><summary type="html">&lt;p&gt;E. T. Jaynes wrote extensively about Bayesian inference, and one of his strategies was to use a "Galileo's telescope for statistics", such as outlined in his paper on &lt;a href="http://bayes.wustl.edu/etj/articles/confidence.pdf"&gt;Confidence Intervals …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;E. T. Jaynes wrote extensively about Bayesian inference, and one of his strategies was to use a "Galileo's telescope for statistics", such as outlined in his paper on &lt;a href="http://bayes.wustl.edu/etj/articles/confidence.pdf"&gt;Confidence Intervals vs Bayesian Intervals&lt;/a&gt;.  This method is used to distinguish between two alternate approaches to a problem.  The strategy entails finding particularly simple cases where the two cases yield very different answers, and the correct one is obvious from the context and the simplicity of the problem.  In this way, the difference is magnified like a telescope so that it is clear to the unaided observation.&lt;/p&gt;
 &lt;p&gt;There are, I've found, similar sorts of cases in apologetics.  There are a few questions I've heard that are so simple, yet get to the heart of the matter.  I've collected them here, and always enjoy finding others.  &lt;/p&gt;
@@ -2881,7 +2942,7 @@ P_2&amp;amp;=&amp;amp; 26.2 \,{\rm psi}
 &lt;p&gt;I just posted an &lt;a href="https://vimeo.com/106992815"&gt;8-minute movie I made&lt;/a&gt; showing weather maps for 3 years from July 2011 to September 2014.  These surface maps are archived at the &lt;a href="http://weather.unisys.com/archive/"&gt;Unisys Weather Image Archive&lt;/a&gt;, and are generated every 12 hours.  It's pretty cool to see the pattern of the weather sweeping across the US, and noting certain memorable storms.  Hurricane Sandy, for example, shows up at the end of October 2012 and you see the other front crossing the US at the same time, meeting Sandy on the East Coast.&lt;/p&gt;
 &lt;p&gt;Which things do you see?&lt;/p&gt;</content><category term="articles"></category></entry><entry><title>What's the Harm in Alternative Medicine?</title><link href="https://bblais.github.io/posts/2014/Aug/26/whats-the-harm-in-alternative-medicine/" rel="alternate"></link><published>2014-08-26T00:00:00-04:00</published><updated>2014-08-26T00:00:00-04:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2014-08-26:/posts/2014/Aug/26/whats-the-harm-in-alternative-medicine/</id><summary type="html">&lt;p&gt;When challenging the bogus medical claims of herbalists, chiropractors, and homeopaths one is often countered with the question "what's the harm?"  How could harm come from a treatment that, even …&lt;/p&gt;</summary><content type="html">&lt;p&gt;When challenging the bogus medical claims of herbalists, chiropractors, and homeopaths one is often countered with the question "what's the harm?"  How could harm come from a treatment that, even if false, doesn't do anything?  Well, we have an example in the recent news of the ebola outbreak.  &lt;/p&gt;
 &lt;p&gt;We hear that the outbreak in Sierra Leone, with the death toll in the hundreds now, was started by an herbalist claiming cures of ebola that were unfounded.  No more can one honestly claim that no harm is done by alternative medicine.  It's just too bad it takes such a tragedy for some to come to this realization.  For others, this may not even be enough.&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://www.ibtimes.com/faith-healer-helped-spread-ebola-sierra-leone-report-1663694"&gt;http://www.ibtimes.com/faith-healer-helped-spread-ebola-sierra-leone-report-1663694&lt;/a&gt;&lt;/p&gt;</content><category term="articles"></category></entry><entry><title>What evidence would it take?</title><link href="https://bblais.github.io/posts/2014/Aug/15/what-evidence-would-it-take/" rel="alternate"></link><published>2014-08-15T00:00:00-04:00</published><updated>2014-08-15T00:00:00-04:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2014-08-15:/posts/2014/Aug/15/what-evidence-would-it-take/</id><summary type="html">&lt;p&gt;I heard over the past couple of days the question being asked "what evidence would convince you that there is a God?", and the reverse (to a believer) "what evidence …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I heard over the past couple of days the question being asked "what evidence would convince you that there is a God?", and the reverse (to a believer) "what evidence would convince you that there is not a God?"  It got me thinking about the cases where I may have changed my mind due to evidence, and what evidence would convince me of various claims.  This leads inexorably to the processes of science.  &lt;/p&gt;
+&lt;p&gt;http://www.ibtimes.com/faith-healer-helped-spread-ebola-sierra-leone-report-1663694&lt;/p&gt;</content><category term="articles"></category></entry><entry><title>What evidence would it take?</title><link href="https://bblais.github.io/posts/2014/Aug/15/what-evidence-would-it-take/" rel="alternate"></link><published>2014-08-15T00:00:00-04:00</published><updated>2014-08-15T00:00:00-04:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2014-08-15:/posts/2014/Aug/15/what-evidence-would-it-take/</id><summary type="html">&lt;p&gt;I heard over the past couple of days the question being asked "what evidence would convince you that there is a God?", and the reverse (to a believer) "what evidence …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I heard over the past couple of days the question being asked "what evidence would convince you that there is a God?", and the reverse (to a believer) "what evidence would convince you that there is not a God?"  It got me thinking about the cases where I may have changed my mind due to evidence, and what evidence would convince me of various claims.  This leads inexorably to the processes of science.  &lt;/p&gt;
 &lt;p&gt;Lawrence Krauss flippantly said that if the stars in the sky reorganize and spelled out the words of the Bible it would get him to start considering it (however, upon reflection, one might want to consider delusion at that point).  Believers talk about, if the bones of Jesus were found that would do it...however, is that even reasonable to expect under any circumstances?  It's a lot simpler than that, than trying to find nearly impossible data.&lt;/p&gt;
 &lt;p&gt;If we insert any kind of scientific claim, like "what evidence would convince me of [the Sun orbiting the Earth], [evolution], [evolution is false], etc...", we can start to see part of the problem.  It's not a matter of new evidence, it is a matter of explaining the existing evidence...and then some.  In order to convince me that evolution by natural selection is false, you have to come up with an explanation that does as well explaining all the existing data (e.g. geographic organization of animals, embryology, genetic relationships, vestigial features, etc...) as well as find a domain which cannot be explained by evolution by natural selection.  Apologists often focus on the latter, pointing out supposed flaws or gaps in our understanding, but that is not nearly enough.  The gaps are either things we already understand with this theory (e.g. intermediate forms), or are not addressed by this theory (e.g. origin of life), or are details that don't change the overall picture (e.g. punctuated equilibrium).  Even if true gaps were found, to mount an actual overthrow of evolution by natural selection, you have to put forward a useful explanation that works for all of the cases natural selection works for. &lt;/p&gt;
 &lt;p&gt;Here we can think of Newton's laws.  What evidence would it take for me not to believe in Newton's Law of Gravity?  Pretty much nothing at this point, even though I know there is a correction with Einstein's equations - Newton's laws work so well, that it is very nearly the truth even &lt;em&gt;given&lt;/em&gt; its limitations.  All of the evidence for Newton's Law of Gravity is still around, and isn't changing, and any replacement has to address that (which Einstein's equations do).  This is why science gets progressively harder.&lt;/p&gt;
@@ -3536,5 +3597,5 @@ it is &lt;em&gt;mathematically impossible&lt;/em&gt; to make the round earth hyp
 &lt;li&gt;I like writing content in &lt;a href="http://http://daringfireball.net/projects/markdown/"&gt;Markdown&lt;/a&gt;, so that I can make small textual changes in the site without opening up a bloated editor&lt;/li&gt;
 &lt;li&gt;Working in Markdown makes it easier to change frameworks/structure in the future&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Let me know if things work, or don't!  I'd love to know if comments work, and if it is easy to follow updates via Atom, or perhaps RSS.  You can contact me at &lt;em&gt;bblais at &lt;a href="http://gmail.com"&gt;gmail.com&lt;/a&gt; or bryant.edu&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Let me know if things work, or don't!  I'd love to know if comments work, and if it is easy to follow updates via Atom, or perhaps RSS.  You can contact me at &lt;em&gt;bblais at gmail.com or bryant.edu&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;I'm still playing, so expect changes!&lt;/p&gt;</content><category term="articles"></category><category term="web"></category></entry><entry><title>New Website</title><link href="https://bblais.github.io/posts/2014/Jan/10/new-website/" rel="alternate"></link><published>2014-01-10T00:00:00-05:00</published><updated>2014-01-10T00:00:00-05:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2014-01-10:/posts/2014/Jan/10/new-website/</id><summary type="html">&lt;p&gt;I completely redid my website, and am still playing with a lot of the organization, etc...  I'm hoping that it will be both easier to use, and include more detailed …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I completely redid my website, and am still playing with a lot of the organization, etc...  I'm hoping that it will be both easier to use, and include more detailed information about my current projects and my progress in different areas.  I think I've ported everything over, but we'll see!&lt;/p&gt;</content><category term="articles"></category></entry></feed>

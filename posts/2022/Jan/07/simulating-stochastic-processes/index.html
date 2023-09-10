@@ -59,7 +59,7 @@
 										<span class="image left"><img src="https://bblais.github.io/images/john-doyle-0HMJhaIMqvw-unsplash.jpg"></span>
 
 
-									<p>In this post we are going to explore the simulation of stochastic (i.e. random) processes, and work our way to understanding how the Gillespie algorithm works.  We'll be using mostly straightforward Python, except for my <code>Storage</code> class from <a href="https://bblais.github.io/posts/2020/Feb/24/common-python-pattern-building-up-lists-to-plot/">https://bblais.github.io/posts/2020/Feb/24/common-python-pattern-building-up-lists-to-plot/</a> and some default plotting preferences specified in <a href="https://raw.githubusercontent.com/bblais/Python-for-Science/master/science/science.mplstyle">https://raw.githubusercontent.com/bblais/Python-for-Science/master/science/science.mplstyle</a>.</p>
+									<p>In this post we are going to explore the simulation of stochastic (i.e. random) processes, and work our way to understanding how the Gillespie algorithm works.  We'll be using mostly straightforward Python, except for my <code>Storage</code> class from https://bblais.github.io/posts/2020/Feb/24/common-python-pattern-building-up-lists-to-plot/ and some default plotting preferences specified in https://raw.githubusercontent.com/bblais/Python-for-Science/master/science/science.mplstyle.</p>
 <h2 id="imports">Imports</h2>
 <div class="highlight"><pre><span></span><code><span class="o">%</span><span class="n">pylab</span> <span class="n">inline</span>
 <span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;science.mplstyle&#39;</span><span class="p">)</span>
@@ -144,7 +144,7 @@ therefore the distribution is </p>
 p(t) = \lambda e^{-\lambda t}
 $$</div>
 <p>
-which can be seen here <a href="https://en.wikipedia.org/wiki/Exponential_distribution">https://en.wikipedia.org/wiki/Exponential_distribution</a></p>
+which can be seen here https://en.wikipedia.org/wiki/Exponential_distribution</p>
 <h2 id="towards-gillespie">Towards Gillespie</h2>
 <p>Instead of flipping the coin every millisecond (i.e. constant time), we can randomly pick a <em>time</em> from an exponential distribution -- the time to the next event (i.e. dynamic time).</p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">constant_time</span><span class="p">(</span><span class="n">N</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span><span class="n">n0</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">t_max</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span><span class="n">p</span><span class="o">=</span><span class="mf">0.02</span><span class="p">,</span><span class="n">dt</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
