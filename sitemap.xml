@@ -5,77 +5,84 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://bblais.github.io/</loc>
-<lastmod>2023-11-16T09:24:35-00:00</lastmod>
+<lastmod>2023-11-21T10:36:19-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/about.html</loc>
-<lastmod>2023-11-16T09:24:35-00:00</lastmod>
+<lastmod>2023-11-21T10:36:19-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/archives.html</loc>
-<lastmod>2023-11-16T09:24:35-00:00</lastmod>
+<lastmod>2023-11-21T10:36:19-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/contact.html</loc>
-<lastmod>2023-11-16T09:24:35-00:00</lastmod>
+<lastmod>2023-11-21T10:36:19-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/thanks.html</loc>
-<lastmod>2023-11-16T09:24:35-00:00</lastmod>
+<lastmod>2023-11-21T10:36:19-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/search.html</loc>
-<lastmod>2023-11-16T09:24:35-00:00</lastmod>
+<lastmod>2023-11-21T10:36:19-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/tags.html</loc>
-<lastmod>2023-11-16T09:24:35-00:00</lastmod>
+<lastmod>2023-11-21T10:36:19-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/search.html</loc>
-<lastmod>2023-11-16T09:24:35-00:00</lastmod>
+<lastmod>2023-11-21T10:36:19-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/pages/presentations.html</loc>
-<lastmod>2023-11-16T09:24:35-00:00</lastmod>
+<lastmod>2023-11-21T10:36:19-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/pages/projects.html</loc>
-<lastmod>2023-11-16T09:24:35-00:00</lastmod>
+<lastmod>2023-11-21T10:36:19-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/pages/publications.html</loc>
-<lastmod>2023-11-16T09:24:35-00:00</lastmod>
+<lastmod>2023-11-21T10:36:19-00:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://bblais.github.io/posts/2023/Nov/19/why-i-became-an-atheist-part-1-and-part-2-john-loftus-peter-may-05-april-2008-12-april-2008/</loc>
+<lastmod>2023-11-19T00:00:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -2623,7 +2630,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://bblais.github.io/category/unbelievable-project.html</loc>
-<lastmod>2023-11-15T00:00:00-04:56</lastmod>
+<lastmod>2023-11-19T00:00:00-04:56</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -2637,7 +2644,35 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://bblais.github.io/tag/unbelievable.html</loc>
-<lastmod>2023-11-15T00:00:00-04:56</lastmod>
+<lastmod>2023-11-19T00:00:00-04:56</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://bblais.github.io/tag/creation.html</loc>
+<lastmod>2023-11-19T00:00:00-04:56</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://bblais.github.io/tag/science.html</loc>
+<lastmod>2023-11-19T00:00:00-04:56</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://bblais.github.io/tag/harmonization.html</loc>
+<lastmod>2023-11-19T00:00:00-04:56</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://bblais.github.io/tag/skeptic.html</loc>
+<lastmod>2023-11-19T00:00:00-04:56</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -2701,13 +2736,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://bblais.github.io/tag/mcmc.html</loc>
 <lastmod>2021-08-11T00:00:00-04:56</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://bblais.github.io/tag/science.html</loc>
-<lastmod>2021-04-09T00:00:00-04:56</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -2875,7 +2903,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://bblais.github.io/author/brian-blais.html</loc>
-<lastmod>2023-11-16T00:00:00-04:56</lastmod>
+<lastmod>2023-11-19T00:00:00-04:56</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
