@@ -11,6 +11,9 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="https://bblais.github.io/theme/css/main.css" />
+		<link rel="stylesheet"
+		href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"
+		crossorigin="anonymous">
 
         <link rel="stylesheet" type="text/css" href="https://bblais.github.io/theme/css/custom.css" media="screen">
     
@@ -81,15 +84,15 @@
 <h2 id="inference-to-the-best-explanation">Inference to the Best Explanation</h2>
 <p>So McGrath basically then goes on to talk about probabilistic reasoning, and says that with faith one is doing <em>inference to the best explanation</em>, given a number of competing multiple explanations.  As I stated earlier, if all he means is that faith is probabilistic reasoning, then we don't have an argument - except in making things clear.  I would contend, along with Dawkins, the the <em>vast</em> majority of people do not take it to mean this. </p>
 <p>However, I'd like to also challenge his basic premise here: that in dealing with multiple competing explanations that one should try to "infer to the best explanation", and <em>believe strongly in that explanation</em>.  A simple example, used in other contexts, suffices to see this.  Say we have two explanations of the number of stars, one which says that there is an <em>even</em> number of stars and another that says that there is an <em>odd</em> number of stars.  Pretty much we know that, at any given instant, one of these <em>must</em> be true.  However strong belief in either one is completely unwarranted - there is simply no way to know.  From a probabilistic framework, we express this as </p>
-<div class="math">\begin{eqnarray}
-P({\rm odd}) &amp;=&amp;0.5 \\\\
+<p>\begin{eqnarray}
+P({\rm odd}) &amp;=&amp;0.5 \\
 P({\rm even})&amp;=&amp;0.5
-\end{eqnarray}</div>
+\end{eqnarray}</p>
 <p>However, it is worse than that.  Let's say we had a smidgen of evidence toward the even-star model, such that we had:</p>
-<div class="math">\begin{eqnarray}
-P({\rm odd}) &amp;=&amp;0.499995 \\\\
+<p>\begin{eqnarray}
+P({\rm odd}) &amp;=&amp;0.499995 \\
 P({\rm even})&amp;=&amp;0.500005
-\end{eqnarray}</div>
+\end{eqnarray}</p>
 <p>Even though there is a <em>best</em> explanation here (<em>even</em> is slightly more probable than <em>odd</em>), and we have the exact probabilities, it is <em>still irrational</em> to hold strong belief in either explanation.  One really does have to look where the weight of the probabilities lay.  Inference to the best explanation fails as a guiding principle in the face of uncertainty, and is not well defined in all contexts.  I don't think McGrath is actually doing proper probabilistic inference at all, but even if he were, this "best explanation" approach fails to address our knowledge of the problem.</p>
 <h2 id="playing-dodgeball-with-an-apologist">Playing Dodgeball with an Apologist</h2>
 <p>So, here is how the game is played, and why I had my initial impression of slipperiness about McGrath.</p>
@@ -120,68 +123,6 @@ P({\rm even})&amp;=&amp;0.500005
 <p>See the contradictions here?  McGrath couldn't.  Either God acts in the world, and is measurable, or he does not act in the world and is thus either impotent, immoral, or simply indifferent.  The problem of evil has no other outlet.  If you try to argue (as William Lane Craig does) that God may have sufficient reasons, then you undermine the entire notion of personal conscience - the seemingly immoral actions (or inactions) of God fly in the face of it.</p>
 <h2 id="one-final-thought">One final thought</h2>
 <p>McGrath stresses again and again the <em>usefulness</em> of religion, without once demonstrating that it is <em>true</em>.  He failed, again and again, to address the immediate consequences of his beliefs and simply dodged at every point, in order to wallow in generalities.</p>
-<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
-    var align = "center",
-        indent = "0em",
-        linebreak = "false";
-
-    if (false) {
-        align = (screen.width < 768) ? "left" : align;
-        indent = (screen.width < 768) ? "0em" : indent;
-        linebreak = (screen.width < 768) ? 'true' : linebreak;
-    }
-
-    var mathjaxscript = document.createElement('script');
-    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
-    mathjaxscript.type = 'text/javascript';
-    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
-
-    var configscript = document.createElement('script');
-    configscript.type = 'text/x-mathjax-config';
-    configscript[(window.opera ? "innerHTML" : "text")] =
-        "MathJax.Hub.Config({" +
-        "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
-        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
-        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
-        "    displayAlign: '"+ align +"'," +
-        "    displayIndent: '"+ indent +"'," +
-        "    showMathMenu: true," +
-        "    messageStyle: 'normal'," +
-        "    tex2jax: { " +
-        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
-        "        displayMath: [ ['$$','$$'] ]," +
-        "        processEscapes: true," +
-        "        preview: 'TeX'," +
-        "    }, " +
-        "    'HTML-CSS': { " +
-        "        availableFonts: ['STIX', 'TeX']," +
-        "        preferredFont: 'STIX'," +
-        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
-        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
-        "    }, " +
-        "}); " +
-        "if ('default' !== 'default') {" +
-            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-        "}";
-
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
-}
-</script>
 
 
 								</section>
@@ -267,7 +208,7 @@ P({\rm even})&amp;=&amp;0.500005
                                             <li><a href="https://bblais.github.io/category/productivity.html">productivity <span>(7)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/programming.html">programming <span>(5)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/projects.html">projects <span>(4)</span></a></li>
-                                            <li><a href="https://bblais.github.io/category/religion.html">religion <span>(30)</span></a></li>
+                                            <li><a href="https://bblais.github.io/category/religion.html">religion <span>(31)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/science.html">science <span>(11)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/unbelievable-project.html">Unbelievable Project <span>(21)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/wordpress_migration.html">wordpress_migration <span>(160)</span></a></li>

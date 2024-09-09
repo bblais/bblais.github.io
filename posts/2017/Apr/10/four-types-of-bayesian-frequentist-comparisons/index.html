@@ -11,6 +11,9 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="https://bblais.github.io/theme/css/main.css" />
+		<link rel="stylesheet"
+		href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"
+		crossorigin="anonymous">
 
         <link rel="stylesheet" type="text/css" href="https://bblais.github.io/theme/css/custom.css" media="screen">
     
@@ -71,13 +74,12 @@
 <p>102,  95,  85,  86,  93, 105,  96,  91, 104, 115</p>
 <p>What is the best estimate for the mass of Saturn, and our uncertainty in that estimate?</p>
 <p>Both Frequentist and Bayesian methods come up with
-</p>
-<div class="math">\begin{eqnarray}
-\mu&amp;=&amp;\bar{x} \pm \frac{S}{\sqrt{N}} \\
-\bar{x}&amp;=&amp; \frac{1}{N} \sum_{k=1}^{N} x_k \\
+\begin{eqnarray}
+\mu&amp;=&amp;\bar{x} \pm \frac{S}{\sqrt{N}} \
+\bar{x}&amp;=&amp; \frac{1}{N} \sum_{k=1}^{N} x_k \
 S^2&amp;=&amp; \frac{1}{(N-1)}\sum_{k=1}^{N} (x_k-\bar{x})^2
-\end{eqnarray}</div>
-<p>The Bayesian and Frequentist approaches will come up with - numerically - the same answer to this question, but the vocabulary will be different.  One speaks about the probability of the mean value, the other about the properties of the sampling distribution with respect to <span class="math">\(N\)</span> data points.  In either case, it makes no difference <em>practically</em>.</p>
+\end{eqnarray}</p>
+<p>The Bayesian and Frequentist approaches will come up with - numerically - the same answer to this question, but the vocabulary will be different.  One speaks about the probability of the mean value, the other about the properties of the sampling distribution with respect to <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi></mrow><annotation encoding="application/x-tex">N</annotation></semantics></math></span><span aria-hidden="true" class="katex-html"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span> data points.  In either case, it makes no difference <em>practically</em>.</p>
 <h2 id="jaynes-type-galilean-problems">Jaynes-type Galilean problems</h2>
 <p>Where the rubber meets the road is a problem like the one proposed by Lindley, where he flipped a thumbtack and noted that sometimes it lands "point up" and others “point down”. His actual data was:</p>
 <blockquote>
@@ -86,9 +88,9 @@ S^2&amp;=&amp; \frac{1}{(N-1)}\sum_{k=1}^{N} (x_k-\bar{x})^2
 <p>And the question is, <em>can we be 95% sure of this tack being an unfair tack?</em>  Given the physical properties of thumbtacks, we really don’t have any expectation that it <em>should</em> be fair (unlike a coin, where we have a symmetry argument).  We come up with different answers - quantitatively and possible qualitatively - on this one (see page 54 of the <a href="http://web.bryant.edu/~bblais/pdf/pres_011407.pdf">presentation on the three-sided coin I gave</a>)</p>
 <h2 id="anything-with-the-cauchy-distribution">Anything with the Cauchy distribution</h2>
 <p>There is one final category of problems in the comparison with Bayesian and Frequentist methods. </p>
-<p>Imagine we have a lighthouse which is off shore some known distance, B, and is located along the shore at some unknown location <span class="math">\(x=a\)</span>:</p>
+<p>Imagine we have a lighthouse which is off shore some known distance, B, and is located along the shore at some unknown location <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mi>a</mi></mrow><annotation encoding="application/x-tex">x=a</annotation></semantics></math></span><span aria-hidden="true" class="katex-html"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">a</span></span></span></span>:</p>
 <div class="highlight"><pre><span></span><code>         (lighthouse)
-               *          ---
+               <span class="k">*</span>          ---
                            ^
                            |
                            B
@@ -100,73 +102,11 @@ S^2&amp;=&amp; \frac{1}{(N-1)}\sum_{k=1}^{N} (x_k-\bar{x})^2
 
 <p>we want to estimate the location (“a”) from a series of locations of flashes on the shore - the lighthouse is spinning around and flashing at random times.  We can only observe where the flash lands on the shore, not the direction it came from.   The data is, for example, the locations of these 10 flashes:</p>
 <p>-4.89,  1.03,  1.64,  1.17,  0.74,  1.46,  0.76,  -7.16,  0.31,  2.48</p>
-<p>One can show that the location of a single flash should follow a Cauchy distribution:  <span class="math">\(p(x|a,B) = B/(B^2 + (x-a)^2)\)</span>.  This is due to the angular geometry of the problem.</p>
+<p>One can show that the location of a single flash should follow a Cauchy distribution:  <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo stretchy="false">(</mo><mi>x</mi><mi mathvariant="normal">∣</mi><mi>a</mi><mo separator="true">,</mo><mi>B</mi><mo stretchy="false">)</mo><mo>=</mo><mi>B</mi><mi mathvariant="normal">/</mi><mo stretchy="false">(</mo><msup><mi>B</mi><mn>2</mn></msup><mo>+</mo><mo stretchy="false">(</mo><mi>x</mi><mo>−</mo><mi>a</mi><msup><mo stretchy="false">)</mo><mn>2</mn></msup><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">p(x|a,B) = B/(B^2 + (x-a)^2)</annotation></semantics></math></span><span aria-hidden="true" class="katex-html"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">p</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mord">∣</span><span class="mord mathnormal">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.0641em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mord">/</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.0641em;vertical-align:-0.25em;"></span><span class="mord mathnormal">a</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span>.  This is due to the angular geometry of the problem.</p>
 <p>The question is, what is the best estimate of “a”?  What is the uncertainty in this estimate? What methods would you employ?  The Bayesian treatment for this problem is in D.S. Sivia’s, <em>Data Analysis: a Bayesian Tutorial, Second Edition</em> (Oxford, 2006).  A very similar problem is given in <a href="http://www.greenteapress.com/thinkbayes/html/thinkbayes010.html">Think Bayes</a> and another nice treatment is on <a href="http://www.di.fc.ul.pt/~jpn/r/bugs/lighthouse.html">João Pedro Neto's blog</a>.</p>
 <p>I'm pretty sure this problem is resistant to any procedure relying on sampling distributions (as all Frequentist procedures are) due to the <a href="https://en.wikipedia.org/wiki/Cauchy_distribution">peculiar properties of the Cauchy Distribution</a>.</p>
 <h2 id="conclusions">Conclusions</h2>
-<p>It is important when discussing different perspectives to keep clear what the vocabulary is - what are we actually talking about?  If you limit the problems to simple conditional probability problems, there isn't any difference between the Bayesian and Frequentist perspectives and one might wonder what the big deal is?  However, if you expand the problem set to include limited <span class="math">\(N\)</span> problems, with non-Normal distributions (such as Beta and Cauchy), then the differences start to become apparent.  </p>
-<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
-    var align = "center",
-        indent = "0em",
-        linebreak = "false";
-
-    if (false) {
-        align = (screen.width < 768) ? "left" : align;
-        indent = (screen.width < 768) ? "0em" : indent;
-        linebreak = (screen.width < 768) ? 'true' : linebreak;
-    }
-
-    var mathjaxscript = document.createElement('script');
-    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
-    mathjaxscript.type = 'text/javascript';
-    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
-
-    var configscript = document.createElement('script');
-    configscript.type = 'text/x-mathjax-config';
-    configscript[(window.opera ? "innerHTML" : "text")] =
-        "MathJax.Hub.Config({" +
-        "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
-        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
-        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
-        "    displayAlign: '"+ align +"'," +
-        "    displayIndent: '"+ indent +"'," +
-        "    showMathMenu: true," +
-        "    messageStyle: 'normal'," +
-        "    tex2jax: { " +
-        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
-        "        displayMath: [ ['$$','$$'] ]," +
-        "        processEscapes: true," +
-        "        preview: 'TeX'," +
-        "    }, " +
-        "    'HTML-CSS': { " +
-        "        availableFonts: ['STIX', 'TeX']," +
-        "        preferredFont: 'STIX'," +
-        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
-        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
-        "    }, " +
-        "}); " +
-        "if ('default' !== 'default') {" +
-            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-        "}";
-
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
-}
-</script>
+<p>It is important when discussing different perspectives to keep clear what the vocabulary is - what are we actually talking about?  If you limit the problems to simple conditional probability problems, there isn't any difference between the Bayesian and Frequentist perspectives and one might wonder what the big deal is?  However, if you expand the problem set to include limited <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi></mrow><annotation encoding="application/x-tex">N</annotation></semantics></math></span><span aria-hidden="true" class="katex-html"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span> problems, with non-Normal distributions (such as Beta and Cauchy), then the differences start to become apparent.  </p>
 
 
 								</section>
@@ -252,7 +192,7 @@ S^2&amp;=&amp; \frac{1}{(N-1)}\sum_{k=1}^{N} (x_k-\bar{x})^2
                                             <li><a href="https://bblais.github.io/category/productivity.html">productivity <span>(7)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/programming.html">programming <span>(5)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/projects.html">projects <span>(4)</span></a></li>
-                                            <li><a href="https://bblais.github.io/category/religion.html">religion <span>(30)</span></a></li>
+                                            <li><a href="https://bblais.github.io/category/religion.html">religion <span>(31)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/science.html">science <span>(11)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/unbelievable-project.html">Unbelievable Project <span>(21)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/wordpress_migration.html">wordpress_migration <span>(160)</span></a></li>

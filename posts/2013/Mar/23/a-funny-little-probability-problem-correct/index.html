@@ -11,6 +11,9 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="https://bblais.github.io/theme/css/main.css" />
+		<link rel="stylesheet"
+		href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"
+		crossorigin="anonymous">
 
         <link rel="stylesheet" type="text/css" href="https://bblais.github.io/theme/css/custom.css" media="screen">
     
@@ -76,38 +79,38 @@ the implications of the error.</p>
 <p>You draw two cards from a deck, and ask what is the probability that the
 first is a black card, and the second is a jack. In math notation, we
 want:</p>
-<div class="math">$$  
+<p><span class="katex-error" style="color:#cc0000" title="ParseError: KaTeX parse error: Can't use function '$' in math mode at position 1: $̲   P(B1,J2)   ">$  
 P(B1,J2)  
-$$</div>
+</span>$</p>
 <h2 id="the-right-answer-and-how-i-know">The right answer, and how I know</h2>
 <p>The easiest way to be absolutely sure I had the right answer is to
 simply outline every possible two-hand deal, and count the number of
 cards in each case.</p>
 <h3 id="with-replacement">With replacement:</h3>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">Game</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">Game</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="o">*</span>
 <span class="n">deals</span><span class="o">=</span><span class="p">[]</span>
 <span class="n">deck</span><span class="o">=</span><span class="n">makedeck</span><span class="p">()</span>
-<span class="k">for</span> <span class="n">card1</span> <span class="ow">in</span> <span class="n">deck</span><span class="p">:</span>
-    <span class="n">deck2</span><span class="o">=</span><span class="n">makedeck</span><span class="p">()</span>
-    <span class="k">for</span> <span class="n">card2</span> <span class="ow">in</span> <span class="n">deck2</span><span class="p">:</span>
-        <span class="n">deals</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">card1</span><span class="p">,</span><span class="n">card2</span><span class="p">])</span>
+<span class="k">for</span><span class="w"> </span><span class="n">card1</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">deck</span><span class="p">:</span>
+<span class="w">    </span><span class="n">deck2</span><span class="o">=</span><span class="n">makedeck</span><span class="p">()</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">card2</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">deck2</span><span class="p">:</span>
+<span class="w">        </span><span class="n">deals</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">card1</span><span class="p">,</span><span class="n">card2</span><span class="p">])</span>
 
-<span class="n">found</span><span class="o">=</span><span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">deals</span> <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">color</span><span class="o">==</span><span class="s1">&#39;Black&#39;</span> <span class="ow">and</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">rank</span><span class="o">==</span><span class="mi">11</span><span class="p">]</span>
+<span class="n">found</span><span class="o">=</span><span class="p">[</span><span class="n">x</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">deals</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">color</span><span class="o">==</span><span class="s1">&#39;Black&#39;</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">rank</span><span class="o">==</span><span class="mi">11</span><span class="p">]</span>
 </code></pre></div>
 
 <p>The length of "found" is 104, and the length of the "deals" is 2704 (52
 x 52).</p>
 <h3 id="without-replacement">Without replacement:</h3>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">Game</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">Game</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="o">*</span>
 <span class="n">deals</span><span class="o">=</span><span class="p">[]</span>
 <span class="n">deck</span><span class="o">=</span><span class="n">makedeck</span><span class="p">()</span>
-<span class="k">for</span> <span class="n">card1</span> <span class="ow">in</span> <span class="n">deck</span><span class="p">:</span>
-    <span class="n">deck2</span><span class="o">=</span><span class="n">makedeck</span><span class="p">()</span>
-    <span class="n">deck2</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">card1</span><span class="p">)</span>   <span class="c1"># &lt;------ remove the card</span>
-    <span class="k">for</span> <span class="n">card2</span> <span class="ow">in</span> <span class="n">deck2</span><span class="p">:</span>
-        <span class="n">deals</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">card1</span><span class="p">,</span><span class="n">card2</span><span class="p">])</span>
+<span class="k">for</span><span class="w"> </span><span class="n">card1</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">deck</span><span class="p">:</span>
+<span class="w">    </span><span class="n">deck2</span><span class="o">=</span><span class="n">makedeck</span><span class="p">()</span>
+<span class="w">    </span><span class="n">deck2</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">card1</span><span class="p">)</span><span class="w">   </span><span class="c1"># &lt;------ remove the card</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">card2</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">deck2</span><span class="p">:</span>
+<span class="w">        </span><span class="n">deals</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">card1</span><span class="p">,</span><span class="n">card2</span><span class="p">])</span>
 
-<span class="n">found</span><span class="o">=</span><span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">deals</span> <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">color</span><span class="o">==</span><span class="s1">&#39;Black&#39;</span> <span class="ow">and</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">rank</span><span class="o">==</span><span class="mi">11</span><span class="p">]</span>
+<span class="n">found</span><span class="o">=</span><span class="p">[</span><span class="n">x</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">deals</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">color</span><span class="o">==</span><span class="s1">&#39;Black&#39;</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">rank</span><span class="o">==</span><span class="mi">11</span><span class="p">]</span>
 </code></pre></div>
 
 <p>The length of "found" is 102, and the length of the "deals" is 2652 (52
@@ -116,14 +119,14 @@ x 51), which is the <em>same</em> fraction.</p>
 <p><em>This part was correct, and just repeated here.</em></p>
 <p>In replacement, we replace the first card after drawing it, reshuffle,
 and then draw the second. Thus the two events are independent.</p>
-<div class="math">$$  
+<p><span class="katex-error" style="color:#cc0000" title="ParseError: KaTeX parse error: Can't use function '$' in math mode at position 1: $̲   \begin{array…">$  
 \begin{array}{rcl}  
 P(B1,J2|{\rm replace}) &amp;=&amp; P(B1) \times P(J2) \\  
 &amp;=&amp;\frac{26}{52} \times \frac{4}{52} = \frac{104}{2704}=0.0385  
 \end{array}  
-$$</div>
+</span>$</p>
 <h3 id="without-replacement_1">Without replacement</h3>
-<div class="math">$$  
+<p><span class="katex-error" style="color:#cc0000" title="ParseError: KaTeX parse error: Can't use function '$' in math mode at position 1: $̲   \begin{array…">$  
 \begin{array}{rcl}  
 P(B1,J2|{\rm no-replace}) &amp;=&amp; P(B1) \times P(J2|B1) \\  
 &amp;=&amp;\frac{26}{52} \times
@@ -136,18 +139,18 @@ P(B1,J2|{\rm no-replace}) &amp;=&amp; P(B1) \times P(J2|B1) \\
 &amp;=&amp;\frac{102}{2652}\\  
 &amp;=&amp;0.0385  
 \end{array}  
-$$</div>
+</span>$</p>
 <p>where I have put boxes, or underline, around where I differ from the
 previous calculation.  </p>
 <h3 id="the-difference">The difference</h3>
 <p>The difference comes from the term like:</p>
-<div class="math">$$  
+<p><span class="katex-error" style="color:#cc0000" title="ParseError: KaTeX parse error: Can't use function '$' in math mode at position 1: $̲   P(J2|B1,J1)P…">$  
 P(J2|B1,J1)P(J1|B1)  
-$$</div>
+</span>$</p>
 <p>In the <em>incorrect</em> version, we had</p>
-<div class="math">$$  
+<p><span class="katex-error" style="color:#cc0000" title="ParseError: KaTeX parse error: Can't use function '$' in math mode at position 1: $̲   P(J2|B1,J1)P…">$  
 P(J2|B1,J1)P(J1)  
-$$</div>
+</span>$</p>
 <p>Essentially, I was being sloppy, and forgot to copy the right-hand side
 of the conditional, without the <em>B1</em>.</p>
 <p>What I find interesting, which is why I've gone to such a detail, are
@@ -165,68 +168,6 @@ without a numerical result to support it.  </p>
 first. Thinking in terms of information, it makes sense - knowing that
 the first card is black tells you nothing about the rank of the second
 card.  </p>
-<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
-    var align = "center",
-        indent = "0em",
-        linebreak = "false";
-
-    if (false) {
-        align = (screen.width < 768) ? "left" : align;
-        indent = (screen.width < 768) ? "0em" : indent;
-        linebreak = (screen.width < 768) ? 'true' : linebreak;
-    }
-
-    var mathjaxscript = document.createElement('script');
-    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
-    mathjaxscript.type = 'text/javascript';
-    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
-
-    var configscript = document.createElement('script');
-    configscript.type = 'text/x-mathjax-config';
-    configscript[(window.opera ? "innerHTML" : "text")] =
-        "MathJax.Hub.Config({" +
-        "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
-        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
-        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
-        "    displayAlign: '"+ align +"'," +
-        "    displayIndent: '"+ indent +"'," +
-        "    showMathMenu: true," +
-        "    messageStyle: 'normal'," +
-        "    tex2jax: { " +
-        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
-        "        displayMath: [ ['$$','$$'] ]," +
-        "        processEscapes: true," +
-        "        preview: 'TeX'," +
-        "    }, " +
-        "    'HTML-CSS': { " +
-        "        availableFonts: ['STIX', 'TeX']," +
-        "        preferredFont: 'STIX'," +
-        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
-        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
-        "    }, " +
-        "}); " +
-        "if ('default' !== 'default') {" +
-            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-        "}";
-
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
-}
-</script>
 
 
 								</section>
@@ -312,7 +253,7 @@ card.  </p>
                                             <li><a href="https://bblais.github.io/category/productivity.html">productivity <span>(7)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/programming.html">programming <span>(5)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/projects.html">projects <span>(4)</span></a></li>
-                                            <li><a href="https://bblais.github.io/category/religion.html">religion <span>(30)</span></a></li>
+                                            <li><a href="https://bblais.github.io/category/religion.html">religion <span>(31)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/science.html">science <span>(11)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/unbelievable-project.html">Unbelievable Project <span>(21)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/wordpress_migration.html">wordpress_migration <span>(160)</span></a></li>

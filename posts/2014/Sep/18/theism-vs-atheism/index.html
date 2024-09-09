@@ -11,6 +11,9 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="https://bblais.github.io/theme/css/main.css" />
+		<link rel="stylesheet"
+		href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"
+		crossorigin="anonymous">
 
         <link rel="stylesheet" type="text/css" href="https://bblais.github.io/theme/css/custom.css" media="screen">
     
@@ -69,27 +72,21 @@
 <p>He finishes by describing how moral responsibility hinges on this regularity, because I need to know the likely effect of my actions on others in order to make moral decisions and be responsible for them.  If things were chaotic, if my actions had random effects, then moral responsibility could not work.{.theist}</p>
 <h2 id="the-problem-with-the-math-posteriors-vs-likelihoods">The problem with the math - posteriors vs likelihoods</h2>
 <p>The first problem that struck me was that, from a math point of view, he is simply doing a likelihood ratio:
-</p>
-<div class="math">\begin{eqnarray}
+\begin{eqnarray}
 \frac{P({\rm data}|{\rm theism})}{P({\rm data}|{\rm atheism})}
-\end{eqnarray}</div>
-<p>
+\end{eqnarray}
 and saying that this is greater than one, and thus theism is more likely.  That is just the wrong question to ask.  What we really want to look at, even keeping the same structure, is the ratio of the <em>posterior</em> probabilities, or</p>
-<div class="math">\begin{eqnarray}
+<p>\begin{eqnarray}
 \frac{P({\rm theism}|{\rm data})}{P({\rm atheism}|{\rm data})}
-\end{eqnarray}</div>
-<p>
+\end{eqnarray}
 which is related to the likelihood ratio through Bayes' theorem:</p>
-<div class="math">\begin{eqnarray}
+<p>\begin{eqnarray}
 \frac{P({\rm theism}|{\rm data})}{P({\rm atheism}|{\rm data})} &amp;=&amp; \frac{P({\rm data}|{\rm theism})}{P({\rm data}|{\rm atheism})} \times \frac{P({\rm theism})}{P({\rm atheism})}
-\end{eqnarray}</div>
-<p>
+\end{eqnarray}
 where we factor in the <em>prior</em> probabilities.  Already, we have an issue, because the prior probability for the universe with an extra agent should be smaller than one without such an agent.  If you factor in the an agent with many specific properties, then this is smaller still.  By omitting this part, you could argue for anything.  For example, 
-</p>
-<div class="math">\begin{eqnarray}
+\begin{eqnarray}
 \frac{P({\rm data}|{\rm fairies})}{P({\rm data}|{\rm no-fairies})}&gt;1
-\end{eqnarray}</div>
-<p>
+\end{eqnarray}
 or the regularity of the universe is much more likely given fairies than no-fairies, so that is evidence for the fairies.  Even if true, it is clearly an uninteresting and unuseful claim.</p>
 <h2 id="the-problem-with-the-premise-regarding-theism">The problem with the premise regarding theism</h2>
 <p>The next problem that struck me was that it seemed that Calum was trying to sneak in many more details into his theism than his argument would warrant.  He needs to <em>define</em> what he means by theism to state that it is more likely to result in a regular universe.  For example, a number of counter examples can be made:</p>
@@ -103,68 +100,6 @@ or the regularity of the universe is much more likely given fairies than no-fair
 <h2 id="concluding-thoughts">Concluding thoughts</h2>
 <p>I find Calum's introduction of morality to the argument adds nothing, and only serves as a red herring.  Without some regularity in the universe, even thought itself would be impossible .  We couldn't even have the idea of a "being", or an animal, or life without regularity.  Thus, our mere existence requires regularity - but one that need not be imposed from the outside, with a God.  Introducing the notion of a generic theism causes more problems to the argument than it solves, because it includes Zeus and Cthulhu.  Circularity results when restricting the relevant theism to exclude these possibilities.  Even if Calum solved this, the basic set-up of the problem is answering the wrong question, and is at best an uninteresting and useless result.</p>
 <p>There is more to this episode, which I'll address later, but these objections are enough to derail the entire argument Calum makes.</p>
-<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
-    var align = "center",
-        indent = "0em",
-        linebreak = "false";
-
-    if (false) {
-        align = (screen.width < 768) ? "left" : align;
-        indent = (screen.width < 768) ? "0em" : indent;
-        linebreak = (screen.width < 768) ? 'true' : linebreak;
-    }
-
-    var mathjaxscript = document.createElement('script');
-    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
-    mathjaxscript.type = 'text/javascript';
-    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
-
-    var configscript = document.createElement('script');
-    configscript.type = 'text/x-mathjax-config';
-    configscript[(window.opera ? "innerHTML" : "text")] =
-        "MathJax.Hub.Config({" +
-        "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
-        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
-        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
-        "    displayAlign: '"+ align +"'," +
-        "    displayIndent: '"+ indent +"'," +
-        "    showMathMenu: true," +
-        "    messageStyle: 'normal'," +
-        "    tex2jax: { " +
-        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
-        "        displayMath: [ ['$$','$$'] ]," +
-        "        processEscapes: true," +
-        "        preview: 'TeX'," +
-        "    }, " +
-        "    'HTML-CSS': { " +
-        "        availableFonts: ['STIX', 'TeX']," +
-        "        preferredFont: 'STIX'," +
-        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
-        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
-        "    }, " +
-        "}); " +
-        "if ('default' !== 'default') {" +
-            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-        "}";
-
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
-}
-</script>
 
 
 								</section>
@@ -250,7 +185,7 @@ or the regularity of the universe is much more likely given fairies than no-fair
                                             <li><a href="https://bblais.github.io/category/productivity.html">productivity <span>(7)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/programming.html">programming <span>(5)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/projects.html">projects <span>(4)</span></a></li>
-                                            <li><a href="https://bblais.github.io/category/religion.html">religion <span>(30)</span></a></li>
+                                            <li><a href="https://bblais.github.io/category/religion.html">religion <span>(31)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/science.html">science <span>(11)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/unbelievable-project.html">Unbelievable Project <span>(21)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/wordpress_migration.html">wordpress_migration <span>(160)</span></a></li>

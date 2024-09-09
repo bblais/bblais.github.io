@@ -11,6 +11,9 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="https://bblais.github.io/theme/css/main.css" />
+		<link rel="stylesheet"
+		href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"
+		crossorigin="anonymous">
 
         <link rel="stylesheet" type="text/css" href="https://bblais.github.io/theme/css/custom.css" media="screen">
     
@@ -59,72 +62,10 @@
 										<span class="image left"><img src="https://bblais.github.io/images/nasa_zodiac.jpg"></span>
 
 
-									<p>A friend of mine who is interested in astrology claims that he can determine my astrological sign from some simple questions, and knowing me for years (although not knowing my birthday).  The claim is that he can determine it "well above random chance".   A 20% number was floated out by him, although without many specifics, and I note that this number may depend on the procedures used. Also, this sort of <span class="math">\(N=1\)</span> exercise is not exactly compelling regardless of the result but I find it interesting nonetheless. What makes a good test?  What would convince me?  What would unconvince him?</p>
+									<p>A friend of mine who is interested in astrology claims that he can determine my astrological sign from some simple questions, and knowing me for years (although not knowing my birthday).  The claim is that he can determine it "well above random chance".   A 20% number was floated out by him, although without many specifics, and I note that this number may depend on the procedures used. Also, this sort of <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">N=1</annotation></semantics></math></span><span aria-hidden="true" class="katex-html"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span> exercise is not exactly compelling regardless of the result but I find it interesting nonetheless. What makes a good test?  What would convince me?  What would unconvince him?</p>
 <p>Of course we'd have to agree that it was a twelve sign zodiac, not the more "accurate" <a href="http://nasa.tumblr.com/post/150688852794/zodiac">13 sign zodiac</a>.  We'd also have to agree on <a href="https://en.wikipedia.org/wiki/Sidereal_and_tropical_astrology">tropical signs vs sidereal signs</a>.  And of course, the shift in the signs due to the <a href="http://www.livescience.com/9292-wobbly-earth-means-horoscope-wrong.html">changing tilt of the Earth over time</a>.  Of course, I'm not taking this concept too seriously, not because of some anti-astrological bias or prejudice.  The reason I don't take astrology too seriously currently is that I have never seen any compelling evidence for astrological effects, nor have I heard any plausible mechanism for the proposed effects, and further I have seen astrological predictions that have not been demonstrated.  I can be convinced if someone shows me the actual data to support it - data that doesn't collapse under scrutiny.  </p>
 <p>Back to my friend...he then added that he'd prefers to rule out signs one-by-one, leaving the actual sign for last, and the exercise ends if he tries to rule out my actual sign. At first I thought this would make a difference, but if all of the questions are like "are you typically impulsive or cautious" I can't imagine how that could give any information about birthday.  If there is no new information, then there should be no change in the probabilities.  I even did a quick simulation to confirm this, although not worth posting the code, because sometimes ones intuition leads one astray when talking about probabilities. </p>
 <p>My next question for myself will be to ask: how much data does one need to take in order to tell the difference between a 20% correct astrologer and a random (about 9%) astrologer.  Even at best, if my friend gets my sign wrong he still was 80% likely to do so.  </p>
-<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
-    var align = "center",
-        indent = "0em",
-        linebreak = "false";
-
-    if (false) {
-        align = (screen.width < 768) ? "left" : align;
-        indent = (screen.width < 768) ? "0em" : indent;
-        linebreak = (screen.width < 768) ? 'true' : linebreak;
-    }
-
-    var mathjaxscript = document.createElement('script');
-    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
-    mathjaxscript.type = 'text/javascript';
-    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
-
-    var configscript = document.createElement('script');
-    configscript.type = 'text/x-mathjax-config';
-    configscript[(window.opera ? "innerHTML" : "text")] =
-        "MathJax.Hub.Config({" +
-        "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
-        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
-        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
-        "    displayAlign: '"+ align +"'," +
-        "    displayIndent: '"+ indent +"'," +
-        "    showMathMenu: true," +
-        "    messageStyle: 'normal'," +
-        "    tex2jax: { " +
-        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
-        "        displayMath: [ ['$$','$$'] ]," +
-        "        processEscapes: true," +
-        "        preview: 'TeX'," +
-        "    }, " +
-        "    'HTML-CSS': { " +
-        "        availableFonts: ['STIX', 'TeX']," +
-        "        preferredFont: 'STIX'," +
-        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
-        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
-        "    }, " +
-        "}); " +
-        "if ('default' !== 'default') {" +
-            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-        "}";
-
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
-}
-</script>
 
 
 								</section>
@@ -210,7 +151,7 @@
                                             <li><a href="https://bblais.github.io/category/productivity.html">productivity <span>(7)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/programming.html">programming <span>(5)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/projects.html">projects <span>(4)</span></a></li>
-                                            <li><a href="https://bblais.github.io/category/religion.html">religion <span>(30)</span></a></li>
+                                            <li><a href="https://bblais.github.io/category/religion.html">religion <span>(31)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/science.html">science <span>(11)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/unbelievable-project.html">Unbelievable Project <span>(21)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/wordpress_migration.html">wordpress_migration <span>(160)</span></a></li>

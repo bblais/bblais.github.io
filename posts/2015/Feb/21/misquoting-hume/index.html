@@ -11,6 +11,9 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="https://bblais.github.io/theme/css/main.css" />
+		<link rel="stylesheet"
+		href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"
+		crossorigin="anonymous">
 
         <link rel="stylesheet" type="text/css" href="https://bblais.github.io/theme/css/custom.css" media="screen">
     
@@ -72,23 +75,19 @@
 <p>a bit less pithy, but more correct (although Hume doesn't phrase it quite like that either).  This is at least a factual statement - before the data, we should believe the regular over the rare.  That doesn't imply that data couldn't <em>convince</em> us of rare events, it only implies that it is more <em>difficult</em> for data to convince us of rare vs regular events (i.e. you need better evidence for the rare).  </p>
 <p>In an <a href="http://ez.premierchristianradio.com/radio/Shows/Saturday/Unbelievable/Episodes/Unbelievable-9-Aug-2008-Norman-Geisler-American-Masters-of-Apologetics-pt-4">Unbelievable podcast interview with apologist Norman Geisler</a>, Geisler uses the first "quote" of Hume above, and then argues that Hume must be wrong because science already accepts singular and rare events - the Big Bang, the origin of life, and macro evolution (this last one is, of course, neither singular nor rare).  Geisler then concludes that miracles can exist!  However, seen in the light of probability theory, it becomes clear.  </p>
 <p>The prior probability of the events is low:
-</p>
-<div class="math">\begin{eqnarray}
-P(\mbox{Big Bang})\ll 1 \\\\
-P(\mbox{Origin of Life})\ll 1 \\\\
-P(\mbox{Macro Evolution})\ll 1 \\\\
+\begin{eqnarray}
+P(\mbox{Big Bang})\ll 1 \\
+P(\mbox{Origin of Life})\ll 1 \\
+P(\mbox{Macro Evolution})\ll 1 \\
 P(\mbox{Miracles})\ll 1
-\end{eqnarray}</div>
-<p>
+\end{eqnarray}
 but with data, we have something quite different:
-</p>
-<div class="math">\begin{eqnarray}
-P(\mbox{Big Bang}|{\rm data})\sim 1 \\\\
-P(\mbox{Origin of Life}|{\rm data})\sim 1 \\\\
-P(\mbox{Macro Evolution}|{\rm data})\sim 1 \\\\
+\begin{eqnarray}
+P(\mbox{Big Bang}|{\rm data})\sim 1 \\
+P(\mbox{Origin of Life}|{\rm data})\sim 1 \\
+P(\mbox{Macro Evolution}|{\rm data})\sim 1 \\
 P(\mbox{Miracles}|{\rm data})\sim  0
-\end{eqnarray}</div>
-<p>
+\end{eqnarray}
 where the data are</p>
 <ul>
 <li>Big Bang - <a href="http://www.talkorigins.org/faqs/astronomy/bigbang.html">a long list</a> </li>
@@ -97,68 +96,6 @@ where the data are</p>
 <li>Miracles - nothing convincing to the scientific community</li>
 </ul>
 <p>So, although all these things <em>can</em> occur, only a few of them <em>actually</em> have evidence strong enough to overcome their initial low prior probability.  Hume recognized this for miracles, as was clear from his writings, although it would have been clearer had he had the benefit of probabilistic vocabulary.  Don't take my word for it, go read Hume <a href="http://www.bartleby.com/37/3/14.html">here</a>, <a href="http://www.bartleby.com/37/3/15.html">and here</a>.</p>
-<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
-    var align = "center",
-        indent = "0em",
-        linebreak = "false";
-
-    if (false) {
-        align = (screen.width < 768) ? "left" : align;
-        indent = (screen.width < 768) ? "0em" : indent;
-        linebreak = (screen.width < 768) ? 'true' : linebreak;
-    }
-
-    var mathjaxscript = document.createElement('script');
-    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
-    mathjaxscript.type = 'text/javascript';
-    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
-
-    var configscript = document.createElement('script');
-    configscript.type = 'text/x-mathjax-config';
-    configscript[(window.opera ? "innerHTML" : "text")] =
-        "MathJax.Hub.Config({" +
-        "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
-        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
-        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
-        "    displayAlign: '"+ align +"'," +
-        "    displayIndent: '"+ indent +"'," +
-        "    showMathMenu: true," +
-        "    messageStyle: 'normal'," +
-        "    tex2jax: { " +
-        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
-        "        displayMath: [ ['$$','$$'] ]," +
-        "        processEscapes: true," +
-        "        preview: 'TeX'," +
-        "    }, " +
-        "    'HTML-CSS': { " +
-        "        availableFonts: ['STIX', 'TeX']," +
-        "        preferredFont: 'STIX'," +
-        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
-        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
-        "    }, " +
-        "}); " +
-        "if ('default' !== 'default') {" +
-            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-        "}";
-
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
-}
-</script>
 
 
 								</section>
@@ -244,7 +181,7 @@ where the data are</p>
                                             <li><a href="https://bblais.github.io/category/productivity.html">productivity <span>(7)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/programming.html">programming <span>(5)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/projects.html">projects <span>(4)</span></a></li>
-                                            <li><a href="https://bblais.github.io/category/religion.html">religion <span>(30)</span></a></li>
+                                            <li><a href="https://bblais.github.io/category/religion.html">religion <span>(31)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/science.html">science <span>(11)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/unbelievable-project.html">Unbelievable Project <span>(21)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/wordpress_migration.html">wordpress_migration <span>(160)</span></a></li>

@@ -11,6 +11,9 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="https://bblais.github.io/theme/css/main.css" />
+		<link rel="stylesheet"
+		href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"
+		crossorigin="anonymous">
 
         <link rel="stylesheet" type="text/css" href="https://bblais.github.io/theme/css/custom.css" media="screen">
     
@@ -64,29 +67,27 @@
 pip install emcee
 </code></pre></div>
 
-<p>In this example, like <a href="https://bblais.github.io/posts/2021/Apr/15/stats-101-examples-with-mcmc/">the last one</a>, there is some true value, we call <span class="math">\(\mu\)</span>.  The <span class="math">\(N\)</span> data points we have, <span class="math">\(\{x_i\}\)</span>, consist of that true value with added independent, normally-distributed noise of <em>unknown</em> scale, <span class="math">\(\sigma\)</span>.  </p>
+<p>In this example, like <a href="https://bblais.github.io/posts/2021/Apr/15/stats-101-examples-with-mcmc/">the last one</a>, there is some true value, we call <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi></mrow><annotation encoding="application/x-tex">\mu</annotation></semantics></math></span><span aria-hidden="true" class="katex-html"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">μ</span></span></span></span>.  The <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi></mrow><annotation encoding="application/x-tex">N</annotation></semantics></math></span><span aria-hidden="true" class="katex-html"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span> data points we have, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">{</mo><msub><mi>x</mi><mi>i</mi></msub><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\{x_i\}</annotation></semantics></math></span><span aria-hidden="true" class="katex-html"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">}</span></span></span></span>, consist of that true value with added independent, normally-distributed noise of <em>unknown</em> scale, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi></mrow><annotation encoding="application/x-tex">\sigma</annotation></semantics></math></span><span aria-hidden="true" class="katex-html"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span></span></span></span>.  </p>
 <p>For a Bayesian solution, we need to specify the likelihood function -- how our model produces the data -- and the prior probability for the parameters.  The likelihood function is determined exactly as before,</p>
-<div class="math">$$
+<p><span class="katex-error" style="color:#cc0000" title="ParseError: KaTeX parse error: No such environment: eqnarray at position 8:  \begin{̲e̲q̲n̲a̲r̲r̲a̲y̲}̲ x_i &amp;\sim&amp; \mu…">
 \begin{eqnarray}
 x_i &amp;\sim&amp; \mu + \epsilon_i \\
 P(x_i|\mu,\sigma) &amp;\sim&amp; \text{Normal}(x_i-\mu,\sigma) \\
 P(\{x_i\}|\mu,\sigma) &amp;\sim&amp; \prod_i \text{Normal}(x_i-\mu,\sigma) 
 \end{eqnarray}
-$$</div>
-<p>
-but with <em>unknown</em> scale, <span class="math">\(\sigma\)</span>.</p>
-<p>In the "<em>Statistics 101</em>" examples, the results are typically equivalent to <em>uniform</em> priors on the location parameters, but <a href="https://en.wikipedia.org/wiki/Jeffreys_prior">Jeffreys</a> priors on <em>scale</em> parameters, so we'll assume uniform priors on <span class="math">\(\mu\)</span> and Jeffreys priors on <span class="math">\(\sigma\)</span></p>
+</span>
+but with <em>unknown</em> scale, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi></mrow><annotation encoding="application/x-tex">\sigma</annotation></semantics></math></span><span aria-hidden="true" class="katex-html"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span></span></span></span>.</p>
+<p>In the "<em>Statistics 101</em>" examples, the results are typically equivalent to <em>uniform</em> priors on the location parameters, but <a href="https://en.wikipedia.org/wiki/Jeffreys_prior">Jeffreys</a> priors on <em>scale</em> parameters, so we'll assume uniform priors on <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi></mrow><annotation encoding="application/x-tex">\mu</annotation></semantics></math></span><span aria-hidden="true" class="katex-html"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">μ</span></span></span></span> and Jeffreys priors on <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi></mrow><annotation encoding="application/x-tex">\sigma</annotation></semantics></math></span><span aria-hidden="true" class="katex-html"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span></span></span></span></p>
 <h2 id="setting-up-the-problem">Setting up the problem</h2>
-<p>In this example, like <a href="https://bblais.github.io/posts/2021/Apr/15/stats-101-examples-with-mcmc/">the last one</a>, there is some true value, we call <span class="math">\(\mu\)</span>, with normally-distributed noise but this time with unknown scale, <span class="math">\(\sigma\)</span>.  The likelihood function is determined identically as before, </p>
-<div class="math">$$
+<p>In this example, like <a href="https://bblais.github.io/posts/2021/Apr/15/stats-101-examples-with-mcmc/">the last one</a>, there is some true value, we call <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi></mrow><annotation encoding="application/x-tex">\mu</annotation></semantics></math></span><span aria-hidden="true" class="katex-html"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">μ</span></span></span></span>, with normally-distributed noise but this time with unknown scale, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi></mrow><annotation encoding="application/x-tex">\sigma</annotation></semantics></math></span><span aria-hidden="true" class="katex-html"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span></span></span></span>.  The likelihood function is determined identically as before, </p>
+<p><span class="katex-error" style="color:#cc0000" title="ParseError: KaTeX parse error: No such environment: eqnarray at position 8:  \begin{̲e̲q̲n̲a̲r̲r̲a̲y̲}̲ x_i &amp;\sim&amp; \mu…">
 \begin{eqnarray}
 x_i &amp;\sim&amp; \mu + \epsilon_i \\
 P(x_i|\mu,\sigma) &amp;\sim&amp; \text{Normal}(\mu,\sigma) 
 \end{eqnarray}
-$$</div>
-<p>
-known <span class="math">\(\sigma\)</span></p>
-<p>and we'll assume uniform priors on <span class="math">\(\mu\)</span>.  The prior for <span class="math">\(\sigma\)</span>, which we must now estimate, is taken to be a <a href="https://en.wikipedia.org/wiki/Jeffreys_prior">Jeffreys prior</a>.  This prior is uniform in <span class="math">\(\log \sigma\)</span> or, in other words, uniform in <em>scale</em>. </p>
+</span>
+known <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi></mrow><annotation encoding="application/x-tex">\sigma</annotation></semantics></math></span><span aria-hidden="true" class="katex-html"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span></span></span></span></p>
+<p>and we'll assume uniform priors on <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi></mrow><annotation encoding="application/x-tex">\mu</annotation></semantics></math></span><span aria-hidden="true" class="katex-html"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">μ</span></span></span></span>.  The prior for <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi></mrow><annotation encoding="application/x-tex">\sigma</annotation></semantics></math></span><span aria-hidden="true" class="katex-html"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span></span></span></span>, which we must now estimate, is taken to be a <a href="https://en.wikipedia.org/wiki/Jeffreys_prior">Jeffreys prior</a>.  This prior is uniform in <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>log</mi><mo>⁡</mo><mi>σ</mi></mrow><annotation encoding="application/x-tex">\log \sigma</annotation></semantics></math></span><span aria-hidden="true" class="katex-html"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span></span></span></span> or, in other words, uniform in <em>scale</em>. </p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">lnlike</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="n">μ</span><span class="p">):</span>
     <span class="c1"># known σ</span>
     <span class="n">x</span><span class="o">=</span><span class="n">data</span>
@@ -126,7 +127,7 @@ Done.
 <p><img alt="" src="https://bblais.github.io/images/μt distribution.png">
 <img alt="" src="https://bblais.github.io/images/σ distribution.png"></p>
 <h2 id="comparing-to-textbook-examples">Comparing to textbook examples</h2>
-<p>We compare to textbook solution for <span class="math">\(\mu\)</span> (i.e. Student t-distribution),</p>
+<p>We compare to textbook solution for <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi></mrow><annotation encoding="application/x-tex">\mu</annotation></semantics></math></span><span aria-hidden="true" class="katex-html"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">μ</span></span></span></span> (i.e. Student t-distribution),</p>
 <div class="highlight"><pre><span></span><code><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">model</span><span class="o">.</span><span class="n">get_distribution</span><span class="p">(</span><span class="s1">&#39;μ&#39;</span><span class="p">)</span>
 
 <span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="s1">&#39;-&#39;</span><span class="p">)</span>
@@ -139,7 +140,7 @@ Done.
 </code></pre></div>
 
 <p><img alt="" src="https://bblais.github.io/images/compare μ t.png"></p>
-<p>and the textbook solution for <span class="math">\(\sigma\)</span> (i.e. Chi-square),</p>
+<p>and the textbook solution for <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi></mrow><annotation encoding="application/x-tex">\sigma</annotation></semantics></math></span><span aria-hidden="true" class="katex-html"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span></span></span></span> (i.e. Chi-square),</p>
 <div class="highlight"><pre><span></span><code><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">model</span><span class="o">.</span><span class="n">get_distribution</span><span class="p">(</span><span class="s1">&#39;σ&#39;</span><span class="p">,</span><span class="n">bins</span><span class="o">=</span><span class="mi">800</span><span class="p">)</span>
 <span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="s1">&#39;-&#39;</span><span class="p">)</span>
 
@@ -155,82 +156,19 @@ Done.
 
 <p><img alt="" src="https://bblais.github.io/images/compare σ.png"></p>
 <h2 id="tail-area-probabilities">Tail-area Probabilities</h2>
-<p>We can easily find the tail-area probability, the Bayesian equivalent to Student-t test, for <span class="math">\(\mu\)</span>,</p>
+<p>We can easily find the tail-area probability, the Bayesian equivalent to Student-t test, for <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi></mrow><annotation encoding="application/x-tex">\mu</annotation></semantics></math></span><span aria-hidden="true" class="katex-html"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">μ</span></span></span></span>,</p>
 <div class="highlight"><pre><span></span><code><span class="n">model</span><span class="o">.</span><span class="n">P</span><span class="p">(</span><span class="s2">&quot;μ&gt;15&quot;</span><span class="p">)</span>
 </code></pre></div>
 
 <div class="highlight"><pre><span></span><code><span class="mf">0.037066666666666664</span>
 </code></pre></div>
 
-<p>and for <span class="math">\(\sigma\)</span>, the Bayesian equivalent to Chi-squared test, </p>
+<p>and for <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi></mrow><annotation encoding="application/x-tex">\sigma</annotation></semantics></math></span><span aria-hidden="true" class="katex-html"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span></span></span></span>, the Bayesian equivalent to Chi-squared test, </p>
 <div class="highlight"><pre><span></span><code><span class="n">model</span><span class="o">.</span><span class="n">P</span><span class="p">(</span><span class="s2">&quot;σ&lt;1&quot;</span><span class="p">)</span>
 </code></pre></div>
 
 <div class="highlight"><pre><span></span><code><span class="mf">0.01985</span>
 </code></pre></div>
-
-<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
-    var align = "center",
-        indent = "0em",
-        linebreak = "false";
-
-    if (false) {
-        align = (screen.width < 768) ? "left" : align;
-        indent = (screen.width < 768) ? "0em" : indent;
-        linebreak = (screen.width < 768) ? 'true' : linebreak;
-    }
-
-    var mathjaxscript = document.createElement('script');
-    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
-    mathjaxscript.type = 'text/javascript';
-    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
-
-    var configscript = document.createElement('script');
-    configscript.type = 'text/x-mathjax-config';
-    configscript[(window.opera ? "innerHTML" : "text")] =
-        "MathJax.Hub.Config({" +
-        "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
-        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
-        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
-        "    displayAlign: '"+ align +"'," +
-        "    displayIndent: '"+ indent +"'," +
-        "    showMathMenu: true," +
-        "    messageStyle: 'normal'," +
-        "    tex2jax: { " +
-        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
-        "        displayMath: [ ['$$','$$'] ]," +
-        "        processEscapes: true," +
-        "        preview: 'TeX'," +
-        "    }, " +
-        "    'HTML-CSS': { " +
-        "        availableFonts: ['STIX', 'TeX']," +
-        "        preferredFont: 'STIX'," +
-        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
-        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
-        "    }, " +
-        "}); " +
-        "if ('default' !== 'default') {" +
-            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-        "}";
-
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
-}
-</script>
 
 
 								</section>
@@ -316,7 +254,7 @@ Done.
                                             <li><a href="https://bblais.github.io/category/productivity.html">productivity <span>(7)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/programming.html">programming <span>(5)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/projects.html">projects <span>(4)</span></a></li>
-                                            <li><a href="https://bblais.github.io/category/religion.html">religion <span>(30)</span></a></li>
+                                            <li><a href="https://bblais.github.io/category/religion.html">religion <span>(31)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/science.html">science <span>(11)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/unbelievable-project.html">Unbelievable Project <span>(21)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/wordpress_migration.html">wordpress_migration <span>(160)</span></a></li>

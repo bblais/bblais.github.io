@@ -11,6 +11,9 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="https://bblais.github.io/theme/css/main.css" />
+		<link rel="stylesheet"
+		href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"
+		crossorigin="anonymous">
 
         <link rel="stylesheet" type="text/css" href="https://bblais.github.io/theme/css/custom.css" media="screen">
     
@@ -147,21 +150,21 @@
 </ul>
 <p>This provides a level of control that is hard to match.  </p>
 <p>To make the theme, as shown in the docs, you need to just make the following files</p>
-<div class="highlight"><pre><span></span><code><span class="w">  </span>├──<span class="w"> </span><span class="nv">static</span>
-<span class="w">  </span>│<span class="w">   </span>├──<span class="w"> </span><span class="nv">css</span>
-<span class="w">  </span>│<span class="w">   </span>└──<span class="w"> </span><span class="nv">images</span>
-<span class="w">  </span>└──<span class="w"> </span><span class="nv">templates</span>
-<span class="w">      </span>├──<span class="w"> </span><span class="nv">archives</span>.<span class="nv">html</span><span class="w">         </span><span class="o">//</span><span class="w"> </span><span class="nv">to</span><span class="w"> </span><span class="nv">display</span><span class="w"> </span><span class="nv">archives</span>
-<span class="w">      </span>├──<span class="w"> </span><span class="nv">period_archives</span>.<span class="nv">html</span><span class="w">  </span><span class="o">//</span><span class="w"> </span><span class="nv">to</span><span class="w"> </span><span class="nv">display</span><span class="w"> </span><span class="nv">time</span><span class="o">-</span><span class="nv">period</span><span class="w"> </span><span class="nv">archives</span>
-<span class="w">      </span>├──<span class="w"> </span><span class="nv">article</span>.<span class="nv">html</span><span class="w">          </span><span class="o">//</span><span class="w"> </span><span class="nv">processed</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">each</span><span class="w"> </span><span class="nv">article</span>
-<span class="w">      </span>├──<span class="w"> </span><span class="nv">author</span>.<span class="nv">html</span><span class="w">           </span><span class="o">//</span><span class="w"> </span><span class="nv">processed</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">each</span><span class="w"> </span><span class="nv">author</span>
-<span class="w">      </span>├──<span class="w"> </span><span class="nv">authors</span>.<span class="nv">html</span><span class="w">          </span><span class="o">//</span><span class="w"> </span><span class="nv">must</span><span class="w"> </span><span class="nv">list</span><span class="w"> </span><span class="nv">all</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">authors</span>
-<span class="w">      </span>├──<span class="w"> </span><span class="nv">categories</span>.<span class="nv">html</span><span class="w">       </span><span class="o">//</span><span class="w"> </span><span class="nv">must</span><span class="w"> </span><span class="nv">list</span><span class="w"> </span><span class="nv">all</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">categories</span>
-<span class="w">      </span>├──<span class="w"> </span><span class="nv">category</span>.<span class="nv">html</span><span class="w">         </span><span class="o">//</span><span class="w"> </span><span class="nv">processed</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">each</span><span class="w"> </span><span class="nv">category</span>
-<span class="w">      </span>├──<span class="w"> </span><span class="nv">index</span>.<span class="nv">html</span><span class="w">            </span><span class="o">//</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">index</span><span class="w"> </span><span class="ss">(</span><span class="nv">list</span><span class="w"> </span><span class="nv">all</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">articles</span><span class="ss">)</span>
-<span class="w">      </span>├──<span class="w"> </span><span class="nv">page</span>.<span class="nv">html</span><span class="w">             </span><span class="o">//</span><span class="w"> </span><span class="nv">processed</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">each</span><span class="w"> </span><span class="nv">page</span>
-<span class="w">      </span>├──<span class="w"> </span><span class="nv">tag</span>.<span class="nv">html</span><span class="w">              </span><span class="o">//</span><span class="w"> </span><span class="nv">processed</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">each</span><span class="w"> </span><span class="nv">tag</span>
-<span class="w">      </span>└──<span class="w"> </span><span class="nv">tags</span>.<span class="nv">html</span><span class="w">             </span><span class="o">//</span><span class="w"> </span><span class="nv">must</span><span class="w"> </span><span class="nv">list</span><span class="w"> </span><span class="nv">all</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">tags</span>.<span class="w"> </span><span class="nv">Can</span><span class="w"> </span><span class="nv">be</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="nv">tag</span><span class="w"> </span><span class="nv">cloud</span>.
+<div class="highlight"><pre><span></span><code>  ├── static
+  │   ├── css
+  │   └── images
+  └── templates
+      ├── archives.html         // to display archives
+      ├── period_archives.html  // to display time-period archives
+      ├── article.html          // processed for each article
+      ├── author.html           // processed for each author
+      ├── authors.html          // must list all the authors
+      ├── categories.html       // must list all the categories
+      ├── category.html         // processed for each category
+      ├── index.html            // the index (list all the articles)
+      ├── page.html             // processed for each page
+      ├── tag.html              // processed for each tag
+      └── tags.html             // must list all the tags. Can be a tag cloud.
 </code></pre></div>
 
 <p>Starting from the free web template, I break off the parts that are included in all of the files and put it in <code>base.html</code>, copying the <a href="https://jinja.palletsprojects.com/en/2.11.x/">Jinja</a> parts from a pelican theme.  Like,</p>
@@ -333,7 +336,7 @@
                                             <li><a href="https://bblais.github.io/category/productivity.html">productivity <span>(7)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/programming.html">programming <span>(5)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/projects.html">projects <span>(4)</span></a></li>
-                                            <li><a href="https://bblais.github.io/category/religion.html">religion <span>(30)</span></a></li>
+                                            <li><a href="https://bblais.github.io/category/religion.html">religion <span>(31)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/science.html">science <span>(11)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/unbelievable-project.html">Unbelievable Project <span>(21)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/wordpress_migration.html">wordpress_migration <span>(160)</span></a></li>
