@@ -79,33 +79,33 @@ going through the calculation, I was in for a surprise.</p>
 <p>You draw two cards from a deck, and ask what is the probability that the
 first is a black card, and the second is a jack. In math notation, we
 want:</p>
-<p><span class="katex-error" style="color:#cc0000" title="ParseError: KaTeX parse error: Can't use function '$' in math mode at position 1: $̲   P(B1,J2)   ">$  
-P(B1,J2)  
-</span>$</p>
+<p>$$<br>
+P(B1,J2)<br>
+$$</p>
 <h2 id="with-replacement">With replacement</h2>
 <p>In replacement, we replace the first card after drawing it, reshuffle,
 and then draw the second. Thus the two events are independent.</p>
-<p><span class="katex-error" style="color:#cc0000" title="ParseError: KaTeX parse error: Can't use function '$' in math mode at position 1: $̲   \begin{array…">$  
-\begin{array}{rcl}  
-P(B1,J2|{\rm replace}) &amp;=&amp; P(B1) \times P(J2) \\  
-&amp;=&amp;\frac{26}{52} \times \frac{4}{52} = 0.0385  
-\end{array}  
-</span>$</p>
+<p>$$<br>
+\begin{array}{rcl}<br>
+P(B1,J2|{\rm replace}) &amp;=&amp; P(B1) \times P(J2) \<br>
+&amp;=&amp;\frac{26}{52} \times \frac{4}{52} = 0.0385<br>
+\end{array}<br>
+$$</p>
 <h2 id="without-replacement">Without replacement</h2>
 <p>Without replacement is a little trickier to set up, because the second
 draw depends on the first.</p>
-<p><span class="katex-error" style="color:#cc0000" title="ParseError: KaTeX parse error: Can't use function '$' in math mode at position 1: $̲   \begin{array…">$  
-\begin{array}{rcl}  
-P(B1,J2|{\rm no-replace}) &amp;=&amp; P(B1) \times P(J2|B1) \\  
+<p>$$<br>
+\begin{array}{rcl}<br>
+P(B1,J2|{\rm no-replace}) &amp;=&amp; P(B1) \times P(J2|B1) \<br>
 &amp;=&amp;\frac{26}{52} \times
 \left(P(J2|B1,J1)P(J1)+P(J2|B1,\overline{J1})P(\overline{J1})
-\right)\\  
+\right)\<br>
 &amp;=&amp;\frac{26}{52} \times \left(\frac{3}{51} \cdot
-\frac{4}{52}+\frac{4}{51} \cdot \frac{48}{52} \right)\\  
-&amp;=&amp;\frac{26}{52} \times \left(\frac{204}{51\cdot 52} \right)\\  
-&amp;=&amp;0.0385  
-\end{array}  
-</span>$</p>
+\frac{4}{52}+\frac{4}{51} \cdot \frac{48}{52} \right)\<br>
+&amp;=&amp;\frac{26}{52} \times \left(\frac{204}{51\cdot 52} \right)\<br>
+&amp;=&amp;0.0385<br>
+\end{array}<br>
+$$</p>
 <p><strong>the same answer!!</strong></p>
 <p><strong>(Note: this problem has an error...can you find it? I will post the
 correction ~~soon~~ <a href="a-funny-little-probability-problem-correct">here</a>, which itself has some interesting
@@ -208,7 +208,7 @@ properties)</strong></p>
                                             <li><a href="https://bblais.github.io/category/programming.html">programming <span>(5)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/projects.html">projects <span>(4)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/religion.html">religion <span>(31)</span></a></li>
-                                            <li><a href="https://bblais.github.io/category/science.html">science <span>(11)</span></a></li>
+                                            <li><a href="https://bblais.github.io/category/science.html">science <span>(12)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/unbelievable-project.html">Unbelievable Project <span>(21)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/wordpress_migration.html">wordpress_migration <span>(160)</span></a></li>
      

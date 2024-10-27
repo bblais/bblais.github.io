@@ -1,0 +1,257 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Stats 101 Examples - Revisited  · bblais on the web
+</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="http://localhost:8000/theme/css/main.css" />
+		<link rel="stylesheet"
+		href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"
+		crossorigin="anonymous">
+
+        <link rel="stylesheet" type="text/css" href="http://localhost:8000/theme/css/custom.css" media="screen">
+    
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+        <div id="wrapper">
+
+		<!-- Main -->
+			<div id="main">
+
+				<div class="inner">
+
+					<!-- Header -->
+						<header id="header">
+							<a href="http://localhost:8000/index.html" class="logo"><strong>bblais on the web</strong></a>
+							<ul class="icons">
+								<li><a href="https://twitter.com/bblais" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="https://www.linkedin.com/in/brian-blais-bb66482b/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+								<li><a href="https://github.com/bblais" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="https://bblais.github.io/feeds/all.atom.xml" class="icon solid fa-rss"><span class="label">YouTube</span></a></li>
+								<li><a href="mai&#108;&#116;o&#58;b&#37;6&#50;%6C&#37;61i%&#55;3%40%62ry&#37;61nt%2Eed&#37;7&#53;" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+								<li><a href="https://www.youtube.com/channel/UC8cN5_0dy5o9qNPpdLxPa8w" class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
+							</ul>
+						</header>
+
+
+
+
+
+
+
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h1>Stats 101 Examples - Revisited</h1> 
+ 
+										<p><strong><time pubdate="pubdate" datetime="2024-09-10T00:00:00-04:00">Tue 10 September 2024</strong>
+												In  
+													<a href="#0">#MCMC</a>
+													<a href="#0">#Bayesian</a>
+													<em><a href="http://localhost:8000/category/math.html">#math</a></em>
+										</p>
+									</header>
+
+										<span class="image left"><img src="http://localhost:8000/images/edge2edge-media-uKlneQRwaxY-unsplash.jpg"></span>
+
+
+									<p>In some previous posts I've explored an easy Python implementation of some elementary "Stats 101 Examples" using MCMC instead of the standard statistical tests. </p>
+<ul>
+<li><a href="{filename}MCMC Simple - mu known sigma.md">Best Estimate with Known Variation</a> (i.e. z-test)</li>
+<li><a href="{filename}MCMC Simple - mu unknown sigma.md">Best Estimate with Unknown Variation</a> (i.e. Student-T test)</li>
+<li><a href="{filename}MCMC Simple - proportion.md">Proportion</a> (i.e. proportion test)</li>
+<li><a href="{filename}MCMC Simple - Cauchy.md">Cauchy distribution</a> (i.e. no known frequentist test)</li>
+</ul>
+<p>Since the original posts I've rewritten the code to be more flexible and closer to the calculations than the original implementation.</p>
+<p>In all of these posts I'm going to use a python library I make for my science-programming class, <a href="https://github.com/bblais/sci378">stored on github</a>, and the <a href="https://emcee.readthedocs.io/en/stable/">emcee</a> library.  Install like:</p>
+<div class="highlight"><pre><span></span><code>pip install &quot;git+git://github.com/bblais/sci378&quot; --upgrade
+pip install emcee
+</code></pre></div>
+
+
+								</section>
+
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT 
+     *  THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR 
+     *  PLATFORM OR CMS.
+     *  
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: 
+     *  https://disqus.com/admin/universalcode/#configuration-variables
+     */
+    
+    // var disqus_config = function () {
+    //     // Replace PAGE_URL with your page's canonical URL variable
+    //     this.page.url = PAGE_URL;  
+        
+    //     // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    //     this.page.identifier = PAGE_IDENTIFIER; 
+    // };
+    
+    
+    (function() {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
+        var d = document, s = d.createElement('script');
+        var disqus_shortname = "bblaisontheweb"; 
+        var disqus_title = "Stats 101 Examples - Revisited";
+        
+        // IMPORTANT: Replace EXAMPLE with your forum shortname!
+        s.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+        
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>
+    Please enable JavaScript to view the 
+    <a href="https://disqus.com/?ref_noscript" rel="nofollow">
+        comments powered by Disqus.
+    </a>
+</noscript>
+
+
+
+
+
+
+
+
+
+				</div>
+			</div>
+	
+				<!-- Sidebar -->
+                <div id="sidebar">
+                    <div class="inner">
+
+                        <!-- Search -->
+                        <section id="search" class="alt">
+                            <form class="navbar-search" action="http://localhost:8000/search.html" onsubmit="return validateForm(this.elements['q'].value);"> 
+                                <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form>
+                        </section>
+
+                        <!-- Menu -->
+                            <nav id="menu">
+                                <header class="major">
+                                    <h2>Menu</h2>
+                                </header>
+                                <ul>
+                                    <li><a href="http://localhost:8000/index.html">Homepage</a></li>
+                                    <li>
+                                        <span class="opener"><a href="http://localhost:8000/index.html#0" title="">Blog</a></span>
+                                        <ul>
+                                            <li><a href="http://localhost:8000/index.html#blog">Recent</a></li>
+                                            <li><a href="http://localhost:8000/category/articles.html">articles <span>(67)</span></a></li>
+                                            <li><a href="http://localhost:8000/category/books.html">books <span>(3)</span></a></li>
+                                            <li><a href="http://localhost:8000/category/critical-thinking.html">critical thinking <span>(3)</span></a></li>
+                                            <li><a href="http://localhost:8000/category/math.html">math <span>(2)</span></a></li>
+                                            <li><a href="http://localhost:8000/category/media.html">media <span>(11)</span></a></li>
+                                            <li><a href="http://localhost:8000/category/presentations.html">presentations <span>(4)</span></a></li>
+                                            <li><a href="http://localhost:8000/category/productivity.html">productivity <span>(7)</span></a></li>
+                                            <li><a href="http://localhost:8000/category/programming.html">programming <span>(5)</span></a></li>
+                                            <li><a href="http://localhost:8000/category/projects.html">projects <span>(4)</span></a></li>
+                                            <li><a href="http://localhost:8000/category/religion.html">religion <span>(19)</span></a></li>
+                                            <li><a href="http://localhost:8000/category/science.html">science <span>(8)</span></a></li>
+                                            <li><a href="http://localhost:8000/category/unbelievable-project.html">Unbelievable Project <span>(18)</span></a></li>
+                                            <li><a href="http://localhost:8000/category/wordpress_migration.html">wordpress_migration <span>(152)</span></a></li>
+     
+                                        </ul>
+                                    </li>
+                                    <li><a href="http://localhost:8000/pages/presentations.html">Presentations</a></li>
+                                    <li><a href="http://localhost:8000/pages/projects.html">Projects</a></li>
+                                    <li><a href="http://localhost:8000/archives.html">Archives</a></li>
+                                    <li><a href="http://localhost:8000/about.html">About</a></li>
+                                </ul>
+                            </nav>
+
+                        <!-- Section -->
+                            <section>
+                                <header class="major">
+                                    <h2>Popular Posts</h2>
+                                </header>
+
+                                <div class="mini-posts">
+                                        <article>
+                                            <a href="http://localhost:8000/posts/2020/Jul/09/skepticism-and-dubious-medical-procedures/" class="image">
+                                                <img src="http://localhost:8000/images/mohamed-nohassi-odxB5oIG_iA-unsplash.jpg" alt="mohamed-nohassi-odxB5oIG_iA-unsplash.jpg">
+                                            </a>
+                                            <p><strong>Skepticism and Dubious Medical Procedures </strong>
+                                                <p>In my discussion with Jonathan McLatchie on the Still Unbelievable podcast, I said that there hasn’t been a verified miracle claim even since Hume’s essay on miracles.  Here I look into the papers he references in response.</p></p>
+                                        </article>
+                                        <article>
+                                            <a href="http://localhost:8000/posts/2019/May/15/useful-fictions/" class="image">
+                                                <img src="http://localhost:8000/images/green-chameleon-21532-unsplash.jpg" alt="green-chameleon-21532-unsplash.jpg">
+                                            </a>
+                                            <p><strong>Useful Fictions </strong>
+                                                <p>People who externalize the creative influence with a genie or muse  easily explain why they can be amazingly creative at one moment and be stuck in the next — the muse simply is not there. Given that humans are inherently story-driven beings there is some value in the short-hand of describing this "other" as an external agent, an effect outside of our immediate control.</p></p>
+                                        </article>
+                                        <article>
+                                            <a href="http://localhost:8000/posts/2018/Jun/18/10-dogmas-of-science-dismantled/" class="image">
+                                                <img src="http://localhost:8000/images/ocean-water-1149661_960_720.jpg" alt="ocean-water-1149661_960_720.jpg">
+                                            </a>
+                                            <p><strong>10 dogmas of science dismantled </strong>
+                                                <p>In  his <a href="https://www.youtube.com/watch?v=1TerTgDEgUE&amp;t=583s">talk about the limitations of science</a>, Rupert Sheldrake lists the "10 dogmas of modern science" (also listed here in text  <a href="http://wariscrime.com/new/the-ten-dogmas-of-modern-science/">http://wariscrime.com/new/the-ten-dogmas-of-modern-science/</a>).  They are:</p>
+<blockquote>
+<ol>
+<li>Everything …</li></ol></blockquote></p>
+                                        </article>
+                                </div>
+                            </section>
+
+                        <!-- Section -->
+                            <section>
+                                <header class="major">
+                                    <h2>Get in touch</h2>
+                                </header>
+                                <p>What problems are you interested in?  How can I help?</p>
+                                <ul class="contact">
+                                    <li class="icon brands fa-twitter"><a href="https://twitter.com/bblais">@bblais</a></li>
+                                    <li class="icon solid fa-envelope"><a href='mai&#108;&#116;o&#58;b&#37;6&#50;%6C&#37;61i%&#55;3%40%62ry&#37;61nt%2Eed&#37;7&#53;'>b&#98;&#108;&#97;is&#64;bry&#97;&#110;t&#46;&#101;d&#117;</a></li>
+                                    <li class="icon solid fa-phone"><a href="tel://4012326153">(401) 232-6153</a></li>
+                                    <li class="icon solid fa-home">Bryant University<br>
+                                        1150 Douglas Pike<br>
+                                        Smithfield, RI<br>
+                                        02917 US</li>
+                                </ul>
+                            </section>
+
+                        <!-- Footer -->
+                            <footer id="footer">
+                                <p class="copyright">&copy; 2021 - All rights reserved. Adapted from <a href="https://html5up.net/editorial">Editorial Theme</a> html5up.net | @ajlkn, 
+                                    Converted to <a href="https://blog.getpelican.com">Pelican</a> theme by <a href="#">Brian Blais</a>. </p>
+                            </footer>
+
+                    </div>
+                </div>
+
+		</div>
+
+
+    <!-- Scripts -->
+	<script src="http://localhost:8000/theme/js/jquery.min.js"></script>
+	<script src="http://localhost:8000/theme/js/elegant.prod.9e9d5ce754.js"></script>
+	<script src="http://localhost:8000/theme/js/browser.min.js"></script>
+	<script src="http://localhost:8000/theme/js/breakpoints.min.js"></script>
+	<script src="http://localhost:8000/theme/js/util.js"></script>
+	<script src="http://localhost:8000/theme/js/main.js"></script>
+	<script>
+		function validateForm(query)
+		{
+			return (query.length > 0);
+		}
+	</script>
+	
+	
+	</body>
+</html>
