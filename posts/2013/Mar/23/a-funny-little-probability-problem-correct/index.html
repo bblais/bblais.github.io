@@ -79,9 +79,9 @@ the implications of the error.</p>
 <p>You draw two cards from a deck, and ask what is the probability that the
 first is a black card, and the second is a jack. In math notation, we
 want:</p>
-<p>$$<br>
-P(B1,J2)<br>
-$$</p>
+<p><span class="katex-error" style="color:#cc0000" title="ParseError: KaTeX parse error: Can't use function '$' in math mode at position 1: $̲   P(B1,J2)   ">$  
+P(B1,J2)  
+</span>$</p>
 <h2 id="the-right-answer-and-how-i-know">The right answer, and how I know</h2>
 <p>The easiest way to be absolutely sure I had the right answer is to
 simply outline every possible two-hand deal, and count the number of
@@ -119,38 +119,38 @@ x 51), which is the <em>same</em> fraction.</p>
 <p><em>This part was correct, and just repeated here.</em></p>
 <p>In replacement, we replace the first card after drawing it, reshuffle,
 and then draw the second. Thus the two events are independent.</p>
-<p>$$<br>
-\begin{array}{rcl}<br>
-P(B1,J2|{\rm replace}) &amp;=&amp; P(B1) \times P(J2) \<br>
-&amp;=&amp;\frac{26}{52} \times \frac{4}{52} = \frac{104}{2704}=0.0385<br>
-\end{array}<br>
-$$</p>
+<p><span class="katex-error" style="color:#cc0000" title="ParseError: KaTeX parse error: Can't use function '$' in math mode at position 1: $̲   \begin{array…">$  
+\begin{array}{rcl}  
+P(B1,J2|{\rm replace}) &amp;=&amp; P(B1) \times P(J2) \\  
+&amp;=&amp;\frac{26}{52} \times \frac{4}{52} = \frac{104}{2704}=0.0385  
+\end{array}  
+</span>$</p>
 <h3 id="without-replacement_1">Without replacement</h3>
-<p>$$<br>
-\begin{array}{rcl}<br>
-P(B1,J2|{\rm no-replace}) &amp;=&amp; P(B1) \times P(J2|B1) \<br>
+<p><span class="katex-error" style="color:#cc0000" title="ParseError: KaTeX parse error: Can't use function '$' in math mode at position 1: $̲   \begin{array…">$  
+\begin{array}{rcl}  
+P(B1,J2|{\rm no-replace}) &amp;=&amp; P(B1) \times P(J2|B1) \\  
 &amp;=&amp;\frac{26}{52} \times
-\left(P(J2|B1,J1)\underline{P(J1|B1)}+P(J2|B1,\overline{J1})\underline{P(\overline{J1}|B1)}\right)\<br>
+\left(P(J2|B1,J1)\underline{P(J1|B1)}+P(J2|B1,\overline{J1})\underline{P(\overline{J1}|B1)}\right)\\  
 &amp;=&amp;\frac{26}{52} \times \left(\frac{3}{51} \cdot
 \underline{\frac{2}{26}}+\frac{4}{51} \cdot
-\underline{\frac{24}{26}} \right)\<br>
+\underline{\frac{24}{26}} \right)\\  
 &amp;=&amp;\frac{26}{52} \times \underline{\left(\frac{102}{51\cdot 26}
-\right)}\<br>
-&amp;=&amp;\frac{102}{2652}\<br>
-&amp;=&amp;0.0385<br>
-\end{array}<br>
-$$</p>
+\right)}\\  
+&amp;=&amp;\frac{102}{2652}\\  
+&amp;=&amp;0.0385  
+\end{array}  
+</span>$</p>
 <p>where I have put boxes, or underline, around where I differ from the
 previous calculation.  </p>
 <h3 id="the-difference">The difference</h3>
 <p>The difference comes from the term like:</p>
-<p>$$<br>
-P(J2|B1,J1)P(J1|B1)<br>
-$$</p>
+<p><span class="katex-error" style="color:#cc0000" title="ParseError: KaTeX parse error: Can't use function '$' in math mode at position 1: $̲   P(J2|B1,J1)P…">$  
+P(J2|B1,J1)P(J1|B1)  
+</span>$</p>
 <p>In the <em>incorrect</em> version, we had</p>
-<p>$$<br>
-P(J2|B1,J1)P(J1)<br>
-$$</p>
+<p><span class="katex-error" style="color:#cc0000" title="ParseError: KaTeX parse error: Can't use function '$' in math mode at position 1: $̲   P(J2|B1,J1)P…">$  
+P(J2|B1,J1)P(J1)  
+</span>$</p>
 <p>Essentially, I was being sloppy, and forgot to copy the right-hand side
 of the conditional, without the <em>B1</em>.</p>
 <p>What I find interesting, which is why I've gone to such a detail, are
@@ -254,7 +254,7 @@ card.  </p>
                                             <li><a href="https://bblais.github.io/category/programming.html">programming <span>(5)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/projects.html">projects <span>(4)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/religion.html">religion <span>(31)</span></a></li>
-                                            <li><a href="https://bblais.github.io/category/science.html">science <span>(12)</span></a></li>
+                                            <li><a href="https://bblais.github.io/category/science.html">science <span>(13)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/unbelievable-project.html">Unbelievable Project <span>(21)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/wordpress_migration.html">wordpress_migration <span>(160)</span></a></li>
      
