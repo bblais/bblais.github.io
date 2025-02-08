@@ -10,12 +10,12 @@
 </title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="https://bblais.github.io/theme/css/main.css" />
+		<link rel="stylesheet" href="http://localhost:8000/theme/css/main.css" />
 		<link rel="stylesheet"
 		href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"
 		crossorigin="anonymous">
 
-        <link rel="stylesheet" type="text/css" href="https://bblais.github.io/theme/css/custom.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="http://localhost:8000/theme/css/custom.css" media="screen">
     
 	</head>
 	<body class="is-preload">
@@ -30,7 +30,7 @@
 
 					<!-- Header -->
 						<header id="header">
-							<a href="https://bblais.github.io/index.html" class="logo"><strong>bblais on the web</strong></a>
+							<a href="http://localhost:8000/index.html" class="logo"><strong>bblais on the web</strong></a>
 							<ul class="icons">
 								<li><a href="https://twitter.com/bblais" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
 								<li><a href="https://www.linkedin.com/in/brian-blais-bb66482b/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
@@ -55,11 +55,11 @@
  <h2> Estimating mean with known 𝜎 </h2> 
 										<p><strong><time pubdate="pubdate" datetime="2021-04-15T00:00:00-04:00">Thu 15 April 2021</strong>
 												In  
-													<em><a href="https://bblais.github.io/category/math.html">#math</a></em>
+													<em><a href="http://localhost:8000/category/math.html">#math</a></em>
 										</p>
 									</header>
 
-										<span class="image left"><img src="https://bblais.github.io/images/edge2edge-media-uKlneQRwaxY-unsplash.jpg"></span>
+										<span class="image left"><img src="http://localhost:8000/images/edge2edge-media-uKlneQRwaxY-unsplash.jpg"></span>
 
 
 									<p>I'd like to walk through some of the "<em>Statistics 101</em>" examples (e.g. estimating <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi></mrow><annotation encoding="application/x-tex">\mu</annotation></semantics></math></span><span aria-hidden="true" class="katex-html"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">μ</span></span></span></span> with known <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi></mrow><annotation encoding="application/x-tex">\sigma</annotation></semantics></math></span><span aria-hidden="true" class="katex-html"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span></span></span></span>, estimating a proportion, etc...) for which we have simple analytical solutions, but explore them with <a href="https://www.youtube.com/watch?v=vTUwEu53uzs">MCMC</a>.  The reason I want to do this is to introduce MCMC on simple cases, which are not much different than more complicated cases, but are better understood.  The second reason is to explore some cases which are nearly as easy, but are never covered in introductory textbooks.  In all of these I'm going to use a python library I make for my science-programming class, <a href="https://github.com/bblais/sci378">stored on github</a>, and the <a href="https://emcee.readthedocs.io/en/stable/">emcee</a> library.  Install like:</p>
@@ -109,11 +109,11 @@ Done.
 2.51 s
 </code></pre></div>
 
-<p><img alt="" src="https://bblais.github.io/images/μ chains.png"></p>
+<p><img alt="" src="http://localhost:8000/images/μ chains.png"></p>
 <div class="highlight"><pre><span></span><code><span class="n">model</span><span class="o">.</span><span class="n">plot_distributions</span><span class="p">()</span>
 </code></pre></div>
 
-<p><img alt="" src="https://bblais.github.io/images/μ distribution.png"></p>
+<p><img alt="" src="http://localhost:8000/images/μ distribution.png"></p>
 <p>compare to textbook solution (i.e. Normal with deviation <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mi mathvariant="normal">/</mi><msqrt><mi>N</mi></msqrt></mrow><annotation encoding="application/x-tex">\sigma/\sqrt{N}</annotation></semantics></math></span><span aria-hidden="true" class="katex-html"><span class="base"><span class="strut" style="height:1.1767em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span><span class="mord">/</span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9267em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord" style="padding-left:0.833em;"><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span><span style="top:-2.8867em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg height="1.08em" preserveAspectRatio="xMinYMin slice" viewBox="0 0 400000 1080" width="400em" xmlns="http://www.w3.org/2000/svg"><path d="M95,702 c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,-10,-9.5,-14 c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54 c44.2,-33.3,65.8,-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10 s173,378,173,378c0.7,0,35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429 c69,-144,104.5,-217.7,106.5,-221 l0 -0 c5.3,-9.3,12,-14,20,-14 H400000v40H845.2724 s-225.272,467,-225.272,467s-235,486,-235,486c-2.7,4.7,-9,7,-19,7 c-6,0,-10,-1,-12,-3s-194,-422,-194,-422s-65,47,-65,47z M834 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.1133em;"><span></span></span></span></span></span></span></span></span>),</p>
 <div class="highlight"><pre><span></span><code><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">model</span><span class="o">.</span><span class="n">get_distribution</span><span class="p">(</span><span class="s1">&#39;μ&#39;</span><span class="p">)</span>
 <span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="s1">&#39;-&#39;</span><span class="p">)</span>
@@ -124,7 +124,7 @@ Done.
 <span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y_pred</span><span class="p">,</span><span class="s1">&#39;r--&#39;</span><span class="p">)</span>
 </code></pre></div>
 
-<p><img alt="" src="https://bblais.github.io/images/compare μ.png"></p>
+<p><img alt="" src="http://localhost:8000/images/compare μ.png"></p>
 <p>and finally find a tail-area probability, the Bayesian equivalent to Z-test,</p>
 <div class="highlight"><pre><span></span><code><span class="n">model</span><span class="o">.</span><span class="n">P</span><span class="p">(</span><span class="s1">&#39;μ&gt;15&#39;</span><span class="p">)</span>
 </code></pre></div>
@@ -194,7 +194,7 @@ Done.
 
                         <!-- Search -->
                         <section id="search" class="alt">
-                            <form class="navbar-search" action="https://bblais.github.io/search.html" onsubmit="return validateForm(this.elements['q'].value);"> 
+                            <form class="navbar-search" action="http://localhost:8000/search.html" onsubmit="return validateForm(this.elements['q'].value);"> 
                                 <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form>
                         </section>
 
@@ -204,32 +204,32 @@ Done.
                                     <h2>Menu</h2>
                                 </header>
                                 <ul>
-                                    <li><a href="https://bblais.github.io/index.html">Homepage</a></li>
+                                    <li><a href="http://localhost:8000/index.html">Homepage</a></li>
                                     <li>
-                                        <span class="opener"><a href="https://bblais.github.io/index.html#0" title="">Blog</a></span>
+                                        <span class="opener"><a href="http://localhost:8000/index.html#0" title="">Blog</a></span>
                                         <ul>
-                                            <li><a href="https://bblais.github.io/index.html#blog">Recent</a></li>
-                                            <li><a href="https://bblais.github.io/category/articles.html">articles <span>(85)</span></a></li>
-                                            <li><a href="https://bblais.github.io/category/books.html">books <span>(3)</span></a></li>
-                                            <li><a href="https://bblais.github.io/category/critical-thinking.html">critical thinking <span>(4)</span></a></li>
-                                            <li><a href="https://bblais.github.io/category/math.html">math <span>(8)</span></a></li>
-                                            <li><a href="https://bblais.github.io/category/media.html">media <span>(13)</span></a></li>
-                                            <li><a href="https://bblais.github.io/category/presentations.html">presentations <span>(4)</span></a></li>
-                                            <li><a href="https://bblais.github.io/category/productivity.html">productivity <span>(7)</span></a></li>
-                                            <li><a href="https://bblais.github.io/category/programming.html">programming <span>(5)</span></a></li>
-                                            <li><a href="https://bblais.github.io/category/projects.html">projects <span>(4)</span></a></li>
-                                            <li><a href="https://bblais.github.io/category/religion.html">religion <span>(32)</span></a></li>
-                                            <li><a href="https://bblais.github.io/category/science.html">science <span>(13)</span></a></li>
-                                            <li><a href="https://bblais.github.io/category/unbelievable-project.html">Unbelievable Project <span>(21)</span></a></li>
-                                            <li><a href="https://bblais.github.io/category/wordpress_migration.html">wordpress_migration <span>(160)</span></a></li>
+                                            <li><a href="http://localhost:8000/index.html#blog">Recent</a></li>
+                                            <li><a href="http://localhost:8000/category/articles.html">articles <span>(85)</span></a></li>
+                                            <li><a href="http://localhost:8000/category/books.html">books <span>(3)</span></a></li>
+                                            <li><a href="http://localhost:8000/category/critical-thinking.html">critical thinking <span>(4)</span></a></li>
+                                            <li><a href="http://localhost:8000/category/math.html">math <span>(8)</span></a></li>
+                                            <li><a href="http://localhost:8000/category/media.html">media <span>(13)</span></a></li>
+                                            <li><a href="http://localhost:8000/category/presentations.html">presentations <span>(4)</span></a></li>
+                                            <li><a href="http://localhost:8000/category/productivity.html">productivity <span>(7)</span></a></li>
+                                            <li><a href="http://localhost:8000/category/programming.html">programming <span>(5)</span></a></li>
+                                            <li><a href="http://localhost:8000/category/projects.html">projects <span>(4)</span></a></li>
+                                            <li><a href="http://localhost:8000/category/religion.html">religion <span>(32)</span></a></li>
+                                            <li><a href="http://localhost:8000/category/science.html">science <span>(13)</span></a></li>
+                                            <li><a href="http://localhost:8000/category/unbelievable-project.html">Unbelievable Project <span>(21)</span></a></li>
+                                            <li><a href="http://localhost:8000/category/wordpress_migration.html">wordpress_migration <span>(160)</span></a></li>
      
                                         </ul>
                                     </li>
-                                    <li><a href="https://bblais.github.io/pages/presentations.html">Presentations</a></li>
-                                    <li><a href="https://bblais.github.io/pages/projects.html">Projects</a></li>
-                                    <li><a href="https://bblais.github.io/pages/publications.html">Publications</a></li>
-                                    <li><a href="https://bblais.github.io/archives.html">Archives</a></li>
-                                    <li><a href="https://bblais.github.io/about.html">About</a></li>
+                                    <li><a href="http://localhost:8000/pages/presentations.html">Presentations</a></li>
+                                    <li><a href="http://localhost:8000/pages/projects.html">Projects</a></li>
+                                    <li><a href="http://localhost:8000/pages/publications.html">Publications</a></li>
+                                    <li><a href="http://localhost:8000/archives.html">Archives</a></li>
+                                    <li><a href="http://localhost:8000/about.html">About</a></li>
                                 </ul>
                             </nav>
 
@@ -241,22 +241,22 @@ Done.
 
                                 <div class="mini-posts">
                                         <article>
-                                            <a href="https://bblais.github.io/posts/2021/Apr/09/gravitational-attraction/" class="image">
-                                                <img src="https://bblais.github.io/images/muzammil-soorma-R11bppS4q8o-unsplash.jpg" alt="muzammil-soorma-R11bppS4q8o-unsplash.jpg">
+                                            <a href="http://localhost:8000/posts/2021/Apr/09/gravitational-attraction/" class="image">
+                                                <img src="http://localhost:8000/images/muzammil-soorma-R11bppS4q8o-unsplash.jpg" alt="muzammil-soorma-R11bppS4q8o-unsplash.jpg">
                                             </a>
                                             <p><strong>Gravitational Attraction </strong>
                                                 <p>What would happen if two people out in space a few meters apart, abandoned by their spacecraft, decided to wait until gravity pulled them together?  My initial thought was that …</p></p>
                                         </article>
                                         <article>
-                                            <a href="https://bblais.github.io/posts/2020/Aug/03/a-simple-physics-problem-gets-messy/" class="image">
-                                                <img src="https://bblais.github.io/images/roman-mager-5mZ_M06Fc9g-unsplash.jpg" alt="roman-mager-5mZ_M06Fc9g-unsplash.jpg">
+                                            <a href="http://localhost:8000/posts/2020/Aug/03/a-simple-physics-problem-gets-messy/" class="image">
+                                                <img src="http://localhost:8000/images/roman-mager-5mZ_M06Fc9g-unsplash.jpg" alt="roman-mager-5mZ_M06Fc9g-unsplash.jpg">
                                             </a>
                                             <p><strong>A Simple Physics Problem Gets Messy </strong>
                                                 <p>A physics problem from a practice AP test came to my attention, when my daughter was in AP physics this past spring.  I went over her solutions when she did …</p></p>
                                         </article>
                                         <article>
-                                            <a href="https://bblais.github.io/posts/2020/Jul/09/skepticism-and-dubious-medical-procedures/" class="image">
-                                                <img src="https://bblais.github.io/images/mohamed-nohassi-odxB5oIG_iA-unsplash.jpg" alt="mohamed-nohassi-odxB5oIG_iA-unsplash.jpg">
+                                            <a href="http://localhost:8000/posts/2020/Jul/09/skepticism-and-dubious-medical-procedures/" class="image">
+                                                <img src="http://localhost:8000/images/mohamed-nohassi-odxB5oIG_iA-unsplash.jpg" alt="mohamed-nohassi-odxB5oIG_iA-unsplash.jpg">
                                             </a>
                                             <p><strong>Skepticism and Dubious Medical Procedures </strong>
                                                 <p>In my discussion with Jonathan McLatchie on the Still Unbelievable podcast, I said that there hasn’t been a verified miracle claim even since Hume’s essay on miracles.  Here I look into the papers he references in response.</p></p>
@@ -294,12 +294,12 @@ Done.
 
 
     <!-- Scripts -->
-	<script src="https://bblais.github.io/theme/js/jquery.min.js"></script>
-	<script src="https://bblais.github.io/theme/js/elegant.prod.9e9d5ce754.js"></script>
-	<script src="https://bblais.github.io/theme/js/browser.min.js"></script>
-	<script src="https://bblais.github.io/theme/js/breakpoints.min.js"></script>
-	<script src="https://bblais.github.io/theme/js/util.js"></script>
-	<script src="https://bblais.github.io/theme/js/main.js"></script>
+	<script src="http://localhost:8000/theme/js/jquery.min.js"></script>
+	<script src="http://localhost:8000/theme/js/elegant.prod.9e9d5ce754.js"></script>
+	<script src="http://localhost:8000/theme/js/browser.min.js"></script>
+	<script src="http://localhost:8000/theme/js/breakpoints.min.js"></script>
+	<script src="http://localhost:8000/theme/js/util.js"></script>
+	<script src="http://localhost:8000/theme/js/main.js"></script>
 	<script>
 		function validateForm(query)
 		{
