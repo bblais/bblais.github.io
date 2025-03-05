@@ -149,9 +149,9 @@ Euler's method is a numerical method used to approximate the solution to a first
 <p><strong>ChatGPT:</strong> To find the minimum and maximum of a function using this code, you can modify the code to keep track of the minimum and maximum values of the derivative. If the derivative at a point is zero, it means that the function has a local extremum (minimum or maximum) at that point.</p>
 <p>Here's an updated version of the code that finds the minimum and maximum of a function:</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
-<span class="k">def</span> <span class="nf">midpoint_method</span><span class="p">(</span><span class="n">fun</span><span class="p">,</span> <span class="n">x_start</span><span class="p">,</span> <span class="n">x_end</span><span class="p">,</span> <span class="n">step</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">midpoint_method</span><span class="p">(</span><span class="n">fun</span><span class="p">,</span> <span class="n">x_start</span><span class="p">,</span> <span class="n">x_end</span><span class="p">,</span> <span class="n">step</span><span class="p">):</span>
     <span class="n">x</span> <span class="o">=</span> <span class="n">x_start</span>
     <span class="n">min_x</span> <span class="o">=</span> <span class="n">max_x</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">min_m</span> <span class="o">=</span> <span class="n">max_m</span> <span class="o">=</span> <span class="kc">None</span>

@@ -87,30 +87,30 @@ P(B1,J2)
 simply outline every possible two-hand deal, and count the number of
 cards in each case.</p>
 <h3 id="with-replacement">With replacement:</h3>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">Game</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="o">*</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">Game</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="n">deals</span><span class="o">=</span><span class="p">[]</span>
 <span class="n">deck</span><span class="o">=</span><span class="n">makedeck</span><span class="p">()</span>
-<span class="k">for</span><span class="w"> </span><span class="n">card1</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">deck</span><span class="p">:</span>
-<span class="w">    </span><span class="n">deck2</span><span class="o">=</span><span class="n">makedeck</span><span class="p">()</span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">card2</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">deck2</span><span class="p">:</span>
-<span class="w">        </span><span class="n">deals</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">card1</span><span class="p">,</span><span class="n">card2</span><span class="p">])</span>
+<span class="k">for</span> <span class="n">card1</span> <span class="ow">in</span> <span class="n">deck</span><span class="p">:</span>
+    <span class="n">deck2</span><span class="o">=</span><span class="n">makedeck</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">card2</span> <span class="ow">in</span> <span class="n">deck2</span><span class="p">:</span>
+        <span class="n">deals</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">card1</span><span class="p">,</span><span class="n">card2</span><span class="p">])</span>
 
-<span class="n">found</span><span class="o">=</span><span class="p">[</span><span class="n">x</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">deals</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">color</span><span class="o">==</span><span class="s1">&#39;Black&#39;</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">rank</span><span class="o">==</span><span class="mi">11</span><span class="p">]</span>
+<span class="n">found</span><span class="o">=</span><span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">deals</span> <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">color</span><span class="o">==</span><span class="s1">&#39;Black&#39;</span> <span class="ow">and</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">rank</span><span class="o">==</span><span class="mi">11</span><span class="p">]</span>
 </code></pre></div>
 
 <p>The length of "found" is 104, and the length of the "deals" is 2704 (52
 x 52).</p>
 <h3 id="without-replacement">Without replacement:</h3>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">Game</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="o">*</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">Game</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="n">deals</span><span class="o">=</span><span class="p">[]</span>
 <span class="n">deck</span><span class="o">=</span><span class="n">makedeck</span><span class="p">()</span>
-<span class="k">for</span><span class="w"> </span><span class="n">card1</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">deck</span><span class="p">:</span>
-<span class="w">    </span><span class="n">deck2</span><span class="o">=</span><span class="n">makedeck</span><span class="p">()</span>
-<span class="w">    </span><span class="n">deck2</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">card1</span><span class="p">)</span><span class="w">   </span><span class="c1"># &lt;------ remove the card</span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">card2</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">deck2</span><span class="p">:</span>
-<span class="w">        </span><span class="n">deals</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">card1</span><span class="p">,</span><span class="n">card2</span><span class="p">])</span>
+<span class="k">for</span> <span class="n">card1</span> <span class="ow">in</span> <span class="n">deck</span><span class="p">:</span>
+    <span class="n">deck2</span><span class="o">=</span><span class="n">makedeck</span><span class="p">()</span>
+    <span class="n">deck2</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">card1</span><span class="p">)</span>   <span class="c1"># &lt;------ remove the card</span>
+    <span class="k">for</span> <span class="n">card2</span> <span class="ow">in</span> <span class="n">deck2</span><span class="p">:</span>
+        <span class="n">deals</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">card1</span><span class="p">,</span><span class="n">card2</span><span class="p">])</span>
 
-<span class="n">found</span><span class="o">=</span><span class="p">[</span><span class="n">x</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">deals</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">color</span><span class="o">==</span><span class="s1">&#39;Black&#39;</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">rank</span><span class="o">==</span><span class="mi">11</span><span class="p">]</span>
+<span class="n">found</span><span class="o">=</span><span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">deals</span> <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">color</span><span class="o">==</span><span class="s1">&#39;Black&#39;</span> <span class="ow">and</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">rank</span><span class="o">==</span><span class="mi">11</span><span class="p">]</span>
 </code></pre></div>
 
 <p>The length of "found" is 102, and the length of the "deals" is 2652 (52

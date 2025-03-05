@@ -66,7 +66,7 @@
 <h2 id="imports">Imports</h2>
 <div class="highlight"><pre><span></span><code><span class="o">%</span><span class="n">pylab</span> <span class="n">inline</span>
 <span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;science.mplstyle&#39;</span><span class="p">)</span>
-<span class="kn">from</span> <span class="nn">Memory</span> <span class="kn">import</span> <span class="n">Storage</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">Memory</span><span class="w"> </span><span class="kn">import</span> <span class="n">Storage</span>
 </code></pre></div>
 
 <h2 id="a-simple-problem">A simple problem</h2>
@@ -148,7 +148,7 @@ p(t) = \lambda e^{-\lambda t}
 which can be seen here https://en.wikipedia.org/wiki/Exponential_distribution</p>
 <h2 id="towards-gillespie">Towards Gillespie</h2>
 <p>Instead of flipping the coin every millisecond (i.e. constant time), we can randomly pick a <em>time</em> from an exponential distribution -- the time to the next event (i.e. dynamic time).</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">constant_time</span><span class="p">(</span><span class="n">N</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span><span class="n">n0</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">t_max</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span><span class="n">p</span><span class="o">=</span><span class="mf">0.02</span><span class="p">,</span><span class="n">dt</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">constant_time</span><span class="p">(</span><span class="n">N</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span><span class="n">n0</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">t_max</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span><span class="n">p</span><span class="o">=</span><span class="mf">0.02</span><span class="p">,</span><span class="n">dt</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
     <span class="n">S_mat</span><span class="o">=</span><span class="p">[]</span>
     <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
         <span class="n">S</span><span class="o">=</span><span class="n">Storage</span><span class="p">()</span>
@@ -169,7 +169,7 @@ which can be seen here https://en.wikipedia.org/wiki/Exponential_distribution</p
 </code></pre></div>
 
 <p>and</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">dynamic_time</span><span class="p">(</span><span class="n">N</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span><span class="n">n0</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">t_max</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span><span class="n">p</span><span class="o">=</span><span class="mf">0.02</span><span class="p">,</span><span class="n">dt</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">dynamic_time</span><span class="p">(</span><span class="n">N</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span><span class="n">n0</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">t_max</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span><span class="n">p</span><span class="o">=</span><span class="mf">0.02</span><span class="p">,</span><span class="n">dt</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
     <span class="n">S_mat</span><span class="o">=</span><span class="p">[]</span>
     <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
         <span class="n">S</span><span class="o">=</span><span class="n">Storage</span><span class="p">()</span>
