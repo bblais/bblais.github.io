@@ -62,7 +62,7 @@
 										<span class="image left"><img src="https://bblais.github.io/images/deepmind-egDR0kw-Ptw-unsplash.jpg"></span>
 
 
-									<p>So I was poking around on the web and decided to watch the video "THE Game Changer for Learning to Code"  https://www.youtube.com/embed/H1fBdboJeBo and then attempt to use it on code I use in class.  </p>
+									<p>So I was poking around on the web and decided to watch the video "THE Game Changer for Learning to Code"  <a href="https://www.youtube.com/embed/H1fBdboJeBo" rel="nofollow">https://www.youtube.com/embed/H1fBdboJeBo</a> and then attempt to use it on code I use in class.  </p>
 <p>TLDR:  Describing vocabulary, describing code, making suggestions for improving code, and finding resources all very useful.  Generating code is super dangerous (ChatGPT makes incorrect code) and using it in many cases can be considered plagiarism, just as if you copied from another person.</p>
 <h3 id="describing-vocabulary-useful">Describing vocabulary -- useful</h3>
 <p>I started with,</p>
@@ -77,29 +77,29 @@ Euler's method is a numerical method used to approximate the solution to a first
 <blockquote>
 <p><strong>ME:</strong> Can you explain what this code is doing: </p>
 </blockquote>
-<div class="highlight"><pre><span></span><code><span class="n">x_start</span><span class="o">=-</span><span class="mi">5</span>
-<span class="n">x_end</span><span class="o">=</span><span class="mi">15</span>
-<span class="n">step</span><span class="o">=</span><span class="mi">1</span>
+<div class="highlight" style="background: #202020"><pre style="line-height: 125%;"><span></span><code><span style="color: #D0D0D0">x_start=-</span><span style="color: #51B2FD">5</span>
+<span style="color: #D0D0D0">x_end=</span><span style="color: #51B2FD">15</span>
+<span style="color: #D0D0D0">step=</span><span style="color: #51B2FD">1</span>
 
-<span class="n">S</span><span class="o">=</span><span class="n">Storage</span><span class="p">()</span>
+<span style="color: #D0D0D0">S=Storage()</span>
 
-<span class="n">x</span><span class="o">=</span><span class="n">x_start</span>
-<span class="k">while</span> <span class="n">x</span><span class="o">&lt;=</span><span class="n">x_end</span><span class="p">:</span>
+<span style="color: #D0D0D0">x=x_start</span>
+<span style="color: #6EBF26; font-weight: bold">while</span> <span style="color: #D0D0D0">x&lt;=x_end:</span>
 
-    <span class="c1"># print(x,&quot; &quot;,end=&quot;&quot;)</span>
+    <span style="color: #ABABAB; font-style: italic"># print(x,&quot; &quot;,end=&quot;&quot;)</span>
 
-    <span class="n">y_left</span><span class="o">=</span><span class="n">fun</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">step</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
-    <span class="n">y_right</span><span class="o">=</span><span class="n">fun</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">step</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+    <span style="color: #D0D0D0">y_left=fun(x-step/</span><span style="color: #51B2FD">2</span><span style="color: #D0D0D0">)</span>
+    <span style="color: #D0D0D0">y_right=fun(x+step/</span><span style="color: #51B2FD">2</span><span style="color: #D0D0D0">)</span>
 
-    <span class="n">m</span><span class="o">=</span><span class="p">(</span><span class="n">y_right</span><span class="o">-</span><span class="n">y_left</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">step</span><span class="p">)</span> <span class="c1"># rise over run</span>
+    <span style="color: #D0D0D0">m=(y_right-y_left)/(step)</span> <span style="color: #ABABAB; font-style: italic"># rise over run</span>
 
-    <span class="n">S</span><span class="o">+=</span><span class="n">x</span><span class="p">,</span><span class="n">m</span>   <span class="c1"># saving the result for later</span>
+    <span style="color: #D0D0D0">S+=x,m</span>   <span style="color: #ABABAB; font-style: italic"># saving the result for later</span>
 
-    <span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="o">+</span><span class="n">step</span>
+    <span style="color: #D0D0D0">x=x+step</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;done.&quot;</span><span class="p">)</span>
+<span style="color: #2FBCCD">print</span><span style="color: #D0D0D0">(</span><span style="color: #ED9D13">&quot;done.&quot;</span><span style="color: #D0D0D0">)</span>
 
-<span class="n">x</span><span class="p">,</span><span class="n">m</span><span class="o">=</span><span class="n">S</span><span class="o">.</span><span class="n">arrays</span><span class="p">()</span>  <span class="c1"># give me the saved results as two arrays</span>
+<span style="color: #D0D0D0">x,m=S.arrays()</span>  <span style="color: #ABABAB; font-style: italic"># give me the saved results as two arrays</span>
 </code></pre></div>
 
 <blockquote>
@@ -138,7 +138,7 @@ Euler's method is a numerical method used to approximate the solution to a first
 <li>you need to know ahead of time how many values you need to save if you use arrays</li>
 <li>there is extra boilerplate code for setting up the initial arrays, and saving the data in the right indices</li>
 </ol>
-<p>The <code>Storage()</code> class I made solves these problems, and is <a href="https://bblais.github.io/posts/2020/Feb/24/common-python-pattern-building-up-lists-to-plot/">discussed in more detail here</a>. </p>
+<p>The <code>Storage()</code> class I made solves these problems, and is <a href="https://bblais.github.io/posts/2020/Feb/24/common-python-pattern-building-up-lists-to-plot/" rel="nofollow">discussed in more detail here</a>. </p>
 <p>Of course, ChatGPT wouldn't be expected to know that, but it does highlight some limitations.   We do (5) in later cells, and will do (1) later, but this code was just an introduction.  </p>
 <h3 id="new-code-dangerous">New code -- dangerous!</h3>
 <blockquote>
@@ -149,33 +149,33 @@ Euler's method is a numerical method used to approximate the solution to a first
 <p><strong>ChatGPT:</strong> To find the minimum and maximum of a function using this code, you can modify the code to keep track of the minimum and maximum values of the derivative. If the derivative at a point is zero, it means that the function has a local extremum (minimum or maximum) at that point.</p>
 <p>Here's an updated version of the code that finds the minimum and maximum of a function:</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<div class="highlight" style="background: #202020"><pre style="line-height: 125%;"><span></span><code><span style="color: #6EBF26; font-weight: bold">import</span><span style="color: #666"> </span><span style="color: #71ADFF; text-decoration: underline">numpy</span><span style="color: #666"> </span><span style="color: #6EBF26; font-weight: bold">as</span><span style="color: #666"> </span><span style="color: #71ADFF; text-decoration: underline">np</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">midpoint_method</span><span class="p">(</span><span class="n">fun</span><span class="p">,</span> <span class="n">x_start</span><span class="p">,</span> <span class="n">x_end</span><span class="p">,</span> <span class="n">step</span><span class="p">):</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="n">x_start</span>
-    <span class="n">min_x</span> <span class="o">=</span> <span class="n">max_x</span> <span class="o">=</span> <span class="kc">None</span>
-    <span class="n">min_m</span> <span class="o">=</span> <span class="n">max_m</span> <span class="o">=</span> <span class="kc">None</span>
-    <span class="k">while</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="n">x_end</span><span class="p">:</span>
-        <span class="n">y_left</span> <span class="o">=</span> <span class="n">fun</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">step</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
-        <span class="n">y_right</span> <span class="o">=</span> <span class="n">fun</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">step</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
-        <span class="n">m</span> <span class="o">=</span> <span class="p">(</span><span class="n">y_right</span> <span class="o">-</span> <span class="n">y_left</span><span class="p">)</span> <span class="o">/</span> <span class="n">step</span>
-        <span class="k">if</span> <span class="n">min_m</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">m</span> <span class="o">&lt;</span> <span class="n">min_m</span><span class="p">:</span>
-            <span class="n">min_m</span> <span class="o">=</span> <span class="n">m</span>
-            <span class="n">min_x</span> <span class="o">=</span> <span class="n">x</span>
-        <span class="k">if</span> <span class="n">max_m</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">m</span> <span class="o">&gt;</span> <span class="n">max_m</span><span class="p">:</span>
-            <span class="n">max_m</span> <span class="o">=</span> <span class="n">m</span>
-            <span class="n">max_x</span> <span class="o">=</span> <span class="n">x</span>
-        <span class="n">x</span> <span class="o">+=</span> <span class="n">step</span>
-    <span class="k">return</span> <span class="n">min_x</span><span class="p">,</span> <span class="n">min_m</span><span class="p">,</span> <span class="n">max_x</span><span class="p">,</span> <span class="n">max_m</span>
+<span style="color: #6EBF26; font-weight: bold">def</span><span style="color: #666"> </span><span style="color: #71ADFF">midpoint_method</span><span style="color: #D0D0D0">(fun,</span> <span style="color: #D0D0D0">x_start,</span> <span style="color: #D0D0D0">x_end,</span> <span style="color: #D0D0D0">step):</span>
+    <span style="color: #D0D0D0">x</span> <span style="color: #D0D0D0">=</span> <span style="color: #D0D0D0">x_start</span>
+    <span style="color: #D0D0D0">min_x</span> <span style="color: #D0D0D0">=</span> <span style="color: #D0D0D0">max_x</span> <span style="color: #D0D0D0">=</span> <span style="color: #6EBF26; font-weight: bold">None</span>
+    <span style="color: #D0D0D0">min_m</span> <span style="color: #D0D0D0">=</span> <span style="color: #D0D0D0">max_m</span> <span style="color: #D0D0D0">=</span> <span style="color: #6EBF26; font-weight: bold">None</span>
+    <span style="color: #6EBF26; font-weight: bold">while</span> <span style="color: #D0D0D0">x</span> <span style="color: #D0D0D0">&lt;=</span> <span style="color: #D0D0D0">x_end:</span>
+        <span style="color: #D0D0D0">y_left</span> <span style="color: #D0D0D0">=</span> <span style="color: #D0D0D0">fun(x</span> <span style="color: #D0D0D0">-</span> <span style="color: #D0D0D0">step</span> <span style="color: #D0D0D0">/</span> <span style="color: #51B2FD">2</span><span style="color: #D0D0D0">)</span>
+        <span style="color: #D0D0D0">y_right</span> <span style="color: #D0D0D0">=</span> <span style="color: #D0D0D0">fun(x</span> <span style="color: #D0D0D0">+</span> <span style="color: #D0D0D0">step</span> <span style="color: #D0D0D0">/</span> <span style="color: #51B2FD">2</span><span style="color: #D0D0D0">)</span>
+        <span style="color: #D0D0D0">m</span> <span style="color: #D0D0D0">=</span> <span style="color: #D0D0D0">(y_right</span> <span style="color: #D0D0D0">-</span> <span style="color: #D0D0D0">y_left)</span> <span style="color: #D0D0D0">/</span> <span style="color: #D0D0D0">step</span>
+        <span style="color: #6EBF26; font-weight: bold">if</span> <span style="color: #D0D0D0">min_m</span> <span style="color: #6EBF26; font-weight: bold">is</span> <span style="color: #6EBF26; font-weight: bold">None</span> <span style="color: #6EBF26; font-weight: bold">or</span> <span style="color: #D0D0D0">m</span> <span style="color: #D0D0D0">&lt;</span> <span style="color: #D0D0D0">min_m:</span>
+            <span style="color: #D0D0D0">min_m</span> <span style="color: #D0D0D0">=</span> <span style="color: #D0D0D0">m</span>
+            <span style="color: #D0D0D0">min_x</span> <span style="color: #D0D0D0">=</span> <span style="color: #D0D0D0">x</span>
+        <span style="color: #6EBF26; font-weight: bold">if</span> <span style="color: #D0D0D0">max_m</span> <span style="color: #6EBF26; font-weight: bold">is</span> <span style="color: #6EBF26; font-weight: bold">None</span> <span style="color: #6EBF26; font-weight: bold">or</span> <span style="color: #D0D0D0">m</span> <span style="color: #D0D0D0">&gt;</span> <span style="color: #D0D0D0">max_m:</span>
+            <span style="color: #D0D0D0">max_m</span> <span style="color: #D0D0D0">=</span> <span style="color: #D0D0D0">m</span>
+            <span style="color: #D0D0D0">max_x</span> <span style="color: #D0D0D0">=</span> <span style="color: #D0D0D0">x</span>
+        <span style="color: #D0D0D0">x</span> <span style="color: #D0D0D0">+=</span> <span style="color: #D0D0D0">step</span>
+    <span style="color: #6EBF26; font-weight: bold">return</span> <span style="color: #D0D0D0">min_x,</span> <span style="color: #D0D0D0">min_m,</span> <span style="color: #D0D0D0">max_x,</span> <span style="color: #D0D0D0">max_m</span>
 
-<span class="n">x_start</span> <span class="o">=</span> <span class="o">-</span><span class="mi">5</span>
-<span class="n">x_end</span> <span class="o">=</span> <span class="mi">15</span>
-<span class="n">step</span> <span class="o">=</span> <span class="mi">1</span>
+<span style="color: #D0D0D0">x_start</span> <span style="color: #D0D0D0">=</span> <span style="color: #D0D0D0">-</span><span style="color: #51B2FD">5</span>
+<span style="color: #D0D0D0">x_end</span> <span style="color: #D0D0D0">=</span> <span style="color: #51B2FD">15</span>
+<span style="color: #D0D0D0">step</span> <span style="color: #D0D0D0">=</span> <span style="color: #51B2FD">1</span>
 
-<span class="n">min_x</span><span class="p">,</span> <span class="n">min_m</span><span class="p">,</span> <span class="n">max_x</span><span class="p">,</span> <span class="n">max_m</span> <span class="o">=</span> <span class="n">midpoint_method</span><span class="p">(</span><span class="n">fun</span><span class="p">,</span> <span class="n">x_start</span><span class="p">,</span> <span class="n">x_end</span><span class="p">,</span> <span class="n">step</span><span class="p">)</span>
+<span style="color: #D0D0D0">min_x,</span> <span style="color: #D0D0D0">min_m,</span> <span style="color: #D0D0D0">max_x,</span> <span style="color: #D0D0D0">max_m</span> <span style="color: #D0D0D0">=</span> <span style="color: #D0D0D0">midpoint_method(fun,</span> <span style="color: #D0D0D0">x_start,</span> <span style="color: #D0D0D0">x_end,</span> <span style="color: #D0D0D0">step)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Minimum at x=&quot;</span><span class="p">,</span> <span class="n">min_x</span><span class="p">,</span> <span class="s2">&quot; with derivative &quot;</span><span class="p">,</span> <span class="n">min_m</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Maximum at x=&quot;</span><span class="p">,</span> <span class="n">max_x</span><span class="p">,</span> <span class="s2">&quot; with derivative &quot;</span><span class="p">,</span> <span class="n">max_m</span><span class="p">)</span>
+<span style="color: #2FBCCD">print</span><span style="color: #D0D0D0">(</span><span style="color: #ED9D13">&quot;Minimum at x=&quot;</span><span style="color: #D0D0D0">,</span> <span style="color: #D0D0D0">min_x,</span> <span style="color: #ED9D13">&quot; with derivative &quot;</span><span style="color: #D0D0D0">,</span> <span style="color: #D0D0D0">min_m)</span>
+<span style="color: #2FBCCD">print</span><span style="color: #D0D0D0">(</span><span style="color: #ED9D13">&quot;Maximum at x=&quot;</span><span style="color: #D0D0D0">,</span> <span style="color: #D0D0D0">max_x,</span> <span style="color: #ED9D13">&quot; with derivative &quot;</span><span style="color: #D0D0D0">,</span> <span style="color: #D0D0D0">max_m)</span>
 </code></pre></div>
 
 <blockquote>
@@ -192,47 +192,47 @@ Euler's method is a numerical method used to approximate the solution to a first
 <p>Online tutorials:</p>
 </li>
 <li>
-<p>The official Python documentation has a section on numerical differentiation: <a href="https://docs.python.org/3/tutorial/floatingpoint.html">https://docs.python.org/3/tutorial/floatingpoint.html</a></p>
+<p>The official Python documentation has a section on numerical differentiation: <a href="https://docs.python.org/3/tutorial/floatingpoint.html" rel="nofollow">https://docs.python.org/3/tutorial/floatingpoint.html</a></p>
 </li>
 <li>
-<p>A comprehensive tutorial on numerical derivatives in Python can be found here: <a href="https://realpython.com/numerical-derivatives-python/">https://realpython.com/numerical-derivatives-python/</a></p>
+<p>A comprehensive tutorial on numerical derivatives in Python can be found here: <a href="https://realpython.com/numerical-derivatives-python/" rel="nofollow">https://realpython.com/numerical-derivatives-python/</a></p>
 </li>
 <li>
 <p>Books:</p>
 </li>
 <li>
-<p>"Python for Data Analysis" by Wes McKinney covers the use of numerical methods in data analysis and provides examples using Python: <a href="https://www.amazon.com/Python-Data-Analysis-Wrangling-IPython/dp/1491957662">https://www.amazon.com/Python-Data-Analysis-Wrangling-IPython/dp/1491957662</a></p>
+<p>"Python for Data Analysis" by Wes McKinney covers the use of numerical methods in data analysis and provides examples using Python: <a href="https://www.amazon.com/Python-Data-Analysis-Wrangling-IPython/dp/1491957662" rel="nofollow">https://www.amazon.com/Python-Data-Analysis-Wrangling-IPython/dp/1491957662</a></p>
 </li>
 <li>
-<p>"Numerical Python" by Robert Johansson covers numerical methods and scientific computing using the Python programming language: <a href="https://www.amazon.com/Numerical-Python-Scientific-Computing-Array/dp/1491911662">https://www.amazon.com/Numerical-Python-Scientific-Computing-Array/dp/1491911662</a></p>
+<p>"Numerical Python" by Robert Johansson covers numerical methods and scientific computing using the Python programming language: <a href="https://www.amazon.com/Numerical-Python-Scientific-Computing-Array/dp/1491911662" rel="nofollow">https://www.amazon.com/Numerical-Python-Scientific-Computing-Array/dp/1491911662</a></p>
 </li>
 <li>
 <p>Online courses:</p>
 </li>
 <li>
-<p>Coursera offers several online courses on numerical methods and scientific computing in Python: <a href="https://www.coursera.org/courses?query=numerical%20python">https://www.coursera.org/courses?query=numerical%20python</a></p>
+<p>Coursera offers several online courses on numerical methods and scientific computing in Python: <a href="https://www.coursera.org/courses?query=numerical%20python" rel="nofollow">https://www.coursera.org/courses?query=numerical%20python</a></p>
 </li>
-<li>Udemy also has several online courses that cover numerical methods in Python: <a href="https://www.udemy.com/topic/numerical-methods/">https://www.udemy.com/topic/numerical-methods/</a></li>
+<li>Udemy also has several online courses that cover numerical methods in Python: <a href="https://www.udemy.com/topic/numerical-methods/" rel="nofollow">https://www.udemy.com/topic/numerical-methods/</a></li>
 <li>
-<p>edX offers a course on numerical methods for scientific computing with Python: <a href="https://www.edx.org/learn/numerical-methods-for-scientific-computing-with-python">https://www.edx.org/learn/numerical-methods-for-scientific-computing-with-python</a></p>
+<p>edX offers a course on numerical methods for scientific computing with Python: <a href="https://www.edx.org/learn/numerical-methods-for-scientific-computing-with-python" rel="nofollow">https://www.edx.org/learn/numerical-methods-for-scientific-computing-with-python</a></p>
 </li>
 <li>
 <p>Scientific libraries:</p>
 </li>
 <li>
-<p>The <code>numpy</code> library in Python has a comprehensive documentation on numerical derivatives: <a href="https://numpy.org/doc/stable/reference/routines.math.html#derivatives">https://numpy.org/doc/stable/reference/routines.math.html#derivatives</a></p>
+<p>The <code>numpy</code> library in Python has a comprehensive documentation on numerical derivatives: <a href="https://numpy.org/doc/stable/reference/routines.math.html#derivatives" rel="nofollow">https://numpy.org/doc/stable/reference/routines.math.html#derivatives</a></p>
 </li>
 <li>
-<p>The <code>scipy</code> library also has a section on numerical derivatives: <a href="https://docs.scipy.org/doc/scipy/reference/signal.html#differentiation">https://docs.scipy.org/doc/scipy/reference/signal.html#differentiation</a></p>
+<p>The <code>scipy</code> library also has a section on numerical derivatives: <a href="https://docs.scipy.org/doc/scipy/reference/signal.html#differentiation" rel="nofollow">https://docs.scipy.org/doc/scipy/reference/signal.html#differentiation</a></p>
 </li>
 <li>
 <p>Community resources:</p>
 </li>
 <li>
-<p>Stack Overflow is a great resource for asking questions and getting help with numerical derivatives in Python: <a href="https://stackoverflow.com/questions/tagged/python">https://stackoverflow.com/questions/tagged/python</a></p>
+<p>Stack Overflow is a great resource for asking questions and getting help with numerical derivatives in Python: <a href="https://stackoverflow.com/questions/tagged/python" rel="nofollow">https://stackoverflow.com/questions/tagged/python</a></p>
 </li>
-<li>The official Python mailing list is another good resource for asking questions and getting help: <a href="https://mail.python.org/mailman/listinfo/python-list">https://mail.python.org/mailman/listinfo/python-list</a></li>
-<li>Reddit has several communities dedicated to Python programming, including r/learnpython and r/python, where you can ask questions and get help with numerical derivatives: <a href="https://www.reddit.com/r/learnpython/">https://www.reddit.com/r/learnpython/</a> and <a href="https://www.reddit.com/r/python/">https://www.reddit.com/r/python/</a>
+<li>The official Python mailing list is another good resource for asking questions and getting help: <a href="https://mail.python.org/mailman/listinfo/python-list" rel="nofollow">https://mail.python.org/mailman/listinfo/python-list</a></li>
+<li>Reddit has several communities dedicated to Python programming, including r/learnpython and r/python, where you can ask questions and get help with numerical derivatives: <a href="https://www.reddit.com/r/learnpython/" rel="nofollow">https://www.reddit.com/r/learnpython/</a> and <a href="https://www.reddit.com/r/python/" rel="nofollow">https://www.reddit.com/r/python/</a>
 </li>
 </ol>
 </blockquote>
@@ -323,7 +323,7 @@ Euler's method is a numerical method used to approximate the solution to a first
                                             <li><a href="https://bblais.github.io/category/productivity.html">productivity <span>(7)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/programming.html">programming <span>(5)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/projects.html">projects <span>(4)</span></a></li>
-                                            <li><a href="https://bblais.github.io/category/religion.html">religion <span>(33)</span></a></li>
+                                            <li><a href="https://bblais.github.io/category/religion.html">religion <span>(34)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/science.html">science <span>(13)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/unbelievable-project.html">Unbelievable Project <span>(21)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/wordpress_migration.html">wordpress_migration <span>(160)</span></a></li>

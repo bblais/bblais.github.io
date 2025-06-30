@@ -65,7 +65,7 @@
 									<p>There are a number of classic probability problems that challenge the
 intuition, both for students and for teachers. I have found that one way
 to overcome this intuition block is to write a quick simulation. A good
-example is the classic evil probability <a href="http://en.wikipedia.org/wiki/Monty_Hall_problem">problem of the Monty Hall</a>.
+example is the classic evil probability <a href="http://en.wikipedia.org/wiki/Monty_Hall_problem" rel="nofollow">problem of the Monty Hall</a>.
 The derivation of the solution is straightforward, but it is easy to
 convince yourself of the wrong answer. A quick simulation, like the one
 below, makes it clear: 1/3 of the time the host gets a choice with which
@@ -73,49 +73,49 @@ door to open, and 2/3 of the time the host has no choice - with the
 other door having the prize. I find a numerical simulation helps to
 bolster my confidence in a mathematical analysis, especially when it is
 particularly unintuitive.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">random</span><span class="w"> </span><span class="kn">import</span> <span class="n">randint</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
-<span class="n">turn</span><span class="o">=</span><span class="mi">0</span>
-<span class="n">win</span><span class="o">=</span><span class="mi">0</span>
-<span class="n">human</span><span class="o">=</span><span class="kc">False</span>
+<div class="highlight" style="background: #202020"><pre style="line-height: 125%;"><span></span><code><span style="color: #6EBF26; font-weight: bold">from</span><span style="color: #666"> </span><span style="color: #71ADFF; text-decoration: underline">random</span><span style="color: #666"> </span><span style="color: #6EBF26; font-weight: bold">import</span> <span style="color: #D0D0D0">randint</span>
+<span style="color: #6EBF26; font-weight: bold">import</span><span style="color: #666"> </span><span style="color: #71ADFF; text-decoration: underline">random</span>
+<span style="color: #D0D0D0">turn=</span><span style="color: #51B2FD">0</span>
+<span style="color: #D0D0D0">win=</span><span style="color: #51B2FD">0</span>
+<span style="color: #D0D0D0">human=</span><span style="color: #6EBF26; font-weight: bold">False</span>
 
-<span class="k">while</span> <span class="n">turn</span><span class="o">&lt;</span><span class="mi">500</span><span class="p">:</span>
+<span style="color: #6EBF26; font-weight: bold">while</span> <span style="color: #D0D0D0">turn&lt;</span><span style="color: #51B2FD">500</span><span style="color: #D0D0D0">:</span>
 
-    <span class="n">prize</span><span class="o">=</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
-    <span class="n">door_choices</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+    <span style="color: #D0D0D0">prize=randint(</span><span style="color: #51B2FD">1</span><span style="color: #D0D0D0">,</span><span style="color: #51B2FD">3</span><span style="color: #D0D0D0">)</span>
+    <span style="color: #D0D0D0">door_choices=[</span><span style="color: #51B2FD">1</span><span style="color: #D0D0D0">,</span><span style="color: #51B2FD">2</span><span style="color: #D0D0D0">,</span><span style="color: #51B2FD">3</span><span style="color: #D0D0D0">]</span>
 
-    <span class="k">if</span> <span class="n">human</span><span class="p">:</span>
-        <span class="n">your_first_answer</span><span class="o">=</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Which door </span><span class="si">%s</span><span class="s1">? &#39;</span> <span class="o">%</span> <span class="nb">str</span><span class="p">(</span><span class="n">door_choices</span><span class="p">))</span>
-    <span class="k">else</span><span class="p">:</span>   <span class="c1"># automatic</span>
-        <span class="n">your_first_answer</span><span class="o">=</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">door_choices</span><span class="p">)</span>
+    <span style="color: #6EBF26; font-weight: bold">if</span> <span style="color: #D0D0D0">human:</span>
+        <span style="color: #D0D0D0">your_first_answer=</span><span style="color: #2FBCCD">input</span><span style="color: #D0D0D0">(</span><span style="color: #ED9D13">&#39;Which door %s? &#39;</span> <span style="color: #D0D0D0">%</span> <span style="color: #2FBCCD">str</span><span style="color: #D0D0D0">(door_choices))</span>
+    <span style="color: #6EBF26; font-weight: bold">else</span><span style="color: #D0D0D0">:</span>   <span style="color: #ABABAB; font-style: italic"># automatic</span>
+        <span style="color: #D0D0D0">your_first_answer=random.choice(door_choices)</span>
 
-    <span class="k">if</span> <span class="n">prize</span><span class="o">==</span><span class="n">your_first_answer</span><span class="p">:</span>  <span class="c1"># happens 1/3 of the time</span>
-        <span class="n">door_choices</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">your_first_answer</span><span class="p">)</span>  <span class="c1"># get the other two</span>
-        <span class="n">door_choices</span><span class="o">=</span><span class="nb">sorted</span><span class="p">([</span><span class="n">your_first_answer</span><span class="p">,</span>
-                             <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">door_choices</span><span class="p">)])</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">door_choices</span><span class="o">=</span><span class="nb">sorted</span><span class="p">([</span><span class="n">prize</span><span class="p">,</span><span class="n">your_first_answer</span><span class="p">])</span>
+    <span style="color: #6EBF26; font-weight: bold">if</span> <span style="color: #D0D0D0">prize==your_first_answer:</span>  <span style="color: #ABABAB; font-style: italic"># happens 1/3 of the time</span>
+        <span style="color: #D0D0D0">door_choices.remove(your_first_answer)</span>  <span style="color: #ABABAB; font-style: italic"># get the other two</span>
+        <span style="color: #D0D0D0">door_choices=</span><span style="color: #2FBCCD">sorted</span><span style="color: #D0D0D0">([your_first_answer,</span>
+                             <span style="color: #D0D0D0">random.choice(door_choices)])</span>
+    <span style="color: #6EBF26; font-weight: bold">else</span><span style="color: #D0D0D0">:</span>
+        <span style="color: #D0D0D0">door_choices=</span><span style="color: #2FBCCD">sorted</span><span style="color: #D0D0D0">([prize,your_first_answer])</span>
 
-    <span class="k">if</span> <span class="n">human</span><span class="p">:</span>
-        <span class="n">your_second_answer</span><span class="o">=</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Which door </span><span class="si">%s</span><span class="s1">? &#39;</span> <span class="o">%</span> <span class="nb">str</span><span class="p">(</span><span class="n">door_choices</span><span class="p">))</span>
-    <span class="k">else</span><span class="p">:</span>   <span class="c1"># automatic</span>
+    <span style="color: #6EBF26; font-weight: bold">if</span> <span style="color: #D0D0D0">human:</span>
+        <span style="color: #D0D0D0">your_second_answer=</span><span style="color: #2FBCCD">input</span><span style="color: #D0D0D0">(</span><span style="color: #ED9D13">&#39;Which door %s? &#39;</span> <span style="color: #D0D0D0">%</span> <span style="color: #2FBCCD">str</span><span style="color: #D0D0D0">(door_choices))</span>
+    <span style="color: #6EBF26; font-weight: bold">else</span><span style="color: #D0D0D0">:</span>   <span style="color: #ABABAB; font-style: italic"># automatic</span>
 
-        <span class="c1"># always switch</span>
-        <span class="k">if</span> <span class="n">door_choices</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span><span class="n">your_first_answer</span><span class="p">:</span>
-            <span class="n">your_second_answer</span><span class="o">=</span><span class="n">door_choices</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">your_second_answer</span><span class="o">=</span><span class="n">door_choices</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span style="color: #ABABAB; font-style: italic"># always switch</span>
+        <span style="color: #6EBF26; font-weight: bold">if</span> <span style="color: #D0D0D0">door_choices[</span><span style="color: #51B2FD">0</span><span style="color: #D0D0D0">]==your_first_answer:</span>
+            <span style="color: #D0D0D0">your_second_answer=door_choices[</span><span style="color: #51B2FD">1</span><span style="color: #D0D0D0">]</span>
+        <span style="color: #6EBF26; font-weight: bold">else</span><span style="color: #D0D0D0">:</span>
+            <span style="color: #D0D0D0">your_second_answer=door_choices[</span><span style="color: #51B2FD">0</span><span style="color: #D0D0D0">]</span>
 
-    <span class="k">if</span> <span class="n">your_second_answer</span><span class="o">==</span><span class="n">prize</span><span class="p">:</span>
-        <span class="nb">print</span> <span class="s2">&quot;You win!&quot;</span>
-        <span class="n">win</span><span class="o">+=</span><span class="mi">1</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span> <span class="s2">&quot;You Lose!&quot;</span>
+    <span style="color: #6EBF26; font-weight: bold">if</span> <span style="color: #D0D0D0">your_second_answer==prize:</span>
+        <span style="color: #2FBCCD">print</span> <span style="color: #ED9D13">&quot;You win!&quot;</span>
+        <span style="color: #D0D0D0">win+=</span><span style="color: #51B2FD">1</span>
+    <span style="color: #6EBF26; font-weight: bold">else</span><span style="color: #D0D0D0">:</span>
+        <span style="color: #2FBCCD">print</span> <span style="color: #ED9D13">&quot;You Lose!&quot;</span>
 
-    <span class="n">turn</span><span class="o">+=</span><span class="mi">1</span>
+    <span style="color: #D0D0D0">turn+=</span><span style="color: #51B2FD">1</span>
 
 
-<span class="nb">print</span> <span class="s2">&quot;Winning percentage: &quot;</span><span class="p">,</span><span class="nb">float</span><span class="p">(</span><span class="n">win</span><span class="p">)</span><span class="o">/</span><span class="n">turn</span><span class="o">*</span><span class="mi">100</span>
+<span style="color: #2FBCCD">print</span> <span style="color: #ED9D13">&quot;Winning percentage: &quot;</span><span style="color: #D0D0D0">,</span><span style="color: #2FBCCD">float</span><span style="color: #D0D0D0">(win)/turn*</span><span style="color: #51B2FD">100</span>
 </code></pre></div>
 
 
@@ -202,7 +202,7 @@ particularly unintuitive.</p>
                                             <li><a href="https://bblais.github.io/category/productivity.html">productivity <span>(7)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/programming.html">programming <span>(5)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/projects.html">projects <span>(4)</span></a></li>
-                                            <li><a href="https://bblais.github.io/category/religion.html">religion <span>(33)</span></a></li>
+                                            <li><a href="https://bblais.github.io/category/religion.html">religion <span>(34)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/science.html">science <span>(13)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/unbelievable-project.html">Unbelievable Project <span>(21)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/wordpress_migration.html">wordpress_migration <span>(160)</span></a></li>

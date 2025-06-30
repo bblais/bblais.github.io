@@ -63,42 +63,42 @@
 
 
 									<p>As an exercise, I like to reproduce computational papers, but with my own tools.  This let's me know that I understand completely what is being  written and in many cases allows me to extend and debug my own tools.  I'm going to do a series of these as I work through some of my reading list.  The first one I'm doing is available here:</p>
-<p><a href="https://www.cs.princeton.edu/picasso/mats/matlab/princeton_spring06.pdf">https://www.cs.princeton.edu/picasso/mats/matlab/princeton_spring06.pdf</a></p>
-<p>In this case, not only was I able to reproduce the results of the text, but it uncovered two bugs in my <a href="https://bblais.github.io/pyndamics3/"><code>pyndamics3</code></a> package which I was able to fix.  </p>
+<p><a href="https://www.cs.princeton.edu/picasso/mats/matlab/princeton_spring06.pdf" rel="nofollow">https://www.cs.princeton.edu/picasso/mats/matlab/princeton_spring06.pdf</a></p>
+<p>In this case, not only was I able to reproduce the results of the text, but it uncovered two bugs in my <a href="https://bblais.github.io/pyndamics3/" rel="nofollow"><code>pyndamics3</code></a> package which I was able to fix.  </p>
 <p>The main system in the text being solved is</p>
 <p><img alt="Pasted image 20220113102335.png" src="https://bblais.github.io/images/Pasted image 20220113102335.png"></p>
-<div class="highlight"><pre><span></span><code><span class="o">%</span><span class="n">pylab</span> <span class="n">inline</span>
+<div class="highlight" style="background: #202020"><pre style="line-height: 125%;"><span></span><code><span style="color: #D0D0D0">%pylab</span> <span style="color: #D0D0D0">inline</span>
 
-<span class="kn">from</span><span class="w"> </span><span class="nn">pyndamics3</span><span class="w"> </span><span class="kn">import</span> <span class="n">Simulation</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">pyndamics3.chem</span><span class="w"> </span><span class="kn">import</span> <span class="n">ChemSimulation</span>
+<span style="color: #6EBF26; font-weight: bold">from</span><span style="color: #666"> </span><span style="color: #71ADFF; text-decoration: underline">pyndamics3</span><span style="color: #666"> </span><span style="color: #6EBF26; font-weight: bold">import</span> <span style="color: #D0D0D0">Simulation</span>
+<span style="color: #6EBF26; font-weight: bold">from</span><span style="color: #666"> </span><span style="color: #71ADFF; text-decoration: underline">pyndamics3.chem</span><span style="color: #666"> </span><span style="color: #6EBF26; font-weight: bold">import</span> <span style="color: #D0D0D0">ChemSimulation</span>
 
-<span class="n">b</span><span class="o">=</span><span class="mi">20</span>
-<span class="n">k3</span><span class="o">=</span><span class="mf">0.00577</span>
-<span class="n">k4</span><span class="o">=</span><span class="mf">0.0001925</span>
-<span class="n">k1</span><span class="o">=</span><span class="mf">.01</span>
+<span style="color: #D0D0D0">b=</span><span style="color: #51B2FD">20</span>
+<span style="color: #D0D0D0">k3=</span><span style="color: #51B2FD">0.00577</span>
+<span style="color: #D0D0D0">k4=</span><span style="color: #51B2FD">0.0001925</span>
+<span style="color: #D0D0D0">k1=</span><span style="color: #51B2FD">.01</span>
 
-<span class="n">sim</span><span class="o">=</span><span class="n">ChemSimulation</span><span class="p">(</span>
-<span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">D --k1--&gt; D+M</span>
-<span class="sd">M --k2--&gt; M+P</span>
-<span class="sd">M --k3--&gt; ϕ</span>
-<span class="sd">P --k4--&gt; ϕ</span>
-<span class="sd">&quot;&quot;&quot;</span><span class="p">,</span><span class="n">D</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">M</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">ϕ</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">P</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">k1</span><span class="o">=</span><span class="n">k1</span><span class="p">,</span><span class="n">k2</span><span class="o">=</span><span class="n">b</span><span class="o">*</span><span class="n">k3</span><span class="p">,</span><span class="n">k3</span><span class="o">=</span><span class="n">k3</span><span class="p">,</span><span class="n">k4</span><span class="o">=</span><span class="n">k4</span><span class="p">)</span>
+<span style="color: #D0D0D0">sim=ChemSimulation(</span>
+<span style="color: #ED9D13">&quot;&quot;&quot;</span>
+<span style="color: #ED9D13">D --k1--&gt; D+M</span>
+<span style="color: #ED9D13">M --k2--&gt; M+P</span>
+<span style="color: #ED9D13">M --k3--&gt; ϕ</span>
+<span style="color: #ED9D13">P --k4--&gt; ϕ</span>
+<span style="color: #ED9D13">&quot;&quot;&quot;</span><span style="color: #D0D0D0">,D=</span><span style="color: #51B2FD">1</span><span style="color: #D0D0D0">,M=</span><span style="color: #51B2FD">0</span><span style="color: #D0D0D0">,ϕ=</span><span style="color: #51B2FD">0</span><span style="color: #D0D0D0">,P=</span><span style="color: #51B2FD">0</span><span style="color: #D0D0D0">,k1=k1,k2=b*k3,k3=k3,k4=k4)</span>
 
-<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">sim</span><span class="o">.</span><span class="n">components</span><span class="p">:</span>
-    <span class="n">c</span><span class="o">.</span><span class="n">plot</span><span class="o">=</span><span class="kc">True</span>
+<span style="color: #6EBF26; font-weight: bold">for</span> <span style="color: #D0D0D0">c</span> <span style="color: #6EBF26; font-weight: bold">in</span> <span style="color: #D0D0D0">sim.components:</span>
+    <span style="color: #D0D0D0">c.plot=</span><span style="color: #6EBF26; font-weight: bold">True</span>
 
-<span class="n">sim</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="mf">4e4</span><span class="p">)</span>
+<span style="color: #D0D0D0">sim.run(</span><span style="color: #51B2FD">4e4</span><span style="color: #D0D0D0">)</span>
 </code></pre></div>
 
 <p>Output:</p>
-<div class="highlight"><pre><span></span><code><span class="k">[&#39;D&#39;] k1 [&#39;D&#39;, &#39;M&#39;]</span>
-<span class="k">[&#39;M&#39;] k2 [&#39;M&#39;, &#39;P&#39;]</span>
-<span class="k">[&#39;M&#39;] k3 [&#39;ϕ&#39;]</span>
-<span class="k">[&#39;P&#39;] k4 [&#39;ϕ&#39;]</span>
-<span class="na">Components [&#39;D&#39;, &#39;M&#39;, &#39;P&#39;, &#39;ϕ&#39;]</span>
-<span class="na">Parameters [&#39;k1&#39;, &#39;k2&#39;, &#39;k3&#39;, &#39;k4&#39;]</span>
-<span class="na">diffeqs [&quot;D&#39;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">0&quot;, &quot;M&#39; =  +k1*D -k3*M&quot;, &quot;P&#39; =  +k2*M -k4*P&quot;]</span>
+<div class="highlight" style="background: #202020"><pre style="line-height: 125%;"><span></span><code><span style="color: #6EBF26; font-weight: bold">[&#39;D&#39;] k1 [&#39;D&#39;, &#39;M&#39;]</span>
+<span style="color: #6EBF26; font-weight: bold">[&#39;M&#39;] k2 [&#39;M&#39;, &#39;P&#39;]</span>
+<span style="color: #6EBF26; font-weight: bold">[&#39;M&#39;] k3 [&#39;ϕ&#39;]</span>
+<span style="color: #6EBF26; font-weight: bold">[&#39;P&#39;] k4 [&#39;ϕ&#39;]</span>
+<span style="color: #BBB">Components [&#39;D&#39;, &#39;M&#39;, &#39;P&#39;, &#39;ϕ&#39;]</span>
+<span style="color: #BBB">Parameters [&#39;k1&#39;, &#39;k2&#39;, &#39;k3&#39;, &#39;k4&#39;]</span>
+<span style="color: #BBB">diffeqs [&quot;D&#39;</span><span style="color: #666"> </span><span style="color: #D0D0D0">=</span><span style="color: #666"> </span><span style="color: #ED9D13">0&quot;, &quot;M&#39; =  +k1*D -k3*M&quot;, &quot;P&#39; =  +k2*M -k4*P&quot;]</span>
 </code></pre></div>
 
 <p>which yields figures like:</p>
@@ -108,50 +108,50 @@
 <p>The text points out,</p>
 <p><img alt="Pasted image 20220113102608.png" src="https://bblais.github.io/images/Pasted image 20220113102608.png"></p>
 <p>which we can find by looking at the end of the array for each of those variables.</p>
-<div class="highlight"><pre><span></span><code><span class="n">sim</span><span class="o">.</span><span class="n">P</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span><span class="n">sim</span><span class="o">.</span><span class="n">M</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<div class="highlight" style="background: #202020"><pre style="line-height: 125%;"><span></span><code><span style="color: #D0D0D0">sim.P[-</span><span style="color: #51B2FD">1</span><span style="color: #D0D0D0">],sim.M[-</span><span style="color: #51B2FD">1</span><span style="color: #D0D0D0">]</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code>(1038.4743123361338, 1.7331022510164473)
+<div class="highlight" style="background: #202020"><pre style="line-height: 125%;"><span></span><code>(1038.4743123361338, 1.7331022510164473)
 </code></pre></div>
 
 <p>The paper then adds the exercise</p>
 <p><img alt="Pasted image 20220113102710.png" src="https://bblais.github.io/images/Pasted image 20220113102710.png"></p>
-<div class="highlight"><pre><span></span><code><span class="n">b</span><span class="o">=</span><span class="mi">2</span>
-<span class="n">k3</span><span class="o">=</span><span class="mf">0.00577</span>
-<span class="n">k4</span><span class="o">=</span><span class="mf">0.0001925</span>
-<span class="n">k1</span><span class="o">=</span><span class="mf">.01</span>
+<div class="highlight" style="background: #202020"><pre style="line-height: 125%;"><span></span><code><span style="color: #D0D0D0">b=</span><span style="color: #51B2FD">2</span>
+<span style="color: #D0D0D0">k3=</span><span style="color: #51B2FD">0.00577</span>
+<span style="color: #D0D0D0">k4=</span><span style="color: #51B2FD">0.0001925</span>
+<span style="color: #D0D0D0">k1=</span><span style="color: #51B2FD">.01</span>
 
-<span class="n">sim</span><span class="o">=</span><span class="n">ChemSimulation</span><span class="p">(</span>
-<span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">D --k1--&gt; D+M</span>
-<span class="sd">M --k2--&gt; M+P</span>
-<span class="sd">M --k3--&gt; ϕ</span>
-<span class="sd">P --k4--&gt; ϕ</span>
-<span class="sd">&quot;&quot;&quot;</span><span class="p">,</span><span class="n">D</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">M</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">ϕ</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">P</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">k1</span><span class="o">=</span><span class="n">k1</span><span class="p">,</span><span class="n">k2</span><span class="o">=</span><span class="n">b</span><span class="o">*</span><span class="n">k3</span><span class="p">,</span><span class="n">k3</span><span class="o">=</span><span class="n">k3</span><span class="p">,</span><span class="n">k4</span><span class="o">=</span><span class="n">k4</span><span class="p">)</span>
+<span style="color: #D0D0D0">sim=ChemSimulation(</span>
+<span style="color: #ED9D13">&quot;&quot;&quot;</span>
+<span style="color: #ED9D13">D --k1--&gt; D+M</span>
+<span style="color: #ED9D13">M --k2--&gt; M+P</span>
+<span style="color: #ED9D13">M --k3--&gt; ϕ</span>
+<span style="color: #ED9D13">P --k4--&gt; ϕ</span>
+<span style="color: #ED9D13">&quot;&quot;&quot;</span><span style="color: #D0D0D0">,D=</span><span style="color: #51B2FD">1</span><span style="color: #D0D0D0">,M=</span><span style="color: #51B2FD">0</span><span style="color: #D0D0D0">,ϕ=</span><span style="color: #51B2FD">0</span><span style="color: #D0D0D0">,P=</span><span style="color: #51B2FD">0</span><span style="color: #D0D0D0">,k1=k1,k2=b*k3,k3=k3,k4=k4)</span>
 
 
-<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">sim</span><span class="o">.</span><span class="n">components</span><span class="p">:</span>
-    <span class="n">c</span><span class="o">.</span><span class="n">plot</span><span class="o">=</span><span class="kc">True</span>
+<span style="color: #6EBF26; font-weight: bold">for</span> <span style="color: #D0D0D0">c</span> <span style="color: #6EBF26; font-weight: bold">in</span> <span style="color: #D0D0D0">sim.components:</span>
+    <span style="color: #D0D0D0">c.plot=</span><span style="color: #6EBF26; font-weight: bold">True</span>
 </code></pre></div>
 
 <p>I discovered that by originally doing</p>
-<div class="highlight"><pre><span></span><code><span class="n">sim</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="mf">1e4</span><span class="p">)</span>
+<div class="highlight" style="background: #202020"><pre style="line-height: 125%;"><span></span><code><span style="color: #D0D0D0">sim.run(</span><span style="color: #51B2FD">1e4</span><span style="color: #D0D0D0">)</span>
 
-<span class="n">sim</span><span class="o">.</span><span class="n">P</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span><span class="n">sim</span><span class="o">.</span><span class="n">M</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> 
+<span style="color: #D0D0D0">sim.P[-</span><span style="color: #51B2FD">1</span><span style="color: #D0D0D0">],sim.M[-</span><span style="color: #51B2FD">1</span><span style="color: #D0D0D0">]</span> 
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code>(88.21709421325941, 1.7331022259104094)
+<div class="highlight" style="background: #202020"><pre style="line-height: 125%;"><span></span><code>(88.21709421325941, 1.7331022259104094)
 </code></pre></div>
 
 <p>it didn't match the fixed point stated in the text!  So Iooked at the plot</p>
 <p><img alt="Pasted image 20220113103003.png" src="https://bblais.github.io/images/Pasted image 20220113103003.png"></p>
 <p>and saw it hadn't converged.  Increasing the run time</p>
-<div class="highlight"><pre><span></span><code><span class="n">sim</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="mf">1e5</span><span class="p">)</span>
+<div class="highlight" style="background: #202020"><pre style="line-height: 125%;"><span></span><code><span style="color: #D0D0D0">sim.run(</span><span style="color: #51B2FD">1e5</span><span style="color: #D0D0D0">)</span>
 
-<span class="n">sim</span><span class="o">.</span><span class="n">P</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span><span class="n">sim</span><span class="o">.</span><span class="n">M</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span style="color: #D0D0D0">sim.P[-</span><span style="color: #51B2FD">1</span><span style="color: #D0D0D0">],sim.M[-</span><span style="color: #51B2FD">1</span><span style="color: #D0D0D0">]</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code>(103.8961031134814, 1.7331022530369293)
+<div class="highlight" style="background: #202020"><pre style="line-height: 125%;"><span></span><code>(103.8961031134814, 1.7331022530369293)
 </code></pre></div>
 
 <p><img alt="Pasted image 20220113103146.png" src="https://bblais.github.io/images/Pasted image 20220113103146.png"></p>
@@ -242,7 +242,7 @@
                                             <li><a href="https://bblais.github.io/category/productivity.html">productivity <span>(7)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/programming.html">programming <span>(5)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/projects.html">projects <span>(4)</span></a></li>
-                                            <li><a href="https://bblais.github.io/category/religion.html">religion <span>(33)</span></a></li>
+                                            <li><a href="https://bblais.github.io/category/religion.html">religion <span>(34)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/science.html">science <span>(13)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/unbelievable-project.html">Unbelievable Project <span>(21)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/wordpress_migration.html">wordpress_migration <span>(160)</span></a></li>

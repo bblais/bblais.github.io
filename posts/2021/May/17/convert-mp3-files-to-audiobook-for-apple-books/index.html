@@ -62,27 +62,27 @@
 										<span class="image left"><img src="https://bblais.github.io/images/eugenio-mazzone-6ywyo2qtaZ8-unsplash.jpg"></span>
 
 
-									<p>The Mac/iPhone Books app has some issues.  Before switching the content out of iTunes into a separate app, audiobooks were housed in the same app as music.  You could edit the metadata on individual tracks, you could easily import an audiobook cd and just change the type to "Audiobook" and things would work.  If something was wrong with the title of a track, or the track number, you could go in and edit it.  Once they switched to Books, this level of editing was no longer possible.  Until recently I was doing the tedious task of editing in Music, copying to Books, seeing errors, copying back etc...  The errors were often things like Books breaking the audiobook into separate "books" because the track numbers weren't read right, or the tracks would be out of order, or the artwork wouldn't come through.  I was ok with this workaround tedium until recently, when I wanted to start following a youtube channel called <a href="https://www.youtube.com/channel/UCy63pdWnpupE8MfxpMNfRNg">Digital Gnosis</a>.  One of my favorite playlists is called <a href="https://www.youtube.com/playlist?list=PLggkCqSR7N1eq3UGURGKs9hcJNV-uIn4n">Bad Apologetics</a>, with 15 episodes so far with an average length <strong>around 7 and a half hours a piece</strong>!  So this state of affairs has forced me to retool my workflow, because I can't be at my computer to watch a 9 hour video, and I don't want to pay youtube to be able to listen while my phone is locked, and there are too many videos/playlists to deal with by hand.  So here goes my solution.</p>
+									<p>The Mac/iPhone Books app has some issues.  Before switching the content out of iTunes into a separate app, audiobooks were housed in the same app as music.  You could edit the metadata on individual tracks, you could easily import an audiobook cd and just change the type to "Audiobook" and things would work.  If something was wrong with the title of a track, or the track number, you could go in and edit it.  Once they switched to Books, this level of editing was no longer possible.  Until recently I was doing the tedious task of editing in Music, copying to Books, seeing errors, copying back etc...  The errors were often things like Books breaking the audiobook into separate "books" because the track numbers weren't read right, or the tracks would be out of order, or the artwork wouldn't come through.  I was ok with this workaround tedium until recently, when I wanted to start following a youtube channel called <a href="https://www.youtube.com/channel/UCy63pdWnpupE8MfxpMNfRNg" rel="nofollow">Digital Gnosis</a>.  One of my favorite playlists is called <a href="https://www.youtube.com/playlist?list=PLggkCqSR7N1eq3UGURGKs9hcJNV-uIn4n" rel="nofollow">Bad Apologetics</a>, with 15 episodes so far with an average length <strong>around 7 and a half hours a piece</strong>!  So this state of affairs has forced me to retool my workflow, because I can't be at my computer to watch a 9 hour video, and I don't want to pay youtube to be able to listen while my phone is locked, and there are too many videos/playlists to deal with by hand.  So here goes my solution.</p>
 <h2 id="make-a-folder-of-mp3-files">Make a folder of mp3 files</h2>
 <p>Using the tool youtube-dl, installed with</p>
-<div class="highlight"><pre><span></span><code>pip install youtube-dl --upgrade
+<div class="highlight" style="background: #202020"><pre style="line-height: 125%;"><span></span><code>pip install youtube-dl --upgrade
 </code></pre></div>
 
 <p>we download all of the videos in a playlist, convert to mp3, and put them in the current folder.  This playlist is called Open Conversations, so I put it in a folder named for that.</p>
-<div class="highlight"><pre><span></span><code>youtube-dl -i --extract-audio --audio-format mp3 <span class="s2">&quot;https://www.youtube.com/playlist?list=PLggkCqSR7N1dBxUjy51NdVGPJ78JXEdl-&quot;</span>
+<div class="highlight" style="background: #202020"><pre style="line-height: 125%;"><span></span><code>youtube-dl -i --extract-audio --audio-format mp3 <span style="color: #ED9D13">&quot;https://www.youtube.com/playlist?list=PLggkCqSR7N1dBxUjy51NdVGPJ78JXEdl-&quot;</span>
 </code></pre></div>
 
 <p>One can also do this by importing audiobook CDs and place the tracks in a folder.</p>
 <h2 id="get-the-book-info-correct">Get the book info correct</h2>
 <p>We continue with a script to get the track titles correct.  This part is a little manual, because the naming scheme for the tracks are individual to the playlist.  A little bit of string magic does the trick.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">glob</span><span class="w"> </span><span class="kn">import</span> <span class="n">glob</span>
-<span class="n">folder</span><span class="o">=</span><span class="s1">&#39;Open Conversations&#39;</span>
-<span class="n">fnames</span><span class="o">=</span><span class="nb">sorted</span><span class="p">(</span><span class="n">glob</span><span class="p">(</span><span class="n">folder</span><span class="o">+</span><span class="s2">&quot;/*.mp3&quot;</span><span class="p">))</span>
-<span class="n">display</span><span class="p">(</span><span class="n">fnames</span><span class="p">)</span>
+<div class="highlight" style="background: #202020"><pre style="line-height: 125%;"><span></span><code><span style="color: #6EBF26; font-weight: bold">from</span><span style="color: #666"> </span><span style="color: #71ADFF; text-decoration: underline">glob</span><span style="color: #666"> </span><span style="color: #6EBF26; font-weight: bold">import</span> <span style="color: #D0D0D0">glob</span>
+<span style="color: #D0D0D0">folder=</span><span style="color: #ED9D13">&#39;Open Conversations&#39;</span>
+<span style="color: #D0D0D0">fnames=</span><span style="color: #2FBCCD">sorted</span><span style="color: #D0D0D0">(glob(folder+</span><span style="color: #ED9D13">&quot;/*.mp3&quot;</span><span style="color: #D0D0D0">))</span>
+<span style="color: #D0D0D0">display(fnames)</span>
 </code></pre></div>
 
 <p>Output:</p>
-<div class="highlight"><pre><span></span><code>[&#39;Open Conversations/Open Conversation #001-vCEu612_tbc.mp3&#39;,
+<div class="highlight" style="background: #202020"><pre style="line-height: 125%;"><span></span><code>[&#39;Open Conversations/Open Conversation #001-vCEu612_tbc.mp3&#39;,
 &#39;Open Conversations/Open Conversation #002-DW6LTgzxI2c.mp3&#39;,
 &#39;Open Conversations/Open Conversation #003-yxF3OJpLW8w.mp3&#39;,
 &#39;Open Conversations/Open Conversation #004-kBSczog9hjY.mp3&#39;,
@@ -102,20 +102,20 @@
 &#39;Open Conversations/Open Conversation #018 - James Fodor, Causation, Craig and more...-Kj3L8L3vXZI.mp3&#39;]
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="n">album</span><span class="o">=</span><span class="n">folder</span>
-<span class="n">artist</span><span class="o">=</span><span class="s1">&#39;Digital Gnosis&#39;</span>
-<span class="n">artwork</span><span class="o">=</span><span class="s1">&#39;Open Converstions Cover.png&#39;</span>
-<span class="n">mime</span><span class="o">=</span><span class="s1">&#39;image/png&#39;</span>
+<div class="highlight" style="background: #202020"><pre style="line-height: 125%;"><span></span><code><span style="color: #D0D0D0">album=folder</span>
+<span style="color: #D0D0D0">artist=</span><span style="color: #ED9D13">&#39;Digital Gnosis&#39;</span>
+<span style="color: #D0D0D0">artwork=</span><span style="color: #ED9D13">&#39;Open Converstions Cover.png&#39;</span>
+<span style="color: #D0D0D0">mime=</span><span style="color: #ED9D13">&#39;image/png&#39;</span>
 
-<span class="c1"># this part has to be done by hand because each </span>
-<span class="c1"># person&#39;s playlist has a different naming format</span>
-<span class="n">titles</span><span class="o">=</span><span class="p">[</span><span class="n">_</span><span class="p">[:</span><span class="o">-</span><span class="mi">16</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;Open Conversations/Open Conversation &#39;</span><span class="p">,</span><span class="s1">&#39;Open Conversations - Ep &#39;</span><span class="p">)</span> 
-                <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">fnames</span><span class="p">]</span>
-<span class="n">display</span><span class="p">(</span><span class="n">titles</span><span class="p">)</span>
+<span style="color: #ABABAB; font-style: italic"># this part has to be done by hand because each </span>
+<span style="color: #ABABAB; font-style: italic"># person&#39;s playlist has a different naming format</span>
+<span style="color: #D0D0D0">titles=[_[:-</span><span style="color: #51B2FD">16</span><span style="color: #D0D0D0">].replace(</span><span style="color: #ED9D13">&#39;Open Conversations/Open Conversation &#39;</span><span style="color: #D0D0D0">,</span><span style="color: #ED9D13">&#39;Open Conversations - Ep &#39;</span><span style="color: #D0D0D0">)</span> 
+                <span style="color: #6EBF26; font-weight: bold">for</span> <span style="color: #D0D0D0">_</span> <span style="color: #6EBF26; font-weight: bold">in</span> <span style="color: #D0D0D0">fnames]</span>
+<span style="color: #D0D0D0">display(titles)</span>
 </code></pre></div>
 
 <p>Output:</p>
-<div class="highlight"><pre><span></span><code>[&#39;Open Conversations - Ep #001&#39;,
+<div class="highlight" style="background: #202020"><pre style="line-height: 125%;"><span></span><code>[&#39;Open Conversations - Ep #001&#39;,
 &#39;Open Conversations - Ep #002&#39;,
 &#39;Open Conversations - Ep #003&#39;,
 &#39;Open Conversations - Ep #004&#39;,
@@ -136,47 +136,47 @@
 </code></pre></div>
 
 <p><strong>NOTE:</strong> Having the album name in the track title, followed by " - " and the track name seems to be important for the Books app to get the title and tracks right for some reason.</p>
-<h2 id="write-out-the-mp3-meta-data-with-the-mutagen-library">Write out the mp3 meta data with the <a href="https://mutagen.readthedocs.io/en/latest/"><code>mutagen</code></a> library.</h2>
+<h2 id="write-out-the-mp3-meta-data-with-the-mutagen-library">Write out the mp3 meta data with the <a href="https://mutagen.readthedocs.io/en/latest/" rel="nofollow"><code>mutagen</code></a> library.</h2>
 <p>The docs are a bit sparse here, so between the docs and stackoverflow, I pieced together enough to set the titles, album, tracknumber, and album art for each mp3 file.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">mutagen.easyid3</span><span class="w"> </span><span class="kn">import</span> <span class="n">EasyID3</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">mutagen.id3</span><span class="w"> </span><span class="kn">import</span> <span class="n">ID3</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">mutagen</span>
+<div class="highlight" style="background: #202020"><pre style="line-height: 125%;"><span></span><code><span style="color: #6EBF26; font-weight: bold">from</span><span style="color: #666"> </span><span style="color: #71ADFF; text-decoration: underline">mutagen.easyid3</span><span style="color: #666"> </span><span style="color: #6EBF26; font-weight: bold">import</span> <span style="color: #D0D0D0">EasyID3</span>
+<span style="color: #6EBF26; font-weight: bold">from</span><span style="color: #666"> </span><span style="color: #71ADFF; text-decoration: underline">mutagen.id3</span><span style="color: #666"> </span><span style="color: #6EBF26; font-weight: bold">import</span> <span style="color: #D0D0D0">ID3</span>
+<span style="color: #6EBF26; font-weight: bold">import</span><span style="color: #666"> </span><span style="color: #71ADFF; text-decoration: underline">mutagen</span>
 
-<span class="n">write</span><span class="o">=</span><span class="kc">True</span> <span class="c1"># for debugging</span>
+<span style="color: #D0D0D0">write=</span><span style="color: #6EBF26; font-weight: bold">True</span> <span style="color: #ABABAB; font-style: italic"># for debugging</span>
 
-<span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">name</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">fnames</span><span class="p">):</span>
-
-
-    <span class="k">if</span> <span class="n">write</span><span class="p">:</span>
-        <span class="k">try</span><span class="p">:</span>
-            <span class="n">meta</span> <span class="o">=</span> <span class="n">EasyID3</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
-        <span class="k">except</span> <span class="n">mutagen</span><span class="o">.</span><span class="n">id3</span><span class="o">.</span><span class="n">ID3NoHeaderError</span><span class="p">:</span>
-            <span class="n">meta</span> <span class="o">=</span> <span class="n">mutagen</span><span class="o">.</span><span class="n">File</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">easy</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-            <span class="n">meta</span><span class="o">.</span><span class="n">add_tags</span><span class="p">()</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">meta</span><span class="o">=</span><span class="p">{}</span>
+<span style="color: #6EBF26; font-weight: bold">for</span> <span style="color: #D0D0D0">i,name</span> <span style="color: #6EBF26; font-weight: bold">in</span> <span style="color: #2FBCCD">enumerate</span><span style="color: #D0D0D0">(fnames):</span>
 
 
-    <span class="n">title</span><span class="o">=</span><span class="n">titles</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span style="color: #6EBF26; font-weight: bold">if</span> <span style="color: #D0D0D0">write:</span>
+        <span style="color: #6EBF26; font-weight: bold">try</span><span style="color: #D0D0D0">:</span>
+            <span style="color: #D0D0D0">meta</span> <span style="color: #D0D0D0">=</span> <span style="color: #D0D0D0">EasyID3(name)</span>
+        <span style="color: #6EBF26; font-weight: bold">except</span> <span style="color: #D0D0D0">mutagen.id3.ID3NoHeaderError:</span>
+            <span style="color: #D0D0D0">meta</span> <span style="color: #D0D0D0">=</span> <span style="color: #D0D0D0">mutagen.File(name,</span> <span style="color: #D0D0D0">easy=</span><span style="color: #6EBF26; font-weight: bold">True</span><span style="color: #D0D0D0">)</span>
+            <span style="color: #D0D0D0">meta.add_tags()</span>
+    <span style="color: #6EBF26; font-weight: bold">else</span><span style="color: #D0D0D0">:</span>
+        <span style="color: #D0D0D0">meta={}</span>
 
 
-    <span class="n">meta</span><span class="p">[</span><span class="s1">&#39;album&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">album</span>
-    <span class="n">meta</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">title</span>
-    <span class="n">meta</span><span class="p">[</span><span class="s1">&#39;artist&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">artist</span>
-    <span class="n">meta</span><span class="p">[</span><span class="s1">&#39;tracknumber&#39;</span><span class="p">]</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+    <span style="color: #D0D0D0">title=titles[i]</span>
 
-    <span class="nb">print</span><span class="p">(</span><span class="n">meta</span><span class="p">)</span>
 
-    <span class="k">if</span> <span class="n">write</span><span class="p">:</span>
-        <span class="n">meta</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+    <span style="color: #D0D0D0">meta[</span><span style="color: #ED9D13">&#39;album&#39;</span><span style="color: #D0D0D0">]=album</span>
+    <span style="color: #D0D0D0">meta[</span><span style="color: #ED9D13">&#39;title&#39;</span><span style="color: #D0D0D0">]=title</span>
+    <span style="color: #D0D0D0">meta[</span><span style="color: #ED9D13">&#39;artist&#39;</span><span style="color: #D0D0D0">]=artist</span>
+    <span style="color: #D0D0D0">meta[</span><span style="color: #ED9D13">&#39;tracknumber&#39;</span><span style="color: #D0D0D0">]=</span><span style="color: #2FBCCD">str</span><span style="color: #D0D0D0">(i+</span><span style="color: #51B2FD">1</span><span style="color: #D0D0D0">)</span>
 
-        <span class="n">file</span> <span class="o">=</span> <span class="n">ID3</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="c1"># Load the file</span>
-        <span class="n">file</span><span class="o">.</span><span class="n">delall</span><span class="p">(</span><span class="s2">&quot;APIC&quot;</span><span class="p">)</span> <span class="c1"># Delete every APIC tag (Cover art)</span>
+    <span style="color: #2FBCCD">print</span><span style="color: #D0D0D0">(meta)</span>
 
-        <span class="n">imagedata</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">artwork</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-        <span class="n">file</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">mutagen</span><span class="o">.</span><span class="n">id3</span><span class="o">.</span><span class="n">APIC</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">mime</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;Front cover&#39;</span><span class="p">,</span> <span class="n">imagedata</span><span class="p">))</span>
+    <span style="color: #6EBF26; font-weight: bold">if</span> <span style="color: #D0D0D0">write:</span>
+        <span style="color: #D0D0D0">meta.save(name)</span>
 
-        <span class="n">file</span><span class="o">.</span><span class="n">save</span><span class="p">()</span> <span class="c1"># Save the file    </span>
+        <span style="color: #D0D0D0">file</span> <span style="color: #D0D0D0">=</span> <span style="color: #D0D0D0">ID3(name)</span> <span style="color: #ABABAB; font-style: italic"># Load the file</span>
+        <span style="color: #D0D0D0">file.delall(</span><span style="color: #ED9D13">&quot;APIC&quot;</span><span style="color: #D0D0D0">)</span> <span style="color: #ABABAB; font-style: italic"># Delete every APIC tag (Cover art)</span>
+
+        <span style="color: #D0D0D0">imagedata</span> <span style="color: #D0D0D0">=</span> <span style="color: #2FBCCD">open</span><span style="color: #D0D0D0">(artwork,</span> <span style="color: #ED9D13">&#39;rb&#39;</span><span style="color: #D0D0D0">).read()</span>
+        <span style="color: #D0D0D0">file.add(mutagen.id3.APIC(</span><span style="color: #51B2FD">3</span><span style="color: #D0D0D0">,</span> <span style="color: #D0D0D0">mime,</span> <span style="color: #51B2FD">3</span><span style="color: #D0D0D0">,</span> <span style="color: #ED9D13">&#39;Front cover&#39;</span><span style="color: #D0D0D0">,</span> <span style="color: #D0D0D0">imagedata))</span>
+
+        <span style="color: #D0D0D0">file.save()</span> <span style="color: #ABABAB; font-style: italic"># Save the file    </span>
 </code></pre></div>
 
 <p>Then <em>bingo!</em> you can copy the folder of mp3 to the Books app, and all will be well.  Now I just have to find time to listen to it all.</p>
@@ -265,7 +265,7 @@
                                             <li><a href="https://bblais.github.io/category/productivity.html">productivity <span>(7)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/programming.html">programming <span>(5)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/projects.html">projects <span>(4)</span></a></li>
-                                            <li><a href="https://bblais.github.io/category/religion.html">religion <span>(33)</span></a></li>
+                                            <li><a href="https://bblais.github.io/category/religion.html">religion <span>(34)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/science.html">science <span>(13)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/unbelievable-project.html">Unbelievable Project <span>(21)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/wordpress_migration.html">wordpress_migration <span>(160)</span></a></li>
