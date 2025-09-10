@@ -11,9 +11,8 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="https://bblais.github.io/theme/css/main.css" />
-		<link rel="stylesheet"
-		href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"
-		crossorigin="anonymous">
+
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
 
         <link rel="stylesheet" type="text/css" href="https://bblais.github.io/theme/css/custom.css" media="screen">
     
@@ -79,22 +78,22 @@ going through the calculation, I was in for a surprise.</p>
 <p>You draw two cards from a deck, and ask what is the probability that the
 first is a black card, and the second is a jack. In math notation, we
 want:</p>
-<p><span class="katex-error" style="color:#cc0000" title="ParseError: KaTeX parse error: Can't use function '$' in math mode at position 1: $̲   P(B1,J2)   ">$  
+<div class="math">$$  
 P(B1,J2)  
-</span>$</p>
+$$</div>
 <h2 id="with-replacement">With replacement</h2>
 <p>In replacement, we replace the first card after drawing it, reshuffle,
 and then draw the second. Thus the two events are independent.</p>
-<p><span class="katex-error" style="color:#cc0000" title="ParseError: KaTeX parse error: Can't use function '$' in math mode at position 1: $̲   \begin{array…">$  
+<div class="math">$$  
 \begin{array}{rcl}  
 P(B1,J2|{\rm replace}) &amp;=&amp; P(B1) \times P(J2) \\  
 &amp;=&amp;\frac{26}{52} \times \frac{4}{52} = 0.0385  
 \end{array}  
-</span>$</p>
+$$</div>
 <h2 id="without-replacement">Without replacement</h2>
 <p>Without replacement is a little trickier to set up, because the second
 draw depends on the first.</p>
-<p><span class="katex-error" style="color:#cc0000" title="ParseError: KaTeX parse error: Can't use function '$' in math mode at position 1: $̲   \begin{array…">$  
+<div class="math">$$  
 \begin{array}{rcl}  
 P(B1,J2|{\rm no-replace}) &amp;=&amp; P(B1) \times P(J2|B1) \\  
 &amp;=&amp;\frac{26}{52} \times
@@ -105,7 +104,7 @@ P(B1,J2|{\rm no-replace}) &amp;=&amp; P(B1) \times P(J2|B1) \\
 &amp;=&amp;\frac{26}{52} \times \left(\frac{204}{51\cdot 52} \right)\\  
 &amp;=&amp;0.0385  
 \end{array}  
-</span>$</p>
+$$</div>
 <p><strong>the same answer!!</strong></p>
 <p><strong>(Note: this problem has an error...can you find it? I will post the
 correction ~~soon~~ <a href="a-funny-little-probability-problem-correct" rel="nofollow">here</a>, which itself has some interesting
@@ -122,6 +121,68 @@ properties)</strong></p>
 <p><strong>(Note: this problem has an error...can you find it? I will post the
 correction ~~soon~~ <a href="a-funny-little-probability-problem-correct" rel="nofollow">here</a>, which itself has some interesting
 properties)</strong></p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    <a href="http://mathjaxscript.id" rel="nofollow">mathjaxscript.id</a> = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = '<a href="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';" rel="nofollow">https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';</a>
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
 
 
 								</section>
@@ -202,7 +263,7 @@ properties)</strong></p>
                                             <li><a href="https://bblais.github.io/category/books.html">books <span>(3)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/critical-thinking.html">critical thinking <span>(4)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/math.html">math <span>(10)</span></a></li>
-                                            <li><a href="https://bblais.github.io/category/media.html">media <span>(13)</span></a></li>
+                                            <li><a href="https://bblais.github.io/category/media.html">media <span>(14)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/presentations.html">presentations <span>(4)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/productivity.html">productivity <span>(7)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/programming.html">programming <span>(5)</span></a></li>

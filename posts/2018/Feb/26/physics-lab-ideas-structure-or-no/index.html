@@ -11,9 +11,8 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="https://bblais.github.io/theme/css/main.css" />
-		<link rel="stylesheet"
-		href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"
-		crossorigin="anonymous">
+
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
 
         <link rel="stylesheet" type="text/css" href="https://bblais.github.io/theme/css/custom.css" media="screen">
     
@@ -62,7 +61,7 @@
 										<span class="image left"><img src="https://bblais.github.io/images/Science-Background-Fractal-Physics-Abstract-1280081.jpg"></span>
 
 
-									<p>Over the years I have taught introductory physics labs and I have seen that most “canned” labs offer very little to the student in the form of learning.  I summarize them as “here is something known quite well, and you are going to measure it badly”.  Labs measuring the acceleration due to gravity, <span class="katex"><span class="katex-mathml">&lt;math xmlns="<a href="http://www.w3.org/1998/Math/MathML" rel="nofollow">http://www.w3.org/1998/Math/MathML</a>"&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding="application/x-tex"&gt;g&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;</span><span aria-hidden="true" class="katex-html"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span></span></span></span>, falls into that category.  How do you improve these sorts of labs?  I have a few ideas.</p>
+									<p>Over the years I have taught introductory physics labs and I have seen that most “canned” labs offer very little to the student in the form of learning.  I summarize them as “here is something known quite well, and you are going to measure it badly”.  Labs measuring the acceleration due to gravity, <span class="math">\(g\)</span>, falls into that category.  How do you improve these sorts of labs?  I have a few ideas.</p>
 <ol>
 <li>choose problems where the answer isn’t known or known well</li>
 <li>push the limit of a particular simple case into the area where the simple case breaks down</li>
@@ -74,6 +73,68 @@
 <li>Model 2 = objects fall with a constant <em>acceleration</em></li>
 </ul>
 <p>Then you give objects to the students such as pennies, packing peanuts, coffee filters, marbles, etc…  Some objects might be best explained with Model 2 while others with Model 1.  Neither model may describe some perfectly.  How can you tell?  Having the students design the resulting tests makes the laboratory experience a lot more interesting.  I’ll add a selfish note that it makes the labs more interesting <em>for the instructor</em> as well.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    <a href="http://mathjaxscript.id" rel="nofollow">mathjaxscript.id</a> = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = '<a href="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';" rel="nofollow">https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';</a>
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
 
 
 								</section>
@@ -154,7 +215,7 @@
                                             <li><a href="https://bblais.github.io/category/books.html">books <span>(3)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/critical-thinking.html">critical thinking <span>(4)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/math.html">math <span>(10)</span></a></li>
-                                            <li><a href="https://bblais.github.io/category/media.html">media <span>(13)</span></a></li>
+                                            <li><a href="https://bblais.github.io/category/media.html">media <span>(14)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/presentations.html">presentations <span>(4)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/productivity.html">productivity <span>(7)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/programming.html">programming <span>(5)</span></a></li>

@@ -11,9 +11,8 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="https://bblais.github.io/theme/css/main.css" />
-		<link rel="stylesheet"
-		href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"
-		crossorigin="anonymous">
+
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
 
         <link rel="stylesheet" type="text/css" href="https://bblais.github.io/theme/css/custom.css" media="screen">
     
@@ -73,7 +72,7 @@
 <ul>
 <li>The High and Low deck explanations are mundane</li>
 <li>The Nines deck is an extremely low-prior explanation -- like the ESP model, or the <a href="https://bblais.github.io/posts/2025/Jul/28/bayesian-analysis-and-its-misuses/" rel="nofollow">Resurrection model described by apologists</a>.</li>
-<li>The string of <span class="katex"><span class="katex-mathml">&lt;math xmlns="<a href="http://www.w3.org/1998/Math/MathML" rel="nofollow">http://www.w3.org/1998/Math/MathML</a>"&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;m&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding="application/x-tex"&gt;m&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;</span><span aria-hidden="true" class="katex-html"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">m</span></span></span></span> 9's in a row is a string of data all consistent with the low-prior explanation.</li>
+<li>The string of <span class="math">\(m\)</span> 9's in a row is a string of data all consistent with the low-prior explanation.</li>
 </ul>
 <p>The way that apologists would see it, we have a lot of data which is consistent with their explanation.  They rule out some of the simple alternatives, which leaves their preferred explanation, so you should believe their explanation.  That's like the figure in end of my post on the  <a href="https://bblais.github.io/posts/2025/Aug/02/the-nines-deck-and-non-monotonic-probability-changes/" rel="nofollow">High-Low-Nines</a> example. </p>
 <p><img alt="Pasted image 20250803073308.png" src="https://bblais.github.io/images/Pasted image 20250803073308.png"></p>
@@ -86,6 +85,68 @@
 <p>One might critique the scientist saying that, if you don't have access to the shuffling mechanism, then don't just draw from the bottom, draw from a random part of the deck.  In some cases in science, there are some experiments we don't have access to, and can only do a limited number of types of measurements.  In history, we don't have a time machine, and sometimes the data just isn't enough to answer certain questions.  We just don't have access or control of the data to address them.  That's why the conclusions in history are always much more uncertain and tentative than in the sciences. </p>
 <p>As a reminder, none of these effects would be observable to the apologist who insists on writing the math in odds-form.  </p>
 <p>It is my hope that this simple example can structure a conversation around many topics, and get us away from simplistic Bayesian arguments that use the odds-form. I find that this toy model of the <a href="https://bblais.github.io/posts/2025/Aug/02/the-nines-deck-and-non-monotonic-probability-changes/" rel="nofollow">High-Low-Nines</a> deck allows us to play with our intuitions, explore analogies in an example which has some nice parallels with scientific reasoning.  Are there other ways of framing this analogy that are more clear and help with communication?  </p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    <a href="http://mathjaxscript.id" rel="nofollow">mathjaxscript.id</a> = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = '<a href="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';" rel="nofollow">https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';</a>
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
 
 
 								</section>
@@ -166,7 +227,7 @@
                                             <li><a href="https://bblais.github.io/category/books.html">books <span>(3)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/critical-thinking.html">critical thinking <span>(4)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/math.html">math <span>(10)</span></a></li>
-                                            <li><a href="https://bblais.github.io/category/media.html">media <span>(13)</span></a></li>
+                                            <li><a href="https://bblais.github.io/category/media.html">media <span>(14)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/presentations.html">presentations <span>(4)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/productivity.html">productivity <span>(7)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/programming.html">programming <span>(5)</span></a></li>

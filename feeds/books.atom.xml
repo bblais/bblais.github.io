@@ -101,7 +101,7 @@ and Environmental Degradation: Exploring Models and Questioning the Existence of
 &lt;h2 id="publications"&gt;Publications&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Witkowski, C. R., Weijers, J. W. H. , Blais, B.S., Schouten, S., and Damsté, J. S. S. &lt;a href="http://advances.sciencemag.org/content/4/11/eaat4556" rel="nofollow"&gt;Molecular fossils from phytoplankton reveal secular pCO$_2$ trend over the Phanerozoic&lt;/a&gt;. Science Advances. Vol. 4, no. 11, eaat4556.  DOI: 10.1126/sciadv.aat4556.&lt;/p&gt;
+&lt;p&gt;Witkowski, C. R., Weijers, J. W. H. , Blais, B.S., Schouten, S., and Damsté, J. S. S. &lt;a href="http://advances.sciencemag.org/content/4/11/eaat4556" rel="nofollow"&gt;Molecular fossils from phytoplankton reveal secular pCO&lt;span class="math"&gt;\(_2\)&lt;/span&gt; trend over the Phanerozoic&lt;/a&gt;. Science Advances. Vol. 4, no. 11, eaat4556.  DOI: 10.1126/sciadv.aat4556.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Skaza, J. and Blais, B.S. 2013. &lt;a href="http://web.bryant.edu/~bblais/pdf/SSRN-id2346173.pdf" rel="nofollow"&gt;The Relationship between Economic Growth and Environmental Degradation: Exploring Models and Questioning the Existence of an Environmental Kuznets Curve&lt;/a&gt; . Available from: &lt;a href="http://papers.ssrn.com/sol3/papers.cfm?abstract_id=2346173" rel="nofollow"&gt;http://papers.ssrn.com/sol3/papers.cfm?abstract_id=2346173&lt;/a&gt; and &lt;a href="http://intranet.bryant.edu/portal/economic-studies/publications/working-papers.htm" rel="nofollow"&gt;http://intranet.bryant.edu/portal/economic-studies/publications/working-papers.htm&lt;/a&gt;.&lt;/p&gt;
@@ -121,7 +121,69 @@ and Environmental Degradation: Exploring Models and Questioning the Existence of
 &lt;p&gt;In the present work we introduce the problem of determining the probability that a rotating and bouncing cylinder (i.e. flipped coin) will land and come to rest on its edge. We present this problem and analysis as a practical, nontrivial example to introduce the reader to Bayesian model comparison. Several models are presented, each of which take into consideration different physical aspects of the problem and the relative effects on the edge landing probability. The Bayesian formulation of model comparison is then used to compare the models and their predictive agreement with data from hand-flipped cylinders of several sizes.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</content><category term="books"></category><category term="science"></category><category term="statistics"></category><category term="probability"></category><category term="sie"></category></entry><entry><title>Models of Learning and Memory</title><link href="https://bblais.github.io/posts/2019/Jan/13/models-of-learning-and-memory/" rel="alternate"></link><published>2019-01-13T00:00:00-05:00</published><updated>2019-01-13T00:00:00-05:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2019-01-13:/posts/2019/Jan/13/models-of-learning-and-memory/</id><summary type="html">&lt;p&gt;Simulate biologically derived neural networks of medium complexity - both rate- and spike-based models.  Explore the dynamics of synaptic plasticity under different input environments, including low-dimensional vector environments and natural image …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Simulate biologically derived neural networks of medium complexity - both rate- and spike-based models.  Explore the dynamics of synaptic plasticity under different input environments, including low-dimensional vector environments and natural image inputs.  &lt;/p&gt;
+&lt;/ul&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &amp;lt; 768) ? "left" : align;
+        indent = (screen.width &amp;lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &amp;lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    &lt;a href="http://mathjaxscript.id" rel="nofollow"&gt;mathjaxscript.id&lt;/a&gt; = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = '&lt;a href="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';" rel="nofollow"&gt;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';&lt;/a&gt;
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="books"></category><category term="science"></category><category term="statistics"></category><category term="probability"></category><category term="sie"></category></entry><entry><title>Models of Learning and Memory</title><link href="https://bblais.github.io/posts/2019/Jan/13/models-of-learning-and-memory/" rel="alternate"></link><published>2019-01-13T00:00:00-05:00</published><updated>2019-01-13T00:00:00-05:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2019-01-13:/posts/2019/Jan/13/models-of-learning-and-memory/</id><summary type="html">&lt;p&gt;Simulate biologically derived neural networks of medium complexity - both rate- and spike-based models.  Explore the dynamics of synaptic plasticity under different input environments, including low-dimensional vector environments and natural image …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Simulate biologically derived neural networks of medium complexity - both rate- and spike-based models.  Explore the dynamics of synaptic plasticity under different input environments, including low-dimensional vector environments and natural image inputs.  &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;a href="https://github.com/bblais/Plasticnet" rel="nofollow"&gt;plasticnet + splikes:  synaptic modification in rate and spike-based neurons&lt;/a&gt;&lt;/p&gt;

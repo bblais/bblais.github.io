@@ -11,9 +11,8 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="https://bblais.github.io/theme/css/main.css" />
-		<link rel="stylesheet"
-		href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"
-		crossorigin="anonymous">
+
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
 
         <link rel="stylesheet" type="text/css" href="https://bblais.github.io/theme/css/custom.css" media="screen">
     
@@ -99,14 +98,76 @@
 <p>Gelman makes a big deal about induction.  Perhaps I am not understanding something, but I don't see the big deal.  Gelman says </p>
 <blockquote>
 <p>The common core of various conceptions of induction is some form of inference
-from particulars to the general – in the statistical context, presumably, inference from the observations <span class="katex"><span class="katex-mathml">&lt;math xmlns="<a href="http://www.w3.org/1998/Math/MathML" rel="nofollow">http://www.w3.org/1998/Math/MathML</a>"&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding="application/x-tex"&gt;y&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;</span><span aria-hidden="true" class="katex-html"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span></span> to parameters <span class="katex"><span class="katex-mathml">&lt;math xmlns="<a href="http://www.w3.org/1998/Math/MathML" rel="nofollow">http://www.w3.org/1998/Math/MathML</a>"&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;θ&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding="application/x-tex"&gt;\theta&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;</span><span aria-hidden="true" class="katex-html"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span></span></span></span> describing the data-generating process. But if that
+from particulars to the general – in the statistical context, presumably, inference from the observations <span class="math">\(y\)</span> to parameters <span class="math">\(\theta\)</span> describing the data-generating process. But if that
 were all that was meant, then not only is ‘frequentist statistics a theory of inductive inference’ (Mayo &amp; Cox, 2006), but the whole range of guess-and-test behaviors engaged in by animals (Holland, Holyoak, Nisbett, &amp; Thagard, 1986), including those formalized in
-the hypothetico-deductive method, are also inductive. Even the unpromising-sounding procedure, ‘pick a model at random and keep it until its accumulated error gets too big, then pick another model completely at random’, would qualify (and could work surprisingly well under some circumstances – cf. Ashby, 1960; Foster &amp; Young, 2003). So would utterly irrational procedures (‘pick a new random ! when the sum of the least significant digits in <span class="katex"><span class="katex-mathml">&lt;math xmlns="<a href="http://www.w3.org/1998/Math/MathML" rel="nofollow">http://www.w3.org/1998/Math/MathML</a>"&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding="application/x-tex"&gt;y&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;</span><span aria-hidden="true" class="katex-html"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span></span> is 13’). Clearly something more is required, or at least implied, by
+the hypothetico-deductive method, are also inductive. Even the unpromising-sounding procedure, ‘pick a model at random and keep it until its accumulated error gets too big, then pick another model completely at random’, would qualify (and could work surprisingly well under some circumstances – cf. Ashby, 1960; Foster &amp; Young, 2003). So would utterly irrational procedures (‘pick a new random ! when the sum of the least significant digits in <span class="math">\(y\)</span> is 13’). Clearly something more is required, or at least implied, by
 those claiming that Bayesian updating is inductive.</p>
 </blockquote>
 <p>Contrary to what Gelman is inferring here, I actually believe that the guess-and-test is in fact inductive, in addition to frequentism being inductive.  What's the "something more" that Bayesian updating has that the others don't?  It has a theoretical justification - any and all other methods that disagree with Bayesian conclusions must violate one of the listed "deciderata" of Jaynes.  This doesn't seem to me to be a controversial statement. There are many methods of induction, but only probability theory properly followed is optimal.  </p>
 <p>Bayesian approaches can also be <em>deductive</em>, as Gelman prefers.  Deductive logic is a subset of probability theory, and that's all we're talking about here.  </p>
 <p>As far as I can tell, Jaynes and Gelman are not really in disagreement.  </p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    <a href="http://mathjaxscript.id" rel="nofollow">mathjaxscript.id</a> = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = '<a href="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';" rel="nofollow">https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';</a>
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
 
 
 								</section>
@@ -187,7 +248,7 @@ those claiming that Bayesian updating is inductive.</p>
                                             <li><a href="https://bblais.github.io/category/books.html">books <span>(3)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/critical-thinking.html">critical thinking <span>(4)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/math.html">math <span>(10)</span></a></li>
-                                            <li><a href="https://bblais.github.io/category/media.html">media <span>(13)</span></a></li>
+                                            <li><a href="https://bblais.github.io/category/media.html">media <span>(14)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/presentations.html">presentations <span>(4)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/productivity.html">productivity <span>(7)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/programming.html">programming <span>(5)</span></a></li>

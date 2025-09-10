@@ -11,9 +11,8 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="https://bblais.github.io/theme/css/main.css" />
-		<link rel="stylesheet"
-		href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"
-		crossorigin="anonymous">
+
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
 
         <link rel="stylesheet" type="text/css" href="https://bblais.github.io/theme/css/custom.css" media="screen">
     
@@ -76,8 +75,8 @@ of them is a girl. What is the probability that they have two girls?</p>
 of them is a girl named Florida. What is the probability that they
 have two girls?</p>
 </blockquote>
-<p>The former is easy to show is $latex {p(2g|\{L1g\})=1/3}&amp;fg=000000$.
-The latter is shown to be $latex {p(2g|\{L1g\},F)=1/2}&amp;fg=000000$.
+<p>The former is easy to show is \<span class="math">\(latex {p(2g|\\{L1g\\})=1/3}&amp;fg=000000\\)</span>.
+The latter is shown to be \<span class="math">\(latex {p(2g|\\{L1g\\},F)=1/2}&amp;fg=000000\\)</span>.
 Intuition firmly insists that knowing the name shouldn't change the
 probability, but the math and simulations insist otherwise. Thus, it is
 our duty, to try to get our intuition around the problem. I was
@@ -113,8 +112,8 @@ at three types of information given:</p>
 <li>
 <p><em>You're only told that there are two cards.</em> Thus, there the
     probability for two hearts is simply</p>
-<p>$latex \displaystyle p(2H) = \frac{4}{8} \times {3}{7} =
-\frac{12}{56} \ \ \ \ \ (1)&amp;fg=000000$</p>
+<p>\<span class="math">\(latex \\displaystyle p(2H) = \\frac{4}{8} \\times {3}{7} =
+\\frac{12}{56} \\ \\ \\ \\ \\ (1)&amp;fg=000000\\)</span></p>
 <p>This can be seen pictorially by listing every possible two-card hand
 and looking at those with two hearts, yielding 12 hands out of 56.</p>
 <p><img alt="" src="http://brianblais.files.wordpress.com/2011/10/fig1.png"></p>
@@ -122,14 +121,14 @@ and looking at those with two hearts, yielding 12 hands out of 56.</p>
 2.  <em>You're told that at least one of the cards is a heart</em>. Now we need
 to look at the first and second cards, and eliminate the possibility
 of two spades</p>
-<p>$latex \displaystyle p(2H|\{L1H\}) =
-\frac{p(H_1,H_2)}{p(H_1,S_2)+p(S_1,H_2)+p(H_1,H_2)} \ \<br>
-   \ \ \ (2)&amp;fg=000000$</p>
-<p>where $latex {p(H_1,S_2)}&amp;fg=000000$ is that we drew a heart
+<p>\<span class="math">\(latex \\displaystyle p(2H|\\{L1H\\}) =
+\\frac{p(H\_1,H\_2)}{p(H\_1,S\_2)+p(S\_1,H\_2)+p(H\_1,H\_2)} \\ \  
+   \\ \\ \\ (2)&amp;fg=000000\\)</span></p>
+<p>where \<span class="math">\(latex {p(H\_1,S\_2)}&amp;fg=000000\\)</span> is that we drew a heart
 then a spade. We then have</p>
-<p>$latex \displaystyle \begin{array}{rcl} p(2H|\{L1H\}) &amp;=&amp;
-\frac{\frac{4}{8}\times\frac{3}{7}}{\frac{4}{8}\times\frac{4}{7}+\frac{4}{8}\times\frac{4}{7}+\frac{4}{8}\times\frac{3}{7}}\\<br>
-   &amp;=&amp;\frac{12}{44} \end{array} &amp;fg=000000$</p>
+<p>\<span class="math">\(latex \\displaystyle \</span></p><div class="math">\begin{array}{rcl} p(2H|\\{L1H\\}) &amp;=&amp;
+\\frac{\\frac{4}{8}\\times\\frac{3}{7}}{\\frac{4}{8}\\times\\frac{4}{7}+\\frac{4}{8}\\times\\frac{4}{7}+\\frac{4}{8}\\times\\frac{3}{7}}\\\  
+   &amp;=&amp;\\frac{12}{44} \\end{array}</div> &amp;fg=000000\\)<p></p>
 <p>This can be seen pictorially by listing every possible two-card hand
 <em>with at least one heart</em> and looking at those with two hearts,
 yielding 12 hands out of 44.</p>
@@ -139,48 +138,48 @@ yielding 12 hands out of 44.</p>
 <p><em>You're told that at least one of the cards is an ace of hearts</em>.
     Notice how this changes things. Now, when we outline the
     possibilities, we get</p>
-<p>$latex \displaystyle p(2H|\{L1H\},A) =
-\frac{p(H_{1a},H_{2n})+p(H_{1n},H_{2a})}{p(H_{1a},H_{2n})+p(H_{1n},H_{2a})+p(S_{1},H_{2a})+p(H_{1a},S_2)}
-\ \ \ \ \ (3)&amp;fg=000000$</p>
+<p>\<span class="math">\(latex \\displaystyle p(2H|\\{L1H\\},A) =
+\\frac{p(H\_{1a},H\_{2n})+p(H\_{1n},H\_{2a})}{p(H\_{1a},H\_{2n})+p(H\_{1n},H\_{2a})+p(S\_{1},H\_{2a})+p(H\_{1a},S\_2)}
+\\ \\ \\ \\ \\ (3)&amp;fg=000000\\)</span></p>
 <p>Let's look at the numerator first.</p>
-<p>$latex \displaystyle p(H_{1a},H_{2n}) =
-p(H_{2n}|H_{1a})p(H_{1a}) \ \ \ \ \ (4)&amp;fg=000000$</p>
+<p>\<span class="math">\(latex \\displaystyle p(H\_{1a},H\_{2n}) =
+p(H\_{2n}|H\_{1a})p(H\_{1a}) \\ \\ \\ \\ \\ (4)&amp;fg=000000\\)</span></p>
 <p>Written like this, it is like turning over card one, seeing it's an
-ace of hearts, and then turning over card 2. $latex
-{p(H_{1a})=1/8}&amp;fg=000000$, and seeing a heart that is not an ace
-is really the same as seeing any ol' heart, so it is $latex
-{p(H_{2n}|H_{1a})=3/7}&amp;fg=000000$. This is not any different than
+ace of hearts, and then turning over card 2. \<span class="math">\(latex
+{p(H\_{1a})=1/8}&amp;fg=000000\\)</span>, and seeing a heart that is not an ace
+is really the same as seeing any ol' heart, so it is \<span class="math">\(latex
+{p(H\_{2n}|H\_{1a})=3/7}&amp;fg=000000\\)</span>. This is not any different than
 the previous situation. However, the next term in the numerator</p>
-<p>$latex \displaystyle p(H_{1n},H_{2a}) =
-p(H_{2a}|H_{1n})p(H_{1n}) \ \ \ \ \ (5)&amp;fg=000000$</p>
+<p>\<span class="math">\(latex \\displaystyle p(H\_{1n},H\_{2a}) =
+p(H\_{2a}|H\_{1n})p(H\_{1n}) \\ \\ \\ \\ \\ (5)&amp;fg=000000\\)</span></p>
 <p><em>is</em> really different, because we are told that there is at least
 one ace. The probability of drawing a heart that is not an ace on
-the first card is still $latex {p(H_{1n})=3/8}&amp;fg=000000$.
+the first card is still \<span class="math">\(latex {p(H\_{1n})=3/8}&amp;fg=000000\\)</span>.
 However, drawing an ace of hearts on the second card when we drew a
 non-ace of hearts on the first is <em>certain</em>, because we have
-knowledge that at least one is an ace. Thus, $latex
-{p(H_{2a}|H_{1n})=1}&amp;fg=000000$. This gives, for the numerator,</p>
-<p>$latex \displaystyle
-p(H_{1a},H_{2n})+p(H_{1n},H_{2a})=\frac{3}{7}\cdot\frac{1}{8}
-+ 1\cdot \frac{3}{8} = \frac{24}{56} \ \ \ \ \<br>
-   (6)&amp;fg=000000$</p>
-<p>Notice that if $latex {H_{2a}}&amp;fg=000000$ had been independent of
-$latex {H_{1n}}&amp;fg=000000$ then we would have gotten the same
+knowledge that at least one is an ace. Thus, \<span class="math">\(latex
+{p(H\_{2a}|H\_{1n})=1}&amp;fg=000000\\)</span>. This gives, for the numerator,</p>
+<p>\<span class="math">\(latex \\displaystyle
+p(H\_{1a},H\_{2n})+p(H\_{1n},H\_{2a})=\\frac{3}{7}\\cdot\\frac{1}{8}
++ 1\\cdot \\frac{3}{8} = \\frac{24}{56} \\ \\ \\ \\ \  
+   (6)&amp;fg=000000\\)</span></p>
+<p>Notice that if \<span class="math">\(latex {H\_{2a}}&amp;fg=000000\\)</span> had been independent of
+\<span class="math">\(latex {H\_{1n}}&amp;fg=000000\\)</span> then we would have gotten the same
 12/56 term in the numerator as in the previous situation.
 Essentially, by giving the information that there is at least one
 ace, you are really making the value of one card dependent on the
 other, and thus knowledge of one gives you knowledge of the other
 and the probability for two hearts goes up. The same thing happens
-with $latex {p(H_{2a}|S_1)}&amp;fg=000000$, but since we compare to
+with \<span class="math">\(latex {p(H\_{2a}|S\_1)}&amp;fg=000000\\)</span>, but since we compare to
 the case where we know there is one heart anyway, this is not a
 difference.</p>
 <p>Following through with the rest gives us</p>
-<p>$latex \displaystyle \begin{array}{rcl} p(2H|\{L1H\},A) &amp;=&amp;
-\frac{p(H_{1a},H_{2n})+p(H_{1n},H_{2a})}{p(H_{1a},H_{2n})+p(H_{1n},H_{2a})+p(S_{1},H_{2a})+p(H_{1a},S_2)}
-\\ &amp;=&amp;\frac{\frac{3}{7}\cdot\frac{1}{8}+ 1 \cdot
-\frac{3}{8}}{\frac{4}{7}\cdot\frac{1}{8}+1\cdot
-\frac{4}{8}+\frac{24}{56}}\\ &amp;=&amp;\frac{24}{56} = \frac{6}{14}
-\end{array} &amp;fg=000000$</p>
+<p>\<span class="math">\(latex \\displaystyle \</span></p><div class="math">\begin{array}{rcl} p(2H|\\{L1H\\},A) &amp;=&amp;
+\\frac{p(H\_{1a},H\_{2n})+p(H\_{1n},H\_{2a})}{p(H\_{1a},H\_{2n})+p(H\_{1n},H\_{2a})+p(S\_{1},H\_{2a})+p(H\_{1a},S\_2)}
+\\\\ &amp;=&amp;\\frac{\\frac{3}{7}\\cdot\\frac{1}{8}+ 1 \\cdot
+\\frac{3}{8}}{\\frac{4}{7}\\cdot\\frac{1}{8}+1\\cdot
+\\frac{4}{8}+\\frac{24}{56}}\\\\ &amp;=&amp;\\frac{24}{56} = \\frac{6}{14}
+\\end{array}</div> &amp;fg=000000\\)<p></p>
 <p>This can be seen pictorially by listing every possible two-card hand
 with an ace of hearts and looking at those with two hearts, yielding
 6 hands out of 14.</p>
@@ -227,6 +226,68 @@ restricted to the hands with at least one ace of hearts. I find that it
 doesn't seem to violate my intuition as badly in the card game as it
 does in the Florida , and much more clearly and it doesn't seem to
 violate our intuitions quite so badly.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    <a href="http://mathjaxscript.id" rel="nofollow">mathjaxscript.id</a> = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = '<a href="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';" rel="nofollow">https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';</a>
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
 
 
 								</section>
@@ -307,7 +368,7 @@ violate our intuitions quite so badly.</p>
                                             <li><a href="https://bblais.github.io/category/books.html">books <span>(3)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/critical-thinking.html">critical thinking <span>(4)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/math.html">math <span>(10)</span></a></li>
-                                            <li><a href="https://bblais.github.io/category/media.html">media <span>(13)</span></a></li>
+                                            <li><a href="https://bblais.github.io/category/media.html">media <span>(14)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/presentations.html">presentations <span>(4)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/productivity.html">productivity <span>(7)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/programming.html">programming <span>(5)</span></a></li>

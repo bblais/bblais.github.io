@@ -11,9 +11,8 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="https://bblais.github.io/theme/css/main.css" />
-		<link rel="stylesheet"
-		href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"
-		crossorigin="anonymous">
+
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
 
         <link rel="stylesheet" type="text/css" href="https://bblais.github.io/theme/css/custom.css" media="screen">
     
@@ -71,24 +70,25 @@
 <p>The only data we have is that the balls were measured later in the game, with an observed drop from the beginning of the game, and a possible way to benefit from that.  The first thing we have to ask is, are there any mundane explanations of this observation?  The second thing we have to ask is if there is a way to distinguish between the mundane explanations and the possible nefarious ones.  Let's tackle the first.  </p>
 <h2 id="can-temperature-change-account-for-the-data-yes">Can Temperature Change Account for the Data?  Yes!</h2>
 <p>When measuring the pressure in a football, we measure the <em>difference</em> between the pressure inside of the football and the atmospheric pressure.  Atmospheric pressure is about 14.7 psi, so when the reading of the football pressure is, say, 13 psi then the absolute pressure is </p>
-<p>\begin{equation}
+<div class="math">\begin{equation}
 14.7 \,{\rm psi} + 13 \,{\rm psi} = 27.7 \,{\rm psi}
-\end{equation}</p>
+\end{equation}</div>
 <p>From the ideal gas law we also have the relationship between pressure and temperature,
-\begin{eqnarray}
-PV&amp;=&amp;nkT \\
-P&amp;\propto&amp; T \\
+</p>
+<div class="math">\begin{eqnarray}
+PV&amp;=&amp;nkT \\\\
+P&amp;\propto&amp; T \\\\
 \frac{P_1}{P_2}&amp;=&amp;\frac{T_1}{T_2}
-\end{eqnarray}</p>
+\end{eqnarray}</div>
 <p>So a change of temperature from 70 F (294 K) down to 40 F (278 K) leads to a drop in football pressure from 27.7 psi down to</p>
-<p>\begin{eqnarray}
-\frac{27.7\,{\rm psi}}{P_2}&amp;=&amp;\frac{294 K}{278 K}\\
+<div class="math">\begin{eqnarray}
+\frac{27.7\,{\rm psi}}{P_2}&amp;=&amp;\frac{294 K}{278 K}\\\\
 P_2&amp;=&amp; 26.2 \,{\rm psi}
-\end{eqnarray}</p>
+\end{eqnarray}</div>
 <p>or a football pressure reading of</p>
-<p>\begin{equation}
+<div class="math">\begin{equation}
 26.2 \,{\rm psi}- 14.7 \,{\rm psi} = 11.5 \,{\rm psi}
-\end{equation}</p>
+\end{equation}</div>
 <p>Perfectly within the range of data that we have access to.  If the amount were much more (4 psi, for example) then we might get suspicious, but this does not seem to be the case.</p>
 <h2 id="well-thats-nice-in-theory-but">Well, that's nice in theory, but...</h2>
 <p>Sure, it seems to work in theory, but we should test it.  Well, <a href="http://www.wcsh6.com/story/news/local/2015/01/22/deflategate-patriots-football-pressure-inflated/22174475/" rel="nofollow">someone has</a>.  He inflated two balls to 13 psi, one in the room and one in the refrigerator.  It went down to 11.7 psi.  He added that someone falling on the ball could also make the ball lose air.  Nice and tidy.  Hearing this, my mind was instantly made up - unless someone can provide actual evidence to the contrary.  Was the interviewer convinced?  Nope - </p>
@@ -98,6 +98,68 @@ P_2&amp;=&amp; 26.2 \,{\rm psi}
 <p>Yes, it is - and it's not rocket science either.  It's not <em>"excuses"</em>, it's the most plausible explanation until someone can actually provide evidence contrary to it.</p>
 <h2 id="what-do-we-do-with-mundane-explanations">What do we do with mundane explanations?</h2>
 <p>Now that we have a mundane explanation, what do we do?  We need to require of any other explanation a much more rigourous and strong case - the evidence has to be much stronger than otherwise, because the mundane explanation has a very high prior probability.  Do we have that evidence?  Not that I've seen.  So, until someone shows me the video of a person letting out air from the football, or provides a credible witness, I'm chalking this one up to the typical hysteria Americans like in their news stories and go on with more important things.  Let's hope the NFL listens to the science, and does the same.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    <a href="http://mathjaxscript.id" rel="nofollow">mathjaxscript.id</a> = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = '<a href="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';" rel="nofollow">https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';</a>
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
 
 
 								</section>
@@ -178,7 +240,7 @@ P_2&amp;=&amp; 26.2 \,{\rm psi}
                                             <li><a href="https://bblais.github.io/category/books.html">books <span>(3)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/critical-thinking.html">critical thinking <span>(4)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/math.html">math <span>(10)</span></a></li>
-                                            <li><a href="https://bblais.github.io/category/media.html">media <span>(13)</span></a></li>
+                                            <li><a href="https://bblais.github.io/category/media.html">media <span>(14)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/presentations.html">presentations <span>(4)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/productivity.html">productivity <span>(7)</span></a></li>
                                             <li><a href="https://bblais.github.io/category/programming.html">programming <span>(5)</span></a></li>
