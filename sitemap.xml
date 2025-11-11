@@ -5,77 +5,84 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://bblais.github.io/</loc>
-<lastmod>2025-10-12T14:43:12-00:00</lastmod>
+<lastmod>2025-11-11T11:44:26-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/about.html</loc>
-<lastmod>2025-10-12T14:43:12-00:00</lastmod>
+<lastmod>2025-11-11T11:44:26-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/archives.html</loc>
-<lastmod>2025-10-12T14:43:12-00:00</lastmod>
+<lastmod>2025-11-11T11:44:26-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/contact.html</loc>
-<lastmod>2025-10-12T14:43:12-00:00</lastmod>
+<lastmod>2025-11-11T11:44:26-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/thanks.html</loc>
-<lastmod>2025-10-12T14:43:12-00:00</lastmod>
+<lastmod>2025-11-11T11:44:26-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/search.html</loc>
-<lastmod>2025-10-12T14:43:12-00:00</lastmod>
+<lastmod>2025-11-11T11:44:26-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/tags.html</loc>
-<lastmod>2025-10-12T14:43:12-00:00</lastmod>
+<lastmod>2025-11-11T11:44:26-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/search.html</loc>
-<lastmod>2025-10-12T14:43:12-00:00</lastmod>
+<lastmod>2025-11-11T11:44:26-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/pages/presentations.html</loc>
-<lastmod>2025-10-12T14:43:12-00:00</lastmod>
+<lastmod>2025-11-11T11:44:26-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/pages/projects.html</loc>
-<lastmod>2025-10-12T14:43:12-00:00</lastmod>
+<lastmod>2025-11-11T11:44:26-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/pages/publications.html</loc>
-<lastmod>2025-10-12T14:43:12-00:00</lastmod>
+<lastmod>2025-11-11T11:44:26-00:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://bblais.github.io/posts/2025/Nov/11/dr-egnors-bad-arguments-for-the-soul/</loc>
+<lastmod>2025-11-11T00:00:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -2728,7 +2735,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://bblais.github.io/category/religion.html</loc>
-<lastmod>2025-07-31T00:00:00-04:56</lastmod>
+<lastmod>2025-11-11T00:00:00-04:56</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -3015,7 +3022,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://bblais.github.io/author/brian-blais.html</loc>
-<lastmod>2025-08-27T00:00:00-04:56</lastmod>
+<lastmod>2025-11-11T00:00:00-04:56</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
