@@ -1,5 +1,132 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>bblais on the web</title><link href="https://bblais.github.io/" rel="alternate"/><link href="https://bblais.github.io/feeds/all.atom.xml" rel="self"/><id>https://bblais.github.io/</id><updated>2025-11-11T00:00:00-05:00</updated><entry><title>Dr. Egnor's bad arguments for the soul</title><link href="https://bblais.github.io/posts/2025/Nov/11/dr-egnors-bad-arguments-for-the-soul/" rel="alternate"/><published>2025-11-11T00:00:00-05:00</published><updated>2025-11-11T00:00:00-05:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2025-11-11:/posts/2025/Nov/11/dr-egnors-bad-arguments-for-the-soul/</id><summary type="html">&lt;p&gt;Here's a video where &lt;a href="https://en.wikipedia.org/wiki/Michael_Egnor" rel="nofollow"&gt;Dr. Michael Egnor&lt;/a&gt; presents arguments and evidence for the existence and properties of the soul.  For someone who studies the brain, Dr Egnor is remarkably sloppy …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Here's a video where &lt;a href="https://en.wikipedia.org/wiki/Michael_Egnor" rel="nofollow"&gt;Dr. Michael Egnor&lt;/a&gt; presents arguments and evidence for the existence and properties of the soul.  For someone who studies the brain, Dr Egnor is remarkably sloppy with his facts about brain deficits and shows a profound lack of understanding of the methods of science -- and even basic logical arguments.  &lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>bblais on the web</title><link href="https://bblais.github.io/" rel="alternate"/><link href="https://bblais.github.io/feeds/all.atom.xml" rel="self"/><id>https://bblais.github.io/</id><updated>2026-02-26T00:00:00-05:00</updated><entry><title>There is no evidence for God</title><link href="https://bblais.github.io/posts/2026/Feb/26/there-is-no-evidence-for-god/" rel="alternate"/><published>2026-02-26T00:00:00-05:00</published><updated>2026-02-26T00:00:00-05:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2026-02-26:/posts/2026/Feb/26/there-is-no-evidence-for-god/</id><summary type="html">&lt;p&gt;On Alex O'Connor's podcast, he discusses with Joe Schmid, Atheist Slogans You Should Stop Using (&lt;a href="https://creators.spotify.com/pod/profile/alex-oconnor4/episodes/Atheist-Slogans-You-Should-Stop-Using---Joe-Schmid-e3eqc52" rel="nofollow"&gt;https://creators.spotify.com/pod/profile/alex-oconnor4/episodes/Atheist-Slogans-You-Should-Stop-Using---Joe-Schmid-e3eqc52&lt;/a&gt;).  I am not that far into …&lt;/p&gt;</summary><content type="html">&lt;p&gt;On Alex O'Connor's podcast, he discusses with Joe Schmid, Atheist Slogans You Should Stop Using (&lt;a href="https://creators.spotify.com/pod/profile/alex-oconnor4/episodes/Atheist-Slogans-You-Should-Stop-Using---Joe-Schmid-e3eqc52" rel="nofollow"&gt;https://creators.spotify.com/pod/profile/alex-oconnor4/episodes/Atheist-Slogans-You-Should-Stop-Using---Joe-Schmid-e3eqc52&lt;/a&gt;).  I am not that far into the episode (only two points in) and already I disagree with much of what they are saying, so I think I will try to write responses to each.  I've already written a response to the first one well before the podcast aired, which makes me a prophet!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://bblais.github.io/posts/2023/May/02/extraordinary-claims-require-extraordinary-evidence/" rel="nofollow"&gt;Extraordinary Claims Require Extraordinary Evidence&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://bblais.github.io/posts/2026/Feb/26/there-is-no-evidence-for-god/" rel="nofollow"&gt;There Is No Evidence for God&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Who Created God?&lt;/li&gt;
+&lt;li&gt;Science Flies You to the Moon, Religion Flies You into Buildings&lt;/li&gt;
+&lt;li&gt;Your Location Determines Your Religion&lt;/li&gt;
+&lt;li&gt;Claims Are Not Evidence&lt;/li&gt;
+&lt;li&gt;You Can’t Prove a Negative&lt;/li&gt;
+&lt;li&gt;What Can Be Asserted Without Evidence Can Be Dismissed Without Evidence&lt;/li&gt;
+&lt;li&gt;Faith Is Belief Without Evidence&lt;/li&gt;
+&lt;li&gt;Religion Makes Good People Do Bad Things&lt;/li&gt;
+&lt;li&gt;Absence of Evidence Is Evidence of Absence&lt;/li&gt;
+&lt;li&gt;Theism Is Unfalsifiable&lt;/li&gt;
+&lt;li&gt;Science Books Would Come Back, Religions Would Not&lt;/li&gt;
+&lt;li&gt;Evolution Disproves God&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;The definition of evidence that Joe states is, "Evidence is information that raises the probability of my hypothesis".  Alex gives an example, attempting to find a corner case, where he says that under the alien abductions hypothesis you would predict certain government failures, so seeing government failures is evidence of alien abductions.  Joe says that this is just weak evidence, but evidence nonetheless.   In this way, saying "there is no evidence for God" is hyperbole -- there is just bad evidence, or weak evidence.  While I agree that saying "there is no evidence of God" might be in most cases hyperbolic, it may not be true in all cases.  Mathematically, the way one can translate Alex and Joe's perspectives on evidence is with the following two statements:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;"Evidence is information that raises the probability of my hypothesis": &lt;div class="math"&gt;$$P(H_1|E)&amp;gt;P(H_1)$$&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;Anything that is expected on my hypothesis is evidence of the hypothesis, even if only weak evidence: &lt;div class="math"&gt;$$P(E|H_1) &amp;gt; 0.5$$&lt;/div&gt; is a necessary condition for &lt;span class="math"&gt;\(E\)&lt;/span&gt; to be considered evidence.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Unfortunately these two conditions are not guaranteed to be true at the same time, depending on the &lt;em&gt;alternative hypotheses&lt;/em&gt; considered.  If we take the simple case of a single other alternative, &lt;span class="math"&gt;\(H_2\)&lt;/span&gt;, compared to our hypothesis, &lt;span class="math"&gt;\(H_1\)&lt;/span&gt;.  We start with Bayes' Theorem, and apply the statement (1) inequality above&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\begin{aligned}
+P(H_1|E) &amp;amp; = \frac{P(E|H_1)P(H_1)}{P(E|H_1)P(H_1) + P(E|H_2)P(H_2)} \\
+\frac{P(H_1|E)}{P(H_1)} &amp;amp; = \frac{P(E|H_1)}{P(E|H_1)P(H_1) + P(E|H_2)P(H_2)} &amp;gt;1 \\
+\end{aligned}
+$$&lt;/div&gt;
+&lt;p&gt;
+Thus we have, defining the prior &lt;span class="math"&gt;\(P(H_1)\equiv h\)&lt;/span&gt;,&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\begin{aligned}
+P(E|H_1) &amp;amp;&amp;gt; P(E|H_1)P(H_1) + P(E|H_2)P(H_2) \\
+P(E|H_1) &amp;amp;&amp;gt; P(E|H_1)\cdot h + P(E|H_2)\cdot (1-h) \\
+P(E|H_1)\cdot (1-h) &amp;amp;&amp;gt; P(E|H_2)\cdot (1-h) \\
+P(E|H_1) &amp;amp;&amp;gt; P(E|H_2)
+\end{aligned}
+$$&lt;/div&gt;
+&lt;p&gt;
+This last relationship is a direct consequence of Statement (1) above and is not always consistent with Statement (2).  All we need is any alternative hypothesis which predicts the evidence as more likely under that hypothesis, even by a tiny amount.  The evidence, &lt;span class="math"&gt;\(E\)&lt;/span&gt;, would then push the posterior of &lt;span class="math"&gt;\(H_2\)&lt;/span&gt; up more than that for &lt;span class="math"&gt;\(H_1\)&lt;/span&gt; and the posterior for &lt;span class="math"&gt;\(H_1\)&lt;/span&gt; will go down given this evidence.&lt;/p&gt;
+&lt;p&gt;An easy example one can do is calculate the probability of holding one of two decks of cards, one which is typical (&lt;span class="math"&gt;\(H_1\)&lt;/span&gt;) and the other has an extra ace (&lt;span class="math"&gt;\(H_2\)&lt;/span&gt;).   Regardless of the prior, drawing an ace (&lt;span class="math"&gt;\(A\)&lt;/span&gt;) will raise the probability of the second deck (&lt;span class="math"&gt;\(H_2\)&lt;/span&gt;) and reduce the probability of the first (&lt;span class="math"&gt;\(H_1\)&lt;/span&gt;).  &lt;/p&gt;
+&lt;div class="math"&gt;$$
+\begin{aligned}
+P(H_1|A) &amp;amp;= \frac{\frac{4}{52} \cdot h}{\frac{4}{52} \cdot h + \frac{5}{52} \cdot (1-h)} \\
+\frac{P(H_1|A)}{P(H_1)} &amp;amp;= \frac{\frac{4}{52} \cdot h/h}{\frac{4}{52} \cdot h + \frac{5}{52} \cdot (1-h)} &amp;amp; \frac{\frac{4}{52} }{\frac{4}{52} \cdot h + \frac{5}{52} \cdot (1-h)}\\
+&amp;amp;=\frac{4}{4\cdot h+5\cdot (1-h)}
+\end{aligned}
+$$&lt;/div&gt;
+&lt;p&gt;
+This final term ranges from 4/5 up to 1 (where &lt;span class="math"&gt;\(H_2\)&lt;/span&gt; is impossible), so if there is any non-zero prior for &lt;span class="math"&gt;\(H_2\)&lt;/span&gt; the "evidence" of an ace &lt;em&gt;reduces&lt;/em&gt; the probability of &lt;span class="math"&gt;\(H_1\)&lt;/span&gt;.   You can see this even if there are 50 aces in the first deck, as long as the second one has more than that.  &lt;/p&gt;
+&lt;p&gt;It's also the case that even with the simplistic case Alex presents, the scenario is not just one data point.  His case is that under the alien abductions hypothesis you would predict certain government failures, so seeing government failures is evidence of alien abductions.   However, you'd expect &lt;em&gt;certain types&lt;/em&gt; of failures.  There may be cases of failures you'd expect but don't actually observe.  Personally, I don't think governments are great at keeping secrets, so the alien secret would likely get out in some form and we aren't seeing that.  In the case of two data points, the analysis might go something like this, where &lt;span class="math"&gt;\(a_1\)&lt;/span&gt; is the likelihood of &lt;span class="math"&gt;\(A\)&lt;/span&gt; given &lt;span class="math"&gt;\(H_1\)&lt;/span&gt;, &lt;span class="math"&gt;\(b_1\)&lt;/span&gt; is the likelihood of &lt;span class="math"&gt;\(B\)&lt;/span&gt; given &lt;span class="math"&gt;\(H_1\)&lt;/span&gt;, &lt;span class="math"&gt;\(h_1\)&lt;/span&gt; is the prior of  &lt;span class="math"&gt;\(H_1\)&lt;/span&gt;, etc...&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\begin{aligned}
+\frac{P(H_1|A,B)}{P(H_1)} &amp;amp;\le 1 \text{ (for no evidence)} \\
+&amp;amp;= \frac{\left(\frac{a_1 b_1h_1}{a_1 b_1h_1 + a_2 b_2(1-h_1)}\right)}{h_1}\\
+a_1 b_1&amp;amp;\le a_1 b_1h_1+ a_2 b_2(1-h_1) \\
+(a_1 b_1-a_2 b_2)\underbrace{(h_1-1)}_{\le 0} &amp;amp;\ge 0 \\
+&amp;amp;\text{thus} \\
+a_2 b_2 &amp;amp;\ge a_1 b_1
+\end{aligned}
+$$&lt;/div&gt;
+&lt;p&gt;Consider two pieces of data. The first, &lt;span class="math"&gt;\(A\)&lt;/span&gt;, strongly supports the primary hypothesis (&lt;span class="math"&gt;\(a_1 \sim 1\)&lt;/span&gt;) but is only moderately likely under the alternative (&lt;span class="math"&gt;\(a_2 \sim 0.5\)&lt;/span&gt;, like a coin flip). However, if the second piece of data, &lt;span class="math"&gt;\(B\)&lt;/span&gt;, is something you'd strongly expect under &lt;span class="math"&gt;\(H_1\)&lt;/span&gt; but &lt;em&gt;don't observe&lt;/em&gt; (&lt;span class="math"&gt;\(b_1 \ll 1\)&lt;/span&gt;), then even though &lt;span class="math"&gt;\(B\)&lt;/span&gt; is equally likely under the alternative (&lt;span class="math"&gt;\(b_2 \sim 0.5\)&lt;/span&gt;), the combined data would still not be considered evidence for &lt;span class="math"&gt;\(H_1\)&lt;/span&gt;.  &lt;/p&gt;
+&lt;p&gt;So Alex O'Connor's example would in fact not be evidence for alien abductions, not even weak evidence.   Because the alternatives (e.g. many examples of normal people mucking up governments) end up scaling down the posterior probability for the alien abduction hypothesis.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &amp;lt; 768) ? "left" : align;
+        indent = (screen.width &amp;lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &amp;lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    &lt;a href="http://mathjaxscript.id" rel="nofollow"&gt;mathjaxscript.id&lt;/a&gt; = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = '&lt;a href="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';" rel="nofollow"&gt;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';&lt;/a&gt;
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="religion"/></entry><entry><title>Dr. Egnor's bad arguments for the soul</title><link href="https://bblais.github.io/posts/2025/Nov/11/dr-egnors-bad-arguments-for-the-soul/" rel="alternate"/><published>2025-11-11T00:00:00-05:00</published><updated>2025-11-11T00:00:00-05:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2025-11-11:/posts/2025/Nov/11/dr-egnors-bad-arguments-for-the-soul/</id><summary type="html">&lt;p&gt;Here's a video where &lt;a href="https://en.wikipedia.org/wiki/Michael_Egnor" rel="nofollow"&gt;Dr. Michael Egnor&lt;/a&gt; presents arguments and evidence for the existence and properties of the soul.  For someone who studies the brain, Dr Egnor is remarkably sloppy …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Here's a video where &lt;a href="https://en.wikipedia.org/wiki/Michael_Egnor" rel="nofollow"&gt;Dr. Michael Egnor&lt;/a&gt; presents arguments and evidence for the existence and properties of the soul.  For someone who studies the brain, Dr Egnor is remarkably sloppy with his facts about brain deficits and shows a profound lack of understanding of the methods of science -- and even basic logical arguments.  &lt;/p&gt;
 &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/41bIJ7hYbLs?si=6Nn2wqApdh1XbKAe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen&gt;&lt;/iframe&gt;
 
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
@@ -9302,26 +9429,4 @@ $$&lt;/div&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;It seems to be related to the Art of Charm toolbox podcast episode &lt;a href="https://theartofcharm.com/podcast-episodes/aoc-toolbox-quality-want-focus-quantity-episode-683/" rel="nofollow"&gt;If Quality Is What You Want, Focus on Quantity (Episode 683)&lt;/a&gt;&lt;/p&gt;</content><category term="productivity"/></entry><entry><title>How to be productive - Part 2 - Methods</title><link href="https://bblais.github.io/posts/2018/Jan/16/how-to-be-productive-part-2-methods/" rel="alternate"/><published>2018-01-16T00:00:00-05:00</published><updated>2018-01-16T00:00:00-05:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2018-01-16:/posts/2018/Jan/16/how-to-be-productive-part-2-methods/</id><summary type="html">&lt;p&gt;In &lt;a href="" rel="nofollow"&gt;Part 1 of this series&lt;/a&gt; I describe some of the apps I've used.  Here I speak about some of the methods I have tried to be productive.&lt;/p&gt;
-&lt;h3 id="the-list"&gt;The List …&lt;/h3&gt;</summary><content type="html">&lt;p&gt;In &lt;a href="" rel="nofollow"&gt;Part 1 of this series&lt;/a&gt; I describe some of the apps I've used.  Here I speak about some of the methods I have tried to be productive.&lt;/p&gt;
-&lt;h3 id="the-list"&gt;The List&lt;/h3&gt;
-&lt;p&gt;Here's a list of some of the resources
-* &lt;a href="https://gettingthingsdone.com/" rel="nofollow"&gt;GTD (Getting things done)&lt;/a&gt; - this is perhaps the universal "To Do" methodology.  Most people seem to have a love/hate relationship with this method.
-* &lt;a href="https://zenhabits.net/zen-to-done-ztd-the-ultimate-simple-productivity-system/" rel="nofollow"&gt;Zen to Done&lt;/a&gt; - a simplification of the GTD method.
-* &lt;a href="https://12weekyear.com/" rel="nofollow"&gt;12 Week Year&lt;/a&gt;
-* &lt;a href="https://acuff.me/books/" rel="nofollow"&gt;Finish by Jon Acuff&lt;/a&gt;
-* &lt;a href="https://theartofcharm.com/" rel="nofollow"&gt;The Art of Charm Podcast&lt;/a&gt;
-* &lt;a href="http://www.asianefficiency.com/podcast/" rel="nofollow"&gt;The Productivity Show&lt;/a&gt; - excellent, specific advice on productivity
-* &lt;a href="http://productivity-podcast.com/" rel="nofollow"&gt;Kevin Kruse - Extreme Productivity&lt;/a&gt; - podcast seems to be over, but binge listen to this!
-* &lt;a href="https://www.mindtools.com/pages/article/pomodoro-technique.htm" rel="nofollow"&gt;Pomodoro technique&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id="the-takeaway"&gt;The Takeaway&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;The filing system for resource materials described in GTD is golden. Basically, just alphabetically, one folder per letter.  Doesn't matter whether you are filing "pet alligators" with "asthma paper" because you know close to where you need to look (e.g. is "asthma" under "asthma" or "medical"?).  There usually isnt so much to look through that it takes long to find, and you &lt;strong&gt;simplify the filing so that you're more likely to do it&lt;/strong&gt;.&lt;/li&gt;
-&lt;li&gt;The "2-minute rule" from GTD and zTD.  If it would take more less than 2 minutes to do, do it right now.  &lt;/li&gt;
-&lt;li&gt;To-do's should be &lt;em&gt;actions&lt;/em&gt; not &lt;em&gt;nouns&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;Choose your MIT (Most Important Todos) each day - 3 of them - and get them done first.&lt;/li&gt;
-&lt;li&gt;If it is important to do, &lt;strong&gt;put it on your calendar&lt;/strong&gt;, in 15 minute blocks.&lt;/li&gt;
-&lt;li&gt;Pomodoro rocks!  25 minutes, for me, seems to be a good time-period for getting a single non-trivial thing done.  Trivial things (like email) can be done in 15 minute blocks.&lt;/li&gt;
-&lt;li&gt;Put "check email" on calendar, only for 2 specific times a day and don't look at it otherwise.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;As I am trying bullet journaling, I will post an update on that method, and how it compares to the digital methods I've tried.&lt;/p&gt;</content><category term="productivity"/></entry></feed>
+&lt;p&gt;It seems to be related to the Art of Charm toolbox podcast episode &lt;a href="https://theartofcharm.com/podcast-episodes/aoc-toolbox-quality-want-focus-quantity-episode-683/" rel="nofollow"&gt;If Quality Is What You Want, Focus on Quantity (Episode 683)&lt;/a&gt;&lt;/p&gt;</content><category term="productivity"/></entry></feed>
