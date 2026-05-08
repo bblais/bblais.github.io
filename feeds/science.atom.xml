@@ -1,5 +1,248 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>bblais on the web - science</title><link href="https://bblais.github.io/" rel="alternate"/><link href="https://bblais.github.io/feeds/science.atom.xml" rel="self"/><id>https://bblais.github.io/</id><updated>2024-11-04T00:00:00-05:00</updated><entry><title>Energy Balance Revisited</title><link href="https://bblais.github.io/posts/2024/Nov/04/energy-balance-revisited/" rel="alternate"/><published>2024-11-04T00:00:00-05:00</published><updated>2024-11-04T00:00:00-05:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2024-11-04:/posts/2024/Nov/04/energy-balance-revisited/</id><summary type="html">&lt;p&gt;Going back a few years I published an article simplifying the calculations for atmospheric greenhouse gas effects for undergraduate non-science majors,&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>bblais on the web - science</title><link href="https://bblais.github.io/" rel="alternate"/><link href="https://bblais.github.io/feeds/science.atom.xml" rel="self"/><id>https://bblais.github.io/</id><updated>2026-05-08T00:00:00-04:00</updated><entry><title>Making Cents of Calorie Counting</title><link href="https://bblais.github.io/posts/2026/May/08/making-cents-of-calorie-counting/" rel="alternate"/><published>2026-05-08T00:00:00-04:00</published><updated>2026-05-08T00:00:00-04:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2026-05-08:/posts/2026/May/08/making-cents-of-calorie-counting/</id><summary type="html">&lt;p&gt;The Physics Diet essentially is Energy In &amp;lt; Energy Out.  This is the same as Calories In &amp;lt; Calories Out or "maintain a calorie deficit to lose weight".  This is obviously not …&lt;/p&gt;</summary><content type="html">&lt;p&gt;The Physics Diet essentially is Energy In &amp;lt; Energy Out.  This is the same as Calories In &amp;lt; Calories Out or "maintain a calorie deficit to lose weight".  This is obviously not the entire picture for weight loss, but pretty much every diet and fitness plan has this as a starting point.  Even Weight Watchers has as their original equation for their "points",&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\text{WW points}=\frac{\text{calories}}{50}+\frac{\text{fat [g]}}{12}-\frac{\text{fiber [g]}}{5}
+$$&lt;/div&gt;
+&lt;p&gt;
+(you can see this in the patent document &lt;a href="https://www.freepatentsonline.com/6040531.pdf" rel="nofollow"&gt;https://www.freepatentsonline.com/6040531.pdf&lt;/a&gt;) which is a fancy way of doing calorie counting, with a small adjustment to encourage low-fat, high-fiber calories.  There are even studies that show that the primary weight loss achieved from the Keto diet comes from the calorie deficit itself.&lt;/p&gt;
+&lt;p&gt;It's also known that even tracking calories, without trying to maintain the deficit, results in a lower calorie intact -- having to write down all your snacks makes snacking less appealing.&lt;/p&gt;
+&lt;p&gt;Personally, I have found it hard to maintain calorie tracking.  It's not hard, it's just tedious and you have to use a calculator or an app to figure out your totals.  Further, once you are older and need to pay attention to more macros, especially protein, it adds friction to have to be calculating things all the time. &lt;/p&gt;
+&lt;h1 id="counting-to-20"&gt;Counting to 20&lt;/h1&gt;
+&lt;p&gt;So I came up with a different way of counting which leverages a hunch I had from teaching science, that people don't have a good intuition for numbers much larger than 20.  Things like 100 and 120 mentally give about the same mental image, unless one scales it down.  Things like 18 to 20 one can visualize the difference.  Some quick research confirmed this hunch (one such reference is &lt;a href="https://link.springer.com/article/10.3758/s13414-019-01804-6" rel="nofollow"&gt;https://link.springer.com/article/10.3758/s13414-019-01804-6&lt;/a&gt;).  So, if you scale the daily calories needed down to numbers no more than 20, one can achieve some advantages.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;one can do the math a lot faster (often in your head) because adding 2+3 is easier than adding 180+295.   &lt;/li&gt;
+&lt;li&gt;you can visualize the calorie deficit, which foods drive you over, and which foods don't&lt;/li&gt;
+&lt;li&gt;you can use a simple analog system to track, like the standard hash marks for counting, because the numbers aren't large&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The easiest way to do this then, given a standard 2000 calorie diet, would be to divide any calories by 100 and round up.  To get your target you'd divide the TDEE by 100 to get the maintenance energy in these new units.   Since these units are 1 unit = 100 calories, and "century" is 100, I'll call them &lt;em&gt;cents&lt;/em&gt;.  (Technically centicalories would be 1/100 calorie, and hectocalories would be 100 calories, but I don't think this rolls off the tongue as easily).&lt;/p&gt;
+&lt;h1 id="equations"&gt;Equations&lt;/h1&gt;
+&lt;p&gt;The  equation for TDEE/100 (or maintenance &lt;em&gt;cents&lt;/em&gt;, &lt;span class="math"&gt;\(¢\)&lt;/span&gt;) would be:&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\text{TDEE}/100= \lfloor W [\text{lb}]/18 + H[ \text{in}]/5 - A [\text{yr}]/16  -2_\text{ (if female)} \rfloor_{\text{(round down)}}
+$$&lt;/div&gt;
+&lt;p&gt;
+in &lt;span class="math"&gt;\(¢\)&lt;/span&gt; units.&lt;/p&gt;
+&lt;h2 id="examples"&gt;Examples&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;55 yo male, 170 pounds, 5'10"
+&lt;div class="math"&gt;$$
+\text{TDEE}/100= \lfloor 170 [\text{lb}]/18 + 70[ \text{in}]/5 - 55 [\text{yr}]/16  \rfloor_{\text{(round down)}}=20¢
+$$&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;30 yo female, 130 pounds, 5'3"
+&lt;div class="math"&gt;$$
+\text{TDEE}/100= \lfloor 130 [\text{lb}]/18 + 63[ \text{in}]/5 - 30 [\text{yr}]/16  -2 \rfloor_{\text{(round down)}} = 15¢
+$$&lt;/div&gt;
+Since 1 lb of fat = 3500 cal that is 1 lb of fat = &lt;span class="math"&gt;\(35 ¢\)&lt;/span&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;So, to lose 1 lb per week would be a deficit of &lt;span class="math"&gt;\(5 ¢\)&lt;/span&gt; daily -- really easy to visualize.&lt;/p&gt;
+&lt;p&gt;We can then write down the &lt;span class="math"&gt;\(¢\)&lt;/span&gt; for common foods and activities.  It's really easy, by eye, to convert from calories to &lt;span class="math"&gt;\(¢\)&lt;/span&gt; -- divide by 100 and round up.  &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;130 cal = &lt;span class="math"&gt;\(2¢\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;280 cal = &lt;span class="math"&gt;\(3¢\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;etc...&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Food&lt;/th&gt;
+&lt;th&gt;Calories&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1 egg&lt;/td&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(1 ¢\)&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;protein shake&lt;/td&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(2 ¢\)&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;peanut butter sandwich&lt;/td&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(4 ¢\)&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;cheeseburger&lt;/td&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(7 ¢\)&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;apple = banana&lt;/td&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(1 ¢\)&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;6 oz chicken grilled&lt;/td&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(3 ¢\)&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;10 jelly beans&lt;/td&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(1 ¢\)&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;sesame bagel&lt;/td&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(3 ¢\)&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;I use the LoseIt App to find the calories for a serving, but then write out my own list of &lt;span class="math"&gt;\(¢\)&lt;/span&gt; in a notebook so I don't have to keep looking things up.  It's much easier to track &lt;span class="math"&gt;\(¢\)&lt;/span&gt; through the day, and to see how a little extra builds up to &lt;span class="math"&gt;\(35 ¢\)&lt;/span&gt; for 1 lb of fat.&lt;/p&gt;
+&lt;p&gt;Further you'd have&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Activities&lt;/th&gt;
+&lt;th&gt;Calories&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Moderate Walk, 1 mi&lt;/td&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(1 ¢\)&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Run 1 mi&lt;/td&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(1 ¢\)&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Strength 30 min&lt;/td&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(1 ¢\)&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;So you can "purchase" more calories through exercise, but you can immediately visualize that, as they say, you can't out exercise a bad diet.  One &lt;span class="math"&gt;\(7 ¢\)&lt;/span&gt; cheeseburger over your target requires a 7 mile run to burn off!&lt;/p&gt;
+&lt;h1 id="including-protein"&gt;Including Protein&lt;/h1&gt;
+&lt;p&gt;Now that I am trying to work strength training into exercise, tracking protein is another one that is important.  We can play the same trick here.  Recommended protein amount is approximately a minimum of 1 g-1.5g of protein for 1 kg of mass.  For someone who is 170 pounds, this translates to about 77 g-116 g.  These numbers are too large, so let's divide by 5 and round to get our new protein units.&lt;br&gt;
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\text{protein [$ᵽ$]}= \lfloor \text{protein} [\text{g}]/5 \rceil_{\text{(round)}}
+$$&lt;/div&gt;
+&lt;p&gt;These units will be 5g protein units, or pentagrams (which I find amusing given the double meaning) or &lt;em&gt;pents&lt;/em&gt; (&lt;span class="math"&gt;\(ᵽ\)&lt;/span&gt;) for short.  The equation would be,&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\text{min protein [pents]}= \lfloor W [\text{lb}]/11 \rceil_{\text{(round)}}
+$$&lt;/div&gt;
+&lt;p&gt;
+A 170 lb person would then require a minimum of around 15 or 16 &lt;em&gt;ᵽ&lt;/em&gt;.  The chart above would look like&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Food&lt;/th&gt;
+&lt;th&gt;Calories&lt;/th&gt;
+&lt;th&gt;Protein&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1 egg&lt;/td&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(1 ¢\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(2ᵽ\)&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;protein shake&lt;/td&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(2 ¢\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(6ᵽ\)&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;peanut butter sandwich&lt;/td&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(4 ¢\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(4ᵽ\)&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;cheeseburger&lt;/td&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(7 ¢\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(7ᵽ\)&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;apple = banana&lt;/td&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(1 ¢\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(1ᵽ\)&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;6 oz chicken grilled&lt;/td&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(3 ¢\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(10ᵽ\)&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;10 jelly beans&lt;/td&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(1 ¢\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(0ᵽ\)&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;sesame bagel&lt;/td&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(3 ¢\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span class="math"&gt;\(2ᵽ\)&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Again, using LoseIt (or any other calorie and macro reference), dividing by 5 and rounding is pretty easy.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;9.5 g = 2&lt;span class="math"&gt;\(ᵽ\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;22 g = 4&lt;span class="math"&gt;\(ᵽ\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;etc...&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id="future-directions"&gt;Future directions&lt;/h1&gt;
+&lt;h2 id="fiber"&gt;Fiber?&lt;/h2&gt;
+&lt;p&gt;Tracking fiber may also be useful, but I haven't looked at the equations for that.  Sometimes trying to do too much tracking will undermine the imperfect benefits of tracking fewer things.  If I do include fiber, I think I should call the unit "fents" (pronounced like "fence") so that I'd have cents, pents, and fents (the first letter denoting the type of measurement).&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &amp;lt; 768) ? "left" : align;
+        indent = (screen.width &amp;lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &amp;lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    &lt;a href="http://mathjaxscript.id" rel="nofollow"&gt;mathjaxscript.id&lt;/a&gt; = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = '&lt;a href="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';" rel="nofollow"&gt;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';&lt;/a&gt;
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="science"/></entry><entry><title>Energy Balance Revisited</title><link href="https://bblais.github.io/posts/2024/Nov/04/energy-balance-revisited/" rel="alternate"/><published>2024-11-04T00:00:00-05:00</published><updated>2024-11-04T00:00:00-05:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2024-11-04:/posts/2024/Nov/04/energy-balance-revisited/</id><summary type="html">&lt;p&gt;Going back a few years I published an article simplifying the calculations for atmospheric greenhouse gas effects for undergraduate non-science majors,&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;a href="https://iopscience.iop.org/article/10.1088/0031-9120/38/6/004/meta" rel="nofollow"&gt;Blais, B. (2003). Teaching energy balance using round numbers …&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;p&gt;Going back a few years I published an article simplifying the calculations for atmospheric greenhouse gas effects for undergraduate non-science majors,&lt;/p&gt;
 &lt;blockquote&gt;
