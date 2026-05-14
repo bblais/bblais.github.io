@@ -1,0 +1,485 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>How to Inflate your Bayes Factor with Nothing  - or how a partition isn't actually necessary  · bblais on the web
+</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="https://bblais.github.io/theme/css/main.css" />
+
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="https://bblais.github.io/theme/css/custom.css" media="screen">
+    
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+        <div id="wrapper">
+
+		<!-- Main -->
+			<div id="main">
+
+				<div class="inner">
+
+					<!-- Header -->
+						<header id="header">
+							<a href="https://bblais.github.io/index.html" class="logo"><strong>bblais on the web</strong></a>
+							<ul class="icons">
+								<li><a href="https://twitter.com/bblais" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="https://www.linkedin.com/in/brian-blais-bb66482b/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+								<li><a href="https://github.com/bblais" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="https://bblais.github.io/feeds/all.atom.xml" class="icon solid fa-rss"><span class="label">YouTube</span></a></li>
+								<li><a href="mai&#108;&#116;o&#58;b&#37;6&#50;%6C&#37;61i%&#55;3%40%62ry&#37;61nt%2Eed&#37;7&#53;" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+								<li><a href="https://www.youtube.com/channel/UC8cN5_0dy5o9qNPpdLxPa8w" class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
+							</ul>
+						</header>
+
+
+
+
+
+
+
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h1>How to Inflate your Bayes Factor with Nothing</h1> 
+ <h2> or how a partition isn't actually necessary </h2> 
+										<p><strong><time pubdate="pubdate" datetime="2026-05-14T00:00:00-04:00">Thu 14 May 2026</strong>
+												In  
+													<em><a href="https://bblais.github.io/category/religion.html">#religion</a></em>
+										</p>
+									</header>
+
+										<span class="image left"><img src="https://bblais.github.io/images/pexels-cottonbro-6474587.jpg"></span>
+
+
+									<p>I was recently directed to <a href="https://lydiaswebpage.blogspot.com/2025/12/the-resurrection-independence-and.html" rel="nofollow">some work</a> by <a href="https://lydiamcgrew.com/" rel="nofollow">Lydia McGrew</a>, as I was <a href="https://bblais.github.io/posts/2026/May/13/response-bayes-skeptics-and-the-resurrection/" rel="nofollow">responding to hers and  Than Christopoulos's 9-part response</a> to <a href="https://youtu.be/v6QenX4Oo78" rel="nofollow">Paulogia's video featuring me</a> where we were responding to a <a href="https://www.inspiringphilosophy.com/blog/paulogiaits-time-to-stop" rel="nofollow">blog post by Than Christopoulos</a>.  (catch all that? 😂)</p>
+<p>One argument in particular had me puzzled for days,</p>
+<h1 id="mcgrews-argument">McGrew's Argument</h1>
+<p><a href="https://lydiaswebpage.blogspot.com/2025/12/the-resurrection-independence-and.html" rel="nofollow">https://lydiaswebpage.blogspot.com/2025/12/the-resurrection-independence-and.html</a></p>
+<blockquote>
+<p>It's surprising how many people don't know this: When considering evidence for some event, such as the resurrection or the Battle of Gettysburg or the moon landing or anything else, and comparing how well that event explains the evidence and how well its negation explains the evidence, you <em>must not confine yourself</em> to thinking <em>only</em> of alternatives that have some hope of explaining the evidence.</p>
+<p>Rather, in order to think rightly about how strong the evidence is for the event, you need to compare the explanatory power of the salient hypothesis H (that is, the hypothesis toward which the individual items <em>prima facie</em> point) to the power of ~H <em>overall</em>. I can't stress this strongly enough. And it's pretty obvious in the case of the Battle of Gettysburg or the moon landing. If man never landed on the moon, the most probable thing that would happen is that we would have no attestations that man did land on the moon! The most probable outcome would be...nothing. No video, no astronaut interviews, no pictures of the American flag, etc. You won't get a good sense of how strong the evidence is for the moon landing by comparing "Man first landed on the moon on July 20, 1969" only to some gerrymandered conspiracy theory that man didn't land on the moon at all and that this, that, and the other pieces of evidence were falsely manufactured. Where M is the moon landing hypothesis, the gerrymandered conspiracy hypothesis is merely a <em>subhypothesis</em> of ~M. Of course that subhypothesis explains at least some of the evidence. That's what it was designed to do. But the evidence is still strong against ~M because the subhypothesis takes up only a very small bit of the probability space <em>given</em> ~M. Since the conspiracy is very improbable given ~M, it doesn't help much to improve the explanatory power of ~M.</p>
+<p>You <em>must use a partition--a mutually exclusive and joinly exhaustive set of options.</em> M and ~M are a partition. M and "~M and a conspiracy to make it look like M" do not form a partition. See <a href="https://youtu.be/y7umQEVtbx4" rel="nofollow">here</a> for a video in which I point this out. It's astonishing that not only most skeptics but also many Christians don't realize this. If you don't use a partition, you're going to find it virtually impossible to get a true sense of the strength of the evidence.</p>
+</blockquote>
+<p>Walking through the math here, I start with the Bayes Factor,</p>
+<div class="math">$$
+\frac{P(\text{data}|H)}{P(\text{data}|\neg H)}
+$$</div>
+<p>
+To try to make this as easy as possible, I will consider <span class="math">\(\neg H\)</span> to be broken up into only two options and assume these two are mutually exclusive and exhaustive (i.e. they form a partition, as McGrew insists).  So we have three models:</p>
+<ul>
+<li><span class="math">\(H\)</span> - we landed on the moon</li>
+<li><span class="math">\(M\)</span> - some conspiracy, where we filmed the landing in Hollywood and broadcast from there</li>
+<li><span class="math">\(N\)</span> - nothing happened at all</li>
+</ul>
+<p>Since <span class="math">\(M\)</span> and <span class="math">\(N\)</span> both entail <span class="math">\(\neg H\)</span>, and we are assuming they are exhaustive, we can break the bottom part of the Bayes Factor into pieces, like
+</p>
+<div class="math">$$
+P(\text{data}|\neg H) = P(\text{data}|\neg H, M)P(M|\neg H)+P(\text{data}|\neg H, N)P(N|\neg H)
+$$</div>
+<p>
+We should also have</p>
+<div class="math">$$
+P(M|\neg H)+P(N|\neg H)=1
+$$</div>
+<p>
+We now make the following observations:
+- "nothing happening" is much more likely than a conspiracy: <span class="math">\(P(M|\neg H)\)</span> will be pretty small compared to <span class="math">\(P(N|\neg H)\)</span>
+- "nothing happening" doesn't even attempt to explain the data, so it's predictive power is basically zero: <span class="math">\(P(\text{data}|\neg H, N) \approx 0\)</span>
+- The original hypothesis, <span class="math">\(H\)</span>, is presumed to fit the data very well: <span class="math">\(P(\text{data}|H)\approx 1\)</span>
+- The conspiracy also fits the data well: <span class="math">\(P(\text{data}|M)\approx 1\)</span></p>
+<p>This leads to a top-heavy Bayes Factor:</p>
+<div class="math">$$
+\begin{align}
+\frac{P(\text{data}|H)}{P(\text{data}|\neg H)}&amp;=\frac{P(\text{data}|H)}{P(\text{data}|\neg H, M)P(M|\neg H)+P(\text{data}|\neg H, N)P(N|\neg H)}\\
+&amp;=\frac{1}{1\cdot (\rm small)+0\cdot (\rm largish)} = \frac{1}{\rm small}
+\end{align}
+$$</div>
+<p>So it would seem that if you have the hypothesis "<span class="math">\(H=\)</span>I believe the claim in all its details", and the opposite, <span class="math">\(\neg H\)</span>, has a large pool of hypotheses that don't explain anything, then you'll automatically support <span class="math">\(H\)</span>.  We will see this is a bug not a feature.</p>
+<p>A bit more generally, including <span class="math">\(P(M|\neg H)=\frac{P(M)}{P(M)+P(N)}\)</span> and <span class="math">\(P(\text{data}|\neg H,M)=P(\text{data}|M)\)</span>,</p>
+<div class="math">$$
+\begin{align}
+\frac{P(\text{data}|H)}{P(\text{data}|\neg H)}&amp;=\frac{P(\text{data}|H)}{P(\text{data}|M)\cdot\frac{P(M)}{P(M)+P(N)}}
+\end{align}
+$$</div>
+<p>
+The effect of the partition is to scale the denominator by the small fraction of the <span class="math">\(M\)</span> model probability compared to the "nothing" model <span class="math">\(N\)</span>. Compare this to McGrew's quote above "But the evidence is still strong against ~M because the subhypothesis takes up only a very small bit of the probability space <em>given</em> ~M." -- this is the same observation.</p>
+<p>Something seems wrong here, however.  E.T. Jaynes shows that equivalent states of knowledge should yield equivalent probability assignments, so this observation feels like adding "nothing" to our state of knowledge, but changing probabilities.  </p>
+<h1 id="why-i-never-saw-this-effect-before">Why I never saw this effect before</h1>
+<p>I don't like the Bayes Factor, or ratio-versions of Bayes Theorem in particular.  I think it encourages binary thinking. In addition, there are always unconsidered models within <span class="math">\(H\)</span> and <span class="math">\(\neg H\)</span> that are hard to see.  Many times <span class="math">\(H\)</span> is not well defined, which doesn't help matters either.  I prefer to write out Bayes Theorem from the start with all of the models under consideration, but not in the full numerator/denominator form -- that one gets messy quickly, and encourages restricting to a small number of models. Equivalently, one can write out the numerator-only for each model and as a second step add all of them up to find the denominator, and then go back and redivide by that denominator. This multi-step process allows you to consider as many models as one wants, and to more directly compare priors.</p>
+<p>Using that approach we'd have:</p>
+<div class="math">$$
+\begin{align}
+P(H|\text{data})&amp;\sim P(\text{data}|H)\cdot P(H) \\
+P(M|\text{data})&amp;\sim P(\text{data}|M)\cdot P(M) \\
+P(N|\text{data})&amp;\sim P(\text{data}|N)\cdot P(N)
+\end{align}
+$$</div>
+<div class="math">$$
+\begin{align}
+P(H|\text{data})&amp;\sim P(\text{data}|H)\cdot P(H) \\
+&amp;+\\
+P(M|\text{data})&amp;\sim P(\text{data}|M)\cdot P(M) \\
+&amp;+\\
+P(N|\text{data})&amp;\sim P(\text{data}|N)\cdot P(N) \\
+&amp;=T\\
+\end{align}
+$$</div>
+<div class="math">$$
+\begin{align}
+P(H|\text{data})&amp;= P(\text{data}|H)\cdot P(H)/T \\
+P(M|\text{data})&amp;= P(\text{data}|M)\cdot P(M)/T \\
+P(N|\text{data})&amp;= P(\text{data}|N)\cdot P(N)/T \\
+\end{align}
+$$</div>
+<p>Since <span class="math">\(P(\text{data}|N)\)</span> is near zero, that one will drop out of the sum,</p>
+<div class="math">$$
+T=P(\text{data}|H)\cdot P(H)+P(\text{data}|M)\cdot P(M)
+$$</div>
+<div class="math">$$
+\begin{align}
+P(H|\text{data})&amp;= \frac{P(\text{data}|H)\cdot P(H)}{P(\text{data}|H)\cdot P(H)+P(\text{data}|M)\cdot P(M)} \\
+P(M|\text{data})&amp;= \frac{P(\text{data}|M)\cdot P(M)}{P(\text{data}|H)\cdot P(H)+P(\text{data}|M)\cdot P(M)} \\
+P(N|\text{data})&amp;= 0\\
+\end{align}
+$$</div>
+<p>
+Making the posterior ratio,</p>
+<div class="math">$$
+\begin{align}
+\frac{P(H|\text{data})}{P(\neg H|\text{data})}&amp;=\frac{P(\text{data}|H)\cdot P(H)}{P(\text{data}|M)\cdot P(M)}
+\end{align}
+$$</div>
+<p>and since both <span class="math">\(H\)</span> and <span class="math">\(M\)</span> explain the data well, <span class="math">\(P(\text{data}|H)\approx 1\)</span> and <span class="math">\(P(\text{data}|M)\approx 1\)</span>, the model comparison reduces to comparing priors <span class="math">\(P(M)\)</span> vs <span class="math">\(P(H)\)</span>.  Considering models like "nothing happened" doesn't seem to come into play, in contrast to the McGrew approach.</p>
+<h1 id="the-answers-have-to-be-the-same">The answers have to be the same</h1>
+<p>Probability theory does not allow equivalent problems to yield different answers.  So it would seem these two approaches are answering similar, but somehow different, questions.  Or maybe they are equivalent in a way that isn't immediately obvious.  Initially. I was not sure which, but now I can show where we can see the connection.</p>
+<p>We start with the posterior ratio, expanding the denominator,</p>
+<div class="math">$$
+\begin{align}
+\frac{P(H|\text{data})}{P(\neg H|\text{data})}&amp;=\frac{P(\text{data}|H)}{P(\text{data}|\neg H)}\times \frac{P(H)}{P(\neg H)} \\
+&amp;=\frac{P(\text{data}|H)}{P(\text{data}|\neg H,M)P(M|\neg H)+P(\text{data}|\neg H,N)P(N|\neg H)}\times \\
+&amp;\frac{P(H)}{P(\neg H|M)P(M)+P(\neg H|N)P(N)}
+\end{align}
+$$</div>
+<p>Substitute 
+</p>
+<div class="math">$$\begin{align}
+P(M|\neg H) &amp;= \frac{P(M)}{P(M)+P(N)}\\
+P(N|\neg H) &amp;= \frac{P(N)}{P(M)+P(N)} \\
+\end{align}
+$$</div>
+<p>
+because <span class="math">\(M\)</span> and <span class="math">\(N\)</span> are mutually exclusive and exhaustive (by definition) and,</p>
+<div class="math">$$
+\begin{align}
+P(\text{data}|\neg H,M) &amp;= P(\text{data}|M) \\
+P(\text{data}|\neg H,N) &amp;= P(\text{data}|N)
+\end{align}
+$$</div>
+<p>
+because knowing <span class="math">\(M\)</span> or <span class="math">\(N\)</span> guarantees that <span class="math">\(\neg H\)</span> is also true, so their conjunction is redundant.</p>
+<p>This leads to,</p>
+<div class="math">$$
+\begin{align}
+\frac{P(H|\text{data})}{P(\neg H|\text{data})}&amp;=\frac{P(\text{data}|H)}{P(\text{data}|\neg H,M)P(M|\neg H)+P(\text{data}|\neg H,N)P(N|\neg H)}\times\frac{P(H)}{P(M)+P(N)} \\
+&amp;=\underbrace{\left[\frac{P(\text{data}|H)}{P(\text{data}|M)\cdot \frac{P(M)}{P(M)+P(N)}+P(\text{data}|N) \cdot \frac{P(N)}{P(M)+P(N)}}\right]}_{\text{likelihood ratio (Bayes Factor)}}\times\underbrace{\left[\frac{P(H)}{P(M)+P(N)}\right]}_{\text{prior}}
+\end{align}
+$$</div>
+<p>
+Recall that the "nothing" model doesn't predict the data, <span class="math">\(P(\text{data}|N)=0\)</span>, so we have,</p>
+<div class="math">$$
+\begin{align}
+\frac{P(H|\text{data})}{P(\neg H|\text{data})}&amp;=\underbrace{\left[\frac{P(\text{data}|H)}{P(\text{data}|M)\cdot \frac{P(M)}{P(M)+P(N)}}\right]}_{\text{likelihood ratio (Bayes Factor)}}\times\underbrace{\left[\frac{P(H)}{P(M)+P(N)}\right]}_{\text{prior}}
+\end{align}
+$$</div>
+<p>
+which reduces to,
+</p>
+<div class="math">$$
+\begin{align}
+\frac{P(H|\text{data})}{P(\neg H|\text{data})}&amp;=\frac{P(\text{data}|H)\cdot P(H)}{P(\text{data}|M)\cdot P(M)}
+\end{align}
+$$</div>
+<p>This last equation matches my solution, and the Bayes Factor in the previous equation matches the McGrew's Bayes Factor.  We can now see immediately what is happening.  </p>
+<p>By adding a "nothing" model (<span class="math">\(P(\text{data}|N)=0\)</span> model), the Bayes Factor gets scaled down by the relative fraction of the alternative to the main model to that "nothing" model, <span class="math">\(\frac{P(M)}{(P(M)+P(N)}\)</span>.  This makes the Bayes Factor top-heavy without really changing anything about our state of knowledge.   This should make us suspicious (which is why I thought something was wrong earlier) because one of the tenets of probability theory is that equivalent states of knowledge should yield equivalent probability assignments.   Notice, however, that the denominator of the prior <em>gets scaled up by the same amount</em>, <span class="math">\(P(M)+P(N)\)</span>, which cancels the effect of the "nothing" model, leaving only the comparison between <span class="math">\(H\)</span> and <span class="math">\(M\)</span>:</p>
+<div class="math">$$
+\begin{align}
+\frac{P(H|\text{data})}{P(\neg H|\text{data})}&amp;=\underbrace{\left[\frac{P(\text{data}|H)}{P(\text{data}|M)}\right]}_{\text{likelihood}}\times\underbrace{\left[\frac{P(H)}{P(M)}\right]}_{\text{prior}}
+\end{align}
+$$</div>
+<p>So, models that don't explain the data at all will not contribute to our model comparison values <em>at all</em>. All the insistence McGrew gives us for having a partition, then, becomes moot.  </p>
+<p>It also clears up <a href="https://youtu.be/y7umQEVtbx4?si=UjwFxepNP9QdxcPG&amp;t=670" rel="nofollow">McGrew's observation from a different video</a>  that if you have <span class="math">\(H\)</span> and you have an alternative designed to account for the data, <span class="math">\(M\)</span>, then the Bayes Factor, <span class="math">\(P(\text{data}|H)/P(\text{data}|M)\)</span>, would be, as McGrew states, "unhelpful and uninformative".  Correct!  If both models predict the same data equally, then the argument will have to come down to priors.  If you use a partition which includes irrelevant hypotheses, as McGrew suggests, then you'll artificially boost the Bayes factor while at the same time reducing the prior by the same scale.  Thus the truly interesting ratio -- not the Bayes Factor but the posterior ratio -- is unchanged.  Ignoring the priors gives one a false sense of security for <span class="math">\(H\)</span> in this case.  </p>
+<h1 id="exercise-for-the-student">Exercise for the student</h1>
+<p>To make this concrete, do both the Bayes Factor and the Posterior ratio calculations for the following values:</p>
+<ul>
+<li><span class="math">\(P(N)=0.94\)</span> - the "nothing model" is the most likely thing a-priori</li>
+<li><span class="math">\(P(M)=0.05\)</span> - the <span class="math">\(M\)</span> model is 5x more likely a-priori than <span class="math">\(H\)</span></li>
+<li><span class="math">\(P(H)=0.01\)</span></li>
+</ul>
+<p>note that 
+- <span class="math">\(P(\neg H)=P(M)+P(N)\)</span>
+- <span class="math">\(P(M|\neg H)=P(M)/(P(M)+P(N))\)</span>
+- <span class="math">\(P(N|\neg H)=P(N)/(P(M)+P(N))\)</span></p>
+<p>And predicting the data, assume</p>
+<ul>
+<li><span class="math">\(P(\text{data}|H)=1\)</span> - model <span class="math">\(H\)</span> perfectly predicts the data</li>
+<li><span class="math">\(P(\text{data}|M)=0.5\)</span> - model <span class="math">\(M\)</span>  predicts the data worse</li>
+<li><span class="math">\(P(\text{data}|N)=0\)</span> - the "nothing" model doesn't predict the data at all.</li>
+</ul>
+<p>If you run through this calculation, you'll find things like,</p>
+<ul>
+<li><span class="math">\(P(M|\neg H)=P(M)/(P(M)+P(N))\approx 0.051\)</span></li>
+<li>The Bayes Factor, <span class="math">\(P(\text{data}|H)/P(\text{data}|\neg H)\approx 39\)</span>, -- really in favor of model <span class="math">\(H\)</span>!</li>
+<li>The Posterior ratio (which is the correct and interesting quantity to look at), <span class="math">\(P(H|\text{data})/P(\neg H|\text{data})=P(H|\text{data})/P(M|\text{data}) = \frac{1}{2.5}\)</span> or the combination of 1) <span class="math">\(H\)</span> explains the data twice as well as <span class="math">\(M\)</span> but 2) <span class="math">\(H\)</span> is 5x less likely a-priori than <span class="math">\(M\)</span>.</li>
+</ul>
+<p>It seems clear to me now that if you work only with Bayes Factors you are not doing Bayesian reasoning.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    <a href="http://mathjaxscript.id" rel="nofollow">mathjaxscript.id</a> = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = '<a href="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';" rel="nofollow">https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';</a>
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+
+
+								</section>
+
+								<!-- 
+<div id="disqus_thread"></div>
+<script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT 
+     *  THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR 
+     *  PLATFORM OR CMS.
+     *  
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: 
+     *  https://disqus.com/admin/universalcode/#configuration-variables
+     */
+    
+    // var disqus_config = function () {
+    //     // Replace PAGE_URL with your page's canonical URL variable
+    //     this.page.url = PAGE_URL;  
+        
+    //     // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    //     this.page.identifier = PAGE_IDENTIFIER; 
+    // };
+    
+    
+    (function() {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
+        var d = document, s = d.createElement('script');
+        var disqus_shortname = "bblaisontheweb"; 
+        var disqus_title = "How to Inflate your Bayes Factor with Nothing";
+        
+        // IMPORTANT: Replace EXAMPLE with your forum shortname!
+        s.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+        
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>
+    Please enable JavaScript to view the 
+    <a href="https://disqus.com/?ref_noscript" rel="nofollow">
+        comments powered by Disqus.
+    </a>
+</noscript>
+
+
+
+
+ -->
+<div class="commentbox"></div>
+<script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
+<script>commentBox('5702415454044160-proj')</script>
+
+
+
+				</div>
+			</div>
+	
+				<!-- Sidebar -->
+                <div id="sidebar">
+                    <div class="inner">
+
+                        <!-- Search -->
+                        <section id="search" class="alt">
+                            <form class="navbar-search" action="https://bblais.github.io/search.html" onsubmit="return validateForm(this.elements['q'].value);"> 
+                                <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form>
+                        </section>
+
+                        <!-- Menu -->
+                            <nav id="menu">
+                                <header class="major">
+                                    <h2>Menu</h2>
+                                </header>
+                                <ul>
+                                    <li><a href="https://bblais.github.io/index.html">Homepage</a></li>
+                                    <li>
+                                        <span class="opener"><a href="https://bblais.github.io/index.html#0" title="">Blog</a></span>
+                                        <ul>
+                                            <li><a href="https://bblais.github.io/index.html#blog">Recent</a></li>
+                                            <li><a href="https://bblais.github.io/category/articles.html">articles <span>(85)</span></a></li>
+                                            <li><a href="https://bblais.github.io/category/books.html">books <span>(3)</span></a></li>
+                                            <li><a href="https://bblais.github.io/category/critical-thinking.html">critical thinking <span>(4)</span></a></li>
+                                            <li><a href="https://bblais.github.io/category/math.html">math <span>(10)</span></a></li>
+                                            <li><a href="https://bblais.github.io/category/media.html">media <span>(14)</span></a></li>
+                                            <li><a href="https://bblais.github.io/category/presentations.html">presentations <span>(4)</span></a></li>
+                                            <li><a href="https://bblais.github.io/category/productivity.html">productivity <span>(7)</span></a></li>
+                                            <li><a href="https://bblais.github.io/category/programming.html">programming <span>(5)</span></a></li>
+                                            <li><a href="https://bblais.github.io/category/projects.html">projects <span>(4)</span></a></li>
+                                            <li><a href="https://bblais.github.io/category/religion.html">religion <span>(43)</span></a></li>
+                                            <li><a href="https://bblais.github.io/category/science.html">science <span>(14)</span></a></li>
+                                            <li><a href="https://bblais.github.io/category/unbelievable-project.html">Unbelievable Project <span>(21)</span></a></li>
+                                            <li><a href="https://bblais.github.io/category/wordpress_migration.html">wordpress_migration <span>(160)</span></a></li>
+     
+                                        </ul>
+                                    </li>
+                                    <li><a href="https://bblais.github.io/pages/presentations.html">Presentations</a></li>
+                                    <li><a href="https://bblais.github.io/pages/projects.html">Projects</a></li>
+                                    <li><a href="https://bblais.github.io/pages/publications.html">Publications</a></li>
+                                    <li><a href="https://bblais.github.io/archives.html">Archives</a></li>
+                                    <li><a href="https://bblais.github.io/about.html">About</a></li>
+                                </ul>
+                            </nav>
+
+                        <!-- Section -->
+                            <section>
+                                <header class="major">
+                                    <h2>Popular Posts</h2>
+                                </header>
+
+                                <div class="mini-posts">
+                                        <article>
+                                            <a href="https://bblais.github.io/posts/2021/Apr/09/gravitational-attraction/" class="image">
+                                                <img src="https://bblais.github.io/images/muzammil-soorma-R11bppS4q8o-unsplash.jpg" alt="muzammil-soorma-R11bppS4q8o-unsplash.jpg">
+                                            </a>
+                                            <p><strong>Gravitational Attraction </strong>
+                                                <p>What would happen if two people out in space a few meters apart, abandoned by their spacecraft, decided to wait until gravity pulled them together?  My initial thought was that …</p></p>
+                                        </article>
+                                        <article>
+                                            <a href="https://bblais.github.io/posts/2020/Aug/03/a-simple-physics-problem-gets-messy/" class="image">
+                                                <img src="https://bblais.github.io/images/roman-mager-5mZ_M06Fc9g-unsplash.jpg" alt="roman-mager-5mZ_M06Fc9g-unsplash.jpg">
+                                            </a>
+                                            <p><strong>A Simple Physics Problem Gets Messy </strong>
+                                                <p>A physics problem from a practice AP test came to my attention, when my daughter was in AP physics this past spring.  I went over her solutions when she did …</p></p>
+                                        </article>
+                                        <article>
+                                            <a href="https://bblais.github.io/posts/2020/Jul/09/skepticism-and-dubious-medical-procedures/" class="image">
+                                                <img src="https://bblais.github.io/images/mohamed-nohassi-odxB5oIG_iA-unsplash.jpg" alt="mohamed-nohassi-odxB5oIG_iA-unsplash.jpg">
+                                            </a>
+                                            <p><strong>Skepticism and Dubious Medical Procedures </strong>
+                                                <p>In my discussion with Jonathan McLatchie on the Still Unbelievable podcast, I said that there hasn’t been a verified miracle claim even since Hume’s essay on miracles.  Here I look into the papers he references in response.</p></p>
+                                        </article>
+                                </div>
+                            </section>
+
+                        <!-- Section -->
+                            <section>
+                                <header class="major">
+                                    <h2>Get in touch</h2>
+                                </header>
+                                <p>What problems are you interested in?  How can I help?</p>
+                                <ul class="contact">
+                                    <li class="icon brands fa-twitter"><a href="https://twitter.com/bblais">@bblais</a></li>
+                                    <li class="icon solid fa-envelope"><a href='mai&#108;&#116;o&#58;b&#37;6&#50;%6C&#37;61i%&#55;3%40%62ry&#37;61nt%2Eed&#37;7&#53;'>b&#98;&#108;&#97;is&#64;bry&#97;&#110;t&#46;&#101;d&#117;</a></li>
+                                    <li class="icon solid fa-phone"><a href="tel://4012326153">(401) 232-6153</a></li>
+                                    <li class="icon solid fa-home">Bryant University<br>
+                                        1150 Douglas Pike<br>
+                                        Smithfield, RI<br>
+                                        02917 US</li>
+                                </ul>
+                            </section>
+
+                        <!-- Footer -->
+                            <footer id="footer">
+                                <p class="copyright">&copy; 2021 - All rights reserved. Adapted from <a href="https://html5up.net/editorial">Editorial Theme</a> html5up.net | @ajlkn, 
+                                    Converted to <a href="https://blog.getpelican.com">Pelican</a> theme by <a href="#">Brian Blais</a>. </p>
+                            </footer>
+
+                    </div>
+                </div>
+
+		</div>
+
+
+    <!-- Scripts -->
+	<script src="https://bblais.github.io/theme/js/jquery.min.js"></script>
+	<script src="https://bblais.github.io/theme/js/elegant.prod.9e9d5ce754.js"></script>
+	<script src="https://bblais.github.io/theme/js/browser.min.js"></script>
+	<script src="https://bblais.github.io/theme/js/breakpoints.min.js"></script>
+	<script src="https://bblais.github.io/theme/js/util.js"></script>
+	<script src="https://bblais.github.io/theme/js/main.js"></script>
+	<script>
+		function validateForm(query)
+		{
+			return (query.length > 0);
+		}
+	</script>
+	
+	
+	</body>
+</html>

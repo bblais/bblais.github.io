@@ -1,5 +1,577 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>bblais on the web</title><link href="https://bblais.github.io/" rel="alternate"/><link href="https://bblais.github.io/feeds/all.atom.xml" rel="self"/><id>https://bblais.github.io/</id><updated>2026-05-08T00:00:00-04:00</updated><entry><title>Making Cents of Calorie Counting</title><link href="https://bblais.github.io/posts/2026/May/08/making-cents-of-calorie-counting/" rel="alternate"/><published>2026-05-08T00:00:00-04:00</published><updated>2026-05-08T00:00:00-04:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2026-05-08:/posts/2026/May/08/making-cents-of-calorie-counting/</id><summary type="html">&lt;p&gt;The Physics Diet essentially is Energy In &amp;lt; Energy Out.  This is the same as Calories In &amp;lt; Calories Out or "maintain a calorie deficit to lose weight".  This is obviously not …&lt;/p&gt;</summary><content type="html">&lt;p&gt;The Physics Diet essentially is Energy In &amp;lt; Energy Out.  This is the same as Calories In &amp;lt; Calories Out or "maintain a calorie deficit to lose weight".  This is obviously not the entire picture for weight loss, but pretty much every diet and fitness plan has this as a starting point.  Even Weight Watchers has as their original equation for their "points",&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>bblais on the web</title><link href="https://bblais.github.io/" rel="alternate"/><link href="https://bblais.github.io/feeds/all.atom.xml" rel="self"/><id>https://bblais.github.io/</id><updated>2026-05-14T00:00:00-04:00</updated><entry><title>How to Inflate your Bayes Factor with Nothing</title><link href="https://bblais.github.io/posts/2026/May/14/how-to-inflate-your-bayes-factor-with-nothing/" rel="alternate"/><published>2026-05-14T00:00:00-04:00</published><updated>2026-05-14T00:00:00-04:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2026-05-14:/posts/2026/May/14/how-to-inflate-your-bayes-factor-with-nothing/</id><summary type="html">&lt;p&gt;I was recently directed to &lt;a href="https://lydiaswebpage.blogspot.com/2025/12/the-resurrection-independence-and.html" rel="nofollow"&gt;some work&lt;/a&gt; by &lt;a href="https://lydiamcgrew.com/" rel="nofollow"&gt;Lydia McGrew&lt;/a&gt;, as I was &lt;a href="https://bblais.github.io/posts/2026/May/13/response-bayes-skeptics-and-the-resurrection/" rel="nofollow"&gt;responding to hers and  Than Christopoulos's 9-part response&lt;/a&gt; to &lt;a href="https://youtu.be/v6QenX4Oo78" rel="nofollow"&gt;Paulogia's video featuring me&lt;/a&gt; where we were responding …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I was recently directed to &lt;a href="https://lydiaswebpage.blogspot.com/2025/12/the-resurrection-independence-and.html" rel="nofollow"&gt;some work&lt;/a&gt; by &lt;a href="https://lydiamcgrew.com/" rel="nofollow"&gt;Lydia McGrew&lt;/a&gt;, as I was &lt;a href="https://bblais.github.io/posts/2026/May/13/response-bayes-skeptics-and-the-resurrection/" rel="nofollow"&gt;responding to hers and  Than Christopoulos's 9-part response&lt;/a&gt; to &lt;a href="https://youtu.be/v6QenX4Oo78" rel="nofollow"&gt;Paulogia's video featuring me&lt;/a&gt; where we were responding to a &lt;a href="https://www.inspiringphilosophy.com/blog/paulogiaits-time-to-stop" rel="nofollow"&gt;blog post by Than Christopoulos&lt;/a&gt;.  (catch all that? 😂)&lt;/p&gt;
+&lt;p&gt;One argument in particular had me puzzled for days,&lt;/p&gt;
+&lt;h1 id="mcgrews-argument"&gt;McGrew's Argument&lt;/h1&gt;
+&lt;p&gt;&lt;a href="https://lydiaswebpage.blogspot.com/2025/12/the-resurrection-independence-and.html" rel="nofollow"&gt;https://lydiaswebpage.blogspot.com/2025/12/the-resurrection-independence-and.html&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;It's surprising how many people don't know this: When considering evidence for some event, such as the resurrection or the Battle of Gettysburg or the moon landing or anything else, and comparing how well that event explains the evidence and how well its negation explains the evidence, you &lt;em&gt;must not confine yourself&lt;/em&gt; to thinking &lt;em&gt;only&lt;/em&gt; of alternatives that have some hope of explaining the evidence.&lt;/p&gt;
+&lt;p&gt;Rather, in order to think rightly about how strong the evidence is for the event, you need to compare the explanatory power of the salient hypothesis H (that is, the hypothesis toward which the individual items &lt;em&gt;prima facie&lt;/em&gt; point) to the power of ~H &lt;em&gt;overall&lt;/em&gt;. I can't stress this strongly enough. And it's pretty obvious in the case of the Battle of Gettysburg or the moon landing. If man never landed on the moon, the most probable thing that would happen is that we would have no attestations that man did land on the moon! The most probable outcome would be...nothing. No video, no astronaut interviews, no pictures of the American flag, etc. You won't get a good sense of how strong the evidence is for the moon landing by comparing "Man first landed on the moon on July 20, 1969" only to some gerrymandered conspiracy theory that man didn't land on the moon at all and that this, that, and the other pieces of evidence were falsely manufactured. Where M is the moon landing hypothesis, the gerrymandered conspiracy hypothesis is merely a &lt;em&gt;subhypothesis&lt;/em&gt; of ~M. Of course that subhypothesis explains at least some of the evidence. That's what it was designed to do. But the evidence is still strong against ~M because the subhypothesis takes up only a very small bit of the probability space &lt;em&gt;given&lt;/em&gt; ~M. Since the conspiracy is very improbable given ~M, it doesn't help much to improve the explanatory power of ~M.&lt;/p&gt;
+&lt;p&gt;You &lt;em&gt;must use a partition--a mutually exclusive and joinly exhaustive set of options.&lt;/em&gt; M and ~M are a partition. M and "~M and a conspiracy to make it look like M" do not form a partition. See &lt;a href="https://youtu.be/y7umQEVtbx4" rel="nofollow"&gt;here&lt;/a&gt; for a video in which I point this out. It's astonishing that not only most skeptics but also many Christians don't realize this. If you don't use a partition, you're going to find it virtually impossible to get a true sense of the strength of the evidence.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Walking through the math here, I start with the Bayes Factor,&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\frac{P(\text{data}|H)}{P(\text{data}|\neg H)}
+$$&lt;/div&gt;
+&lt;p&gt;
+To try to make this as easy as possible, I will consider &lt;span class="math"&gt;\(\neg H\)&lt;/span&gt; to be broken up into only two options and assume these two are mutually exclusive and exhaustive (i.e. they form a partition, as McGrew insists).  So we have three models:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(H\)&lt;/span&gt; - we landed on the moon&lt;/li&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(M\)&lt;/span&gt; - some conspiracy, where we filmed the landing in Hollywood and broadcast from there&lt;/li&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(N\)&lt;/span&gt; - nothing happened at all&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Since &lt;span class="math"&gt;\(M\)&lt;/span&gt; and &lt;span class="math"&gt;\(N\)&lt;/span&gt; both entail &lt;span class="math"&gt;\(\neg H\)&lt;/span&gt;, and we are assuming they are exhaustive, we can break the bottom part of the Bayes Factor into pieces, like
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
+P(\text{data}|\neg H) = P(\text{data}|\neg H, M)P(M|\neg H)+P(\text{data}|\neg H, N)P(N|\neg H)
+$$&lt;/div&gt;
+&lt;p&gt;
+We should also have&lt;/p&gt;
+&lt;div class="math"&gt;$$
+P(M|\neg H)+P(N|\neg H)=1
+$$&lt;/div&gt;
+&lt;p&gt;
+We now make the following observations:
+- "nothing happening" is much more likely than a conspiracy: &lt;span class="math"&gt;\(P(M|\neg H)\)&lt;/span&gt; will be pretty small compared to &lt;span class="math"&gt;\(P(N|\neg H)\)&lt;/span&gt;
+- "nothing happening" doesn't even attempt to explain the data, so it's predictive power is basically zero: &lt;span class="math"&gt;\(P(\text{data}|\neg H, N) \approx 0\)&lt;/span&gt;
+- The original hypothesis, &lt;span class="math"&gt;\(H\)&lt;/span&gt;, is presumed to fit the data very well: &lt;span class="math"&gt;\(P(\text{data}|H)\approx 1\)&lt;/span&gt;
+- The conspiracy also fits the data well: &lt;span class="math"&gt;\(P(\text{data}|M)\approx 1\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;This leads to a top-heavy Bayes Factor:&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\begin{align}
+\frac{P(\text{data}|H)}{P(\text{data}|\neg H)}&amp;amp;=\frac{P(\text{data}|H)}{P(\text{data}|\neg H, M)P(M|\neg H)+P(\text{data}|\neg H, N)P(N|\neg H)}\\
+&amp;amp;=\frac{1}{1\cdot (\rm small)+0\cdot (\rm largish)} = \frac{1}{\rm small}
+\end{align}
+$$&lt;/div&gt;
+&lt;p&gt;So it would seem that if you have the hypothesis "&lt;span class="math"&gt;\(H=\)&lt;/span&gt;I believe the claim in all its details", and the opposite, &lt;span class="math"&gt;\(\neg H\)&lt;/span&gt;, has a large pool of hypotheses that don't explain anything, then you'll automatically support &lt;span class="math"&gt;\(H\)&lt;/span&gt;.  We will see this is a bug not a feature.&lt;/p&gt;
+&lt;p&gt;A bit more generally, including &lt;span class="math"&gt;\(P(M|\neg H)=\frac{P(M)}{P(M)+P(N)}\)&lt;/span&gt; and &lt;span class="math"&gt;\(P(\text{data}|\neg H,M)=P(\text{data}|M)\)&lt;/span&gt;,&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\begin{align}
+\frac{P(\text{data}|H)}{P(\text{data}|\neg H)}&amp;amp;=\frac{P(\text{data}|H)}{P(\text{data}|M)\cdot\frac{P(M)}{P(M)+P(N)}}
+\end{align}
+$$&lt;/div&gt;
+&lt;p&gt;
+The effect of the partition is to scale the denominator by the small fraction of the &lt;span class="math"&gt;\(M\)&lt;/span&gt; model probability compared to the "nothing" model &lt;span class="math"&gt;\(N\)&lt;/span&gt;. Compare this to McGrew's quote above "But the evidence is still strong against ~M because the subhypothesis takes up only a very small bit of the probability space &lt;em&gt;given&lt;/em&gt; ~M." -- this is the same observation.&lt;/p&gt;
+&lt;p&gt;Something seems wrong here, however.  E.T. Jaynes shows that equivalent states of knowledge should yield equivalent probability assignments, so this observation feels like adding "nothing" to our state of knowledge, but changing probabilities.  &lt;/p&gt;
+&lt;h1 id="why-i-never-saw-this-effect-before"&gt;Why I never saw this effect before&lt;/h1&gt;
+&lt;p&gt;I don't like the Bayes Factor, or ratio-versions of Bayes Theorem in particular.  I think it encourages binary thinking. In addition, there are always unconsidered models within &lt;span class="math"&gt;\(H\)&lt;/span&gt; and &lt;span class="math"&gt;\(\neg H\)&lt;/span&gt; that are hard to see.  Many times &lt;span class="math"&gt;\(H\)&lt;/span&gt; is not well defined, which doesn't help matters either.  I prefer to write out Bayes Theorem from the start with all of the models under consideration, but not in the full numerator/denominator form -- that one gets messy quickly, and encourages restricting to a small number of models. Equivalently, one can write out the numerator-only for each model and as a second step add all of them up to find the denominator, and then go back and redivide by that denominator. This multi-step process allows you to consider as many models as one wants, and to more directly compare priors.&lt;/p&gt;
+&lt;p&gt;Using that approach we'd have:&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\begin{align}
+P(H|\text{data})&amp;amp;\sim P(\text{data}|H)\cdot P(H) \\
+P(M|\text{data})&amp;amp;\sim P(\text{data}|M)\cdot P(M) \\
+P(N|\text{data})&amp;amp;\sim P(\text{data}|N)\cdot P(N)
+\end{align}
+$$&lt;/div&gt;
+&lt;div class="math"&gt;$$
+\begin{align}
+P(H|\text{data})&amp;amp;\sim P(\text{data}|H)\cdot P(H) \\
+&amp;amp;+\\
+P(M|\text{data})&amp;amp;\sim P(\text{data}|M)\cdot P(M) \\
+&amp;amp;+\\
+P(N|\text{data})&amp;amp;\sim P(\text{data}|N)\cdot P(N) \\
+&amp;amp;=T\\
+\end{align}
+$$&lt;/div&gt;
+&lt;div class="math"&gt;$$
+\begin{align}
+P(H|\text{data})&amp;amp;= P(\text{data}|H)\cdot P(H)/T \\
+P(M|\text{data})&amp;amp;= P(\text{data}|M)\cdot P(M)/T \\
+P(N|\text{data})&amp;amp;= P(\text{data}|N)\cdot P(N)/T \\
+\end{align}
+$$&lt;/div&gt;
+&lt;p&gt;Since &lt;span class="math"&gt;\(P(\text{data}|N)\)&lt;/span&gt; is near zero, that one will drop out of the sum,&lt;/p&gt;
+&lt;div class="math"&gt;$$
+T=P(\text{data}|H)\cdot P(H)+P(\text{data}|M)\cdot P(M)
+$$&lt;/div&gt;
+&lt;div class="math"&gt;$$
+\begin{align}
+P(H|\text{data})&amp;amp;= \frac{P(\text{data}|H)\cdot P(H)}{P(\text{data}|H)\cdot P(H)+P(\text{data}|M)\cdot P(M)} \\
+P(M|\text{data})&amp;amp;= \frac{P(\text{data}|M)\cdot P(M)}{P(\text{data}|H)\cdot P(H)+P(\text{data}|M)\cdot P(M)} \\
+P(N|\text{data})&amp;amp;= 0\\
+\end{align}
+$$&lt;/div&gt;
+&lt;p&gt;
+Making the posterior ratio,&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\begin{align}
+\frac{P(H|\text{data})}{P(\neg H|\text{data})}&amp;amp;=\frac{P(\text{data}|H)\cdot P(H)}{P(\text{data}|M)\cdot P(M)}
+\end{align}
+$$&lt;/div&gt;
+&lt;p&gt;and since both &lt;span class="math"&gt;\(H\)&lt;/span&gt; and &lt;span class="math"&gt;\(M\)&lt;/span&gt; explain the data well, &lt;span class="math"&gt;\(P(\text{data}|H)\approx 1\)&lt;/span&gt; and &lt;span class="math"&gt;\(P(\text{data}|M)\approx 1\)&lt;/span&gt;, the model comparison reduces to comparing priors &lt;span class="math"&gt;\(P(M)\)&lt;/span&gt; vs &lt;span class="math"&gt;\(P(H)\)&lt;/span&gt;.  Considering models like "nothing happened" doesn't seem to come into play, in contrast to the McGrew approach.&lt;/p&gt;
+&lt;h1 id="the-answers-have-to-be-the-same"&gt;The answers have to be the same&lt;/h1&gt;
+&lt;p&gt;Probability theory does not allow equivalent problems to yield different answers.  So it would seem these two approaches are answering similar, but somehow different, questions.  Or maybe they are equivalent in a way that isn't immediately obvious.  Initially. I was not sure which, but now I can show where we can see the connection.&lt;/p&gt;
+&lt;p&gt;We start with the posterior ratio, expanding the denominator,&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\begin{align}
+\frac{P(H|\text{data})}{P(\neg H|\text{data})}&amp;amp;=\frac{P(\text{data}|H)}{P(\text{data}|\neg H)}\times \frac{P(H)}{P(\neg H)} \\
+&amp;amp;=\frac{P(\text{data}|H)}{P(\text{data}|\neg H,M)P(M|\neg H)+P(\text{data}|\neg H,N)P(N|\neg H)}\times \\
+&amp;amp;\frac{P(H)}{P(\neg H|M)P(M)+P(\neg H|N)P(N)}
+\end{align}
+$$&lt;/div&gt;
+&lt;p&gt;Substitute 
+&lt;/p&gt;
+&lt;div class="math"&gt;$$\begin{align}
+P(M|\neg H) &amp;amp;= \frac{P(M)}{P(M)+P(N)}\\
+P(N|\neg H) &amp;amp;= \frac{P(N)}{P(M)+P(N)} \\
+\end{align}
+$$&lt;/div&gt;
+&lt;p&gt;
+because &lt;span class="math"&gt;\(M\)&lt;/span&gt; and &lt;span class="math"&gt;\(N\)&lt;/span&gt; are mutually exclusive and exhaustive (by definition) and,&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\begin{align}
+P(\text{data}|\neg H,M) &amp;amp;= P(\text{data}|M) \\
+P(\text{data}|\neg H,N) &amp;amp;= P(\text{data}|N)
+\end{align}
+$$&lt;/div&gt;
+&lt;p&gt;
+because knowing &lt;span class="math"&gt;\(M\)&lt;/span&gt; or &lt;span class="math"&gt;\(N\)&lt;/span&gt; guarantees that &lt;span class="math"&gt;\(\neg H\)&lt;/span&gt; is also true, so their conjunction is redundant.&lt;/p&gt;
+&lt;p&gt;This leads to,&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\begin{align}
+\frac{P(H|\text{data})}{P(\neg H|\text{data})}&amp;amp;=\frac{P(\text{data}|H)}{P(\text{data}|\neg H,M)P(M|\neg H)+P(\text{data}|\neg H,N)P(N|\neg H)}\times\frac{P(H)}{P(M)+P(N)} \\
+&amp;amp;=\underbrace{\left[\frac{P(\text{data}|H)}{P(\text{data}|M)\cdot \frac{P(M)}{P(M)+P(N)}+P(\text{data}|N) \cdot \frac{P(N)}{P(M)+P(N)}}\right]}_{\text{likelihood ratio (Bayes Factor)}}\times\underbrace{\left[\frac{P(H)}{P(M)+P(N)}\right]}_{\text{prior}}
+\end{align}
+$$&lt;/div&gt;
+&lt;p&gt;
+Recall that the "nothing" model doesn't predict the data, &lt;span class="math"&gt;\(P(\text{data}|N)=0\)&lt;/span&gt;, so we have,&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\begin{align}
+\frac{P(H|\text{data})}{P(\neg H|\text{data})}&amp;amp;=\underbrace{\left[\frac{P(\text{data}|H)}{P(\text{data}|M)\cdot \frac{P(M)}{P(M)+P(N)}}\right]}_{\text{likelihood ratio (Bayes Factor)}}\times\underbrace{\left[\frac{P(H)}{P(M)+P(N)}\right]}_{\text{prior}}
+\end{align}
+$$&lt;/div&gt;
+&lt;p&gt;
+which reduces to,
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\begin{align}
+\frac{P(H|\text{data})}{P(\neg H|\text{data})}&amp;amp;=\frac{P(\text{data}|H)\cdot P(H)}{P(\text{data}|M)\cdot P(M)}
+\end{align}
+$$&lt;/div&gt;
+&lt;p&gt;This last equation matches my solution, and the Bayes Factor in the previous equation matches the McGrew's Bayes Factor.  We can now see immediately what is happening.  &lt;/p&gt;
+&lt;p&gt;By adding a "nothing" model (&lt;span class="math"&gt;\(P(\text{data}|N)=0\)&lt;/span&gt; model), the Bayes Factor gets scaled down by the relative fraction of the alternative to the main model to that "nothing" model, &lt;span class="math"&gt;\(\frac{P(M)}{(P(M)+P(N)}\)&lt;/span&gt;.  This makes the Bayes Factor top-heavy without really changing anything about our state of knowledge.   This should make us suspicious (which is why I thought something was wrong earlier) because one of the tenets of probability theory is that equivalent states of knowledge should yield equivalent probability assignments.   Notice, however, that the denominator of the prior &lt;em&gt;gets scaled up by the same amount&lt;/em&gt;, &lt;span class="math"&gt;\(P(M)+P(N)\)&lt;/span&gt;, which cancels the effect of the "nothing" model, leaving only the comparison between &lt;span class="math"&gt;\(H\)&lt;/span&gt; and &lt;span class="math"&gt;\(M\)&lt;/span&gt;:&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\begin{align}
+\frac{P(H|\text{data})}{P(\neg H|\text{data})}&amp;amp;=\underbrace{\left[\frac{P(\text{data}|H)}{P(\text{data}|M)}\right]}_{\text{likelihood}}\times\underbrace{\left[\frac{P(H)}{P(M)}\right]}_{\text{prior}}
+\end{align}
+$$&lt;/div&gt;
+&lt;p&gt;So, models that don't explain the data at all will not contribute to our model comparison values &lt;em&gt;at all&lt;/em&gt;. All the insistence McGrew gives us for having a partition, then, becomes moot.  &lt;/p&gt;
+&lt;p&gt;It also clears up &lt;a href="https://youtu.be/y7umQEVtbx4?si=UjwFxepNP9QdxcPG&amp;amp;t=670" rel="nofollow"&gt;McGrew's observation from a different video&lt;/a&gt;  that if you have &lt;span class="math"&gt;\(H\)&lt;/span&gt; and you have an alternative designed to account for the data, &lt;span class="math"&gt;\(M\)&lt;/span&gt;, then the Bayes Factor, &lt;span class="math"&gt;\(P(\text{data}|H)/P(\text{data}|M)\)&lt;/span&gt;, would be, as McGrew states, "unhelpful and uninformative".  Correct!  If both models predict the same data equally, then the argument will have to come down to priors.  If you use a partition which includes irrelevant hypotheses, as McGrew suggests, then you'll artificially boost the Bayes factor while at the same time reducing the prior by the same scale.  Thus the truly interesting ratio -- not the Bayes Factor but the posterior ratio -- is unchanged.  Ignoring the priors gives one a false sense of security for &lt;span class="math"&gt;\(H\)&lt;/span&gt; in this case.  &lt;/p&gt;
+&lt;h1 id="exercise-for-the-student"&gt;Exercise for the student&lt;/h1&gt;
+&lt;p&gt;To make this concrete, do both the Bayes Factor and the Posterior ratio calculations for the following values:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(P(N)=0.94\)&lt;/span&gt; - the "nothing model" is the most likely thing a-priori&lt;/li&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(P(M)=0.05\)&lt;/span&gt; - the &lt;span class="math"&gt;\(M\)&lt;/span&gt; model is 5x more likely a-priori than &lt;span class="math"&gt;\(H\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(P(H)=0.01\)&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;note that 
+- &lt;span class="math"&gt;\(P(\neg H)=P(M)+P(N)\)&lt;/span&gt;
+- &lt;span class="math"&gt;\(P(M|\neg H)=P(M)/(P(M)+P(N))\)&lt;/span&gt;
+- &lt;span class="math"&gt;\(P(N|\neg H)=P(N)/(P(M)+P(N))\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;And predicting the data, assume&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(P(\text{data}|H)=1\)&lt;/span&gt; - model &lt;span class="math"&gt;\(H\)&lt;/span&gt; perfectly predicts the data&lt;/li&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(P(\text{data}|M)=0.5\)&lt;/span&gt; - model &lt;span class="math"&gt;\(M\)&lt;/span&gt;  predicts the data worse&lt;/li&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(P(\text{data}|N)=0\)&lt;/span&gt; - the "nothing" model doesn't predict the data at all.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you run through this calculation, you'll find things like,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(P(M|\neg H)=P(M)/(P(M)+P(N))\approx 0.051\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;The Bayes Factor, &lt;span class="math"&gt;\(P(\text{data}|H)/P(\text{data}|\neg H)\approx 39\)&lt;/span&gt;, -- really in favor of model &lt;span class="math"&gt;\(H\)&lt;/span&gt;!&lt;/li&gt;
+&lt;li&gt;The Posterior ratio (which is the correct and interesting quantity to look at), &lt;span class="math"&gt;\(P(H|\text{data})/P(\neg H|\text{data})=P(H|\text{data})/P(M|\text{data}) = \frac{1}{2.5}\)&lt;/span&gt; or the combination of 1) &lt;span class="math"&gt;\(H\)&lt;/span&gt; explains the data twice as well as &lt;span class="math"&gt;\(M\)&lt;/span&gt; but 2) &lt;span class="math"&gt;\(H\)&lt;/span&gt; is 5x less likely a-priori than &lt;span class="math"&gt;\(M\)&lt;/span&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;It seems clear to me now that if you work only with Bayes Factors you are not doing Bayesian reasoning.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &amp;lt; 768) ? "left" : align;
+        indent = (screen.width &amp;lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &amp;lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    &lt;a href="http://mathjaxscript.id" rel="nofollow"&gt;mathjaxscript.id&lt;/a&gt; = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = '&lt;a href="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';" rel="nofollow"&gt;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';&lt;/a&gt;
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="religion"/></entry><entry><title>Response Bayes, Skeptics, and the Resurrection</title><link href="https://bblais.github.io/posts/2026/May/13/response-bayes-skeptics-and-the-resurrection/" rel="alternate"/><published>2026-05-13T00:00:00-04:00</published><updated>2026-05-13T00:00:00-04:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2026-05-13:/posts/2026/May/13/response-bayes-skeptics-and-the-resurrection/</id><summary type="html">&lt;p&gt;Here I am responding to a series of videos from Lydia McGrew and Than Christopoulos.  &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="https://youtu.be/ubw1d5QH2gE?si=bCUyUbbwoGFMZ1km" rel="nofollow"&gt;https://youtu.be/ubw1d5QH2gE?si=bCUyUbbwoGFMZ1km&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://youtu.be/dd_oafZNH68?si=1jQyhZDG13LddK-O" rel="nofollow"&gt;https://youtu.be/dd_oafZNH68?si=1jQyhZDG13LddK-O&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://youtu.be/957WAo8p5vA?si=bhMkpTWANLQ3B78f" rel="nofollow"&gt;https://youtu.be …&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;p&gt;Here I am responding to a series of videos from Lydia McGrew and Than Christopoulos.  &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="https://youtu.be/ubw1d5QH2gE?si=bCUyUbbwoGFMZ1km" rel="nofollow"&gt;https://youtu.be/ubw1d5QH2gE?si=bCUyUbbwoGFMZ1km&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://youtu.be/dd_oafZNH68?si=1jQyhZDG13LddK-O" rel="nofollow"&gt;https://youtu.be/dd_oafZNH68?si=1jQyhZDG13LddK-O&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://youtu.be/957WAo8p5vA?si=bhMkpTWANLQ3B78f" rel="nofollow"&gt;https://youtu.be/957WAo8p5vA?si=bhMkpTWANLQ3B78f&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://youtu.be/cb0Cwk7upxk?si=j27lUWtxDCvW2P50" rel="nofollow"&gt;https://youtu.be/cb0Cwk7upxk?si=j27lUWtxDCvW2P50&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://youtu.be/6pyz3V1X7M0?si=zMzcGx-rVah6chft" rel="nofollow"&gt;https://youtu.be/6pyz3V1X7M0?si=zMzcGx-rVah6chft&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://youtu.be/5IQf06SRTDw?si=vG8XailpNSO_YZoR" rel="nofollow"&gt;https://youtu.be/5IQf06SRTDw?si=vG8XailpNSO_YZoR&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://youtu.be/-ycOvtSaxEo?si=B4Waulf8XgyWOFe0" rel="nofollow"&gt;https://youtu.be/-ycOvtSaxEo?si=B4Waulf8XgyWOFe0&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://youtu.be/uE2FTOIRebM?si=R3oSrfN3Bp8kwOXV" rel="nofollow"&gt;https://youtu.be/uE2FTOIRebM?si=R3oSrfN3Bp8kwOXV&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://youtu.be/rz98jJ4aNXY?si=AdezYtKjiVeZd0F0" rel="nofollow"&gt;https://youtu.be/rz98jJ4aNXY?si=AdezYtKjiVeZd0F0&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Yikes!  9 Videos!  Here we go....&lt;/p&gt;
+&lt;p&gt;I tried to address every major issue -- let me know if I missed something critical.  I will have a follow-up post specifically about the partition idea which is much more technical.  &lt;/p&gt;
+&lt;h1 id="video-9"&gt;Video 9&lt;/h1&gt;
+&lt;p&gt;Starting with video 9, because here we have the most agreement.  McGrew talks about the proof Christopoulos gives, which is &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;So as long as each testimony is more expected if the miracle occurred than if it didn’t — that is,&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;&lt;div class="math"&gt;$$
+\frac{P(T_i|M)}{P(T_i|\neg M)}&amp;gt;1
+$$&lt;/div&gt;
+if we let &lt;span class="math"&gt;\(n\rightarrow \infty\)&lt;/span&gt;, then the posterior ratio will grow without bound,&lt;p&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class="math"&gt;$$
+\lim_{n\rightarrow\infty}\frac{P(M|T_1,T_2,\ldots T_n)}{P(\neg M|T_1,T_2,\ldots T_n)}= \infty
+$$&lt;/div&gt;
+&lt;p&gt;She then notes that I am mathematically mistaken in saying "It is a limit proof -- which means it only holds when the number of testimonies, &lt;span class="math"&gt;\(n\)&lt;/span&gt;, approaches infinity." and invoking the &lt;span class="math"&gt;\(n=30\)&lt;/span&gt; number from the central limit theorem.   Both of these are valid critiques, and I was being too sloppy.&lt;/p&gt;
+&lt;p&gt;However mathematically correct the proof is, it only works if the testimonies are indeed all independent -- something that Christopoulos does not mention in the blog post, and I believe undermines the usefulness of this proof.  One has to demonstrate that these testimonies are in fact independent for this proof to be useful, a problem that gets more challenging as &lt;span class="math"&gt;\(n\)&lt;/span&gt; gets larger.  &lt;/p&gt;
+&lt;h1 id="video-1"&gt;Video 1&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Than Christopoulos: in that blog post, there are two times where I link out to Mike and I's six-hour video on gospel reliability, which includes arguments for traditional authorship as well. And so that just wasn't even considered during the response&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Than, while you may have linked it, it definitely didn't stand out -- I didn't notice it on first reading, and went back after hearing this and nearly missed it again.  I'd suggest, given its importance, that you highlight it instead of linking the word "this" or "here". &lt;/p&gt;
+&lt;h3 id="the-six-hour-video"&gt;The six-hour video&lt;/h3&gt;
+&lt;p&gt;I listened to the six-hour video, and was not impressed.  There were arguments like that Matthew wrote Matthew because Papias mentions it and, while Papias's quote doesn't match our text Matthew and seems to be speaking about a different text, Matthew wrote that one too?  And why would Matthew copy so much of Mark?Because Matthew was probably deferring to Peter's authority.  Of course, this would mean that the parts where Matthew was an eyewitness (like his own calling) he still is deferential to Peter's report.  These are just excuses, and in this video there were too many of them to list here.   In the section on genre, he presents (debated) evidence that the Gospels are Greco-Roman biography in genre.   He doesn't seem to notice that for his argument to hold any weight, then this genre identification &lt;em&gt;has&lt;/em&gt; to be true, so any debate on the issue makes the entire argument less likely.  There were a number of these kinds of things -- that &lt;em&gt;had&lt;/em&gt; to be true but were debatable.  I noticed at least 3 or 4 times where he suggested we take the "charitable reading" of the text, again not pointing out that the charitable reading &lt;em&gt;had&lt;/em&gt; to be true for the HRM to be true -- again, lowering the probability each time.&lt;/p&gt;
+&lt;p&gt;He also misinterprets the van der Weghe names paper, saying that the Gospels are closer to the population distribution than even Josephus and thus the Gospels are more historical than Josephus.  What van der Weghe showed was that the Gospels could not be shown to be different than the population distribution (yes, the double-negative is important).   This can be true if the sample matches the population, and it could also be true that the sample is so variable or sparse that one can't show it's different from the population.  Same for Josephus.  At no point can you conclude that the Gospels are more historical on this basis.&lt;/p&gt;
+&lt;h3 id="back-to-the-hrm"&gt;Back to the HRM&lt;/h3&gt;
+&lt;p&gt;The biggest complaint in this video has to be the perceived misunderstanding of the HRM and its use in establishing the Resurrection.  &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Lydia McGrew: Let's take Luke for an example. Based on these confirmed mundane claims, based on undesigned coincidences, based on other indicators, we conclude that Luke is honest and careful. And he seems to have had access to people who would have been alleged witnesses. Obviously, we're not going to definitely say they &lt;em&gt;were&lt;/em&gt; witnesses, but alleged witnesses of the resurrection, that being the miracle we're most often talking about.  That gives him credit.  So that it's legitimate to take his accounts of the resurrection appearances as indicating what those people &lt;em&gt;claimed&lt;/em&gt;, I'm just going to keep saying &lt;em&gt;claimed&lt;/em&gt;, like, over and over and over again. That's not a miracle for them &lt;em&gt;to claim&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Than Christopoulos: this is not me saying the Gospels are reliable, therefore the resurrection happened. It is the gospels are reliable, therefore we have privileged access to what the alleged eyewitnesses said the experience was with regards to the risen Christ.
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Now that I've thought about this for some time, I don't think we've been misunderstanding things as much as McGrew and Christopoulos think.  I think there is a fundamental flaw in the reasoning process leading from the HRM to the support for the Resurrection.  What seems to be going on is that evidence is used to support the HRM, a model which includes the writers of the Gospels being close to the facts, honest, reliable, etc...  Then that model is held fixed to then argue for any unlikely event which is then reported without having to reevaluate the probability of the HRM itself.  The argument after that point involves the trilemma - lying,  mistaken, or telling the truth.  Once you're taking the HRM -- which permits a functional equivalent to a limited form of innerrancy -- the apologist can make arguments about how Thomas could not be mistaken about touching Jesus's wounds, or the disciples wouldn't be lying in the face of persecution, so it must all be true.  &lt;/p&gt;
+&lt;p&gt;Here's an analogy.  Say I meet Joe at a party, and he tells me he's a scientist, studied at Harvard, and works in astronomy.  Joe mentions places in Boston, has at least a passing knowledge of astronomy in our short conversation, so I'm thinking this is a competent scientist.   He then starts talking about his friend who was abducted by aliens, and starts telling me earnestly about all the things that happened to his friend.  Joe reports handling some spaceship material that his friend picked up, material that can't be reproduced by humans.  He's very enthusiastic about this entire narrative, and shows no hint of skepticism about any of it.  What am I to think?  Here is a scientist who seemed to have been trained in skepticism and proper epistemology, and Joe seems to be honest about everything he is reporting given the details about Boston and Harvard he relayed.  Should I then argue that Joe's friend's claims must be true, or even that Joe's friend actually made these claims?  Not at all.  I would start to question Joe's credentials.  Perhaps Joe went to Harvard, but I wouldn't be surprised now if that was invented.  Perhaps he was trained as a scientist, but he is clearly not using those methods, so I have no reason to believe the claims are true even if his friend actually stated them.  I may even doubt that his friend existed, and that perhaps Joe invented his "friend" to relay his own experiences from the third person to put some distance between them.  Many possible interpretations are now on the table.&lt;/p&gt;
+&lt;p&gt;Arguing that Joe is reliable due to verified mundane claims, and that means that his friend very likely made the alien claims (which I admit is not an incredible claim -- that his friend &lt;em&gt;claimed&lt;/em&gt; to see aliens), and now we can be more confident in the alien claims seems ridiculous.  Even if Joe tells us that his friend has been persecuted due to his fringe beliefs, and his friend has really talked to the aliens -- this does not raise my confidence in the story.  I would, and should, reassess the entire model given the contents of the story.   Unskeptical reporting of miracle claims in a narrative undermine the believability of the entire narrative, and previously confirmed mundane claims now become more likely to be deliberate insertions to make the story seem more plausible.  A new model to explain the data, once seen as implausible, suddenly rises above the initial model in probability because of the extreme claims in the narrative, like the Nines deck &lt;a href="https://bblais.github.io/posts/2025/Aug/03/the-nines-deck-and-scientific-reasoning/" rel="nofollow"&gt;in my example of scientific reasoning&lt;/a&gt;.  &lt;/p&gt;
+&lt;p&gt;It is in this way that I, and I believe Paulogia, see that the mundane claims are being used to argue for miracles.   It's not "mundane claims are verified therefore unverified miracle claims are true", as McGrew and Christopoulos think we're thinking of it.  It's "mundane claims are verified, but then the same source uncritically supports miracles, which makes the 'reliable reporter' model far less likely".  To continue to use the HRM in this way is trying to get permission to take all the claims in the texts at face value, uncritically.  &lt;/p&gt;
+&lt;p&gt;Perhaps McGrew and Christopoulos think this is an anti-supernatural bias on my part?  I will admit that I am biased toward things that have been verified, so I have an anti-flat earth bias and anti-alien-abduction bias as well.  Since I firmly believe that I could easily be swayed from these positions with actual data, I wouldn't call it a "bias" more like my "current tentative position".&lt;/p&gt;
+&lt;h2 id="on-inerrancy"&gt;On inerrancy&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;McGrew: ...we're not attributing inerrancy to you guys, we're not trying to claim that you guys are insisting on inerrancy, but at one point about  an hour and 32 minutes Blais says historians don't assume that a document is either correct in everything or completely wrong.   Well we don't assume that either and if they're not tacitly accusing us of defending inerrancy as an essential part of our argument then why even bring that false dilemma up?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This was a response to two things.  First, Jonathan McLatchie (who is in the maximal data camp) has actually said this.  I regret I can't find the original, but he said he was concerned about how historians should do things not what they actually do, and said that the books should be accepted wholesale given the mundane claims.  Second, once you have accepted the HRM, then everything you do after that seems to me to be taking all of the claims uncritically, which is what I call functional inerrancy, and what I believe Paulogia is referring to as "For the Bible tells me so".  You probably disagree with this assessment, that you are being uncritical since you're presenting arguments for miraculous claims.  What I've tried to communicate here is that, by restricting yourself to only those explanations that take the text at face value -- as you state the HRM lets you do, this leads to the same thing.&lt;/p&gt;
+&lt;h2 id="on-refuting-mundane-claims"&gt;On refuting mundane claims&lt;/h2&gt;
+&lt;p&gt;Lydia McGrew complains about a seeming double standard, where the skeptic will say "Luke gets X right, but that's not relevant to the resurrection" and "Luke gets Y wrong, which makes him unreliable, and thus makes the HRM less likely".  I think this happens because there are a million ways for Luke to be wrong in the skeptic model but not in the HRM model.  There are also a million things Luke can be right about in the skeptic model without affecting the probability of the miracle claims.  The HRM-to-resurrection argument requires a stricter adherence to Luke being reliable than is needed for any skeptic model.  &lt;/p&gt;
+&lt;h1 id="video-2"&gt;Video 2&lt;/h1&gt;
+&lt;h2 id="hrm-model"&gt;HRM Model&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;in Brian Blais's discussion, where he tries to model the whole thing probabilistically and he gives the historical reportage model itself, a probability of approximately zero. And then that, you know, obviously feeds into the conclusion and the probability, you know, because in the end he says, so it just goes back to the prior probability of the resurrection. Now, I think that's too quick.
+&lt;/p&gt;
+&lt;p&gt;At the very least, you should have the ability to think conditionally, right?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;So in my section about the HRM and establishing the probability being zero, I'm not actually trying to model the HRM in this case.  What I'm trying to show is something I could have probably said in words, but I thought it was clearer using the the math notation (although clearly it wasn't 😂)&lt;/p&gt;
+&lt;p&gt;So what it's trying to show is essentially, if you are arguing points assuming the HRM is true you will convince no skeptic because they do not actually take the HRM to be true.  You end up talking past each other because one person's assuming the HRM is true and then arguing for points A, B, and C based off of that.  And no skeptic is taking the HRM to be true.  So for them the HRM probability is basically zero, so points A, B, and C are kind of moot.&lt;/p&gt;
+&lt;h2 id="what-does-literary-construction-mean"&gt;What does literary construction mean?&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;One of the hallmark examples I always talk about is the pericope where Jesus draws something in a sand with a stick, and then we never hear about it.  Like, what was what was the painting?  We never hear about it.  Why insert that?&lt;/p&gt;
+&lt;p&gt;That's such a weird detail that, to me, seems much more consistent with actual reportage than somebody making something up.&lt;/p&gt;
+&lt;p&gt;But anyway, "can be produced through literary construction", that was his phrase at about an hour 36 minutes.&lt;/p&gt;
+&lt;p&gt;What does that even mean?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I think it is important here to point out how I think about all of this, because it naturally answers many objections and observations like this.  I think we actually know very little of detail of what occurred in the first century.  The texts we have form a small keyhole that we see through imperfectly.  It seems as if the first century was awash with religions, texts, oral stories, multiple cultures, etc...  We have only received the smallest part that survived.  When the Gospels were written down in this time period, likely after the destruction of the temple (although not necessarily), and were popular because they spoke of a variant of Judaism that didn't require a temple and with the overlap with Paul's writing, doesn't even require much of the old Jewish laws.  Since the Gospel writers were likely writing late -- at least decades after the events -- they are including stories that are part of the sea of traditions around them, possibly modifying them for literary or theological purposes, and spreading them around.  So random seemingly unconnected stories occur and you'll get undesigned coincidences because the stories are being shared.  When enough Gospels are circulating and churches started to have more than one, at some point the Gospels are named (e.g. Matthew, Mark, Luke and John) and frozen, leading to seeming contradictions and harmonization.  &lt;/p&gt;
+&lt;p&gt;The details of this of course are not listed because we have no way to determine those details.  However, when one points out undesigned coincidences, I think this basic form of oral/literary progression can easily account for it.  It also accounts for the presence of both copying and contradictions in the same text.  It also is consistent with written stories about 13 or 500 witnesses to events where no event actually happened, or the event happened but got exaggerated in the telling or the writing.   &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Why would somebody make up Jesus writing something in the sand?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;These sorts of situations occur naturally when oral stories are shared, and written down years later.  This is why I am not really convinced by much of this argumentation -- the stories don't read like history, the stories don't seem to claim they are writing history, the authors don't name themselves or any of their sources.  Everything in the New Testament reads like story-telling, with a slant toward theology.   Further you have evident word-for-word copying and you have changes in a text, where the changes follows a particular pattern.  The similarities and the differences aren't the random overlap and differences you'd expect from a independent witnesses (Mark Goodacre does a good job of describing this). &lt;/p&gt;
+&lt;h2 id="consensus-of-scholars"&gt;Consensus of Scholars&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;let me just say one last thing about this bandwagon arguments.
+At one point, Paulogia says the majority of scholars don't believe the historical reportage model.&lt;/p&gt;
+&lt;p&gt;You know, I mean, I don't care. I have been shouting from the rooftops that I think that New Testament scholarship is just riddled with methodological issues.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The reason why skeptics will talk about the consensus of scholars is because no one can be an expert in all things.  And at some point you have to say, hey, you know what?If you can't convince people who are Christian, who are scholars and know more about this than I do, then maybe there's not as much to your arguments as you would think.  It's a reasonable default for a non-expert, and I think it is a hurdle any apologist must get over in order to make any headway with skeptics. &lt;/p&gt;
+&lt;h1 id="video-3"&gt;Video 3&lt;/h1&gt;
+&lt;h2 id="the-jingle"&gt;The jingle&lt;/h2&gt;
+&lt;p&gt;This video is all about the jingle, so Paulogia will have to address it.  But let me at least comment on what I think it is and means to me.  I think it is fair to say that you shouldn't believe anything strongly, unless it comes from multiple sources.  Now this doesn't mean that you shouldn't believe anything unless it comes from multiple sources, it's anything &lt;em&gt;strongly&lt;/em&gt;.  So if your argument critically depends on a point being true, then the multiple source requirement doesn't seem unreasonable to me. &lt;/p&gt;
+&lt;p&gt;Both the Tacitus quote and the Anne Frank quote, I think we might believe because they're not particularly problematic. But if you're using something like the death of James in a larger argument for the resurrection, because this is evidence that the disciples died for their belief in the resurrection, then you have a problem because it becomes a linchpin to part of that argument.  One shouldn't believe it strongly based on only one source.&lt;/p&gt;
+&lt;p&gt;And I think the jingle, although it is mocking in some way, I think it's a reasonable shorthand for the sentiment that you shouldn't take the Bible at face value, that you shouldn't just use it, even historically, if there's only one mention of something.&lt;/p&gt;
+&lt;h1 id="video-4"&gt;Video 4&lt;/h1&gt;
+&lt;h2 id="partition-and-probability"&gt;Partition and Probability&lt;/h2&gt;
+&lt;p&gt;This video deals with some of the probability calculations, introduces the notion of a partition, and then discusses independence.  The partition idea is perhaps the most interesting part of the entire video series -- and deserves its own post going into the details, so that will be posted later.  &lt;a href="https://bblais.github.io/posts/2026/May/14/how-to-inflate-your-bayes-factor-with-nothing/" rel="nofollow"&gt;Here is that post&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="independence"&gt;Independence&lt;/h2&gt;
+&lt;p&gt;On independence, we have,&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;We modeled the testimony of the disciples by taking, you know, 13 people, and giving them each an individual Bayes factor, and then multiplying that.&lt;/p&gt;
+&lt;p&gt;Now, what was interesting was, in that post, he [Blais] really sneered at what he called apologists, and he said apologists just have this very simplistic model of dependence and independence.  This is me being charitable because otherwise this would be very misleading of him. I'm just going to take it that he didn't know. For the past 16 years, so since that was published in 2009, I have specifically developed a multi-article, blind, peer reviewed, published literature, on independence, and modeling dependence, and independence, and testimony.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I can confirm I was not aware of this literature.  However, since in the Blackwell paper the McGrews take 13 pieces of data, claim they are all independent, multiply them to get an enormous Bayes factor -- this is what young-earth creationists do to try to "disprove" evolution, or what psychics do when they want to prop up their particular abilities.  The McGrews might write about independence, but their actual application mirrors the naive, simplistic model of independence I have seen with others not so skilled in mathematics.&lt;/p&gt;
+&lt;p&gt;Although my toy models (&lt;a href="https://bblais.github.io/posts/2023/Feb/23/probability-and-the-independence-of-testimony/" rel="nofollow"&gt;described here&lt;/a&gt;) have some very simplifying assumptions, many of which could be debatable, the fact that two different models give the same rather intuitive answer I think says something, and gives me confidence that were I to have a more sophisticated model of independence it would show the same effect.  Namely, that even a small uncertainty in the independence of pieces of evidence propagates through the product of probabilities, and makes the theorem presented by Christopoulos useless.  Perhaps I will look more closely at some of the calculations in &lt;a href="https://lydiamcgrew.com/wp-content/uploads/Correctionfactoraccepted.pdf" rel="nofollow"&gt;McGrew's paper here&lt;/a&gt; -- a quick read shows that up to section 4 of that paper mirrors my toy model calculation, but then goes in a seemingly different direction needing more attention.&lt;/p&gt;
+&lt;h1 id="video-5"&gt;Video 5&lt;/h1&gt;
+&lt;h2 id="evidence-for-miracles"&gt;Evidence for miracles&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Brian Blais alludes to a blog post that he has where he argues that more testimony is sometimes worse and he refers to that explicitly as being relevant to Than's point where we have lots of testimonies to a particular miracle.
+It's sloppy to the point of being bizarre, I would say.&lt;/p&gt;
+&lt;p&gt;So this is like a guy tells you a tall tale about meeting Elizabeth Taylor or some other famous person.&lt;/p&gt;
+&lt;p&gt;And, you know, maybe you go check it out and you find out it's false.&lt;/p&gt;
+&lt;p&gt;And then he gives you another story and you go check it out and you find out it's false and et cetera, right?&lt;/p&gt;
+&lt;p&gt;And so you gradually debunk him more and more you have less and less confidence in him as a source.  &lt;/p&gt;
+&lt;p&gt;That's irrelevant to having multiple people attesting to the same occurrence, that's having one person or source, book or whatever, attesting to multiple different occurrences, and that each one gets debunked.&lt;/p&gt;
+&lt;p&gt;[...]
+That's multiple people attesting to one story, not one person attesting to multiple stories.  So it just blows my mind that Brian Blais said that that's somehow relevant to our talking about more testimony.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;My post at first was specifically in response to Jonathan McLatchie, asking about new evidence for miracles and wondering why I was not confident in it.  In my experience, miracle claims have fallen into 1 of only 2 groups:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;claims with evidence that is not nearly good enough to justify the claim&lt;/li&gt;
+&lt;li&gt;claims with no available evidence at all to confirm or deny it&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;After you investigate dozens of these as I have done, the next one coming down the line is just not going to sway me easily -- because of the compounding effect of the previous failed investigations.  This holds to ancient miracles too, where there just isn't data to confirm them, so one shouldn't believe them on that basis. But one is completely rational to believe they are false given the failed miracle investigations explored outside of those claimed ancient miracles.  It doesn't matter if the claim is that 13 or 500 people saw it in the past, I would bet real money that if we had a time machine that these claims would look identical to the types of failed miracle claims we have today.&lt;/p&gt;
+&lt;h1 id="video-6"&gt;Video 6&lt;/h1&gt;
+&lt;p&gt;This video goes over some of the alternative models, such as Fodor's RHBS model, Gregor's Pareidolia model, and Paulogia's Minimal Witness model.  I'll let them respond to those, but note that  Paulogia's and Fodor's model directly try to address the minimal facts-type arguments, so it is a bit disingenuous to apply the maximal data arguments to them -- mostly because neither Fodor or Paulogia are convinced by the HRM model.&lt;/p&gt;
+&lt;h1 id="video-7"&gt;Video 7&lt;/h1&gt;
+&lt;h2 id="clearing-up-the-silence"&gt;Clearing up the silence&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;we should probably talk about what Brian says, our items of evidence against the resurrection, which he says you don't take into account.  But he has several others and they're just eyebrow raising.  They are some of the worst examples I've ever seen of arguments from silence, and that is saying a lot.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I agree that arguments from silence are the some of the weakest forms of the arguments, but still I think there are clarifications to be made about what I said.&lt;/p&gt;
+&lt;p&gt;Why would I expect Joseph of Arimathea to have a larger role if he actually existed?  It is because essentially, the role he does play is one that fills a plot point.  It becomes very hard to distinguish between a real person and literary effect here.&lt;/p&gt;
+&lt;p&gt;How about the Roman body search?  I do not expect to find Roman records of a body search.  However, I would have expected someone to mention that the Romans were concerned after the prime suspects in a grave robbing scheme, if the empty tomb were widely known and preached, and the disciples were out proclaiming it.  Not a big deal we don't see it, but it is at least consistent that there wasn't a real empty tomb.  &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;But why would we not expect that then in that case, these surface contradictions would have been erased would have been polished away, as it were.&lt;/p&gt;
+&lt;p&gt;So I think there's a real problem there even among the 4 gospel accounts.&lt;/p&gt;
+&lt;p&gt;I think they much more have the mark of witness testimony, which as William Paley said, that truthful witness testimony has a characteristic of substantial agreement with circumstantial variation.
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I mentioned earlier in my post how I think these texts were constructed.  I think by the time that the Gospels were being shared together, rather than this or that group having a single "Gospel", many of the texts were secured in the minds of the followers that it was easier to harmonize than to modify the texts to a significant degree.   Also, the Gospels do not show the type of variation we'd expect from &lt;em&gt;witnesses&lt;/em&gt;.  Matthew, being a supposed eyewitness, would not have needed to copy Mark &lt;em&gt;verbatim&lt;/em&gt; on things he actually witnessed, and the variation between them is not circumstantial or random, but indicates a direction or intention.  This is not the mark of testimony, it's the mark of literary construction and dependence.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Because one of the things that I like to highlight on this as well, is that this, if you were to count up all the unique testimonies you have in the gospels and acts, it seems like we have close to 20 or 21,  unique individuals.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Since there are more named individuals in Quidditch matches in Harry Potter than in other events in the books, does that make Quidditch more likely to be true?  Listing more named people in a document written decades later does not make it more impressive.&lt;/p&gt;
+&lt;h2 id="what-is-testimony"&gt;What is testimony&lt;/h2&gt;
+&lt;p&gt;The next part gets into the concept of testimony, and what counts as testimony.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;But that just makes it clear that testimony and video and test results and scientific papers and so forth are all, they're all just...&lt;/p&gt;
+&lt;p&gt;These are all testimony.&lt;/p&gt;
+&lt;p&gt;They're just all, well, they're all evidence.
+[...]
+there's nothing special in probability theory that recognizes testimony is different.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I think this is an equivocation, making the term "testimony" basically synonymous with communication.   When people refer to testimony as evidence, they will often contrast it with physical evidence like video.  This is because, as typically used, testimony is when someone who has observed something is simply speaking about what they saw.   You can think of it as a category of how the information got from the event in question to what you as the person trying to evaluate the claim is receiving.  In this case it is eyes (and ears, etc...) of the witness to their perception to their memory to their recall to their speaking.   Video evidence is recorder-to-tape-to-playback.   The difference is that each step from eyes to perception, perception to memory, and memory to recall is known to contain distortions.  In video evidence, those distortions are both much better known and much lower in magnitude when going from recorder to tape to playback so we trust it more, and don't call it testimony.  Calling a scientific study "testimony" because the result of an experiment is communicated is ludicrous.  Write out the processes of getting from the event in question, through the scientific process, to your eyes and ears and tell me it's the same as the process of testimony as I described it above.  Implying they are the same is such a distortion as to make the entire concept meaningless.&lt;/p&gt;
+&lt;h2 id="a-bad-analogy"&gt;A bad analogy&lt;/h2&gt;
+&lt;p&gt;Than Christopoulos has this analogy that is just flat out wrong:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;So we, we, so abiogenesis will just define it very brief in a really pop level way,  Life arose from non-life at some point.&lt;/p&gt;
+&lt;p&gt;So we can actually mirror the reasoning a little bit, I think, right?&lt;/p&gt;
+&lt;p&gt;Brian says, you know, there's been a 100 billion people that have lived so the odds of somebody dying and rising from the dead should be like one in a 100 billion.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;(quick comment here, I said this is an upper bound, naive prior that is way smaller than the one he had presented.  In reality, it would be &lt;em&gt;way&lt;/em&gt; smaller once you include our knowledge of physics and biology.)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Well, let's think about all the times that life has arisen. In general, that number's going to be exponentially higher than people that have lived and died.&lt;/p&gt;
+&lt;p&gt;Right?  Origin of life. There's animals.&lt;/p&gt;
+&lt;p&gt;There's plants, amoebas.&lt;/p&gt;
+&lt;p&gt;Think about how big that number really is.&lt;/p&gt;
+&lt;p&gt;It's going to be like one in a septilian, probably higher than that&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;What is silly here is that abiogenesis talks about the first life forms arising from chemistry.  It's an N of 1.  Once that happens, evolution comes in and gives us animals, and plants, and amoebas -- not independent events, not abiogenesis, so not relevant.  Don't use this analogy -- it doesn't work on any level.&lt;/p&gt;
+&lt;p&gt;I got the sense that Lydia was either not following the argument or, more likely, didn't agree with it and diverted the conversation away from the approach.&lt;/p&gt;
+&lt;h1 id="video-8"&gt;Video 8&lt;/h1&gt;
+&lt;h2 id="miracles"&gt;Miracles&lt;/h2&gt;
+&lt;p&gt;Here's where they talk about miracles.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;He even says that the probability of R being close to 0 is quote, essentially a statement that the miracle is rare.&lt;/p&gt;
+&lt;p&gt;Now, there are there are flavors of rare, Brian.&lt;/p&gt;
+&lt;p&gt;I mean, no, there isn't just one meaning that something is rare, so we can just start there.&lt;/p&gt;
+&lt;p&gt;I'm very happy to say that a miracle is rare.&lt;/p&gt;
+&lt;p&gt;But that does not mean that its probability is close to zero.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Well, for miracles, the probability of a miracle is lower than any other event I can think of so that's pretty rare!  In my original response, I started with 1 over 100 billion -- pretty close to zero, but not nearly low enough.&lt;/p&gt;
+&lt;p&gt;For the McGrews, rare means something else -- their Bayes Factor for the resurrection in the Blackwell paper is on the order of &lt;span class="math"&gt;\(10^{44}\)&lt;/span&gt;.  &lt;/p&gt;
+&lt;p&gt;They quote me on the laws of Nature:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;bblais:  &lt;strong&gt;The idea of “left to itself” is misguided -- that’s not what the laws are.  Physical laws are descriptions of what we actually observe and have confirmed with predictions.  If miracles were part of what we observed and were confirmed with predictions then they would also be part of the natural law.  We can have no problem positing the existence of agents interacting with the world, and for much of human history this was how many things were interpreted.  Over time, however, we’ve needed agents less and less in the descriptions -- positing an agent gives no more useful information, but models with agents have extra complexity.  We recall Laplace’s famous statement that he had no need for the God hypothesis.  We don’t need to consider nature and divine as totally separate entities.  Since we are inside of nature, any intrusion “into nature” (if that even makes sense) will just appear as part of nature and described in our laws.  Unfortunately for the apologist we just don’t have good evidence for that.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Now, this is crazy.&lt;/p&gt;
+&lt;p&gt;This is saying, if miracles were real, they wouldn't be miracles.&lt;/p&gt;
+&lt;p&gt;Okay, and and yet they indignantly say we're not ruling out miracles, a priority.&lt;/p&gt;
+&lt;p&gt;Well, yes, you are because you just said that if they were real, they would be part of nature.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;They'd still be miracles, rare events that we didn't understand. The word "miracle" would be a lot like "dark matter" -- a label that fills in for our ignorance, and motivates the search for explanations or at least patterns.  One has to separate the event from the alleged source of the event.x  There could still be rare confirmed observation of people returning from the dead, without understanding the cause.  We could say that seemingly, there's some extra input into the system that we're not seeing where it's coming from, but we could look for patterns in it.  It would become part of our description.  However, science has not found that kind of thing useful.&lt;/p&gt;
+&lt;p&gt;The problem is that we have no good evidence of any events that would qualify as a miracle.&lt;/p&gt;
+&lt;h2 id="photo-evidence"&gt;Photo evidence&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;And later he even says that if miracles happened, We'd expect more of them to be caught on video.&lt;/p&gt;
+&lt;p&gt;So that as we have more like, I don't know, ring cameras or something, you know, more like videotape being taken, we would be sort of catching miracles happening here and there out of the corners basically of our videos.&lt;/p&gt;
+&lt;p&gt;Oh, look, looks like a miracle over there.&lt;/p&gt;
+&lt;p&gt;Just kind of accidentally randomly catching them.&lt;/p&gt;
+&lt;p&gt;Why would you even think that?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;It's the same reason for UFO sightings.  If there are aliens visiting us and some subset of them are captured on camera, it makes sense that unless we're completely saturating  (i.e. we're catching every single one already), if we put cameras in everyone's pocket,  we would be more likely to catch more of the ones that are actually happening.&lt;/p&gt;
+&lt;p&gt;We would expect if the events were actually happening, the frequency of recordings would increase.  That is not what we see with the UFOs. They go down.  The same thing with the Loch Ness monster, the same thing with Bigfoot and the same thing with medical treatments that don't work. The closer you look at them, the less they seem to work.&lt;/p&gt;
+&lt;p&gt;The same thing for miracle claims -- the closer you look at them the more they retreat.&lt;/p&gt;
+&lt;p&gt;It is a general pattern: things that we observe in this world, the better that we are able to measure them, the more of them we actually measure (up to some maximum).  But only if they are real.  When they aren't, they retreat.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;If everything looks like nature then God is incapable of proclaiming a message by way of a sign.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;If a sign is just a rare event, then God can certainly use them to make a point.  We can't, however, determine that the cause of the rare event was supernatural.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;But the same principle applies, that there is no a priori way to say, God is not allowed to be able to make a sign of his presence that's different from its backdrop.
+Blais is just wrong.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This model of a "backdrop" and an external agent that is coming from outside to paint on this backdrop has been found to be a useless model for understanding our world.  Science doesn't use this kind of vocabulary anymore.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;We are not trying to modify natural law.
+I remember Brian saying something like, you would have to redefine the natural laws to allow miracles, but and I've talked to a few different physicists about this, actually,  including non-Christian ones.&lt;/p&gt;
+&lt;p&gt;And they all just said that this other clause "nature left to itself."  Everybody just, everybody I've talked to just seems to accept that as a &lt;em&gt;ceteris paribus&lt;/em&gt; clause.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I know you're not trying to modify the laws of nature, because your model of the universe has an external agent having actions that lie outside of those laws to stand apart from it.  But from inside the system, if I see a body come back from the dead, I have to propose some exception to the law of entropy.  Since I don't know the cause immediately, the first approach is to look to modifications of that law.  I might come to the point of "there is an agent that seems to allow exceptions to the law of entropy" as part of my description.  What I am saying has two parts.  First, science has found this kind of explanation less and less useful.  Second, there hasn't been anything given with sufficient evidence to make me even consider looking for an exception to a physical law -- and no amount of ancient texts could ever get me to that point.  There just isn't the possibility of proper inquiry and controls needed with that kind of evidence.  &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Brian says something along the lines of, well, that just assumes that there is something outside the natural world. You have to prove it first or find evidence for it.&lt;/p&gt;
+&lt;p&gt;And my immediate thought there was, dude, you're a scientist.  The fact that there is a god, the idea that there is a god who is behind this thing called a miracle, that's the hypothesis.  I don't have to prove the hypothesis in order to postulate hypothesis.&lt;/p&gt;
+&lt;p&gt;That is a weird one.&lt;/p&gt;
+&lt;p&gt;Yeah, that's almost like not being able to think conditionally.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;When you quote someone you should at least attempt to do it properly.  Anyone who knows me knows that I &lt;em&gt;never&lt;/em&gt; use the word "proof" in a scientific context (see &lt;a href="https://bblais.github.io/posts/2014/Jan/31/anyone-using-the-term-scientific-proof-doesnt-know-science/" rel="nofollow"&gt;https://bblais.github.io/posts/2014/Jan/31/anyone-using-the-term-scientific-proof-doesnt-know-science/&lt;/a&gt;).  I looked to find where I said something like that, but couldn't find it quickly. &lt;/p&gt;
+&lt;p&gt;Here is my comment:&lt;/p&gt;
+&lt;p&gt;If you posit an agent that lives outside of the natural world but can act inside the natural world I will ask for your evidence 1) that an agent is needed to explain the data and 2) that anything can exist outside of the natural world and what that means exactly -- because I am not convinced it's a well-defined statement.  It's not about thinking conditionally, it's about being specific about the propositions you're making.  &lt;/p&gt;
+&lt;h2 id="circular-reasoning"&gt;Circular reasoning&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;He claims repeatedly that your use of perfect-being-theism is circular.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;They go on a bit about how they are certainly allowed to use perfect-being-theism as a hypothesis, that we're saying they "can't postulate perfect being theism as a hypothesis without it being circular", that "professional agnostic and atheist philosophers do not say or argue the way that you will witness Paul and Brian arguing", that it "makes no sense".&lt;/p&gt;
+&lt;p&gt;I think there is a misunderstanding of what I said -- perhaps I wasn't clear.  Of course you can posit "perfect-being-theism" as a hypothesis (as long as it is well defined).   What you can't do is use "theism" as a hypothesis, and claim that &lt;/p&gt;
+&lt;div class="math"&gt;$$
+P(\rm miracle|\rm theism) \gg P(\rm miracle|\rm atheism) 
+$$&lt;/div&gt;
+&lt;p&gt;
+without the argument being circular, because within "theism" are many non-miracle theist models.  Ignoring just those, then you're stating&lt;/p&gt;
+&lt;div class="math"&gt;$$
+P(\rm miracle|\text{miracle-making-theism}) \gg P(\rm miracle|\rm atheism) 
+$$&lt;/div&gt;
+&lt;p&gt;
+which is circular.&lt;/p&gt;
+&lt;p&gt;If you wanted to write, &lt;/p&gt;
+&lt;div class="math"&gt;$$
+P(\rm miracle|\text{perfect-being-theism}) \gg P(\rm miracle|\rm atheism) 
+$$&lt;/div&gt;
+&lt;p&gt;
+that would probably work, although there are so many models under "atheism" that I am not convinced this is a well-defined proposition.  &lt;/p&gt;
+&lt;h2 id="predictions"&gt;Predictions&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Brian says if you think theism predicts this, then show me some novel testable predictions, and I'm going to go, look, that is the most ridiculous thing in the world.  I don't understand how somebody can actually think this, because guess what?&lt;/p&gt;
+&lt;p&gt;If I have the ability to make deterministic, novel testable predictions on hypothesis, the first thing that comes off the table for me is going to be an agent.  I'm going to think it's some sort of naturalistic...&lt;/p&gt;
+&lt;p&gt;Like a machine, right?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Are McGrew and Christopoulos saying that we can't include agents in our scientific hypotheses?  That agents are completely untestable?  Sure, they may be hard to predict, but agents have motivations and thus they have patterned activity.  You might not be able to say "Agent A will do X at 1:35 today" but you could say "Agent A tends to move rocks to the tops of hills, so if Agent A is around, we should see more rocks on the tops of hills."  Even God has to act in certain ways, and arguments like the design arguments and fine tuning make use of this to try to make specific predictions about what this agent will or will not do.  &lt;/p&gt;
+&lt;p&gt;McGrew and Christopoulos are just showing a lack of imagination here.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Bayesian reasoning has to do with the differential probabilities given some &lt;span class="math"&gt;\(H\)&lt;/span&gt; and given some "not &lt;span class="math"&gt;\(H\)&lt;/span&gt;" (i.e. &lt;span class="math"&gt;\(\neg H\)&lt;/span&gt;).&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This is incomplete to the point of misleading.  Bayesian reasoning deals with updating prior probabilities using data to determine posterior probabilities.   While &lt;span class="math"&gt;\(P(\text{data}|H)\)&lt;/span&gt; and &lt;span class="math"&gt;\(P(\text{data}|\neg H)\)&lt;/span&gt; play a role, it is not "Bayesian" unless you include the entire package -- prior and likelihood.  To focus on just one results in mistakes and biased reasoning.&lt;/p&gt;
+&lt;p&gt;The reason we make predictions is because probability models tend to be pretty flexible.  It is very easy to make models that will fit any kind of observations especially as long as you restrict your data to past data. &lt;/p&gt;
+&lt;p&gt;But if you make predictions, then you don't have that flexibility, and we trust models that are able to withstand trying (and failing) to disprove them.  The best experiments are designed so that &lt;span class="math"&gt;\(P(X|H)\)&lt;/span&gt; is really low so that if &lt;span class="math"&gt;\(X\)&lt;/span&gt; is observed, we have striking evidence against &lt;span class="math"&gt;\(H\)&lt;/span&gt;.  &lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &amp;lt; 768) ? "left" : align;
+        indent = (screen.width &amp;lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &amp;lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    &lt;a href="http://mathjaxscript.id" rel="nofollow"&gt;mathjaxscript.id&lt;/a&gt; = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = '&lt;a href="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';" rel="nofollow"&gt;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';&lt;/a&gt;
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="religion"/></entry><entry><title>Making Cents of Calorie Counting</title><link href="https://bblais.github.io/posts/2026/May/08/making-cents-of-calorie-counting/" rel="alternate"/><published>2026-05-08T00:00:00-04:00</published><updated>2026-05-08T00:00:00-04:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2026-05-08:/posts/2026/May/08/making-cents-of-calorie-counting/</id><summary type="html">&lt;p&gt;The Physics Diet essentially is Energy In &amp;lt; Energy Out.  This is the same as Calories In &amp;lt; Calories Out or "maintain a calorie deficit to lose weight".  This is obviously not …&lt;/p&gt;</summary><content type="html">&lt;p&gt;The Physics Diet essentially is Energy In &amp;lt; Energy Out.  This is the same as Calories In &amp;lt; Calories Out or "maintain a calorie deficit to lose weight".  This is obviously not the entire picture for weight loss, but pretty much every diet and fitness plan has this as a starting point.  Even Weight Watchers has as their original equation for their "points",&lt;/p&gt;
 &lt;div class="math"&gt;$$
 \text{WW points}=\frac{\text{calories}}{50}+\frac{\text{fat [g]}}{12}-\frac{\text{fiber [g]}}{5}
 $$&lt;/div&gt;
@@ -9628,7 +10200,4 @@ $$&lt;/div&gt;
 &lt;/ul&gt;
 &lt;p&gt;So I'm betting that he sees his shadow!&lt;/p&gt;</content><category term="articles"/></entry><entry><title>Matter, Energy, and the Spirit</title><link href="https://bblais.github.io/posts/2018/Jan/31/matter-energy-and-the-spirit/" rel="alternate"/><published>2018-01-31T00:00:00-05:00</published><updated>2018-01-31T00:00:00-05:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2018-01-31:/posts/2018/Jan/31/matter-energy-and-the-spirit/</id><summary type="html">&lt;p&gt;Theists seem to critique naturalism with the claim that there is more to the universe than just "matter and energy". However, even physicists have in their models certain entities which …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Theists seem to critique naturalism with the claim that there is more to the universe than just "matter and energy". However, even physicists have in their models certain entities which cannot be categorized as either matter or energy. The quantum wavefunction is one clear example. There is also a history of introducing entities into models which later turn out to be unnecessary - "Vis viva" (i.e. life force), "phlogiston" (i.e. heat fluid), and "celestial matter" (vs terrestial matter). It is not that scientists are dogmatically against such entities, it's just that they should be dropped when they don't explain and predict anything or alternative explanations are simpler and more direct. We don't use agency to explain the motion of the planets anymore, for example, but we once did.&lt;/p&gt;
 &lt;p&gt;There are other entities in models which serve as placeholders for the unknown, for example "dark matter". No one seriously thinks labeling the &lt;a href="https://en.wikipedia.org/wiki/Galaxy_rotation_curve" rel="nofollow"&gt;gravitational effect observed from galactic rotation curves&lt;/a&gt; is better understood once we label it "dark matter". It is just a placeholder, until we figure out what dark matter actually is - neutrinos, black holes, altered gravitation on large scale, etc...&lt;/p&gt;
-&lt;p&gt;Given this backdrop, what explanative and predictive power do the terms "spirit" and "supernatural agency" have anymore? Can we name anything that we understand better with their inclusion than we do without? What direct observations make these entities useful in any model of the universe, beyond as a placeholder for the unknown?  &lt;/p&gt;</content><category term="religion"/></entry><entry><title>Cool theorem - angle bisector</title><link href="https://bblais.github.io/posts/2018/Jan/29/cool-theorem-angle-bisector/" rel="alternate"/><published>2018-01-29T00:00:00-05:00</published><updated>2018-01-29T00:00:00-05:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2018-01-29:/posts/2018/Jan/29/cool-theorem-angle-bisector/</id><summary type="html">&lt;p&gt;I was helping my daughter with geometry the other day and &lt;a href="https://en.wikipedia.org/wiki/Angle_bisector_theorem" rel="nofollow"&gt;this cute theorem popped up in the examples&lt;/a&gt;.  For some reason I don't recall ever seeing it before, and …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I was helping my daughter with geometry the other day and &lt;a href="https://en.wikipedia.org/wiki/Angle_bisector_theorem" rel="nofollow"&gt;this cute theorem popped up in the examples&lt;/a&gt;.  For some reason I don't recall ever seeing it before, and it struck me as somehow particularly elegant.  I have used (many times) the specific - &lt;a href="http://ceemrr.com/Geometry1/RightTriangles/RightTriangles4.html" rel="nofollow"&gt;more limited version with isosceles triangles&lt;/a&gt; - but to see the generalization was just neat.&lt;/p&gt;
-&lt;p&gt;It makes me wonder also why I find enjoyment in something this simple and technical.  &lt;/p&gt;</content><category term="math"/></entry><entry><title>Naturalism Defined</title><link href="https://bblais.github.io/posts/2018/Jan/22/naturalism-defined/" rel="alternate"/><published>2018-01-22T00:00:00-05:00</published><updated>2018-01-22T00:00:00-05:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2018-01-22:/posts/2018/Jan/22/naturalism-defined/</id><summary type="html">&lt;p&gt;The question of supernatural vs. natural has come up a lot in discussions with Christians. Such quotes as "&lt;a href="https://en.wikipedia.org/wiki/Naturalism_(philosophy)" rel="nofollow"&gt;Naturalism&lt;/a&gt; is ambiguous. What is nature and what isn't nature?", "Naturalism is …&lt;/p&gt;</summary><content type="html">&lt;p&gt;The question of supernatural vs. natural has come up a lot in discussions with Christians. Such quotes as "&lt;a href="https://en.wikipedia.org/wiki/Naturalism_(philosophy)" rel="nofollow"&gt;Naturalism&lt;/a&gt; is ambiguous. What is nature and what isn't nature?", "Naturalism is vacuous. It's only tenet is an entirely reactionary one - no theology", and "Naturalism is unable to ground its own intelligibility which means it collapses into nihilism" abound.  Philosopher  Alvin Plantinga has an &lt;a href="https://en.wikipedia.org/wiki/Evolutionary_argument_against_naturalism" rel="nofollow"&gt;Evolutionary argument against naturalism&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;The way I see it is the following.  There used to be a distinction between "terrestrial" and "celestial" matter. Then it was determined that the planets obeyed the same rules as the apples falling from trees and the need for the distinction disappeared. "Celestial" matter disappeared as did "terrestrial" matter leaving just "matter". Since then, we have determined, that pretty much everything we can observe follows the same rules - although some get blurred at different scales (microscopic vs macroscopic, for example). Naturalism then is simply the recognition that the stuff we see day-to-day operates on the same principles as the stars in the early universe, and the galaxies far far away. So if you can show us something that is observable yet doesn't follow these rules - something which follows a separate set of rules - then perhaps it might be time to introduce the distinction between natural and supernatural. Otherwise, there is no need for the added concept of the supernatural. Is there such an observable? What are its rules?&lt;/p&gt;
-&lt;p&gt;As a side-note, this means that naturalism need not "ground its own intelligibility". It is just the recognition that we can develop rules using the material on the Earth and make predictions over a wide range of time and space. There really isn't anything more we could ask of it.&lt;/p&gt;</content><category term="religion"/></entry></feed>
+&lt;p&gt;Given this backdrop, what explanative and predictive power do the terms "spirit" and "supernatural agency" have anymore? Can we name anything that we understand better with their inclusion than we do without? What direct observations make these entities useful in any model of the universe, beyond as a placeholder for the unknown?  &lt;/p&gt;</content><category term="religion"/></entry></feed>
