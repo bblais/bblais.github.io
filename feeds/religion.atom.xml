@@ -1,5 +1,138 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>bblais on the web - religion</title><link href="https://bblais.github.io/" rel="alternate"/><link href="https://bblais.github.io/feeds/religion.atom.xml" rel="self"/><id>https://bblais.github.io/</id><updated>2026-05-14T00:00:00-04:00</updated><entry><title>How to Inflate your Bayes Factor with Nothing</title><link href="https://bblais.github.io/posts/2026/May/14/how-to-inflate-your-bayes-factor-with-nothing/" rel="alternate"/><published>2026-05-14T00:00:00-04:00</published><updated>2026-05-14T00:00:00-04:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2026-05-14:/posts/2026/May/14/how-to-inflate-your-bayes-factor-with-nothing/</id><summary type="html">&lt;p&gt;I was recently directed to &lt;a href="https://lydiaswebpage.blogspot.com/2025/12/the-resurrection-independence-and.html" rel="nofollow"&gt;some work&lt;/a&gt; by &lt;a href="https://lydiamcgrew.com/" rel="nofollow"&gt;Lydia McGrew&lt;/a&gt;, as I was &lt;a href="https://bblais.github.io/posts/2026/May/13/response-bayes-skeptics-and-the-resurrection/" rel="nofollow"&gt;responding to hers and  Than Christopoulos's 9-part response&lt;/a&gt; to &lt;a href="https://youtu.be/v6QenX4Oo78" rel="nofollow"&gt;Paulogia's video featuring me&lt;/a&gt; where we were responding …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I was recently directed to &lt;a href="https://lydiaswebpage.blogspot.com/2025/12/the-resurrection-independence-and.html" rel="nofollow"&gt;some work&lt;/a&gt; by &lt;a href="https://lydiamcgrew.com/" rel="nofollow"&gt;Lydia McGrew&lt;/a&gt;, as I was &lt;a href="https://bblais.github.io/posts/2026/May/13/response-bayes-skeptics-and-the-resurrection/" rel="nofollow"&gt;responding to hers and  Than Christopoulos's 9-part response&lt;/a&gt; to &lt;a href="https://youtu.be/v6QenX4Oo78" rel="nofollow"&gt;Paulogia's video featuring me&lt;/a&gt; where we were responding to a &lt;a href="https://www.inspiringphilosophy.com/blog/paulogiaits-time-to-stop" rel="nofollow"&gt;blog post by Than Christopoulos&lt;/a&gt;.  (catch all that? 😂)&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>bblais on the web - religion</title><link href="https://bblais.github.io/" rel="alternate"/><link href="https://bblais.github.io/feeds/religion.atom.xml" rel="self"/><id>https://bblais.github.io/</id><updated>2026-05-23T00:00:00-04:00</updated><entry><title>More Response Bayes, Skeptics, and the Resurrection</title><link href="https://bblais.github.io/posts/2026/May/23/more-response-bayes-skeptics-and-the-resurrection/" rel="alternate"/><published>2026-05-23T00:00:00-04:00</published><updated>2026-05-23T00:00:00-04:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2026-05-23:/posts/2026/May/23/more-response-bayes-skeptics-and-the-resurrection/</id><summary type="html">&lt;p&gt;There has been a bit of time since &lt;a href="https://bblais.github.io/posts/2026/May/13/response-bayes-skeptics-and-the-resurrection/" rel="nofollow"&gt;my original response to the Christopoulos-McGrew series&lt;/a&gt;, along with some responses such as:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Modern Atheist &lt;a href="https://youtu.be/a4jFWP9tNqk?si=qoDKPjpUV9F6SagI" rel="nofollow"&gt;gave a response&lt;/a&gt; to &lt;a href="https://youtu.be/5IQf06SRTDw?si=hT7Ib8IYzQBUw3bL" rel="nofollow"&gt;Video 6&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;A …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;There has been a bit of time since &lt;a href="https://bblais.github.io/posts/2026/May/13/response-bayes-skeptics-and-the-resurrection/" rel="nofollow"&gt;my original response to the Christopoulos-McGrew series&lt;/a&gt;, along with some responses such as:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Modern Atheist &lt;a href="https://youtu.be/a4jFWP9tNqk?si=qoDKPjpUV9F6SagI" rel="nofollow"&gt;gave a response&lt;/a&gt; to &lt;a href="https://youtu.be/5IQf06SRTDw?si=hT7Ib8IYzQBUw3bL" rel="nofollow"&gt;Video 6&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;A &lt;a href="https://x.com/paulogia0/status/2056769141172736206" rel="nofollow"&gt;twitter post by Paulogia&lt;/a&gt;, with a long comment thread afterward&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://lydiaswebpage.blogspot.com/2025/03/bayesian-analysis-resurrection-and.html?showComment=1778858250427#c448943523003241955" rel="nofollow"&gt;Some comments to me by Lydia McGrew&lt;/a&gt;, on her blog&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;So I think it's time for a bit of summary, and to respond to some of the response&lt;/p&gt;
+&lt;h2 id="the-biggest-issues"&gt;The Biggest issues&lt;/h2&gt;
+&lt;p&gt;So, in the entire 9-video series, I find three issues to be so significant to bear repeating.  &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;The first is the insistence that the partition is necessary and, further, that focusing on the "force of specific evidence" seems to be preferred over the posterior.  &lt;a href="https://bblais.github.io/posts/2026/May/14/how-to-inflate-your-bayes-factor-with-nothing/" rel="nofollow"&gt;I go into why I think that is a bad idea&lt;/a&gt; which boils down to the fact that one can arbitrarily inflate the likelihood part of Bayes theorem by adding nothing to the model, and move that inflation to an equal and opposite deflation in the prior.  Then, focusing on the "force of specific evidence", the Bayes Factor, or anything other than the posterior will give you a completely distorted view about what is going on.  &lt;/li&gt;
+&lt;li&gt;The second is the &lt;a href="https://bblais.github.io/posts/2026/May/13/response-bayes-skeptics-and-the-resurrection/#what-is-testimony" rel="nofollow"&gt;massive equivocation&lt;/a&gt; on the use of "testimony" which I think really makes communication on this issue far more difficult than it needs to.  When you call scientific publication "testimony" makes the word "testimony" useless.&lt;/li&gt;
+&lt;li&gt;The third is the approach using the following two-step logic.  Confirmed mundane details allows us to label the authors as reliable and close the facts, so the texts themselves are trustworthy (i.e. the Historical Reportage Model or HRM).  From the HRM, one then argues for miracles because other models can't explain the events described in the texts (e.g. eating fish with Jesus after he rose from the dead).  While I gave an analogy to show this flawed approach (see "Joe at a party" in  &lt;a href="https://bblais.github.io/posts/2026/May/13/response-bayes-skeptics-and-the-resurrection/" rel="nofollow"&gt;my original response&lt;/a&gt;), it turns out that historians disagree with the approach in general.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Elizabeth Shown Mills, &lt;em&gt;Evidence Explained: Citing History Sources from Artifacts to Cyberspace&lt;/em&gt;, 3rd ed. (Baltimore: Genealogical Publishing Company, 2015), p 16.  (my highlighting)&lt;/p&gt;
+&lt;p&gt;&lt;img alt="evidence.png" src="https://bblais.github.io/images/evidence.png"&gt;&lt;/p&gt;
+&lt;h1 id="another-mcgrew-response"&gt;Another McGrew Response&lt;/h1&gt;
+&lt;p&gt;In &lt;a href="https://lydiaswebpage.blogspot.com/2025/03/bayesian-analysis-resurrection-and.html?showComment=1778858250427#c448943523003241955" rel="nofollow"&gt;some comments to me by Lydia McGrew&lt;/a&gt;, on her blog she states this:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;You simply prefer, for unknown reasons, to analyze an empirical inference in what to me seems like a confusingly roundabout way, in which one evaluates the &lt;em&gt;specific evidence set E for&lt;/em&gt; some salient hypothesis H (e.g., testimony to some event, alleged video of that event, or what-not) by comparing the prior probability of H to the prior probability of some highly gerrymandered theory, ~H1, which is a subhypothesis of ~H specifically generated to give probability to the entirety of the set E to its conditional probability on H.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;(to which my grammar checker complains about an 89 word sentence. 😀)&lt;/p&gt;
+&lt;p&gt;My "confusingly roundabout way" is choosing to compare &lt;em&gt;posterior probability&lt;/em&gt; (either in ratio or in set-of-equations form) rather than likelihoods (either in ratio/Bayes Factor  or in set-of-equations form).  This is because one can &lt;a href="https://bblais.github.io/posts/2026/May/14/how-to-inflate-your-bayes-factor-with-nothing/" rel="nofollow"&gt;play math games&lt;/a&gt; by adding models that don't even attempt to address the data to arbitrarily increase a likelihood and decrease the prior by the same amount.  Thus, the posterior is the only measure we should care about and any other choice runs the risk of severely distorting the actual inference.  &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I deem the full partition Bayes factor analysis to be the most natural way to conceive of evidence for &lt;em&gt;any&lt;/em&gt; specific event for which there is specific evidence. When we say, "The evidence for a moon landing is very strong," a very natural way to think of that is as a reference to the &lt;em&gt;specific&lt;/em&gt; evidence (videos, interviews, etc.) that man actually landed on the moon, not to more general evidence such as a knowledge of the state of technology at the time and whether it would have been good enough for a moon landing.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Again, the &lt;em&gt;posterior&lt;/em&gt; is demonstrably the better way to think of inference.  I don't really care about how a model strongly predicts a set of evidence without knowing the prior, because I can always choose a just-so model which has a maximal likelihood, even while being low a-priori.  Saying "the evidence for a moon landing is very strong," is really better stated "the probability of a moon landing is high", for which the evidence is strong enough to overcome the prior.  For example, the evidence for gremlins running my car is high simply because the likelihood &lt;span class="math"&gt;\(P(\text{car running}|\text{gremlins})\)&lt;/span&gt; is high compared to &lt;span class="math"&gt;\(P(\text{car running}|\text{not gremlins})\)&lt;/span&gt;, where "not gremlins" includes alligators, planets, quarks, etc...&lt;/p&gt;
+&lt;p&gt;I see the HRM as essentially allowing a just-so-story for the Resurrection.  "The entire text can be trusted", so a model that says "everything in the text actually happened" will of course have (by definition or construction) a high likelihood. &lt;/p&gt;
+&lt;h1 id="a-bit-more-detail-on-video-6"&gt;A bit more detail on Video 6&lt;/h1&gt;
+&lt;p&gt;I didn't give a lengthy response to &lt;a href="https://youtu.be/5IQf06SRTDw?si=vG8XailpNSO_YZoR" rel="nofollow"&gt;Video 6&lt;/a&gt;, mostly because I felt it dealt with the models of others.  I have since rewatched and have a few more thoughts.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://youtu.be/5IQf06SRTDw?si=vG8XailpNSO_YZoR" rel="nofollow"&gt;Video 6&lt;/a&gt; addresses  &lt;a href="https://youtu.be/K2JNoRdyaek?si=JhUkPIFuWPSoR-Ym&amp;amp;t=1330" rel="nofollow"&gt;James Fodor's RHBS model&lt;/a&gt;, [Paulogia]'s &lt;a href="https://youtu.be/Isnl9A50ySY?si=vGwHi8_8lZL0xvgN" rel="nofollow"&gt;Minimal Witnesses model&lt;/a&gt;, and &lt;a href="https://www.youtube.com/live/RlFpKNCne30?si=O3p4KVae8fT-nRIB&amp;amp;t=277" rel="nofollow"&gt;Kamil Gregor's Pareidolia&lt;/a&gt; model.  I thought that the video addressed details of these models, but upon re-listening there wasn't much substance.  The primary complaint was&lt;/p&gt;
+&lt;h2 id="on-development"&gt;On development&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A salient feature of all 3 of these is their hand waving in the direction of development.&lt;/p&gt;
+&lt;p&gt;They treat it as though, if the reportage model is in any respect not true, there was some kind of telephone game or making stuff up or whatever, it was just as likely that we would get the stories that we have, as that we would get some very different kinds of stories.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;So at about 11:30 on video 6 we have her saying that a more plausible development would have been an exaltation development.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;It seems that a very plausible type of development that could have taken place on any of these theories would be an exaltation development.
+you could take something like the vision of Stephen mentioned in Acts.  He says, I see heaven open and Jesus sitting at the right hand of God.  One development you could get would just be a lot more of those stories and in a lot more detail.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I don't know the literature all that well for this, but I believe I've heard that there are examples of things developing from visionary or spiritual expriences to something that is much more concrete and bodily, and that there are some theological reason for this.  Kamil Gregor can probably comment more specifically here. &lt;/p&gt;
+&lt;p&gt;What I do know well are the many fantastic claims of alien and ufo experiences.  A particularly clear example of development over a very short time is the &lt;a href="https://en.wikipedia.org/wiki/Rendlesham_Forest_incident" rel="nofollow"&gt;Rendlesham Forest incident&lt;/a&gt;. Here an initial experience of observing a flickering or changing light from an object which seemed to evade chase developed into a detailed story, including physical evidence of ground impressions of a spacecraft, tree markings, and even &lt;a href="https://www.therendleshamforestincident.com/2022/04/glyphs-symbols-on-rendlesham-craft.html" rel="nofollow"&gt;a notebook of symbols written by aliens and copied by an eyewitness&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Or the many developments of the &lt;a href="https://en.wikipedia.org/wiki/Project_Mogul" rel="nofollow"&gt;Project Mogul&lt;/a&gt; crash story (i.e. a downed spy satellite) leading to the &lt;a href="https://en.wikipedia.org/wiki/Roswell_incident" rel="nofollow"&gt;Roswell incident&lt;/a&gt; -- leading to the incredible spread of alien visitation claims across decades.   Development of mundane experiences towards more concrete stories happens all the time.  It can also happen in both directions -- towards more physical evidence and away from it.  In Rendelsham, the first models included just the alien visitation -- the event happened and now the aliens are gone -- but later models were more concrete -- ground impressions and drawings from the spacecraft.  In Roswell, again we have the crash interpreted as an alien spacecraft, with the aliens gone, and then it expands to include other visitations and even an alien autopsy at area 51.  Stories develop in many different directions, and it seems plausible to me that the same happens in these theological cases because it points to common human cognitive failures.&lt;/p&gt;
+&lt;p&gt;You can also imagine someone believing that Jesus rose bodily (as the first fruits of the end times resurrection), and someone (i.e. Mark) wrote down a story like that.  You then have a number competing theologies, one of which is the Gnostics which hold that Jesus was only in spirit.  If you are not a Gnostic, there is a definite incentive to invent/improve on the story by including encounters.  We see the same thing with the UFO encounters -- someone claims the aliens are not real, so a story comes up that the aliens are being held in Area 51 and there is even a &lt;a href="https://youtu.be/SWc0f8iuia4?si=ZobR3iAJyTBnmUiJ&amp;amp;t=3326" rel="nofollow"&gt;leaked video footage of the autopsy&lt;/a&gt;!  People love to tell stories, and stories get changed for many reasons.&lt;/p&gt;
+&lt;h2 id="pauls-experience"&gt;Paul's experience&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;And I would challenge, if this kind of development in the direction of bodily experiences is so plausible, given &lt;span class="math"&gt;\(\neg H\)&lt;/span&gt;, and some very different kinds of hallucinations or pareidolia, you know, whatever happened, their experience wasn't at all like what we have in the gospels:  why do we have the account of Paul on the road to Damascus?&lt;/p&gt;
+&lt;p&gt;The descriptions and acts of Paul's experience on the road to Damascus are quite different from the experiences recounted, even in the other book by the same author, Luke, as happening to the apostle, the other apostles.  Jesus, it does not have a meal with Paul.  Jesus does not come walking, approaching him on the road, kicking up dust.  Jesus does not offer to let him touch his wounds. None of that.&lt;/p&gt;
+&lt;p&gt;And if there's this almost inevitable development or just as strong as if it really happened, I would expect that to have been eliminated.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I think the reason is, to me, pretty obvious.&lt;/p&gt;
+&lt;p&gt;Paul wrote, fairly vaguely, about his experience with Jesus decades before the Gospels and Acts was written.  And we have all these writings of Paul and by his own admission, his vision was after the ascension. So it wouldn't make sense to have a bodily story about it because he never says he saw Jesus bodily. He never talks about it, and these Gospel authors writers have Paul's letters.  Combined with the observation that Paul doesn't seem to care about the bodily form of Jesus in any way in any of his letters (e.g. he never mentions birth narratives, miracles, etc...)&lt;/p&gt;
+&lt;p&gt;So it makes total sense to have a visionary experience for Paul in later writings.  &lt;/p&gt;
+&lt;h2 id="minimal-vs-maximal"&gt;Minimal vs Maximal&lt;/h2&gt;
+&lt;p&gt;McGrew also comments on differences between minimal-facts and maximal-data arguments.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;They think they're better because they treat them as if their responses to minimal facts types arguments, not max data case arguments.
+Like, I can see how the skeptic might think if they used any of these for Gary Habermass or anybody else that wants to use a minimal facts approach to the resurrection, that maybe the likelihood would be better.
+But when it comes to the max data case, I fail to see it.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;To be fair, most of these models were specifically formulated as responses to minimal-facts cases.  Of course, this is done primarily because the maximal-facts approach is not taken seriously.&lt;/p&gt;
+&lt;h2 id="explanatory-power"&gt;Explanatory Power&lt;/h2&gt;
+&lt;p&gt;Around &lt;a href="https://youtu.be/5IQf06SRTDw?si=n2jP-aA4YxF9AB_W&amp;amp;t=1029" rel="nofollow"&gt;17:09 in Video 6&lt;/a&gt; McGrew no explanatory power for the various models that have been proposed for the events going on.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;There's no explanatory work being done by pareidolia for the accounts of Jesus eating.  There's no explanatory work that's being done by individual hallucinations for the accounts of group experiences.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;McGrew is really into this idea that the stories of someone eating fish or putting their hands in the wounds or, or any of these things, that they're taken seriously at all.&lt;/p&gt;
+&lt;p&gt;They just aren't.  This is not data to be explained. No one has to explain "someone at fish with Jesus".  They only have to explain "we have &lt;em&gt;stories&lt;/em&gt; of someone eating fish with Jesus".  The first is miraculous.  The second is completely mundane.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &amp;lt; 768) ? "left" : align;
+        indent = (screen.width &amp;lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &amp;lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    &lt;a href="http://mathjaxscript.id" rel="nofollow"&gt;mathjaxscript.id&lt;/a&gt; = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = '&lt;a href="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';" rel="nofollow"&gt;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';&lt;/a&gt;
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="religion"/></entry><entry><title>How to Inflate your Bayes Factor with Nothing</title><link href="https://bblais.github.io/posts/2026/May/14/how-to-inflate-your-bayes-factor-with-nothing/" rel="alternate"/><published>2026-05-14T00:00:00-04:00</published><updated>2026-05-14T00:00:00-04:00</updated><author><name>Brian Blais</name></author><id>tag:bblais.github.io,2026-05-14:/posts/2026/May/14/how-to-inflate-your-bayes-factor-with-nothing/</id><summary type="html">&lt;p&gt;I was recently directed to &lt;a href="https://lydiaswebpage.blogspot.com/2025/12/the-resurrection-independence-and.html" rel="nofollow"&gt;some work&lt;/a&gt; by &lt;a href="https://lydiamcgrew.com/" rel="nofollow"&gt;Lydia McGrew&lt;/a&gt;, as I was &lt;a href="https://bblais.github.io/posts/2026/May/13/response-bayes-skeptics-and-the-resurrection/" rel="nofollow"&gt;responding to hers and  Than Christopoulos's 9-part response&lt;/a&gt; to &lt;a href="https://youtu.be/v6QenX4Oo78" rel="nofollow"&gt;Paulogia's video featuring me&lt;/a&gt; where we were responding …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I was recently directed to &lt;a href="https://lydiaswebpage.blogspot.com/2025/12/the-resurrection-independence-and.html" rel="nofollow"&gt;some work&lt;/a&gt; by &lt;a href="https://lydiamcgrew.com/" rel="nofollow"&gt;Lydia McGrew&lt;/a&gt;, as I was &lt;a href="https://bblais.github.io/posts/2026/May/13/response-bayes-skeptics-and-the-resurrection/" rel="nofollow"&gt;responding to hers and  Than Christopoulos's 9-part response&lt;/a&gt; to &lt;a href="https://youtu.be/v6QenX4Oo78" rel="nofollow"&gt;Paulogia's video featuring me&lt;/a&gt; where we were responding to a &lt;a href="https://www.inspiringphilosophy.com/blog/paulogiaits-time-to-stop" rel="nofollow"&gt;blog post by Than Christopoulos&lt;/a&gt;.  (catch all that? 😂)&lt;/p&gt;
 &lt;p&gt;One argument in particular had me puzzled for days,&lt;/p&gt;
 &lt;h1 id="mcgrews-argument"&gt;McGrew's Argument&lt;/h1&gt;
 &lt;p&gt;&lt;a href="https://lydiaswebpage.blogspot.com/2025/12/the-resurrection-independence-and.html" rel="nofollow"&gt;https://lydiaswebpage.blogspot.com/2025/12/the-resurrection-independence-and.html&lt;/a&gt;&lt;/p&gt;

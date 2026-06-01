@@ -5,77 +5,84 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://bblais.github.io/</loc>
-<lastmod>2026-05-14T06:10:13-00:00</lastmod>
+<lastmod>2026-06-01T10:52:54-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/about.html</loc>
-<lastmod>2026-05-14T06:10:13-00:00</lastmod>
+<lastmod>2026-06-01T10:52:54-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/archives.html</loc>
-<lastmod>2026-05-14T06:10:13-00:00</lastmod>
+<lastmod>2026-06-01T10:52:54-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/contact.html</loc>
-<lastmod>2026-05-14T06:10:13-00:00</lastmod>
+<lastmod>2026-06-01T10:52:54-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/thanks.html</loc>
-<lastmod>2026-05-14T06:10:13-00:00</lastmod>
+<lastmod>2026-06-01T10:52:54-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/search.html</loc>
-<lastmod>2026-05-14T06:10:13-00:00</lastmod>
+<lastmod>2026-06-01T10:52:54-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/tags.html</loc>
-<lastmod>2026-05-14T06:10:13-00:00</lastmod>
+<lastmod>2026-06-01T10:52:54-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/search.html</loc>
-<lastmod>2026-05-14T06:10:13-00:00</lastmod>
+<lastmod>2026-06-01T10:52:54-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/pages/presentations.html</loc>
-<lastmod>2026-05-14T06:10:13-00:00</lastmod>
+<lastmod>2026-06-01T10:52:54-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/pages/projects.html</loc>
-<lastmod>2026-05-14T06:10:13-00:00</lastmod>
+<lastmod>2026-06-01T10:52:54-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://bblais.github.io/pages/publications.html</loc>
-<lastmod>2026-05-14T06:10:13-00:00</lastmod>
+<lastmod>2026-06-01T10:52:54-00:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://bblais.github.io/posts/2026/May/23/more-response-bayes-skeptics-and-the-resurrection/</loc>
+<lastmod>2026-05-23T00:00:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -2763,7 +2770,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://bblais.github.io/category/religion.html</loc>
-<lastmod>2026-05-14T00:00:00-04:56</lastmod>
+<lastmod>2026-05-23T00:00:00-04:56</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -3050,7 +3057,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://bblais.github.io/author/brian-blais.html</loc>
-<lastmod>2026-05-14T00:00:00-04:56</lastmod>
+<lastmod>2026-05-23T00:00:00-04:56</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
